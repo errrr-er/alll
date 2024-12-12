@@ -5,7 +5,7 @@ version = "0.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2024-12-12
 update_date = 2024-12-12
-desc = "https://github.com/errrr-er/alll/tree/main"
+desc = "https://github.com/errrr-er/alll/tree/main \n汇报错误等可使用“.draw魔典反馈”"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml"
@@ -29,7 +29,7 @@ update_Urls = [
 # the-grand-grimoire-of-cthulhu-mythos-magic
 
 # 整体顺序按照"中日英魔法大典_仅名称.xlsx"排序
-# 牌堆内未收集到的在excel表内标为明黄
+# 牌堆内未收集到的在excel表内标明黄
 
 
 
@@ -49,6 +49,22 @@ options_urls = [
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic.json"
 ]
 
+
+
+
+["魔典反馈"]
+export = true
+visible = true
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/feedback.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/feedback.json"
+]
 
 
 
