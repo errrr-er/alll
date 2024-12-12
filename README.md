@@ -14,4 +14,4 @@ https://wwye.lanzoup.com/iMLSk2hzds1c
 
 https://box.n3ko.cc/_/no_reply31cat
 
-3612464276（需使用send指令）
+3612464276（需使用.send指令）
