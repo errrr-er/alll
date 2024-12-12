@@ -6,6 +6,10 @@ https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 之后在“牌堆管理”界面点击“更新”按钮即可
 
+https://wwye.lanzoup.com/iMLSk2hzds1c
+
+从蓝奏云下载则解压导入后先更新再使用
+
 ### 修改/反馈
 
 https://box.n3ko.cc/_/no_reply31cat
