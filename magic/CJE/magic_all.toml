@@ -2,6 +2,7 @@
 title = "中日英魔法大典(整合版)"
 author = "裗浳(3612464276)"
 version = "0.0.0"
+license = "CC-BY-NC-SA 4.0"
 date = 2024-12-12
 update_date = 2024-12-12
 desc = "https://github.com/errrr-er/alll/tree/main"
@@ -36,7 +37,6 @@ options_urls = [
 export = true
 visible = true
 aliases = [ "魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
-options = []
 
 # 提取云
 cloud_extra = true
@@ -56,7 +56,6 @@ options_urls = [
 export = true
 visible = true
 aliases = [ "恶魔揭露术","UNMASKDEMON","UnmaskDemon"]
-options = []
 
 # 提取云
 cloud_extra = true
@@ -72,11 +71,10 @@ options_urls = [
 
 
 
-[""]
+["悪夢"]
 export = true
 visible = true
-aliases = [ "","",""]
-options = []
+aliases = [ "梦魇术","NIGHTMARE","Nightmare"]
 
 # 提取云
 cloud_extra = true
@@ -84,8 +82,103 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "",
-  "https://ghp.ci/"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/NIGHTMARE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/NIGHTMARE.json"
+]
+
+
+
+
+
+["アザトースの呪詛"]
+export = true
+visible = true
+aliases = [ "阿撒托斯的恐怖诅咒","DREADCURSEOFAZATHOTH","DreadCurseofAzathoth"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREADCURSEOFAZATHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREADCURSEOFAZATHOTH.json"
+]
+
+
+
+
+
+["アブホースを目覚めさせる"]
+export = true
+visible = true
+aliases = [ "阿布霍斯唤醒术","AWAKEABHOTH","AwakeAbhoth"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AWAKEABHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AWAKEABHOTH.json"
+]
+
+
+
+
+
+["暗黒の呪い"]
+export = true
+visible = true
+aliases = [ "黑暗诅咒","CURSEOFDARKNESS","CurseofDarkness"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFDARKNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFDARKNESS.json"
+]
+
+
+
+
+
+["イーデ・エタドの放逐"]
+export = true
+visible = true
+aliases = [ "耶德·艾塔德放逐术","BANISHMENTOFYDEETAD","BanishmentofYdeEtad"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANISHMENTOFYDEETAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANISHMENTOFYDEETAD.json"
+]
+
+
+
+
+
+["イシスの封印"]
+export = true
+visible = true
+aliases = [ "伊希斯的封印","SEALOFISIS","SealofIsis"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEALOFISIS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEALOFISIS.json"
 ]
 
 
@@ -96,7 +189,6 @@ options_urls = [
 export = true
 visible = true
 aliases = [ "","",""]
-options = []
 
 # 提取云
 cloud_extra = true
@@ -104,251 +196,6 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "",
-  "https://ghp.ci/"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
 ]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "",
-  "https://ghp.ci/"
-]
-
-
-
-
-
