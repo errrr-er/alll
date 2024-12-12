@@ -1,10 +1,44 @@
 [meta]
 title = "中日英魔法大典(整合版)"
+author = ""
+version = "1.0.0"
+date = 2024-12-12
+update_date = 2024-12-12
+desc = "https://github.com/errrr-er/alll/tree/main"
 
-["测试"]
+
+["魔典整合"]
 export = true
 visible = true
-aliases = [ "测试2"]
+aliases = [ "魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
+options = [
+  "悪魔退散|CASTOUTDEVIL|魔鬼逐出术|CastOutTheDevil\n悪魔の暴露|UNMASKDEMON|恶魔揭露术|UnmaskDemon"
+]
+
+
+["悪魔退散"]
+export = true
+visible = true
+aliases = [ "魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
+options = [
+]
+
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json"
+]
+
+
+["悪魔退散"]
+export = true
+visible = true
+aliases = [ "魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
 options = [
 ]
 
@@ -14,5 +48,6 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json"
 ]
