@@ -15,6 +15,26 @@ update_Urls = [
 
 
 
+# 参考资料
+
+# 中：
+# 海豹内置查询文档
+# 克苏鲁神话魔法大典1.1.2
+
+# 日：
+# https://trpg-yaruo.com/jyumon/
+# https://trpg-japan.com/coc/coc-basic/cthulhu-mythos-spell-list/
+
+# 英：
+# the-grand-grimoire-of-cthulhu-mythos-magic
+
+# 整体顺序按照"中日英魔法大典_仅名称.xlsx"排序
+# 牌堆内未收集到的在excel表内标为明黄
+
+
+
+
+
 ["魔典整合"]
 export = true
 visible = true
@@ -185,6 +205,158 @@ options_urls = [
 
 
 
+["石の呪い"]
+export = true
+visible = true
+aliases = [ "石板诅咒","CURSEOFTHESTONE","CurseoftheStone"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHESTONE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHESTONE.json"
+]
+
+
+
+
+
+["萎縮"]
+export = true
+visible = true
+aliases = [ "枯萎术","SHRIVELLING","Shrivelling"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SHRIVELLING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SHRIVELLING.json"
+]
+
+
+
+
+
+["命の糧"]
+export = true
+visible = true
+aliases = [ "生命食粮术","FOODOFLIFE","FoodofLife"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FOODOFLIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FOODOFLIFE.json"
+]
+
+
+
+
+
+["イブンーグハジの粉"]
+export = true
+visible = true
+aliases = [ "伊本-加齐之粉","POWDEROFIBN-GHAZI","PowderofIbn-Ghazi"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWDEROFIBN-GHAZI.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWDEROFIBN-GHAZI.json"
+]
+
+
+
+
+
+["癒し"]
+export = true
+visible = true
+aliases = [ "治愈法","HEAL","Healing"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEAL.json"
+]
+
+
+
+
+
+["ヴールの印"]
+export = true
+visible = true
+aliases = [ "维瑞之印","VOORISHSIGN","VoorishSign"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOORISHSIGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOORISHSIGN.json"
+]
+
+
+
+
+
+["鋭敏な2人"]
+export = true
+visible = true
+aliases = [ "相似的敏锐","KEENNESSOFTWOALIKE","KeennessofTwoAlike"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/KEENNESSOFTWOALIKE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/KEENNESSOFTWOALIKE.json"
+]
+
+
+
+
+
+["エイボンの霧の車輪"]
+export = true
+visible = true
+aliases = [ "伊波恩雾轮术","EIBON'SWHEELOFMIST","Eibon'sWheelofMist"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EIBON'SWHEELOFMIST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EIBON'SWHEELOFMIST.json"
+]
+
+
+
+
+
 [""]
 export = true
 visible = true
@@ -199,3 +371,8 @@ options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
 ]
+
+
+
+
+
