@@ -45,6 +45,26 @@ options_urls = [
 
 
 
+["悪魔の暴露"]
+export = true
+visible = true
+aliases = [ "恶魔揭露术","UNMASKDEMON","UnmaskDemon"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "",
+  ""
+]
+
+
+
+
+
 [""]
 export = true
 visible = true
@@ -60,3 +80,7 @@ options_urls = [
   "",
   ""
 ]
+
+
+
+
