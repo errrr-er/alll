@@ -8,7 +8,7 @@ https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 https://wwye.lanzoup.com/iMLSk2hzds1c
 
-从蓝奏云下载则解压导入后先更新再使用
+蓝奏云版、以防有人无法使用github
 
 ### 修改/反馈
 
