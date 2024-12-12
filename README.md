@@ -2,4 +2,4 @@
 
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
-只需下载最新本体、即magic_all.toml文件
+只需下载本体、即magic_all.toml文件
