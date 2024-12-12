@@ -10,7 +10,7 @@ https://wwye.lanzoup.com/iMLSk2hzds1c
 
 蓝奏云版、以防有人无法使用github
 
-### 修改/反馈
+### 修改/反馈/汇报错误
 
 https://box.n3ko.cc/_/no_reply31cat
 
