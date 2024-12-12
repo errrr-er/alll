@@ -6,8 +6,8 @@ date = 2024-12-12
 update_date = 2024-12-12
 desc = "https://github.com/errrr-er/alll/tree/main"
 updateUrls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic_all.toml",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic_all.toml"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml"
 ]
 
 
@@ -26,8 +26,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/magic.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/magic.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic.json"
 ]
 
 
