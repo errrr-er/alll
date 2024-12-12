@@ -17,9 +17,17 @@ updateUrls = [
 ["魔典整合"]
 export = true
 visible = true
-aliases = [ "魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
-options = [
-  "悪魔退散|CASTOUTDEVIL|魔鬼逐出术|CastOutTheDevil\n悪魔の暴露|UNMASKDEMON|恶魔揭露术|UnmaskDemon"
+aliases = []
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/magic.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/magic.json"
 ]
 
 
