@@ -4,14 +4,16 @@ https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
-### 旧版手册呪文(中日英三语)
+### 旧版手册呪文(中日英三语) ver0.0.0
 
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 只需下载本体、即magic_all.toml文件
 
-解压导入后请先更新再使用
+**解压导入后请先更新再使用**
 
-https://wwye.lanzoup.com/iYqI52ietape
+目录详见“.draw mhelp”
+
+https://wwye.lanzoup.com/iUfPX2if0zwd
 
 蓝奏云版、以防有人无法使用github
