@@ -1,19 +1,3 @@
-セクメンケネッブの言葉/SEKHMENKENHEP'SWORDS/真言术/WordsofPower\n
-憎悪の像の召喚/SUMMONEFFIGYOFHATE/仇恨雕像/EffigyofHate\n
-臓器の転移/TRANSFERORGAN/器官转移术/TransferOrgan\n
-ゾンビの創造/CREATEZOMBI/活尸创造术/CreateZombi\n
-ゾンビの目/EYESOFTHEZOMBIE/僵尸之眼/EyesoftheZombie\n
-タールクン・アテプの鏡/MIRROROFTARKHUNATEP/塔昆·阿提普之镜/MirrorofTarkhunAtep\n
-立ちこめる夜霧/RAISENIGHTFOG/夜雾唤起术/RaiseNightFog\n
-魂の歌/SOULSINGING/灵魂之歌/SoulSinging\n
-魂の監禁/IMPRISONMIND/精神囚禁术/ImprisonMind\n
-魂の束縛/BINDSOUL/灵魂束缚术/BindSoul\n
-魂の抽出/SOULEXTRACTION/灵魂抽取术/SoulExtraction\n
-魂の罠/SOUL-TRAP/灵魂陷阱术/Soul-Trap\n
-チャウグナー・フォーンの呪い/CURSEOFCHAUGNARFAUGN/肖格纳尔·方的诅咒/CurseofChaugnarFaugn\n
-治癒/HEALING/治愈法/Healing\n
-手足の萎縮/WITHERLIMB/肢体凋萎术/WitherLimb\n
-敵の拘束/BINDENEMY/敌人束缚术/BindEnemy\n
 テツチャプトルのチャイム/CHIMEOFTEZCHAPTL/特兹查普特尔之铃/ChimeofTezchaptl\n
 天候を変える/ALTERWEATHER/天气改换术/AlterWeather\n
 刀身を清める/BLESSBLADE/刀锋祝福术/BlessBlade\n
@@ -81,3 +65,4 @@
 レレイの霧の創造/CREATEMISTOFR'ELEH/拉莱耶造雾术/CreateMistofR'lyeh\n
 ろうそく交信/CANDLECOMMUNICATION/烛光通讯术/CandleCommunication\n
 分かれの砂/PARTINGSANDS/分沙术/PartingSands
+1276

@@ -1274,6 +1274,1686 @@ options_urls = [
 
 
 
+["セクメンケネッブの言葉"]
+export = true
+visible = true
+aliases = [ "真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEKHMENKENHEP'SWORDS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEKHMENKENHEP'SWORDS.json"
+]
+
+
+
+
+
+["憎悪の像の召喚"]
+export = true
+visible = true
+aliases = [ "仇恨雕像","SUMMONEFFIGYOFHATE","EffigyofHate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SUMMONEFFIGYOFHATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SUMMONEFFIGYOFHATE.json"
+]
+
+
+
+
+
+["臓器の転移"]
+export = true
+visible = true
+aliases = [ "器官转移术","TRANSFERORGAN","TransferOrgan"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/TRANSFERORGAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/TRANSFERORGAN.json"
+]
+
+
+
+
+
+["ゾンビの創造"]
+export = true
+visible = true
+aliases = [ "活尸创造术","CREATEZOMBI","CreateZombi"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEZOMBI.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEZOMBI.json"
+]
+
+
+
+
+
+["ゾンビの目"]
+export = true
+visible = true
+aliases = [ "僵尸之眼","EYESOFTHEZOMBIE","EyesoftheZombie"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EYESOFTHEZOMBIE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EYESOFTHEZOMBIE.json"
+]
+
+
+
+
+
+["タールクン・アテプの鏡"]
+export = true
+visible = true
+aliases = [ "塔昆·阿提普之镜","MIRROROFTARKHUNATEP","MirrorofTarkhunAtep"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MIRROROFTARKHUNATEP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MIRROROFTARKHUNATEP.json"
+]
+
+
+
+
+
+["立ちこめる夜霧"]
+export = true
+visible = true
+aliases = [ "夜雾唤起术","RAISENIGHTFOG","RaiseNightFog"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RAISENIGHTFOG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RAISENIGHTFOG.json"
+]
+
+
+
+
+
+["魂の歌"]
+export = true
+visible = true
+aliases = [ "灵魂之歌","SOULSINGING","SoulSinging"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULSINGING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULSINGING.json"
+]
+
+
+
+
+
+["魂の監禁"]
+export = true
+visible = true
+aliases = [ "精神囚禁术","IMPRISONMIND","ImprisonMind"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPRISONMIND.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPRISONMIND.json"
+]
+
+
+
+
+
+["魂の束縛"]
+export = true
+visible = true
+aliases = [ "灵魂束缚术","BINDSOUL","BindSoul"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDSOUL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDSOUL.json"
+]
+
+
+
+
+
+["魂の抽出"]
+export = true
+visible = true
+aliases = [ "灵魂抽取术","SOULEXTRACTION","SoulExtraction"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULEXTRACTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULEXTRACTION.json"
+]
+
+
+
+
+
+["魂の罠"]
+export = true
+visible = true
+aliases = [ "灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOUL-TRAP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOUL-TRAP.json"
+]
+
+
+
+
+
+["チャウグナー・フォーンの呪い"]
+export = true
+visible = true
+aliases = [ "肖格纳尔·方的诅咒","CURSEOFCHAUGNARFAUGN","CurseofChaugnarFaugn"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFCHAUGNARFAUGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFCHAUGNARFAUGN.json"
+]
+
+
+
+
+
+["治癒"]
+export = true
+visible = true
+aliases = [ "治愈法","HEALING","Healing"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALING.json"
+]
+
+
+
+
+
+["手足の萎縮"]
+export = true
+visible = true
+aliases = [ "肢体凋萎术","WITHERLIMB","WitherLimb"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WITHERLIMB.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WITHERLIMB.json"
+]
+
+
+
+
+
+["敵の拘束"]
+export = true
+visible = true
+aliases = [ "敌人束缚术","BINDENEMY","BindEnemy"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDENEMY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDENEMY.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
+[""]
+export = true
+visible = true
+aliases = [ "","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+]
+
+
+
+
+
 [""]
 export = true
 visible = true
