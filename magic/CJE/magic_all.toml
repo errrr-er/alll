@@ -1208,27 +1208,3 @@ options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SIREN'SSONG.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SIREN'SSONG.json"
 ]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
-]
-
-
-
-
-
