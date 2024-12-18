@@ -1854,10 +1854,10 @@ options_urls = [
 
 
 
-[""]
+["似姿の利用"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "相貌吞食术","CONSUMELIKENESS","ConsumeLikeness"]
 options = []
 
 # 提取云
@@ -1866,18 +1866,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONSUMELIKENESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONSUMELIKENESS.json"
 ]
 
 
 
 
 
-[""]
+["ニャンベのパワ"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
 options = []
 
 # 提取云
@@ -1886,18 +1886,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWEROFNYAMBE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWEROFNYAMBE.json"
 ]
 
 
 
 
 
-[""]
+["ニョグタのわしづかみ"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "尼约格萨紧握术","CLUTCHOFNYOGTHA","ClutchofNyogtha"]
 options = []
 
 # 提取云
@@ -1906,8 +1906,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLUTCHOFNYOGTHA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLUTCHOFNYOGTHA.json"
 ]
 
 
