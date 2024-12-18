@@ -1,0 +1,12 @@
+[meta]
+title = "旧版手册呪文(中日英三语)"
+author = "裗浳(3612464276)"
+version = "0.0.0"
+license = "CC-BY-NC-SA 4.0"
+date = 2024-12-12
+update_date = 2024-12-17
+desc = "请先更新再使用"
+update_Urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml"
+]
