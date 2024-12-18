@@ -1594,10 +1594,10 @@ options_urls = [
 
 
 
-[""]
+["テツチャプトルのチャイム"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "特兹查普特尔之铃","CHIMEOFTEZCHAPTL","ChimeofTezchaptl"]
 options = []
 
 # 提取云
@@ -1606,18 +1606,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHIMEOFTEZCHAPTL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHIMEOFTEZCHAPTL.json"
 ]
 
 
 
 
 
-[""]
+["天候を変える"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "天气改换术","ALTERWEATHER","AlterWeather"]
 options = []
 
 # 提取云
@@ -1626,18 +1626,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ALTERWEATHER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ALTERWEATHER.json"
 ]
 
 
 
 
 
-[""]
+["刀身を清める"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "刀锋祝福术","BLESSBLADE","BlessBlade"]
 options = []
 
 # 提取云
@@ -1646,18 +1646,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSBLADE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSBLADE.json"
 ]
 
 
 
 
 
-[""]
+["動物に命令する"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "动物号令法","COMMANDANIMALSPELLS","CommandAnimal"]
 options = []
 
 # 提取云
@@ -1666,18 +1666,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDANIMALSPELLS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDANIMALSPELLS.json"
 ]
 
 
 
 
 
-[""]
+["動物の足を不自由にする"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "动物残废法","LAME","Lame"]
 options = []
 
 # 提取云
@@ -1686,18 +1686,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LAME.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LAME.json"
 ]
 
 
 
 
 
-[""]
+["治癒させる"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "动物治愈法","HEALANIMAL","HealAnimal"]
 options = []
 
 # 提取云
@@ -1706,18 +1706,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALANIMAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALANIMAL.json"
 ]
 
 
 
 
 
-[""]
+["動物を魅了する"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "动物魅惑法","CHARMANIMAL","CharmAnimal"]
 options = []
 
 # 提取云
@@ -1726,18 +1726,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHARMANIMAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHARMANIMAL.json"
 ]
 
 
 
 
 
-[""]
+["トートの詠唱"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "透特之咏","CHANTOFTHOTH","ChantofThoth"]
 options = []
 
 # 提取云
@@ -1746,18 +1746,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHANTOFTHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHANTOFTHOTH.json"
 ]
 
 
 
 
 
-[""]
+["ナークーテイトの障壁の創造"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = ["纳克-提特障壁创造术","CREATEBARRIEROFNAACH-TITH","CreateBarrierofNaach-Tich"]
 options = []
 
 # 提取云
@@ -1766,18 +1766,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEBARRIEROFNAACH-TITH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEBARRIEROFNAACH-TITH.json"
 ]
 
 
 
 
 
-[""]
+["肉移植"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "血肉移植术","GRAFTFLESH","GraftFlesh"]
 options = []
 
 # 提取云
@@ -1786,18 +1786,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRAFTFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRAFTFLESH.json"
 ]
 
 
 
 
 
-[""]
+["肉体の屈服"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "肉体屈服术","COMPELFLESH","CompelFlesh"]
 options = []
 
 # 提取云
@@ -1806,18 +1806,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMPELFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMPELFLESH.json"
 ]
 
 
 
 
 
-[""]
+["肉体の保護"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "血肉防护术","FLESHWARD","FleshWard"]
 options = []
 
 # 提取云
@@ -1826,18 +1826,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FLESHWARD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FLESHWARD.json"
 ]
 
 
 
 
 
-[""]
+["肉の溶解"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "血肉熔解术","MELTFLESH","MeltFlesh"]
 options = []
 
 # 提取云
@@ -1846,8 +1846,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MELTFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MELTFLESH.json"
 ]
 
 
