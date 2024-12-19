@@ -6,11 +6,12 @@ https://box.n3ko.cc/_/no_reply31cat
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
+> 尽量提供三语版呪文释义
+> 若仅想看对应名称请使用excel(或导入后的目录)
+
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 只需下载本体、即magic_all.toml文件
-
-**解压导入后请先更新再使用**
 
 目录详见“.draw mhelp”
 
