@@ -16,6 +16,6 @@ https://box.n3ko.cc/_/no_reply31cat
     - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/magic_all.toml)文件
     - 仅想看对应名称请使用excel或导入后(.draw mhelp)
 
-- [蓝奏云版(仅toml文件)](https://wwye.lanzoup.com/iohw92ihoikf)
+- [蓝奏云版 (仅toml文件)](https://wwye.lanzoup.com/iohw92ihoikf)
     - 以防从github下载失败
     - 此版通常不是最新版、需导入后进行同步(更新按钮)
