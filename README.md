@@ -6,7 +6,8 @@ https://box.n3ko.cc/_/no_reply31cat
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
-> 缺失的释义多为日版 :smiling_face_with_tear:
+> [!WARNING]
+> 虽提供蓝奏云下载、但需确保骰子能连GitHub或其镜像网站才能正常使用
 
 - [github版](https://github.com/errrr-er/alll/tree/main/magic/CJE)
     - 此版通常为最新版
@@ -14,12 +15,8 @@ https://box.n3ko.cc/_/no_reply31cat
     - 仅想看对应名称请使用excel或导入后(.draw mhelp)
 
 - [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
-    - 以防有人无法使用github
-    - 此版通常不是最新版，需导入后更新为最新版
-    
-> [!WARNING]
-> 虽然提供蓝奏云下载
-> 但必须确保骰子能正常链接GitHub才能使用本牌堆
+    - 以防从github下载失败
+    - 此版通常不是最新版、需导入后进行同步(更新按钮)
 
-> [!IMPORTANT]
-> 海豹骰在导入后请先更新至最新版本(其它骰系不清楚)
+> [!NOTE]
+> 缺失的释义多为日版 :smiling_face_with_tear:
