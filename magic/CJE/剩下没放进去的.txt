@@ -1,10 +1,3 @@
-人間をおびき寄せる/BAITHUMANS/人类引诱术/BaitHumans
-ネズミ怪物の呪い/CURSEOFTHERATLTHING/人面鼠诅咒/CurseoftheRat-thing
-農作物を枯らす/BLIGHT/作物枯萎法/Blight
-農作物に祝福を与える/BLESSCROP/作物祝福法/BlessCrop
-呪いのホイッスルの創造/CREATECURSEWHISTLE/诅咒之笛创造术/CreateCurseWhistle
-ハートの勇気/HEART'SCOURAGE/心中的勇气/Heart'sCourage
-灰色の束縛/GRAYBINDING/灰色束缚/GreyBinding
 破壊/WRACK/折磨术/Wrack
 吐き気の魔去円/CIRCLEOFNAUSEA/反胃法阵/CircleofNausea
 ハスターの歌/SONGOFHASTUR/哈斯塔之歌/SongofHastur
