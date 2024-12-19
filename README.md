@@ -15,6 +15,7 @@ https://box.n3ko.cc/_/no_reply31cat
 
 - [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
     - 以防有人无法使用github
+    
     > [!WARNING]
     > 虽然提供蓝奏云下载，但必须确保骰子能正常链接GitHub才能使用本牌堆
 
