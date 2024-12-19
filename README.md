@@ -1,10 +1,10 @@
-## :inbox_tray:汇报错误/补充
+### :inbox_tray:汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
-## 旧版手册呪文(中日英三语) ver1.0.0
+### 旧版手册呪文(中日英三语) ver1.0.0
 
 > 缺失的释义多为日版 :smiling_face_with_tear:
 
