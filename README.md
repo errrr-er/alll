@@ -1,4 +1,4 @@
-### :inbox_tray:汇报错误/补充
+## :inbox_tray:汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
 
