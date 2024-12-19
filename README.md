@@ -1,4 +1,4 @@
-# :inbox_tray:汇报错误/补充
+## :inbox_tray:汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
 
@@ -11,7 +11,7 @@ https://box.n3ko.cc/_/no_reply31cat
 
 - [github版](https://github.com/errrr-er/alll/tree/main/magic/CJE)
     - 此版通常为最新版
-    - 只需下载本体、即magic_all.toml文件
+    - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/magic_all.toml)文件
     - 仅想看对应名称请使用excel或导入后(.draw mhelp)
 
 - [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
