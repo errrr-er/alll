@@ -5,9 +5,11 @@ https://box.n3ko.cc/_/no_reply31cat
 3612464276（需使用.send指令）
 
 ## 旧版手册呪文(中日英三语) ver1.0.0
+
+> 缺失的释义多为日版 :smiling_face_with_tear:
+
 > [!WARNING]
 > 需确保骰子能连GitHub或其镜像网站、否则有概率无法正常使用
-> 缺失的释义多为日版 :smiling_face_with_tear:
 
 - [github版](https://github.com/errrr-er/alll/tree/main/magic/CJE)
     - 此版通常为最新版
