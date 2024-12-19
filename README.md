@@ -1,6 +1,6 @@
 ## :inbox_tray:汇报错误/补充
 
-https://box.n3ko.cc/_/no_reply31cat
+[提问箱(如果是使用时骰子报错请带上日志截图)](https://box.n3ko.cc/_/no_reply31cat)
 
 3612464276（需使用.send指令）
 
