@@ -8,9 +8,9 @@ https://box.n3ko.cc/_/no_reply31cat
 
 > 缺失的释义多为日版 :smiling_face_with_tear:
 
-[只需下载本体、即magic_all.toml文件](https://github.com/errrr-er/alll/tree/main/magic/CJE)
-
-仅想看对应名称请使用excel或目录(.draw mhelp)
+[github在此下载](https://github.com/errrr-er/alll/tree/main/magic/CJE)
+ - 只需下载本体、即magic_all.toml文件
+ - 仅想看对应名称请使用excel或目录(.draw mhelp)
 
 [蓝奏云版、以防有人无法使用github](https://wwye.lanzoup.com/iohw92ihoikf)
 
