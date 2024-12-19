@@ -14,6 +14,6 @@ https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 目录详见“.draw mhelp”
 
-https://wwye.lanzoup.com/iUfPX2if0zwd
+https://wwye.lanzoup.com/iohw92ihoikf
 
 蓝奏云版、以防有人无法使用github
