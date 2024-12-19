@@ -1,6 +1,3 @@
-> [!NOTE]
-> 导入后请先更新再使用
-
 ### :inbox_tray:汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
@@ -11,17 +8,12 @@ https://box.n3ko.cc/_/no_reply31cat
 
 > 缺失的释义多为日版 :smiling_face_with_tear:
 
-https://github.com/errrr-er/alll/tree/main/magic/CJE
+[只需下载本体、即magic_all.toml文件](https://github.com/errrr-er/alll/tree/main/magic/CJE)
 
-只需下载本体、即magic_all.toml文件
+仅想看对应名称请使用excel或目录(.draw mhelp)
 
-仅想看对应名称请使用excel或目录
-
-目录详见“.draw mhelp”
-
-https://wwye.lanzoup.com/iohw92ihoikf
-
-蓝奏云版、以防有人无法使用github
+[蓝奏云版、以防有人无法使用github](https://wwye.lanzoup.com/iohw92ihoikf)
 
 > [!IMPORTANT]
-> “旧版手册呪文(中日英三语)”需链接GitHub才能使用
+> 海豹骰在导入后请先更新至最新版本(其它骰系不清楚)
+> 虽然提供蓝奏云下载，但必须确保骰子能正常链接GitHub才能使用本牌堆
