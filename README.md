@@ -6,9 +6,9 @@ https://box.n3ko.cc/_/no_reply31cat
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
-> 尽量提供三语版呪文释义
+> 尽量提供三语版释义
 >
-> 若仅想看对应名称请使用excel(或导入后的目录)
+> 若仅想看对应名称请使用excel或目录
 
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
