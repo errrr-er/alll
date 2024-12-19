@@ -6,6 +6,8 @@ https://box.n3ko.cc/_/no_reply31cat
 
 ## 旧版手册呪文(中日英三语) ver1.0.0
 
+> 缺失的释义多为日版 :smiling_face_with_tear:
+
 > [!WARNING]
 > 需确保骰子能连GitHub或其镜像网站才能正常使用
 
@@ -17,5 +19,3 @@ https://box.n3ko.cc/_/no_reply31cat
 - [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
     - 以防从github下载失败
     - 此版通常不是最新版、需导入后进行同步(更新按钮)
-
-> 缺失的释义多为日版 :smiling_face_with_tear:
