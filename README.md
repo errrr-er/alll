@@ -1,7 +1,7 @@
 > [!NOTE]
-> 牌堆导入后请先更新再使用
+> 导入后请先更新再使用
 
-## :inbox_tray:汇报错误/补充
+### :inbox_tray:汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
 
@@ -22,3 +22,6 @@ https://github.com/errrr-er/alll/tree/main/magic/CJE
 https://wwye.lanzoup.com/iohw92ihoikf
 
 蓝奏云版、以防有人无法使用github
+
+> [!IMPORTANT]
+> “旧版手册呪文(中日英三语)”需链接GitHub才能使用
