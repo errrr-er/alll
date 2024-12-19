@@ -16,8 +16,8 @@ https://box.n3ko.cc/_/no_reply31cat
 - [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
     - 以防有人无法使用github
     
-    > [!WARNING]
-    > 虽然提供蓝奏云下载，但必须确保骰子能正常链接GitHub才能使用本牌堆
+> [!WARNING]
+> 虽然提供蓝奏云下载，但必须确保骰子能正常链接GitHub才能使用本牌堆
 
 > [!IMPORTANT]
 > 海豹骰在导入后请先更新至最新版本(其它骰系不清楚)
