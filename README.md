@@ -4,11 +4,11 @@ https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
-## 所有牌堆导入后请先更新再使用
+## :rotating_light: :mega: 所有牌堆导入后请先更新再使用
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
-> 尽量提供完整释义(缺失的多为日版)
+> 尽量提供完整释义(缺失的多为日版:smiling_face_with_tear:)
 
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
