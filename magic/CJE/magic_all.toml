@@ -2174,10 +2174,10 @@ options_urls = [
 
 
 
-[""]
+["光を消す"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "抑光术","DAMPENLIGHT","DampenLight"]
 options = []
 
 # 提取云
@@ -2186,18 +2186,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DAMPENLIGHT.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DAMPENLIGHT.json"
 ]
 
 
 
 
 
-[""]
+["雛を取り除く"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "幼体驱除术","BALKBROOD","BalkBrood"]
 options = []
 
 # 提取云
@@ -2206,18 +2206,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BALKBROOD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BALKBROOD.json"
 ]
 
 
 
 
 
-[""]
+["皮膚の制御"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "皮肤控制术","CONTROLSKIN","ControlSkin"]
 options = []
 
 # 提取云
@@ -2226,18 +2226,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONTROLSKIN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONTROLSKIN.json"
 ]
 
 
 
 
 
-[""]
+["フェッチ棒の創造"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "生魂棒创造术","CREATEFETCHSTICK","CreateFetchStick"]
 options = []
 
 # 提取云
@@ -2246,18 +2246,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEFETCHSTICK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEFETCHSTICK.json"
 ]
 
 
 
 
 
-[""]
+["布石"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "守卫术","WARDING","Warding"]
 options = []
 
 # 提取云
@@ -2266,18 +2266,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDING.json"
 ]
 
 
 
 
 
-[""]
+["復活"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "复活术","RESURRECTION","Resurrection"]
 options = []
 
 # 提取云
@@ -2286,18 +2286,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RESURRECTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RESURRECTION.json"
 ]
 
 
 
 
 
-[""]
+["プリンのアンサタ十字"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "蒲林的埃及十字架","PRINN'SCRUXANSATA","Prinn'sCruxAnsata"]
 options = []
 
 # 提取云
@@ -2306,18 +2306,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PRINN'SCRUXANSATA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PRINN'SCRUXANSATA.json"
 ]
 
 
 
 
 
-[""]
+["旧き印"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "旧印开光术","ELDERSIGN","ElderSign"]
 options = []
 
 # 提取云
@@ -2326,18 +2326,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ELDERSIGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ELDERSIGN.json"
 ]
 
 
 
 
 
-[""]
+["平凡な見せかけ"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "平凡无奇术","POSEMUNDANE","PoseMundane"]
 options = []
 
 # 提取云
@@ -2346,18 +2346,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POSEMUNDANE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POSEMUNDANE.json"
 ]
 
 
 
 
 
-[""]
+["仮面"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "平凡无奇术","MASK","PoseMundane"]
 options = []
 
 # 提取云
@@ -2366,18 +2366,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MASK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MASK.json"
 ]
 
 
 
 
 
-[""]
+["ヘルメス・トリスメギストスの毒塵"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "赫耳墨斯·特里斯墨吉斯忒斯的毒尘","BANEFULDUSTOFHERMESTRISMEGISTUS","BanefulDustofHermesTrismegistus"]
 options = []
 
 # 提取云
@@ -2386,18 +2386,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json"
 ]
 
 
 
 
 
-[""]
+["忘却の波"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "忘却之波","WAVEOFOBLIVION","WaveofOblivion"]
 options = []
 
 # 提取云
@@ -2406,18 +2406,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WAVEOFOBLIVION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WAVEOFOBLIVION.json"
 ]
 
 
 
 
 
-[""]
+["亡霊に命令する"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "鬼魂号令法","COMMANDGHOST","CommandGhost"]
 options = []
 
 # 提取云
@@ -2426,18 +2426,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDGHOST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDGHOST.json"
 ]
 
 
 
 
 
-[""]
+["卜占"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "占卜法","AUGURY","Augury"]
 options = []
 
 # 提取云
@@ -2446,18 +2446,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AUGURY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AUGURY.json"
 ]
 
 
 
 
 
-[""]
+["炎の外套"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "火焰斗篷术","CLOAKOFFIRE","CloakofFire"]
 options = []
 
 # 提取云
@@ -2466,18 +2466,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLOAKOFFIRE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLOAKOFFIRE.json"
 ]
 
 
 
 
 
-[""]
+["マインドブラスト"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "精神震爆术","MINDBLAST","Mindblast"]
 options = []
 
 # 提取云
@@ -2486,18 +2486,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDBLAST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDBLAST.json"
 ]
 
 
 
 
 
-[""]
+["未来の視察"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
 options = []
 
 # 提取云
@@ -2506,18 +2506,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LOOKTOTHEFUTURE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LOOKTOTHEFUTURE.json"
 ]
 
 
 
 
 
-[""]
+["無欠の投擲"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "无瑕投掷法","IMPECCABLETHROW","ImpeccableThrow"]
 options = []
 
 # 提取云
@@ -2526,18 +2526,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPECCABLETHROW.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPECCABLETHROW.json"
 ]
 
 
 
 
 
-[""]
+["向こう側への旅"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
 options = []
 
 # 提取云
@@ -2546,18 +2546,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/JOURNEYTOTHEOTHERSIDE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/JOURNEYTOTHEOTHERSIDE.json"
 ]
 
 
 
 
 
-[""]
+["名状し難い誓約"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "不可名状的诺言","UNSPEAKABLEPROMISE","UnspeakablePromise"]
 options = []
 
 # 提取云
@@ -2566,18 +2566,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/UNSPEAKABLEPROMISE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/UNSPEAKABLEPROMISE.json"
 ]
 
 
 
 
 
-[""]
+["目の保護"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "邪眼守卫术","WARDINGTHEEYE","WardingtheEye"]
 options = []
 
 # 提取云
@@ -2586,18 +2586,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDINGTHEEYE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDINGTHEEYE.json"
 ]
 
 
 
 
 
-[""]
+["モートランのガラスの製造"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "莫特兰玻璃幻术","CONJUREGLASSOFMOTLAN","ConjureGlassofMortlan"]
 options = []
 
 # 提取云
@@ -2606,18 +2606,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONJUREGLASSOFMOTLAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONJUREGLASSOFMOTLAN.json"
 ]
 
 
 
 
 
-[""]
+["門の観察"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "时空门观察术","VIEWGATE","ViewGate"]
 options = []
 
 # 提取云
@@ -2626,18 +2626,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VIEWGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VIEWGATE.json"
 ]
 
 
 
 
 
-[""]
+["門の創造"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "时空门创造术","CREATEGATE","CreateGate"]
 options = []
 
 # 提取云
@@ -2646,18 +2646,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEGATE.json"
 ]
 
 
 
 
 
-[""]
+["門の発見"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "时空门搜寻术","FINDGATE","FindGate"]
 options = []
 
 # 提取云
@@ -2666,18 +2666,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FINDGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FINDGATE.json"
 ]
 
 
 
 
 
-[""]
+["病をもたらす"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "致病术","CAUSEDISEASE","CauseDisease"]
 options = []
 
 # 提取云
@@ -2686,18 +2686,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSEDISEASE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSEDISEASE.json"
 ]
 
 
 
 
 
-[""]
+["幽体の剃刀"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "灵体剃刀术","SPECTRALRAZOR","SoectralRazor"]
 options = []
 
 # 提取云
@@ -2706,18 +2706,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SPECTRALRAZOR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SPECTRALRAZOR.json"
 ]
 
 
 
 
 
-[""]
+["夢の映像"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "梦境幻象术","DREAMVISION","DreamVision"]
 options = []
 
 # 提取云
@@ -2726,18 +2726,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREAMVISION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREAMVISION.json"
 ]
 
 
 
 
 
-[""]
+["夢の薬の製去"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
 options = []
 
 # 提取云
@@ -2746,18 +2746,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREWDREAMDRUG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREWDREAMDRUG.json"
 ]
 
 
 
 
 
-[""]
+["夢みる人の罠"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "梦想家诱捕术","SNAREDREAMER","SnareDreamer"]
 options = []
 
 # 提取云
@@ -2766,18 +2766,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SNAREDREAMER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SNAREDREAMER.json"
 ]
 
 
 
 
 
-[""]
+["夢を送る"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "梦境发送术","SENDDREAM","SendDream"]
 options = []
 
 # 提取云
@@ -2786,18 +2786,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENDDREAM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENDDREAM.json"
 ]
 
 
 
 
 
-[""]
+["ヨグ＝ソトースのこぶし"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "犹格-索托斯之拳","FISTOFYOG-SOTHOTH","FistofYog-Sothoth"]
 options = []
 
 # 提取云
@@ -2806,18 +2806,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FISTOFYOG-SOTHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FISTOFYOG-SOTHOTH.json"
 ]
 
 
 
 
 
-[""]
+["ラーの声"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "拉神之声","VOICEOFRA","VoiceofRa"]
 options = []
 
 # 提取云
@@ -2826,18 +2826,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOICEOFRA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOICEOFRA.json"
 ]
 
 
 
 
 
-[""]
+["リーチ"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "伸触术","REACH","Reach"]
 options = []
 
 # 提取云
@@ -2846,8 +2846,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/REACH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/REACH.json"
 ]
 
 
