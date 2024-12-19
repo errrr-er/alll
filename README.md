@@ -4,7 +4,7 @@ https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
-## :rotating_light: :mega: 所有牌堆导入后请先更新再使用
+## :rotating_light:所有牌堆导入后请先更新再使用
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
