@@ -10,8 +10,6 @@ https://box.n3ko.cc/_/no_reply31cat
 
 > 尽量提供完整释义(缺失的多为日版)
 
-`#0969DA测试`
-
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 只需下载本体、即magic_all.toml文件
