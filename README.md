@@ -8,6 +8,7 @@ https://box.n3ko.cc/_/no_reply31cat
 
 > [!WARNING]
 > 需确保骰子能连GitHub或其镜像网站才能正常使用
+>
 > 缺失的释义多为日版 :smiling_face_with_tear:
 
 - [github版](https://github.com/errrr-er/alll/tree/main/magic/CJE)
@@ -18,6 +19,3 @@ https://box.n3ko.cc/_/no_reply31cat
 - [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
     - 以防从github下载失败
     - 此版通常不是最新版、需导入后进行同步(更新按钮)
-
-> [!NOTE]
-> 
