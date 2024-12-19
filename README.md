@@ -1,6 +1,6 @@
 ## :inbox_tray:汇报错误/补充
 
-[提问箱](https://box.n3ko.cc/_/no_reply31cat)
+https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
