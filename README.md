@@ -4,7 +4,7 @@ https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
-### 旧版手册呪文(中日英三语) ver0.0.0
+### 旧版手册呪文(中日英三语) ver1.0.0
 
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
