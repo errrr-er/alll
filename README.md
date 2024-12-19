@@ -13,11 +13,11 @@ https://box.n3ko.cc/_/no_reply31cat
 > [!WARNING]
 > 需确保骰子能连GitHub或其镜像网站
 
-- [github版](https://github.com/errrr-er/alll/tree/main/magic/CJE)
-    - 此版通常为最新版
+- https://github.com/errrr-er/alll/tree/main/magic/CJE
+    - github版通常为最新版
     - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/magic_all.toml)文件
     - 仅想看对应名称请使用excel或导入后(.draw mhelp)
 
-- [蓝奏云版](https://wwye.lanzoup.com/iohw92ihoikf)
+- https://wwye.lanzoup.com/iohw92ihoikf
     - 仅toml文件、以防从github下载失败
-    - 此版通常不是最新版、需导入后进行同步(更新按钮)
+    - 蓝奏云版通常不是最新版、需导入后进行同步(更新按钮)
