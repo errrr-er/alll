@@ -11,7 +11,7 @@ https://box.n3ko.cc/_/no_reply31cat
 > 缺失的释义多为日版 :smiling_face_with_tear:
 
 > [!WARNING]
-> 需确保骰子能连GitHub或其镜像网站
+> 需确保骰子能连GitHub或其镜像网站[^1]
 
 - https://github.com/errrr-er/alll/tree/main/magic/CJE
     - github版通常为最新版
@@ -21,3 +21,5 @@ https://box.n3ko.cc/_/no_reply31cat
 - https://wwye.lanzoup.com/iohw92ihoikf
     - 仅toml文件、以防从github下载失败
     - 蓝奏云版通常不是最新版、需导入后进行同步(更新按钮)
+
+[^1]: 的
