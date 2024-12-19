@@ -2854,10 +2854,10 @@ options_urls = [
 
 
 
-[""]
+["霊の識別"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "灵魂辨识术","IDENTIFYSPIRIT","IdentifySpirit"]
 options = []
 
 # 提取云
@@ -2866,18 +2866,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IDENTIFYSPIRIT.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IDENTIFYSPIRIT.json"
 ]
 
 
 
 
 
-[""]
+["レレイの霧の創造"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
 options = []
 
 # 提取云
@@ -2886,18 +2886,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEMISTOFR'ELEH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEMISTOFR'ELEH.json"
 ]
 
 
 
 
 
-[""]
+["ろうそく交信"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "烛光通讯术","CANDLECOMMUNICATION","CandleCommunication"]
 options = []
 
 # 提取云
@@ -2906,18 +2906,18 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CANDLECOMMUNICATION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CANDLECOMMUNICATION.json"
 ]
 
 
 
 
 
-[""]
+["分かれの砂"]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = [ "分沙术","PARTINGSANDS","PartingSands"]
 options = []
 
 # 提取云
@@ -2927,27 +2927,7 @@ dictinct = true
 # github raw 链接
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
-]
-
-
-
-
-
-[""]
-export = true
-visible = true
-aliases = [ "","",""]
-options = []
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PARTINGSANDS.json"
 ]
 
 
