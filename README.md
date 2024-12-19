@@ -1,4 +1,4 @@
-### 修改/反馈/汇报错误
+### 汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
 
@@ -6,9 +6,8 @@ https://box.n3ko.cc/_/no_reply31cat
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
-> 尽量提供三语版释义
+> 尽量提供三语版释义(欢迎使用反馈进行补充)
 >> 缺失的释义多数为日版
->> 欢迎使用反馈补充
 
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
