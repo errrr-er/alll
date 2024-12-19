@@ -4,13 +4,12 @@ https://box.n3ko.cc/_/no_reply31cat
 
 3612464276（需使用.send指令）
 
-# 所有牌堆导入后请先更新再使用
+## 所有牌堆导入后请先更新再使用
 
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
-> 尽量提供三语版释义
->> 缺失的多为日版
-
+> 尽量提供完整释义(缺失的多为日版)
+`#0969DA测试`
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 只需下载本体、即magic_all.toml文件
