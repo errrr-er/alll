@@ -1,3 +1,5 @@
+# 所有牌堆导入后请先更新再使用
+
 ### 汇报错误/补充
 
 https://box.n3ko.cc/_/no_reply31cat
