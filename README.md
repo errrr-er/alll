@@ -9,7 +9,9 @@ https://box.n3ko.cc/_/no_reply31cat
 ### 旧版手册呪文(中日英三语) ver1.0.0
 
 > 尽量提供完整释义(缺失的多为日版)
+
 `#0969DA测试`
+
 https://github.com/errrr-er/alll/tree/main/magic/CJE
 
 只需下载本体、即magic_all.toml文件
