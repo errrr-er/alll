@@ -9,7 +9,7 @@ https://box.n3ko.cc/_/no_reply31cat
 > 缺失的释义多为日版 :smiling_face_with_tear:
 
 > [!WARNING]
-> 需确保骰子能连GitHub或其镜像网站才能正常使用
+> 需确保骰子能连GitHub或其镜像网站才能正常使用本牌堆
 
 - [github版](https://github.com/errrr-er/alll/tree/main/magic/CJE)
     - 此版通常为最新版
