@@ -24,4 +24,4 @@ https://box.n3ko.cc/_/no_reply31cat
 >
 > 此做法利为后续修正抽取结果时无需手动更新(若修改toml文件则需要)、弊为若骰子无法连接(github或其镜像网站)则等同于无法使用
 >
-> 海豹核心手动更新方式为：扩展功能->牌堆管理->更新(按钮)![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+> 海豹核心手动更新方式：扩展功能->牌堆管理->更新(按钮)![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
