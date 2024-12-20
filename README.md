@@ -12,8 +12,6 @@ https://box.n3ko.cc/_/no_reply31cat
 > - 海豹系需要注意的是导入后`牌组列表`会**超级、超级长！！！**<sub>~~(其它系不知道总之三思啊！)~~</sub>
 > - 全部显示会导致`.draw keys`在使用时报错、因此修改为骰子搜索key时只显示`mhelp`、但(例:`.draw 悪魔退散`)依旧可正常使用
 
-> 缺失的释义多为日版
-
 - https://github.com/errrr-er/alll/tree/main/magic/CJE
     - github版为最新版
     - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/magic_all.toml)文件
