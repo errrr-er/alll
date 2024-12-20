@@ -13,7 +13,7 @@ https://box.n3ko.cc/_/no_reply31cat
 - https://github.com/errrr-er/alll/tree/main/magic/CJE
     - github版为最新版
     - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/magic_all.toml)文件
-    - 仅想看对应名称请使用excel或导入后(.draw mhelp)
+    - 仅想看对应名称请使用excel或导入后`.draw mhelp`
 
 - https://wwye.lanzoup.com/iohw92ihoikf
     - 仅toml文件、以防从github下载失败
@@ -26,4 +26,8 @@ https://box.n3ko.cc/_/no_reply31cat
 >
 > - 弊：骰子无法连接(github/其镜像网站)则等同于无法使用
 >
-> 海豹端：扩展功能->牌堆管理->更新按钮(见下图)![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+> 海豹端：扩展功能->牌堆管理->更新(见下图)![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+
+> [!CAUTION]
+> - 海豹系(其它系未测试过)需要注意的是导入后“牌组列表”一栏会**超级、超级、超级**长
+> - 因全部显示会导致`.draw keys`在使用时报错(字数过多)，因此在骰子搜索key时只显示`mhelp`
