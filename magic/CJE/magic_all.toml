@@ -58,7 +58,7 @@ options_urls = [
 ["悪魔退散"]
 export = true
 visible = true
-aliases = [ "魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
+aliases = ["魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
 options = []
 
 # 提取云
@@ -78,7 +78,7 @@ options_urls = [
 ["悪魔の暴露"]
 export = true
 visible = true
-aliases = [ "恶魔揭露术","UNMASKDEMON","UnmaskDemon"]
+aliases = ["恶魔揭露术","UNMASKDEMON","UnmaskDemon"]
 options = []
 
 # 提取云
@@ -98,7 +98,7 @@ options_urls = [
 ["悪夢"]
 export = true
 visible = true
-aliases = [ "梦魇术","NIGHTMARE","Nightmare"]
+aliases = ["梦魇术","NIGHTMARE","Nightmare"]
 options = []
 
 # 提取云
@@ -118,7 +118,7 @@ options_urls = [
 ["アザトースの呪詛"]
 export = true
 visible = true
-aliases = [ "阿撒托斯的恐怖诅咒","DREADCURSEOFAZATHOTH","DreadCurseofAzathoth"]
+aliases = ["阿撒托斯的恐怖诅咒","DREADCURSEOFAZATHOTH","DreadCurseofAzathoth"]
 options = []
 
 # 提取云
@@ -138,7 +138,7 @@ options_urls = [
 ["アブホースを目覚めさせる"]
 export = true
 visible = true
-aliases = [ "阿布霍斯唤醒术","AWAKEABHOTH","AwakeAbhoth"]
+aliases = ["阿布霍斯唤醒术","AWAKEABHOTH","AwakeAbhoth"]
 options = []
 
 # 提取云
@@ -158,7 +158,7 @@ options_urls = [
 ["暗黒の呪い"]
 export = true
 visible = true
-aliases = [ "黑暗诅咒","CURSEOFDARKNESS","CurseofDarkness"]
+aliases = ["黑暗诅咒","CURSEOFDARKNESS","CurseofDarkness"]
 options = []
 
 # 提取云
@@ -178,7 +178,7 @@ options_urls = [
 ["イーデ・エタドの放逐"]
 export = true
 visible = true
-aliases = [ "耶德·艾塔德放逐术","BANISHMENTOFYDEETAD","BanishmentofYdeEtad"]
+aliases = ["耶德·艾塔德放逐术","BANISHMENTOFYDEETAD","BanishmentofYdeEtad"]
 options = []
 
 # 提取云
@@ -198,7 +198,7 @@ options_urls = [
 ["イシスの封印"]
 export = true
 visible = true
-aliases = [ "伊希斯的封印","SEALOFISIS","SealofIsis"]
+aliases = ["伊希斯的封印","SEALOFISIS","SealofIsis"]
 options = []
 
 # 提取云
@@ -218,7 +218,7 @@ options_urls = [
 ["石の呪い"]
 export = true
 visible = true
-aliases = [ "石板诅咒","CURSEOFTHESTONE","CurseoftheStone"]
+aliases = ["石板诅咒","CURSEOFTHESTONE","CurseoftheStone"]
 options = []
 
 # 提取云
@@ -238,7 +238,7 @@ options_urls = [
 ["萎縮"]
 export = true
 visible = true
-aliases = [ "枯萎术","SHRIVELLING","Shrivelling"]
+aliases = ["枯萎术","SHRIVELLING","Shrivelling"]
 options = []
 
 # 提取云
@@ -258,7 +258,7 @@ options_urls = [
 ["命の糧"]
 export = true
 visible = true
-aliases = [ "生命食粮术","FOODOFLIFE","FoodofLife"]
+aliases = ["生命食粮术","FOODOFLIFE","FoodofLife"]
 options = []
 
 # 提取云
@@ -278,7 +278,7 @@ options_urls = [
 ["イブンーグハジの粉"]
 export = true
 visible = true
-aliases = [ "伊本-加齐之粉","POWDEROFIBN-GHAZI","PowderofIbn-Ghazi"]
+aliases = ["伊本-加齐之粉","POWDEROFIBN-GHAZI","PowderofIbn-Ghazi"]
 options = []
 
 # 提取云
@@ -298,7 +298,7 @@ options_urls = [
 ["癒し"]
 export = true
 visible = true
-aliases = [ "治愈法","HEAL","Healing"]
+aliases = ["HEAL"]
 options = []
 
 # 提取云
@@ -318,7 +318,7 @@ options_urls = [
 ["ヴールの印"]
 export = true
 visible = true
-aliases = [ "维瑞之印","VOORISHSIGN","VoorishSign"]
+aliases = ["维瑞之印","VOORISHSIGN","VoorishSign"]
 options = []
 
 # 提取云
@@ -338,7 +338,7 @@ options_urls = [
 ["鋭敏な2人"]
 export = true
 visible = true
-aliases = [ "相似的敏锐","KEENNESSOFTWOALIKE","KeennessofTwoAlike"]
+aliases = ["相似的敏锐","KEENNESSOFTWOALIKE","KeennessofTwoAlike"]
 options = []
 
 # 提取云
@@ -358,7 +358,7 @@ options_urls = [
 ["エイボンの霧の車輪"]
 export = true
 visible = true
-aliases = [ "伊波恩雾轮术","EIBON'SWHEELOFMIST","Eibon'sWheelofMist"]
+aliases = ["伊波恩雾轮术","EIBON'SWHEELOFMIST","Eibon'sWheelofMist"]
 options = []
 
 # 提取云
@@ -378,7 +378,7 @@ options_urls = [
 ["疫病の召喚"]
 export = true
 visible = true
-aliases = [ "瘟疫召唤术","SUMMONPLAGUE","SummonPlague"]
+aliases = ["瘟疫召唤术","SUMMONPLAGUE","SummonPlague"]
 options = []
 
 # 提取云
@@ -398,7 +398,7 @@ options_urls = [
 ["疫病の到来"]
 export = true
 visible = true
-aliases = [ "瘟疫发生术","BRINGPESTILENCE","BringPestilence"]
+aliases = ["瘟疫发生术","BRINGPESTILENCE","BringPestilence"]
 options = []
 
 # 提取云
@@ -418,7 +418,7 @@ options_urls = [
 ["延長"]
 export = true
 visible = true
-aliases = [ "续命术","EXTEND","ExtendLife"]
+aliases = ["续命术","EXTEND","ExtendLife"]
 options = []
 
 # 提取云
@@ -438,7 +438,7 @@ options_urls = [
 ["黄金の蜂蜜酒の製法"]
 export = true
 visible = true
-aliases = [ "黄金蜂蜜酒酿造术","BREWSPACE-MEAD","BrewSpaceMead"]
+aliases = ["黄金蜂蜜酒酿造术","BREWSPACE-MEAD","BrewSpaceMead"]
 options = []
 
 # 提取云
@@ -458,7 +458,7 @@ options_urls = [
 ["カーの分配"]
 export = true
 visible = true
-aliases = [ "灵魂分配术","APPORTIONKA","ApportionKa"]
+aliases = ["灵魂分配术","APPORTIONKA","ApportionKa"]
 options = []
 
 # 提取云
@@ -478,7 +478,7 @@ options_urls = [
 ["完全"]
 export = true
 visible = true
-aliases = [ "完善术","PERFECTION","Perfection"]
+aliases = ["完善术","PERFECTION","Perfection"]
 options = []
 
 # 提取云
@@ -498,7 +498,7 @@ options_urls = [
 ["記憶を曇らせる"]
 export = true
 visible = true
-aliases = [ "记忆模糊术","CLOUDMEMORY","CloudMemory"]
+aliases = ["记忆模糊术","CLOUDMEMORY","CloudMemory"]
 options = []
 
 # 提取云
@@ -518,7 +518,7 @@ options_urls = [
 ["犠性者を魅了する"]
 export = true
 visible = true
-aliases = [ "迷身术","ENTHRALLVICTIM","EnthrallVictim"]
+aliases = ["迷身术","ENTHRALLVICTIM","EnthrallVictim"]
 options = []
 
 # 提取云
@@ -538,7 +538,7 @@ options_urls = [
 ["逆転移"]
 export = true
 visible = true
-aliases = [ "反转移术","DETRANSFERENCE","Detransference"]
+aliases = ["反转移术","DETRANSFERENCE","Detransference"]
 options = []
 
 # 提取云
@@ -558,7 +558,7 @@ options_urls = [
 ["吸魂"]
 export = true
 visible = true
-aliases = [ "生命偷取术","STEALLIFE","StealLife"]
+aliases = ["生命偷取术","STEALLIFE","StealLife"]
 options = []
 
 # 提取云
@@ -578,7 +578,7 @@ options_urls = [
 ["狂気の笛"]
 export = true
 visible = true
-aliases = [ "疯狂之笛","PIPESOFMADNESS","PipesofMadness"]
+aliases = ["疯狂之笛","PIPESOFMADNESS","PipesofMadness"]
 options = []
 
 # 提取云
@@ -598,7 +598,7 @@ options_urls = [
 ["恐怖の注入"]
 export = true
 visible = true
-aliases = [ "恐惧植入术","IMPLANTFEAR","ImplantFear"]
+aliases = ["恐惧植入术","IMPLANTFEAR","ImplantFear"]
 options = []
 
 # 提取云
@@ -618,7 +618,7 @@ options_urls = [
 ["空中浮遊"]
 export = true
 visible = true
-aliases = [ "飘浮术","LEVITATE","Levitate"]
+aliases = ["飘浮术","LEVITATE","Levitate"]
 options = []
 
 # 提取云
@@ -638,7 +638,7 @@ options_urls = [
 ["クトゥルフのわしづかみ"]
 export = true
 visible = true
-aliases = [ "克苏鲁抓攫术","GRASPOFCTHULHU","GraspofCthulhu"]
+aliases = ["克苏鲁抓攫术","GRASPOFCTHULHU","GraspofCthulhu"]
 options = []
 
 # 提取云
@@ -658,7 +658,7 @@ options_urls = [
 ["腐った外皮の呪い"]
 export = true
 visible = true
-aliases = [ "腐烂外皮之诅咒","CURSEOFTHEPUTRIDHUSK","CurseofthePutridHusk"]
+aliases = ["腐烂外皮之诅咒","CURSEOFTHEPUTRIDHUSK","CurseofthePutridHusk"]
 options = []
 
 # 提取云
@@ -678,7 +678,7 @@ options_urls = [
 ["黒い束縛"]
 export = true
 visible = true
-aliases = [ "僵尸创造术","BLACKBINDING","CreateZombie"]
+aliases = ["僵尸创造术","BLACKBINDING","CreateZombie"]
 options = []
 
 # 提取云
@@ -698,7 +698,7 @@ options_urls = [
 ["コウモリ形態"]
 export = true
 visible = true
-aliases = [ "蝙蝠化形法","BATFORM","BatForm"]
+aliases = ["蝙蝠化形法","BATFORM","BatForm"]
 options = []
 
 # 提取云
@@ -718,7 +718,7 @@ options_urls = [
 ["コルーブラの手"]
 export = true
 visible = true
-aliases = [ "蛇臂术","HANDSOFCOLUBRA","HandsofColubra"]
+aliases = ["蛇臂术","HANDSOFCOLUBRA","HandsofColubra"]
 options = []
 
 # 提取云
@@ -738,7 +738,7 @@ options_urls = [
 ["ゴルゴロスのボディ・ワープ"]
 export = true
 visible = true
-aliases = [ "戈尔戈罗斯形体扭曲术","BODYWARPINGOFGORGOROTH","BodyWarpingofGorgoroth"]
+aliases = ["戈尔戈罗斯形体扭曲术","BODYWARPINGOFGORGOROTH","BodyWarpingofGorgoroth"]
 options = []
 
 # 提取云
@@ -758,7 +758,7 @@ options_urls = [
 ["再度の屈辱"]
 export = true
 visible = true
-aliases = [ "遗恨术","REMORTIFICATION","Remortification"]
+aliases = ["遗恨术","REMORTIFICATION","Remortification"]
 options = []
 
 # 提取云
@@ -775,10 +775,30 @@ options_urls = [
 
 
 
+["魚の招来"]
+export = true
+visible = true
+aliases = ["诱鱼术","CALLFISH","AttractFish"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ATTRACTFISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ATTRACTFISH.json"
+]
+
+
+
+
+
 ["魚を引きつける"]
 export = true
 visible = true
-aliases = [ "诱鱼术","ATTRACTFISH","AttractFish"]
+aliases = ["诱鱼术","ATTRACTFISH","AttractFish"]
 options = []
 
 # 提取云
@@ -798,7 +818,7 @@ options_urls = [
 ["さまよう魂"]
 export = true
 visible = true
-aliases = [ "灵魂漫游术","WANDERINGSOUL","WanderingSoul"]
+aliases = ["灵魂漫游术","WANDERINGSOUL","WanderingSoul"]
 options = []
 
 # 提取云
@@ -815,10 +835,50 @@ options_urls = [
 
 
 
+["サメ"]
+export = true
+visible = true
+aliases = ["COMMANDSHARK"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json"
+]
+
+
+
+
+
+["イルカに命令する"]
+export = true
+visible = true
+aliases = ["PORPOISE"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json"
+]
+
+
+
+
+
 ["視覚を奪う"]
 export = true
 visible = true
-aliases = [ "致盲术","CAUSE","Cause"]
+aliases = ["致盲术","CAUSE","Cause"]
 options = []
 
 # 提取云
@@ -838,7 +898,7 @@ options_urls = [
 ["視覚を回復させる"]
 export = true
 visible = true
-aliases = [ "治盲术","CUREBLINDNESS","CureBlindness"]
+aliases = ["治盲术","CUREBLINDNESS","CureBlindness"]
 options = []
 
 # 提取云
@@ -858,7 +918,7 @@ options_urls = [
 ["時空門の創造"]
 export = true
 visible = true
-aliases = [ "时空门创造术","CREATETIMEGATE","CreateGate"]
+aliases = ["时空门创造术","CREATETIMEGATE","CreateGate"]
 options = []
 
 # 提取云
@@ -878,7 +938,7 @@ options_urls = [
 ["自己保護の創造"]
 export = true
 visible = true
-aliases = [ "自保袋创造术","CREATESELF-WARD","CreateSelf-Ward"]
+aliases = ["自保袋创造术","CREATESELF-WARD","CreateSelf-Ward"]
 options = []
 
 # 提取云
@@ -898,7 +958,7 @@ options_urls = [
 ["死者を送る"]
 export = true
 visible = true
-aliases = [ "死之发送术","SENDINGOFTHEDEAD","SendingoftheDead"]
+aliases = ["死之发送术","SENDINGOFTHEDEAD","SendingoftheDead"]
 options = []
 
 # 提取云
@@ -918,7 +978,7 @@ options_urls = [
 ["死体の粉の創造"]
 export = true
 visible = true
-aliases = [ "坏尸粉创造术","CREATEBAD-CORPSEDUST","CreateBad-CorpseDust"]
+aliases = ["坏尸粉创造术","CREATEBAD-CORPSEDUST","CreateBad-CorpseDust"]
 options = []
 
 # 提取云
@@ -938,7 +998,7 @@ options_urls = [
 ["支配"]
 export = true
 visible = true
-aliases = [ "支配术","DOMINATE","Dominate"]
+aliases = ["支配术","DOMINATE","Dominate"]
 options = []
 
 # 提取云
@@ -958,7 +1018,7 @@ options_urls = [
 ["邪眼"]
 export = true
 visible = true
-aliases = [ "邪眼术","EVILEYE","EvilEye"]
+aliases = ["邪眼术","EVILEYE","EvilEye"]
 options = []
 
 # 提取云
@@ -978,7 +1038,7 @@ options_urls = [
 ["シャンを追い出す"]
 export = true
 visible = true
-aliases = [ "夏恩逐出术","CASTOUTSHAN","CastOutShan"]
+aliases = ["夏恩逐出术","CASTOUTSHAN","CastOutShan"]
 options = []
 
 # 提取云
@@ -998,7 +1058,7 @@ options_urls = [
 ["消滅"]
 export = true
 visible = true
-aliases = [ "消失术","VANISH","Vanish"]
+aliases = ["消失术","VANISH","Vanish"]
 options = []
 
 # 提取云
@@ -1018,7 +1078,7 @@ options_urls = [
 ["深淵の息"]
 export = true
 visible = true
-aliases = [ "深渊之息","BREATHOFTHEDEEP","BreathoftheDeep"]
+aliases = ["深渊之息","BREATHOFTHEDEEP","BreathoftheDeep"]
 options = []
 
 # 提取云
@@ -1038,7 +1098,7 @@ options_urls = [
 ["心臓停止"]
 export = true
 visible = true
-aliases = [ "心跳停止术","STOPHEART","StopHeart"]
+aliases = ["心跳停止术","STOPHEART","StopHeart"]
 options = []
 
 # 提取云
@@ -1058,7 +1118,7 @@ options_urls = [
 ["身体部分の転移"]
 export = true
 visible = true
-aliases = [ "身体部件转移术","TRANSFERBODYPART","TransferBodyPart"]
+aliases = ["身体部件转移术","TRANSFERBODYPART","TransferBodyPart"]
 options = []
 
 # 提取云
@@ -1078,7 +1138,7 @@ options_urls = [
 ["人狼の拘束"]
 export = true
 visible = true
-aliases = [ "兽化人束缚术","BINDLOUP-GAROU","BindWere-Creature"]
+aliases = ["兽化人束缚术","BINDLOUP-GAROU","BindWere-Creature"]
 options = []
 
 # 提取云
@@ -1098,7 +1158,7 @@ options_urls = [
 ["水晶占いの窓の創造"]
 export = true
 visible = true
-aliases = [ "占卜窗创造术","CREATESCRYINGWINDOW","CreateScryingWindow"]
+aliases = ["占卜窗创造术","CREATESCRYINGWINDOW","CreateScryingWindow"]
 options = []
 
 # 提取云
@@ -1118,7 +1178,7 @@ options_urls = [
 ["スベクトラル・ハンターへの変身"]
 export = true
 visible = true
-aliases = [ "灵体猎手变身术","BECOMESPECTRALHUNTER","BecomeSpectralHunter"]
+aliases = ["灵体猎手变身术","BECOMESPECTRALHUNTER","BecomeSpectralHunter"]
 options = []
 
 # 提取云
@@ -1138,7 +1198,7 @@ options_urls = [
 ["砂嵐を起こす"]
 export = true
 visible = true
-aliases = [ "哈布沙暴发生术","BRINGHABOOB","SANDSTORM","BringHaboob"]
+aliases = ["哈布沙暴发生术","BRINGHABOOB","SANDSTORM","BringHaboob"]
 options = []
 
 # 提取云
@@ -1158,7 +1218,7 @@ options_urls = [
 ["スレイマンの塵"]
 export = true
 visible = true
-aliases = [ "苏莱曼之尘","DUSTOFSULEIMAN","DustofSuleiman"]
+aliases = ["苏莱曼之尘","DUSTOFSULEIMAN","DustofSuleiman"]
 options = []
 
 # 提取云
@@ -1178,7 +1238,7 @@ options_urls = [
 ["精神交換"]
 export = true
 visible = true
-aliases = [ "精神交换术","MINDEXCHANGE","MindExchange"]
+aliases = ["精神交换术","MINDEXCHANGE","MindExchange"]
 options = []
 
 # 提取云
@@ -1198,7 +1258,7 @@ options_urls = [
 ["精神的従属"]
 export = true
 visible = true
-aliases = [ "心理暗示术","MENTALSUGGESTION","MentalSuggestion"]
+aliases = ["心理暗示术","MENTALSUGGESTION","MentalSuggestion"]
 options = []
 
 # 提取云
@@ -1218,7 +1278,7 @@ options_urls = [
 ["精神転移"]
 export = true
 visible = true
-aliases = [ "精神转移术","MINDTANSFER","MindTransfer"]
+aliases = ["精神转移术","MINDTANSFER","MindTransfer"]
 options = []
 
 # 提取云
@@ -1238,7 +1298,7 @@ options_urls = [
 ["精神力吸引"]
 export = true
 visible = true
-aliases = [ "魔力吸取术","POWERDRAIN","PowerDrain"]
+aliases = ["魔力吸取术","POWERDRAIN","PowerDrain"]
 options = []
 
 # 提取云
@@ -1258,7 +1318,7 @@ options_urls = [
 ["生命の察知"]
 export = true
 visible = true
-aliases = [ "生命觉察术","SENSELIFE","SenseLife"]
+aliases = ["生命觉察术","SENSELIFE","SenseLife"]
 options = []
 
 # 提取云
@@ -1278,7 +1338,7 @@ options_urls = [
 ["セイレーンの歌声"]
 export = true
 visible = true
-aliases = [ "塞壬之歌","SIREN'SSONG","Siren'sSong"]
+aliases = ["塞壬之歌","SIREN'SSONG","Siren'sSong"]
 options = []
 
 # 提取云
@@ -1298,7 +1358,7 @@ options_urls = [
 ["セクメンケネッブの言葉"]
 export = true
 visible = true
-aliases = [ "真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
+aliases = ["真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
 options = []
 
 # 提取云
@@ -1318,7 +1378,7 @@ options_urls = [
 ["憎悪の像の召喚"]
 export = true
 visible = true
-aliases = [ "仇恨雕像","SUMMONEFFIGYOFHATE","EffigyofHate"]
+aliases = ["仇恨雕像","SUMMONEFFIGYOFHATE","EffigyofHate"]
 options = []
 
 # 提取云
@@ -1338,7 +1398,7 @@ options_urls = [
 ["臓器の転移"]
 export = true
 visible = true
-aliases = [ "器官转移术","TRANSFERORGAN","TransferOrgan"]
+aliases = ["器官转移术","TRANSFERORGAN","TransferOrgan"]
 options = []
 
 # 提取云
@@ -1358,7 +1418,7 @@ options_urls = [
 ["ゾンビの創造"]
 export = true
 visible = true
-aliases = [ "活尸创造术","CREATEZOMBI","CreateZombi"]
+aliases = ["活尸创造术","CREATEZOMBI","CreateZombi"]
 options = []
 
 # 提取云
@@ -1378,7 +1438,7 @@ options_urls = [
 ["ゾンビの目"]
 export = true
 visible = true
-aliases = [ "僵尸之眼","EYESOFTHEZOMBIE","EyesoftheZombie"]
+aliases = ["僵尸之眼","EYESOFTHEZOMBIE","EyesoftheZombie"]
 options = []
 
 # 提取云
@@ -1398,7 +1458,7 @@ options_urls = [
 ["タールクン・アテプの鏡"]
 export = true
 visible = true
-aliases = [ "塔昆·阿提普之镜","MIRROROFTARKHUNATEP","MirrorofTarkhunAtep"]
+aliases = ["塔昆·阿提普之镜","MIRROROFTARKHUNATEP","MirrorofTarkhunAtep"]
 options = []
 
 # 提取云
@@ -1418,7 +1478,7 @@ options_urls = [
 ["立ちこめる夜霧"]
 export = true
 visible = true
-aliases = [ "夜雾唤起术","RAISENIGHTFOG","RaiseNightFog"]
+aliases = ["夜雾唤起术","RAISENIGHTFOG","RaiseNightFog"]
 options = []
 
 # 提取云
@@ -1438,7 +1498,7 @@ options_urls = [
 ["魂の歌"]
 export = true
 visible = true
-aliases = [ "灵魂之歌","SOULSINGING","SoulSinging"]
+aliases = ["灵魂之歌","SOULSINGING","SoulSinging"]
 options = []
 
 # 提取云
@@ -1458,7 +1518,7 @@ options_urls = [
 ["魂の監禁"]
 export = true
 visible = true
-aliases = [ "精神囚禁术","IMPRISONMIND","ImprisonMind"]
+aliases = ["精神囚禁术","IMPRISONMIND","ImprisonMind"]
 options = []
 
 # 提取云
@@ -1478,7 +1538,7 @@ options_urls = [
 ["魂の束縛"]
 export = true
 visible = true
-aliases = [ "灵魂束缚术","BINDSOUL","BindSoul"]
+aliases = ["灵魂束缚术","BINDSOUL","BindSoul"]
 options = []
 
 # 提取云
@@ -1498,7 +1558,7 @@ options_urls = [
 ["魂の抽出"]
 export = true
 visible = true
-aliases = [ "灵魂抽取术","SOULEXTRACTION","SoulExtraction"]
+aliases = ["灵魂抽取术","SOULEXTRACTION","SoulExtraction"]
 options = []
 
 # 提取云
@@ -1518,7 +1578,7 @@ options_urls = [
 ["魂の罠"]
 export = true
 visible = true
-aliases = [ "灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
+aliases = ["灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
 options = []
 
 # 提取云
@@ -1538,7 +1598,7 @@ options_urls = [
 ["チャウグナー・フォーンの呪い"]
 export = true
 visible = true
-aliases = [ "肖格纳尔·方的诅咒","CURSEOFCHAUGNARFAUGN","CurseofChaugnarFaugn"]
+aliases = ["肖格纳尔·方的诅咒","CURSEOFCHAUGNARFAUGN","CurseofChaugnarFaugn"]
 options = []
 
 # 提取云
@@ -1555,10 +1615,30 @@ options_urls = [
 
 
 
+["忠告の注入"]
+export = true
+visible = true
+aliases = ["IMPLANTSUGGESTION"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MENTALSUGGESTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MENTALSUGGESTION.json"
+]
+
+
+
+
+
 ["治癒"]
 export = true
 visible = true
-aliases = [ "治愈法","HEALING","Healing"]
+aliases = ["治愈法","HEALING","Healing"]
 options = []
 
 # 提取云
@@ -1578,7 +1658,7 @@ options_urls = [
 ["手足の萎縮"]
 export = true
 visible = true
-aliases = [ "肢体凋萎术","WITHERLIMB","WitherLimb"]
+aliases = ["肢体凋萎术","WITHERLIMB","WitherLimb"]
 options = []
 
 # 提取云
@@ -1598,7 +1678,7 @@ options_urls = [
 ["敵の拘束"]
 export = true
 visible = true
-aliases = [ "敌人束缚术","BINDENEMY","BindEnemy"]
+aliases = ["敌人束缚术","BINDENEMY","BindEnemy"]
 options = []
 
 # 提取云
@@ -1618,7 +1698,7 @@ options_urls = [
 ["テツチャプトルのチャイム"]
 export = true
 visible = true
-aliases = [ "特兹查普特尔之铃","CHIMEOFTEZCHAPTL","ChimeofTezchaptl"]
+aliases = ["特兹查普特尔之铃","CHIMEOFTEZCHAPTL","ChimeofTezchaptl"]
 options = []
 
 # 提取云
@@ -1638,7 +1718,7 @@ options_urls = [
 ["天候を変える"]
 export = true
 visible = true
-aliases = [ "天气改换术","ALTERWEATHER","AlterWeather"]
+aliases = ["天气改换术","ALTERWEATHER","AlterWeather"]
 options = []
 
 # 提取云
@@ -1658,7 +1738,7 @@ options_urls = [
 ["刀身を清める"]
 export = true
 visible = true
-aliases = [ "刀锋祝福术","BLESSBLADE","BlessBlade"]
+aliases = ["刀锋祝福术","BLESSBLADE","BlessBlade"]
 options = []
 
 # 提取云
@@ -1678,7 +1758,7 @@ options_urls = [
 ["動物に命令する"]
 export = true
 visible = true
-aliases = [ "动物号令法","COMMANDANIMALSPELLS","CommandAnimal"]
+aliases = ["动物号令法","COMMANDANIMALSPELLS","CommandAnimal"]
 options = []
 
 # 提取云
@@ -1698,7 +1778,7 @@ options_urls = [
 ["動物の足を不自由にする"]
 export = true
 visible = true
-aliases = [ "动物残废法","LAME","Lame"]
+aliases = ["动物残废法","LAME","Lame"]
 options = []
 
 # 提取云
@@ -1718,7 +1798,7 @@ options_urls = [
 ["治癒させる"]
 export = true
 visible = true
-aliases = [ "动物治愈法","HEALANIMAL","HealAnimal"]
+aliases = ["动物治愈法","HEALANIMAL","HealAnimal"]
 options = []
 
 # 提取云
@@ -1738,7 +1818,7 @@ options_urls = [
 ["動物を魅了する"]
 export = true
 visible = true
-aliases = [ "动物魅惑法","CHARMANIMAL","CharmAnimal"]
+aliases = ["动物魅惑法","CHARMANIMAL","CharmAnimal"]
 options = []
 
 # 提取云
@@ -1758,7 +1838,7 @@ options_urls = [
 ["トートの詠唱"]
 export = true
 visible = true
-aliases = [ "透特之咏","CHANTOFTHOTH","ChantofThoth"]
+aliases = ["透特之咏","CHANTOFTHOTH","ChantofThoth"]
 options = []
 
 # 提取云
@@ -1798,7 +1878,7 @@ options_urls = [
 ["肉移植"]
 export = true
 visible = true
-aliases = [ "血肉移植术","GRAFTFLESH","GraftFlesh"]
+aliases = ["血肉移植术","GRAFTFLESH","GraftFlesh"]
 options = []
 
 # 提取云
@@ -1818,7 +1898,7 @@ options_urls = [
 ["肉体の屈服"]
 export = true
 visible = true
-aliases = [ "肉体屈服术","COMPELFLESH","CompelFlesh"]
+aliases = ["肉体屈服术","COMPELFLESH","CompelFlesh"]
 options = []
 
 # 提取云
@@ -1838,7 +1918,7 @@ options_urls = [
 ["肉体の保護"]
 export = true
 visible = true
-aliases = [ "血肉防护术","FLESHWARD","FleshWard"]
+aliases = ["血肉防护术","FLESHWARD","FleshWard"]
 options = []
 
 # 提取云
@@ -1858,7 +1938,7 @@ options_urls = [
 ["肉の溶解"]
 export = true
 visible = true
-aliases = [ "血肉熔解术","MELTFLESH","MeltFlesh"]
+aliases = ["血肉熔解术","MELTFLESH","MeltFlesh"]
 options = []
 
 # 提取云
@@ -1878,7 +1958,7 @@ options_urls = [
 ["似姿の利用"]
 export = true
 visible = true
-aliases = [ "相貌吞食术","CONSUMELIKENESS","ConsumeLikeness"]
+aliases = ["相貌吞食术","CONSUMELIKENESS","ConsumeLikeness"]
 options = []
 
 # 提取云
@@ -1898,7 +1978,7 @@ options_urls = [
 ["ニャンベのパワ"]
 export = true
 visible = true
-aliases = [ "尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
+aliases = ["尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
 options = []
 
 # 提取云
@@ -1918,7 +1998,7 @@ options_urls = [
 ["ニョグタのわしづかみ"]
 export = true
 visible = true
-aliases = [ "尼约格萨紧握术","CLUTCHOFNYOGTHA","ClutchofNyogtha"]
+aliases = ["尼约格萨紧握术","CLUTCHOFNYOGTHA","ClutchofNyogtha"]
 options = []
 
 # 提取云
@@ -1938,7 +2018,7 @@ options_urls = [
 ["人間をおびき寄せる"]
 export = true
 visible = true
-aliases = [ "人类引诱术","BAITHUMANS","BaitHumans"]
+aliases = ["人类引诱术","BAITHUMANS","BaitHumans"]
 options = []
 
 # 提取云
@@ -1958,7 +2038,7 @@ options_urls = [
 ["ネズミ怪物の呪い"]
 export = true
 visible = true
-aliases = [ "人面鼠诅咒","CURSEOFTHERATLTHING","CurseoftheRat-thing"]
+aliases = ["人面鼠诅咒","CURSEOFTHERATLTHING","CurseoftheRat-thing"]
 options = []
 
 # 提取云
@@ -1978,7 +2058,7 @@ options_urls = [
 ["農作物を枯らす"]
 export = true
 visible = true
-aliases = [ "作物枯萎法","BLIGHT","Blight"]
+aliases = ["作物枯萎法","BLIGHT","Blight"]
 options = []
 
 # 提取云
@@ -1998,7 +2078,7 @@ options_urls = [
 ["農作物に祝福を与える"]
 export = true
 visible = true
-aliases = [ "作物祝福法","BLESSCROP","BlessCrop"]
+aliases = ["作物祝福法","BLESSCROP","BlessCrop"]
 options = []
 
 # 提取云
@@ -2018,7 +2098,7 @@ options_urls = [
 ["呪いのホイッスルの創造"]
 export = true
 visible = true
-aliases = [ "诅咒之笛创造术","CREATECURSEWHISTLE","CreateCurseWhistle"]
+aliases = ["诅咒之笛创造术","CREATECURSEWHISTLE","CreateCurseWhistle"]
 options = []
 
 # 提取云
@@ -2038,7 +2118,7 @@ options_urls = [
 ["ハートの勇気"]
 export = true
 visible = true
-aliases = [ "心中的勇气","HEART'SCOURAGE","Heart'sCourage"]
+aliases = ["心中的勇气","HEART'SCOURAGE","Heart'sCourage"]
 options = []
 
 # 提取云
@@ -2058,7 +2138,7 @@ options_urls = [
 ["灰色の束縛"]
 export = true
 visible = true
-aliases = [ "灰色束缚","GRAYBINDING","GreyBinding"]
+aliases = ["灰色束缚","GRAYBINDING","GreyBinding"]
 options = []
 
 # 提取云
@@ -2078,7 +2158,7 @@ options_urls = [
 ["破壊"]
 export = true
 visible = true
-aliases = [ "折磨术","WRACK","Wrack"]
+aliases = ["折磨术","WRACK","Wrack"]
 options = []
 
 # 提取云
@@ -2098,7 +2178,7 @@ options_urls = [
 ["吐き気の魔去円"]
 export = true
 visible = true
-aliases = [ "反胃法阵","CIRCLEOFNAUSEA","CircleofNausea"]
+aliases = ["反胃法阵","CIRCLEOFNAUSEA","CircleofNausea"]
 options = []
 
 # 提取云
@@ -2118,7 +2198,7 @@ options_urls = [
 ["ハスターの歌"]
 export = true
 visible = true
-aliases = [ "哈斯塔之歌","SONGOFHASTUR","SongofHastur"]
+aliases = ["哈斯塔之歌","SONGOFHASTUR","SongofHastur"]
 options = []
 
 # 提取云
@@ -2138,7 +2218,7 @@ options_urls = [
 ["ハスターの解放"]
 export = true
 visible = true
-aliases = [ "哈斯塔释放术","FREEHASTUR","FreeHastur"]
+aliases = ["哈斯塔释放术","FREEHASTUR","FreeHastur"]
 options = []
 
 # 提取云
@@ -2158,7 +2238,7 @@ options_urls = [
 ["被害をそらす"]
 export = true
 visible = true
-aliases = [ "伤害偏转术","DEFLECTHARM","DeflectHarm"]
+aliases = ["伤害偏转术","DEFLECTHARM","DeflectHarm"]
 options = []
 
 # 提取云
@@ -2178,7 +2258,7 @@ options_urls = [
 ["光と闇の目"]
 export = true
 visible = true
-aliases = [ "光明与黑暗之眼","EYEOFLIGHTANDDARKNESS","EyeofLightandDarkness"]
+aliases = ["光明与黑暗之眼","EYEOFLIGHTANDDARKNESS","EyeofLightandDarkness"]
 options = []
 
 # 提取云
@@ -2198,7 +2278,7 @@ options_urls = [
 ["光を消す"]
 export = true
 visible = true
-aliases = [ "抑光术","DAMPENLIGHT","DampenLight"]
+aliases = ["抑光术","DAMPENLIGHT","DampenLight"]
 options = []
 
 # 提取云
@@ -2218,7 +2298,7 @@ options_urls = [
 ["雛を取り除く"]
 export = true
 visible = true
-aliases = [ "幼体驱除术","BALKBROOD","BalkBrood"]
+aliases = ["幼体驱除术","BALKBROOD","BalkBrood"]
 options = []
 
 # 提取云
@@ -2238,7 +2318,7 @@ options_urls = [
 ["皮膚の制御"]
 export = true
 visible = true
-aliases = [ "皮肤控制术","CONTROLSKIN","ControlSkin"]
+aliases = ["皮肤控制术","CONTROLSKIN","ControlSkin"]
 options = []
 
 # 提取云
@@ -2258,7 +2338,7 @@ options_urls = [
 ["フェッチ棒の創造"]
 export = true
 visible = true
-aliases = [ "生魂棒创造术","CREATEFETCHSTICK","CreateFetchStick"]
+aliases = ["生魂棒创造术","CREATEFETCHSTICK","CreateFetchStick"]
 options = []
 
 # 提取云
@@ -2278,7 +2358,7 @@ options_urls = [
 ["布石"]
 export = true
 visible = true
-aliases = [ "守卫术","WARDING","Warding"]
+aliases = ["守卫术","WARDING","Warding"]
 options = []
 
 # 提取云
@@ -2298,7 +2378,7 @@ options_urls = [
 ["復活"]
 export = true
 visible = true
-aliases = [ "复活术","RESURRECTION","Resurrection"]
+aliases = ["复活术","RESURRECTION","Resurrection"]
 options = []
 
 # 提取云
@@ -2318,7 +2398,7 @@ options_urls = [
 ["プリンのアンサタ十字"]
 export = true
 visible = true
-aliases = [ "蒲林的埃及十字架","PRINN'SCRUXANSATA","Prinn'sCruxAnsata"]
+aliases = ["蒲林的埃及十字架","PRINN'SCRUXANSATA","Prinn'sCruxAnsata"]
 options = []
 
 # 提取云
@@ -2338,7 +2418,7 @@ options_urls = [
 ["旧き印"]
 export = true
 visible = true
-aliases = [ "旧印开光术","ELDERSIGN","ElderSign"]
+aliases = ["旧印开光术","ELDERSIGN","ElderSign"]
 options = []
 
 # 提取云
@@ -2358,7 +2438,7 @@ options_urls = [
 ["平凡な見せかけ"]
 export = true
 visible = true
-aliases = [ "平凡无奇术","POSEMUNDANE","PoseMundane"]
+aliases = ["平凡无奇术","POSEMUNDANE","PoseMundane"]
 options = []
 
 # 提取云
@@ -2378,7 +2458,7 @@ options_urls = [
 ["仮面"]
 export = true
 visible = true
-aliases = [ "平凡无奇术","MASK","PoseMundane"]
+aliases = ["平凡无奇术","MASK","PoseMundane"]
 options = []
 
 # 提取云
@@ -2398,7 +2478,7 @@ options_urls = [
 ["ヘルメス・トリスメギストスの毒塵"]
 export = true
 visible = true
-aliases = [ "赫耳墨斯·特里斯墨吉斯忒斯的毒尘","BANEFULDUSTOFHERMESTRISMEGISTUS","BanefulDustofHermesTrismegistus"]
+aliases = ["赫耳墨斯·特里斯墨吉斯忒斯的毒尘","BANEFULDUSTOFHERMESTRISMEGISTUS","BanefulDustofHermesTrismegistus"]
 options = []
 
 # 提取云
@@ -2418,7 +2498,7 @@ options_urls = [
 ["忘却の波"]
 export = true
 visible = true
-aliases = [ "忘却之波","WAVEOFOBLIVION","WaveofOblivion"]
+aliases = ["忘却之波","WAVEOFOBLIVION","WaveofOblivion"]
 options = []
 
 # 提取云
@@ -2438,7 +2518,7 @@ options_urls = [
 ["亡霊に命令する"]
 export = true
 visible = true
-aliases = [ "鬼魂号令法","COMMANDGHOST","CommandGhost"]
+aliases = ["鬼魂号令法","COMMANDGHOST","CommandGhost"]
 options = []
 
 # 提取云
@@ -2458,7 +2538,7 @@ options_urls = [
 ["卜占"]
 export = true
 visible = true
-aliases = [ "占卜法","AUGURY","Augury"]
+aliases = ["占卜法","AUGURY","Augury"]
 options = []
 
 # 提取云
@@ -2478,7 +2558,7 @@ options_urls = [
 ["炎の外套"]
 export = true
 visible = true
-aliases = [ "火焰斗篷术","CLOAKOFFIRE","CloakofFire"]
+aliases = ["火焰斗篷术","CLOAKOFFIRE","CloakofFire"]
 options = []
 
 # 提取云
@@ -2498,7 +2578,7 @@ options_urls = [
 ["マインドブラスト"]
 export = true
 visible = true
-aliases = [ "精神震爆术","MINDBLAST","Mindblast"]
+aliases = ["精神震爆术","MINDBLAST","Mindblast"]
 options = []
 
 # 提取云
@@ -2518,7 +2598,7 @@ options_urls = [
 ["未来の視察"]
 export = true
 visible = true
-aliases = [ "未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
+aliases = ["未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
 options = []
 
 # 提取云
@@ -2538,7 +2618,7 @@ options_urls = [
 ["無欠の投擲"]
 export = true
 visible = true
-aliases = [ "无瑕投掷法","IMPECCABLETHROW","ImpeccableThrow"]
+aliases = ["无瑕投掷法","IMPECCABLETHROW","ImpeccableThrow"]
 options = []
 
 # 提取云
@@ -2558,7 +2638,7 @@ options_urls = [
 ["向こう側への旅"]
 export = true
 visible = true
-aliases = [ "彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
+aliases = ["彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
 options = []
 
 # 提取云
@@ -2578,7 +2658,7 @@ options_urls = [
 ["名状し難い誓約"]
 export = true
 visible = true
-aliases = [ "不可名状的诺言","UNSPEAKABLEPROMISE","UnspeakablePromise"]
+aliases = ["不可名状的诺言","UNSPEAKABLEPROMISE","UnspeakablePromise"]
 options = []
 
 # 提取云
@@ -2598,7 +2678,7 @@ options_urls = [
 ["目の保護"]
 export = true
 visible = true
-aliases = [ "邪眼守卫术","WARDINGTHEEYE","WardingtheEye"]
+aliases = ["邪眼守卫术","WARDINGTHEEYE","WardingtheEye"]
 options = []
 
 # 提取云
@@ -2618,7 +2698,7 @@ options_urls = [
 ["モートランのガラスの製造"]
 export = true
 visible = true
-aliases = [ "莫特兰玻璃幻术","CONJUREGLASSOFMOTLAN","ConjureGlassofMortlan"]
+aliases = ["莫特兰玻璃幻术","CONJUREGLASSOFMOTLAN","ConjureGlassofMortlan"]
 options = []
 
 # 提取云
@@ -2638,7 +2718,7 @@ options_urls = [
 ["門の観察"]
 export = true
 visible = true
-aliases = [ "时空门观察术","VIEWGATE","ViewGate"]
+aliases = ["时空门观察术","VIEWGATE","ViewGate"]
 options = []
 
 # 提取云
@@ -2658,7 +2738,7 @@ options_urls = [
 ["門の創造"]
 export = true
 visible = true
-aliases = [ "时空门创造术","CREATEGATE","CreateGate"]
+aliases = ["时空门创造术","CREATEGATE","CreateGate"]
 options = []
 
 # 提取云
@@ -2678,7 +2758,7 @@ options_urls = [
 ["門の発見"]
 export = true
 visible = true
-aliases = [ "时空门搜寻术","FINDGATE","FindGate"]
+aliases = ["时空门搜寻术","FINDGATE","FindGate"]
 options = []
 
 # 提取云
@@ -2698,7 +2778,7 @@ options_urls = [
 ["病をもたらす"]
 export = true
 visible = true
-aliases = [ "致病术","CAUSEDISEASE","CauseDisease"]
+aliases = ["致病术","CAUSEDISEASE","CauseDisease"]
 options = []
 
 # 提取云
@@ -2718,7 +2798,7 @@ options_urls = [
 ["幽体の剃刀"]
 export = true
 visible = true
-aliases = [ "灵体剃刀术","SPECTRALRAZOR","SoectralRazor"]
+aliases = ["灵体剃刀术","SPECTRALRAZOR","SoectralRazor"]
 options = []
 
 # 提取云
@@ -2738,7 +2818,7 @@ options_urls = [
 ["夢の映像"]
 export = true
 visible = true
-aliases = [ "梦境幻象术","DREAMVISION","DreamVision"]
+aliases = ["梦境幻象术","DREAMVISION","DreamVision"]
 options = []
 
 # 提取云
@@ -2758,7 +2838,7 @@ options_urls = [
 ["夢の薬の製去"]
 export = true
 visible = true
-aliases = [ "入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
+aliases = ["入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
 options = []
 
 # 提取云
@@ -2778,7 +2858,7 @@ options_urls = [
 ["夢みる人の罠"]
 export = true
 visible = true
-aliases = [ "梦想家诱捕术","SNAREDREAMER","SnareDreamer"]
+aliases = ["梦想家诱捕术","SNAREDREAMER","SnareDreamer"]
 options = []
 
 # 提取云
@@ -2798,7 +2878,7 @@ options_urls = [
 ["夢を送る"]
 export = true
 visible = true
-aliases = [ "梦境发送术","SENDDREAM","SendDream"]
+aliases = ["梦境发送术","SENDDREAM","SendDream"]
 options = []
 
 # 提取云
@@ -2818,7 +2898,7 @@ options_urls = [
 ["ヨグ＝ソトースのこぶし"]
 export = true
 visible = true
-aliases = [ "犹格-索托斯之拳","FISTOFYOG-SOTHOTH","FistofYog-Sothoth"]
+aliases = ["犹格-索托斯之拳","FISTOFYOG-SOTHOTH","FistofYog-Sothoth"]
 options = []
 
 # 提取云
@@ -2838,7 +2918,7 @@ options_urls = [
 ["ラーの声"]
 export = true
 visible = true
-aliases = [ "拉神之声","VOICEOFRA","VoiceofRa"]
+aliases = ["拉神之声","VOICEOFRA","VoiceofRa"]
 options = []
 
 # 提取云
@@ -2858,7 +2938,7 @@ options_urls = [
 ["リーチ"]
 export = true
 visible = true
-aliases = [ "伸触术","REACH","Reach"]
+aliases = ["伸触术","REACH","Reach"]
 options = []
 
 # 提取云
@@ -2878,7 +2958,7 @@ options_urls = [
 ["霊の識別"]
 export = true
 visible = true
-aliases = [ "灵魂辨识术","IDENTIFYSPIRIT","IdentifySpirit"]
+aliases = ["灵魂辨识术","IDENTIFYSPIRIT","IdentifySpirit"]
 options = []
 
 # 提取云
@@ -2898,7 +2978,7 @@ options_urls = [
 ["レレイの霧の創造"]
 export = true
 visible = true
-aliases = [ "拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
+aliases = ["拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
 options = []
 
 # 提取云
@@ -2918,7 +2998,7 @@ options_urls = [
 ["ろうそく交信"]
 export = true
 visible = true
-aliases = [ "烛光通讯术","CANDLECOMMUNICATION","CandleCommunication"]
+aliases = ["烛光通讯术","CANDLECOMMUNICATION","CandleCommunication"]
 options = []
 
 # 提取云
@@ -2938,7 +3018,7 @@ options_urls = [
 ["分かれの砂"]
 export = true
 visible = true
-aliases = [ "分沙术","PARTINGSANDS","PartingSands"]
+aliases = ["分沙术","PARTINGSANDS","PartingSands"]
 options = []
 
 # 提取云
@@ -2958,7 +3038,7 @@ options_urls = [
 [""]
 export = true
 visible = true
-aliases = [ "","",""]
+aliases = ["","",""]
 options = []
 
 # 提取云
