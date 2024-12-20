@@ -39,7 +39,8 @@ update_Urls = [
 
 
 ["mhelp"]
-
+export = true
+visible = true
 
 # 提取云
 cloud_extra = true
