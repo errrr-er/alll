@@ -24,8 +24,8 @@ https://box.n3ko.cc/_/no_reply31cat
 > [!IMPORTANT]
 > 本牌堆制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
 > 
-> - 利：除非修改toml文件本身、修正其余相关信息时无需手动更新
+> - 利：修正后无需手动更新(除非修改toml文件本身)
 >
-> - 弊：骰子无法连接(github/其镜像网站)则等同于无法使用
+> - 弊：骰子无法连接(github/镜像)则等同于无法使用
 >
 > 海豹端：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
