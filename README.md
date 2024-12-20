@@ -28,4 +28,4 @@ https://box.n3ko.cc/_/no_reply31cat
 >
 > - 弊：骰子无法连接(github/其镜像网站)则等同于无法使用
 >
-> 海豹端<sub>(见下图)</sub>：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+> 海豹端：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
