@@ -675,6 +675,26 @@ options_urls = [
 
 
 
+["黒い束縛"]
+export = true
+visible = true
+aliases = [ "僵尸创造术","BLACKBINDING","CreateZombie"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLACKBINDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLACKBINDING.json"
+]
+
+
+
+
+
 ["コウモリ形態"]
 export = true
 visible = true
@@ -1967,8 +1987,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLIGHT.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLIGHT.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSCROP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSCROP.json"
 ]
 
 
