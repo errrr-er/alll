@@ -1,5 +1,5 @@
 [meta]
-title = "旧版手册呪文(中日英三语)"
+title = "旧版手册呪文(三语对照)"
 author = "裗浳(3612464276)"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
@@ -10,33 +10,6 @@ update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic_all.toml"
 ]
-
-
-
-
-
-# 参考资料
-
-# 中：
-# 海豹内置查询文档
-# 克苏鲁神话魔法大典1.1.2
-# https://www.bilibili.com/opus/853115006210801681
-
-# 日：
-# https://trpg-yaruo.com/jyumon/
-# https://trpg-japan.com/coc/coc-basic/cthulhu-mythos-spell-list/
-# https://boardgame-blog.com/cthulhu-spell/
-
-# 英：
-# the-grand-grimoire-of-cthulhu-mythos-magic
-
-# 整体顺序按照"旧版手册呪文_仅名称.xlsx"排序
-# 牌堆内未收集到的在excel表内标有各类颜色
-# 详细颜色解释已放进表内
-
-
-
-
 
 ["mhelp"]
 export = true
