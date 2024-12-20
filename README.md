@@ -1,4 +1,4 @@
-## 汇报错误/补充:inbox_tray:
+## 汇报错误/补充 :inbox_tray:
 
 https://box.n3ko.cc/_/no_reply31cat
 
@@ -26,8 +26,8 @@ https://box.n3ko.cc/_/no_reply31cat
 >
 > - 弊：骰子无法连接(github/其镜像网站)则等同于无法使用
 >
-> 海豹端：扩展功能->牌堆管理->更新(见下图)![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+> 海豹端(见下图)：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
 
 > [!CAUTION]
-> - 海豹系(其它系未测试过)需要注意的是导入后“牌组列表”一栏会**超级、超级、超级**长
-> - 因全部显示会导致`.draw keys`在使用时报错(字数过多)，因此在骰子搜索key时只显示`mhelp`
+> - 海豹系(其它系未测试过)需要注意的是导入后“牌组列表”一栏会**超级、超级、超级**长！
+> - 全部显示会导致`.draw keys`在使用时报错、因此修改为骰子搜索key时只显示`mhelp`、但(例:`.draw 悪魔退散`)
