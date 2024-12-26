@@ -36,3 +36,16 @@ options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json"
 ]
+
+
+
+["查询"]
+export = true
+aliases = ["共群"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json"
+]
