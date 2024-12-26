@@ -7,13 +7,12 @@ date = 2024-12-26
 update_date = 2024-12-26
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_use_only.toml",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_use_only.toml"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_all.toml"
 ]
 
 ["链接"]
 export = true
-visible = true
 aliases = ["活动"]
 
 # 提取云
@@ -22,14 +21,13 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/links/event.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/links/event.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/event.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/event.json"
 ]
 
 
 ["海豹"]
 export = true
-visible = true
 aliases = ["手册"]
 
 # 提取云
@@ -38,6 +36,6 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/links/sealdice.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/links/sealdice.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json"
 ]
