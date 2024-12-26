@@ -11,31 +11,39 @@ update_Urls = [
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_all.toml"
 ]
 
+
+
 ["链接"]
 export = true
 aliases = ["活动"]
 
-# 提取云
 cloud_extra = true
-# 云本去重
 dictinct = true
-# github raw 链接
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/event.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/event.json"
 ]
 
 
+
 ["海豹"]
 export = true
-aliases = ["手册"]
+aliases = ["手册","分离"]
 
-# 提取云
 cloud_extra = true
-# 云本去重
 dictinct = true
-# github raw 链接
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json"
+]
+
+
+["图片"]
+export = true
+
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true",
+  "https://ghp.ci/https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true"
 ]
