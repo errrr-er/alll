@@ -7,8 +7,8 @@ date = 2024-12-26
 update_date = 2024-12-26
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
-  "",
-  "https://ghp.ci/"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/personal_use.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/personal_use.toml"
 ]
 
 ["链接"]
