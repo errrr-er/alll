@@ -15,7 +15,7 @@ https://box.n3ko.cc/_/no_reply31cat
 > - 若释义有任何遗漏欢迎补充
 
 - https://github.com/errrr-er/alll/tree/main/magic/CJE
-    - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/magic_all.toml)
+    - 只需下载本体、即[magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/z_magic_all.toml)
     - 仅想看对应名称请使用excel或导入后`.draw mhelp`
 
 > [!IMPORTANT]
