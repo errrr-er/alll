@@ -16,7 +16,7 @@ update_Urls = [
 ["链接"]
 export = true
 aliases = ["活动"]
-
+options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -29,7 +29,7 @@ options_urls = [
 ["海豹"]
 export = true
 aliases = ["手册","分离"]
-
+options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -40,7 +40,7 @@ options_urls = [
 
 ["图片"]
 export = true
-
+options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
