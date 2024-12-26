@@ -7,9 +7,10 @@ https://box.n3ko.cc/_/no_reply31cat
 ## 旧版手册呪文(三语对照) ver1.0.0
 
 > [!CAUTION]
-> - 海豹系需要注意的是导入后`牌组列表`会**超级、超级长！！！**
-> - 过长的`.draw keys`会导致报错、因此抽取词仅在`.draw mhelp`里显示
-> - 尽量提供中日英释义、但大部分将会是`日名+中英释义`、若有遗漏欢迎补充
+> - 导入后`牌组列表`会**超级、超级长！！！**
+> - `.draw keys`过长会报错、抽取词仅在`.draw mhelp`里显示
+> - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
+> - 若释义有任何遗漏欢迎补充
 
 - https://github.com/errrr-er/alll/tree/main/magic/CJE
     - github版为最新版
@@ -28,4 +29,4 @@ https://box.n3ko.cc/_/no_reply31cat
 > - 弊：骰子无法连接(github/镜像) = 无法使用
 
 > [!TIP]
-> 更新请看：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+> 更新请用：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
