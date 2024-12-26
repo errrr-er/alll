@@ -1,0 +1,27 @@
+[meta]
+title = "私人使用(链接大合集)"
+author = "errrr-er"
+version = "0.0.0"
+license = "CC-BY-NC-ND 4.0"
+date = 2024-12-26
+update_date = 2024-12-26
+desc = "https://github.com/errrr-er/alll/tree/main"
+update_Urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/personal_use_only.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/personal_use_only.toml"
+]
+
+["链接"]
+export = true
+visible = true
+aliases = ["活动"]
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/links.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/do_not_use/links.json"
+]
