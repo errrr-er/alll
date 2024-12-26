@@ -15,7 +15,7 @@ update_Urls = [
 
 ["链接"]
 export = true
-aliases = ["活动"]
+aliases = ["活动","鸣潮"]
 options = []
 cloud_extra = true
 dictinct = true
@@ -35,15 +35,4 @@ dictinct = true
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json"
-]
-
-
-["图片"]
-export = true
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true",
-  "https://ghp.ci/https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true"
 ]
