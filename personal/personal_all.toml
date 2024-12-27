@@ -13,15 +13,15 @@ update_Urls = [
 
 
 
-["链接"]
+["鸣潮"]
 export = true
-aliases = ["活动","鸣潮"]
+aliases = ["活动"]
 options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/event.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/event.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering.json"
 ]
 
 
