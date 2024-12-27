@@ -1,0 +1,14 @@
+さまよう魂
+呪文の使い手が眠っている時、この呪文はその魂を別の場所へ送って敵の動静を探る。
+
+灵魂漫游术
+消耗：可变的魔法值；1D4点理智值
+施法用时：5分钟
+可以让施法者送出自己的意识（灵魂之眼、灵魂、精魄），在他们睡眠或冥想的时候观察某个地点。施法者因此可以预知敌人或者看到远处的东西。通常需要消耗一剂特制的饮剂，虽然有些巫师靠冥想来进入意识离开身体行动所需的状态。梦境一般的幻象显示出易于观察的信息。施法者的意识无论如何不能和看到的东西进行互动——它不能打开盒子和书本等等。施法者必须知道他们想要观察的地点，或者至少知道大概的位置。施法者在2D6小时后感觉精疲力尽地醒来，消耗魔法值到仅剩1点。在法术生效期间，拥有100点以上POW的存在可以看见并认出观察的意识（意识拥有施法者的外貌且无法伪装），有75点POW以上的人会感到不安和被监视。
+别名：魂眼旅行术、通向彼方之旅、远侦汝之敌及物
+
+WANDERINGSOUL/WanderingSoul
+Cost: variable magic points; 1D4 Sanity points
+Casting time: 5 minutes
+Allows the caster to send forth their consciousness (mind’s eye, soul, or spirit) to view a location while they sleep or meditate. Thus, the caster may scry their enemies and view matters far away. Usually a specially prepared drink is consumed, although some wizards use mediation to enter the proper state required for their consciousness to journey outside of their body. The dream-like vision reveals information readily observable. The caster’s mind cannot interact with what is seen in any way—it cannot open boxes or books, and so on. The caster must know the location they intend to view, or at least must know the approximate area. The caster wakes 2D6 hours later with a sense of exhaustion, having spent all but one magic point. An entity possessing POW 100 or more can see and identify the scrying mind while the spell is in effect (the consciousness carries the appearance of the caster and cannot be disguised), while those with POW 75 or above have the uneasy feeling of being watched.
+Alternative names: Travel of Mind’s Eye, Journey to Other Places, Spy Thy Enemies and Things Far Off.

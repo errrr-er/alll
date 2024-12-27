@@ -1,0 +1,14 @@
+空中浮遊
+呪文の使い手あるいは選ばれた対象の体をゆっくりと空中に浮かばせる呪文。
+
+飘浮术
+消耗：可变的魔法值；1D6点理智值
+施法用时：即时
+可令施法者或一个选定的目标在空中缓缓漂浮。施法者必须能接触目标。目标人物每有5点SIZ，漂浮他就需要投入1点魔法值。本法术能让目标飘浮离地3~5尺，持续1D6分钟。如果从高处落下来，目标会以慢动作下落，并且在离地几英尺的高度停止。在法术生效期间每多消耗一点魔法值，使用者就可以让目标水平或竖直移动一码。目标随施法者的意志移动，无法自行停止，除非他抱住大树或者类似的支柱。这种情况下需要做一次对抗检定：目标的STR对抗施法者的标胜出，法术终止，目标落到地面上。
+别名：指挥重力、颤栗的悬浮
+
+LEVITATE/Levitate
+Cost: variable magic points; 1D6 Sanity points
+Casting time: instantaneous
+Causes the caster or a chosen target to float slowly through the air. The caster must be able to touch the target. 1 magic point per 5 points of SIZ of the person to be levitated must be invested. The spell levitates the target 3–5 feet off the ground for 1D6 minutes. If falling from a height, the target falls in slow motion and halts several feet off the ground. Each extra magic point expended during the spell’s effect allows the user to move the target one yard horizontally or vertically. The target floats as the caster wills, helpless to stop moving except by grabbing a tree limb or similar brace. In that case, an opposed roll is made: the target’s STR against the caster’s POW. If the target wins, the spell is broken and the target falls to the ground.
+Alternative names: Command Gravity, Tremulous Suspension.

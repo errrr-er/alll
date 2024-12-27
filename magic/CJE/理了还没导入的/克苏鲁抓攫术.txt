@@ -1,0 +1,14 @@
+クトゥルフのわしづかみ
+1人または複数の対象を押しつぶすような圧力に身動きをできなくしてしまい、対象から一時的にSTRを盗み取る。
+
+克苏鲁抓攫术
+消耗：2D6点魔法值（每分钟）；1D6点理智值
+施法用时：1轮
+可怕的碾压般的压力定住一个或多个目标，暂时抽取他们的STR。法术的范围是10码，可以同时作用于多人；但是，每多一个目标，维持法术时每分钟就要额外消耗2D6点魔法值——只要施法者有足够的魔法值消耗，法术想持续多少分钟就能持续多少分钟，不需要额外的理智值消耗，但是施法者必须全程专注施法。施法者须和目标进行一次对抗检定并胜出，法术才能生效：若施法者胜出，目标会感到巨大的压力从天而降，身体无法动弹——好像被伟大的克苏鲁的强悍的触手捆住一样。法术每持续一分钟，目标就要暂时失去5D10点STR。若目标的STR减少到0以下，他将昏迷。
+别名：水海者的窒息触手、窒息术、拉莱耶的礼物
+
+GRASPOFCTHULHU/GraspofCthulhu
+Cost: 2D6 magic points (per minute); 1D6 Sanity points
+Casting time: 1 round
+Immobilizes one or more targets with a terrible, crushing pressure, temporarily robbing STR. The spell’s range is 10 yards and may affect more than one person at a time; however, each additional target costs an additional 2D6 magic points per minute the spell is sustained—can be extended for as many minutes as the caster’s magic points can buy without additional Sanity point cost, but the caster must concentrate on the spell during the entire time. For the spell to take effect the caster must succeed in an opposed POW roll with the target(s): if the caster wins, the victim(s) feels great pressure bearing down upon his or her body and is unable to move—as though wrapped by the mighty tentacles of Great Cthulhu. For each minute the spell lasts, the target temporarily loses 5D10 STR points. If the target’s STR drops to zero or less, he or she falls unconscious.
+Alternative names: The Suffocating Tentacles of the Watery Deeps, The Smothering, The Gift of R’lyeh.

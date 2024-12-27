@@ -1,0 +1,15 @@
+完全
+呪文の使い手は神の許しを得てこの呪文によってPOWのポイントを他の能力値のポイントに変換することができる。
+
+完善术
+消耗：每转化1点POW，消耗1点属性点施法用时：24小时
+如果神话神祇认同，施法者可以将POW点数转化为其他属性值（反之亦可），可以对施法者自己，也可以对他指定的目标。神祇可能索要任何代价——通常每转换一点角色点数便要支付一点角色点数。法术本身没有理智损失，但需要联络外神和旧日支配者，所以过程中的理智损失可能相当多。点数的转化持续1星期。深层魔法：神祇宠爱的仆从可能获得更多的恩赐，属性点数的转换将更久（可能是1个月甚至1年）。也有的变体可能赋予施法者从受害者身上吸取属性点并增长自己相关属性的能力（一一对应，除了POW以外）一段时间（假设为1个月）；但是，这个变体要求施法者额外支付1D8点理智值，须和目标进行一次POW对抗检定并胜出，法术才能生效。
+别名：精神变化为肉体之术、（此处填入外神和旧日支配者的名字）的祝福
+
+PERFECTION/Perfection
+Cost: 1 characteristic per point of POW converted
+Casting time: 24 hours
+Given the permission of a Mythos deity, the caster may convert points of POW into points of other characteristics (or vice versa), either for the caster or for his or her designated target. The deity designates any costs involved—usually one for one in characteristic points. There is no Sanity charge per se, but contact with an Outer God or Great Old One is necessary, so the Sanity loss involved may be substantial. The conversion of points lasts for 1 week.
+Deeper magic: well-favored servants of Mythos deities may be granted greater boons, with the change in characteristics lasting for greater lengths of time (1 month or 1 year perhaps).
+Another variant might grant the caster the ability to drain characteristic points from a victim and inflate their own corresponding characteristic (like-for-like for any characteristic, except for POW) for a set amount of time (suggest 1 month); although, such a variant would cost the caster at least 1D8 Sanity points and they would have to win an opposed POW roll with the victim for the spell to be successful.
+Alternative names: Transmutation of the Mind to Flesh, Blessing of (insert Outer God or Great Old One’s name here), Rite of Shaping.

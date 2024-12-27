@@ -1,0 +1,18 @@
+記憶を曇らせる
+コスト：1d6MP、1d2正気度ポイント
+必要ラウンド：瞬時
+別名：惑わせ、唖然、当惑
+対象お特定の出来事を意識的に覚える能力を妨害する。対抗POWロールに成功すれば即座に効果が現れる。
+
+记忆模糊术
+消耗：1D6点魔法值；1D2点理智值
+施法用时：即时
+本法术会阻碍目标有意识地回忆特定事件的能力。目标必须在施法者视野内，且能够接收施法者的指示。施法者须和目标进行一次POW对抗检定。如果胜出，法术立即生效。目标对一件特定事件的记忆将被阻塞。若此事非常恐怖，目标以后仍然可能做一些和它有着含糊关系的噩梦。如果法术失败，此事会在目标的印象中变得鲜明。施法者必须知道要阻碍的事件。他不能做模糊的命令，像是“忘掉你昨天做的事”。相反，他必须提到这件事，比如“忘掉你被怪物袭击的事”。本法术不能阻碍克苏鲁神话法术和神话知识，除非此知识和特定事件密切相关；它也无法取消理智值损失或消除疯狂。深层魔法：每额外投入10点魔法值，在决定法术成功的POW检定中便可获得一颗奖励骰。
+别名：昏乱糊涂术、惊愕失声术、故弄玄虚术
+
+CLOUDMEMORY/CloudMemory
+Cost: 1D6 magic points; 1D2 Sanity points
+Casting time: instantaneous
+Blocks the target’s ability to consciously remember a particular event. The caster must be able to see the target and the target must be able to receive the caster’s instructions. The spell takes effect immediately if the caster succeeds in an opposed POW roll with the target. If the caster wins, the target has one specified incident blocked from their memory. If the incident was terrifying, the target may thereafter still have nightmares vaguely relating to it. If the spell fails, the event in question becomes vivid in the target’s mind. The caster must know the specific event to be blocked. The caster cannot command something vague such as, “Forget what you did yesterday.” Instead, he or she must cite a certain event, such as, “Forget you were assaulted by a monster.” This spell cannot block knowledge of spells or of the Cthulhu Mythos unless the knowledge is firmly tied to a specific event, nor can it undo a Sanity loss or reverse insanity.
+Deeper magic: for each additional 10 magic points invested, the caster receives a bonus die to the opposed POW roll to determine the spell’s success.
+Alternative names: Befuddle, Dumbfound, Mystify.
