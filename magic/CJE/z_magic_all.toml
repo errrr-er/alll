@@ -880,8 +880,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CUREBLINDNESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CUREBLINDNESS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSE.json"
 ]
 
 
