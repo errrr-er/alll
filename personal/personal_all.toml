@@ -4,7 +4,7 @@ author = "errrr-er"
 version = "0.0.0"
 license = "CC-BY-NC-ND 4.0"
 date = 2024-12-26
-update_date = 2024-12-26
+update_date = 2024-12-27
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_all.toml",
@@ -60,4 +60,16 @@ dictinct = true
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering_jokes.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering_jokes.json"
+]
+
+
+
+["缩写"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/abbreviation.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/abbreviation.json"
 ]
