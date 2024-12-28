@@ -52,7 +52,7 @@ options_urls = [
 
 
 
-["在鸣潮讨论组里看到的乐子"]
+["私存鸣的一些讨论乐子"]
 export = true
 options = []
 cloud_extra = true
