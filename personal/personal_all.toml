@@ -52,24 +52,26 @@ options_urls = [
 
 
 
-["私存鸣的一些讨论乐子"]
-export = true
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering_jokes.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering_jokes.json"
-]
-
-
-
 ["缩写"]
 export = true
+aliases = ["abb"]
 options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/abbreviation.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/abbreviation.json"
+]
+
+
+
+["cod"]
+export = true
+aliases = ["剧情","故事"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/cod_story.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/cod_story.json"
 ]
