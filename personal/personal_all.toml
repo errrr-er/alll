@@ -67,7 +67,6 @@ options_urls = [
 
 ["cod"]
 export = true
-aliases = ["剧情","故事"]
 options = []
 cloud_extra = true
 dictinct = true
