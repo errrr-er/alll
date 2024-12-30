@@ -2,7 +2,7 @@
 
 提问箱 - https://box.n3ko.cc/_/no_reply31cat
 
-issues界面 - https://github.com/errrr-er/alll/issues
+issues - https://github.com/errrr-er/alll/issues
 
 以上方式二选一即可、反馈时请带上相关截图!!!
 
