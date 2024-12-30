@@ -1,8 +1,10 @@
 ## 汇报错误/补充 :inbox_tray:
 
-https://box.n3ko.cc/_/no_reply31cat
+提问箱 - https://box.n3ko.cc/_/no_reply31cat
 
-骰子报错相关请带上日志截图
+issues界面 - https://github.com/errrr-er/alll/issues
+
+以上方式二选一即可、反馈时请带上相关截图!!!
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
@@ -14,8 +16,8 @@ https://box.n3ko.cc/_/no_reply31cat
 > - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
 > - 若释义有任何遗漏欢迎补充
 
-- https://github.com/errrr-er/alll/tree/main/magic/CJE
-    - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/magic/CJE/z_magic_all.toml)
+- https://github.com/errrr-er/alll/tree/main/coc/magic/CJE
+    - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/z_magic_all.toml)
     - 仅想看对应名称请使用excel或导入后`.draw mhelp`
 
 > [!IMPORTANT]
@@ -26,4 +28,4 @@ https://box.n3ko.cc/_/no_reply31cat
 > - 弊：骰子无法连接(github/镜像) = 无法使用
 
 > [!TIP]
-> 更新请用：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/magic/CJE/sealdice_update_example.png?raw=true)
+> 更新请用：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/sealdice_update_example.png?raw=true)

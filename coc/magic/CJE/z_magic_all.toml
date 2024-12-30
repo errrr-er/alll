@@ -7,8 +7,8 @@ date = 2024-12-12
 update_date = 2024-12-19
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/z_magic_all.toml",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/z_magic_all.toml"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CJE/z_magic_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CJE/z_magic_all.toml"
 ]
 
 ["mhelp"]
@@ -21,8 +21,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CJE/magic.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CJE/magic.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CJE/magic.json"
 ]
 
 
@@ -40,8 +40,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTDEVIL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CASTOUTDEVIL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CASTOUTDEVIL.json"
 ]
 
 
@@ -60,8 +60,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/UNMASKDEMON.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/UNMASKDEMON.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/UNMASKDEMON.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/UNMASKDEMON.json"
 ]
 
 
@@ -80,8 +80,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/NIGHTMARE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/NIGHTMARE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/NIGHTMARE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/NIGHTMARE.json"
 ]
 
 
@@ -100,8 +100,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREADCURSEOFAZATHOTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREADCURSEOFAZATHOTH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DREADCURSEOFAZATHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DREADCURSEOFAZATHOTH.json"
 ]
 
 
@@ -120,8 +120,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AWAKEABHOTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AWAKEABHOTH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/AWAKEABHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/AWAKEABHOTH.json"
 ]
 
 
@@ -140,8 +140,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFDARKNESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFDARKNESS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFDARKNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFDARKNESS.json"
 ]
 
 
@@ -160,8 +160,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANISHMENTOFYDEETAD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANISHMENTOFYDEETAD.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BANISHMENTOFYDEETAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BANISHMENTOFYDEETAD.json"
 ]
 
 
@@ -180,8 +180,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEALOFISIS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEALOFISIS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SEALOFISIS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SEALOFISIS.json"
 ]
 
 
@@ -200,8 +200,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHESTONE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHESTONE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFTHESTONE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFTHESTONE.json"
 ]
 
 
@@ -220,8 +220,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SHRIVELLING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SHRIVELLING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SHRIVELLING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SHRIVELLING.json"
 ]
 
 
@@ -240,8 +240,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FOODOFLIFE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FOODOFLIFE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FOODOFLIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FOODOFLIFE.json"
 ]
 
 
@@ -260,8 +260,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWDEROFIBN-GHAZI.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWDEROFIBN-GHAZI.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POWDEROFIBN-GHAZI.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POWDEROFIBN-GHAZI.json"
 ]
 
 
@@ -280,8 +280,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEAL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEAL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEAL.json"
 ]
 
 
@@ -300,8 +300,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOORISHSIGN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOORISHSIGN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VOORISHSIGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VOORISHSIGN.json"
 ]
 
 
@@ -320,8 +320,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/KEENNESSOFTWOALIKE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/KEENNESSOFTWOALIKE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/KEENNESSOFTWOALIKE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/KEENNESSOFTWOALIKE.json"
 ]
 
 
@@ -340,8 +340,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EIBON'SWHEELOFMIST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EIBON'SWHEELOFMIST.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EIBON'SWHEELOFMIST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EIBON'SWHEELOFMIST.json"
 ]
 
 
@@ -360,8 +360,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SUMMONPLAGUE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SUMMONPLAGUE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SUMMONPLAGUE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SUMMONPLAGUE.json"
 ]
 
 
@@ -380,8 +380,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BRINGPESTILENCE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BRINGPESTILENCE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BRINGPESTILENCE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BRINGPESTILENCE.json"
 ]
 
 
@@ -400,8 +400,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EXTEND.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EXTEND.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EXTEND.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EXTEND.json"
 ]
 
 
@@ -420,8 +420,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREWSPACE-MEAD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREWSPACE-MEAD.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BREWSPACE-MEAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BREWSPACE-MEAD.json"
 ]
 
 
@@ -440,8 +440,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/APPORTIONKA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/APPORTIONKA.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/APPORTIONKA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/APPORTIONKA.json"
 ]
 
 
@@ -460,8 +460,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PERFECTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PERFECTION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PERFECTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PERFECTION.json"
 ]
 
 
@@ -480,8 +480,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLOUDMEMORY.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLOUDMEMORY.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CLOUDMEMORY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CLOUDMEMORY.json"
 ]
 
 
@@ -500,8 +500,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ENTHRALLVICTIM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ENTHRALLVICTIM.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ENTHRALLVICTIM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ENTHRALLVICTIM.json"
 ]
 
 
@@ -520,8 +520,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DETRANSFERENCE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DETRANSFERENCE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DETRANSFERENCE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DETRANSFERENCE.json"
 ]
 
 
@@ -540,8 +540,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/STEALLIFE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/STEALLIFE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/STEALLIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/STEALLIFE.json"
 ]
 
 
@@ -560,8 +560,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PIPESOFMADNESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PIPESOFMADNESS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PIPESOFMADNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PIPESOFMADNESS.json"
 ]
 
 
@@ -580,8 +580,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPLANTFEAR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPLANTFEAR.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IMPLANTFEAR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IMPLANTFEAR.json"
 ]
 
 
@@ -600,8 +600,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LEVITATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LEVITATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/LEVITATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/LEVITATE.json"
 ]
 
 
@@ -620,8 +620,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRASPOFCTHULHU.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRASPOFCTHULHU.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/GRASPOFCTHULHU.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/GRASPOFCTHULHU.json"
 ]
 
 
@@ -640,8 +640,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHEPUTRIDHUSK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHEPUTRIDHUSK.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFTHEPUTRIDHUSK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFTHEPUTRIDHUSK.json"
 ]
 
 
@@ -660,8 +660,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLACKBINDING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLACKBINDING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLACKBINDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLACKBINDING.json"
 ]
 
 
@@ -680,8 +680,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BATFORM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BATFORM.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BATFORM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BATFORM.json"
 ]
 
 
@@ -700,8 +700,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HANDSOFCOLUBRA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HANDSOFCOLUBRA.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HANDSOFCOLUBRA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HANDSOFCOLUBRA.json"
 ]
 
 
@@ -720,8 +720,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BODYWARPINGOFGORGOROTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BODYWARPINGOFGORGOROTH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BODYWARPINGOFGORGOROTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BODYWARPINGOFGORGOROTH.json"
 ]
 
 
@@ -740,8 +740,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/REMORTIFICATION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/REMORTIFICATION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/REMORTIFICATION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/REMORTIFICATION.json"
 ]
 
 
@@ -760,8 +760,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ATTRACTFISH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ATTRACTFISH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ATTRACTFISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ATTRACTFISH.json"
 ]
 
 
@@ -780,8 +780,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ATTRACTFISH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ATTRACTFISH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ATTRACTFISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ATTRACTFISH.json"
 ]
 
 
@@ -800,8 +800,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WANDERINGSOUL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WANDERINGSOUL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WANDERINGSOUL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WANDERINGSOUL.json"
 ]
 
 
@@ -820,8 +820,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDSHARK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDSHARK.json"
 ]
 
 
@@ -840,8 +840,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDSHARK.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDSHARK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDSHARK.json"
 ]
 
 
@@ -860,8 +860,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CAUSE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CAUSE.json"
 ]
 
 
@@ -880,8 +880,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CAUSE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CAUSE.json"
 ]
 
 
@@ -900,8 +900,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATETIMEGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATETIMEGATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATETIMEGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATETIMEGATE.json"
 ]
 
 
@@ -920,8 +920,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATESELF-WARD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATESELF-WARD.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATESELF-WARD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATESELF-WARD.json"
 ]
 
 
@@ -940,8 +940,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENDINGOFTHEDEAD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENDINGOFTHEDEAD.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SENDINGOFTHEDEAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SENDINGOFTHEDEAD.json"
 ]
 
 
@@ -960,8 +960,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEBAD-CORPSEDUST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEBAD-CORPSEDUST.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEBAD-CORPSEDUST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEBAD-CORPSEDUST.json"
 ]
 
 
@@ -980,8 +980,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DOMINATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DOMINATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DOMINATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DOMINATE.json"
 ]
 
 
@@ -1000,8 +1000,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EVILEYE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EVILEYE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EVILEYE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EVILEYE.json"
 ]
 
 
@@ -1020,8 +1020,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTSHAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CASTOUTSHAN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CASTOUTSHAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CASTOUTSHAN.json"
 ]
 
 
@@ -1040,8 +1040,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VANISH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VANISH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VANISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VANISH.json"
 ]
 
 
@@ -1060,8 +1060,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREATHOFTHEDEEP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREATHOFTHEDEEP.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BREATHOFTHEDEEP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BREATHOFTHEDEEP.json"
 ]
 
 
@@ -1080,8 +1080,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/STOPHEART.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/STOPHEART.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/STOPHEART.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/STOPHEART.json"
 ]
 
 
@@ -1100,8 +1100,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/TRANSFERBODYPART.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/TRANSFERBODYPART.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/TRANSFERBODYPART.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/TRANSFERBODYPART.json"
 ]
 
 
@@ -1120,8 +1120,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDLOUP-GAROU.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDLOUP-GAROU.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BINDLOUP-GAROU.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BINDLOUP-GAROU.json"
 ]
 
 
@@ -1140,8 +1140,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATESCRYINGWINDOW.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATESCRYINGWINDOW.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATESCRYINGWINDOW.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATESCRYINGWINDOW.json"
 ]
 
 
@@ -1160,8 +1160,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BECOMESPECTRALHUNTER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BECOMESPECTRALHUNTER.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BECOMESPECTRALHUNTER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BECOMESPECTRALHUNTER.json"
 ]
 
 
@@ -1180,8 +1180,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BRINGHABOOB.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magicBRINGHABOOB.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BRINGHABOOB.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magicBRINGHABOOB.json"
 ]
 
 
@@ -1200,8 +1200,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DUSTOFSULEIMAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DUSTOFSULEIMAN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DUSTOFSULEIMAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DUSTOFSULEIMAN.json"
 ]
 
 
@@ -1220,8 +1220,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDEXCHANGE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDEXCHANGE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MINDEXCHANGE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MINDEXCHANGE.json"
 ]
 
 
@@ -1240,8 +1240,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MENTALSUGGESTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MENTALSUGGESTION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MENTALSUGGESTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MENTALSUGGESTION.json"
 ]
 
 
@@ -1260,8 +1260,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDTANSFER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDTANSFER.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MINDTANSFER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MINDTANSFER.json"
 ]
 
 
@@ -1280,8 +1280,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWERDRAIN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWERDRAIN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POWERDRAIN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POWERDRAIN.json"
 ]
 
 
@@ -1300,8 +1300,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENSELIFE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENSELIFE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SENSELIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SENSELIFE.json"
 ]
 
 
@@ -1320,8 +1320,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SIREN'SSONG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SIREN'SSONG.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SIREN'SSONG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SIREN'SSONG.json"
 ]
 
 
@@ -1340,8 +1340,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEKHMENKENHEP'SWORDS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SEKHMENKENHEP'SWORDS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SEKHMENKENHEP'SWORDS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SEKHMENKENHEP'SWORDS.json"
 ]
 
 
@@ -1360,8 +1360,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SUMMONEFFIGYOFHATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SUMMONEFFIGYOFHATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SUMMONEFFIGYOFHATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SUMMONEFFIGYOFHATE.json"
 ]
 
 
@@ -1380,8 +1380,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/TRANSFERORGAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/TRANSFERORGAN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/TRANSFERORGAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/TRANSFERORGAN.json"
 ]
 
 
@@ -1400,8 +1400,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEZOMBI.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEZOMBI.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEZOMBI.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEZOMBI.json"
 ]
 
 
@@ -1420,8 +1420,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EYESOFTHEZOMBIE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EYESOFTHEZOMBIE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EYESOFTHEZOMBIE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EYESOFTHEZOMBIE.json"
 ]
 
 
@@ -1440,8 +1440,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MIRROROFTARKHUNATEP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MIRROROFTARKHUNATEP.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MIRROROFTARKHUNATEP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MIRROROFTARKHUNATEP.json"
 ]
 
 
@@ -1460,8 +1460,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RAISENIGHTFOG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RAISENIGHTFOG.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/RAISENIGHTFOG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/RAISENIGHTFOG.json"
 ]
 
 
@@ -1480,8 +1480,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULSINGING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULSINGING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SOULSINGING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SOULSINGING.json"
 ]
 
 
@@ -1500,8 +1500,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPRISONMIND.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPRISONMIND.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IMPRISONMIND.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IMPRISONMIND.json"
 ]
 
 
@@ -1520,8 +1520,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDSOUL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDSOUL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BINDSOUL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BINDSOUL.json"
 ]
 
 
@@ -1540,8 +1540,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULEXTRACTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOULEXTRACTION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SOULEXTRACTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SOULEXTRACTION.json"
 ]
 
 
@@ -1560,8 +1560,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOUL-TRAP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SOUL-TRAP.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SOUL-TRAP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SOUL-TRAP.json"
 ]
 
 
@@ -1580,8 +1580,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFCHAUGNARFAUGN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFCHAUGNARFAUGN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFCHAUGNARFAUGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFCHAUGNARFAUGN.json"
 ]
 
 
@@ -1600,8 +1600,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MENTALSUGGESTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MENTALSUGGESTION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MENTALSUGGESTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MENTALSUGGESTION.json"
 ]
 
 
@@ -1620,8 +1620,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEALING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEALING.json"
 ]
 
 
@@ -1640,8 +1640,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WITHERLIMB.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WITHERLIMB.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WITHERLIMB.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WITHERLIMB.json"
 ]
 
 
@@ -1660,8 +1660,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDENEMY.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BINDENEMY.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BINDENEMY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BINDENEMY.json"
 ]
 
 
@@ -1680,8 +1680,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHIMEOFTEZCHAPTL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHIMEOFTEZCHAPTL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CHIMEOFTEZCHAPTL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CHIMEOFTEZCHAPTL.json"
 ]
 
 
@@ -1700,8 +1700,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ALTERWEATHER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ALTERWEATHER.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ALTERWEATHER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ALTERWEATHER.json"
 ]
 
 
@@ -1720,8 +1720,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSBLADE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSBLADE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLESSBLADE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLESSBLADE.json"
 ]
 
 
@@ -1740,8 +1740,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDANIMALSPELLS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDANIMALSPELLS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDANIMALSPELLS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDANIMALSPELLS.json"
 ]
 
 
@@ -1760,8 +1760,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LAME.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LAME.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/LAME.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/LAME.json"
 ]
 
 
@@ -1780,8 +1780,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALANIMAL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEALANIMAL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEALANIMAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEALANIMAL.json"
 ]
 
 
@@ -1800,8 +1800,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHARMANIMAL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHARMANIMAL.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CHARMANIMAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CHARMANIMAL.json"
 ]
 
 
@@ -1820,8 +1820,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHANTOFTHOTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CHANTOFTHOTH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CHANTOFTHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CHANTOFTHOTH.json"
 ]
 
 
@@ -1840,8 +1840,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEBARRIEROFNAACH-TITH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEBARRIEROFNAACH-TITH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEBARRIEROFNAACH-TITH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEBARRIEROFNAACH-TITH.json"
 ]
 
 
@@ -1860,8 +1860,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRAFTFLESH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRAFTFLESH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/GRAFTFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/GRAFTFLESH.json"
 ]
 
 
@@ -1880,8 +1880,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMPELFLESH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMPELFLESH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMPELFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMPELFLESH.json"
 ]
 
 
@@ -1900,8 +1900,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FLESHWARD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FLESHWARD.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FLESHWARD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FLESHWARD.json"
 ]
 
 
@@ -1920,8 +1920,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MELTFLESH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MELTFLESH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MELTFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MELTFLESH.json"
 ]
 
 
@@ -1940,8 +1940,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONSUMELIKENESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONSUMELIKENESS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CONSUMELIKENESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CONSUMELIKENESS.json"
 ]
 
 
@@ -1960,8 +1960,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWEROFNYAMBE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POWEROFNYAMBE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POWEROFNYAMBE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POWEROFNYAMBE.json"
 ]
 
 
@@ -1980,8 +1980,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLUTCHOFNYOGTHA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLUTCHOFNYOGTHA.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CLUTCHOFNYOGTHA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CLUTCHOFNYOGTHA.json"
 ]
 
 
@@ -2000,8 +2000,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BAITHUMANS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BAITHUMANS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BAITHUMANS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BAITHUMANS.json"
 ]
 
 
@@ -2020,8 +2020,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHERATLTHING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CURSEOFTHERATLTHING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFTHERATLTHING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CURSEOFTHERATLTHING.json"
 ]
 
 
@@ -2040,8 +2040,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSCROP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSCROP.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLESSCROP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLESSCROP.json"
 ]
 
 
@@ -2060,8 +2060,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSCROP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BLESSCROP.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLESSCROP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BLESSCROP.json"
 ]
 
 
@@ -2080,8 +2080,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATECURSEWHISTLE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATECURSEWHISTLE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATECURSEWHISTLE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATECURSEWHISTLE.json"
 ]
 
 
@@ -2100,8 +2100,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEART'SCOURAG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/HEART'SCOURAG.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEART'SCOURAG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/HEART'SCOURAG.json"
 ]
 
 
@@ -2120,8 +2120,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRAYBINDING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/GRAYBINDING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/GRAYBINDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/GRAYBINDING.json"
 ]
 
 
@@ -2140,8 +2140,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WRACK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WRACK.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WRACK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WRACK.json"
 ]
 
 
@@ -2160,8 +2160,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CIRCLEOFNAUSEA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CIRCLEOFNAUSEA.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CIRCLEOFNAUSEA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CIRCLEOFNAUSEA.json"
 ]
 
 
@@ -2180,8 +2180,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SONGOFHASTUR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SONGOFHASTUR.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SONGOFHASTUR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SONGOFHASTUR.json"
 ]
 
 
@@ -2200,8 +2200,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FREEHASTUR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FREEHASTUR.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FREEHASTUR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FREEHASTUR.json"
 ]
 
 
@@ -2220,8 +2220,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DEFLECTHARM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DEFLECTHARM.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DEFLECTHARM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DEFLECTHARM.json"
 ]
 
 
@@ -2240,8 +2240,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EYEOFLIGHTANDDARKNESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/EYEOFLIGHTANDDARKNESS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EYEOFLIGHTANDDARKNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/EYEOFLIGHTANDDARKNESS.json"
 ]
 
 
@@ -2260,8 +2260,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DAMPENLIGHT.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DAMPENLIGHT.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DAMPENLIGHT.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DAMPENLIGHT.json"
 ]
 
 
@@ -2280,8 +2280,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BALKBROOD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BALKBROOD.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BALKBROOD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BALKBROOD.json"
 ]
 
 
@@ -2300,8 +2300,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONTROLSKIN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONTROLSKIN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CONTROLSKIN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CONTROLSKIN.json"
 ]
 
 
@@ -2320,8 +2320,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEFETCHSTICK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEFETCHSTICK.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEFETCHSTICK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEFETCHSTICK.json"
 ]
 
 
@@ -2340,8 +2340,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDING.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WARDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WARDING.json"
 ]
 
 
@@ -2360,8 +2360,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RESURRECTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/RESURRECTION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/RESURRECTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/RESURRECTION.json"
 ]
 
 
@@ -2380,8 +2380,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PRINN'SCRUXANSATA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PRINN'SCRUXANSATA.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PRINN'SCRUXANSATA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PRINN'SCRUXANSATA.json"
 ]
 
 
@@ -2400,8 +2400,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ELDERSIGN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/ELDERSIGN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ELDERSIGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/ELDERSIGN.json"
 ]
 
 
@@ -2420,8 +2420,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POSEMUNDANE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/POSEMUNDANE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POSEMUNDANE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/POSEMUNDANE.json"
 ]
 
 
@@ -2440,8 +2440,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MASK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MASK.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MASK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MASK.json"
 ]
 
 
@@ -2460,8 +2460,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json"
 ]
 
 
@@ -2480,8 +2480,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WAVEOFOBLIVION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WAVEOFOBLIVION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WAVEOFOBLIVION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WAVEOFOBLIVION.json"
 ]
 
 
@@ -2500,8 +2500,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDGHOST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/COMMANDGHOST.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDGHOST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/COMMANDGHOST.json"
 ]
 
 
@@ -2520,8 +2520,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AUGURY.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/AUGURY.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/AUGURY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/AUGURY.json"
 ]
 
 
@@ -2540,8 +2540,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLOAKOFFIRE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CLOAKOFFIRE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CLOAKOFFIRE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CLOAKOFFIRE.json"
 ]
 
 
@@ -2560,8 +2560,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDBLAST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/MINDBLAST.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MINDBLAST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/MINDBLAST.json"
 ]
 
 
@@ -2580,8 +2580,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LOOKTOTHEFUTURE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/LOOKTOTHEFUTURE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/LOOKTOTHEFUTURE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/LOOKTOTHEFUTURE.json"
 ]
 
 
@@ -2600,8 +2600,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPECCABLETHROW.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IMPECCABLETHROW.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IMPECCABLETHROW.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IMPECCABLETHROW.json"
 ]
 
 
@@ -2620,8 +2620,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/JOURNEYTOTHEOTHERSIDE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/JOURNEYTOTHEOTHERSIDE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/JOURNEYTOTHEOTHERSIDE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/JOURNEYTOTHEOTHERSIDE.json"
 ]
 
 
@@ -2640,8 +2640,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/UNSPEAKABLEPROMISE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/UNSPEAKABLEPROMISE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/UNSPEAKABLEPROMISE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/UNSPEAKABLEPROMISE.json"
 ]
 
 
@@ -2660,8 +2660,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDINGTHEEYE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/WARDINGTHEEYE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WARDINGTHEEYE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/WARDINGTHEEYE.json"
 ]
 
 
@@ -2680,8 +2680,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONJUREGLASSOFMOTLAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CONJUREGLASSOFMOTLAN.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CONJUREGLASSOFMOTLAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CONJUREGLASSOFMOTLAN.json"
 ]
 
 
@@ -2700,8 +2700,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VIEWGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VIEWGATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VIEWGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VIEWGATE.json"
 ]
 
 
@@ -2720,8 +2720,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEGATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEGATE.json"
 ]
 
 
@@ -2740,8 +2740,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FINDGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FINDGATE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FINDGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FINDGATE.json"
 ]
 
 
@@ -2760,8 +2760,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSEDISEASE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CAUSEDISEASE.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CAUSEDISEASE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CAUSEDISEASE.json"
 ]
 
 
@@ -2780,8 +2780,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SPECTRALRAZOR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SPECTRALRAZOR.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SPECTRALRAZOR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SPECTRALRAZOR.json"
 ]
 
 
@@ -2800,8 +2800,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREAMVISION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/DREAMVISION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DREAMVISION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/DREAMVISION.json"
 ]
 
 
@@ -2820,8 +2820,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREWDREAMDRUG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/BREWDREAMDRUG.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BREWDREAMDRUG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/BREWDREAMDRUG.json"
 ]
 
 
@@ -2840,8 +2840,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SNAREDREAMER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SNAREDREAMER.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SNAREDREAMER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SNAREDREAMER.json"
 ]
 
 
@@ -2860,8 +2860,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENDDREAM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/SENDDREAM.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SENDDREAM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/SENDDREAM.json"
 ]
 
 
@@ -2880,8 +2880,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FISTOFYOG-SOTHOTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/FISTOFYOG-SOTHOTH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FISTOFYOG-SOTHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/FISTOFYOG-SOTHOTH.json"
 ]
 
 
@@ -2900,8 +2900,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOICEOFRA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/VOICEOFRA.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VOICEOFRA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/VOICEOFRA.json"
 ]
 
 
@@ -2920,8 +2920,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/REACH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/REACH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/REACH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/REACH.json"
 ]
 
 
@@ -2940,8 +2940,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IDENTIFYSPIRIT.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/IDENTIFYSPIRIT.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IDENTIFYSPIRIT.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/IDENTIFYSPIRIT.json"
 ]
 
 
@@ -2960,8 +2960,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEMISTOFR'ELEH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CREATEMISTOFR'ELEH.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEMISTOFR'ELEH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CREATEMISTOFR'ELEH.json"
 ]
 
 
@@ -2980,8 +2980,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CANDLECOMMUNICATION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/CANDLECOMMUNICATION.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CANDLECOMMUNICATION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/CANDLECOMMUNICATION.json"
 ]
 
 
@@ -3000,8 +3000,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/PARTINGSANDS.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/PARTINGSANDS.json"
 ]
 
 
@@ -3020,8 +3020,8 @@ cloud_extra = true
 dictinct = true
 # github raw 链接
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/magic/.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/coc/magic/.json"
 ]
 
 
