@@ -4,11 +4,40 @@ author = "errrr-er"
 version = "0.0.0"
 license = "CC-BY-NC-ND 4.0"
 date = 2024-12-26
-update_date = 2024-12-28
+update_date = 2024-12-31
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_all.toml",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/personal_all.toml"
+]
+
+# 鸣潮
+  # 鸣潮、油甘、活动
+# COD
+  # cod
+# 缩写
+  # 缩写、abb
+# 海豹
+  # 海豹、手册、分离
+# QQ
+  # 查询、共群
+
+
+
+########
+# 鸣潮
+########
+
+
+
+["油甘"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering_collection.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/wuthering_collection.json"
 ]
 
 
@@ -26,29 +55,27 @@ options_urls = [
 
 
 
-["海豹"]
+########
+# COD
+########
+
+
+
+["cod"]
 export = true
-aliases = ["手册","分离"]
 options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/cod_story.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/cod_story.json"
 ]
 
 
 
-["查询"]
-export = true
-aliases = ["共群"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json"
-]
+########
+# 缩写
+########
 
 
 
@@ -65,12 +92,38 @@ options_urls = [
 
 
 
-["cod"]
+########
+# 海豹
+########
+
+
+
+["海豹"]
 export = true
+aliases = ["手册","分离"]
 options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/cod_story.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/cod_story.json"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/sealdice.json"
+]
+
+
+
+########
+# QQ
+########
+
+
+
+["查询"]
+export = true
+aliases = ["共群"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json"
 ]
