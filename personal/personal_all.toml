@@ -12,7 +12,7 @@ update_Urls = [
 ]
 
 # 鸣潮
-  # 鸣潮、油甘、活动
+  # 鸣潮、油甘
 # COD
   # cod
 # 缩写
@@ -44,7 +44,6 @@ options_urls = [
 
 ["鸣潮"]
 export = true
-aliases = ["活动"]
 options = []
 cloud_extra = true
 dictinct = true

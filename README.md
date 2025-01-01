@@ -18,7 +18,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 - https://github.com/errrr-er/alll/tree/main/coc/magic/CJE
     - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/z_magic_all.toml)
-    - 仅想看对应名称请使用excel或导入后`.draw mhelp`
+    - 仅想看对应名称请使用[excel](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或导入后`.draw mhelp`
 
 > [!IMPORTANT]
 > 本牌堆制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
