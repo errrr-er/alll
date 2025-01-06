@@ -18,7 +18,7 @@ update_Urls = [
 # 缩写
   # 缩写、abb
 # 海豹
-  # 手册、分离、猫回复
+  # 手册、分离、猫回复、猫翻译、猫discord、猫zip
 # QQ
   # 查询、共群
 
@@ -141,6 +141,42 @@ dictinct = true
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_m522.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_m522.json"
+]
+
+
+
+["猫翻译"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_translate.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_translate.json"
+]
+
+
+
+["猫discord"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_discord.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_discord.json"
+]
+
+
+
+["猫zip"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_zip.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/dice_setting/response_link/sealdice_zip.json"
 ]
 
 
