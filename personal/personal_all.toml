@@ -3,7 +3,7 @@ title = "私人使用(链接大合集)"
 author = "errrr-er"
 version = "0.0.0"
 license = "CC-BY-NC-ND 4.0"
-date = 2025-01-06
+date = 2025-01-08
 update_date = 2024-12-31
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
@@ -21,6 +21,8 @@ update_Urls = [
   # 手册、分离、猫回复、猫翻译、猫discord、猫zip
 # QQ
   # 查询、共群
+# DND
+  # Bell
 
 
 
@@ -196,4 +198,23 @@ dictinct = true
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/qq_find.json"
+]
+
+
+
+########
+# DND
+########
+
+
+
+["Bell"]
+export = true
+aliases = ["bell"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/dnd5e_bell.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/personal/links/dnd5e_bell.json"
 ]
