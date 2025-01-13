@@ -6,7 +6,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 以上方式二选一即可、反馈时请带上相关截图!!!
 
-## toml文件导入前须知
+## 导入前须知
 > [!IMPORTANT]
 > 本toml系列牌堆制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
 > 
