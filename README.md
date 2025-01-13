@@ -1,5 +1,5 @@
 > [!TIP]
-> 善用README目录`最右边`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists_pointout.png?raw=true)
+> 善用README目录`箭头右边的按钮`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists_pointout.png?raw=true)
 
 # 汇报错误/补充 :inbox_tray:
 
