@@ -1,5 +1,5 @@
 > [!TIP]
-> 善用README目录`最右边`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists.png?raw=true)
+> 善用README目录`最右边`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists_pointout.png?raw=true)
 
 # 汇报错误/补充 :inbox_tray:
 
@@ -34,7 +34,7 @@ issues - https://github.com/errrr-er/alll/issues
 > - 利：修正后无需手动更新(除非修改toml本体)
 > - 弊：骰子无法连接(github/镜像) = 无法使用
 
-## 本体更新
+## 如何更新本体
 
 <sub>*其它骰系暂且未知、欢迎补充</sub>
 
