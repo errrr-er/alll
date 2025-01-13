@@ -1,5 +1,8 @@
 > [!TIP]
-> 善用README目录`箭头右边的按钮`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists_pointout.png?raw=true)
+> 善用README目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists_pointout.png?raw=true)
+
+> [!NOTE]
+> 遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 
 # 汇报错误/补充 :inbox_tray:
 
@@ -11,13 +14,11 @@ issues - https://github.com/errrr-er/alll/issues
 
 <sub>*提issues需要有github账户</sub>
 
-# Candela Obscura
+# Candela Obscura【施工中】
 
 - MD
 
-## 暗烛
-
-# Call of Cthulhu
+# Call of Cthulhu【施工中】
 
 - TOML
     - 旧版手册呪文(三语对照)
@@ -26,15 +27,12 @@ issues - https://github.com/errrr-er/alll/issues
 
 ## 导入前须知
 
-> [!NOTE]
-> 遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
-
 > [!IMPORTANT]
 > 制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
 > - 利：修正后无需手动更新(除非修改toml本体)
 > - 弊：骰子无法连接(github/镜像) = 无法使用
 
-## 如何更新本体
+## 本体更新
 
 <sub>*其它骰系暂且未知、欢迎补充</sub>
 
@@ -63,7 +61,6 @@ issues - https://github.com/errrr-er/alll/issues
 - 中
     - 海豹内置查询文档（by）
     - 克苏鲁神话魔法大典1.1.2（by七宫涟）
-        - 打不开果园所以提供不了对应链接
     - [COC常见魔法日汉英对照](https://www.bilibili.com/opus/853115006210801681)（uid147558）
 - 日
     - [クトゥルフTRPGの呪文一覧](https://trpg-yaruo.com/jyumon/)
