@@ -1,3 +1,6 @@
+> [!TIP]
+> 善用README目录`最右边`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists.png?raw=true)
+
 # 汇报错误/补充 :inbox_tray:
 
 提问箱 - https://box.n3ko.cc/_/no_reply31cat
@@ -8,7 +11,17 @@ issues - https://github.com/errrr-er/alll/issues
 
 <sub>*提issues需要有github账户</sub>
 
-# 
+# Candela Obscura
+
+- MD
+
+## 暗烛
+
+# Call of Cthulhu
+
+- TOML
+    - 旧版手册呪文(三语对照)
+
 # TOML系列牌堆
 
 ## 导入前须知
