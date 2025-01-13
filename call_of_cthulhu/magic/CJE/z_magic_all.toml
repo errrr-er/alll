@@ -1,0 +1,3030 @@
+[meta]
+title = "旧版手册呪文(三语对照)"
+author = "裗浳(3612464276)"
+version = "1.0.0"
+license = "CC-BY-NC-SA 4.0"
+date = 2024-12-12
+update_date = 2025-01-13
+desc = "https://github.com/errrr-er/alll/tree/main"
+update_Urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/z_magic_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/z_magic_all.toml"
+]
+
+["mhelp"]
+export = true
+visible = true
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/magic.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/magic.json"
+]
+
+
+
+
+["悪魔退散"]
+export = true
+
+aliases = ["魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTDEVIL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTDEVIL.json"
+]
+
+
+
+
+
+["悪魔の暴露"]
+export = true
+
+aliases = ["恶魔揭露术","UNMASKDEMON","UnmaskDemon"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNMASKDEMON.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNMASKDEMON.json"
+]
+
+
+
+
+
+["悪夢"]
+export = true
+
+aliases = ["梦魇术","NIGHTMARE","Nightmare"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/NIGHTMARE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/NIGHTMARE.json"
+]
+
+
+
+
+
+["アザトースの呪詛"]
+export = true
+
+aliases = ["阿撒托斯的恐怖诅咒","DREADCURSEOFAZATHOTH","DreadCurseofAzathoth"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DREADCURSEOFAZATHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DREADCURSEOFAZATHOTH.json"
+]
+
+
+
+
+
+["アブホースを目覚めさせる"]
+export = true
+
+aliases = ["阿布霍斯唤醒术","AWAKEABHOTH","AwakeAbhoth"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/AWAKEABHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/AWAKEABHOTH.json"
+]
+
+
+
+
+
+["暗黒の呪い"]
+export = true
+
+aliases = ["黑暗诅咒","CURSEOFDARKNESS","CurseofDarkness"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFDARKNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFDARKNESS.json"
+]
+
+
+
+
+
+["イーデ・エタドの放逐"]
+export = true
+
+aliases = ["耶德·艾塔德放逐术","BANISHMENTOFYDEETAD","BanishmentofYdeEtad"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BANISHMENTOFYDEETAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BANISHMENTOFYDEETAD.json"
+]
+
+
+
+
+
+["イシスの封印"]
+export = true
+
+aliases = ["伊希斯的封印","SEALOFISIS","SealofIsis"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEALOFISIS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEALOFISIS.json"
+]
+
+
+
+
+
+["石の呪い"]
+export = true
+
+aliases = ["石板诅咒","CURSEOFTHESTONE","CurseoftheStone"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHESTONE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHESTONE.json"
+]
+
+
+
+
+
+["萎縮"]
+export = true
+
+aliases = ["枯萎术","SHRIVELLING","Shrivelling"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SHRIVELLING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SHRIVELLING.json"
+]
+
+
+
+
+
+["命の糧"]
+export = true
+
+aliases = ["生命食粮术","FOODOFLIFE","FoodofLife"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FOODOFLIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FOODOFLIFE.json"
+]
+
+
+
+
+
+["イブンーグハジの粉"]
+export = true
+
+aliases = ["伊本-加齐之粉","POWDEROFIBN-GHAZI","PowderofIbn-Ghazi"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWDEROFIBN-GHAZI.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWDEROFIBN-GHAZI.json"
+]
+
+
+
+
+
+["癒し"]
+export = true
+
+aliases = ["HEAL"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEAL.json"
+]
+
+
+
+
+
+["ヴールの印"]
+export = true
+
+aliases = ["维瑞之印","VOORISHSIGN","VoorishSign"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOORISHSIGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOORISHSIGN.json"
+]
+
+
+
+
+
+["鋭敏な2人"]
+export = true
+
+aliases = ["相似的敏锐","KEENNESSOFTWOALIKE","KeennessofTwoAlike"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/KEENNESSOFTWOALIKE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/KEENNESSOFTWOALIKE.json"
+]
+
+
+
+
+
+["エイボンの霧の車輪"]
+export = true
+
+aliases = ["伊波恩雾轮术","EIBON'SWHEELOFMIST","Eibon'sWheelofMist"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EIBON'SWHEELOFMIST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EIBON'SWHEELOFMIST.json"
+]
+
+
+
+
+
+["疫病の召喚"]
+export = true
+
+aliases = ["瘟疫召唤术","SUMMONPLAGUE","SummonPlague"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONPLAGUE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONPLAGUE.json"
+]
+
+
+
+
+
+["疫病の到来"]
+export = true
+
+aliases = ["瘟疫发生术","BRINGPESTILENCE","BringPestilence"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BRINGPESTILENCE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BRINGPESTILENCE.json"
+]
+
+
+
+
+
+["延長"]
+export = true
+
+aliases = ["续命术","EXTEND","ExtendLife"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EXTEND.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EXTEND.json"
+]
+
+
+
+
+
+["黄金の蜂蜜酒の製法"]
+export = true
+
+aliases = ["黄金蜂蜜酒酿造术","BREWSPACE-MEAD","BrewSpaceMead"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWSPACE-MEAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWSPACE-MEAD.json"
+]
+
+
+
+
+
+["カーの分配"]
+export = true
+
+aliases = ["灵魂分配术","APPORTIONKA","ApportionKa"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/APPORTIONKA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/APPORTIONKA.json"
+]
+
+
+
+
+
+["完全"]
+export = true
+
+aliases = ["完善术","PERFECTION","Perfection"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PERFECTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PERFECTION.json"
+]
+
+
+
+
+
+["記憶を曇らせる"]
+export = true
+
+aliases = ["记忆模糊术","CLOUDMEMORY","CloudMemory"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOUDMEMORY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOUDMEMORY.json"
+]
+
+
+
+
+
+["犠性者を魅了する"]
+export = true
+
+aliases = ["迷身术","ENTHRALLVICTIM","EnthrallVictim"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ENTHRALLVICTIM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ENTHRALLVICTIM.json"
+]
+
+
+
+
+
+["逆転移"]
+export = true
+
+aliases = ["反转移术","DETRANSFERENCE","Detransference"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DETRANSFERENCE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DETRANSFERENCE.json"
+]
+
+
+
+
+
+["吸魂"]
+export = true
+
+aliases = ["生命偷取术","STEALLIFE","StealLife"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STEALLIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STEALLIFE.json"
+]
+
+
+
+
+
+["狂気の笛"]
+export = true
+
+aliases = ["疯狂之笛","PIPESOFMADNESS","PipesofMadness"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PIPESOFMADNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PIPESOFMADNESS.json"
+]
+
+
+
+
+
+["恐怖の注入"]
+export = true
+
+aliases = ["恐惧植入术","IMPLANTFEAR","ImplantFear"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPLANTFEAR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPLANTFEAR.json"
+]
+
+
+
+
+
+["空中浮遊"]
+export = true
+
+aliases = ["飘浮术","LEVITATE","Levitate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LEVITATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LEVITATE.json"
+]
+
+
+
+
+
+["クトゥルフのわしづかみ"]
+export = true
+
+aliases = ["克苏鲁抓攫术","GRASPOFCTHULHU","GraspofCthulhu"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRASPOFCTHULHU.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRASPOFCTHULHU.json"
+]
+
+
+
+
+
+["腐った外皮の呪い"]
+export = true
+
+aliases = ["腐烂外皮之诅咒","CURSEOFTHEPUTRIDHUSK","CurseofthePutridHusk"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHEPUTRIDHUSK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHEPUTRIDHUSK.json"
+]
+
+
+
+
+
+["黒い束縛"]
+export = true
+
+aliases = ["僵尸创造术","BLACKBINDING","CreateZombie"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLACKBINDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLACKBINDING.json"
+]
+
+
+
+
+
+["コウモリ形態"]
+export = true
+
+aliases = ["蝙蝠化形法","BATFORM","BatForm"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BATFORM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BATFORM.json"
+]
+
+
+
+
+
+["コルーブラの手"]
+export = true
+
+aliases = ["蛇臂术","HANDSOFCOLUBRA","HandsofColubra"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HANDSOFCOLUBRA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HANDSOFCOLUBRA.json"
+]
+
+
+
+
+
+["ゴルゴロスのボディ・ワープ"]
+export = true
+
+aliases = ["戈尔戈罗斯形体扭曲术","BODYWARPINGOFGORGOROTH","BodyWarpingofGorgoroth"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BODYWARPINGOFGORGOROTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BODYWARPINGOFGORGOROTH.json"
+]
+
+
+
+
+
+["再度の屈辱"]
+export = true
+
+aliases = ["遗恨术","REMORTIFICATION","Remortification"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REMORTIFICATION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REMORTIFICATION.json"
+]
+
+
+
+
+
+["魚の招来"]
+export = true
+
+aliases = ["诱鱼术","CALLFISH","AttractFish"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json"
+]
+
+
+
+
+
+["魚を引きつける"]
+export = true
+
+aliases = ["诱鱼术","ATTRACTFISH","AttractFish"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json"
+]
+
+
+
+
+
+["さまよう魂"]
+export = true
+
+aliases = ["灵魂漫游术","WANDERINGSOUL","WanderingSoul"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WANDERINGSOUL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WANDERINGSOUL.json"
+]
+
+
+
+
+
+["サメ"]
+export = true
+
+aliases = ["COMMANDSHARK"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json"
+]
+
+
+
+
+
+["イルカに命令する"]
+export = true
+
+aliases = ["PORPOISE"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json"
+]
+
+
+
+
+
+["視覚を奪う"]
+export = true
+
+aliases = ["致盲术","CAUSE","Cause"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json"
+]
+
+
+
+
+
+["視覚を回復させる"]
+export = true
+
+aliases = ["治盲术","CUREBLINDNESS","CureBlindness"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json"
+]
+
+
+
+
+
+["時空門の創造"]
+export = true
+
+aliases = ["时空门创造术","CREATETIMEGATE","CreateGate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATETIMEGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATETIMEGATE.json"
+]
+
+
+
+
+
+["自己保護の創造"]
+export = true
+
+aliases = ["自保袋创造术","CREATESELF-WARD","CreateSelf-Ward"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESELF-WARD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESELF-WARD.json"
+]
+
+
+
+
+
+["死者を送る"]
+export = true
+
+aliases = ["死之发送术","SENDINGOFTHEDEAD","SendingoftheDead"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDINGOFTHEDEAD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDINGOFTHEDEAD.json"
+]
+
+
+
+
+
+["死体の粉の創造"]
+export = true
+
+aliases = ["坏尸粉创造术","CREATEBAD-CORPSEDUST","CreateBad-CorpseDust"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBAD-CORPSEDUST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBAD-CORPSEDUST.json"
+]
+
+
+
+
+
+["支配"]
+export = true
+
+aliases = ["支配术","DOMINATE","Dominate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DOMINATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DOMINATE.json"
+]
+
+
+
+
+
+["邪眼"]
+export = true
+
+aliases = ["邪眼术","EVILEYE","EvilEye"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EVILEYE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EVILEYE.json"
+]
+
+
+
+
+
+["シャンを追い出す"]
+export = true
+
+aliases = ["夏恩逐出术","CASTOUTSHAN","CastOutShan"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTSHAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTSHAN.json"
+]
+
+
+
+
+
+["消滅"]
+export = true
+
+aliases = ["消失术","VANISH","Vanish"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VANISH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VANISH.json"
+]
+
+
+
+
+
+["深淵の息"]
+export = true
+
+aliases = ["深渊之息","BREATHOFTHEDEEP","BreathoftheDeep"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREATHOFTHEDEEP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREATHOFTHEDEEP.json"
+]
+
+
+
+
+
+["心臓停止"]
+export = true
+
+aliases = ["心跳停止术","STOPHEART","StopHeart"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STOPHEART.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STOPHEART.json"
+]
+
+
+
+
+
+["身体部分の転移"]
+export = true
+
+aliases = ["身体部件转移术","TRANSFERBODYPART","TransferBodyPart"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERBODYPART.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERBODYPART.json"
+]
+
+
+
+
+
+["人狼の拘束"]
+export = true
+
+aliases = ["兽化人束缚术","BINDLOUP-GAROU","BindWere-Creature"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDLOUP-GAROU.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDLOUP-GAROU.json"
+]
+
+
+
+
+
+["水晶占いの窓の創造"]
+export = true
+
+aliases = ["占卜窗创造术","CREATESCRYINGWINDOW","CreateScryingWindow"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESCRYINGWINDOW.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESCRYINGWINDOW.json"
+]
+
+
+
+
+
+["スベクトラル・ハンターへの変身"]
+export = true
+
+aliases = ["灵体猎手变身术","BECOMESPECTRALHUNTER","BecomeSpectralHunter"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BECOMESPECTRALHUNTER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BECOMESPECTRALHUNTER.json"
+]
+
+
+
+
+
+["砂嵐を起こす"]
+export = true
+
+aliases = ["哈布沙暴发生术","BRINGHABOOB","SANDSTORM","BringHaboob"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BRINGHABOOB.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magicBRINGHABOOB.json"
+]
+
+
+
+
+
+["スレイマンの塵"]
+export = true
+
+aliases = ["苏莱曼之尘","DUSTOFSULEIMAN","DustofSuleiman"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DUSTOFSULEIMAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DUSTOFSULEIMAN.json"
+]
+
+
+
+
+
+["精神交換"]
+export = true
+
+aliases = ["精神交换术","MINDEXCHANGE","MindExchange"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDEXCHANGE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDEXCHANGE.json"
+]
+
+
+
+
+
+["精神的従属"]
+export = true
+
+aliases = ["心理暗示术","MENTALSUGGESTION","MentalSuggestion"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json"
+]
+
+
+
+
+
+["精神転移"]
+export = true
+
+aliases = ["精神转移术","MINDTANSFER","MindTransfer"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDTANSFER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDTANSFER.json"
+]
+
+
+
+
+
+["精神力吸引"]
+export = true
+
+aliases = ["魔力吸取术","POWERDRAIN","PowerDrain"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWERDRAIN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWERDRAIN.json"
+]
+
+
+
+
+
+["生命の察知"]
+export = true
+
+aliases = ["生命觉察术","SENSELIFE","SenseLife"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENSELIFE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENSELIFE.json"
+]
+
+
+
+
+
+["セイレーンの歌声"]
+export = true
+
+aliases = ["塞壬之歌","SIREN'SSONG","Siren'sSong"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SIREN'SSONG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SIREN'SSONG.json"
+]
+
+
+
+
+
+["セクメンケネッブの言葉"]
+export = true
+
+aliases = ["真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEKHMENKENHEP'SWORDS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEKHMENKENHEP'SWORDS.json"
+]
+
+
+
+
+
+["憎悪の像の召喚"]
+export = true
+
+aliases = ["仇恨雕像","SUMMONEFFIGYOFHATE","EffigyofHate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONEFFIGYOFHATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONEFFIGYOFHATE.json"
+]
+
+
+
+
+
+["臓器の転移"]
+export = true
+
+aliases = ["器官转移术","TRANSFERORGAN","TransferOrgan"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERORGAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERORGAN.json"
+]
+
+
+
+
+
+["ゾンビの創造"]
+export = true
+
+aliases = ["活尸创造术","CREATEZOMBI","CreateZombi"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEZOMBI.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEZOMBI.json"
+]
+
+
+
+
+
+["ゾンビの目"]
+export = true
+
+aliases = ["僵尸之眼","EYESOFTHEZOMBIE","EyesoftheZombie"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYESOFTHEZOMBIE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYESOFTHEZOMBIE.json"
+]
+
+
+
+
+
+["タールクン・アテプの鏡"]
+export = true
+
+aliases = ["塔昆·阿提普之镜","MIRROROFTARKHUNATEP","MirrorofTarkhunAtep"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MIRROROFTARKHUNATEP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MIRROROFTARKHUNATEP.json"
+]
+
+
+
+
+
+["立ちこめる夜霧"]
+export = true
+
+aliases = ["夜雾唤起术","RAISENIGHTFOG","RaiseNightFog"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RAISENIGHTFOG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RAISENIGHTFOG.json"
+]
+
+
+
+
+
+["魂の歌"]
+export = true
+
+aliases = ["灵魂之歌","SOULSINGING","SoulSinging"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULSINGING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULSINGING.json"
+]
+
+
+
+
+
+["魂の監禁"]
+export = true
+
+aliases = ["精神囚禁术","IMPRISONMIND","ImprisonMind"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPRISONMIND.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPRISONMIND.json"
+]
+
+
+
+
+
+["魂の束縛"]
+export = true
+
+aliases = ["灵魂束缚术","BINDSOUL","BindSoul"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDSOUL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDSOUL.json"
+]
+
+
+
+
+
+["魂の抽出"]
+export = true
+
+aliases = ["灵魂抽取术","SOULEXTRACTION","SoulExtraction"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULEXTRACTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULEXTRACTION.json"
+]
+
+
+
+
+
+["魂の罠"]
+export = true
+
+aliases = ["灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOUL-TRAP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOUL-TRAP.json"
+]
+
+
+
+
+
+["チャウグナー・フォーンの呪い"]
+export = true
+
+aliases = ["肖格纳尔·方的诅咒","CURSEOFCHAUGNARFAUGN","CurseofChaugnarFaugn"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFCHAUGNARFAUGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFCHAUGNARFAUGN.json"
+]
+
+
+
+
+
+["忠告の注入"]
+export = true
+
+aliases = ["IMPLANTSUGGESTION"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json"
+]
+
+
+
+
+
+["治癒"]
+export = true
+
+aliases = ["治愈法","HEALING","Healing"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALING.json"
+]
+
+
+
+
+
+["手足の萎縮"]
+export = true
+
+aliases = ["肢体凋萎术","WITHERLIMB","WitherLimb"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WITHERLIMB.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WITHERLIMB.json"
+]
+
+
+
+
+
+["敵の拘束"]
+export = true
+
+aliases = ["敌人束缚术","BINDENEMY","BindEnemy"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDENEMY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDENEMY.json"
+]
+
+
+
+
+
+["テツチャプトルのチャイム"]
+export = true
+
+aliases = ["特兹查普特尔之铃","CHIMEOFTEZCHAPTL","ChimeofTezchaptl"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHIMEOFTEZCHAPTL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHIMEOFTEZCHAPTL.json"
+]
+
+
+
+
+
+["天候を変える"]
+export = true
+
+aliases = ["天气改换术","ALTERWEATHER","AlterWeather"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ALTERWEATHER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ALTERWEATHER.json"
+]
+
+
+
+
+
+["刀身を清める"]
+export = true
+
+aliases = ["刀锋祝福术","BLESSBLADE","BlessBlade"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSBLADE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSBLADE.json"
+]
+
+
+
+
+
+["動物に命令する"]
+export = true
+
+aliases = ["动物号令法","COMMANDANIMALSPELLS","CommandAnimal"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDANIMALSPELLS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDANIMALSPELLS.json"
+]
+
+
+
+
+
+["動物の足を不自由にする"]
+export = true
+
+aliases = ["动物残废法","LAME","Lame"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LAME.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LAME.json"
+]
+
+
+
+
+
+["治癒させる"]
+export = true
+
+aliases = ["动物治愈法","HEALANIMAL","HealAnimal"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALANIMAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALANIMAL.json"
+]
+
+
+
+
+
+["動物を魅了する"]
+export = true
+
+aliases = ["动物魅惑法","CHARMANIMAL","CharmAnimal"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHARMANIMAL.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHARMANIMAL.json"
+]
+
+
+
+
+
+["トートの詠唱"]
+export = true
+
+aliases = ["透特之咏","CHANTOFTHOTH","ChantofThoth"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHANTOFTHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHANTOFTHOTH.json"
+]
+
+
+
+
+
+["ナークーテイトの障壁の創造"]
+export = true
+
+aliases = ["纳克-提特障壁创造术","CREATEBARRIEROFNAACH-TITH","CreateBarrierofNaach-Tich"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBARRIEROFNAACH-TITH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBARRIEROFNAACH-TITH.json"
+]
+
+
+
+
+
+["肉移植"]
+export = true
+
+aliases = ["血肉移植术","GRAFTFLESH","GraftFlesh"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAFTFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAFTFLESH.json"
+]
+
+
+
+
+
+["肉体の屈服"]
+export = true
+
+aliases = ["肉体屈服术","COMPELFLESH","CompelFlesh"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMPELFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMPELFLESH.json"
+]
+
+
+
+
+
+["肉体の保護"]
+export = true
+
+aliases = ["血肉防护术","FLESHWARD","FleshWard"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FLESHWARD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FLESHWARD.json"
+]
+
+
+
+
+
+["肉の溶解"]
+export = true
+
+aliases = ["血肉熔解术","MELTFLESH","MeltFlesh"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MELTFLESH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MELTFLESH.json"
+]
+
+
+
+
+
+["似姿の利用"]
+export = true
+
+aliases = ["相貌吞食术","CONSUMELIKENESS","ConsumeLikeness"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONSUMELIKENESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONSUMELIKENESS.json"
+]
+
+
+
+
+
+["ニャンベのパワ"]
+export = true
+
+aliases = ["尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWEROFNYAMBE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWEROFNYAMBE.json"
+]
+
+
+
+
+
+["ニョグタのわしづかみ"]
+export = true
+
+aliases = ["尼约格萨紧握术","CLUTCHOFNYOGTHA","ClutchofNyogtha"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLUTCHOFNYOGTHA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLUTCHOFNYOGTHA.json"
+]
+
+
+
+
+
+["人間をおびき寄せる"]
+export = true
+
+aliases = ["人类引诱术","BAITHUMANS","BaitHumans"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BAITHUMANS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BAITHUMANS.json"
+]
+
+
+
+
+
+["ネズミ怪物の呪い"]
+export = true
+
+aliases = ["人面鼠诅咒","CURSEOFTHERATLTHING","CurseoftheRat-thing"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHERATLTHING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHERATLTHING.json"
+]
+
+
+
+
+
+["農作物を枯らす"]
+export = true
+
+aliases = ["作物枯萎法","BLIGHT","Blight"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json"
+]
+
+
+
+
+
+["農作物に祝福を与える"]
+export = true
+
+aliases = ["作物祝福法","BLESSCROP","BlessCrop"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json"
+]
+
+
+
+
+
+["呪いのホイッスルの創造"]
+export = true
+
+aliases = ["诅咒之笛创造术","CREATECURSEWHISTLE","CreateCurseWhistle"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATECURSEWHISTLE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATECURSEWHISTLE.json"
+]
+
+
+
+
+
+["ハートの勇気"]
+export = true
+
+aliases = ["心中的勇气","HEART'SCOURAGE","Heart'sCourage"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEART'SCOURAG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEART'SCOURAG.json"
+]
+
+
+
+
+
+["灰色の束縛"]
+export = true
+
+aliases = ["灰色束缚","GRAYBINDING","GreyBinding"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAYBINDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAYBINDING.json"
+]
+
+
+
+
+
+["破壊"]
+export = true
+
+aliases = ["折磨术","WRACK","Wrack"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WRACK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WRACK.json"
+]
+
+
+
+
+
+["吐き気の魔去円"]
+export = true
+
+aliases = ["反胃法阵","CIRCLEOFNAUSEA","CircleofNausea"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CIRCLEOFNAUSEA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CIRCLEOFNAUSEA.json"
+]
+
+
+
+
+
+["ハスターの歌"]
+export = true
+
+aliases = ["哈斯塔之歌","SONGOFHASTUR","SongofHastur"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SONGOFHASTUR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SONGOFHASTUR.json"
+]
+
+
+
+
+
+["ハスターの解放"]
+export = true
+
+aliases = ["哈斯塔释放术","FREEHASTUR","FreeHastur"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FREEHASTUR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FREEHASTUR.json"
+]
+
+
+
+
+
+["被害をそらす"]
+export = true
+
+aliases = ["伤害偏转术","DEFLECTHARM","DeflectHarm"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DEFLECTHARM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DEFLECTHARM.json"
+]
+
+
+
+
+
+["光と闇の目"]
+export = true
+
+aliases = ["光明与黑暗之眼","EYEOFLIGHTANDDARKNESS","EyeofLightandDarkness"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYEOFLIGHTANDDARKNESS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYEOFLIGHTANDDARKNESS.json"
+]
+
+
+
+
+
+["光を消す"]
+export = true
+
+aliases = ["抑光术","DAMPENLIGHT","DampenLight"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DAMPENLIGHT.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DAMPENLIGHT.json"
+]
+
+
+
+
+
+["雛を取り除く"]
+export = true
+
+aliases = ["幼体驱除术","BALKBROOD","BalkBrood"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BALKBROOD.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BALKBROOD.json"
+]
+
+
+
+
+
+["皮膚の制御"]
+export = true
+
+aliases = ["皮肤控制术","CONTROLSKIN","ControlSkin"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONTROLSKIN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONTROLSKIN.json"
+]
+
+
+
+
+
+["フェッチ棒の創造"]
+export = true
+
+aliases = ["生魂棒创造术","CREATEFETCHSTICK","CreateFetchStick"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEFETCHSTICK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEFETCHSTICK.json"
+]
+
+
+
+
+
+["布石"]
+export = true
+
+aliases = ["守卫术","WARDING","Warding"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDING.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDING.json"
+]
+
+
+
+
+
+["復活"]
+export = true
+
+aliases = ["复活术","RESURRECTION","Resurrection"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RESURRECTION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RESURRECTION.json"
+]
+
+
+
+
+
+["プリンのアンサタ十字"]
+export = true
+
+aliases = ["蒲林的埃及十字架","PRINN'SCRUXANSATA","Prinn'sCruxAnsata"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PRINN'SCRUXANSATA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PRINN'SCRUXANSATA.json"
+]
+
+
+
+
+
+["旧き印"]
+export = true
+
+aliases = ["旧印开光术","ELDERSIGN","ElderSign"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ELDERSIGN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ELDERSIGN.json"
+]
+
+
+
+
+
+["平凡な見せかけ"]
+export = true
+
+aliases = ["平凡无奇术","POSEMUNDANE","PoseMundane"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POSEMUNDANE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POSEMUNDANE.json"
+]
+
+
+
+
+
+["仮面"]
+export = true
+
+aliases = ["平凡无奇术","MASK","PoseMundane"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MASK.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MASK.json"
+]
+
+
+
+
+
+["ヘルメス・トリスメギストスの毒塵"]
+export = true
+
+aliases = ["赫耳墨斯·特里斯墨吉斯忒斯的毒尘","BANEFULDUSTOFHERMESTRISMEGISTUS","BanefulDustofHermesTrismegistus"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json"
+]
+
+
+
+
+
+["忘却の波"]
+export = true
+
+aliases = ["忘却之波","WAVEOFOBLIVION","WaveofOblivion"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WAVEOFOBLIVION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WAVEOFOBLIVION.json"
+]
+
+
+
+
+
+["亡霊に命令する"]
+export = true
+
+aliases = ["鬼魂号令法","COMMANDGHOST","CommandGhost"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDGHOST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDGHOST.json"
+]
+
+
+
+
+
+["卜占"]
+export = true
+
+aliases = ["占卜法","AUGURY","Augury"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/AUGURY.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/AUGURY.json"
+]
+
+
+
+
+
+["炎の外套"]
+export = true
+
+aliases = ["火焰斗篷术","CLOAKOFFIRE","CloakofFire"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOAKOFFIRE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOAKOFFIRE.json"
+]
+
+
+
+
+
+["マインドブラスト"]
+export = true
+
+aliases = ["精神震爆术","MINDBLAST","Mindblast"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDBLAST.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDBLAST.json"
+]
+
+
+
+
+
+["未来の視察"]
+export = true
+
+aliases = ["未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LOOKTOTHEFUTURE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LOOKTOTHEFUTURE.json"
+]
+
+
+
+
+
+["無欠の投擲"]
+export = true
+
+aliases = ["无瑕投掷法","IMPECCABLETHROW","ImpeccableThrow"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPECCABLETHROW.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPECCABLETHROW.json"
+]
+
+
+
+
+
+["向こう側への旅"]
+export = true
+
+aliases = ["彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/JOURNEYTOTHEOTHERSIDE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/JOURNEYTOTHEOTHERSIDE.json"
+]
+
+
+
+
+
+["名状し難い誓約"]
+export = true
+
+aliases = ["不可名状的诺言","UNSPEAKABLEPROMISE","UnspeakablePromise"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNSPEAKABLEPROMISE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNSPEAKABLEPROMISE.json"
+]
+
+
+
+
+
+["目の保護"]
+export = true
+
+aliases = ["邪眼守卫术","WARDINGTHEEYE","WardingtheEye"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDINGTHEEYE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDINGTHEEYE.json"
+]
+
+
+
+
+
+["モートランのガラスの製造"]
+export = true
+
+aliases = ["莫特兰玻璃幻术","CONJUREGLASSOFMOTLAN","ConjureGlassofMortlan"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONJUREGLASSOFMOTLAN.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONJUREGLASSOFMOTLAN.json"
+]
+
+
+
+
+
+["門の観察"]
+export = true
+
+aliases = ["时空门观察术","VIEWGATE","ViewGate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VIEWGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VIEWGATE.json"
+]
+
+
+
+
+
+["門の創造"]
+export = true
+
+aliases = ["时空门创造术","CREATEGATE","CreateGate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEGATE.json"
+]
+
+
+
+
+
+["門の発見"]
+export = true
+
+aliases = ["时空门搜寻术","FINDGATE","FindGate"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FINDGATE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FINDGATE.json"
+]
+
+
+
+
+
+["病をもたらす"]
+export = true
+
+aliases = ["致病术","CAUSEDISEASE","CauseDisease"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSEDISEASE.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSEDISEASE.json"
+]
+
+
+
+
+
+["幽体の剃刀"]
+export = true
+
+aliases = ["灵体剃刀术","SPECTRALRAZOR","SoectralRazor"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SPECTRALRAZOR.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SPECTRALRAZOR.json"
+]
+
+
+
+
+
+["夢の映像"]
+export = true
+
+aliases = ["梦境幻象术","DREAMVISION","DreamVision"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DREAMVISION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DREAMVISION.json"
+]
+
+
+
+
+
+["夢の薬の製去"]
+export = true
+
+aliases = ["入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWDREAMDRUG.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWDREAMDRUG.json"
+]
+
+
+
+
+
+["夢みる人の罠"]
+export = true
+
+aliases = ["梦想家诱捕术","SNAREDREAMER","SnareDreamer"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SNAREDREAMER.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SNAREDREAMER.json"
+]
+
+
+
+
+
+["夢を送る"]
+export = true
+
+aliases = ["梦境发送术","SENDDREAM","SendDream"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDDREAM.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDDREAM.json"
+]
+
+
+
+
+
+["ヨグ＝ソトースのこぶし"]
+export = true
+
+aliases = ["犹格-索托斯之拳","FISTOFYOG-SOTHOTH","FistofYog-Sothoth"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FISTOFYOG-SOTHOTH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FISTOFYOG-SOTHOTH.json"
+]
+
+
+
+
+
+["ラーの声"]
+export = true
+
+aliases = ["拉神之声","VOICEOFRA","VoiceofRa"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOICEOFRA.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOICEOFRA.json"
+]
+
+
+
+
+
+["リーチ"]
+export = true
+
+aliases = ["伸触术","REACH","Reach"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REACH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REACH.json"
+]
+
+
+
+
+
+["霊の識別"]
+export = true
+
+aliases = ["灵魂辨识术","IDENTIFYSPIRIT","IdentifySpirit"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IDENTIFYSPIRIT.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IDENTIFYSPIRIT.json"
+]
+
+
+
+
+
+["レレイの霧の創造"]
+export = true
+
+aliases = ["拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEMISTOFR'ELEH.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEMISTOFR'ELEH.json"
+]
+
+
+
+
+
+["ろうそく交信"]
+export = true
+
+aliases = ["烛光通讯术","CANDLECOMMUNICATION","CandleCommunication"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CANDLECOMMUNICATION.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CANDLECOMMUNICATION.json"
+]
+
+
+
+
+
+["分かれの砂"]
+export = true
+
+aliases = ["分沙术","PARTINGSANDS","PartingSands"]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PARTINGSANDS.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PARTINGSANDS.json"
+]
+
+
+
+
+
+[""]
+export = true
+
+aliases = ["","",""]
+options = []
+
+# 提取云
+cloud_extra = true
+# 云本去重
+dictinct = true
+# github raw 链接
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/.json"
+]
+
+
+
+
+
