@@ -1,24 +1,31 @@
-## 汇报错误/补充 :inbox_tray:
+# 汇报错误/补充 :inbox_tray:
 
 提问箱 - https://box.n3ko.cc/_/no_reply31cat
 
 issues - https://github.com/errrr-er/alll/issues
 
-以上方式二选一即可、反馈时请带上相关截图!!!
+以上方式选其一即可、反馈时请带上相关截图!!!
 
 <sub>*提issues需要有github账户</sub>
 
-## 导入前须知
+# TOML系列牌堆
+
+### 导入前须知
+
+> [!NOTE]
+> 使用[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
+
 > [!IMPORTANT]
-> 本toml系列牌堆制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
-> 
-> - 利：修正后无需手动更新(除非修改toml文件本身)
->
+> 制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
+> - 利：修正后无需手动更新(除非修改toml本体)
 > - 弊：骰子无法连接(github/镜像) = 无法使用
 
-## 后续更新
+### 本体更新
+
 > [!TIP]
-> （海豹系）更新请用：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/sealdice_update_example.png?raw=true)
+> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/sealdice_update_example.png?raw=true)
+
+<sub>*其它系暂且未知、欢迎补充</sub>
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
@@ -30,6 +37,5 @@ issues - https://github.com/errrr-er/alll/issues
 > - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
 > - 若释义有任何遗漏欢迎补充
 
-- https://github.com/errrr-er/alll/tree/main/coc/magic/CJE
-    - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/z_magic_all.toml)
-    - 仅想看对应名称请使用[excel](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或导入后`.draw mhelp`
+- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/z_magic_all.toml)
+- 仅想看对应名称请使用[excel](https://github.com/errrr-er/alll/blob/main/coc/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或导入后`.draw mhelp`
