@@ -6,7 +6,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 以上方式二选一即可、反馈时请带上相关截图!!!
 
-<ins>issues页面需要有github账户</ins>
+<sub>*提issues需要有github账户</sub>
 
 ## 导入前须知
 > [!IMPORTANT]
