@@ -60,6 +60,7 @@ https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-wr
 ## 旧版手册呪文(三语对照)
 - 中
     - 海豹内置查询文档（by）
+    - [克蘇魯神話咒文(中)](https://home.gamer.com.tw/creationDetail.php?sn=4140071)（by實樂）
     - 克苏鲁神话魔法大典1.1.2（by七宫涟）
     - [COC常见魔法日汉英对照](https://www.bilibili.com/opus/853115006210801681)（uid147558）
 - 日
