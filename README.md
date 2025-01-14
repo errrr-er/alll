@@ -42,9 +42,9 @@ issues - https://github.com/errrr-er/alll/issues
 ## 旧版手册呪文(三语对照) ver1.0.0
 
 - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
-- 仅想看对应名称可直接使用
-    - [excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx) <sub>一般为最新版、需下载后查看</sub>
-    - ![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/title.png?raw=true)
+- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或以下图片
+
+![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/title.png?raw=true)
 
 > [!CAUTION]
 > - 导入后位于`牌组列表`最底部
