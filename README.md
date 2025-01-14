@@ -14,11 +14,11 @@ issues - https://github.com/errrr-er/alll/issues
 
 <sub>*提issues需要有github账户</sub>
 
-# Candela Obscura【施工中】
+# Candela Obscura【准备中、优先级II】
 
 - MD
 
-# Call of Cthulhu【施工中】
+# Call of Cthulhu【目录已完成、内容施工中、优先级I】
 
 - TOML
     - 旧版手册呪文(三语对照)
@@ -41,11 +41,6 @@ issues - https://github.com/errrr-er/alll/issues
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
-- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
-- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或以下图片
-
-![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/title.png?raw=true)
-
 > [!CAUTION]
 > - 导入后位于`牌组列表`最底部
 >   - 因抽取词无法隐藏会导致底部**超级、超级长！！！**
@@ -53,6 +48,11 @@ issues - https://github.com/errrr-er/alll/issues
 > - `.draw keys`过长会报错、抽取词将在`.draw mhelp`时提供 <sub>图片版</sub>
 > - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
+
+- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
+- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或使用以下图片
+
+![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/title.png?raw=true)
 
 # 参考资料
 
@@ -66,6 +66,7 @@ issues - https://github.com/errrr-er/alll/issues
     - [クトゥルフ神話TRPGで使える呪文まとめ](https://boardgame-blog.com/cthulhu-spell/)
     - [クトゥルフ神話の呪文一覧｜ネクロノミコンやエイボンの書でお馴染みの呪文解説](https://trpg-japan.com/call_of_cthulhu/coc-basic/cthulhu-mythos-spell-list/)
 - 英
-    - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
-    - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
     - [Grimoire Spells](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells)（by MI2wiki）
+    - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
+    - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
+    
