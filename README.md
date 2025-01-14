@@ -1,5 +1,5 @@
 > [!TIP]
-> 善用README目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/readme_lists_pointout.png?raw=true)
+> 善用README目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists_pointout.png?raw=true)
 
 > [!NOTE]
 > 遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
@@ -35,7 +35,7 @@ issues - https://github.com/errrr-er/alll/issues
 <sub>*其它骰系暂且未知、欢迎补充</sub>
 
 > [!TIP]
-> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/sealdice_update_example.png?raw=true)
+> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice_update_example.png?raw=true)
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
@@ -50,7 +50,7 @@ issues - https://github.com/errrr-er/alll/issues
 - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
 - 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或使用以下图片
 
-![](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/title.png?raw=true)
+![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
 # 参考资料
 
