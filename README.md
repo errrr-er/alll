@@ -16,7 +16,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 # Candela Obscura【准备中、优先级II】
 
-# Call of Cthulhu【三语对照目录已完成、内容施工中、优先级I】
+# Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
 - TOML
     - 旧版手册呪文(三语对照)
