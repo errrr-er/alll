@@ -54,6 +54,9 @@ issues - https://github.com/errrr-er/alll/issues
 
 # 参考资料
 
+## README语法
+https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
 ## 旧版手册呪文(三语对照)
 - 中
     - 海豹内置查询文档（by）
