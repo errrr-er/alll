@@ -67,4 +67,6 @@ issues - https://github.com/errrr-er/alll/issues
     - [クトゥルフ神話TRPGで使える呪文まとめ](https://boardgame-blog.com/cthulhu-spell/)
     - [クトゥルフ神話の呪文一覧｜ネクロノミコンやエイボンの書でお馴染みの呪文解説](https://trpg-japan.com/call_of_cthulhu/coc-basic/cthulhu-mythos-spell-list/)
 - 英
-    - The Grand Grimoire of Cthulhu Mythos Magic (by Mike Mason, Matt Sanderson)
+    - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
+    - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
+    - [Grimoire Spells](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells)（by MI2wiki）
