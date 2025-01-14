@@ -42,16 +42,15 @@ issues - https://github.com/errrr-er/alll/issues
 ## 旧版手册呪文(三语对照) ver1.0.0
 
 - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
-    - 仅想看对应名称请使用[excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或导入后`.draw mhelp`
-- 整体顺序按照[旧版手册呪文_仅名称.xlsx](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)排序
-    - 牌堆内未收集到的在excel表内标有各类颜色
-    - 详细颜色解释已放进表内
+- 仅想看对应名称可直接使用excel表格
+    - [离线版](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx) <sub>一般为最新版、需下载后查看</sub>
+    - [腾讯文档](https://docs.qq.com/sheet/DVkxWSG9VVkJpVWNS?tab=n6baox) <sub>无需下载、更新不一定及时</sub>
 
 > [!CAUTION]
 > - 导入后位于`牌组列表`最底部
 >   - 因抽取词无法隐藏会导致底部**超级、超级长！！！**
 >   - 折叠请使用删除键右侧的小箭头(一次性、无法永久折叠)
-> - `.draw keys`过长会报错、抽取词仅在`.draw mhelp`里显示
+> - `.draw keys`过长会报错、抽取词将在`.draw mhelp`时提供图片
 > - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
 
