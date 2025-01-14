@@ -16,9 +16,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 # Candela Obscura【准备中、优先级II】
 
-- MD
-
-# Call of Cthulhu【目录已完成、内容施工中、优先级I】
+# Call of Cthulhu【三语对照目录已完成、内容施工中、优先级I】
 
 - TOML
     - 旧版手册呪文(三语对照)
@@ -69,4 +67,3 @@ issues - https://github.com/errrr-er/alll/issues
     - [Grimoire Spells](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells)（by MI2wiki）
     - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
     - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
-    
