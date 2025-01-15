@@ -27,7 +27,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 > [!CAUTION]
 > HTML主为使用Markdown转换器后的结果、格式不会全部适配、通常为非最新版<br/>
-> Markdown/HTML若需格式排版等改动欢迎反馈、会提取有效建议并在版本跟新时进行改动
+> 格式排版等改动欢迎反馈、会提取有效建议并在后续更新中进行变更
 
 - Markdown
     - [最新版在线阅读&可下载、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
