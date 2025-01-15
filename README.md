@@ -4,7 +4,7 @@
 > [!CAUTION]
 > - 使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 > - 发布地点有且仅有[github(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
-> - 仓内内容均为无原作授权的个人整理&人机混翻、若内容有误/漏欢迎补充
+> - 仓内均为无原作授权的个人整理&人机混翻、若内容有误/漏欢迎补充
 > - 本人不负责因多转(或不正当使用)产生/导致的任何问题/情况
 > - 须知/译文更新后会传至同样位置(但不另行通知)
 
@@ -24,6 +24,15 @@ issues - https://github.com/errrr-er/alll/issues
     - 暗烛快速入门指南
 
 ## 暗烛快速入门指南 ver0.0.0
+
+> [!IMPORTANT]
+> Markdown撰写时以适配[Github.md语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)为主、不一定适配其它md阅读器<br/>
+> HTML为使用[md→html转换网站](https://markdowntohtml.com/)后的结果、有概率出现格式不正确等情况、若涉及强烈影响阅读/使用等情况请及时反馈(可提改进推荐)
+
+- Markdown
+    - [最新版在线阅读](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
+- HTML
+    - []()
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
