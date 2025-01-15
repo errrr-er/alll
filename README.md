@@ -26,9 +26,9 @@ issues - https://github.com/errrr-er/alll/issues
 ## 暗烛快速入门指南 ver0.0.0
 
 - Markdown
-    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
+    - [最新版在线阅读&可下载、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
 - HTML
-    - [Markdown转换后结果、不一定为最新版](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
+    - [使用Markdown转换器后结果、格式不一定全部适配、通常为非最新版](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
