@@ -66,6 +66,7 @@ issues - https://github.com/errrr-er/alll/issues
 - 中
     - [左右分栏](https://blog.csdn.net/zhangyu4863/article/details/83504008)（by zhangyu4863）
     - [基本撰写和格式语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)（by Github）
+    - [页内跳转&内置目录](https://blog.csdn.net/qq_38276669/article/details/86748936)（by L_MaGw）
 
 - 英
     - [Convert Markdown to HTML](https://markdowntohtml.com/)
