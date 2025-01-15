@@ -17,7 +17,7 @@
 
 **！！！强烈推荐使用[Github(在线版)](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)&[原版(指南)](https://shop.critrole.com/products/candela-obscura-quickstart-guide)&[原版(其它材料)](https://darringtonpress.com/candela/)搭配阅读！！！**
 
-# 暗烛快速入门指南
+# 暗烛快速入门指南 ver0.0.0
 
 > 完整规则书将在2023年底发布<br/>
 > 点击浏览[角色表与其它相关材料](https://darringtonpress.com/candela/)<br/>
@@ -133,7 +133,9 @@ ORIGINAL CONCEPT CREATED BY: Taliesin Jaffe and Chris Lockey
 
 ```
 例：
-Dani想检查一下房间里的人群中是否有人在密切关注环。GM告诉她要过一个勘察检定。她在勘察中的行动等级为一，所以她掷了一个标准骰子。
+Dani想检查一下房间里的人群中是否有人在密切关注环，GM告诉她要过一个勘察检定。
+
+她在勘察中的行动等级为一，所以她掷了一个标准骰子。
 ```
 
 ## 驱动力
@@ -190,7 +192,8 @@ Carlos的斗殴为一级，他花费了2点驱动力来投掷3个骰子。里面
 ## 技能
 每个角色有许多不同的技能，但入门指南里每种只开放三个。
 
-
+## 掷骰(检定)&后果
+游戏主围绕着行动与掷骰(检定)，这些检定发生在叙事过程中玩家的决策结果不明确时使用。暗烛中的调查员比普通人能力更强，并且经过专业的训练，检定不应当用于角色的每一次行动(例如走在街上或爬梯子)。如果想保持隐蔽、或是被怪物追赶，那么很可能需要检定来规避危险。
 
 
 <br/>
