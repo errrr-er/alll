@@ -26,7 +26,9 @@ issues - https://github.com/errrr-er/alll/issues
 ## 暗烛快速入门指南 ver0.0.0
 
 > [!CAUTION]
-> HTML主为使用转换器后的结果、格式不会全部适配、版本通常比Markdown落后。格式排版等改动欢迎反馈、会提取有效建议并在后续更新中进行变更
+> HTML主为使用转换器后的结果、格式不会全部适配、版本通常比Markdown落后。
+> 
+> 格式排版等改动欢迎反馈、会提取有效建议并在后续更新中进行变更
 
 - Markdown
     - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
