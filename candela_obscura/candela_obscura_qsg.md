@@ -8,14 +8,14 @@
             </td>
             <td>
                 <!--右侧内容-->
-                更新时间：2025-01-14<br/>
+                更新时间：2025-01-15<br/>
                 阅前必读：<a href="https://github.com/errrr-er/alll/tree/main" target="_blank">README</a>
             </td>
         </tr>
     </table>
 </html>
 
-**！！强烈建议搭配原版阅读！！**
+**！！强烈建议使用[Github](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)&[原版](https://shop.critrole.com/products/candela-obscura-quickstart-guide)搭配阅读！！**
 
 # 暗烛快速入门指南 ver0.0.0
 

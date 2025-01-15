@@ -25,14 +25,10 @@ issues - https://github.com/errrr-er/alll/issues
 
 ## 暗烛快速入门指南 ver0.0.0
 
-> [!IMPORTANT]
-> Markdown撰写时以适配[Github.md语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)为主、不一定适配其它md阅读器<br/>
-> HTML为使用[md→html转换网站](https://markdowntohtml.com/)后的结果、有概率出现格式不正确等情况、若涉及强烈影响阅读/使用等情况请及时反馈(可提改进推荐)
-
 - Markdown
-    - [最新版在线阅读](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
+    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
 - HTML
-    - []()
+    - [Markdown转换后结果、不一定为最新版](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
