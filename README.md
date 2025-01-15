@@ -2,7 +2,7 @@
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists_pointout.png?raw=true)
 
 > [!CAUTION]
-> - 使用者须遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
+> - 使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 > - 发布地点有且仅有[github(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
 > - 仓内内容均为无原作授权的个人整理&人机混翻、若内容有误/漏欢迎补充
 > - 本人不负责因多转(或不正当使用)产生/导致的任何问题/情况
@@ -70,7 +70,7 @@ issues - https://github.com/errrr-er/alll/issues
 - 英
     - [Convert Markdown to HTML](https://markdowntohtml.com/)
 
-## 暗烛快速入门指南
+## Candela Obscura
 
 - 英
     - [完整手册(电子版) $19.99](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)（by Critical Role）
