@@ -1,5 +1,5 @@
 > [!TIP]
-> 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists_pointout.png?raw=true)
+> 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/readme_lists_pointout.png?raw=true)
 
 > [!CAUTION]
 > - 使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
@@ -33,9 +33,9 @@ issues - https://github.com/errrr-er/alll/issues
 > HTML主为使用转换器后的结果、格式不会全部适配、版本通常比Markdown落后。
 
 - Markdown
-    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
+    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/other/candela_obscura/candela_obscura_qsg.md)
 - HTML
-    - [无法在线阅读、需下载后使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
+    - [无法在线阅读、需下载后使用](https://github.com/errrr-er/alll/blob/main/other/candela_obscura/candela_obscura_qsg.html)
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
@@ -54,7 +54,7 @@ issues - https://github.com/errrr-er/alll/issues
 *其它骰系暂且未知、欢迎补充
 
 > [!TIP]
-> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice_update_example.png?raw=true)
+> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example.png?raw=true)
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
@@ -66,10 +66,10 @@ issues - https://github.com/errrr-er/alll/issues
 > - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
 
-- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
-- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或详见下图
+- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/other/call_of_cthulhu/magic/CJE/z_magic_all.toml)
+- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/other/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或详见下图
 
-![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
+![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/magic_all.png?raw=true)
 
 # 参考资料
 
