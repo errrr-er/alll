@@ -33,9 +33,9 @@ issues - https://github.com/errrr-er/alll/issues
 > HTML主为使用转换器后的结果、格式不会全部适配、版本通常比Markdown落后。
 
 - Markdown
-    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/other/candela_obscura/candela_obscura_qsg.md)
+    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
 - HTML
-    - [无法在线阅读、需下载后使用](https://github.com/errrr-er/alll/blob/main/other/candela_obscura/candela_obscura_qsg.html)
+    - [无法在线阅读、需下载后使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
