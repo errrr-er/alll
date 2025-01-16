@@ -17,9 +17,11 @@
 
 **！！！强烈推荐使用[Github(在线版)](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)&[原版(指南)](https://shop.critrole.com/products/candela-obscura-quickstart-guide)&[原版(其它材料)](https://darringtonpress.com/candela/)搭配阅读！！！**
 
+**购买官方完整规则书：[电子](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)、[实体](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
+
 # 暗烛快速入门指南 ver0.0.0
 
-> 完整规则书([电子](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)/[实体](https://shop.critrole.com/products/candela-obscura-core-rulebook))将在2023年底发布<br/>
+> 完整规则书将在2023年底发布<br/>
 > 点击浏览[角色表与其它相关材料](https://darringtonpress.com/candela/)<br/>
 > 订阅[Darrington Press](https://darringtonpress.com/newsletter/)以获得最新消息
 
