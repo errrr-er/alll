@@ -89,7 +89,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 - 英
     - [完整手册(电子版) $19.99](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)（by Critical Role）
-    - [完整手册(实体版) $39.99](https://shop.critrole.com/products/candela-obscura-core-rulebook)（by Critical Role）
+    - [完整手册(实体&电子版) $39.99](https://shop.critrole.com/products/candela-obscura-core-rulebook)（by Critical Role）
     - [Candela Obscura Quickstart Guide](https://shop.critrole.com/products/candela-obscura-quickstart-guide)（by Critical Role）
 
 https://www.reddit.com/r/criticalrole/comments/152ix2y/no_spoilers_looking_for_a_printer_friendly/
