@@ -1,0 +1,220 @@
+[meta]
+title = "私人使用"
+author = "errrr-er"
+version = "0.0.0"
+license = "CC-BY-NC-ND 4.0"
+date = 2024-12-26
+update_date = 2025-01-13
+desc = "https://github.com/errrr-er/personal"
+update_Urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/personal_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/personal_all.toml"
+]
+
+# 鸣潮
+  # 鸣潮、油甘
+# COD
+  # cod
+# 缩写
+  # 缩写、abb
+# 海豹
+  # 手册、分离、猫回复、猫翻译、猫discord、猫zip
+# QQ
+  # 查询、共群
+# DND
+  # Bell
+
+
+
+########
+# 鸣潮
+########
+
+
+
+["油甘"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/wuthering_collection.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/wuthering_collection.json"
+]
+
+
+
+["鸣潮"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/wuthering.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/wuthering.json"
+]
+
+
+
+########
+# COD
+########
+
+
+
+["cod"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/cod_story.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/cod_story.json"
+]
+
+
+
+########
+# 缩写
+########
+
+
+
+["缩写"]
+export = true
+aliases = ["abb"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/abbreviation.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/abbreviation.json"
+]
+
+
+
+########
+# 海豹
+########
+
+
+
+["手册"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/dice_setting/response_link/sealdice_guide.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_guide.json"
+]
+
+
+
+["分离"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_lagrange.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_lagrange.json"
+]
+
+
+
+["猫回复"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_reply.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_reply.json"
+]
+
+
+
+["m522"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_m522.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_m522.json"
+]
+
+
+
+["猫翻译"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_translate.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_translate.json"
+]
+
+
+
+["猫discord"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_discord.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_discord.json"
+]
+
+
+
+["猫zip"]
+export = true
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_zip.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/personal/dice_setting/response_link/sealdice_zip.json"
+]
+
+
+
+########
+# QQ
+########
+
+
+
+["查询"]
+export = true
+aliases = ["共群"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/qq_find.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/qq_find.json"
+]
+
+
+
+########
+# DND
+########
+
+
+
+["Bell"]
+export = true
+aliases = ["bell"]
+options = []
+cloud_extra = true
+dictinct = true
+options_urls = [
+  "https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/dnd5e_bell.json",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/personal/refs/heads/main/toml/links/dnd5e_bell.json"
+]
