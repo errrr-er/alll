@@ -1,25 +1,6 @@
-// ==UserScript==
-// @name         光明世界D6池系统
-// @author       裗浳(3612464276)
-// @version      1.0.0
-// @description  暗烛规则适用、出bug详见README(Github)进行反馈
-// @timestamp    1737083040
-// 2025/01/16
-// @license      CC-BY-NC-SA 4.0
-// @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
-// @updateUrl    https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
-// ==/UserScript==
-
-let ext = seal.ext.find('illumi');
-if (!ext) {
-  ext = seal.ext.new('illumi', '裗浳', '1.0.0');
-  seal.ext.register(ext);
-}
-
 const cmdSeal = seal.ext.newCmdItemInfo();
 cmdSeal.name = 'iw';
-cmdSeal.help = '.iw <n> // 掷出nD6并汇报最高成功等级';
+cmdSeal.help = '.iw <x> // 掷x个六面骰并报告最高的成功等级';
 
 cmdSeal.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true), text = '', roller = seal.format(ctx,"{$t玩家_RAW}"), res;
@@ -29,11 +10,11 @@ cmdSeal.solve = (ctx, msg, cmdArgs) => {
     }
     let vsDice = parseInt(cmdArgs.getArgN(1));
     if (vsDice == 0) {
-        text = '警告：非可处理的数量。';
+        text = '错误：无法掷0个骰子。';
         seal.replyToSender(ctx, msg, text);
         return ret;
-    } else if (vsDice > 6) {
-        text = '警告：单次检定的总量不可超过六个。';
+    } else if (vsDice > 10) {
+        text = '错误：掷骰次数过多。';
         seal.replyToSender(ctx, msg, text);
         return ret;
     }
@@ -43,7 +24,7 @@ cmdSeal.solve = (ctx, msg, cmdArgs) => {
         results.push(res);
     }
     let highestSuccess = determineHighestSuccess(results);
-    text = roller + '进行检定' + vsDice + '次\n[' + results.join('、') + ']\n最高为' + highestSuccess;
+    text = roller + '掷了' + vsDice + '个骰子：[' + results.join('、') + ']，最高成功等级为：' + highestSuccess;
     seal.replyToSender(ctx, msg, text);
     return ret;
 };
