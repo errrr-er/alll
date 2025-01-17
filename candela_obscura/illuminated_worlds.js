@@ -4,7 +4,6 @@
 // @version      1.0.0
 // @description  暗烛规则适用、出bug详见README(Github)进行反馈
 // @timestamp    1737083040
-// 2025/01/16
 // @license      CC-BY-NC-SA 4.0
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
@@ -43,7 +42,7 @@ cmdSeal.solve = (ctx, msg, cmdArgs) => {
         results.push(res);
     }
     let highestSuccess = determineHighestSuccess(results);
-    text = roller + '进行检定' + vsDice + '次\n[' + results.join('、') + ']\n最高为' + highestSuccess;
+    text = roller + '：' + results.join('、') + '\n进行检定' + vsDice + '次\n最高为' + highestSuccess;
     seal.replyToSender(ctx, msg, text);
     return ret;
 };

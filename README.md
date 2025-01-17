@@ -4,7 +4,7 @@
 > [!CAUTION]
 > - 使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 > - 发布地点有且仅有[github(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
-> - 仓内均为无原作授权的个人整理&人机混翻、若内容有误/漏欢迎补充
+> - 仓内均为无原作授权的个人制作/整理&人机混翻、若内容有误/漏欢迎补充
 > - 本人不负责因多转(或不正当使用)产生/导致的任何问题/情况
 > - 须知/译文更新后会传至同样位置(但不另行通知)
 
@@ -22,6 +22,8 @@ issues - https://github.com/errrr-er/alll/issues
 
 - Markdown/HTML
     - 暗烛快速入门指南
+- Json
+    - 光明世界D6池系统
 
 ## 暗烛快速入门指南 ver0.0.0
 
@@ -36,6 +38,10 @@ issues - https://github.com/errrr-er/alll/issues
     - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
 - HTML
     - [需下载后使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
+
+## 光明世界D6池系统 ver1.0.0
+
+[](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
@@ -94,10 +100,16 @@ issues - https://github.com/errrr-er/alll/issues
 
 https://www.reddit.com/r/criticalrole/comments/152ix2y/no_spoilers_looking_for_a_printer_friendly/
 
+## 光明世界D6池系统
+
+- 中
+    - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
+    - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
+
 ## 旧版手册呪文(三语对照)
 
 - 中
-    - 海豹内置查询文档（by）
+    - 海豹内置查询文档（by海豹官方）
     - [克蘇魯神話咒文(中)](https://home.gamer.com.tw/creationDetail.php?sn=4140071)（by實樂）
     - 克苏鲁神话魔法大典1.1.2（by七宫涟）
     - [COC常见魔法日汉英对照](https://www.bilibili.com/opus/853115006210801681)（uid147558）
