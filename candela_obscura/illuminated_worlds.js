@@ -17,8 +17,9 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
-// “标准”
 const cmdSeal = seal.ext.newCmdItemInfo();
+
+// “标准”
 cmdSeal.name = 'iw';
 cmdSeal.help = '.iw <n> // 掷出nD6(标准骰)并汇报最高成功等级\n\n- 1~3：失败、没有完成预想而且有代价。\n- 4~5：混合成功、完成预想且有代价。\n- 6：成功、完成预想且没代价。\n- 6*n(6s)：完美成功、完成预想且额外获得■■■(无指定)。';
 
@@ -51,7 +52,6 @@ cmdSeal.solve = (ctx, msg, cmdArgs) => {
 
 
 // “标准”&“镀金”
-const cmdSeal = seal.ext.newCmdItemInfo();
 cmdSeal.name = 'iwd';
 cmdSeal.help = '.iwd <n> <d> // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级\n\n- 1~3：失败、没有完成预想而且有代价。\n- 4~5：混合成功、完成预想且有代价。\n- 6：成功、完成预想且没代价。\n- 6*n(6s)：完美成功、完成预想且额外获得■■■(无指定)。';
 
