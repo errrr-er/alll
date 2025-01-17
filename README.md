@@ -2,7 +2,8 @@
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/readme_lists_pointout.png?raw=true)
 
 > [!IMPORTANT]
-> TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充<br/>
+> TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充
+> 
 > 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example.png?raw=true)
 
 > [!CAUTION]
@@ -45,7 +46,8 @@ issues - https://github.com/errrr-er/alll/issues
 
 ## 光明世界D6池系统 ver1.0.0
 
-[illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)
+- 触发指令为`.iw`
+- [illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)下载后导入即可
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 

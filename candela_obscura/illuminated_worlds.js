@@ -3,8 +3,8 @@
 // @author       裗浳(3612464276)
 // @version      1.0.0
 // @description  暗烛规则适用、出bug详见README(Github)进行反馈
-// @timestamp    1737083040
-// 2025-01-16
+// @timestamp    1737086386
+// 2025-01-17 00:00:40 UTC
 // @license      CC-BY-NC-SA 4.0
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
@@ -19,7 +19,7 @@ if (!ext) {
 
 const cmdSeal = seal.ext.newCmdItemInfo();
 cmdSeal.name = 'iw';
-cmdSeal.help = '.iw <n> // 掷出nD6并汇报最高成功等级';
+cmdSeal.help = '.iw <n> // 掷出nD6并汇报最高成功等级\n\n- 1~3：失败、没有完成预想而且有代价。\n- 4~5：混合成功、完成预想且有代价。\n- 6：成功、完成预想且没代价。\n- 6*n(6s)：完美成功、完成预想且额外获得■■■(无指定)。';
 
 cmdSeal.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true), text = '', roller = seal.format(ctx,"{$t玩家_RAW}"), res;
