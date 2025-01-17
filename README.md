@@ -107,6 +107,9 @@ https://www.reddit.com/r/criticalrole/comments/152ix2y/no_spoilers_looking_for_a
     - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
     - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
 
+- 英
+    - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
+
 ## 旧版手册呪文(三语对照)
 
 - 中
