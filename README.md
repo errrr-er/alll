@@ -44,9 +44,11 @@ issues - https://github.com/errrr-er/alll/issues
 - HTML
     - [需下载后使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
 
-## 光明世界D6池系统 ver1.0.0
+## 光明世界D6池系统 ver1.1.0
 
-- 触发指令为`.iw`
+- 触发指令为
+    - `.iw` // 掷出nD6(标准骰)并汇报最高成功等级
+    - `.iwd` // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级
 - [illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)下载后导入即可
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
@@ -92,6 +94,15 @@ issues - https://github.com/errrr-er/alll/issues
 - 英
     - [Convert Markdown to HTML](https://markdowntohtml.com/)
 
+## Json语法
+
+- 中
+    - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
+    - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
+
+- 英
+    - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
+
 ## Candela Obscura
 
 - 英
@@ -100,15 +111,6 @@ issues - https://github.com/errrr-er/alll/issues
     - [Candela Obscura Quickstart Guide](https://shop.critrole.com/products/candela-obscura-quickstart-guide)（by Critical Role）
 
 https://www.reddit.com/r/criticalrole/comments/152ix2y/no_spoilers_looking_for_a_printer_friendly/
-
-## 光明世界D6池系统
-
-- 中
-    - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
-    - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
-
-- 英
-    - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
 
 ## 旧版手册呪文(三语对照)
 
