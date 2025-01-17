@@ -47,8 +47,9 @@ issues - https://github.com/errrr-er/alll/issues
 ## 光明世界D6池系统 ver1.1.0
 
 - 触发指令为
-    - `.iw` // 掷出nD6(标准骰)并汇报最高成功等级
-    - `.iwd` // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级
+    - `.iw <n>` // 掷出nD6(标准骰)并汇报最高成功等级
+    - `.iwd <n> <d>` // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级
+        - `<n>`与`<d>`之间的空格**非！常！重！要！**
 - [illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)下载后导入即可
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
