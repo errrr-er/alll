@@ -13,7 +13,7 @@
 
 let ext = seal.ext.find('illumi');
 if (!ext) {
-  ext = seal.ext.new('illumi', '裗浳', '1.0.0');
+  ext = seal.ext.new('illumi', 'er', '1.0.0');
   seal.ext.register(ext);
 }
 
