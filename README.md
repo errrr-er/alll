@@ -66,8 +66,8 @@ issues - https://github.com/errrr-er/alll/issues
 > - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
 
-- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/blob/main/other/call_of_cthulhu/magic/CJE/z_magic_all.toml)
-- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/blob/main/other/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或详见下图
+- 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
+- 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或详见下图
 
 ![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/magic_all.png?raw=true)
 
