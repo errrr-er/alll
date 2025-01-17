@@ -1,6 +1,10 @@
 > [!TIP]
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/readme_lists_pointout.png?raw=true)
 
+> [!IMPORTANT]
+> TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充<br/>
+> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example.png?raw=true)
+
 > [!CAUTION]
 > - 使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 > - 发布地点有且仅有[github(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
@@ -41,7 +45,7 @@ issues - https://github.com/errrr-er/alll/issues
 
 ## 光明世界D6池系统 ver1.0.0
 
-[](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)
+[illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)
 
 # Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
 
@@ -56,11 +60,6 @@ issues - https://github.com/errrr-er/alll/issues
 > 制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
 > - 利：修正后无需手动更新(除非修改toml本体)
 > - 弊：骰子无法连接(github/镜像) = 无法使用
-
-*其它骰系暂且未知、欢迎补充
-
-> [!TIP]
-> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example.png?raw=true)
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
