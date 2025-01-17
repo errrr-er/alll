@@ -8,7 +8,7 @@
             </td>
             <td>
                 <!--右侧内容-->
-                更新时间：2025-01-15<br/>
+                更新时间：2025-01-16<br/>
                 阅前必读：<a href="https://github.com/errrr-er/alll/tree/main" target="_blank">README</a>
             </td>
         </tr>
@@ -17,7 +17,7 @@
 
 **！！！强烈推荐使用[Github(在线版)](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)&[原版(指南)](https://shop.critrole.com/products/candela-obscura-quickstart-guide)&[原版(其它材料)](https://darringtonpress.com/candela/)搭配阅读！！！**
 
-**官方商店·完整规则书：[电子版($19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)、[实体&电子版($39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
+**官方·完整规则书：[电子版($19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)、[实体&电子版($39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
 
 # 暗烛快速入门指南 ver0.0.0
 
@@ -41,7 +41,8 @@ ORIGINAL CONCEPT CREATED BY: Taliesin Jaffe and Chris Lockey
 ```
 你上次感到真正的恐惧是什么时候？
 不仅是现在，在之后的将来，我也会一次次地询问：
-你的恐惧，是真实的吗？或者换句话说，它基于现实吗？
+你的恐惧，是真实的吗？
+或者换句话说，它基于现实吗？
 它很可能是——
 吞没房子的烈火，
 痛击肠胃的拳头，
@@ -349,6 +350,144 @@ TA将更专注于行动而不是观察周围的环境。
 + 见过，她在西边的悬崖上差点咬伤我的胳膊。我的办公室里还有一颗她的牙齿。
 ```
 
+```
+斯特留因
+
+它的嘴巴可以一直裂到将大型动物整个吞下。
+```
+
+疤痕造成的性格变化可能表现为各种方式，例如：
+
+```
+我的角色误用了一件魔法神器，造成了毁灭性的影响，现在被所带来的后果压得喘不过气来。
+
+因为这次经历，TA更加致力于熟练使用神器，并把所有的空闲时间都用来训练。
+
+我打算把一个点从控制移到感知上，因为TA正在把学习的重点放到魔法上。
+```
+
+或：
+
+```
+我的角色看到一只野兽从一个无辜平民的身里爆出。
+
+TA现在面临自己对死亡的恐惧，以及对曾经不畏危险的信心产生怀疑。
+
+这段经历也让TA特别想要保护环的成员，所以现在TA为各种情况制定了缜密的计划。
+
+我要把一个点从斗殴移到勘察，因为TA行动变慢，观察力变强。
+
+```
+
+又或者：
+
+
+```
+我的角色没能从魔法伤害中拯救朋友。
+
+悲痛状态中，TA在感到失控时会情绪爆发。
+
+同时，TA变得异常富有同情心。
+
+经历这次事件之后，TA经常心神不宁。
+
+我将把一个点从藏匿移到阅读，TA将与他人进行深入交谈。
+```
+
+根据我们的经验，扮演“精神错乱”的角色既不符合道德，也不具备可行性。伤痕——尤其是脑部疤痕，应该被理解为一种变化，而不是一种削弱。
+
+赤疤痕可能看起来与此讨论无关，但玩家依旧应该以对待其它疤痕一样谨慎对待它们。此外，我们经常把我们不知道的东西——比如说来自其它文化的仪式、神圣的仪式、来自不属于我们传统的做法类比为`奇异`或`神秘`。在设计游戏中的魔法元素时，我们要求GM/玩家铭记同理心。每个游戏都是不同的，许多人可能不欣赏将神圣的符号、文物、仪式虚构化。
+
+```
+我的角色目睹了一些可怕的事情。
+
+为了报复，怪物将TA的瞳孔一分为二。
+
+TA现在能看到神秘的幻影覆盖在世俗世界上。
+
+TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
+
+我打算把一个点从专注移到感知上，因为TA现在更难注意到细节、但可以看到以前从未注意过的超自然现象。
+```
+
+以下是一些疤痕的示例/参考：
+
+- 身体
+    - 失去手臂
+    - 跛脚
+    - 脊椎骨断裂
+    - 抽搐
+    - 失聪
+    - 烧伤
+- 大脑
+    - 身处在喧嚣的人群中时感到不安
+    - 畏惧深水
+    - 充满内疚
+    - 不自信
+    - 正义感爆棚
+    - 对高分贝声音敏感
+- 赤：
+    - 不眨眼的眼皮
+    - 吸血鬼般的牙齿
+    - 紫色的血
+    - 更修长的手指
+    - 不自然弯曲的手肘
+    - 不断呼出的烟雾
+
+Candela Obscura’s fight against the corruption of supernatural forces is an allegory for the fight of good, everyday people against the corruption within the world. The mechanics of marks and scars within Candela Obscura are straightforward, but the legacy of mechanizing how people experience harm and disability within the horror genre is not. For each mark, but especially when taking a scar, it is of vital importance that players make choices that serve a nuanced narrative over basic rules.
+
+The idea of “permanent scars” does not align with the modern understanding of healing trauma. But just like you, consider that your character cannot begin the process of tending to deep physical, mental, and even magickal trauma until they are in a safe place for an extended period of time. Over the course of a campaign, your circle should experience only brief moments of respite—this is a challenging game of horror. If you want to see your character heal from scars they’ve taken, you might choose to play a different character for some time and return to this one down the road when they’ve had a chance to recover. Work with your GM to decide which scars they could have healed during this time away.
+
+Above all: make choices that will facilitate the story, while keeping the well-being of your fellow players in mind. To best explore this world of magick and monsters, we urge you to build and play your characters prioritizing specificity, humanity, and compassion.
+
+# 暗烛世界观
+
+## 法尔兰
+
+### The Last Great War
+
+```diff
++ 与亚历山大核对
+```
+
+<html>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td style="text-align: right;">
+                <!--左侧内容-->
+                【预约】<br/>
+                <br/>
+                姓名：<br/>
+                日期：<br/>
+                负责：<br/>
+                时间：<br/>
+                <br/>
+                纽费尔 瓦尔尼什
+            </td>
+            <td>
+                <!--右侧内容-->
+                革新·精致餐饮<br/>
+                <br/>
+                以斯拉·阿什福德<br/>
+                5号 隆冬<br/>
+                拜伦 W.<br/>
+                9:00 AM<br/>
+                <br/>
+                蓝宝石街道 6904
+            </td>
+        </tr>
+    </table>
+</html>
+
+### The Language of Hale
+
+### The City of Newfaire
+
+
+
+
+
+
 
 
 <br/>
@@ -447,3 +586,19 @@ Field Guide 特质指南
 Illuminated Worlds 光明世界
 
 Mark 伤害标记
+
+Scars 伤痕
+
+Striuyn 斯特留因
+
+Strange 奇异
+
+Mystical 神秘
+
+Byron W. 拜伦 W.
+
+Alexandra 亚历山大
+
+Revisionary 革新
+
+Sapphire 蓝宝石
