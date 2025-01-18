@@ -13,7 +13,7 @@
 
 let ext = seal.ext.find('illumi');
 if (!ext) {
-  ext = seal.ext.new('illumi', 'er', '1.0.0');
+  ext = seal.ext.new('illumi', 'er', '1.1.0');
   seal.ext.register(ext);
 }
 
@@ -21,7 +21,7 @@ if (!ext) {
 // “标准”
 const cmdIw = seal.ext.newCmdItemInfo();
 cmdIw.name = 'iw';
-cmdIw.help = '.iw <n> // 掷出nD6(标准骰)并汇报最高成功等级\n\n- 1~3：失败、没有完成预想而且有代价。\n- 4~5：混合成功、完成预想且有代价。\n- 6：成功、完成预想且没代价。\n- 6*n(6s)：完美成功、完成预想且额外获得■■■(无指定)。';
+cmdIw.help = '.iw <n> // 掷出nD6(标准骰)并汇报最高成功等级';
 
 cmdIw.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true), text = '', roller = seal.format(ctx,"【{$t玩家_RAW}】"), res;
@@ -55,7 +55,7 @@ ext.cmdMap['iw'] = cmdIw;
 
 const cmdIwd = seal.ext.newCmdItemInfo();
 cmdIwd.name = 'iwd';
-cmdIwd.help = '.iwd <n> <d> // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级、<n>与<d>之间的空格非！常！重！要！\n\n- 1~3：失败、没有完成预想而且有代价。\n- 4~5：混合成功、完成预想且有代价。\n- 6：成功、完成预想且没代价。\n- 6*n(6s)：完美成功、完成预想且额外获得■■■(无指定)。';
+cmdIwd.help = '.iwd <n> <d> // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级、<n>与<d>之间的空格非！常！重！要！';
 
 cmdIwd.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true), text = '', roller = seal.format(ctx,"【{$t玩家_RAW}】"), res;
@@ -70,7 +70,7 @@ cmdIwd.solve = (ctx, msg, cmdArgs) => {
         seal.replyToSender(ctx, msg, text);
         return ret;
     } else if (vsDice > 6 || goldDice > 6) {
-        text = '警告：单次检定的骰子数量不得超过六个、请检查是否忘记在数字之间添加空格。';
+        text = '警告：单次检定的骰子数量不得超过六个、请记得在数字之间添加空格。';
         seal.replyToSender(ctx, msg, text);
         return ret;
     }
