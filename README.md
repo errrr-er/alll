@@ -4,10 +4,12 @@
 > [!IMPORTANT]
 > TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充
 > 
-> 海豹系：`扩展功能`->`牌堆管理`->`更新`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example.png?raw=true)
+> 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
+> ![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example_pointout.png?raw=true)
+> ![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example_pointout.png?raw=true)
 
 > [!CAUTION]
-> - **other文件夹内容禁止使用**
+> - **禁止使用other文件夹里的内容**
 > - 其余使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 > - 发布地点有且仅有[github(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
 > - 仓内均为无原作授权的个人制作/整理&人机混翻、若内容有误/漏欢迎补充
