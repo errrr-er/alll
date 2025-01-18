@@ -15,11 +15,34 @@
     </table>
 </html>
 
-**强烈推荐使用[Github(在线版)](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)&[原版(指南)](https://shop.critrole.com/products/candela-obscura-quickstart-guide)&[原版(其它材料)](https://darringtonpress.com/candela/)搭配阅读**
+##
 
-**海豹系可搭载[光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)自制插件**
+<html>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td>
+                <!--左侧内容-->
+                <strong>非官方信息：<br/>
+                推荐使用官方指南&<a href="https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md" target="_blank">Github(在线版)</a>搭配阅读<br/>
+                海豹系可搭载<a href="https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js" target="_blank">光明世界D6池系统</a>自制插件</strong>
+            </td>
+            <td>
+                <!--右侧内容-->
+                <strong>官方信息:<br/>
+                <a href="https://shop.critrole.com/products/candela-obscura-quickstart-guide" target="_blank">快速入门指南</a><br/>
+                <a href="https://darringtonpress.com/candela/" target="_blank">角色表与其它相关材料</a><br/>
+                <a href="https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf" target="_blank">规则书电子版（$19.99）</a><br/>
+                <a href="https://shop.critrole.com/products/candela-obscura-core-rulebook" target="_blank">规则书实体&电子版（$39.99）</a>
+                </strong>
+            </td>
+        </tr>
+    </table>
+</html>
 
-**官方·完整规则书：[电子版($19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)、[实体&电子版($39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
+****
+
+**完整规则书：[完整规则书(电子版 $19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)
+[完整规则书(实体&电子版 $39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
@@ -36,7 +59,7 @@
     </table>
 </html>
 
-# 暗烛快速入门指南 ver0.0.0
+# 暗烛快速入门指南 ver0.0.2
 
 > 完整规则书将在2023年底发布<br/>
 > 点击浏览[角色表与其它相关材料](https://darringtonpress.com/candela/)<br/>
@@ -364,7 +387,7 @@ TA将更专注于行动而不是观察周围的环境。
 ```diff
 - 我只听说过这些事情，你见过吗？
 
-+ 见过，她在西边的悬崖上差点咬伤我的胳膊。我的办公室里还有一颗她的牙齿。
++ 见过，她在西部的悬崖上差点咬伤我的胳膊。我的办公室里还有一颗她的牙齿。
 ```
 
 ```
@@ -404,7 +427,7 @@ TA现在面临自己对死亡的恐惧，以及对曾经不畏危险的信心产
 
 悲痛状态中，TA在感到失控时会情绪爆发。
 
-同时，TA变得异常富有同情心。
+同时，TA变得异常富有同理心。
 
 经历这次事件之后，TA经常心神不宁。
 
@@ -451,17 +474,25 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
     - 不自然弯曲的手肘
     - 不断呼出的烟雾
 
-Candela Obscura’s fight against the corruption of supernatural forces is an allegory for the fight of good, everyday people against the corruption within the world. The mechanics of marks and scars within Candela Obscura are straightforward, but the legacy of mechanizing how people experience harm and disability within the horror genre is not. For each mark, but especially when taking a scar, it is of vital importance that players make choices that serve a nuanced narrative over basic rules.
+暗烛与超自然力量的斗争，象征着善良普通人与世界腐败之间的斗争。在暗烛中，标记与伤疤的机制虽然看似简单，但它们背后所蕴含的深意却远非表面那般浅显。这些机制不仅体现了恐怖类型中对人们经历伤害与残疾的外貌描绘，更通过每一个留下深刻伤疤的标记展现选择的重要性。这些选择不仅关乎游戏的基本规则，更在故事中发挥着至关重要的作用。
 
-The idea of “permanent scars” does not align with the modern understanding of healing trauma. But just like you, consider that your character cannot begin the process of tending to deep physical, mental, and even magickal trauma until they are in a safe place for an extended period of time. Over the course of a campaign, your circle should experience only brief moments of respite—this is a challenging game of horror. If you want to see your character heal from scars they’ve taken, you might choose to play a different character for some time and return to this one down the road when they’ve had a chance to recover. Work with your GM to decide which scars they could have healed during this time away.
+永久性伤疤的概念与现代治疗的理解不一致。但就像玩家自己一样，角色只有在处于安全的地方一段时间后才能开始治疗深层——肉体、精神、甚至魔法创伤。在整场战役过程中，环应该只会经历短暂的休息。如果想看到角色从所受的伤中痊愈，玩家可以选择扮演不同的角色一段时间，等他们(受伤的角色)有机会康复后再重新扮演回那个角色。玩家与GM一起决定在这段时间里角色可以治愈哪些伤疤。
 
-Above all: make choices that will facilitate the story, while keeping the well-being of your fellow players in mind. To best explore this world of magick and monsters, we urge you to build and play your characters prioritizing specificity, humanity, and compassion.
+最为重要的是：作出有利于故事发展的选择，同时关注其他玩家的体验。为了更好地探索这个充满魔法与怪物的世界，我们敦促玩家在创建/扮演角色时优先考虑特殊性、人性、同理心。
 
 # 暗烛世界观
 
 ## 法尔兰
+位于北方的哈尔国有一片名为法尔兰的肥沃谷地。十多年以来全球一直在努力应对被称为`寒颤`的严寒气候。许多国家因此面临生长季缩短和粮食短缺的困境。法尔兰的温和气候为哈尔的居民提供了丰富的食物。然而，这片土地及其丰富的资源也使其成为众多国家觊觎的目标。这里的人民不得紧张而疲惫地周旋在外敌入侵与准备迎接下一次袭击之间。
 
-### The Last Great War
+### 最后的大型战争
+在镜海的彼岸、跨越大裂谷，便是纽费尔人所称的`异乡`。尽管两国关系曾长期和睦，然而在1898年，这个遥远的强国却派遣军事力量驶入哈洛港，意图夺取法尔兰的农业资源。
+
+战争历时六年之久，法尔兰及人民经历了深重的苦难。尽管食物和其它自然资源帮助他们度过那段艰难岁月，但正是从纽费尔扩展至整个哈尔地区的电力发现与应用最终使得他们击退来自异乡的殖民势力。
+
+胜利之后，这座向来是移民中心的城市，突然间涌入了大量战争难民。尽管人口的激增对战时基础设施构成了巨大挑战，但由此而生的社会文化却将纽费尔转变为哈尔地区最具活力的城市之一。
+
+战后的三年里，国家逐渐恢复了元气。然而如同西部废墟一般，大家经此一役心理发生了永久性的变化。一部分人开始践行及时行乐的生活态度，而另一部分人则努力弥补因战争而失去的一整代人。
 
 ```diff
 + 与亚历山大核对
@@ -498,11 +529,52 @@ Above all: make choices that will facilitate the story, while keeping the well-b
 
 ### The Language of Hale
 
+Many of the words found within this text are English 
+translations of the Halen language. This is particularly 
+apparent in the names of places. You’ll notice that 
+many regions and districts are called exactly what they 
+are—for example, Westwreck is the land to the west 
+of Newfaire that was ravaged during the Last Great 
+War. Because the Fairelands were conquered so often 
+and remain so diversely populated, over time, Halen 
+citizens found it easier to speak frankly. Simpler names 
+ease translation in cities filled with speakers of diverse 
+languages. To some, the directness of Halen speech is 
+considered rude, while others find it trustworthy. 
+
+
+GMs are welcome to establish their own Halen words. 
+If you choose to go this route, we recommend that 
+you draw from your own language, and the history 
+and experiences that shaped it. When developing your 
+own vocabulary, remember that respect for real-world 
+languages and their speakers builds a safer playing 
+space and encourages bolder exploration of the topics 
+that your group wishes to explore.
+
 ### The City of Newfaire
 
+Newfaire is a sprawling and diverse city on the 
+western coast of the continent of Hale. Filled with 
+technology that resembles your own during the turn 
+of the nineteenth century, this civilization stands 
+upon the ruins of its ancient, alchemical predecessor 
+known as Oldfaire. This place embodies the perpetual 
+integration of the ancient and the innovative that 
+occurs within such cities as Edinburgh, Lima, New 
+York, Paris, and Istanbul. In Newfaire, citizens are 
+nestled within historical Brutalist architecture and 
+the recent evolution from Art Nouveau into Art Deco. 
+Here, modern development consumes arcane history, 
+and players grapple with the great forces that rule the 
+mundane world: the Ascendancy, the Primacy, and 
+the Periphery. 
 
-
-
+```
+The Graves
+South Soffit
+Oldpaire
+```
 
 
 
@@ -566,6 +638,8 @@ Question 谜团
 # 名词译
 Ezra Ashford 以斯拉·阿什福德
 
+Glass Sea 镜海
+
 Candela Obscura 暗烛
 
 Newfaire 纽费尔
@@ -619,3 +693,15 @@ Alexandra 亚历山大
 Revisionary 革新
 
 Sapphire 蓝宝石
+
+Hale 哈尔
+
+Shiver 寒颤
+
+Vastchasm 大裂谷
+
+Otherwhere 异乡
+
+Hallowharbor 哈洛港
+
+Westwreck 西部废墟

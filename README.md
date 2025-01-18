@@ -94,6 +94,8 @@ issues - https://github.com/errrr-er/alll/issues
     - [页内跳转&内置目录](https://blog.csdn.net/qq_38276669/article/details/86748936)（by L_MaGw）
     - [Github中高亮字体](https://github.com/guodongxiaren/README/issues/21)（by wilddylan）
 
+## HTML语法
+
 - 英
     - [Convert Markdown to HTML](https://markdowntohtml.com/)
 
@@ -105,6 +107,11 @@ issues - https://github.com/errrr-er/alll/issues
 
 - 英
     - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
+
+## PDF转换
+
+- 英
+    - [Convert/Edit/Organize](https://www.pdfforge.org/online/en)
 
 ## Candela Obscura
 
