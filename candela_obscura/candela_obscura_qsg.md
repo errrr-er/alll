@@ -17,7 +17,7 @@
 
 **！！！强烈推荐使用[Github(在线版)](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)&[原版(指南)](https://shop.critrole.com/products/candela-obscura-quickstart-guide)&[原版(其它材料)](https://darringtonpress.com/candela/)搭配阅读！！！**
 
-**海豹系可搭载[光明世界D6池系统]((https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js))插件**
+**海豹系可搭载[光明世界D6池系统(自制)](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)插件**
 
 **官方·完整规则书：[电子版($19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)、[实体&电子版($39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
 
