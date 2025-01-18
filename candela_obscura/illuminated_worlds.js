@@ -55,7 +55,7 @@ ext.cmdMap['iw'] = cmdIw;
 
 const cmdIwd = seal.ext.newCmdItemInfo();
 cmdIwd.name = 'iwd';
-cmdIwd.help = '.iwd <n> <d> // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自和总体最高成功等级、<n>与<d>之间的空格非！常！重！要！';
+cmdIwd.help = '.iwd <n> <d> // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自最高成功等级、<n>与<d>之间的空格非！常！重！要！';
 
 cmdIwd.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true), text = '', roller = seal.format(ctx,"【{$t玩家_RAW}】"), res;

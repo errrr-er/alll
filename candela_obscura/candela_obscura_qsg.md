@@ -15,8 +15,6 @@
     </table>
 </html>
 
-##
-
 <html>
     <table style="margin-left: auto; margin-right: auto;">
         <tr>
@@ -30,19 +28,15 @@
                 <!--右侧内容-->
                 <strong>官方信息:<br/>
                 <a href="https://shop.critrole.com/products/candela-obscura-quickstart-guide" target="_blank">快速入门指南</a><br/>
+                <a href="https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm" target="_blank">实况&相关视频</a><br/>
                 <a href="https://darringtonpress.com/candela/" target="_blank">角色表与其它相关材料</a><br/>
                 <a href="https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf" target="_blank">规则书电子版（$19.99）</a><br/>
-                <a href="https://shop.critrole.com/products/candela-obscura-core-rulebook" target="_blank">规则书实体&电子版（$39.99）</a>
+                <a href="https://shop.critrole.com/products/candela-obscura-core-rulebook" target="_blank">规则书实体&电子版（$39.99）</a><br/>
                 </strong>
             </td>
         </tr>
     </table>
 </html>
-
-****
-
-**完整规则书：[完整规则书(电子版 $19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)
-[完整规则书(实体&电子版 $39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
@@ -128,7 +122,7 @@ ORIGINAL CONCEPT CREATED BY: Taliesin Jaffe and Chris Lockey
 `非官方版省大流：及时沟通、互相信任、创立软/硬底线、合理安排休息时间`
 
 ## 如何使用本指南
-本文档中列出的信息旨在指导你们完成在暗烛的第一项课业。以下页面涵盖了创建角色时需要牢记的重要规则——只要符合就等同于遵守了世界的法则。如果是玩家，我们鼓励你们阅读第16页<sub>`回头打上跳转链接，如果没有就是忘了，麻烦反馈滴一下`</sub>。如果是主持人则请继续阅读以下课业范例。
+本文档中列出的信息旨在指导你们完成在暗烛的第一项课业。以下页面涵盖了创建角色时需要牢记的重要规则——只要符合就等同于遵守了世界的法则。如果是玩家，我们鼓励你们阅读第16页<sub>`回头翻到oup的时候打上跳转链接，如果没有就是忘了，麻烦反馈滴一下`</sub>。如果是主持人则请继续阅读以下课业范例。
 
 # 法则
 
@@ -598,9 +592,6 @@ Oldpaire
 +
 ```
 
-16<sub>`回头打上跳转链接，如果没有就是忘了，麻烦反馈滴一下`</sub>
-
-`非官方版提醒：`
 # 属性译
 - Nerve 体能
     - Move 行动
