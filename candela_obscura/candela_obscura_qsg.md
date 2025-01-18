@@ -30,7 +30,7 @@
             </td>
             <td>
                 <!--右侧内容-->
-                <img src="https://darringtonpress.com/wp-content/uploads/2023/10/CO_BookPromo_BothBooksOnDesk.png">
+                <img src="https://darringtonpress.com/wp-content/uploads/2023/10/CO_BookPromo_SpreadOnDesk.png">
             </td>
         </tr>
     </table>
