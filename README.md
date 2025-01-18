@@ -6,7 +6,6 @@
 > 
 > 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
 > ![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example_pointout.png?raw=true)
-> ![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example_pointout.png?raw=true)
 
 > [!CAUTION]
 > - **禁止使用other文件夹里的内容**
