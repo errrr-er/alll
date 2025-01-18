@@ -8,7 +8,7 @@
             </td>
             <td>
                 <!--右侧内容-->
-                更新时间：2025-01-16<br/>
+                更新时间：2025-01-18<br/>
                 阅前必读：<a href="https://github.com/errrr-er/alll/tree/main" target="_blank">README</a>
             </td>
         </tr>
@@ -20,6 +20,21 @@
 **海豹系可搭载[光明世界D6池系统]((https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js))插件**
 
 **官方·完整规则书：[电子版($19.99)](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)、[实体&电子版($39.99)](https://shop.critrole.com/products/candela-obscura-core-rulebook)**
+
+<html>
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td>
+                <!--左侧内容-->
+                <img src="https://darringtonpress.com/wp-content/uploads/2023/10/CO_BookPromo_BothBooksUpOnDesk.png">
+            </td>
+            <td>
+                <!--右侧内容-->
+                <img src="https://darringtonpress.com/wp-content/uploads/2023/10/CO_BookPromo_BothBooksOnDesk.png">
+            </td>
+        </tr>
+    </table>
+</html>
 
 # 暗烛快速入门指南 ver0.0.0
 
