@@ -53,7 +53,7 @@
     </table>
 </html>
 
-# 暗烛快速入门指南 ver0.0.2
+# 暗烛快速入门指南 ver0.0.3
 
 > 完整规则书将在2023年底发布<br/>
 > 点击浏览[角色表与其它相关材料](https://darringtonpress.com/candela/)<br/>
@@ -73,14 +73,14 @@ ILLUMINATED WORLDS GAME DESIGN: Stras Acimovic and Layla Adelman<br/>
 ORIGINAL CONCEPT CREATED BY: Taliesin Jaffe and Chris Lockey
 
 ```
-你上次感到真正的恐惧是什么时候？
+你上一次真正感到恐惧是什么时候？
 不仅是现在，在之后的将来，我也会一次次地询问：
 你的恐惧，是真实的吗？
 或者换句话说，它基于现实吗？
 它很可能是——
 吞没房子的烈火，
 痛击肠胃的拳头，
-刺向喉咙的刀子。
+刺向咽喉的刀子。
 但若它是一个捏造的东西呢——
 一只鸟模仿一个无辜者的尖叫，
 一个你房间里影子形成的轮廓，
@@ -430,7 +430,7 @@ TA现在面临自己对死亡的恐惧，以及对曾经不畏危险的信心产
 
 根据我们的经验，扮演“精神错乱”的角色既不符合道德，也不具备可行性。伤痕——尤其是脑部疤痕，应该被理解为一种变化，而不是一种削弱。
 
-赤疤痕可能看起来与此讨论无关，但玩家依旧应该以对待其它疤痕一样谨慎对待它们。此外，我们经常把我们不知道的东西——比如说来自其它文化的仪式、神圣的仪式、来自不属于我们传统的做法类比为`奇异`或`神秘`。在设计游戏中的魔法元素时，我们要求GM/玩家铭记同理心。每个游戏都是不同的，许多人可能不欣赏将神圣的符号、文物、仪式虚构化。
+赤疤痕可能看起来与此讨论无关，但玩家依旧应该以对待其它疤痕一样谨慎对待它们。此外，我们经常把我们不知道的东西——比如说来自其它文化的仪式、神圣的仪式、来自不属于我们传统的做法类比为`奇异`或`神秘`。在设计游戏中的魔法元素时，我们要求GM/玩家带上同理心。每个游戏都是不同的，许多人可能不欣赏将神圣的符号、文物、仪式虚构化。
 
 ```
 我的角色目睹了一些可怕的事情。
@@ -565,13 +565,241 @@ mundane world: the Ascendancy, the Primacy, and
 the Periphery. 
 
 ```
-The Graves
-South Soffit
-Oldpaire
+上层地带：The Graves
+中层地带：South Soffit
+底层地带：Oldpaire
 ```
 
+### The Triumvirate
+**The Ascendancy:** The official religion of the Fairelands. 
+They are led by the Ascendant, an official appointed 
+from within the faith. They have incredible influence 
+and, like every aspect of the Triumvirate powers, are 
+highly corrupt.
 
+**The Primacy:** The central government of the Fairelands, 
+led by an elected official: the Premier. Members of the 
+Chamber work beneath them to make decisions for 
+Newfaire and its surrounding districts. Though the 
+Primacy claims to be a distinct entity, they collaborate 
+closely with the other facets of the Triumvirate.
 
+**The Periphery:** The police force within the Fairelands. 
+In the wake of the Last Great War, the Periphery 
+inherited military technology that is incongruous with 
+the supposed goal of interfacing peacefully with Halen 
+citizens. The Captain of the Periphery is appointed by 
+the Premier, thus they are seen by many Fairens as the 
+violent hand of the government.
+
+### Oldfaire
+Beneath the city of Newfaire lies the mysterious 
+ruins of Oldfaire—a place that was once a thriving 
+civilization, but suffered a catastrophic collapse around 
+2,000 years ago. Perfectly positioned within the safety 
+of Hallowharbor and protected by the treacherous 
+Bridleborne Mountains, Oldfaire operated with 
+relative impunity in the ancient world. Led over time 
+by empresses and emperors as well as a council of 
+powerful alchemists, the entire city attempted to utilize 
+magick in the way Newfaire now uses electricity. 
+
+The ancient city was built around a central tower-vault, the Ziggurat, where the government of Oldfaire 
+attempted to house and utilize magickal phenomena. 
+But the alchemists were ill-equipped to manage bleed, 
+and the citizens were affected by the horrors that come 
+from prolonged exposure to the corrupting energy. 
+
+Halen lore suggests that human minds and bodies 
+transformed and society collapsed. The once powerful 
+city of stone fell when a local thinning was torn 
+asunder. It was this cataclysmic event that tore a rift in 
+the sea, known as the Vastchasam. From this seismic 
+shift, a wall of water swept forth and first drowned, 
+then buried Oldfaire, wiping its technology from the 
+face of the world.
+
+Today, beneath the modern metropolis of Newfaire, 
+within the tombs of its predecessor, magickal monsters, 
+alchemical discoveries, and mutated Oldfairen 
+citizens still lurk.
+
+```
+ON SYSTEMS OF POWER
+
+The systems of power within the Fairelands are 
+designed to provide a scaffolding for the very 
+human aspect of the horror genre. This is especially 
+evident in the Criminal specialty. This character 
+type is the foundation of a person who, for one 
+reason or another, finds themselves on the wrong 
+side of an unjust policing system. When you play 
+within Hale, craft both a hero and world that best 
+supports the monsters you wish to defeat.
+```
+
+### Lighthouses
+As Candela Obscura evolved through the ages, they 
+attempted to find and secure the effects of bleed. When 
+the investigators discovered thinnings, they built 
+lighthouses containing magickal astrolabes at each site 
+to hold back the deadly forces from beyond this realm.
+
+Both ancient and recently constructed, these bleed-infested lighthouses are found all across the Halen 
+landscape. For Candela Obscura members, they offer an 
+ominous reminder of the ramifications of failure. For 
+Newfaire citizens, they’ve become a pinnacle of local 
+mythos to warn the vulnerable away from danger.
+
+### Vastchasm
+This rift in the ocean lies between Newfaire and 
+Otherwhere. Torn into the sea during the fall of 
+Oldfaire, water now pours over all sides in a perpetual, 
+deadly fall. The terrifying currents around the chasm 
+destroy ships, and there is a Candela Obscura 
+lighthouse within its depths.
+
+### The Faraway
+Newfairens refer to any place that is not within the 
+Fairelands as “Faraway.” It is common to ask (politely, 
+or otherwise) if someone is “from Faire or Far?”
+
+### Otherwhere
+Newfairens use this name for the country across the sea. 
+When Otherwhere attempted to colonize the Fairelands 
+in the Last Great War three years ago, relations with 
+the people of this nation shattered. Though Hale was 
+able to hold off invading forces with the development 
+of electricity, this scientific development is spreading 
+across the world and has brought a new fear of war 
+down on the people of the Fairelands.
+
+### Districts of Newfaire
+The city of Newfaire is vibrant and sprawling. It is 
+divided into distinct districts, each with its own 
+personality and purpose within the community. 
+Some of these include:
+
+**Briar Green:** The most verdant area of the city. Because 
+it surrounds Briarbank College and contains the 
+majority of the city’s parks, Briar Green is filled with a 
+large number of flowering trees and affluent homes. 
+
+**The Eaves:** The exclusive, upscale community perched 
+atop the roofs of exposed Oldfairen buildings. This 
+district is exceedingly wealthy and exclusive. The Eaves 
+is also home to the residence of the Premier.
+
+**Hallowharbor:** The port of Newfaire. A trade hub 
+for the entire continent, Hallowharbor accounts for 
+a major portion of Newfaire’s wealth. Both Newfaire 
+and Oldfaire were built around the natural protections 
+afforded to this section of the Halen coast.
+
+**Nine Irons:** The home base for the Periphery within 
+Newfaire. A relatively small district, Nine Irons 
+contains the Periphery headquarters, prison, and the 
+hanging grounds known as Gallowgate. The Eastreek 
+Landfill has a small shantytown burgeoning around its 
+borders, placing some of the region’s most vulnerable 
+citizens within reach of its most violent force.
+
+**Red Lamp:** The arts district within the city and 
+Newfaire’s hub of legalized sex work. Most of the 
+establishments here sell one of three things: sex, 
+scarlet, or the chance to gamble your money away. Red 
+Lamp hosts both artists and scientists eager to buy 
+large workspaces at affordable prices. 
+
+**The Steel:** The industrial portion of the city. Here, the 
+greatest minds and strongest laborers are hard at work 
+modernizing Newfaire. The Steel accounts for a huge 
+portion of Newfaire’s recent expansion.
+
+**The Shriveline:** The home of the Ascendancy within 
+the Fairelands. In this district, religious members and 
+practitioners establish their homes to live alongside the 
+Church. The Shriveline is a popular tourist destination 
+due to its collection of historical buildings. 
+
+**The Sidle:** The middle-class sprawl of Newfaire. Home 
+to up-and-coming residential neighborhoods and 
+family-operated shops. Newly installed electric lights 
+illuminate streets, affording the Sidle a reputation for 
+being incredibly safe at night.
+
+**Silverslip:** The seat of the Primacy. This large district 
+reflects the opulence the government wishes to convey 
+to its citizens. Those who visit Silverslip will find 
+courthouses, law offices, and some of the wealthiest 
+businesses in the region. 
+
+**South Soffit:** The lower-class district built into the 
+Oldfairen ruins beneath the Eaves. The electric wires 
+that feed the district above run haphazardly through 
+South Soffit, making it a dangerous place to live and 
+work. This place is commonly occupied by blue-collar 
+workers and war refugees.
+
+**The Varnish:** The downtown portion of urbanized 
+Newfaire. Filled with expensive shops, bars, and 
+restaurants, the Varnish attracts tourists and wealthy 
+locals alike. This district also serves as the central hub 
+for the cable cars that stretch out across all of Newfaire.
+
+```diff
++ The Graves & South Soffit
+```
+
+### Landmarks of the Fairelands
+The Fairelands are incredibly diverse in their 
+geographic range, positioning the city of Newfaire 
+within reach of a variety of locales. Some of these 
+places include: 
+
+**Seasway:** The small, coastal village to the east of 
+Newfaire. Here, structures are built to bend in the fierce 
+wind that sweeps in from the ocean. The majority of 
+fishing families that live and work in Seasway have 
+occupied this stretch of coast for generations.
+
+**Tottergrass:** The rural land south of the city. In 
+Tottergrass, farmers raise livestock and cultivate a 
+variety of crops to great effect, despite the seasonal 
+limits across the world, post-Shiver. The Ascendancy 
+has a strong, decades-long foothold within this region.
+
+**The Verge:** The high cliffs on the western edge of Hale. 
+On a misty day, it appears as if the Verge marks the end 
+of the world and one might fall off this precipice into 
+the sky. At its highest point, a famous monolith covered 
+in Ancient Fairen writing looms over the sea.
+
+**The Bridleborne Mountains:** The mountain range 
+to the east of Newfaire. With the Scarlet Wood at its 
+base, this rocky terrain hosts insular communities 
+and is the home of the most powerful bootleggers 
+in Hale. The Periphery struggles to gain a foothold 
+within Bridleborne, and citizens only truly answer to 
+their own enforcers.
+
+**The Scarlet Wood:** The ancient forest famous for 
+its vibrant red foliage. The trees of the Scarlet Wood 
+produce a hallucinogenic sap, the alcohol and powder 
+from which is prohibited across the Fairelands. 
+Scarlet libations are the foundation of a thriving 
+bootlegging industry.
+
+**Westwreck:** The war-torn land to the west of Newfaire. 
+This area marks the last stand of the war before Hale 
+drove back Otherwhere with electric advancements. 
+Westwreck is well known for the proliferation of 
+landmines that still pose a threat, and travelers must 
+hire a local guide to lead them through.
+
+# 暗烛
+
+P.14
 
 <br/>
 <br/>
@@ -622,77 +850,42 @@ Oldpaire
     - Medium 灵媒师
     - Occultist 神秘学家
 
-Catalyst 理由
-
-Question 谜团
+- Catalyst 理由
+- Question 谜团
 
 # 名词译
-Ezra Ashford 以斯拉·阿什福德
-
-Glass Sea 镜海
-
-Candela Obscura 暗烛
-
-Newfaire 纽费尔
-
-Fairelands 法尔兰
-
-Varnish 瓦尔尼什
-
-Oldfaire 奥德法尔
-
-Tottergrass 托特格拉斯
-
-Flare 耀斑
-
-Thinnings 薄片
-
-Phenomenon 现象
-
-Bleed 赤
-
-Lightkeeper 守灯人
-
-Circle 环
-
-Assignment 课业
-
-Fourth Pharos 第四法洛斯
-
-Transdimensional Vault 跨维金库
-
-Gilded 镀金
-
-Field Guide 特质指南
-
-Illuminated Worlds 光明世界
-
-Mark 伤害标记
-
-Scars 伤痕
-
-Striuyn 斯特留因
-
-Strange 奇异
-
-Mystical 神秘
-
-Byron W. 拜伦 W.
-
-Alexandra 亚历山大
-
-Revisionary 革新
-
-Sapphire 蓝宝石
-
-Hale 哈尔
-
-Shiver 寒颤
-
-Vastchasm 大裂谷
-
-Otherwhere 异乡
-
-Hallowharbor 哈洛港
-
-Westwreck 西部废墟
+- Alexandra 亚历山大
+- Assignment 课业
+- Bleed 赤
+- Byron W. 拜伦 W.
+- Candela Obscura 暗烛
+- Circle 环
+- Ezra Ashford 以斯拉·阿什福德
+- Fairelands 法尔兰
+- Field Guide 特质指南
+- Flare 耀斑
+- Fourth Pharos 第四法洛斯
+- Gilded 镀金
+- Glass Sea 镜海
+- Hale 哈尔
+- Hallowharbor 哈洛港
+- Illuminated Worlds 光明世界
+- Lightkeeper 守灯人
+- Mark 伤害标记
+- Mystical 神秘
+- Newfaire 纽费尔
+- Oldfaire 奥德法尔
+- Otherwhere 异乡
+- Phenomenon 现象
+- Revisionary 革新
+- Sapphire 蓝宝石
+- Scars 伤痕
+- Shiver 寒颤
+- Strange 奇异
+- Striuyn 斯特留因
+- Thinnings 薄片
+- Tottergrass 托特格拉斯
+- Transdimensional Vault 跨维金库
+- Varnish 瓦尔尼什
+- Vastchasm 大裂谷
+- Westwreck 西部废墟
