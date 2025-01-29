@@ -11,19 +11,6 @@ update_Urls = [
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/personal_all.toml"
 ]
 
-# 鸣潮
-  # 鸣潮
-# COD
-  # cod
-# 缩写
-  # 缩写、abb
-# 海豹
-  # 手册、分离、猫回复、猫翻译、猫discord、猫zip
-# QQ
-  # 查询、共群
-# DND
-  # Bell
-
 
 
 ########
@@ -93,7 +80,7 @@ options = []
 cloud_extra = true
 dictinct = true
 options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/dice_setting/response_link/sealdice_guide.json",
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/dice_setting/response_link/sealdice_guide.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/dice_setting/response_link/sealdice_guide.json"
 ]
 
