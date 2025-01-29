@@ -4,11 +4,11 @@ author = "errrr-er"
 version = "0.0.0"
 license = "CC-BY-NC-ND 4.0"
 date = 2024-12-26
-update_date = 2025-01-17
+update_date = 2025-01-29
 desc = "https://github.com/errrr-er/personal"
 update_Urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/personal_all.toml",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/personal_all.toml"
+  "https:https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/personal_all.toml",
+  "https://ghp.ci/https:https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/personal_all.toml"
 ]
 
 
