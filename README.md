@@ -96,6 +96,9 @@ issues - https://github.com/errrr-er/alll/issues
 
 ## HTML语法
 
+- 中
+    - [快速入门&指南](https://docs.github.com/zh/pages)（by Github）
+
 - 英
     - [Convert Markdown to HTML](https://markdowntohtml.com/)
 
