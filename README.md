@@ -2,6 +2,10 @@
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/readme_lists_pointout.png?raw=true)
 
 > [!IMPORTANT]
+> 导入前须知&本体更新方式
+> 制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
+> - 利：修正后无需手动更新(除非修改toml本体)
+> - 弊：骰子无法连接(github/镜像) = 无法使用
 > TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充
 > 
 > 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
@@ -58,15 +62,6 @@ issues - https://github.com/errrr-er/alll/issues
 
 - TOML
     - 旧版手册呪文(三语对照)
-
-# TOML系列牌堆
-
-## 导入前须知&本体更新方式
-
-> [!IMPORTANT]
-> 制作原理为toml文件里不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
-> - 利：修正后无需手动更新(除非修改toml本体)
-> - 弊：骰子无法连接(github/镜像) = 无法使用
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
