@@ -102,6 +102,11 @@ issues - https://github.com/errrr-er/alll/issues
 - 英
     - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
 
+## VitePress语法
+- 中
+    - [VitePress手册](https://vitepress.dev/zh/)（by VitePress）
+    - [海豹手册源码](https://github.com/sealdice/sealdice-manual-next)（by海豹官方）
+
 ## PDF转换
 
 - 英
