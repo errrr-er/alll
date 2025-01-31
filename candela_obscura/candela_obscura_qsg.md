@@ -6,25 +6,10 @@
 | 官方 | 非官方 |
 | - | :-: |
 | [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | [光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)自制插件 |
-| col 2 is      |   centered    |
-| zebra stripes |   are neat    |
-
-
-
-           </td>
-            <td>
-                <!--右侧内容-->
-                <strong>官方信息:<br/>
-                <a href="" target="_blank">快速入门指南</a><br/>
-                <a href="https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm" target="_blank">实况&相关视频</a><br/>
-                <a href="https://darringtonpress.com/candela/" target="_blank">角色表与其它相关材料</a><br/>
-                <a href="https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf" target="_blank">规则书电子版（$19.99）</a><br/>
-                <a href="https://shop.critrole.com/products/candela-obscura-core-rulebook" target="_blank">规则书实体&电子版（$39.99）</a><br/>
-                </strong>
-            </td>
-        </tr>
-    </table>
-</html>
+| [实况&相关视频](https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm) |  |
+| [角色表与其它相关材料](https://darringtonpress.com/candela/) |  |
+| [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) |  |
+| [规则书实体&电子版（$39.99）](https://shop.critrole.com/products/candela-obscura-core-rulebook) |  |
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
