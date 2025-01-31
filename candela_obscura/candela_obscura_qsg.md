@@ -1,6 +1,6 @@
-|      时间     ||
+|      时间     |协议/必读|
 | ------------- | :-----------: |
-|创建：2023-06-23||
+|创建：2023-06-23|许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)|
 |更新：2025-01-18||
 
 | 非官方 |官方|
@@ -15,7 +15,7 @@
             <td>
                 <!--左侧内容-->
                 创建时间：2023-06-23<br/>
-                许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">CC-BY-NC-SA 4.0</a>
+                许可协议：<a href="" target="_blank">CC-BY-NC-SA 4.0</a>
             </td>
             <td>
                 <!--右侧内容-->
