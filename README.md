@@ -42,12 +42,12 @@ issues - https://github.com/errrr-er/alll/issues
 > [!CAUTION]
 > Markdown以适配Github阅读为主、使用其它软件阅读可能会出现不适配情况。
 > 
-> HTML主为使用转换器后的结果、格式不会全部适配、版本通常比Markdown落后。
+> VitePress格式会根据相关语法进行修改、指南版本通常比Markdown落后。
 
 - Markdown
-    - [最新版在线阅读、强烈推荐使用此版本](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
-- HTML
-    - [需下载后使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.html)
+    - [最新版、可在线or下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
+- VitePress
+    - [只能在线使用](https://errrr-er.github.io/Candela_QSG/)
 
 ## 光明世界D6池系统 ver1.1.0
 
@@ -105,7 +105,6 @@ issues - https://github.com/errrr-er/alll/issues
 ## VitePress语法
 - 中
     - [VitePress手册](https://vitepress.dev/zh/)（by VitePress）
-    - [海豹手册源码](https://github.com/sealdice/sealdice-manual-next)（by海豹官方）
 
 ## PDF转换
 
