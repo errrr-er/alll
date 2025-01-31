@@ -42,7 +42,7 @@ issues - https://github.com/errrr-er/alll/issues
 > [!CAUTION]
 > Markdown以适配Github阅读为主、使用其它软件阅读可能会出现不适配情况。
 > 
-> VitePress格式会根据相关语法进行修改、指南版本通常比Markdown落后。
+> VitePress根据相关语法进行修改、指南版本通常比Markdown落后。
 
 - Markdown
     - [最新版、可在线or下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
