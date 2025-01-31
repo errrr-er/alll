@@ -3,9 +3,9 @@
 // @author       裗浳(3612464276)
 // @version      1.1.0
 // @description  暗烛规则适用、出bug详见README(Github)进行反馈
-// @timestamp    1737160683
+// @timestamp    1738340466
 // 2025-01-17 00:00:40 UTC
-// @license      CC-BY-NC-SA 4.0
+// @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
 // @updateUrl    https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
