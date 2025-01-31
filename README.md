@@ -47,7 +47,7 @@ issues - https://github.com/errrr-er/alll/issues
 - Markdown
     - [最新版、可在线or下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
 - VitePress
-    - [只能在线使用](https://errrr-er.github.io/Candela_QSG/)
+    - [仅在线使用](https://errrr-er.github.io/Candela_QSG/)
 
 ## 光明世界D6池系统 ver1.1.0
 
