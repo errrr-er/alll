@@ -14,61 +14,6 @@ update_Urls = [
 
 
 ########
-# 鸣潮
-########
-
-
-
-["鸣潮"]
-export = true
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/wuthering.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/wuthering.json"
-]
-
-
-
-########
-# COD
-########
-
-
-
-["cod"]
-export = true
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/cod_story.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/cod_story.json"
-]
-
-
-
-########
-# 缩写
-########
-
-
-
-["缩写"]
-export = true
-aliases = ["abb"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/abbreviation.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/abbreviation.json"
-]
-
-
-
-########
 # 海豹
 ########
 
@@ -110,18 +55,6 @@ options_urls = [
 
 
 
-["m522"]
-export = true
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/dice_setting/response_link/sealdice_m522.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/dice_setting/response_link/sealdice_m522.json"
-]
-
-
-
 ["猫翻译"]
 export = true
 options = []
@@ -154,42 +87,4 @@ dictinct = true
 options_urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/dice_setting/response_link/sealdice_zip.json",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/other/cat_toml/dice_setting/response_link/sealdice_zip.json"
-]
-
-
-
-########
-# QQ
-########
-
-
-
-["查询"]
-export = true
-aliases = ["共群"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/qq_find.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/qq_find.json"
-]
-
-
-
-########
-# DND
-########
-
-
-
-["Bell"]
-export = true
-aliases = ["bell"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/dnd5e_bell.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/blob/main/other/cat_toml/links/dnd5e_bell.json"
 ]
