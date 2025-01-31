@@ -5,21 +5,13 @@
 
 | 官方 | 非官方 |
 | - | :-: |
-| [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | 光明世界D6池系统自制插件 |
+| [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | [光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)自制插件 |
 | col 2 is      |   centered    |
 | zebra stripes |   are neat    |
 
 
 
-<html>
-    <table style="margin-left: auto; margin-right: auto;">
-        <tr>
-            <td>
-                <!--左侧内容-->
-                <strong>非官方信息：<br/>
-                推荐使用官方指南&<a href="https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md" target="_blank">Github(在线版)</a>搭配阅读<br/>
-                海豹系可搭载<a href="https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js" target="_blank">光明世界D6池系统</a>自制插件</strong>
-            </td>
+           </td>
             <td>
                 <!--右侧内容-->
                 <strong>官方信息:<br/>
