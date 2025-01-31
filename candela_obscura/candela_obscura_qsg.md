@@ -1,11 +1,11 @@
-|时间|必读/协议|
+| 时间 | 必读/协议 |
 | - | :-: |
-|创建：2023-06-23|阅前必读：[README](https://github.com/errrr-er/alll/tree/main)|
-|更新：2025-01-18|许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)|
+| 创建：2023-06-23 | 阅前必读：[README](https://github.com/errrr-er/alll/tree/main) |
+| 更新：2025-01-18 | 许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) |
 
-| 非官方 |官方|
+| 官方 | 非官方 |
 | - | :-: |
-| col 3 is      | right-aligned |
+| [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | right-aligned |
 | col 2 is      |   centered    |
 | zebra stripes |   are neat    |
 
@@ -23,7 +23,7 @@
             <td>
                 <!--右侧内容-->
                 <strong>官方信息:<br/>
-                <a href="https://shop.critrole.com/products/candela-obscura-quickstart-guide" target="_blank">快速入门指南</a><br/>
+                <a href="" target="_blank">快速入门指南</a><br/>
                 <a href="https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm" target="_blank">实况&相关视频</a><br/>
                 <a href="https://darringtonpress.com/candela/" target="_blank">角色表与其它相关材料</a><br/>
                 <a href="https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf" target="_blank">规则书电子版（$19.99）</a><br/>
