@@ -1,9 +1,12 @@
 | 时间 | 必读/协议 | 官方 | 非官方 |
 | :-: | :-: | :-: | :-: |
 | 创建：2023-06-23 | 阅前必读：[README](https://github.com/errrr-er/alll/tree/main) | [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | [光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)自制插件 | [实况&相关视频](https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm) |  |
-| 更新：2025-01-18 | 许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) | [角色表与其它相关材料](https://darringtonpress.com/candela/) |  |
+| 更新：2025-01-31 | 译文协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) | [角色表与其它相关材料](https://darringtonpress.com/candela/) |  |
 |  |  | [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) |  |
 |  |  | [规则书实体&电子版（$39.99）](https://shop.critrole.com/products/candela-obscura-core-rulebook) |  |
+
+本文档为非官方翻译，仅供参考。原文件版权归原作者或版权所有者所有。翻译内容旨在帮助理解原文，并非官方认证或授权的翻译版本。翻译者不对任何由于使用本翻译文件而产生的直接或间接后果承担责任。<br/>
+如有任何疑问或需要原文件，建议使用顶端提供的官网。
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
@@ -20,7 +23,7 @@
     </table>
 </html>
 
-# 暗烛快速入门指南 ver0.0.3
+# 暗烛快速入门指南 ver0.0.4
 
 > 完整规则书将在2023年底发布<br/>
 > 点击浏览[角色表与其它相关材料](https://darringtonpress.com/candela/)<br/>
