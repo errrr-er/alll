@@ -5,7 +5,7 @@
 
 | 官方 | 非官方 |
 | - | :-: |
-| [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | right-aligned |
+| [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | 光明世界D6池系统自制插件 |
 | col 2 is      |   centered    |
 | zebra stripes |   are neat    |
 
