@@ -1,30 +1,15 @@
 |时间|协议/必读|
 | - | :-: |
 |创建：2023-06-23|许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)|
-|更新：2025-01-18||
+|更新：2025-01-18|阅前必读：[README](https://github.com/errrr-er/alll/tree/main)|
 
 | 非官方 |官方|
-| ------------- | :-----------: |
+| - | :-: |
 | col 3 is      | right-aligned |
 | col 2 is      |   centered    |
 | zebra stripes |   are neat    |
 
-<html>
-    <table style="margin-left: auto; margin-right: auto;">
-        <tr>
-            <td>
-                <!--左侧内容-->
-                创建时间：2023-06-23<br/>
-                许可协议：<a href="" target="_blank">CC-BY-NC-SA 4.0</a>
-            </td>
-            <td>
-                <!--右侧内容-->
-                更新时间：2025-01-18<br/>
-                阅前必读：<a href="https://github.com/errrr-er/alll/tree/main" target="_blank">README</a>
-            </td>
-        </tr>
-    </table>
-</html>
+
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
