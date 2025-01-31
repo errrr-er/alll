@@ -1,7 +1,7 @@
-|时间|协议/必读|
+|时间|必读/协议|
 | - | :-: |
-|创建：2023-06-23|许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)|
-|更新：2025-01-18|阅前必读：[README](https://github.com/errrr-er/alll/tree/main)|
+|创建：2023-06-23|阅前必读：[README](https://github.com/errrr-er/alll/tree/main)|
+|更新：2025-01-18|许可协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)|
 
 | 非官方 |官方|
 | - | :-: |
