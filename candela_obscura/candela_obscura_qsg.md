@@ -462,49 +462,19 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 + 与亚历山大核对
 ```
 
-<html>
-    <table style="margin-left: auto; margin-right: auto;">
-        <tr>
-            <td style="text-align: right;">
-                <!--左侧内容-->
-                【预约】<br/>
-                <br/>
-                姓名：<br/>
-                日期：<br/>
-                负责：<br/>
-                时间：<br/>
-                <br/>
-                纽费尔 瓦尔尼什
-            </td>
-            <td>
-                <!--右侧内容-->
-                革新·精致餐饮<br/>
-                <br/>
-                以斯拉·阿什福德<br/>
-                5号 隆冬<br/>
-                拜伦 W.<br/>
-                9:00 AM<br/>
-                <br/>
-                蓝宝石街道 6904
-            </td>
-        </tr>
-    </table>
-</html>
+|【预约】|革新·精致餐饮|
+|:-:|:-:|
+|||
+|姓名：|以斯拉·阿什福德|
+|日期：|5号 隆冬|
+|负责人：|拜伦 W.|
+|时间：|早晨 9:00|
+|||
+|纽费尔 瓦尔尼什|蓝宝石街道 6904|
 
-### The Language of Hale
+### 哈尔的语言
 
-Many of the words found within this text are English 
-translations of the Halen language. This is particularly 
-apparent in the names of places. You’ll notice that 
-many regions and districts are called exactly what they 
-are—for example, Westwreck is the land to the west 
-of Newfaire that was ravaged during the Last Great 
-War. Because the Fairelands were conquered so often 
-and remain so diversely populated, over time, Halen 
-citizens found it easier to speak frankly. Simpler names 
-ease translation in cities filled with speakers of diverse 
-languages. To some, the directness of Halen speech is 
-considered rude, while others find it trustworthy. 
+本文中的许多词汇皆为哈伦语的英文翻译，这在地名上表现得尤为明显。你会注意到许多地区与行政区的名称与它们的真实名称完全一致——例如，在最后的大型战争遭受重创的西部废墟位于纽费尔西部。由于法尔兰经常遭到占领，且人口结构非常多样化，哈伦公民随着时间的推移逐渐习惯直截了当地表达。简明的称呼使在充满不同语言使用者的城市中更容易翻译。对某些人来说，哈伦语的率直表达被认为是粗鲁的，而另一些人则认为它值得信赖。
 
 
 GMs are welcome to establish their own Halen words. 
@@ -791,3 +761,4 @@ P.14
 ```
 
 # 词译
+详见网页版
