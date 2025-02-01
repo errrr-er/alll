@@ -80,11 +80,11 @@ ORIGINAL CONCEPT CREATED BY: Taliesin Jaffe and Chris Lockey
 ## 介绍
 暗烛(Candela Obscura)是一款恐怖向桌面角色扮演游戏(TTRPG)，神秘调查员们追捕入侵世界的超自然力量，而这个世界与现实世界极为相似。
 
-它同时还是一个超自然秘密社团的名字，它负责保护庞大的世纪之交的纽费尔——那是一个建立在古老、堕落文明废墟之上的城市。在那里，仍然充斥着强大的魔法残余。
+它同时还是一个超自然秘密社团的名字，它负责保护庞大的世纪之交的新费尔——那是一个建立在古老、堕落文明废墟之上的城市。在那里，仍然充斥着强大的魔法残余。
 
 尽管几个世纪以来我们一直在努力收集关于这种魔法的知识，但对这些现象的理解仍然有限。我们知道它们来自于一个超越我们自己的领域，但它们想要什么、为什么它们在这里——这对我们来说仍然是个谜。
 
-作为这个组织的一员，你们将穿越法尔兰的广阔土地、在瓦尔尼什拥挤的市中心街道上面对深不可测的恐怖、在托特格拉斯的玉米田里调查奇怪的失踪事件、甚至深入到奥德法尔不断蠕动的地下废墟，帮助我们阻止这些强大到将世界撕裂的超自然生物。
+作为这个组织的一员，你们将穿越费尔兰的广阔土地、在瓦尔尼什拥挤的市中心街道上面对深不可测的恐怖、在托特格拉斯的玉米田里调查奇怪的失踪事件、甚至深入到旧费尔不断蠕动的地下废墟，帮助我们阻止这些强大到将世界撕裂的超自然生物。
 
 ## 内容警告&建立游玩边界线
 虽然在你们的冒险中，恐怖的强度完全取决于你们自己，但对于任何开始与暗烛合作的任务的人来说，感受到恐惧是不足为奇的情况。身体恐怖、人类残忍、暴力、死亡和超自然的元素经常出现在我们的调查员面前，提醒各位这些都是我们的职责所在。<br/>
@@ -100,7 +100,7 @@ ORIGINAL CONCEPT CREATED BY: Taliesin Jaffe and Chris Lockey
 - 暗烛发生在一个类似于现实的世界。普通公民既不知道、也不会相信魔力或其效果。
 - 在这个领域和其它领域之间有一道屏障，被称为`耀斑`。
 - 有一些地方，耀斑比较脆弱，这种情况被称为`薄片`。这些薄片允许玄学(也就是所谓的魔力)渗入至内部。
-- 法尔兰的神话、传说和民间故事都是为了解释真实的魔法现象。
+- 费尔兰的神话、传说和民间故事都是为了解释真实的魔法现象。
 
 ## 魔法法则
 - 魔法可以注入世俗的物体、地方或生命，并且永久地改变它们。如果薄片足够大，来自外界的生物也可能通过。任何受魔力影响或来自另一领域的东西都被称为`现象`。
@@ -446,15 +446,15 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 
 # 暗烛世界观
 
-## 法尔兰
-位于北方的哈尔国有一片名为法尔兰的肥沃谷地。十多年以来全球一直在努力应对被称为`寒颤`的严寒气候。许多国家因此面临生长季缩短和粮食短缺的困境。法尔兰的温和气候为哈尔的居民提供了丰富的食物。然而，这片土地及其丰富的资源也使其成为众多国家觊觎的目标。这里的人民不得紧张而疲惫地周旋在外敌入侵与准备迎接下一次袭击之间。
+## 费尔兰
+位于北方的哈尔国有一片名为费尔兰的肥沃谷地。十多年以来全球一直在努力应对被称为`寒颤`的严寒气候。许多国家因此面临生长季缩短和粮食短缺的困境。费尔兰的温和气候为哈尔的居民提供了丰富的食物。然而，这片土地及其丰富的资源也使其成为众多国家觊觎的目标。这里的人民不得紧张而疲惫地周旋在外敌入侵与准备迎接下一次袭击之间。
 
 ### 最后的大型战争
-在镜海的彼岸、跨越大裂谷，便是纽费尔人所称的`异乡`。尽管两国关系曾长期和睦，然而在1898年，这个遥远的强国却派遣军事力量驶入哈洛港，意图夺取法尔兰的农业资源。
+在镜海的彼岸、跨越大裂谷，便是新费尔人所称的`异乡`。尽管两国关系曾长期和睦，然而在1898年，这个遥远的强国却派遣军事力量驶入哈洛港，意图夺取费尔兰的农业资源。
 
-战争历时六年之久，法尔兰及人民经历了深重的苦难。尽管食物和其它自然资源帮助他们度过那段艰难岁月，但正是从纽费尔扩展至整个哈尔地区的电力发现与应用最终使得他们击退来自异乡的殖民势力。
+战争历时六年之久，费尔兰及人民经历了深重的苦难。尽管食物和其它自然资源帮助他们度过那段艰难岁月，但正是从新费尔扩展至整个哈尔地区的电力发现与应用最终使得他们击退来自异乡的殖民势力。
 
-胜利之后，这座向来是移民中心的城市，突然间涌入了大量战争难民。尽管人口的激增对战时基础设施构成了巨大挑战，但由此而生的社会文化却将纽费尔转变为哈尔地区最具活力的城市之一。
+胜利之后，这座向来是移民中心的城市，突然间涌入了大量战争难民。尽管人口的激增对战时基础设施构成了巨大挑战，但由此而生的社会文化却将新费尔转变为哈尔地区最具活力的城市之一。
 
 战后的三年里，国家逐渐恢复了元气。然而如同西部废墟一般，大家经此一役心理发生了永久性的变化。一部分人开始践行及时行乐的生活态度，而另一部分人则努力弥补因战争而失去的一整代人。
 
@@ -470,67 +470,34 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 |负责人：|拜伦 W.|
 |时间：|早晨 9:00|
 |||
-|纽费尔 瓦尔尼什|蓝宝石街道 6904|
+|新费尔 瓦尔尼什|蓝宝石街道 6904|
 
 ### 哈尔的语言
 
-本文中的许多词汇皆为哈伦语的英文翻译，这在地名上表现得尤为明显。你会注意到许多地区与行政区的名称与它们的真实名称完全一致——例如，在最后的大型战争遭受重创的西部废墟位于纽费尔西部。由于法尔兰经常遭到占领，且人口结构非常多样化，哈伦公民随着时间的推移逐渐习惯直截了当地表达。简明的称呼使在充满不同语言使用者的城市中更容易翻译。对某些人来说，哈伦语的率直表达被认为是粗鲁的，而另一些人则认为它值得信赖。
+本文中的许多词汇皆为哈伦语的英文翻译，这在地名上表现得尤为明显。你会注意到许多地区与行政区的名称与它们的真实名称完全一致——例如，在最后的大型战争遭受重创的西部废墟位于新费尔西部。由于费尔兰经常遭到占领，且人口结构非常多样化，哈伦公民随着时间的推移逐渐习惯直截了当地表达。简明的称呼使在充满不同语言使用者的城市中更容易翻译。对某些人来说，哈伦语的率直表达被认为是粗鲁的，而另一些人则认为它值得信赖。
 
+欢迎GM自创哈伦词汇。如果选择采用这种方式，我们建议从自身语言以及塑造了它的历史和经历中汲取灵感。请记住，在创造词汇时，尊重现实世界的语言以及帮助营造一个更安全的游戏环境，并鼓励更大胆地探索团队希望探讨的主题。
 
-GMs are welcome to establish their own Halen words. 
-If you choose to go this route, we recommend that 
-you draw from your own language, and the history 
-and experiences that shaped it. When developing your 
-own vocabulary, remember that respect for real-world 
-languages and their speakers builds a safer playing 
-space and encourages bolder exploration of the topics 
-that your group wishes to explore.
+### 新费尔城
 
-### The City of Newfaire
-
-Newfaire is a sprawling and diverse city on the 
-western coast of the continent of Hale. Filled with 
-technology that resembles your own during the turn 
-of the nineteenth century, this civilization stands 
-upon the ruins of its ancient, alchemical predecessor 
-known as Oldfaire. This place embodies the perpetual 
-integration of the ancient and the innovative that 
-occurs within such cities as Edinburgh, Lima, New 
-York, Paris, and Istanbul. In Newfaire, citizens are 
-nestled within historical Brutalist architecture and 
-the recent evolution from Art Nouveau into Art Deco. 
-Here, modern development consumes arcane history, 
-and players grapple with the great forces that rule the 
-mundane world: the Ascendancy, the Primacy, and 
-the Periphery. 
+新费尔位于哈尔大陆西海岸的一个庞大且多元化的城市，它矗立在其古老的炼金术前身旧费尔的废墟之上。这里充满了与十九世纪相似的技术，这个地方体现了类似于爱丁堡、利马、纽约、巴黎、伊斯坦布尔等城市中历史与现代的融合。在新费尔，市民们栖息在历史悠久的野兽派建筑中，也见证着新艺术运动演变为装饰艺术。在这里，现代发展吞噬着神秘的历史，玩家们与统治世俗世界(上层、首要、边缘)的强大力量周旋。
 
 ```
-上层地带：The Graves
-中层地带：South Soffit
-底层地带：Oldpaire
+外层 → 格雷夫斯
+中层 → 南拱腹
+底层 → 旧费尔
 ```
 
-### The Triumvirate
-**The Ascendancy:** The official religion of the Fairelands. 
-They are led by the Ascendant, an official appointed 
-from within the faith. They have incredible influence 
-and, like every aspect of the Triumvirate powers, are 
-highly corrupt.
+### 三权分立
 
-**The Primacy:** The central government of the Fairelands, 
-led by an elected official: the Premier. Members of the 
-Chamber work beneath them to make decisions for 
-Newfaire and its surrounding districts. Though the 
-Primacy claims to be a distinct entity, they collaborate 
-closely with the other facets of the Triumvirate.
+#### 上层
+费尔兰官方宗教。由教派内部任命的官员(统治者)领导。他们拥有巨大的影响力，并且和三权的其它两立一样极度腐败。
 
-**The Periphery:** The police force within the Fairelands. 
-In the wake of the Last Great War, the Periphery 
-inherited military technology that is incongruous with 
-the supposed goal of interfacing peacefully with Halen 
-citizens. The Captain of the Periphery is appointed by 
-the Premier, thus they are seen by many Fairens as the 
-violent hand of the government.
+#### 首要
+费尔兰中央政府，由民选官员(首相)领导。议院成员在此之下工作，为新费尔及其周边地区决策。尽管首相声称自己是一个独立的分立，但背后依旧与三权的其它两立密切合作。
+
+#### 边缘
+费尔兰警察部队。在最后的大型战争之后继承了与哈伦公民和平观念相悖的军事技术。队长由首相任命，因此部队被许多公民视为政府的暴力手段。
 
 ### Oldfaire
 Beneath the city of Newfaire lies the mysterious 
