@@ -761,4 +761,4 @@ P.14
 ```
 
 # 词译
-详见网页版
+详见[网页版](https://errrr-er.github.io/Candela_QSG/)
