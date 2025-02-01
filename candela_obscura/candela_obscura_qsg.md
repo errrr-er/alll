@@ -5,8 +5,8 @@
 |  |  | [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) |  |
 |  |  | [规则书实体&电子版（$39.99）](https://shop.critrole.com/products/candela-obscura-core-rulebook) |  |
 
-本文档为非官方翻译，仅供参考。原文件版权归原作者或版权所有者所有。翻译内容旨在帮助理解原文，并非官方认证或授权的翻译版本。翻译者不对任何由于使用本翻译文件而产生的直接或间接后果承担责任。<br/>
-如有任何疑问或需要原文件，建议使用顶端提供的官网。
+本文档为非官方翻译，仅供参考。原文件版权归原作者或版权所有者所有。翻译内容旨在帮助理解原文，并非官方认证或授权的翻译版本。<br/>
+译者不对任何由于使用本翻译文件而产生的直接或间接后果承担责任。
 
 <html>
     <table style="margin-left: auto; margin-right: auto;">
@@ -791,10 +791,7 @@ P.14
 ```
 
 # 属性译
-- Nerve 体能
-    - Move 行动
-    - Strike 斗殴
-    - Control 控制
+
 - Cunning 交集
     - Read 阅读 
     - Sway 话术
@@ -804,21 +801,6 @@ P.14
     - Focus 专注
     - Sense 感知
 
-- Face 假面
-    - Journalist 记者
-    - Magician 魔术师
-- Muscle 力量
-    - Explorer 探险家
-    - Soldier 士兵
-- Scholar 学者
-    - Doctor 医生
-    - Professor 教授
-- Slink 隐秘
-    - Criminal 罪犯
-    - Detective 侦探
-- Weird 奇异
-    - Medium 灵媒师
-    - Occultist 神秘学家
 
 - Catalyst 理由
 - Question 谜团
