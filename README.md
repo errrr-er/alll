@@ -42,12 +42,12 @@ issues - https://github.com/errrr-er/alll/issues
 > [!CAUTION]
 > Markdown以适配Github阅读为主、使用其它软件阅读可能会出现不适配情况。
 > 
-> VitePress根据相关语法进行修改、指南版本通常比Markdown落后。
+> VitePress根据相关语法进行修改。
 
 - Markdown
-    - [最新版、可在线or下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
+    - [在线/下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)
 - VitePress
-    - [仅在线使用](https://errrr-er.github.io/Candela_QSG/)
+    - [在线使用(观感最好)](https://errrr-er.github.io/Candela_QSG/)
 
 ## 光明世界D6池系统 ver1.1.0
 
