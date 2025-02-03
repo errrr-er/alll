@@ -1,5 +1,5 @@
 > [!TIP]
-> 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/readme_lists_pointout.png?raw=true)
+> 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists_pointout.png?raw=true)
 
 > [!IMPORTANT]
 > - 导入前须知&本体更新方式
@@ -8,7 +8,7 @@
 >         - 弊：骰子无法连接(github/镜像) = 无法使用
 > - TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
-> ![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/sealdice_update_example_pointout.png?raw=true)
+> ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice_update_example_pointout.png?raw=true)
 
 > [!CAUTION]
 > - **请勿使用other文件夹里的内容**
@@ -75,7 +75,7 @@ issues - https://github.com/errrr-er/alll/issues
 - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
 - 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或详见下图
 
-![](https://github.com/errrr-er/alll/blob/main/other/readme_pic/magic_all.png?raw=true)
+![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
 # 参考资料
 

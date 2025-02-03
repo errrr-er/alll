@@ -600,7 +600,7 @@ locals alike. This district also serves as the central hub
 for the cable cars that stretch out across all of Newfaire.
 
 ```diff
-+ The Graves & South Soffit
++ 格雷夫斯 & 南拱腹
 ```
 
 ### 费尔兰的地标
