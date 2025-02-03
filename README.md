@@ -79,39 +79,6 @@ issues - https://github.com/errrr-er/alll/issues
 
 # 参考资料
 
-## Markdown语法
-
-- 中
-    - [字体颜色](https://blog.csdn.net/heimu24/article/details/81189700)（by heimu24）
-    - [左右分栏](https://blog.csdn.net/zhangyu4863/article/details/83504008)（by zhangyu4863）
-    - [基本撰写和格式语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)（by Github）
-    - [页内跳转&内置目录](https://blog.csdn.net/qq_38276669/article/details/86748936)（by L_MaGw）
-    - [Github中高亮字体](https://github.com/guodongxiaren/README/issues/21)（by wilddylan）
-
-- 英
-    - [Table Generator](https://www.tablesgenerator.com/markdown_tables)
-
-## Json语法
-
-- 中
-    - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
-    - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
-
-- 英
-    - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
-
-## VitePress语法
-- 中
-    - [VitePress手册](https://vitepress.dev/zh/)（by VitePress）
-
-- 英
-    - [在线预览&编辑](https://stackblitz.com/)（by StackBlitz）
-
-## PDF转换
-
-- 英
-    - [Convert/Edit/Organize](https://www.pdfforge.org/online/en)
-
 ## Candela Obscura
 
 - 英
@@ -136,3 +103,38 @@ https://www.reddit.com/r/criticalrole/comments/152ix2y/no_spoilers_looking_for_a
     - [Grimoire Spells](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells)（by MI2wiki）
     - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
     - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
+
+# 文件语法
+
+## Markdown
+
+- 中
+    - [字体颜色](https://blog.csdn.net/heimu24/article/details/81189700)（by heimu24）
+    - [左右分栏](https://blog.csdn.net/zhangyu4863/article/details/83504008)（by zhangyu4863）
+    - [基本撰写和格式语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)（by Github）
+    - [页内跳转&内置目录](https://blog.csdn.net/qq_38276669/article/details/86748936)（by L_MaGw）
+    - [Github中高亮字体](https://github.com/guodongxiaren/README/issues/21)（by wilddylan）
+
+- 英
+    - [Table Generator](https://www.tablesgenerator.com/markdown_tables)
+
+## Json
+
+- 中
+    - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
+    - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
+
+- 英
+    - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
+
+## VitePress
+- 中
+    - [VitePress手册](https://vitepress.dev/zh/)（by VitePress）
+
+- 英
+    - [在线预览&编辑](https://stackblitz.com/)（by StackBlitz）
+
+## PDF
+
+- 英
+    - [Convert/Edit/Organize](https://www.pdfforge.org/online/en)

@@ -416,27 +416,14 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 
 以下是一些疤痕的示例/参考：
 
-- 身体
-    - 失去手臂
-    - 跛脚
-    - 脊椎骨断裂
-    - 抽搐
-    - 失聪
-    - 烧伤
-- 大脑
-    - 身处在喧嚣的人群中时感到不安
-    - 畏惧深水
-    - 充满内疚
-    - 不自信
-    - 正义感爆棚
-    - 对高分贝声音敏感
-- 赤：
-    - 不眨眼的眼皮
-    - 吸血鬼般的牙齿
-    - 紫色的血
-    - 更修长的手指
-    - 不自然弯曲的手肘
-    - 不断呼出的烟雾
+|身体|大脑|赤|
+|:-:|:-:|:-:|
+|失去手臂|身处在喧嚣的人群中时感到不安|不眨眼的眼皮|
+|跛脚|畏惧深水|吸血鬼般的牙齿|
+|脊椎骨断裂|充满内疚|紫色的鲜血
+|抽搐|不自信|更修长的手指
+|失聪|正义感爆棚|不自然弯曲的手肘
+|烧伤|对高分贝声音敏感|不断呼出的烟雾
 
 暗烛与超自然力量的斗争，象征着善良普通人与世界腐败之间的斗争。在暗烛中，标记与伤疤的机制虽然看似简单，但它们背后所蕴含的深意却远非表面那般浅显。这些机制不仅体现了恐怖类型中对人们经历伤害与残疾的外貌描绘，更通过每一个留下深刻伤疤的标记展现选择的重要性。这些选择不仅关乎游戏的基本规则，更在故事中发挥着至关重要的作用。
 
@@ -499,79 +486,37 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 #### 边缘
 费尔兰警察部队。在最后的大型战争之后继承了与哈伦公民和平观念相悖的军事技术。队长由首相任命，因此部队被许多公民视为政府的暴力手段。
 
-### Oldfaire
-Beneath the city of Newfaire lies the mysterious 
-ruins of Oldfaire—a place that was once a thriving 
-civilization, but suffered a catastrophic collapse around 
-2,000 years ago. Perfectly positioned within the safety 
-of Hallowharbor and protected by the treacherous 
-Bridleborne Mountains, Oldfaire operated with 
-relative impunity in the ancient world. Led over time 
-by empresses and emperors as well as a council of 
-powerful alchemists, the entire city attempted to utilize 
-magick in the way Newfaire now uses electricity. 
+### 旧费尔
+在新费尔城底下，埋藏着在两千年前曾经繁荣神秘的旧费尔遗址。旧费尔地理位置得天独厚，位于安定的哈洛港内，同时还被险峻的布里德博恩山脉所保护。在古代世界中，旧费尔一度运作得相对无忧。这个城市历代由女皇、皇帝以及强大的炼金术士委员会领导，整个城市试图以新费尔利用电力般方式使用魔法。 
 
-The ancient city was built around a central tower-vault, the Ziggurat, where the government of Oldfaire 
-attempted to house and utilize magickal phenomena. 
-But the alchemists were ill-equipped to manage bleed, 
-and the citizens were affected by the horrors that come 
-from prolonged exposure to the corrupting energy. 
+这座古城围绕着中央金字形神塔所建造，旧费尔政府试图在这里容纳并利用魔法现象。但炼金术士足够的能力来应对赤，长期暴露在这种能量中的市民因此受到影响。
 
-Halen lore suggests that human minds and bodies 
-transformed and society collapsed. The once powerful 
-city of stone fell when a local thinning was torn 
-asunder. It was this cataclysmic event that tore a rift in 
-the sea, known as the Vastchasam. From this seismic 
-shift, a wall of water swept forth and first drowned, 
-then buried Oldfaire, wiping its technology from the 
-face of the world.
+哈伦传说表明，人类的心智和身体发生了变异，社会因此崩溃。曾经强大的石城因薄片被撕裂而倒塌，这场灾难性事件撕裂了大海，形成大裂谷。随着这场地震般的剧变，一堵水墙席卷而来，先是淹没了旧费尔，然后将那里的技术从世界上彻底埋葬。
 
-Today, beneath the modern metropolis of Newfaire, 
-within the tombs of its predecessor, magickal monsters, 
-alchemical discoveries, and mutated Oldfairen 
-citizens still lurk.
+
+如今，在现代大都市新费尔底下旧费尔遗址中，魔法怪物、炼金术发现、变异的旧费尔市民仍然潜伏其中。
 
 ```
-ON SYSTEMS OF POWER
+论权力体系
 
-The systems of power within the Fairelands are 
-designed to provide a scaffolding for the very 
-human aspect of the horror genre. This is especially 
-evident in the Criminal specialty. This character 
-type is the foundation of a person who, for one 
-reason or another, finds themselves on the wrong 
-side of an unjust policing system. When you play 
-within Hale, craft both a hero and world that best 
-supports the monsters you wish to defeat.
+费尔兰的权力体系旨在为恐怖类型中人性的体现提供支撑。这一点在“罪犯”这一职业特色中尤为明显。其基础是一个因种种原因，站在了不公正警察体系对立面的个体。当在哈尔中游戏时，要创造一个既能支持击败怪物，又能支撑起英雄与世界的故事。
 ```
 
-### Lighthouses
-As Candela Obscura evolved through the ages, they 
-attempted to find and secure the effects of bleed. When 
-the investigators discovered thinnings, they built 
-lighthouses containing magickal astrolabes at each site 
-to hold back the deadly forces from beyond this realm.
+### 灯塔
+随着暗烛经历时代变迁，他们尝试寻找并控制赤所带来的影响。当调查员发现薄片后，他们在每个地点建立了内有魔法天文仪的灯塔，以抵御来自这个世界之外的致命力量。
 
-Both ancient and recently constructed, these bleed-infested lighthouses are found all across the Halen 
-landscape. For Candela Obscura members, they offer an 
-ominous reminder of the ramifications of failure. For 
-Newfaire citizens, they’ve become a pinnacle of local 
-mythos to warn the vulnerable away from danger.
+这些染上赤的灯塔遍布哈伦地区，对于暗烛的成员来说，它们提醒着人们失败的后果。对于新费尔的公民来说，它们已经成为神话中让弱势群体远离危险的警示。
 
-### Vastchasm
-This rift in the ocean lies between Newfaire and 
-Otherwhere. Torn into the sea during the fall of 
-Oldfaire, water now pours over all sides in a perpetual, 
-deadly fall. The terrifying currents around the chasm 
-destroy ships, and there is a Candela Obscura 
-lighthouse within its depths.
+### 大裂谷
+大裂谷位于新费尔与异乡之间，它是在旧费尔陨落时撕裂而成的，从此变为一个永无休止的
+致命瀑布。裂谷周围的恐怖洋流摧毁着船只。而在其深处，有一座暗烛的灯塔。
 
-### The Faraway
+### 远乡
 Newfairens refer to any place that is not within the 
 Fairelands as “Faraway.” It is common to ask (politely, 
 or otherwise) if someone is “from Faire or Far?”
 
-### Otherwhere
+### 异乡
 Newfairens use this name for the country across the sea. 
 When Otherwhere attempted to colonize the Fairelands 
 in the Last Great War three years ago, relations with 
@@ -581,7 +526,7 @@ of electricity, this scientific development is spreading
 across the world and has brought a new fear of war 
 down on the people of the Fairelands.
 
-### Districts of Newfaire
+### 新费尔的地区
 The city of Newfaire is vibrant and sprawling. It is 
 divided into distinct districts, each with its own 
 personality and purpose within the community. 
@@ -658,7 +603,7 @@ for the cable cars that stretch out across all of Newfaire.
 + The Graves & South Soffit
 ```
 
-### Landmarks of the Fairelands
+### 费尔兰的地标
 The Fairelands are incredibly diverse in their 
 geographic range, positioning the city of Newfaire 
 within reach of a variety of locales. Some of these 
