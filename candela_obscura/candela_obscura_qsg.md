@@ -512,9 +512,7 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 致命瀑布。裂谷周围的恐怖洋流摧毁着船只。而在其深处，有一座暗烛的灯塔。
 
 ### 远乡
-Newfairens refer to any place that is not within the 
-Fairelands as “Faraway.” It is common to ask (politely, 
-or otherwise) if someone is “from Faire or Far?”
+新费尔人将任何不在费尔兰内的地区称为“异乡”。无论是礼貌询问还是直截了当，人们常常会问对方“来自费尔还是异乡？”
 
 ### 异乡
 Newfairens use this name for the country across the sea. 
