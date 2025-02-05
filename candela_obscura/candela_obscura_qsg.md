@@ -23,7 +23,7 @@
     </table>
 </html>
 
-# 暗烛快速入门指南 ver0.0.4
+# 暗烛快速入门指南 ver0.0.5
 
 > 完整规则书将在2023年底发布<br/>
 > 点击浏览[角色表与其它相关材料](https://darringtonpress.com/candela/)<br/>
