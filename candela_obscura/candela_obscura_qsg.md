@@ -470,7 +470,7 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 新费尔位于哈尔大陆西海岸的一个庞大且多元化的城市，它矗立在其古老的炼金术前身旧费尔的废墟之上。这里充满了与十九世纪相似的技术，这个地方体现了类似于爱丁堡、利马、纽约、巴黎、伊斯坦布尔等城市中历史与现代的融合。在新费尔，市民们栖息在历史悠久的野兽派建筑中，也见证着新艺术运动演变为装饰艺术。在这里，现代发展吞噬着神秘的历史，玩家们与统治世俗世界(上层、首要、边缘)的强大力量周旋。
 
 ```
-外层 → 格雷夫斯
+外层 → 云顶豪庭
 中层 → 南拱腹
 底层 → 旧费尔
 ```
@@ -493,7 +493,6 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 
 哈伦传说表明，人类的心智和身体发生了变异，社会因此崩溃。曾经强大的石城因薄片被撕裂而倒塌，这场灾难性事件撕裂了大海，形成大裂谷。随着这场地震般的剧变，一堵水墙席卷而来，先是淹没了旧费尔，然后将那里的技术从世界上彻底埋葬。
 
-
 如今，在现代大都市新费尔底下旧费尔遗址中，魔法怪物、炼金术发现、变异的旧费尔市民仍然潜伏其中。
 
 ```
@@ -515,90 +514,46 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 新费尔人将任何不在费尔兰内的地区称为“异乡”。无论是礼貌询问还是直截了当，人们常常会问对方“来自费尔还是异乡？”
 
 ### 异乡
-Newfairens use this name for the country across the sea. 
-When Otherwhere attempted to colonize the Fairelands 
-in the Last Great War three years ago, relations with 
-the people of this nation shattered. Though Hale was 
-able to hold off invading forces with the development 
-of electricity, this scientific development is spreading 
-across the world and has brought a new fear of war 
-down on the people of the Fairelands.
+新费尔人用这个名字来称呼隔海相望的国家。三年前的大战中异乡试图对费尔兰进行殖民时，从此与这个国家人民的关系破裂。虽然哈尔利用电力技术的发展成功击退了入侵者，但这项科学发展正在世界各地传播，从而给费尔兰人民带来了对战争的新恐惧。
 
 ### 新费尔的地区
-The city of Newfaire is vibrant and sprawling. It is 
-divided into distinct districts, each with its own 
-personality and purpose within the community. 
-Some of these include:
+新费尔城是一座充满活力、广袤无垠的大都市。该城被巧妙地划分为若干独特的区域，每个区域都独具特色，承载着特定的社区功能与使命：
 
-**Briar Green:** The most verdant area of the city. Because 
-it surrounds Briarbank College and contains the 
-majority of the city’s parks, Briar Green is filled with a 
-large number of flowering trees and affluent homes. 
+#### 荆棘绿洲
+城市中最为郁郁葱葱的区域。荆棘绿洲环绕着荆岸学院，并拥有该市大部分的公园，这里遍布着繁花似锦的树木和豪华的住宅。
 
-**The Eaves:** The exclusive, upscale community perched 
-atop the roofs of exposed Oldfairen buildings. This 
-district is exceedingly wealthy and exclusive. The Eaves 
-is also home to the residence of the Premier.
+#### 云顶豪庭
+此地乃旧费尔人建筑群之巅的奢华社区，独占鳌头，富甲一方。此区极为富裕且排他，云顶豪庭亦是总理官邸之所在。
 
-**Hallowharbor:** The port of Newfaire. A trade hub 
-for the entire continent, Hallowharbor accounts for 
-a major portion of Newfaire’s wealth. Both Newfaire 
-and Oldfaire were built around the natural protections 
-afforded to this section of the Halen coast.
+#### 哈洛港
+新费尔的港口，作为整个大陆的贸易枢纽，贡献了新费尔财富的重要部分。新费尔和旧费尔均建在哈伦岸这一自然保护区周围。
 
-**Nine Irons:** The home base for the Periphery within 
-Newfaire. A relatively small district, Nine Irons 
-contains the Periphery headquarters, prison, and the 
-hanging grounds known as Gallowgate. The Eastreek 
-Landfill has a small shantytown burgeoning around its 
-borders, placing some of the region’s most vulnerable 
-citizens within reach of its most violent force.
+#### 九铁镇
+新费尔外围区的总部设于此地。尽管规模不大，九铁镇却集中了外围区的总部、监狱以及著名的绞刑场——加洛门。东溪垃圾填埋场的边缘，一个小型贫民窟逐渐形成，将该地区最为脆弱的居民置于暴力威胁的阴影之下。
 
-**Red Lamp:** The arts district within the city and 
-Newfaire’s hub of legalized sex work. Most of the 
-establishments here sell one of three things: sex, 
-scarlet, or the chance to gamble your money away. Red 
-Lamp hosts both artists and scientists eager to buy 
-large workspaces at affordable prices. 
+#### 红灯区
+新费尔市的艺术心脏，亦是合法化性服务的繁华中心。此地众多场所，或提供性服务，或出售红色商品，或供人一掷千金。红灯区不仅汇聚了众多艺术家与科学家，他们在此地寻觅价格亲民的宽敞工作室，亦为这片区域增添了别样的活力。
 
-**The Steel:** The industrial portion of the city. Here, the 
-greatest minds and strongest laborers are hard at work 
-modernizing Newfaire. The Steel accounts for a huge 
-portion of Newfaire’s recent expansion.
+#### 钢铁区
+城市的工业命脉所在。这里，最杰出的才智与最强壮的劳动力正齐心协力，推动新费尔迈入现代化的崭新时代。钢铁区在新费尔的迅速扩张中占据了举足轻重的地位。
 
-**The Shriveline:** The home of the Ascendancy within 
-the Fairelands. In this district, religious members and 
-practitioners establish their homes to live alongside the 
-Church. The Shriveline is a popular tourist destination 
-due to its collection of historical buildings. 
+#### 圣殿区
+费尔兰中显赫家族的府邸。在此地，宗教成员与修行者与教会比邻而居，共同生活。圣殿区因其丰富的历史建筑群而成为备受青睐的旅游目的地。
 
-**The Sidle:** The middle-class sprawl of Newfaire. Home 
-to up-and-coming residential neighborhoods and 
-family-operated shops. Newly installed electric lights 
-illuminate streets, affording the Sidle a reputation for 
-being incredibly safe at night.
+#### 塞德尔区
+新费尔中产阶级的聚居之地。此地不仅有新兴的居民区，还有众多家庭经营的商店。新近安装的电灯照亮了街道，使塞德尔区在夜间以极高的安全性著称。
 
-**Silverslip:** The seat of the Primacy. This large district 
-reflects the opulence the government wishes to convey 
-to its citizens. Those who visit Silverslip will find 
-courthouses, law offices, and some of the wealthiest 
-businesses in the region. 
+#### 银步区
+行政中心的所在地。此地广阔，彰显了政府希望向民众展示的奢华与繁荣。到访银润区的人们将发现这里汇聚了法院、律师事务所及区域内最为成功的商业机构。
 
-**South Soffit:** The lower-class district built into the 
-Oldfairen ruins beneath the Eaves. The electric wires 
-that feed the district above run haphazardly through 
-South Soffit, making it a dangerous place to live and 
-work. This place is commonly occupied by blue-collar 
-workers and war refugees.
+#### 南拱腹
+坐落于云顶豪庭之下的旧费尔废墟中，是下层居民的聚居地。为上层区域供电的电线在此地错综复杂地交织，使得南拱腹成为了一个危险的居住与工作场所。此地通常为蓝领工人与战争难民所居住。
 
-**The Varnish:** The downtown portion of urbanized 
-Newfaire. Filled with expensive shops, bars, and 
-restaurants, the Varnish attracts tourists and wealthy 
-locals alike. This district also serves as the central hub 
-for the cable cars that stretch out across all of Newfaire.
+#### 瓦尔尼什
+新费尔的繁华市中心，汇聚了众多高端商店、酒吧与餐厅，成为游客与当地名流的聚集地。此外，该区还是贯穿整个新费尔的缆车网络的核心枢纽。
 
 ```diff
-+ 格雷夫斯 & 南拱腹
++ 云顶豪庭 & 南拱腹
 ```
 
 ### 费尔兰的地标
