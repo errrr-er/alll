@@ -1,4 +1,4 @@
-# Discord【准备中】
+# Discord
 
 - Py
     - Bot
