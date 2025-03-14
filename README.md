@@ -1,7 +1,3 @@
-- [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
-- [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
-- [Discord](https://github.com/errrr-er/alll/tree/main/discord)
-
 > [!TIP]
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists_pointout.png?raw=true)
 
@@ -31,3 +27,8 @@ issues - https://github.com/errrr-er/alll/issues
 以上方式选其一即可、反馈时请带上相关截图!!!
 
 <sub>*提issues需要登录github</sub>
+
+# README
+- [Discord](https://github.com/errrr-er/alll/tree/main/discord)
+- [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
+- [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
