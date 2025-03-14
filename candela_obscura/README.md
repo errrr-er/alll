@@ -26,3 +26,44 @@
     - `.iwd <n> <d>` // 掷出nD6(标准骰)与dD6(镀金骰)并汇报双方各自最高成功等级
         - `<n>`与`<d>`之间的空格**非！常！重！要！**
 - [illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)下载后导入即可
+
+# 参考资料
+
+## Candela Obscura
+
+- 英
+    - [完整手册(电子版) $19.99](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf)（by Critical Role）
+    - [完整手册(实体&电子版) $39.99](https://shop.critrole.com/products/candela-obscura-core-rulebook)（by Critical Role）
+    - [Candela Obscura Quickstart Guide](https://shop.critrole.com/products/candela-obscura-quickstart-guide)（by Critical Role）
+
+https://www.reddit.com/r/criticalrole/comments/152ix2y/no_spoilers_looking_for_a_printer_friendly/
+
+# 文件语法
+
+## Markdown
+
+- 中
+    - [字体颜色](https://blog.csdn.net/heimu24/article/details/81189700)（by heimu24）
+    - [左右分栏](https://blog.csdn.net/zhangyu4863/article/details/83504008)（by zhangyu4863）
+    - [基本撰写和格式语法](https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)（by Github）
+    - [页内跳转&内置目录](https://blog.csdn.net/qq_38276669/article/details/86748936)（by L_MaGw）
+    - [Github中高亮字体](https://github.com/guodongxiaren/README/issues/21)（by wilddylan）
+
+- 英
+    - [Table Generator](https://www.tablesgenerator.com/markdown_tables)
+
+## Json
+
+- 中
+    - [海豹手册](https://dice.weizaima.com/manual/)（by海豹官方）
+    - [北欧奇谭规则检定](https://github.com/sealdice/javascript)（by浣熊旅記）
+
+- 英
+    - [Epoch & Unix Timestamp Conversion Tools](https://www.epochconverter.com/)
+
+## VitePress
+- 中
+    - [VitePress手册](https://vitepress.dev/zh/)（by VitePress）
+
+- 英
+    - [在线预览&编辑](https://stackblitz.com/)（by StackBlitz）
