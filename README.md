@@ -28,7 +28,16 @@ issues - https://github.com/errrr-er/alll/issues
 
 <sub>*提issues需要登录github</sub>
 
-# Candela Obscura【准备中、优先级II】
+# Discord【准备中】
+
+- Py
+    - Bot
+
+## Bot ver0.0.0
+
+制作中
+
+# Candela Obscura【准备中】
 
 - Markdown/HTML
     - 暗烛快速入门指南
@@ -57,7 +66,7 @@ issues - https://github.com/errrr-er/alll/issues
         - `<n>`与`<d>`之间的空格**非！常！重！要！**
 - [illuminated_worlds.js](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)下载后导入即可
 
-# Call of Cthulhu【三语对照目录制作中、内容准备中、优先级I】
+# Call of Cthulhu【准备中】
 
 - TOML
     - 旧版手册呪文(三语对照)
