@@ -1,4 +1,4 @@
-# Call of Cthulhu【准备中】
+# Call of Cthulhu
 
 - TOML
     - 旧版手册呪文(三语对照)
