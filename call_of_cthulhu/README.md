@@ -10,7 +10,7 @@
 >   - 因抽取词无法隐藏会导致底部**超级、超级长！！！**
 >   - 折叠请使用删除键右侧的小箭头(一次性、无法永久折叠)
 > - `.draw keys`过长会报错、抽取词将在`.draw mhelp`时提供图片版(详见下图)
-> - 尽量提供中日英释义、但大部分将会是`日名+中英释义`
+> - 尽量提供`中日英释义`、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
 
 - 只需下载本体、即[z_magic_all.toml](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu/magic/CJE/z_magic_all.toml)
