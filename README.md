@@ -1,4 +1,3 @@
-# README
 - [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
 - [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
 - [Discord](https://github.com/errrr-er/alll/tree/main/discord)
