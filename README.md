@@ -31,6 +31,5 @@ qq群 - 2150284119
 <sub>*提issues需要登录github</sub>
 
 # README
-- [Discord](https://github.com/errrr-er/alll/tree/main/discord)
 - [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
 - [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
