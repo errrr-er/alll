@@ -22,13 +22,9 @@
 
 提问箱 - https://box.n3ko.cc/_/no_reply31cat
 
-issues - https://github.com/errrr-er/alll/issues
-
 qq群 - 2150284119
 
 以上方式选其一即可、反馈时请带上相关截图!!!
-
-<sub>*提issues需要登录github</sub>
 
 # README
 - [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
