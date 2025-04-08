@@ -14,7 +14,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = [""]
+options = ["\n\n或使用https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
 
 # 月光舞鞋
@@ -44,12 +44,12 @@ options = ["[图:./_pic.deck/pic/幽暗之门/幽暗预设1.png]\f[图:./_pic.de
 
 
 # 你就刚刚好
-[""]
+["风铃草"]
 export = true
-options = [""]
+options = ["[图:./_pic.deck/pic/你就刚刚好/风铃草.png]"]
 
 
-#夏洛克福尔摩斯症候群
-[""]
+#夏洛克·福尔摩斯症候群
+["福尔摩斯注意事项"]
 export = true
-options = [""]
+options = ["[图:./_pic.deck/pic/福尔摩斯/福1.png]\f[图:./_pic.deck/pic/福尔摩斯/福2.png]\f[图:./_pic.deck/pic/福尔摩斯/福3.png]\f[图:./_pic.deck/pic/福尔摩斯/福4.png]"]
