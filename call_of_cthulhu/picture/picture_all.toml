@@ -14,7 +14,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["\n\n或使用https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["小心剧透\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
 
 # 月光舞鞋
@@ -122,16 +122,51 @@ export = true
 options = ["[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从展示3.png]\f[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从展示3-1.png]"]
 
 # 幽暗之门·血浓于水
-[""]
+["血浓地图1"]
 export = true
-options = [""]
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓地图1.png]"]
+
+["血浓地图2"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓地图2.png]"]
+
+["血浓展示1"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示1.png]"]
+
+["血浓展示2"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示2.png]"]
+
+["血浓展示3-1"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示3-1.png]"]
+
+["血浓展示3-2"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示3-2.png]"]
+
+["血浓展示4"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示4.png]"]
+
+["血浓展示5"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示5.png]"]
+
+["血浓展示6"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示6.png]"]
 
 # 幽暗之门·了却幻梦
-[""]
+["幻梦地图1"]
 export = true
-options = [""]
+options = ["[图:./_pic.deck/pic/幽暗之门/了却幻梦/幻梦地图1.png]"]
 
-[图:./_pic.deck/pic/幽暗之门/.png]
+["幻梦展示1"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/了却幻梦/幻梦展示1.png]"]
+
 
 # 你就刚刚好
 ["风铃草"]
@@ -143,8 +178,3 @@ options = ["[图:./_pic.deck/pic/你就刚刚好/风铃草.png]"]
 ["福尔摩斯事前公开"]
 export = true
 options = ["[图:./_pic.deck/pic/福尔摩斯/福1.png]\f[图:./_pic.deck/pic/福尔摩斯/福2.png]\f[图:./_pic.deck/pic/福尔摩斯/福3.png]\f[图:./_pic.deck/pic/福尔摩斯/福4.png]"]
-
-
-[""]
-export = true
-options = [""]
