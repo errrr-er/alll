@@ -20,21 +20,21 @@ options = ["小心剧透\nhttps://github.com/errrr-er/alll/blob/main/call_of_cth
 # 月光舞鞋
 ["西大附中"]
 export = true
-options = ["[图:./_pic.deck/pic/月光舞鞋/西大附中.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]"]
 
 
 # 望君长留
 ["爱良"]
 export = true
-options = ["[图:./_pic.deck/pic/望君长留/爱良.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%9B%E5%90%9B%E9%95%BF%E7%95%99/%E7%88%B1%E8%89%AF.png?raw=true,type=show]"]
 
 ["釜村徹"]
 export = true
-options = ["[图:./_pic.deck/pic/望君长留/釜村徹.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%9B%E5%90%9B%E9%95%BF%E7%95%99/%E9%87%9C%E6%9D%91%E5%BE%B9.png?raw=true,type=show]"]
 
 ["釜村一家"]
 export = true
-options = ["[图:./_pic.deck/pic/望君长留/釜村一家.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%9B%E5%90%9B%E9%95%BF%E7%95%99/%E9%87%9C%E6%9D%91%E4%B8%80%E5%AE%B6.png?raw=true,type=show]"]
 
 
 # 幽暗之门·预设卡
