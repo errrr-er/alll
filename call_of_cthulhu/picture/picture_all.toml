@@ -50,6 +50,6 @@ options = ["[图:./_pic.deck/pic/你就刚刚好/风铃草.png]"]
 
 
 #夏洛克·福尔摩斯症候群
-["福尔摩斯注意事项"]
+["福尔摩斯事前公开"]
 export = true
 options = ["[图:./_pic.deck/pic/福尔摩斯/福1.png]\f[图:./_pic.deck/pic/福尔摩斯/福2.png]\f[图:./_pic.deck/pic/福尔摩斯/福3.png]\f[图:./_pic.deck/pic/福尔摩斯/福4.png]"]
