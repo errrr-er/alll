@@ -2,6 +2,7 @@
 
 - TOML
     - 旧版手册呪文(三语对照)
+    - 模组资料(图片)
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
@@ -17,6 +18,8 @@
 - 仅想看对应名称可下载[excel](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu/magic/CJE/%E6%97%A7%E7%89%88%E6%89%8B%E5%86%8C%E5%91%AA%E6%96%87_%E4%BB%85%E5%90%8D%E7%A7%B0.xlsx)或详见下图
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
+
+## 模组资料(图片) ver1.0.0
 
 # 参考资料
 
@@ -35,3 +38,11 @@
     - [Grimoire Spells](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells)（by MI2wiki）
     - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
     - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
+
+## 模组资料(图片) ver1.0.0
+- 图
+    - 月光舞鞋
+    - 望君长留
+    - 幽暗之门
+    - 你就刚刚好
+    - 夏洛克·福尔摩斯症候群
