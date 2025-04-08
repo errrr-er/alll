@@ -19,7 +19,7 @@ options = [""]
 
 ["西大附中"]
 export = true
-options = ["[图:./pic/月光舞鞋/西大附中.png]"]
+options = ["[图:./_pic.deck/pic/月光舞鞋/西大附中.png]"]
 
 
 [""]
