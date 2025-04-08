@@ -14,14 +14,42 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = [""]
+options = ["\n\n或使用https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
 
+# 月光舞鞋
 ["西大附中"]
 export = true
 options = ["[图:./_pic.deck/pic/月光舞鞋/西大附中.png]"]
 
 
-[""]
+# 望君长留
+["爱良"]
 export = true
-options = [""]
+options = ["[图:./_pic.deck/pic/望君长留/爱良.png]"]
+
+["釜村徹"]
+export = true
+options = ["[图:./_pic.deck/pic/望君长留/釜村徹.png]"]
+
+["釜村一家"]
+export = true
+options = ["[图:./_pic.deck/pic/望君长留/釜村一家.png]"]
+
+
+# 幽暗之门
+["幽暗预设"]
+export = true
+options = ["[图:./_pic.deck/pic/幽暗之门/幽暗预设1.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设2.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设3.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设4.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设5.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设6.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设7.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设8.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设9.png]\f[图:./_pic.deck/pic/幽暗之门/幽暗预设10.png]"]
+
+
+# 你就刚刚好
+["风铃草"]
+export = true
+options = ["[图:./_pic.deck/pic/你就刚刚好/风铃草.png]"]
+
+
+#夏洛克·福尔摩斯症候群
+["福尔摩斯事前公开"]
+export = true
+options = ["[图:./_pic.deck/pic/福尔摩斯/福1.png]\f[图:./_pic.deck/pic/福尔摩斯/福2.png]\f[图:./_pic.deck/pic/福尔摩斯/福3.png]\f[图:./_pic.deck/pic/福尔摩斯/福4.png]"]
