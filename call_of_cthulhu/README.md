@@ -20,6 +20,10 @@
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
 ## 模组资料(图片) ver1.0.0
+
+> [!CAUTION]
+> - 手动整理、若有任何遗漏欢迎补充
+
 - 目录
     - 月光舞鞋
         - 西大附中.png
