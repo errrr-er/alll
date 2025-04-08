@@ -14,33 +14,14 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/magic.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/magic.json"
-]
+options = [""]
 
 
-
+["西大附中"]
+export = true
+options = ["[图:./pic/月光舞鞋/西大附中.jpg]"]
 
 
 [""]
 export = true
-aliases = ["","",""]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/all/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/all/.json"
-]
-
-
-
-
-
+options = [""]
