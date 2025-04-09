@@ -19,7 +19,7 @@ options = ["目录内容有剧透请谨慎查看，图片版为pichelp\n文字�
 ["pichelp"]
 export = true
 visible = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/phelp.png?raw=true,type=show]"]
+options = ["还添加了活神之手的两个“活神禁书/活神笔记”[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/phelp.png?raw=true,type=show]"]
 
 
 # 月光舞鞋
