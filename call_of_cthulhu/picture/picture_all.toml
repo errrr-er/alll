@@ -1,6 +1,6 @@
 [meta]
 title = "模组资料(图片)"
-author = "3987681449 若图片更新,记得在release下载最新版本对应deck包"
+author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
@@ -103,7 +103,7 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 ["哈索展示3"]
 export = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA3.png?raw=true,type=show]\f丹弗斯疗养院主管为患者建立环形露天剧场\n\n丹弗斯州立疗养院的工人们于今日动工建立一处供病人们娱乐的小型环形露天剧场。当地居民同时也可以在这个邻近疗养院蓄水池，如田园牧歌般的地方获得一处安静的谈话空间、诗歌朗诵以及音乐表演的净土。\n疗养院的住户，同时也是工头的安德鲁·麦克布莱德（AndrewMacBride），补充说他的团队在打碎并移除一块在山坡上剧场建址处，有着疑似艺术标志的大型花岗岩板的时候遇到了一些困难。疗养院的前主管，威廉·夏恩将这块石板放在了哈索恩山的山坡上。据说，夏恩医生，这位漫游世界的旅行者，相信这块花岗岩板会是疗养院好运的象征。\n当地的居民向为精神病人建立一处剧场的开支提出了质疑。然而，伯格医生坚持建立剧场，他解释说：“重要的是，我们必须牢记应该为所有的居民们谋求福祉，尤其是那些被认为过于脆弱或是那些不能成为更大世界潮流一部分而受到伤害的人们。"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA3.png?raw=true,type=show]\f丹弗斯疗养院主管为患者建立环形露天剧场\n\n丹弗斯州立疗养院的工人们于今日动工建立一处供病人们娱乐的小型环形露天剧场。当地居民同时也可以在这个邻近疗养院蓄水池，如田园牧歌般的地方获得一处安静的谈话空间、诗歌朗诵以及音乐表演的净土。\n疗养院的住户，同时也是工头的安德鲁·麦克布莱德（Andrew MacBride），补充说他的团队在打碎并移除一块在山坡上剧场建址处，有着疑似艺术标志的大型花岗岩板的时候遇到了一些困难。疗养院的前主管，威廉·夏恩将这块石板放在了哈索恩山的山坡上。据说，夏恩医生，这位漫游世界的旅行者，相信这块花岗岩板会是疗养院好运的象征。\n当地的居民向为精神病人建立一处剧场的开支提出了质疑。然而，伯格医生坚持建立剧场，他解释说：“重要的是，我们必须牢记应该为所有的居民们谋求福祉，尤其是那些被认为过于脆弱或是那些不能成为更大世界潮流一部分而受到伤害的人们。"]
 
 ["哈索展示4"]
 export = true
@@ -157,19 +157,23 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 ["血浓展示3"]
 export = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA3-1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA3-2.png?raw=true,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA3-1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA3-2.png?raw=true,type=show]\f这只生物和小猫的体型差不多，有着相似的骨骼结构。但它实际上经常利用后腿站立，由此它的前肢或者瘦长的手臂能够向前悬荡着。四只脚的爪子仿佛是未收回的猫爪和人手的结合。从他复杂的骨骼结构以及肌肉组织在它的后背发育成长出了如蝙蝠似的翅膀。它的头使人联想起马，但它嘴里凶残锐利的尖牙，以及眼后长有倒刺的角又驱散疏远着这份相似。它的皮肤如爬虫类而显得粗糙，却没有鳞片。换而言之，他们的皮肤有着鳞片的质感却并非是鳞片。"]
 
 ["血浓展示4"]
 export = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA4.png?raw=true,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA4.png?raw=true,type=show]\f埃塞克斯郡的迷信故事及民俗知识~76页\n\n根据许多当地的报道，臭名昭著的伊普斯维奇沼泽巫师经常出没于埃塞克斯郡长达几个世纪。关于他存在的证据可以追溯至最早十八世纪时的一篇报道，报道将当时失踪的人和丢失的牧牛同沼泽巫师联系到了一起。这些报道均包含一处相似见解，那就是沼泽巫师驾驭着一头恶魔。这头挥动着巨大翅膀的恶魔在不止一处场合被报道过。\n传说随着时间流逝变得更加迥异古怪。比如据称沼泽巫师拥有一只穿梭于夜空的龙形战马，它还经常引起当地市民的恐慌。\n下方的插图是一位名叫安德鲁·勒曼的年轻艺术家用作证言的诠释，他宣称曾在1906年的一夜目睹沼泽巫师驾驭着那只野兽飞越盐沼。"]
 
 ["血浓展示5"]
 export = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA5.png?raw=true,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA5.png?raw=true,type=show]\f召唤并驾驭来自星辰宇宙的战马\n\n于毕宿五之星升于地平线之上时施行仪式。\n这只生物十分有用，可当作忠诚的保镖，服从的士兵，冷酷的刺客，机警的信使以及无前的战马。将其召唤后，他将臣服于你，不会违逆你的心志。在仪式的最后一步要尤为当心在意，若无束缚，它几乎是只骇人的野兽。\n需要半年大的小牛或是未满十四的处女。取他们的血液涂满石圣坛直至显露出深红，直到圣歌受到回应。\n\nIck ctha,yahn neh! Byakhee ccha meh,da nai,s'nommas nai'rb!Yaahn neh,ick ctha.\n\n每吟诵完一遍圣歌后，吹奏彻响你的笛三次。\n稍过一会儿，天际之门打开，一只承你契约的星之战马将降落于你身前。其身上仍带有来自彼岸的寒霜。\n当它听见恳求者的呼唤，他将应许你的声音。然而这会挑战他控制自己天性的权利。\n若在这一步失败，你的生命之火必然熄灭。用沾染着祭品鲜血的匕首，首先指向这只生物，其次指向大地，预示着你对他的掌控。将你全身的意志融于你对他的役使。\n如果这只野兽意识到恳求者的羸弱，他将返身消失于星辰之中。\n\n用你最响的声音咏叹。\nIck ctha, byahee! Ctha meh.\n\n如若成功，这只野兽将降俯于你，听候你的差遣。\n在拜亚基完成了命令之后，让呼唤者将它送回的习俗是：举起你的骨匕在这只生物面前划X字。这预示着它的任务已经完成了。随后将匕首的刃尖端沿着你的前臂，从肘至腕拉一道口子，让三滴血落于大地之上并咏叹着\nYaahn neh, byakhee! Ctha meh.\n它满意于重获自由，这只生物将会自行离开。"]
 
 ["血浓展示6"]
 export = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA6.png?raw=true,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA6.png?raw=true,type=show]\f这只生物有时会不听指挥，但无伤大雅。\n通过诵读三次圣诗来送回它：Ick ctha yaahn neh,byakhee!Ctha meh.\n三次过后，用短刀从左眼下端至左下颚划出一道口，从伤口处接十三滴血于碗中。\n将血一口含在嘴里，并喷在这只生物的脸上，同时喊道：Ctha meh！\n它会被强制遣送回星辰之中。"]
+
+["血浓尸体"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B0%B8%E4%BD%93.png?raw=true,type=show]"]
 
 # 幽暗之门·了却幻梦
 ["幻梦地图1"]
