@@ -14,7 +14,12 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["\f小心剧透\n文字版目录可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["目录内容有剧透请谨慎查看，图片版为pichelp\n文字版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+
+["pichelp"]
+export = true
+visible = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/phelp.png?raw=true,type=show]"]
 
 
 # 月光舞鞋
@@ -45,143 +50,135 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 # 幽暗之门·岭下暗影
 ["岭下地图1"]
 export = true
-options = [""]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
 
 ["岭下地图2"]
 export = true
-options = [""]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E5%9C%B0%E5%9B%BE2.png?raw=true,type=show]"]
 
 ["岭下地图3"]
 export = true
-options = [""]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E5%9C%B0%E5%9B%BE3.png?raw=true,type=show]"]
 
 ["岭下展示1"]
 export = true
-options = ["\f1811年，1月5日，普罗维登斯\n\n亲爱的菲利普，\n我满怀悲痛地告知你，以利亚·文斯考特逝世了，他已经投入了主那慈爱的怀抱之中。我们都知道他这些年来健康状况欠佳，无论是身体还是精神都是如此。由于他已经离开了之前的伙伴们，因此要知道他碰见了什么麻烦可谓难上加难。我曾经前往他居住了数年的乡村住宅拜访他。在那时他正躺在病床上，而且他终于开口给我讲了一个完全出乎我意料的故事。我不确信是否应当把它告诉你，但我知道你最为关心我们的伙伴。\n他告诉我说15年来他一直都在竭尽心力地思考如何继续那让我们赚得盆满钵满的奴隶贸易。可憎的法律让我们的生意不再合法，而那些缠着好约翰·布朗的麻烦也让他心烦意乱。但我还记得，你肯定也一样，以利亚在那个时期在酒馆里说过的那些话。我们都以为那不过是胡思乱想，而且他大概是喝多了。我们在听见他说出我们应该在城镇下挖地道的想法时全都哈哈大笑。但我们全都不知道的是，这个想法一点也不是胡思乱想。我们全都不知道他秘密地制定了这个计划。在以利亚·文斯考特家的地窖中，他找到了一条隧道。这条隧道能够通向河那附近，而且要把它挖得更近一些也并不困难。他可以使用这条通道押送奴隶在城镇中来往。\n一切全都就绪之后，他乐不可支地在家中等待着他的人把他的奴隶带回来。但他们却没能来。他开始疑惑是什么拦住了他们，于是他带着剩下的人走进了地下去看看他们能找到什么。他们在地下找到了遍地的死尸。文斯考特用紧张的声音告诉我一部分人在隧道中就像破布一样被撕扯得到处都是，白人和奴隶都有。他不能确定这个事实，因为他未敢在此停留，但他认为并非所有的男人都被杀死了，他也没有在尸体中找到女奴们的踪影。但那些活着的人被带到了哪里，他们又面临着怎样的命运？地底的阴影如今看起来就像正紧抱着怀中的秘密，不怀好意地注视着他一样。他快速地逃了回来，并快速地在家的下面与河道旁边的隧道里建起了一道牢固的砖墙以便堵住任何从下面来的东西。\n自那以后他就再也未能得以安眠，至少在他还留在那间屋子里的时候是如此。我们都知道在那以后他患了重病并且不再讨论那些反对这条法律的计划。而在他生命的尽头，他终于在病床上谈论起了他曾从城镇下的深渊中逃离的故事。他透过窗户望向了外面摇曳的红枫树，看起来平静了下来。我只能认为这间乡村住宅对于他而言意味着某种生命尽头的平静。愿他的后代能在普罗维登斯的那座房屋中交上比他更好的运气。\n\n诚挚祝愿\n杰克伯·彼希"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E5%B1%95%E7%A4%BA1.png?raw=true,type=show]\f1811年，1月5日，普罗维登斯\n\n亲爱的菲利普，\n我满怀悲痛地告知你，以利亚·文斯考特逝世了，他已经投入了主那慈爱的怀抱之中。我们都知道他这些年来健康状况欠佳，无论是身体还是精神都是如此。由于他已经离开了之前的伙伴们，因此要知道他碰见了什么麻烦可谓难上加难。我曾经前往他居住了数年的乡村住宅拜访他。在那时他正躺在病床上，而且他终于开口给我讲了一个完全出乎我意料的故事。我不确信是否应当把它告诉你，但我知道你最为关心我们的伙伴。\n他告诉我说15年来他一直都在竭尽心力地思考如何继续那让我们赚得盆满钵满的奴隶贸易。可憎的法律让我们的生意不再合法，而那些缠着好约翰·布朗的麻烦也让他心烦意乱。但我还记得，你肯定也一样，以利亚在那个时期在酒馆里说过的那些话。我们都以为那不过是胡思乱想，而且他大概是喝多了。我们在听见他说出我们应该在城镇下挖地道的想法时全都哈哈大笑。但我们全都不知道的是，这个想法一点也不是胡思乱想。我们全都不知道他秘密地制定了这个计划。在以利亚·文斯考特家的地窖中，他找到了一条隧道。这条隧道能够通向河那附近，而且要把它挖得更近一些也并不困难。他可以使用这条通道押送奴隶在城镇中来往。\n一切全都就绪之后，他乐不可支地在家中等待着他的人把他的奴隶带回来。但他们却没能来。他开始疑惑是什么拦住了他们，于是他带着剩下的人走进了地下去看看他们能找到什么。他们在地下找到了遍地的死尸。文斯考特用紧张的声音告诉我一部分人在隧道中就像破布一样被撕扯得到处都是，白人和奴隶都有。他不能确定这个事实，因为他未敢在此停留，但他认为并非所有的男人都被杀死了，他也没有在尸体中找到女奴们的踪影。但那些活着的人被带到了哪里，他们又面临着怎样的命运？地底的阴影如今看起来就像正紧抱着怀中的秘密，不怀好意地注视着他一样。他快速地逃了回来，并快速地在家的下面与河道旁边的隧道里建起了一道牢固的砖墙以便堵住任何从下面来的东西。\n自那以后他就再也未能得以安眠，至少在他还留在那间屋子里的时候是如此。我们都知道在那以后他患了重病并且不再讨论那些反对这条法律的计划。而在他生命的尽头，他终于在病床上谈论起了他曾从城镇下的深渊中逃离的故事。他透过窗户望向了外面摇曳的红枫树，看起来平静了下来。我只能认为这间乡村住宅对于他而言意味着某种生命尽头的平静。愿他的后代能在普罗维登斯的那座房屋中交上比他更好的运气。\n\n诚挚祝愿\n杰克伯·彼希"]
 
 ["岭下展示2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/岭下暗影/岭下展示2.png]\f但愿有人能在某天读到这些遗言，上帝保佑。我，约翰·哈珀，在此写下这些话用以记述我和我弟兄们悲惨的故事。文斯考特的聪明计划让我们全都玩完了。他觉得用他找到的隧道能避开罗德岛州政府的注意。但他该好好想想这些隧道一开始是用来干什么的。\n他说自己很幸运，但我们可是倒了大霉。当我们押送着他的货穿过隧道的时候，怪物袭击了我们，那些运气好的死在了它们的爪子和牙齿之下。而剩下的被抓到了这来。圣经和布道者告诉我们说上帝诅咒了蛇，让它们永世只得爬行。那为什么我们的新主人仍然能够用双脚行走？他和他的族人是怎么逃脱上帝的惩戒的？难道它们在惩戒来临的时候在此冬眠所以躲过了上帝的注意？现在我们侍奉着这只可憎的蛇。他强迫我们所有人为他工作。他强迫我们彼此交媾，就好像我们不过是牲口一样。我看着我的同伴们要么死去，要么日渐消瘦，还有的人被那只蛇折磨用以取乐。我们已经远离了上帝慈爱的视线。"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E5%B1%95%E7%A4%BA2.png?raw=true,type=show]\f但愿有人能在某天读到这些遗言，上帝保佑。我，约翰·哈珀，在此写下这些话用以记述我和我弟兄们悲惨的故事。文斯考特的聪明计划让我们全都玩完了。他觉得用他找到的隧道能避开罗德岛州政府的注意。但他该好好想想这些隧道一开始是用来干什么的。\n他说自己很幸运，但我们可是倒了大霉。当我们押送着他的货穿过隧道的时候，怪物袭击了我们，那些运气好的死在了它们的爪子和牙齿之下。而剩下的被抓到了这来。圣经和布道者告诉我们说上帝诅咒了蛇，让它们永世只得爬行。那为什么我们的新主人仍然能够用双脚行走？他和他的族人是怎么逃脱上帝的惩戒的？难道它们在惩戒来临的时候在此冬眠所以躲过了上帝的注意？现在我们侍奉着这只可憎的蛇。他强迫我们所有人为他工作。他强迫我们彼此交媾，就好像我们不过是牲口一样。我看着我的同伴们要么死去，要么日渐消瘦，还有的人被那只蛇折磨用以取乐。我们已经远离了上帝慈爱的视线。"]
 
 ["岭下房屋"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/岭下暗影/岭下房屋.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E6%88%BF%E5%B1%8B.png?raw=true,type=show]"]
 
 ["岭下文献馆"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/岭下暗影/岭下文献馆.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E6%96%87%E7%8C%AE%E9%A6%86.png?raw=true,type=show]"]
 
 ["岭下音乐室"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/岭下暗影/岭下音乐室.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E9%9F%B3%E4%B9%90%E5%AE%A4.png?raw=true,type=show]"]
 
 ["岭下茧房"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/岭下暗影/岭下茧房.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E8%8C%A7%E6%88%BF.png?raw=true,type=show]"]
 
 # 幽暗之门·哈索恩山
 ["哈索地图1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索地图1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
 
 ["哈索地图2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索地图2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%9C%B0%E5%9B%BE2.png?raw=true,type=show]"]
 
 ["哈索展示1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示1.png]\f亲爱的，\n如你所见，在上一次尝试深入调查超自然现象后，我最近让自己来到位于丹弗斯的疗养院做一次精神上的恢复。但事实证明选择丹弗斯是一个十分糟糕的错误，这对我的身心都有着巨大的危险。在此地有一处“异常”，而他们不会让我离开的。而由于他们会检查通信所以我只能偷偷将这张纸条送出来给你。\n请前来将我从这个恐怖的地方解救出来，务必带上同伴而非独自前来。\n你的朋友\n拉里·克罗斯韦尔"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA1.png?raw=true,type=show]\f亲爱的，\n如你所见，在上一次尝试深入调查超自然现象后，我最近让自己来到位于丹弗斯的疗养院做一次精神上的恢复。但事实证明选择丹弗斯是一个十分糟糕的错误，这对我的身心都有着巨大的危险。在此地有一处“异常”，而他们不会让我离开的。而由于他们会检查通信所以我只能偷偷将这张纸条送出来给你。\n请前来将我从这个恐怖的地方解救出来，务必带上同伴而非独自前来。\n\n你的朋友\n拉里·克罗斯韦尔"]
 
 ["哈索展示2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示2.png]\f丹弗斯州立医院\n450MapleST·Danvers,MA\n———————————\n亲爱的,\n请忽视我之前的信息。\n我当时正焦虑不安。\n这里一切都好，不用劳烦前来。\n我需要好好休息和咨询。\n万分感谢。\n\n你真诚的，\n劳伦斯·克罗斯韦尔\n"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA2.png?raw=true,type=show]\f丹弗斯州立医院\n450MapleST·Danvers,MA\n———————————\n亲爱的,\n请忽视我之前的信息。\n我当时正焦虑不安。\n这里一切都好，不用劳烦前来。\n我需要好好休息和咨询。\n万分感谢。\n\n你真诚的，\n劳伦斯·克罗斯韦尔\n"]
 
 ["哈索展示3"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示3.png]\f丹弗斯疗养院主管为患者建立环形露天剧场\n\n丹弗斯州立疗养院的工人们于今日动工建立一处供病人们娱乐的小型环形露天剧场。当地居民同时也可以在这个邻近疗养院蓄水池，如田园牧歌般的地方获得一处安静的谈话空间、诗歌朗诵以及音乐表演的净土。\n疗养院的住户，同时也是工头的安德鲁·麦克布莱德（AndrewMacBride），补充说他的团队在打碎并移除一块在山坡上剧场建址处，有着疑似艺术标志的大型花岗岩板的时候遇到了一些困难。疗养院的前主管，威廉·夏恩将这块石板放在了哈索恩山的山坡上。据说，夏恩医生，这位漫游世界的旅行者，相信这块花岗岩板会是疗养院好运的象征。\n当地的居民向为精神病人建立一处剧场的开支提出了质疑。然而，伯格医生坚持建立剧场，他解释说：“重要的是，我们必须牢记应该为所有的居民们谋求福祉，尤其是那些被认为过于脆弱或是那些不能成为更大世界潮流一部分而受到伤害的人们。"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA3.png?raw=true,type=show]\f丹弗斯疗养院主管为患者建立环形露天剧场\n\n丹弗斯州立疗养院的工人们于今日动工建立一处供病人们娱乐的小型环形露天剧场。当地居民同时也可以在这个邻近疗养院蓄水池，如田园牧歌般的地方获得一处安静的谈话空间、诗歌朗诵以及音乐表演的净土。\n疗养院的住户，同时也是工头的安德鲁·麦克布莱德（AndrewMacBride），补充说他的团队在打碎并移除一块在山坡上剧场建址处，有着疑似艺术标志的大型花岗岩板的时候遇到了一些困难。疗养院的前主管，威廉·夏恩将这块石板放在了哈索恩山的山坡上。据说，夏恩医生，这位漫游世界的旅行者，相信这块花岗岩板会是疗养院好运的象征。\n当地的居民向为精神病人建立一处剧场的开支提出了质疑。然而，伯格医生坚持建立剧场，他解释说：“重要的是，我们必须牢记应该为所有的居民们谋求福祉，尤其是那些被认为过于脆弱或是那些不能成为更大世界潮流一部分而受到伤害的人们。"]
 
 ["哈索展示4"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示4.png]\f夏恩从丹弗斯疗养院退休\n\n塞勒姆当地的威廉·夏恩医生，丹弗斯州立疗养院的老主管，在他25年的无私奉献后迎来了退休。他的博学，宽厚待人以及卓有成效的治疗广为人知。他致力于改善病人生活治疗条件的事迹也广被赞颂。在1890年他到来之前，疗养院背负着恶名，职员们死气沉沉，病人的事故发生率和死亡率在本国中居高不下。\n夏恩主管突然出现并成功地掌控了同样这令人惊异的制度。老读者们可能会想起这位任期不到一年的主管用纳税人的钱在水库边上放置一块雕刻过的大理石板时所招致的抱怨。但就和现在一样，夏恩医生坚持即使主管离任时也让那块装饰用的石板放在那儿不受打扰。不管他那些奇怪的癖好，夏恩医生用他那漫长的任期让疗养院起死回生并获得成功的能力与事迹将长久流传。\n身为早年游历过许多海外地区的人，夏恩博士声明他现在只盼望在他的家乡塞勒姆度过安详的退休生活。博士已经确定会将他私人和官方的文档捐赠给塞勒姆医院。\n对于他的继任者詹姆斯·伯格医生，夏恩博士有着极高的评价：“伯格医生毫无疑问将会成为这些可怜人真诚的庇护者，同时他无疑也将会妥善管理疗养院。”夏恩补充道：“我衷心希望伯格医生能够抛去过去的一些习惯，并专注于建设疗养院光辉的明天。”\n本报衷心祝愿夏恩博士能有一个安详快乐的退休生活。"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA4.png?raw=true,type=show]\f夏恩从丹弗斯疗养院退休\n\n塞勒姆当地的威廉·夏恩医生，丹弗斯州立疗养院的老主管，在他25年的无私奉献后迎来了退休。他的博学，宽厚待人以及卓有成效的治疗广为人知。他致力于改善病人生活治疗条件的事迹也广被赞颂。在1890年他到来之前，疗养院背负着恶名，职员们死气沉沉，病人的事故发生率和死亡率在本国中居高不下。\n夏恩主管突然出现并成功地掌控了同样这令人惊异的制度。老读者们可能会想起这位任期不到一年的主管用纳税人的钱在水库边上放置一块雕刻过的大理石板时所招致的抱怨。但就和现在一样，夏恩医生坚持即使主管离任时也让那块装饰用的石板放在那儿不受打扰。不管他那些奇怪的癖好，夏恩医生用他那漫长的任期让疗养院起死回生并获得成功的能力与事迹将长久流传。\n身为早年游历过许多海外地区的人，夏恩博士声明他现在只盼望在他的家乡塞勒姆度过安详的退休生活。博士已经确定会将他私人和官方的文档捐赠给塞勒姆医院。\n对于他的继任者詹姆斯·伯格医生，夏恩博士有着极高的评价：“伯格医生毫无疑问将会成为这些可怜人真诚的庇护者，同时他无疑也将会妥善管理疗养院。”夏恩补充道：“我衷心希望伯格医生能够抛去过去的一些习惯，并专注于建设疗养院光辉的明天。”\n本报衷心祝愿夏恩博士能有一个安详快乐的退休生活。"]
 
-["哈索展示5-1"]
+["哈索展示5"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示5-1.png]"]
-
-["哈索展示5-2"]
-export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示5-2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA5-1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA5-2.png?raw=true,type=show]\f1890年6月2日\n困扰着疗养院的麻烦越来越深了，而我尊敬的同事们永远不会接受这一理论作为理性有序宇宙的一部分。事实上，如果我将我的判断与我的同伴交流的话，我将发现我会被作为一个病人而不是一个管理者。然而我已经在之前的旅行中经历过这样的问题，因而我必须尽快行动。那个东西已经察觉到了我对它的怀疑并开始阻挠我的行动。万幸的是我已经启动了我很久以前在一个古怪的古老城市习得的保护性咒语，目前为止我还是安全的。我必须尽快找到哈索恩的石板并控制住那个折磨着这里一切，扭曲着受创的脆弱心智的东西。哈索恩将石板移走并认为它是异教魂灵崇拜的符号，这位狂热的牧师犯下了这样无比可怕的错误。上帝保佑我能找到石板，而在那之后它就能镇压住那个在哈索恩山上敌视我们的东西。\f1890年11月12日\n我找到了哈索恩的石板，正如我推测的那样，这是一个上古流传下来用以防范那些潜藏于大地和空气之中东西的的古老印记。值得庆幸的是石板熬过了的漫长年月的侵蚀，并被人所忽略。刻于其上的印记犹如刚刚放置那天一样清晰，但这是谁干的？我最好不要过度深究这已随风而去的秘密。现在我的任务是将石板再度安置在山上，来囚禁住那些和它一样对我们所继承的世界抱有敌意的同族们。\f1890年12月3日\n都结束了，印记已经被安置在那片土地上，那个东西则被逼入了不适的长眠。纳税人们质疑花费资金在疗养院放置这样一个“无用装饰品”的必要性，但他们没有表现强烈的想要把它移走的威胁，也大概不明白它的真实目的。但对知情者来说，这个印记现在和将来都应该是一个牢房。我已经看到了病人们和职员们康复的迹象，就好像他们正从一场漫长的清醒噩梦中逐渐苏醒。\f1915年5月7日\n我和我的继任者詹姆斯·伯格医生见面了，他看起来是个乐观能干的年轻后辈。因为他积极的个性，我已经告诫了这位年轻的医生永远不要移走在山上蓄水库旁的那块石板。他会听从我的建议么？对他说明许多年前放置这块石板的真实原因是不可能的，因而我必须编造一个感情真挚的理由来对他强调别动石板的重要性。我祈祷他会牢记他不让石板被移动的承诺。"]
 
 ["哈索展示6"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/哈索恩山/哈索展示6.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA6.png?raw=true,type=show]\f丹弗斯医院突发死亡事件\n\n近日丹弗斯医院爆出病人安德鲁·麦克布莱德的死讯，享年未知。麦克布莱德今早在他的房间中被发现全无反应。詹姆斯·伯格宣布死因为自杀：“发生这种事真是一个悲剧”，他这样说道，“我们无法妥善安置所有向我们寻求帮助的灵魂。他现在已经去了一个更好的地方”麦克布莱德在这里没有任何已知的亲属。"]
 
 # 幽暗之门·湖之仆从
 ["仆从地图1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从地图1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
 
 ["仆从地图2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从地图2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%9C%B0%E5%9B%BE2.png?raw=true,type=show]"]
 
 ["仆从展示1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从展示1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%B1%95%E7%A4%BA1.png?raw=true,type=show]\f新英格兰本地历史-78页\n\n……在佛蒙特州、新罕布什尔州和马萨诸塞州的康涅狄格河谷地区曾居住着一个名为阿贝内基人的部族。\n最初是阿贝内基人占据了斯夸特湖一带的地区，不过在1722年，他们被英国殖民者所赶走。因为湖的周围常年盘踞着大量的乌鸦在此觅食，阿贝内基人最初将这片湖命名为“Ponki-mkazas”（乌鸦），而在殖民者获得这片地区之后，他们发现这里无论是发展狩猎还是渔业都不太适合。而且，湖周围的铁杉树完全无法用于烧火，他们用未经加工的木头搭起的房屋也迅速地开始倾塌。殖民者们决定继续向北，将他们聚居地的废墟留在了湖边，数年间，这些老旧的窝棚先后成为了流浪汉、脱逃的黑奴以及逃兵的家，直到1805年，一场洪水将这些建筑彻底荡平，卷入了湖中。居住在本地的人开始称这个湖为斯夸特湖，直至今日。"]
 
 ["仆从展示2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从展示2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%B1%95%E7%A4%BA2.png?raw=true,type=show]\f在跟老爸吵了一架之后，我真的感觉很累，而这鬼地方也一点没能让我的心情变好。车子依旧还坏着——那个叫威廉的老头说他能修好，但我不知道该不该信他。只呆了一个晚上，这地方就已经让我感到浑身鸡皮疙瘩了。我讨厌湖边传来的讨厌的青蛙叫声，在出去晃悠的时候还看到湖上有灯光，难道晚上还有人在那儿钓鱼？的确是有三艘船系在湖边的码头上，但我无法想象那对老迈年高的兄弟半夜会跑到湖边去做什么。不管怎样，那个湖绝对是臭的可以。昨天晚上发生的事情也是绝了，我居然会梦游！记得自打我长大成人之后，就再也没梦游过了。昨晚我梦见自己漂浮在水中，在一座充满了死尸的奇怪城市中央。当我半夜从梦里醒过来的时候，却发现自己已经不再房间里了，而是站在外面的冷风中，那时我还能看到前台的那盏灯在不停闪烁着。那两个老家伙够奇怪的了，幸亏我不常见到他们，他们把大部分的时间都花在他们那个冲着湖那边的，所谓的工作室里了。\n干他娘，如果车今天修不好的话，我就得碰碰运气，搭个车去金斯波特了。"]
 
 ["仆从展示3"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从展示3.png]\f[图:./_pic.deck/pic/幽暗之门/湖之仆从/仆从展示3-1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%B1%95%E7%A4%BA3-1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%B1%95%E7%A4%BA3.png?raw=true,type=show]"]
 
 # 幽暗之门·血浓于水
 ["血浓地图1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓地图1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
 
 ["血浓地图2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓地图2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%9C%B0%E5%9B%BE2.png?raw=true,type=show]"]
 
 ["血浓展示1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA1.png?raw=true,type=show]\f亲爱的玛丽，\n我知道你甚至可能都不认识我，可我却了解你。你看，我在你家工作。我并不是一位配得上你的绅士，但我的确是个勤奋工作，古道热肠的好人。\n或许你会觉得这有些突然，但我却已经默默留意你很久了。那次你来工地的时候，我一眼就注意到你了，我好想能再见你一面。我有一份礼物给你，明天就带到你学校宿舍那儿。就在你家建花园的地方，我找到了一块宝石。它真的很漂亮，像是一块巨大的梦幻珍珠。鉴于你在密大读书，我想你肯定会对它感兴趣。\n今晚明天我都会在博登阿姆斯酒店自己的房间里，所以你可以到我这儿来。\n致以最深的爱意，\n\n阿尔弗雷德·哈克特"]
 
 ["血浓展示2"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA2.png?raw=true,type=show]\f玛丽，\n我觉得这是……这是一枚蛋，但我不清楚它是什么种生的。\n快点来！我不知道它孵化后，我该做点什么。\n\n阿尔弗雷德"]
 
-["血浓展示3-1"]
+["血浓展示3"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示3-1.png]"]
-
-["血浓展示3-2"]
-export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示3-2.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA3-1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA3-2.png?raw=true,type=show]"]
 
 ["血浓展示4"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示4.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA4.png?raw=true,type=show]"]
 
 ["血浓展示5"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示5.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA5.png?raw=true,type=show]"]
 
 ["血浓展示6"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/血浓于水/血浓展示6.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B1%95%E7%A4%BA6.png?raw=true,type=show]"]
 
 # 幽暗之门·了却幻梦
 ["幻梦地图1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/了却幻梦/幻梦地图1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E4%BA%86%E5%8D%B4%E5%B9%BB%E6%A2%A6/%E5%B9%BB%E6%A2%A6%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
 
 ["幻梦展示1"]
 export = true
-options = ["[图:./_pic.deck/pic/幽暗之门/了却幻梦/幻梦展示1.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E4%BA%86%E5%8D%B4%E5%B9%BB%E6%A2%A6/%E5%B9%BB%E6%A2%A6%E5%B1%95%E7%A4%BA1.png?raw=true,type=show]"]
 
 
 # 你就刚刚好
@@ -193,4 +190,4 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 #夏洛克·福尔摩斯症候群
 ["福尔摩斯事前公开"]
 export = true
-options = ["[图:./_pic.deck/pic/福尔摩斯/福1.png]\f[图:./_pic.deck/pic/福尔摩斯/福2.png]\f[图:./_pic.deck/pic/福尔摩斯/福3.png]\f[图:./_pic.deck/pic/福尔摩斯/福4.png]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F2.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F3.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F4.png?raw=true,type=show]"]
