@@ -2,7 +2,7 @@
 
 - TOML
     - 旧版手册呪文(三语对照)
-    - 模组资料(图片)
+    - 模组资料(包含图片)
 
 ## 旧版手册呪文(三语对照) ver1.0.0
 
@@ -19,7 +19,7 @@
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
-## 模组资料(图片) ver1.0.1
+## 模组资料(包含图片) ver1.1.2
 
 > [!CAUTION]
 > - 手动整理、若有任何遗漏欢迎补充
