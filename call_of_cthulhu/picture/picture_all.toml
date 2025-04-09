@@ -1,7 +1,7 @@
 [meta]
 title = "模组资料(图片)"
 author = "3987681449"
-version = "1.0.1"
+version = "1.1.1"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
 update_date = 2025-04-09
@@ -11,15 +11,47 @@ update_Urls = [
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml"
 ]
 
+# 目录·支持模组
 ["phelp"]
 export = true
 visible = true
-options = ["目录内容有剧透请谨慎查看，图片版为pichelp\n文字版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、夏洛克·福尔摩斯症候群\n请根据所需输入对应关键词\n\n关键词大全为(含剧透)pichelp\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
+# 目录·完整图片
 ["pichelp"]
 export = true
 visible = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/phelp.png?raw=true,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pichlep.png?raw=true,type=show]"]
+
+["月光舞鞋"]
+export = true
+visible = true
+options = ["关键词：西大附中"]
+
+["望君长留"]
+export = true
+visible = true
+options = ["关键词：爱良/釜村徹/釜村一家"]
+
+["活神之手"]
+export = true
+visible = true
+options = ["关键词：活神禁书/活神笔记"]
+
+["幽暗之门"]
+export = true
+visible = true
+options = ["预设卡关键词：幽暗预设/幽暗预设全\f岭下暗影关键词：岭下地图/岭下地图/岭下地图/岭下展示/岭下展示/岭下房屋/岭下文献馆/岭下音乐室/岭下茧房\f哈索恩山关键词：哈索地图/哈索地图/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示\f湖之仆从关键词：仆从地图/仆从地图/仆从展示/仆从展示/仆从展示\f血浓于水关键词：血浓地图/血浓地图/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓尸体\f了却幻梦关键词：幻梦地图/幻梦展示"]
+
+["你就刚刚好"]
+export = true
+visible = true
+options = ["关键词：风铃草"]
+
+["夏洛克·福尔摩斯症候群"]
+export = true
+visible = true
+options = ["关键词：福尔摩斯事前公开"]
 
 
 # 月光舞鞋
