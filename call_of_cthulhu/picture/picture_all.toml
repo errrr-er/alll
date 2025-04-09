@@ -14,7 +14,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["小心剧透\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["\f小心剧透\n文字版目录可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
 
 # 月光舞鞋
