@@ -1,7 +1,7 @@
 [meta]
 title = "模组资料(包含图片)"
 author = "3987681449"
-version = "1.1.3"
+version = "1.1.4"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
 update_date = 2025-04-09
@@ -15,52 +15,26 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、夏洛克·福尔摩斯症候群\n请根据所需输入对应关键词\n\n关键词大全为(含剧透)pichelp\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、夏洛克·福尔摩斯症候群、BHBW (Blood Hunt & Bio Watch)\n请根据所需输入对应关键词\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
-# 目录·完整图片
-["pichelp"]
-export = true
-visible = true
-options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pichlep.png?raw=true,type=show]"]
 
+# 月光舞鞋
 ["月光舞鞋"]
 export = true
 visible = true
 options = ["关键词：西大附中"]
 
-["望君长留"]
-export = true
-visible = true
-options = ["关键词：爱良/釜村徹/釜村一家"]
-
-["活神之手"]
-export = true
-visible = true # 防水没加上去
-options = ["关键词：活神禁书/活神林1/活神林2/活神防水1/活神笔记"]
-
-["幽暗之门"]
-export = true
-visible = true
-options = ["预设卡关键词：幽暗预设/幽暗预设全\f岭下暗影关键词：岭下地图/岭下地图/岭下地图/岭下展示/岭下展示/岭下房屋/岭下文献馆/岭下音乐室/岭下茧房\f哈索恩山关键词：哈索地图/哈索地图/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示\f湖之仆从关键词：仆从地图/仆从地图/仆从展示/仆从展示/仆从展示\f血浓于水关键词：血浓地图/血浓地图/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓尸体\f了却幻梦关键词：幻梦地图/幻梦展示"]
-
-["你就刚刚好"]
-export = true
-visible = true
-options = ["关键词：风铃草"]
-
-["夏洛克·福尔摩斯症候群"]
-export = true
-visible = true
-options = ["关键词：福尔摩斯事前公开"]
-
-
-# 月光舞鞋
 ["西大附中"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]"]
 
 
 # 望君长留
+["望君长留"]
+export = true
+visible = true
+options = ["关键词：爱良/釜村徹/釜村一家"]
+
 ["爱良"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%9B%E5%90%9B%E9%95%BF%E7%95%99/%E7%88%B1%E8%89%AF.png?raw=true,type=show]"]
@@ -75,6 +49,11 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 
 # 活神之手
+["活神之手"]
+export = true
+visible = true
+options = ["关键词：活神禁书/活神林1/活神林2/活神防水1/活神笔记"]
+
 ["活神禁书"]
 export = true
 options = ["——\n\n《新英格兰乐土上的奇书异事》\n\n第四章·阿卡姆的巫师审判：\n\n……但是，即使是在那个巫术邪恶面目众人皆知的时代，也有人借着神圣审判的名义指控曾与自己产生龃龉之人。\n\n其中一个例子就是埃泽基尔·菲尔普斯一案。\n\n埃泽基尔品行端正，居住在阿卡姆以西远离城镇的位置。众所周知，埃泽基尔与其邻居卢卡斯·布莱克曾因土地边界问题发生争执。1695 年秋，布莱克先生和他的两个儿子在库珀法官面前讲述了一个“有趣”的故事。父子三人在普多克之林漫步时看到邻居菲尔普斯正在一片林间空地中与什么无形的事物交谈。三人决定伸张正义（至少三人声称如此），冲上去杀死了不幸的菲尔普斯，并将他就地埋葬。\n\n在这之后，他们来到库珀法官面前坦白了一切，似乎对此问心无愧。\n\n正直的库珀法官不愿意相信他们的供词，因为他知道菲尔普斯和布莱克之间的争执，也记得菲尔普斯曾多次上诉指控布莱克非法侵入自己的土地进行狩猎。库珀法官听取布莱克父子的声明后要求他们第二天返回法庭。但是，布莱克一家在当晚带上全部家产潜逃，登上了一艘前往英国的船，从而逃避了当局的制裁。\n\n——\n\n书中还附上了埃泽基尔·菲尔普斯居住的具体地址。"]
@@ -96,6 +75,11 @@ export = true
 options = ["那是一些来看像是日记的内容。\n\n——\n\n……曾尝试着与伊尔-纳恩兹的恶魔交谈，他们建议我去询问那位不可言说者……\n\n……那时，湖中的游泳者们正在嬉戏，在那种时候，注视着祂是不明智的……\n\n……密斯卡特部落的萨满告诉我，他是黄印的守护者，当神圣的印记落入凡俗之手时，他就会现身……\n\n……黄印可能会赐予向不可言说者作出诺言之人以最强大的力量……\n\n……守护者只会追随两件事物，即被亵渎的印记和亵渎者本人，但亵渎者身体的一部分就足以满足守护者的渴望……\n\n……今晚，我将前往前去谒见我的主人。布莱克总是在窥探我的举动，但他的行为应该不会造成什么影响……\n\n——"]
 
 # 幽暗之门·预设卡
+["幽暗之门"]
+export = true
+visible = true
+options = ["预设卡关键词：幽暗预设/幽暗预设全\f岭下暗影关键词：岭下地图/岭下地图/岭下地图/岭下展示/岭下展示/岭下房屋/岭下文献馆/岭下音乐室/岭下茧房\f哈索恩山关键词：哈索地图/哈索地图/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示\f湖之仆从关键词：仆从地图/仆从地图/仆从展示/仆从展示/仆从展示\f血浓于水关键词：血浓地图/血浓地图/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓尸体\f了却幻梦关键词：幻梦地图/幻梦展示"]
+
 ["幽暗预设"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE2.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE3.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE4.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE5.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE6.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE7.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE8.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE9.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE10.png?raw=true,type=show]"]
@@ -243,12 +227,33 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 
 # 你就刚刚好
+["你就刚刚好"]
+export = true
+visible = true
+options = ["关键词：风铃草"]
+
 ["风铃草"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%BD%A0%E5%B0%B1%E5%88%9A%E5%88%9A%E5%A5%BD/%E2%BB%9B%E9%93%83%E8%8D%89.png?raw=true,type=show]"]
 
 
 #夏洛克·福尔摩斯症候群
+["夏洛克·福尔摩斯症候群"]
+export = true
+visible = true
+options = ["关键词：福尔摩斯事前公开"]
+
 ["福尔摩斯事前公开"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F2.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F3.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F4.png?raw=true,type=show]"]
+
+# BHBW (Blood Hunt & Bio Watch)
+["BHBW"]
+export = true
+visible = true
+options = ["关键词：BHBW事前信息"]
+
+["BHBW事前信息"]
+export = true
+visible = true
+options = ["猎犬憎恨罪犯，因此追捕罪犯到天涯海角。\n警犬爱着这个城市，因此挺起胸膛保护人民。\n\n现在，危险的黑暗潜伏在这座城市里。\n第一位受害者失去了右臂，第二位受害者失去了左臂和右腿，\n第三位受害者失去了双臂，第四位受害者失去了双腿。\n通称——连环断肢案。\n\n猎犬的职责是追捕和惩罚罪犯。\n警犬的职责是防止更多受害者出现。\n\n必须联手解决这个案件。\f介绍\n该模组使用新克苏鲁神话TRPG规则书，专为2名新刑警探索者而设计。\n假设以严肃冷酷的风格进行，游戏时间不包括车卡约为9至11小时。\n前半部分以调查为主，中期有潜入任务，后半部分有多次战斗。\n除了擅长对搜查有用的技能外，还希望探索者擅长近斗殴和手枪。\n\n人数：2\n时间：9-11h\n舞台：现代日本\n推荐技能：斗殴/手枪/调查类\nLOST：中\nHO秘密：无\n倾向：刑警搭档/严肃/冷酷/动作\n\n角色制作\n探索者属于大阪府警刑事部调查第一课的刑警。\n自从半年多前加入同一科以来，曾经多次一起共事。\n\n刑事部搜查第一课：\n负责杀人、抢劫、暴行、伤害、绑架、寻衅滋事、性、纵火等恶劣罪行。\n\n出于对模组背景的考虑，希望探索者是日本人(或有其血统)。\n另外，由于有不得不脱离法律进行搜查的场面，因此在任何情况下都要遵循法律性格的探索者不适合本模组。\n请避免探索者的背景与对HO相同(可理解为选了1后，设定不可和2的一样)。\f联合搜查本部\n◆藤堂岩／50岁・男性\n大阪府警刑事部第一课的课长，联合搜查总部的本部长。\n凭借长期的现场经验和实际操作，逐渐从基层职位晋升。\n指示准确，下属信任他，同时也是探索者们的直属上司。\n\n◆白川茜／27岁・女性\n大阪府警科学搜查研究所(科捜研)的研究员。\n专业领域为图像分析与人工智能，与探索者一起加入联合搜查本部。\n擅长网络相关，如果探索者们需要，可收集大部分信息。\n\n◆山仓长治／50岁・男性\n兵库县警刑事部第一课课长，口头禅是“泥臭く行こうや(脚踏实地地做事)”。\n以锲而不舍的调查著称，深受部下信赖。\n与藤堂巌是警察学校的同期，互称“岩桑/长治桑”。\n在成立联合搜查本部时，推荐岩作为本部长。\n\n◆柏木新／29岁・男性\n兵库县警刑事部第一课的刑警。\n对自己的搜查能力有很强的自信，但也有坦率承认失败的勇气。\n把探索者们看作是竞争对手。\n\n◆小日向大和／25岁・男性\n兵库县警刑事部第一课的刑警。\n虽然作为新人还有不靠谱的地方，但是人很好，也尊重探索者们。\n成长于兵库，为了守护自己成长的城市而成为刑警。\n大多数情况下，与作为前辈的柏木新组成搭档行动。"]
