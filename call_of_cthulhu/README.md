@@ -19,7 +19,7 @@
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
-## 模组资料(包含图片) ver1.1.4
+## 模组资料(包含图片) ver1.1.5
 
 > [!CAUTION]
 > - 手动整理、若有任何遗漏欢迎补充
