@@ -19,7 +19,7 @@
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
-## 模组资料(包含图片) ver1.1.2
+## 模组资料(包含图片) ver1.1.4
 
 > [!CAUTION]
 > - 手动整理、若有任何遗漏欢迎补充
@@ -35,6 +35,7 @@
         - 活神禁书.txt
         - 活神林1.txt
         - 活神林2.txt
+        - 活神防水1.txt
         - 活神笔记.txt
     - 幽暗之门
         - 预设卡
