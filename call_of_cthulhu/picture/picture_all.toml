@@ -15,7 +15,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["欢迎使用《模组资料(包含图片)》牌堆\n！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
 
 # 月光舞鞋
