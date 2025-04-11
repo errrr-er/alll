@@ -81,7 +81,7 @@
             - 幻梦展示1.png
     - 你就刚刚好
         - 风铃草.png
-    - 夏洛克·福尔摩斯症候群
+    - 福尔摩斯 (夏洛克·福尔摩斯症候群)
         - 福尔摩斯事前公开.png x 4
     - BHBW (Blood Hunt & Bio Watch)
         - BHBW事前信息.txt x 3
