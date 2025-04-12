@@ -75,193 +75,104 @@ options = ["JP:イシスの封印\nコスト：任意の量のMP、1正気度ポ
 ["石の呪い"]
 export = true
 aliases = ["石板诅咒","CURSEOFTHESTONE","CurseoftheStone"]
-options = [""]
+options = ["JP:石の呪い\nコスト：9MP、1d10正気度ポイント\n必要ラウンド：2ラウンド\n対象の心に恐ろしい幻覚を生じさせる。幻覚を見たものは即座に1d4の正気度ポイントを失う。\fCN:石板诅咒\n消耗：9点魔法值；1D10点理智值\n施法用时：2轮\n在目标的精神当中产生可怕的幻觉。需要一块附魔的石板，用于本法术的石板可以用一块小石板上凿一个咒印并牺牲4点魔法值，也可以使用“石板附魔术”。施法者或者目标必须有人拿着石板，目标必须在施法者视野范围内。施法者须和目标进行一次POW对抗检定并胜出，法术才能生效。若生效，目标将立刻被可怖的幻觉压制，失去1D4点理智值，且每轮都会目盲、迷失在幻影中，直到他们的POW检定成功为止（法术生效的下轮起）。在目标的POW检定成功之后此人仍然会受到梦魇的折磨（每晚损失1点理智值）。想取消这个诅咒，目标需要巧妙设计——或是杀死施法者，或是迫使施法者撤回法术。\n别名：召唤不虔的梦魇、精神恶魔、幻影的刺痛\fEN:CURSEOFTHESTONE/CurseoftheStone\nCost: 9 magic points; 1D10 Sanity points\nCasting time: 2 rounds\nCauses horrible hallucinations in the mind of the target. An ensorcelled stone tablet is required; one could be enchanted for the purposes of this spell by chiseling a sigil into a small stone slab and sacrificing 4 magic points, or an Enchanted Stone Tablet (page 111) may be used. Either the caster or the target of the spell must hold the tablet, and the target must be visible to the caster. For the spell to take effect the caster must succeed in an opposed POW roll with the target. The spell being successful, the target is instantly overwhelmed with dreadful hallucinations, losing 1D4 Sanity points and continues to be blinded and misled by phantoms each round until they make a successful POW roll (the round following the spell taking effect). Once the target has made a successful POW roll he or she continues to be plagued by nightmares (costing 1 Sanity point per night). To lift the curse, the target needs ingenuity—either killing the caster or getting him or her to repeal the spell.\nAlternative names: Bring Forth Ungodly Nightmares, Demons of the Mind, Ye Phantom’s Bite."]
 
 
 ["萎縮"]
 export = true
 aliases = ["枯萎术","SHRIVELLING","Shrivelling"]
-options = [""]
+options = ["JP:萎縮\nコスト：さまざまなMP、さまざまな正気度ポイント\n必要ラウンド：瞬時\n別名：贖罪、枯死の衝撃、黒き言葉\n対象に肉体的損傷を与える。任意のMPとその半分の正気度ポイントを投入でき、対抗POWロールに成功すれば投入したMPと同じ量のダメージを与える。\n深層バージョンの記載あり。\fCN:枯萎术\n消耗：可变的魔法值和理智值\n施法用时：即时\n本法术是强力的攻击法术，会对一名目标造成物理伤害。施法者消耗任意数量的魔法值，理智值的消耗是魔法值的一半。施法者须和目标进行一次 POW 对抗检定并胜出，法术才能生效。若成功，目标会突然之间遭到一股可怕能量的冲击，使得血肉焦黑凋零。每在法术中投入 1 点魔法值，目标就会损失 1 点耐久值。\n深层魔法：召唤出神话的巨大能量是一回事，通过理解和领悟去塑造能量又是一回事。有些施法者无需 POW 检定即可达成法术。而且，施法者可以选择对目标施加更多的精神上的恐怖；当被能量冲击击中时，目标会相信自己遭到恐怖的神话生物攻击，进行一次理智检定，损失 1/1D6 点理智值。\n别名：忏悔术、死亡的凋零一击\fEN:SHRIVELLING/Shrivelling\nCost: variable magic points; variable Sanity points\nCasting time: instantaneous\nA powerful offensive spell causing physical injury to a target. The caster invests as many magic points as desired and that number halved in Sanity points. For the spell to take effect the caster must succeed in an opposed POW roll with the target. If successful, the target is subjected to a sudden and terrifying blast of energy, causing flesh to blacken and wither. The target loses 1 hit point per magic point invested in the spell. \nDeeper magic: calling up the powerful energies of the Mythos is one thing; shaping them through understanding and comprehension is another. Some casters are able to inflict this spell without the need for a POW roll. In addition, the caster may elect to induce further mental terror: while reeling from the energy blast, the target believes that he or she is being assaulted by horrific Mythos entities, provoking a Sanity roll for 1/1D6 Sanity loss.\nAlternative names: Shriving, The Withering Blast of Death."]
 
 
 ["命の糧"]
 export = true
 aliases = ["生命食粮术","FOODOFLIFE","FoodofLife"]
-options = [""]
+options = ["JP:命の糧\n残酷で不自然な方法でカルティストの寿命伸ばす呪文。\fCN:生命食粮术\n消耗：10点魔法值；1D8+1点理智值\n施法用时：3天\n为一个人残酷且不自然地延长寿命。仪式的关键是一场持续数天（通常是3天）的不洁食人筵宴。每在宴会中消耗5点SIZ相当的人肉，食人巫师就能延长一个月的寿命。\n别名：活肉吞食术、食敌术、特异宴会\fEN:FOODOFLIFE/FoodofLife\nCost: 10 magic points; 1D8+1 Sanity points\nCasting time: 3 days\nCruelly and unnaturally extends the life span of an individual. An unholy cannibalistic feast of several days’ duration (usually 3 days) is key to the ritual. The sorcerous cannibal adds one week of life for every 5 SIZ points of human flesh therein consumed.\nAlternative names: Consumption of the Living Flesh, Victuals of the Enemy, The Special Feast."]
 
 
 ["イブンーグハジの粉"]
 export = true
 aliases = ["伊本-加齐之粉","POWDEROFIBN-GHAZI","PowderofIbn-Ghazi"]
-options = [""]
+options = ["JP:イブンーグハジの粉\fCN:伊本-加齐之粉\n消耗：1点魔法值（每剂）施法用时：2天\n准备（每剂），1轮使用通过对隐形存在吹撒粉末，本法术可以让魔法的隐形存在现身。粉末需要根据苛刻的指令仔细混合，里面还有三种特殊原料，每剂要牺牲1点魔法值。每剂可以使用一次。KP决定特殊原料为何。粉末可以从管中吹出或者撒到目标身上。被粉末撒到的存在，显形的时间最多为心跳十次的时间。可以现形的隐形存在包括：施放请神术的附魔地点引出的魔法线、时空门附近的灵光、正常情况下不可视的生物（星之精等）。使用这种粉末不损失理智值，但在看到它显示了什么东西时可能引发理智检定。\n别名：真视之尘、见所未见术、感知的混合物\n\fEN:POWDEROFIBN-GHAZI/PowderofIbn-Ghazi\nCost: 1 magic point (per dose) \nCasting time: 2 days preparation (per dose); 1 round to apply\nMakes magically invisible things visible by blowing the powder against or over the invisible thing. The powder must be compounded carefully, according to exacting instructions, and involves three special ingredients and the sacrifice of 1 magic point per dose. A dose is one application of the powder. The Keeper determines the special ingredients required. The powder is either blown from a tube or thrown over the target. The thing that is dusted stays visible for no more than ten heartbeats. That which could be made visible includes the magical lines extending from a place enchanted for the calling of a Mythos deity, the aura around a Gate, and a creature that is normally invisible (such as a star vampire). Using the powder costs no Sanity points, but seeing what it exposes may provoke such a roll.\nAlternative names: Dust of Seeing, Witness of the Unseen, Compound of Perception."]
 
 
 ["癒し"]
 export = true
-aliases = ["HEAL","Heal"]
-options = [""]
+aliases = ["治疗术","HEAL","Heal"]
+options = ["JP:癒し\nコスト：3MP\n必要ラウンド：25ラウンド\n対象の自然治癒速度を向上させる。\fCN:治疗术\n此咒文可使所受的伤害得到最大限度的恢复。在自然恢复时，每周可以恢复3点耐久，如果受伤时成功使用了急救技能，则第一周可以恢复6点耐久。成功使用了医学技能，第一周可以恢复9点耐久。施法者须支付3点魔力值，不需支付理智值。施法时间为25轮，在此期间，施法者必须一直触碰受术者的身体。此外，若想让此咒文每周都发挥作用，就必须每周都施放一遍。\fEN:HEAL/Heal\nMaximizes the healing rate possible: with it the natural rate is 3 hit points per week, with First Aid it can be 6 hit points the first week, and with Medicine it can be 9 hit points the first week. The spell costs 3 magic points and no Sanity points. It takes 25 game rounds to cast. The recipient must be touched by the caster or the spell cannot take effect, and the spell must be reapplied each week to have effect for that week."]
 
 
 ["ヴールの印"]
 export = true
 aliases = ["维瑞之印","VOORISHSIGN","VoorishSign"]
-options = [""]
+options = ["JP:ヴールの印\nコスト：1MP、１正気度ポイント\n必要ラウンド：1R\n別名：力の印、狡猾なる手さばき\n他の呪文のコストと発動時間を減少させ、効果を少し上げるが内容は呪文によって異なる。クリーチャーが術者の意図がわかるまで攻撃を躊躇う可能性がある。\fCN:维瑞之印\n消耗：1点魔法值；1点理智值\n施法用时：1轮\n巫师使用的古老又强大的手势，对其他法术的施法有益。它可以减少消耗、缩短施法用时或者略微提高法术效果，随当前法术不同而变（准确的效果由KP决定）。维瑞之印必须在它要加强的法术前一轮施放。相传维瑞之印可以暂时克制神话生物——这些生物对此印十分谨慎，会延迟攻击，直到它们知道巫师的目的为止。\n别名：超能之印、狡猾的通行证\fEN:VOORISHSIGN/VoorishSign\nCost: 1 magic point; 1 Sanity point\nCasting time: 1 round\nAn ancient and powerful hand gesture used by wizards that benefits the casting of other spells. It may lessen the cost, reduce the casting time, or increase the effect a little, depending on the spell in question (the precise benefit is determined by the Keeper). The Voorish Sign must be cast in the round preceding the spell it is enhancing. The Voorish Sign is also rumored to temporarily ward against Mythos monsters—such creatures are wary of the sign and may hold off an attack until the wizard’s intentions are known.\nAlternative names: Sign of Power, Cunninge Pass."]
 
 
 ["鋭敏な2人"]
 export = true
 aliases = ["相似的敏锐","KEENNESSOFTWOALIKE","KeennessofTwoAlike"]
-options = [""]
+options = ["JP:鋭敏な2人\nこの呪文は精神的な明快さ、集中力、記憶力はキーパーが適当と考える程度まで高める呪文。\fCN:相似的敏锐\n消耗：4点魔法值；1点理智值\n施法用时：1小时\n在1D4+4小时之内，提高精神的明晰度、集中力和记忆力。法术需要两名有血缘关系的施法者（他们各自支付施法消耗），法术生效期间理解或认识到的结论在法术结束后仍然能记得，但推导这个结论的过程就成了谜。两名施法者要按照精心设计的仪式，使他们的精神在根本上为解决智力问题或谜题协同起来；一名施法者获得暂时的智力提升，在之后的1小时中，INT检定获得一颗奖励骰。获得的理解层级和解决特定问题的能力由KP决定。\n别名：精神结合术、双子解读术\fEN:KEENNESSOFTWOALIKE/KeennessofTwoAlike\nCost: 4 magic points; 1 Sanity point \nCasting time: 1 hour\nHeightens mental clarity, concentration, and retention for 1D4+4 hours. The spell requires there to be two casters who are related by blood (both pay the spell’s cost). Conclusions understood or perceived during the spell’s effect are remembered when the spell ends, though the derivations of such conclusions may become mysterious. The two casters follow an elaborate ritual to essentially join their minds for the purpose of solving intellectual problems or puzzles; one caster receives a temporary intellectual enhancement, granting a bonus die to INT rolls for 1 hour thereafter. The level of comprehension gained and the ability to solve particular issues are determined by the Keeper.\nAlternative names: Mind Melding, Twin Comprehension."]
 
 
 ["エイボンの霧の車輪"]
 export = true
 aliases = ["伊波恩雾轮术","EIBON'SWHEELOFMIST","Eibon'sWheelofMist"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EIBON'SWHEELOFMIST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EIBON'SWHEELOFMIST.json"
-]
-
-
-
+options = ["JP:エイボンの霧の車輪\nコスト：1MP以上\n必要ラウンド：1d3分\nニャルラトテップにより召喚された生物から人々を隠す筒状の車輪型の霧を呼び出す。\fCN:伊波恩雾轮术\n消耗：1点魔法值（每英尺高度）；1点理智值\n施法用时：1D3分钟\n产生一个旋转的柱状区域，一人或多人可以在里面躲过某些神话生物。需要一张蚀刻有特殊秘法符号的小铜盘。施法者将铜盘放在地面上，站在上面，吟唱法术所用的咒语，并支付法术的消耗。若施法成功，法术将在施法者周围产生直径五英尺的、旋转的蓝色轮形迷雾。在旋转的柱形迷雾内，一切物体都被完全遮蔽。雾轮需要1D3分钟来完全成型，持续1D20+10分钟，然后消散。迷雾可以让人在奈亚拉托提普召唤的、或以奈亚拉托提普之名召唤的怪物眼中隐形。这些生物会将迷雾和雾中隐蔽的人视为不存在。它们也不会走到雾轮的位置，绝无意外。如果雾轮阻挡了道路，这些生物会停下来或者原路返回，原因不明。雾轮只会影响召唤生物，无法影响奈亚拉托提普。雾轮当中可以挤进许多人；但是，一旦有人的脚、手、头等露出来，法术将完全失效（这方面由KP裁定）。要隐藏一队正常身高的调查员，需要7点魔法值。在雾轮术施法之前登场的生物、不由奈亚拉托提普的力量召唤的生物，能够看见雾轮并移动进去。人可以从雾轮里走出来，但如果此人被发现，或者将任何东西（如子弹、刀剑等）穿过雾轮，幻象就会破坏。只要怪物注意到了异常，发现了有正在运行的幻象，法术的保护就失效了。\n别名：巫师的罩幕、欺诈的蓝雾、藏身处\fEN:EIBON'SWHEELOFMIST/Eibon'sWheelofMist\nCost: 1 magic point (per foot of height); 1 Sanity point\nCasting time: 1D3 minutes\nEvokes a whirling cylinder within which one or more persons can hide from certain Mythos creatures. A small bronze disk etched with a specific arcane symbol is required. The caster lays the disk on the floor, stands atop it, intones the words of the spell and expends the spell’s cost. With success, it generates a 5-foot-diameter wheel of spinning blue mist around the caster. Everything within the wheeling cylinder of mist is totally obscured. The wheel takes 1D3 minutes to form completely, lasts for 1D20+10 minutes, and then dissolves. The mist hides people from creatures summoned by Nyarlathotep or in the name of Nyarlathotep. Such a creature acts as if the mist and those obscured by it are not present. The creature will not move through the wheel’s position, even by accident. If the wheel blocks a path, the creature stops where it is or goes backward without knowing why. The wheel only affects summoned minions, never Nyarlathotep. As many people as can crowd into the mist can be obscured by the wheel; however, if one’s feet, head, etc., stick out then the illusion is ruined for all (such aspects are at the Keeper’s discretion). To hide a group of normal height investigators, 7 magic points are needed. Creatures present before the wheel of mist is cast or called up by power other than that of Nyarlathotep can see the wheel and move into it. A person may step out from the wheel but this will ruin the illusion if the stepper is spotted, as does passing anything through the mist, such as a bullet or a sword. Once the creature’s attention is caught and it realizes that an illusion is in progress, the protection of the spell is lost.\nAlternative names: The Wizard ’s Shroud, Blue Fog of Deception, The Hiding Place."]
 
 
 ["疫病の召喚"]
 export = true
 aliases = ["瘟疫召唤术","SUMMONPLAGUE","SummonPlague"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONPLAGUE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONPLAGUE.json"
-]
-
-
-
+options = ["JP:疫病の召喚\nドリームランド。1つの地域に病原菌を持ったネズミと昆虫が群れ集まり、家畜や人間に噛みついたり刺したりする。その結果恐ろしい疫病が広がる。\fCN:瘟疫召唤术\n消耗：20点魔法值；2D10点理智值\n施法用时：1小时\n本法术只能在幻梦境才能成功施放。令携带病原的鼠群和虫群涌向某个地区，传播可怕的瘟疫。被蜇咬的目标自动染病，初期症状在1D3天出现。此后目标每天损失1D20点CON，直到他死亡或痊愈为止。所有技能值也要每天减去10点。染病的梦想家可以用一次成功的「医学」检定治愈，过一夜即可恢复所有丢失的CON（和技能点）。虽然活过一次瘟疫代表对同种瘟疫的再次侵袭产生了免疫，但本法术每次使用都会产生一种不同的疾病，所以不能对此法术产生免疫。第一波带病生物会在2D10分钟后出现，再过2D10分钟会出现下一波。影响地区的范围直径第一天是一英里，此后每天增加一英里，直到带病生物在2D6天后死尽，或者瘟疫被某些方法驱散。召唤出的瘟疫不会传染，它只能通过昆虫和老鼠的蜇咬传播。若染病的梦想家在死亡之前醒来，他会痊愈，下一次来到幻梦境时不会有此疾病的任何症状。召唤出的瘟疫可以通过逆施放本法术来成功驱散；但是染病的人仍需要「医学」检定成功，否则仍然会慢慢死去。\n别名：引瘟虫群、瘟疫之鞭\fEN:SUMMONPLAGUE/SummonPlague\nCost: 20 magic points; 2D10 Sanity points\nCasting time: 1 hour\nThis spell may only successfully be cast in the Dreamlands. Causes disease-infested rats and insects to swarm over an area, spreading a terrible plague. If bitten or stung, a victim automatically contracts the plague, its first symptoms appearing in 1D3 days. The victim loses 1D20 CON every day thereafter until the victim dies or is cured. All skills drop by ten percentiles daily. An infected dreamer may be cured with a successful Medicine roll, regenerating all lost CON points overnight (as well as skill points). Although surviving the plague makes one immune to further infections of the same disease, the spell produces a different disease with every use, rendering immunity to this magic unlikely. The first disease-carrying creatures appear in 2D10 minutes, followed by additional hordes over the next 2D10 hours. The first day the affected area has a diameter of one mile, this area increasing by an additional mile per day until the plague bearing creatures die out in 2D6 days, or the plague is somehow banished. Summoned plagues are not contagious; the disease can only be transmitted by the bite of an insect or other animal. If an infected dreamer wakes before dying he or she is cured and shows no symptoms of the disease on their next visit to the Dreamlands. This summoned plague may be banished by successfully casting this spell in reverse; however, those already infected must still be cured with Medicine or face a lingering death. \nAlternative names: The Pestilential Swarm; Scourge of Death."]
 
 
 ["疫病の到来"]
 export = true
 aliases = ["瘟疫发生术","BRINGPESTILENCE","BringPestilence"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BRINGPESTILENCE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BRINGPESTILENCE.json"
-]
-
-
-
+options = ["JP:疫病の到来\nドリームランドに伝わる呪文。この邪悪な呪文は犠牲者を恐ろしい病気にかからせる。\fCN:瘟疫发生术(I)\n消耗：10点魔法值；1D10点理智值\n施法用时：即时\n这种邪恶的魔法能让受术者感染可怕的疾病。施放本法术需要一块腐烂的人肉。施法者须和目标进行一次POW对抗检定。若施法者胜出，法术立即生效，症状会在1D3小时内出现。病名可以根据KP的裁定而不同，但效果相同。感染传遍全身时，目标损失2D10点CON；此后每天损失1D10点CON，直到目标的CON归零并死亡。当然，在CON减少的同时，耐久值也会减少。另外，所有技能检定均得到一颗惩罚骰。生病的调查员可以在医院或类似设施接受专业医疗护理，通过成功的困难「医学」检定以治愈。治愈的调查员将每天回复5点CON，直到完全回复。深层魔法：某些致命而凶险的疾病可以同时被感染，因此目标会受到成倍的病痛和苦难。这种致命结合会加速CON的降低。治疗会更加困难，需要极难「医学」检定。这种疾病可能会造成后遗症，比如永久CON降低（10或20点）、毁容（降低APP）、或消耗症导致不可避免的截肢（降低STR、DEX）。\n别名：恶魔的气息瘟疫、阿提夸(Attiqua)的苦恼、渗出起泡的令人中毒的厌恶\fEN:BRINGPESTILENCE(I)/BringPestilence(I)\nCost: 10 magic points; 1D10 Sanity points\nCasting time: instantaneous\nThis foul spell causes the recipient to become infested with some dread disease. A piece of decayed human flesh is required for this spell. If the caster wins an opposed POW roll with the target the spell takes effect immediately, with the disease becoming apparent within 1D3 hours. At the Keeper’s discretion, the illness can vary but the effects are always the same. The target suffers the loss of 2D10 points of CON as the infection spreads through their body, followed by the loss of 1D10 CON every day thereafter until the target’s CON reaches zero and they die. Of course, as CON is reduced, so are hit points. Also, all skills are performed with a penalty die. The sick investigator may be cured with a successful Hard Medicine roll, while under professional medical care in a hospital or similar facility. A cured investigator will regenerate lost CON on a 5 per day basis until fully restored.\nDeeper magic: particularly virulent and nasty diseases may be combined; thus, the target suffers from multiple agonies and maladies. Such lethal combinations may hasten the reduction in CON. Treatment may be more difficult, requiring an Extreme Medicine roll. The consequence of such an illness may leave a lasting effect, such as a permanent CON reduction (by 10 or 20 points), physical disfiguration (reducing APP), or necessitating amputation of a limb if a wasting disease (reducing STR and/or DEX).\nAlternative names: Demon’s Breath Plague, Vexation of Attiquas, Oozing Bubbling Agonies of Intoxicating Repugnance.\fCN:瘟疫发生术(II)\n消耗：10点魔法值；1D10点理智值\n施法用时：即时\n本法术只能在幻梦境施放。疾病的症状因人而异，但在游戏机制上，法术的目标总是每天损失2D10点CON，直到他们痊愈或死亡为止。并且，在受疫病折磨的期间，他们所有技能检定要得到一颗惩罚骰。任何接触到得病梦想家的人（每天）有10%的几率也得病。相消施法(CounterMagic)、或者成功的困难「医学」检定可以治愈生病的梦想家，并令失去的CON在2D6小时内回复。如果生病的梦想家在死亡之前醒来（也就是离开幻梦境），他就得救了；下次来到幻梦境的时候不会有任何得过病的症状。\n别名：梦魇的腐败瘟疫、肮脏之触\fEN:BRINGPESTILENCE(II)/BringPestilence(II)\nCost: 10 magic points; 1D10 Sanity points\nCasting time: instantaneous\nThis spell may only be cast in the Dreamlands. It infests a target with dreadful diseases. The target must be touched by the caster, with an opposed POW roll determining the spell’s success. A piece of fresh human flesh is required as a material component (the caster touches the target with the flesh). The first symptoms manifest in 1D10 rounds. While the symptoms of individual illnesses vary, mechanically, victims of the spell always lose 2D10 CON points daily until they are cured or die. In addition, they also suffer a penalty die to all skill rolls while suffering from the disease. There is a 10% chance (per day) that anyone coming into contact with an infected dreamer will also contract the illness. Counter magic, or a successful Hard Medicine roll cures the diseased dreamer and allows lost CON points to regenerate in 2D6 hours. Should an infected dreamer wake up before perishing (thus, leaving the Dreamlands), he or she is saved. On the next visit to the Dreamlands no sign of the sickness exists.\nAlternative names: Putrid Pestilence of Nightmare, The Vile Touch."]
 
 
 ["延長"]
 export = true
 aliases = ["续命术","EXTEND","ExtendLife"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EXTEND.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EXTEND.json"
-]
-
-
-
+options = ["JP:延長\n呪文の使い手に不死を与えてくれる呪文。\fCN:续命术\n消耗：100点魔法值；15点点理智值\n施法用时：7天\n本法术虽然消耗巨大，但可以让施法者永生不死。施法者首先燃起一团大火，然后根据精确的指导召唤一个远古的存在，不知道它的名字——只有成功施放法术的人才知道这存在的真身为何，还没有哪个存在能有足够的暗示来被证实。召唤仪式漫长而复杂，考验巫师的极限。远古存在的出现会引发一次理智检定（损失1D6/1D20点），如果远古存在认为请求者可以接受（没人知道按什么标准），契约就达成了。契约会让远古存在代替施法者衰老；但一旦施法者死亡，远古存在就会占据并代替地球上的施法者——大概它会在死亡瞬间占据施法者的尸体（目击者可能会被这奇迹般的“恢复”吓到）。深层魔法：没有人知道远古存在在地球上呆了多久——它很可能是不朽的。鉴于巫师们渴望长生不老，可以想象这个存在现在已经占据了多少地球尸体，每一具都是活跃的，虽然每个躯体之间都可能相互隔离，但每具躯体都按着一个恐怖的巨大计划行动着。\n别名：延命术、血之条约、火与交易的仪式、魔鬼的交易\fEN:EXTEND/ExtendLife\nCost: 100 magic points; 15 POW; 3D6 Sanity points\nCasting time: 7 days\nThrough great cost, this spell grants immortality to the caster. The sorcerer first builds a great fire and then follows precise instructions to summon an ancient being, the name of which is not given—only those who have successfully cast the spell know the true identity of this being and not a single one has ever so much as hinted at the truth.The summons is lengthy and complex, pushing the sorcerer to their limits. The appearance of the ancient being provokes a Sanity roll (1D6/1D20 loss), and if the entity deems the petitioner acceptable (who knows by what measures) then an agreement is reached. The pact states that the entity will age instead of the caster, but if the caster should die, then the being will possess and replace the caster on Earth—presumably the being takes possession of the caster’s body at the point of death (witnesses may be shocked by the miraculous “recovery”). \nDeeper magic: just how long the ancient being remains on Earth is unclear—quite possibly it is immortal. Given the desires of wizards for longevity, it is conceivable that the entity now possesses numerous physical bodies on Earth, all active and perhaps isolated from one another, yet all working in unison towards some horrific grand scheme. \nAlternative names: Extend, The Pact of Blood, The Ritual of Fire and Exchange, The Devil’s Bargain."]
 
 
 ["黄金の蜂蜜酒の製法"]
 export = true
 aliases = ["黄金蜂蜜酒酿造术","BREWSPACE-MEAD","BrewSpaceMead"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWSPACE-MEAD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWSPACE-MEAD.json"
-]
-
-
-
+options = ["JP:黄金の蜂蜜酒の製法\nコスト：1服につき20MP、距離による追加のMPと正気度ポイント\n必要ラウンド：数日\n別名：虚空の伊吹、旅する者の薬、漆黒の夜の水銀酒\n人間が宇宙空間の真空と環境の変化の中を通り抜ける旅行に耐えられるようにする黄金の蜂蜜酒を作り出す。\fCN:黄金蜂蜜酒酿造术\n消耗：每剂20点魔法值；加上额外的魔法值和理智值消耗施法用时：7+天\n能制造出魔法的饮品，可以让人类在宇宙旅行中承受高度真空和剧烈变化的环境。酿造这种饮料和进行旅行对施法者、使用者来说是两个不同的阶段（施法者和使用者可以不同）。黄金蜂蜜酒的种类有很多，每种的效果都相同，而需要的材料各有不同。酿造黄金蜂蜜酒需要五种特殊材料（KP挑选），和至少一星期的酿造时间。当酒液开始起沫冒泡时，施法者须在酿造物中牺牲每剂20点的魔法值。这些魔法值可以分在很多天之中牺牲；点数越多，剂量越多。每一剂可以让一个人承受一次时空变幻的宇宙旅行。当黄金蜂蜜酒附魔完成时，旅行者必须找到旅行的工具——通常是坐骑：其中“拜亚基召唤术”可以提供一匹星间的骏马。对于这样的旅行，黄金蜂蜜酒生效时也需要消耗同等数量的魔法值和理智值，数值和服用此酒的旅行者旅行距离的光年数相关（参考黄金蜂蜜酒效果表）。旅行者服用一剂蜂蜜酒（大概也会同时带上回程用的），爬上“骏马”，号令坐骑，旅程就开始了。在这个时候，旅行者要支付旅行距离所需的魔法值和理智值。在太空中，旅客的精神和肉体是停滞的，几乎对周围环境毫无知觉。直到到达了目的地，药剂的效果才会结束，旅行者返回现实。\nKP 裁定：可能需要「克苏鲁神话」或「艺术/ 手艺（药剂）」检定来确保酿造按照正确的步骤进行。\n别名：虚空的呼吸、旅行者的半身、极黑之夜的水银饮剂。\fEN:BREWSPACE-MEAD/BrewSpaceMead\nCost: 20 magic points (per dose); variable additional magic and Sanity points\nCasting time: 7+ days\nCreates a magical drink that allows a human to withstandjourneys through the vacuum and vicissitudes of space. Brewing the drink and taking the journey representseparate stages for the caster and user (who may different). Different strains of space-mead exist, each providing thesame effects but all of them requiring different ingredients.Brewing space-mead requires five special ingredients(chosen by the Keeper) and requires at least a week ofbrewing time. Once the mead is foaming and bubbling,the caster must sacrifice 20 magic points per dose into thebrew. Magic points may be sacrificed over a number ofdays; the more points, the more doses. Each dose allowsone person to withstand one journey through space ofvarying distance and time.Once the space-mead has been enchanted, the travelermust find a means of transportation—usually a mount:among others, the spell Summon and Bind Byakhee (page175 and 42) can provide an interstellar steed.For all such journeys, the effectiveness of space-meadalso requires the expenditure of an equal number of magicpoints and Sanity points, commensurate to the journey’sdistance in light years by the traveler taking the drug (seeSpace-Mead Effectiveness Table). The traveler drinksthe dose (presumably bringing an extra dose for thereturn trip), climbs on, commands the mount and thejourney begins. It is at this point that the traveler paysthe necessary magic and Sanity point cost subject to thedistance being traveled. While in space, the traveler existsin a mental and physical stasis, nearly insensible to theirsurroundings. Upon arrival at the destination, the effectsof the brew conclude and normality returns.\n*Add another point of Sanity and magic, add another zero.Theoretically, 10 magic points and 10 Sanity points mightbe enough to reach any point in the universe, at least as weunderstand the universe…\nAt the Keeper’s discretion: a successful Cthulhu Mythos, orArt/Craft (Potions) roll may be needed to ensure that brewingdirections are carefully followed.\nAlternative names: Breath of the Void, The Traveller’sPortion, The Quicksilver Draft of Blackest Night."]
 
 
 ["カーの分配"]
 export = true
 aliases = ["灵魂分配术","APPORTIONKA","ApportionKa"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/APPORTIONKA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/APPORTIONKA.json"
-]
-
-
-
+options = ["JP:カーの分配\nコスト：臓器ごとに10MP、５POW、2d10正気度ポイント\n必要ラウンド：臓器ごとに1日\n別名：本質の吹き込み、意思の摘出、不死の息吹\n自分の生命の本質（カー）の一部を自分の重要な臓器の一つに注ぎ込み、魔力が付与された臓器を取り出し隠しておくことで不死身の一種になる。\fCN:灵魂分配术\n消耗：10点魔法值；5点POW；2D10点理智值（每个脏器）\n施法用时：每件脏器1天\n施法者的生命精华，又叫“Ka”，会有一部分转移到施法者的一个重要脏器上。这个附魔的脏器将从施法者的身体中移出，妥善保管在隐蔽的地方，并为施法者提供一种不死之身的方式：只要附魔的脏器安全无虞，施法者就免疫特定攻击的伤害，甚至可能不会死亡。本法术最早的使用者是黑暗法老的信徒，他们会移除自己的心、肝之类的重要脏器，然后把它们锁在安全的地方。若不是这个法术有弱点的话，它会让施法者事实上杀不死。这个弱点就是：施法者的大脑是法术发挥作用的位置，因此无法被移出。如果大脑被破坏了，其他脏器会失去魔法的特性，施法者也会死亡。一个人移出自己的脏器会损失2D10点理智值，每移除一件脏器就要永久减少5点POW。贯穿的攻击只能造成正常伤害（瞄准头部的攻击除外）。免疫攻击的类型由移除的脏器决定；例如肺被移除的话，施法者将不受缺氧的影响（所以他再也不怕溺水和窒息）。脏器的移除还可能为施法者提供免疫毒药等能力。如果施法者受到伤害，耐久值会照常减少，但是只会昏迷，不会死亡。施法者只有大脑被特别瞄准并毁坏后才会死亡。古埃及“灵魂”。详情请查询标准肉傀儡\f别名：精魂灌输、意志萃取、不死的气息EN:APPORTIONKA/ApportionKa\nCost: 10 magic points; 5 POW; 2D10 Sanity points (per organ)\nCasting time: 1 day per organ\nA portion of the caster’s life essence, or “Ka,” is transferred into one of his or her vital organs. The enchanted organ is then removed from the caster’s body, to be hidden away for safekeeping and providing the wizard with a form of invulnerability—as long as the enchanted organ remains safely hidden the wizard will not suffer particular attacks and may even be invulnerable to death. This spell was first used by followers of the Dark Pharaoh, who would remove a vital organ, such as the heart or liver, and lock them away in safe places. This would make the caster virtually impossible to kill, if not for the spell’s one weakness. The brain is the seat of the spell’s power and, as such, could not be removed. If the brain was destroyed, the other organs would lose their magical properties and the caster would die. Having one’s own insides removed costs 2D10 Sanity points and the permanent loss of 5 POW per organ removed. Attacks that impale cause only normal damage (unless the head is specifically targeted). Invulnerability stems from which organ is removed; for example if the lungs are removed then the caster is unaffected by lack of oxygen (thus drowning and suffocation are no longer threats). Removal of vital organs may also render the caster immune to poison and so forth. If the caster is harmed, hit points should be reduced as usual, leading to unconsciousness but not death. Death will only occur if the brain is specifically targeted and destroyed.\nAlternative names: Imbue Essence, Extraction of the Will, The Deathless Breath."]
 
 
 ["輝くトラペゾヘドロン"]
 export = true
 aliases = ["闪耀的偏方三八面体","SHININGTRAPEZOHEDRON","ShiningTrapezohedron"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SHININGTRAPEZOHEDRON.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SHININGTRAPEZOHEDRON.json"
-]
-
-
+options = ["JP:輝くトラペゾヘドロン\fCN:闪耀的偏方三八面体\fEN:SHININGTRAPEZOHEDRON/ShiningTrapezohedron\n[It was] a nearly black, redstriated polyhedron with many irregular flat surfaces; either a very remarkable crystal of some sort, or an artificial object of carved and highly polished mineral matter. It did not touch the bottom of the box, but was held suspended by means of a metal band around its center, with seven queerly-designed supports extending horizontally to angles of the box's inner wall near the top .... exposed, [Blake] could scarcely tear his eyes from it, and as he looked at its glistening surfaces he almost fancied it was transparent, with half-formed worlds of wonder within. — H. P. Lovecraft, "The Haunter of the Dark."\nAn enchantment. In the story, Robert Blake finds a peculiar metal box in which is mounted a stone about four inches thick. It rewards or damns those who look into it with visions of other worlds and dimensions—thus the stone shines with the interior light of things not of our world. The notes of a previous investigator refer to it as the Shining Trapezohedron, the correct description of the crystalline form. When the box is closed, a hideous avatar of Nyarlathotep comes, but one which either will not or dares not enter even the pale circles of light cast by street lamps. The stone exercises great command over human psyches. Getting rid of it proves too much for poor Blake, who perishes when the electric lights of Providence fail during a thunderstorm and the avatar emerges."]
 
 
 
 ["川の神の呪い"]
 export = true
 aliases = ["河神的诅咒","RIVERGODISCURSE","RiverGodCurse"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RIVERGODISCURSE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RIVERGODISCURSE.json"
-]
-
-
-
+options = ["JP:川の神の呪い\fCN:河神的诅咒\n幻梦境用。只有河神俄刻拉诺斯才能施展，他会对惹恼他的人施加这项诅咒。被下咒的人会感到强烈的口渴，在幻梦境，这诅咒每1D3天就会出现一次，持续1D3小时。在清醒的世界，此人不管喝多少水也无法平息口渴的感觉。该人的体质值会每天下降1点，到死为止；只有回到幻梦境，完成某种义务，诅咒才会解除。如果满足了河神的要求，下降的体质值就可以每天1点的速度取回。\fEN:RIVERGODISCURSE/RiverGodCurse\nDreamlands. This spell can be cast only by the River God Oukranos, after the target has earned his enmity. A devastating thirst plagues the target. In the Dreamlands, this curse takes effect every 1D3 days and lasts for 1D3 hours. In the Waking World, the afflicted cannot drink enough water ever to slake thirst. The target loses 1 CON daily, until death occurs or until he or she returns to the Dreamlands and fulfills some obligation. Once the River God is satisfied, the cursed recover 1 point of lost CON per week."]
 
 
 ["完全"]
 export = true
 aliases = ["完善术","PERFECTION","Perfection"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PERFECTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PERFECTION.json"
-]
-
-
-
+options = ["JP:完全 \n呪文の使い手は神の許しを得てこの呪文によってPOWのポイントを他の能力値のポイントに変換することができる。 \fCN:完善术 \n消耗：每转化1点POW，消耗1点属性点施法用时：24小时 \n如果神话神祇认同，施法者可以将POW点数转化为其他属性值（反之亦可），可以对施法者自己，也可以对他指定的目标。神祇可能索要任何代价——通常每转换一点角色点数便要支付一点角色点数。法术本身没有理智损失，但需要联络外神和旧日支配者，所以过程中的理智损失可能相当多。点数的转化持续1星期。深层魔法：神祇宠爱的仆从可能获得更多的恩赐，属性点数的转换将更久（可能是1个月甚至1年）。也有的变体可能赋予施法者从受害者身上吸取属性点并增长自己相关属性的能力（一一对应，除了POW以外）一段时间（假设为1个月）；但是，这个变体要求施法者额外支付1D8点理智值，须和目标进行一次POW对抗检定并胜出，法术才能生效。 \n别名：精神变化为肉体之术、（此处填入外神和旧日支配者的名字）的祝福 \n \fEN:PERFECTION/Perfection \nCost: 1 characteristic per point of POW converted \nCasting time: 24 hours \nGiven the permission of a Mythos deity, the caster may convert points of POW into points of other characteristics (or vice versa), either for the caster or for his or her designated target. The deity designates any costs involved—usually one for one in characteristic points. There is no Sanity charge per se, but contact with an Outer God or Great Old One is necessary, so the Sanity loss involved may be substantial. The conversion of points lasts for 1 week. \nDeeper magic: well-favored servants of Mythos deities may be granted greater boons, with the change in characteristics lasting for greater lengths of time (1 month or 1 year perhaps). \nAnother variant might grant the caster the ability to drain characteristic points from a victim and inflate their own corresponding characteristic (like-for-like for any characteristic, except for POW) for a set amount of time (suggest 1 month); although, such a variant would cost the caster at least 1D8 Sanity points and they would have to win an opposed POW roll with the victim for the spell to be successful. \nAlternative names: Transmutation of the Mind to Flesh, Blessing of (insert Outer God or Great Old One’s name here), Rite of Shaping."]
 
 
 ["記憶を曇らせる"]
 export = true
 aliases = ["记忆模糊术","CLOUDMEMORY","CloudMemory"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOUDMEMORY.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOUDMEMORY.json"
-]
-
-
-
+options = ["JP:記憶を曇らせる\nコスト：1d6MP、1d2正気度ポイント\n必要ラウンド：瞬時\n別名：惑わせ、唖然、当惑\n対象お特定の出来事を意識的に覚える能力を妨害する。対抗POWロールに成功すれば即座に効果が現れる。\fCN:记忆模糊术\n消耗：1D6点魔法值；1D2点理智值\n施法用时：即时\n本法术会阻碍目标有意识地回忆特定事件的能力。目标必须在施法者视野内，且能够接收施法者的指示。施法者须和目标进行一次POW对抗检定。如果胜出，法术立即生效。目标对一件特定事件的记忆将被阻塞。若此事非常恐怖，目标以后仍然可能做一些和它有着含糊关系的噩梦。如果法术失败，此事会在目标的印象中变得鲜明。施法者必须知道要阻碍的事件。他不能做模糊的命令，像是“忘掉你昨天做的事”。相反，他必须提到这件事，比如“忘掉你被怪物袭击的事”。本法术不能阻碍克苏鲁神话法术和神话知识，除非此知识和特定事件密切相关；它也无法取消理智值损失或消除疯狂。深层魔法：每额外投入10点魔法值，在决定法术成功的POW检定中便可获得一颗奖励骰。\n别名：昏乱糊涂术、惊愕失声术、故弄玄虚术\fEN:CLOUDMEMORY/CloudMemory\nCost: 1D6 magic points; 1D2 Sanity points\nCasting time: instantaneous\nBlocks the target’s ability to consciously remember a particular event. The caster must be able to see the target and the target must be able to receive the caster’s instructions. The spell takes effect immediately if the caster succeeds in an opposed POW roll with the target. If the caster wins, the target has one specified incident blocked from their memory. If the incident was terrifying, the target may thereafter still have nightmares vaguely relating to it. If the spell fails, the event in question becomes vivid in the target’s mind. The caster must know the specific event to be blocked. The caster cannot command something vague such as, “Forget what you did yesterday.” Instead, he or she must cite a certain event, such as, “Forget you were assaulted by a monster.” This spell cannot block knowledge of spells or of the Cthulhu Mythos unless the knowledge is firmly tied to a specific event, nor can it undo a Sanity loss or reverse insanity.\nDeeper magic: for each additional 10 magic points invested, the caster receives a bonus die to the opposed POW roll to determine the spell’s success.\nAlternative names: Befuddle, Dumbfound, Mystify."]
 
 
 ["犠性者を魅了する"]
@@ -270,28 +181,10 @@ aliases = ["迷身术","ENTHRALLVICTIM","EnthrallVictim"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ENTHRALLVICTIM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ENTHRALLVICTIM.json"
-]
-
-
-
-
-
 ["逆転移"]
 export = true
 aliases = ["反转移术","DETRANSFERENCE","Detransference"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DETRANSFERENCE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DETRANSFERENCE.json"
-]
-
-
-
 
 
 ["吸魂"]
@@ -504,7 +397,7 @@ options_urls = [
 
 
 
-["サメ"]
+["サメ"]的
 export = true
 aliases = ["COMMANDSHARK","CommandShark"]
 options = [""]
@@ -519,7 +412,7 @@ options_urls = [
 
 
 
-["イルカに命令する"]
+["イルカに命令する"]的
 export = true
 aliases = ["COMMANDPORPOISE","CommandPorpoise"]
 options = [""]
@@ -669,7 +562,7 @@ options_urls = [
 
 
 
-["シュド・メルの赤い印"]
+["シュド・メルの赤い印"]的
 export = true
 aliases = ["修德梅尔赤印术","REDSIGNOFSHUDDEM'ELL","RedSignofShuddeM'ell"]
 options = [""]
@@ -729,7 +622,7 @@ options_urls = [
 
 
 
-["心臓の探求"]
+["心臓の探求"]的
 export = true
 aliases = ["SEEKHEART","SeekHeart"]
 options = [""]
@@ -774,7 +667,7 @@ options_urls = [
 
 
 
-["種族の橿"]
+["種族の橿"]的
 export = true
 aliases = ["BindLoup-Garou","CAGEOFKIND","CageofKind"]
 options = [""]
@@ -1119,7 +1012,7 @@ options_urls = [
 
 
 
-["チャウグナー・フォーンの奴隷の召喚"]
+["チャウグナー・フォーンの奴隷の召喚"]的
 export = true
 aliases = ["肖格纳尔·方之奴仆召唤术","SUMMONTHRALLOFCHAUGNARFAUGN","SummonThrallofChaugnarFaugn"]
 options = [""]
@@ -1329,7 +1222,7 @@ options_urls = [
 
 
 
-["ドールヘ命令する"]
+["ドールヘ命令する"]的
 export = true
 aliases = ["巨噬蠕虫号令法","COMMANDDHOLE","CommandDhole"]
 options = [""]
@@ -1449,7 +1342,7 @@ options_urls = [
 
 
 
-["ニャンベのパワーの招来"]
+["ニャンベのパワーの招来"]的
 export = true
 aliases = ["CALLPOWEROFNYAMBE","PowerofNyambe"]
 options = [""]
@@ -1674,7 +1567,7 @@ options_urls = [
 
 
 
-["光の空隙"]
+["光の空隙"]的
 export = true
 aliases = ["VOIDLIGHT","VoidLight"]
 options = [""]
@@ -1929,7 +1822,7 @@ options_urls = [
 
 
 
-["窓の創造"]
+["窓の創造"]的
 export = true
 aliases = ["CREATEWINDOW"]
 options = [""]
@@ -1944,7 +1837,7 @@ options_urls = [
 
 
 
-["ミ＝ゴの催眠術"]
+["ミ＝ゴの催眠術"]的
 export = true
 aliases = ["MI-GOHYPNOSIS","Mi-GoHypnosis"]
 options = [""]
@@ -1974,7 +1867,7 @@ options_urls = [
 
 
 
-["魅惑"]
+["魅惑"]的
 export = true
 aliases = ["MESMERIZE","Mesmerize"]
 options = [""]
@@ -2019,7 +1912,7 @@ options_urls = [
 
 
 
-["冥王星の薬"]
+["冥王星の薬"]的
 export = true
 aliases = ["PLUTONIANDRUG","PlutonianDrug"]
 options = [""]
@@ -2184,7 +2077,7 @@ options_urls = [
 
 
 
-["夢の時代へ送る"]
+["夢の時代へ送る"]的
 export = true
 aliases = ["SENDDREAMING","SendDreaming"]
 options = [""]
@@ -2304,7 +2197,7 @@ options_urls = [
 
 
 
-["レンのガラス"]
+["レンのガラス"]的
 export = true
 aliases = ["GLASSFROMLENG","GlassFromLeng"]
 options = [""]
