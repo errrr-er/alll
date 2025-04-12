@@ -2,7 +2,7 @@
 // @name         光明世界D6池系统
 // @author       3987681449
 // @version      1.1.0
-// @description  暗烛规则适用、出bug详见README(Github)进行反馈
+// @description  暗烛规则适用、出bug可进群2150284119联系
 // @timestamp    1738358466
 // 2025-01-17 00:00:40 UTC
 // @license      Apache-2

@@ -12,7 +12,7 @@
 > [!CAUTION]
 > Markdown以适配Github阅读为主、使用其它软件阅读可能会出现不适配情况。
 > 
-> VitePress根据相关语法进行修改。
+> VitePress根据相关语法进行修改、一般为最新版。
 
 - Markdown
     - [在线/下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md)

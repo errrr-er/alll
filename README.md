@@ -24,5 +24,5 @@ qq群 - 2150284119
 以上方式选其一即可、反馈时请带上相关截图!!!
 
 # README
-- [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
 - [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
+- [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)

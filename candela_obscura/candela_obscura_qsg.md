@@ -1,9 +1,9 @@
 | 时间 | 必读/协议 | 官方 | 非官方 |
 | :-: | :-: | :-: | :-: |
-| 创建：2023-06-23 | 阅前必读：[README](https://github.com/errrr-er/alll/tree/main) | [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | [光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js)自制插件 | [实况&相关视频](https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm) |  |
-| 更新：2025-01-31 | 译文协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) | [角色表与其它相关材料](https://darringtonpress.com/candela/) |  |
-|  |  | [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) |  |
-|  |  | [规则书实体&电子版（$39.99）](https://shop.critrole.com/products/candela-obscura-core-rulebook) |  |
+| 创建：2023-06-23 | 阅前必读：[README](https://github.com/errrr-er/alll/tree/main/candela_obscura) | [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | [光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js) 自制插件 | [实况&相关视频](https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm) |  |
+| 更新：2025-01-31 | 译文协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) | [角色表与其它相关材料](https://darringtonpress.com/candela/) | 2150284119 交流群 |
+| [下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md) |  | [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) |  |
+| [在线使用](https://errrr-er.github.io/Candela_QSG/) |  | [规则书实体&电子版（$39.99）](https://shop.critrole.com/products/candela-obscura-core-rulebook) |  |
 
 此译本为非官方翻译，仅供参考。<br/>
 译者不对任何因使用此译本而产生的直接或间接后果承担责任。
@@ -557,50 +557,7 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 ```
 
 ### 费尔兰的地标
-The Fairelands are incredibly diverse in their 
-geographic range, positioning the city of Newfaire 
-within reach of a variety of locales. Some of these 
-places include: 
-
-**Seasway:** The small, coastal village to the east of 
-Newfaire. Here, structures are built to bend in the fierce 
-wind that sweeps in from the ocean. The majority of 
-fishing families that live and work in Seasway have 
-occupied this stretch of coast for generations.
-
-**Tottergrass:** The rural land south of the city. In 
-Tottergrass, farmers raise livestock and cultivate a 
-variety of crops to great effect, despite the seasonal 
-limits across the world, post-Shiver. The Ascendancy 
-has a strong, decades-long foothold within this region.
-
-**The Verge:** The high cliffs on the western edge of Hale. 
-On a misty day, it appears as if the Verge marks the end 
-of the world and one might fall off this precipice into 
-the sky. At its highest point, a famous monolith covered 
-in Ancient Fairen writing looms over the sea.
-
-**The Bridleborne Mountains:** The mountain range 
-to the east of Newfaire. With the Scarlet Wood at its 
-base, this rocky terrain hosts insular communities 
-and is the home of the most powerful bootleggers 
-in Hale. The Periphery struggles to gain a foothold 
-within Bridleborne, and citizens only truly answer to 
-their own enforcers.
-
-**The Scarlet Wood:** The ancient forest famous for 
-its vibrant red foliage. The trees of the Scarlet Wood 
-produce a hallucinogenic sap, the alcohol and powder 
-from which is prohibited across the Fairelands. 
-Scarlet libations are the foundation of a thriving 
-bootlegging industry.
-
-**Westwreck:** The war-torn land to the west of Newfaire. 
-This area marks the last stand of the war before Hale 
-drove back Otherwhere with electric advancements. 
-Westwreck is well known for the proliferation of 
-landmines that still pose a threat, and travelers must 
-hire a local guide to lead them through.
+0.07以后的版本
 
 # 暗烛
 
