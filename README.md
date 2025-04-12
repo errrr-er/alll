@@ -9,12 +9,7 @@
 > - 文件更新后会传至同样位置(但不另行通知)
 
 > [!IMPORTANT]
-> - 导入前须知&本体更新方式
->     - TOML制作原理为文件内不存储任何抽取结果、全靠骰子通过文件内的配置从github拉取相关信息
->         - 利：修正后无需手动更新(除非修改toml本体)
->         - 弊：骰子无法连接(github/镜像) = 无法使用
->         - 弊：涉及链接的修改会导致旧版本无法正常使用
-> - TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充
+> - TOML适配海豹系、其它骰系暂且未知、欢迎补充
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
 > ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice/sealdice_update_example_pointout.png?raw=true)
 
