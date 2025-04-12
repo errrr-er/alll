@@ -10,11 +10,9 @@
 > - 导入后位于`牌组列表`最底部
 >   - 因抽取词无法隐藏会导致底部**超级、超级长！！！**
 >   - 折叠请使用删除键右侧的小箭头(一次性、无法永久折叠)
-> - `.draw keys`过长会报错、抽取词将在`.draw mhelp`时提供图片版
+> - `.draw keys`过长会报错、抽取词请使用[目录](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/README.md)
 > - 尽量提供`中日英释义`、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
-
-[目录](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/README.md)
 
 ## 模组资料(包含图片) ver1.1.5
 
