@@ -8,7 +8,7 @@
 |英|アルハザードのランプ|阿尔哈兹莱德的油灯|LAMPOFALHAZRED|LampofAlhazred|
 |三语|暗黒の呪い|黑暗诅咒|CURSEOFDARKNESS|CurseofDarkness|
 |三语|イーデ・エタドの放逐|耶德·艾塔德放逐术|BANISHMENTOFYDEETAD|BanishmentofYdeEtad|
-||||||
+|三语|イシスの封印|伊希斯的封印|SEALOFISIS|SealofIsis|
 ||||||
 ||||||
 ||||||

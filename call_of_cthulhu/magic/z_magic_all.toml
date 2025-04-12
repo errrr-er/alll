@@ -69,7 +69,7 @@ options = ["JP:イーデ・エタドの放逐\nコスト：術者ごとに1d4+3M
 ["イシスの封印"]
 export = true
 aliases = ["伊希斯的封印","SEALOFISIS","SealofIsis"]
-options = [""]
+options = ["JP:イシスの封印\nコスト：任意の量のMP、1正気度ポイント\n必要ラウンド：さまざま（最低１時間）\n15㎥の魔術的な保護フィールドを作り出す。この範囲内の無生物は魔術的な攻撃から守られ、コストのMPと掛けられる魔術のMPで競う事ができる。\n\fCN:伊希斯的封印\n消耗：可变的魔法值；1点理智值\n施法用时：1小时\n保护无生命的物体免受魔法攻击。施法者投入任意点魔法值。如果魔法攻击（法术）进入了守护范围（50尺的立方体），攻击方的施法者必须用自己的POW与投入本法术魔法值的5倍进行一次POW对抗检定。如果攻击者获胜，则法术穿入守护，可能伤害内部的物体——守护也可能被破坏（用投入本法术魔法值的5倍作目标值进行检定：若失败，守护被破坏）注意，“伊西丝的封印”不能保护人类，也不是阻挡侵入者的物理屏障——它只能在守护区域中保护无生命的物体。\n别名：保护欲、赫典娜(Xthena)的封印\fEN:SEALOFISIS/SealofIsis\nCost: variable magic points; 1 Sanity point\nCasting time: 1 hour\nProtects inanimate objects against magical attack. The caster invests as many magic points as desired. If magical attacks (spells) are directed into the warded area (a 50-foot cube), an opposed POW roll is made by the attacking spellcaster versus the number of magic points invested multiplied by 5. If the attacker is successful, their spell cuts through the ward and may harm the object(s) inside—the ward may possibly be destroyed (make a roll against the number of magic points invested multiplied by 5: if failed, the ward is destroyed).Note that the Seal of Isis does not defend people, and is not a physical barrier against intruders—it only protects inanimate objects within the warded area.\nAlternative names: Desire of Protection, Seal of Xthenas, Seal of Nephren-Ka."]
 
 
 ["石の呪い"]
