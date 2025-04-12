@@ -51,7 +51,7 @@ options = ["JP:アブホースを目覚めさせる\nこの呪文は眠れる神
 ["アルハザードのランプ"]
 export = true
 aliases = ["阿尔哈兹莱德的油灯","LAMPOFALHAZRED","LampofAlhazred"]
-options = ["EN:LAMPOFALHAZRED/LampofAlhazred\nThe lamp of Alhazred was unusual in its appearance. It was meant for burning oil, and seemed to be of gold. It had the shape of a small oblong pot, with a handle curved up from one side, and a spout for wick and flame on the other. Many curious drawings decorated it, together with letters and pictures arranged into words in a language unfamiliar.—August Derleth and H. P. Lovecraft, "The Lamp of Alhazred." An enchantment. When lit, this lamp gives forth vapors that sends the minds of those who inhale the vapors into ecstasies of vision. These revelations are of the strange and weird landscapes of Mythos places and dimensions, and the ways of the entities there. If this lamp was actually used by alHazred, the author of the Al Azif, some of the breadth of his knowledge would be explained."]
+options = ["EN:LAMPOFALHAZRED/LampofAlhazred\nThe lamp of Alhazred was unusual in its appearance. It was meant for burning oil, and seemed to be of gold. It had the shape of a small oblong pot, with a handle curved up from one side, and a spout for wick and flame on the other. Many curious drawings decorated it, together with letters and pictures arranged into words in a language unfamiliar.—August Derleth and H. P. Lovecraft, 'The Lamp of Alhazred.' An enchantment. When lit, this lamp gives forth vapors that sends the minds of those who inhale the vapors into ecstasies of vision. These revelations are of the strange and weird landscapes of Mythos places and dimensions, and the ways of the entities there. If this lamp was actually used by alHazred, the author of the Al Azif, some of the breadth of his knowledge would be explained."]
 
 
 ["暗黒の呪い"]
@@ -153,7 +153,7 @@ options = ["JP:カーの分配\nコスト：臓器ごとに10MP、５POW、2d10�
 ["輝くトラペゾヘドロン"]
 export = true
 aliases = ["闪耀的偏方三八面体","SHININGTRAPEZOHEDRON","ShiningTrapezohedron"]
-options = ["JP:輝くトラペゾヘドロン\fCN:闪耀的偏方三八面体\fEN:SHININGTRAPEZOHEDRON/ShiningTrapezohedron\n[It was] a nearly black, redstriated polyhedron with many irregular flat surfaces; either a very remarkable crystal of some sort, or an artificial object of carved and highly polished mineral matter. It did not touch the bottom of the box, but was held suspended by means of a metal band around its center, with seven queerly-designed supports extending horizontally to angles of the box's inner wall near the top .... exposed, [Blake] could scarcely tear his eyes from it, and as he looked at its glistening surfaces he almost fancied it was transparent, with half-formed worlds of wonder within. — H. P. Lovecraft, "The Haunter of the Dark."\nAn enchantment. In the story, Robert Blake finds a peculiar metal box in which is mounted a stone about four inches thick. It rewards or damns those who look into it with visions of other worlds and dimensions—thus the stone shines with the interior light of things not of our world. The notes of a previous investigator refer to it as the Shining Trapezohedron, the correct description of the crystalline form. When the box is closed, a hideous avatar of Nyarlathotep comes, but one which either will not or dares not enter even the pale circles of light cast by street lamps. The stone exercises great command over human psyches. Getting rid of it proves too much for poor Blake, who perishes when the electric lights of Providence fail during a thunderstorm and the avatar emerges."]
+options = ["JP:輝くトラペゾヘドロン\fCN:闪耀的偏方三八面体\fEN:SHININGTRAPEZOHEDRON/ShiningTrapezohedron\n[It was] a nearly black, redstriated polyhedron with many irregular flat surfaces; either a very remarkable crystal of some sort, or an artificial object of carved and highly polished mineral matter. It did not touch the bottom of the box, but was held suspended by means of a metal band around its center, with seven queerly-designed supports extending horizontally to angles of the box's inner wall near the top .... exposed, [Blake] could scarcely tear his eyes from it, and as he looked at its glistening surfaces he almost fancied it was transparent, with half-formed worlds of wonder within. — H. P. Lovecraft, 'The Haunter of the Dark.'\nAn enchantment. In the story, Robert Blake finds a peculiar metal box in which is mounted a stone about four inches thick. It rewards or damns those who look into it with visions of other worlds and dimensions—thus the stone shines with the interior light of things not of our world. The notes of a previous investigator refer to it as the Shining Trapezohedron, the correct description of the crystalline form. When the box is closed, a hideous avatar of Nyarlathotep comes, but one which either will not or dares not enter even the pale circles of light cast by street lamps. The stone exercises great command over human psyches. Getting rid of it proves too much for poor Blake, who perishes when the electric lights of Providence fail during a thunderstorm and the avatar emerges."]
 
 
 
@@ -280,8 +280,7 @@ options = ["JP:視覚を奪う/視覚を回復させる\nコスト：8MP、視�
 ["時空門の創造"]
 export = true
 aliases = ["时空门创造术","CREATETIMEGATE","CreateGate"]
-options = ["JP:時空門の創造\n未来あるいは過去への門を開く呪文。\fCN:时空门创造术\n消耗：可变的POW\n施法用时：消耗的每点POW一小时\n创造一道通向过去或未来的时空门。本法术和“时空门创造术”（P120）类似，但是消耗的POW与穿越的年数而非旅行的里程相关。使用“时光门创造及旅行消耗”表（P180）作为指导来决定POW和魔法值消耗（KP可以根据需求调整数值）。本法术定位的时刻只能和预计的近似相同，但时光门创造之后，“这时”和“那时”之间的时间会精确地保持不变。\n深层魔法：巫师通过邪恶的记号和吟唱，可以创造多路径的时光门——这样一道时光门可以通向不止一个遥远时代。在通过时空门时，只有施法者清楚哪条路通往哪个时代。那些蠢到没有施法者帮助就通过时空门的人将无法分辨正确的路径，会抵达时空门通向的任意地点（随机决定）。时光门的创造过程不变。\n别名：时间跳跃建立术、现世乱流\fEN:CREATETIMEGATE/CreateGate\nCost: variable POW\nCasting time: 1 hour per 5 POW spent\n Creates a Time Gate to the future or to the past. The spell resembles the Gate spell (page 120) but costs POW for the number of years traveled rather than the number of miles journeyed. Use the Time Gate Creation and Travel Costs Table (page 180) as a guide to determine POW and magic point costs (the Keeper should adjust values as needed). The spell only yields a time pproximate to that desired, though once a Time Gate is created the exact interval between “now” and “then” remains the same.\nDeeper magic: the sorcerer is, through the use of iabolical 
-symbols and chants, able to create multi-pathway Time Gates—thus one door may lead to more than one distant time or future. Only the caster knows which path leads to which time on entering the Gate. Those foolish enough to use the Time Gate unassisted by the caster will be unable to determine the correct path and could arrive at any of the times the Gate is keyed to (roll randomly). The process of creation remains the same (see page 180).\nAlternative names: Create Time Warp, Temporal Vortex.\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/%E6%97%B6%E7%A9%BA%E9%97%A8120.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/%E6%97%B6%E5%85%89%E9%97%A8180.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/gate_creation_122.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/gate_location_123.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/time_gate_180.png?raw=true,type=show]"]
+options = ["JP:時空門の創造\n未来あるいは過去への門を開く呪文。\fCN:时空门创造术\n消耗：可变的POW\n施法用时：消耗的每点POW一小时\n创造一道通向过去或未来的时空门。本法术和“时空门创造术”（P120）类似，但是消耗的POW与穿越的年数而非旅行的里程相关。使用“时光门创造及旅行消耗”表（P180）作为指导来决定POW和魔法值消耗（KP可以根据需求调整数值）。本法术定位的时刻只能和预计的近似相同，但时光门创造之后，“这时”和“那时”之间的时间会精确地保持不变。\n深层魔法：巫师通过邪恶的记号和吟唱，可以创造多路径的时光门——这样一道时光门可以通向不止一个遥远时代。在通过时空门时，只有施法者清楚哪条路通往哪个时代。那些蠢到没有施法者帮助就通过时空门的人将无法分辨正确的路径，会抵达时空门通向的任意地点（随机决定）。时光门的创造过程不变。\n别名：时间跳跃建立术、现世乱流\fEN:CREATETIMEGATE/CreateGate\nCost: variable POW\nCasting time: 1 hour per 5 POW spent\n Creates a Time Gate to the future or to the past. The spell resembles the Gate spell (page 120) but costs POW for the number of years traveled rather than the number of miles journeyed. Use the Time Gate Creation and Travel Costs Table (page 180) as a guide to determine POW and magic point costs (the Keeper should adjust values as needed). The spell only yields a time pproximate to that desired, though once a Time Gate is created the exact interval between “now” and “then” remains the same.\nDeeper magic: the sorcerer is, through the use of iabolical symbols and chants, able to create multi-pathway Time Gates—thus one door may lead to more than one distant time or future. Only the caster knows which path leads to which time on entering the Gate. Those foolish enough to use the Time Gate unassisted by the caster will be unable to determine the correct path and could arrive at any of the times the Gate is keyed to (roll randomly). The process of creation remains the same (see page 180).\nAlternative names: Create Time Warp, Temporal Vortex.\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/%E6%97%B6%E7%A9%BA%E9%97%A8120.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/%E6%97%B6%E5%85%89%E9%97%A8180.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/gate_creation_122.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/gate_location_123.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/time_gate_180.png?raw=true,type=show]"]
 
 
 ["自己保護の創造"]
@@ -344,9 +343,9 @@ aliases = ["心跳停止术","STOPHEART","StopHeart"]
 options = [""]
 
 
-["心臓の探求"]的
+["心臓の探求"]
 export = true
-aliases = ["SEEKHEART","SeekHeart"]
+aliases = ["记得修改啊啊啊","SEEKHEART","SeekHeart"]
 options = [""]
 
 
@@ -362,9 +361,9 @@ aliases = ["兽化人束缚术","BINDLOUP-GAROU","BindWere-Creature"]
 options = [""]
 
 
-["種族の橿"]的
+["種族の橿"]
 export = true
-aliases = ["BindLoup-Garou","CAGEOFKIND","CageofKind"]
+aliases = ["记得修改啊啊啊","BindLoup-Garou","CAGEOFKIND","CageofKind"]
 options = [""]
 
 
@@ -500,9 +499,9 @@ aliases = ["灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
 options = [""]
 
 
-["チャウグナー・フォーンの奴隷の召喚"]的
+["チャウグナー・フォーンの奴隷の召喚"]
 export = true
-aliases = ["肖格纳尔·方之奴仆召唤术","SUMMONTHRALLOFCHAUGNARFAUGN","SummonThrallofChaugnarFaugn"]
+aliases = ["记得修改啊啊啊","肖格纳尔·方之奴仆召唤术","SUMMONTHRALLOFCHAUGNARFAUGN","SummonThrallofChaugnarFaugn"]
 options = [""]
 
 
@@ -584,9 +583,9 @@ aliases = ["透特之咏","CHANTOFTHOTH","ChantofThoth"]
 options = [""]
 
 
-["ドールヘ命令する"]的
+["ドールヘ命令する"]
 export = true
-aliases = ["巨噬蠕虫号令法","COMMANDDHOLE","CommandDhole"]
+aliases = ["记得修改啊啊啊","巨噬蠕虫号令法","COMMANDDHOLE","CommandDhole"]
 options = [""]
 
 
@@ -632,9 +631,9 @@ aliases = ["尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
 options = [""]
 
 
-["ニャンベのパワーの招来"]的
+["ニャンベのパワーの招来"]
 export = true
-aliases = ["CALLPOWEROFNYAMBE","PowerofNyambe"]
+aliases = ["记得修改啊啊啊","CALLPOWEROFNYAMBE","PowerofNyambe"]
 options = [""]
 
 
@@ -722,9 +721,9 @@ aliases = ["光明与黑暗之眼","EYEOFLIGHTANDDARKNESS","EyeofLightandDarknes
 options = [""]
 
 
-["光の空隙"]的
+["光の空隙"]
 export = true
-aliases = ["VOIDLIGHT","VoidLight"]
+aliases = ["记得修改啊啊啊","VOIDLIGHT","VoidLight"]
 options = [""]
 
 
@@ -824,15 +823,15 @@ aliases = ["精神震爆术","MINDBLAST","Mindblast"]
 options = [""]
 
 
-["窓の創造"]的
+["窓の創造"]
 export = true
-aliases = ["CREATEWINDOW"]
+aliases = ["记得修改啊啊啊","CREATEWINDOW"]
 options = [""]
 
 
-["ミ＝ゴの催眠術"]的
+["ミ＝ゴの催眠術"]
 export = true
-aliases = ["MI-GOHYPNOSIS","Mi-GoHypnosis"]
+aliases = ["记得修改啊啊啊","MI-GOHYPNOSIS","Mi-GoHypnosis"]
 options = [""]
 
 
@@ -842,9 +841,9 @@ aliases = ["未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
 options = [""]
 
 
-["魅惑"]的
+["魅惑"]
 export = true
-aliases = ["MESMERIZE","Mesmerize"]
+aliases = ["记得修改啊啊啊","MESMERIZE","Mesmerize"]
 options = [""]
 
 
@@ -860,9 +859,9 @@ aliases = ["彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
 options = [""]
 
 
-["冥王星の薬"]的
+["冥王星の薬"]
 export = true
-aliases = ["PLUTONIANDRUG","PlutonianDrug"]
+aliases = ["记得修改啊啊啊","PLUTONIANDRUG","PlutonianDrug"]
 options = [""]
 
 
@@ -926,9 +925,9 @@ aliases = ["入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
 options = [""]
 
 
-["夢の時代へ送る"]的
+["夢の時代へ送る"]
 export = true
-aliases = ["SENDDREAMING","SendDreaming"]
+aliases = ["记得修改啊啊啊","SENDDREAMING","SendDreaming"]
 options = [""]
 
 
@@ -974,9 +973,9 @@ aliases = ["拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
 options = [""]
 
 
-["レンのガラス"]的
+["レンのガラス"]
 export = true
-aliases = ["GLASSFROMLENG","GlassFromLeng"]
+aliases = ["记得修改啊啊啊","GLASSFROMLENG","GlassFromLeng"]
 options = [""]
 
 
