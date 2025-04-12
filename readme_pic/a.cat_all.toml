@@ -14,7 +14,7 @@ update_Urls = [
 
 ["猫help"]
 export = true
-options = [""]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/%E4%BD%BF%E7%94%A8%E6%97%B6%E2%80%A6%E2%80%A6.png?raw=true,type=show]"]
 
 
 ["猫翻译"]
