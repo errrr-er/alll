@@ -178,283 +178,103 @@ options = ["JP:記憶を曇らせる\nコスト：1d6MP、1d2正気度ポイン�
 ["犠性者を魅了する"]
 export = true
 aliases = ["迷身术","ENTHRALLVICTIM","EnthrallVictim"]
-options = [""]
+options = ["JP:犠性者を魅了する\fCN:迷身术\n消耗：2点魔法值；1D6点SAN值\n施法用时：1轮\n施法者在法术生效之前必须能和目标平静地交谈。在一轮左右的交谈之后，施法者须和目标进行一次对抗检定并胜出，法术才能生效。若成功，目标会被定住无法动弹，呆若木鸡，只有物理攻击或者类似的惊吓事件能使其从恍惚状态中恢复过来。\n别名：麻木定身、诱骗的银舌\fEN:ENTHRALLVICTIM/EnthrallVictim\nCost: 2 magic points; 1D6 Sanity points\nCasting time: 1 round\nThe caster must be able to speak calmly with the target before the spell can take effect. After a round or so of talking, an opposed POW roll is made between the caster and target: if the caster is successful, the target stands struck, numb and dumb, until relieved from the trance by physical assault or some similarly shocking event.\nAlternative names: Strike Dumb, The Silver Beguiling Tongue."]
 
 
 ["逆転移"]
 export = true
 aliases = ["反转移术","DETRANSFERENCE","Detransference"]
-options = [""]
+options = ["JP:逆転移 \n皮膚の兄弟団。これは身体部分の転移を逆行させる呪文である。 \fCN:反转移术 \n消耗：10点魔法值；10点POW施法用时：1轮 \n本法术是皮肤兄弟会守护的秘密，它是“身体部件转移术”的逆法术。施法者须和目标进行一次POW对抗检定：若胜出，则借来的器官或者血肉会出现在施法者的手上，浸透液体并逐渐腐烂。丧失了要害器官的目标通常都会很快死去。本法术不成功就不会消耗理智值，成功以后消耗1D10点理智值（除非施法者有医护经验）。备注：参考《东方快车上的恐怖》获取更多有关皮肤兄弟会的信息。 \n别名：不详。 \n \fEN:DETRANSFERENCE/Detransference \nCost: 10 magic points; 10 POW \nCasting time: 1 round \nThis spell is a guarded secret of the Brotherhood of the Skin and reverses the Transfer Body Part spell (page 181). Oppose the caster’s POW with the target’s POW: if the caster succeeds, the borrowed organs and fleshy members appear in the caster’s hands, sodden and rotting. Bereft of vital organs, the target normally dies quickly. The spell costs no Sanity points unless it succeeds, in which case, it costs 1D10 Sanity (unless the caster has experience as a doctor or nurse). \nNote: see Horror On The Orient Express for details concerning the Brotherhood of the Skin. \nAlternative names: none known."]
 
 
 ["吸魂"]
 export = true
 aliases = ["生命偷取术","STEALLIFE","StealLife"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STEALLIFE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STEALLIFE.json"
-]
-
-
-
+options = ["JP:吸魂\n呪文の使い手を若返らせるために犠牲者の命を吸い取る呪文。\fCN:生命偷取术\n消耗：15点魔法值；1D20点理智值\n施法用时：1+轮\n这一恶魔般的残酷法术会从受害者身上榨取生命，让施法者变年轻。法术必须在满月下施放，目标必须能够看到、听到施法者。施法者须和目标进行一次POW对抗检定并胜出，法术才能生效；若成功，目标开始衰老腐朽，他们先天的生命力和活力会被施法者消耗掉。此法术施放后的每轮，目标就要分别失去1D10点STR、CON、DEX、POW、APP。施法者每从目标身上榨出一点属性点，就可以变年轻一天。例如，如果本法术从目标的属性当中共榨出40点属性点，施法者将变年轻40天。同时；目标会枯槁；肌肉变成灰色并层层剥落，等到法术完全结束，他会变成一具可怖的干瘪躯壳（目睹此场景损失1/1D6点理智值）。施法者也可以在目标死亡之前的任何时刻终止法术——目标的外观明显随着法术的继续而变坏（苍白的皮肤、纸一般的皮肤、凋萎挛曲的肢体等等）。如果施法者在目标未死时被杀，则法术撤回，目标所有丢失的属性值会立即返还。深层魔法：本法术可以在非满月的时候施放。这个时候施法者不能得到返老还童的好处，但如果施法者一意孤行，目标仍然会受难而死。若法术在狩猎月（秋分后的第一个满月）施放，施法者可以每轮榨出最大值10点的STR、CON、DEX、POW、APP属性点（而非1D10点）。本法术的一种变体能让施法者把榨出的属性点直接转化为自己的POW点数（每吸取5点属性点增加1点POW）。\n别名：活力榨取术、猩红仪式、五教团的亵渎圣礼\fEN:STEALLIFE/StealLife\nCost: 15 magic points; 1D20 Sanity points\nCasting time: 1+ round\nThis devilishly cruel spell drains life from a victim to make the caster younger. The spell must be cast under a full moon and the target must be within sight and hearing of the caster. For the spell to take effect the caster must win an opposed POW roll with the target: if successful, the target begins to age and decay, with their innate life and vitality being consumed by the caster. On each round after the spell is cast, the target loses 1D10 points each of STR, CON, DEX, POW, and APP. For each characteristic point drained from the target, the caster becomes a day younger. For example, if the spell leeches a total of 40 points from the target’s characteristics, the caster would become 40 days younger. Meanwhile, the target withers; flesh turns grey and begins to flakes away until, at the full conclusion of the spell, the target has become a horrid dry husk (calling for Sanity rolls from witnesses for 1/1D6 loss). The caster may choose to end the spell at any point before the target dies—the victim’s apparent condition obviously worse the longer the spell continues (pale skin, paper-like skin, withered and gnarled limbs, and so on). If the caster is slain before the target dies, the spell is revoked and the target’s lost characteristic points immediately return to him or her.\nDeeper magic: this spell may be cast at times other than on a full moon. In such an event, the caster does not gain the benefits of restored youth, but the victim still suffers and dies if the caster so chooses. If the spell is cast under a Hunter’s Moon (the full moon following the autumnal equinox), the caster is able to leech the full maximum of 10 characteristic points per round (rather than roll 1D10) from STR, CON, DEX, POW, and APP. A variant of this spell allows the caster to turn the characteristic points drained directly into POW points (1 POW point per 5 characteristic points drained).\nAlternative names: Leech Vitality, The Rite in Crimson, The Blasphemous Sacrament of the Five Cuts."]
 
 
 ["狂気の笛"]
 export = true
 aliases = ["疯狂之笛","PIPESOFMADNESS","PipesofMadness"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PIPESOFMADNESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PIPESOFMADNESS.json"
-]
-
-
-
+options = ["JP:狂気の笛\n聞くものを狂気にする笛。\fCN:疯狂之笛\n消耗：5点魔法值；1D6点理智值\n施法用时：5轮\n听到本法术的人有疯狂的危险。本法术必须用“诅咒之笛创建术”创建的附魔骨笛施放。施法者用笛子演奏一段特殊的奇怪旋律，然后牺牲法术必要的消耗。所有能听到奇怪旋律的人必须进行理智检定；若失败，听者立即失去5点理智值并疯狂发作（听者陷入临时性疯狂）；若理智检定成功，听者失去1D3点理智值（一般不会疯狂）。笛子演奏时，每听到5轮笛声，听者就要做一次理智检定（损失累计）。如果笛子的演奏者还有理智值可以失去，他们可能需要在演奏的前五轮结束时进行一次理智检定（KP裁定）。如果此检定失败，演奏者将临时疯狂（失去5点理智值）并只要有可能就不停地演奏这异界的旋律。听者如果能成功抵抗旋律的效果，也可以尝试阻止演奏的继续。\n别名：天堂的黑暗之歌、深渊之旋律、七重地狱的合奏\fEN:PIPESOFMADNESS/PipesofMadness\nCost: 5 magic points; 1D6 Sanity points\nCasting time: 5 rounds\nThose hearing this spell risk insanity. The spell must be cast with the enchanted bone pipe created by the spell Create Curse Whistle (page 86). The caster plays a specific weird melody on the pipes and sacrifices the necessary costs. All within earshot of the strange melody should make a Sanity roll: failure causes the loss of 5 Sanity points and an immediate bout of madness (the listener going temporarily insane); if the Sanity roll is successful, the listener loses 1D3 Sanity points (and ordinarily does not go insane). Listeners should make a Sanity roll for every 5 rounds that the pipes are played and heard (losses being cumulative). Should the player of the pipes have Sanity to lose, they may be asked to also make a single Sanity roll at the end of the first five rounds of playing (at the Keeper’s discretion). If such a roll is failed, the player goes temporarily insane (losing 5 Sanity points) and becomes locked into playing the otherworldly tune for as long as possible. Listeners may attempt to prevent further playing if they can successfully resist the melody’s effect.\nAlternate names: The Dark Song of the Heavens, Ye Abyssal Melody, Harmony of the Seven Hells."]
 
 
 ["恐怖の注入"]
 export = true
 aliases = ["恐惧植入术","IMPLANTFEAR","ImplantFear"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPLANTFEAR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPLANTFEAR.json"
-]
-
-
-
+options = ["JP:恐怖の注入 \nコスト：12MP、1d6正気度ポイント \n必要ラウンド：瞬時 \n別名：破滅の指、エイボンのジンクス、邪眼 \n対象の恐怖を引き起こし、集中力を奪い行動を混乱させる。対象は正気度ロールを行い、0/1d6正気度ポイントを失いながら安全な場所へと逃げ出す。 \fCN:恐惧植入术 \n消耗：12点魔法值；1D6点理智值 \n施法用时：即时 \n本法术造成震撼心灵的恐惧，破坏目标的专注并打断其行动。施加这个诅咒时，施法者必须能看到目标并用手指向他。突然的不安感会使目标损失0/1D6点理智值，他们会觉得自己不得不撤退到安全的地方——只要是他平常能感觉安全和安心的地方。 \n别名：末日之指、伊波恩厄运术 \fEN:IMPLANTFEAR/ImplantFear \nCost: 12 magic points; 1D6 Sanity points \nCasting time: instantaneous \nCauses a soul-chilling dread, breaking the target’s concentration and disrupting his or her actions. The caster must be able to see and point a finger at the target while invoking the curse. The sudden unnerving costs the target 0/1D6 Sanity points, and they feel compelled to retreat to a safe place—anywhere the person would normally feel safe and secure. \nAlternative names: Finger of Doom, Eibon’s Jinx, The Evil Eye."]
 
 
 ["空中浮遊"]
 export = true
 aliases = ["飘浮术","LEVITATE","Levitate"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LEVITATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LEVITATE.json"
-]
-
-
-
+options = ["JP: 空中浮遊\n 呪文の使い手あるいは選ばれた対象の体をゆっくりと空中に浮かばせる呪文。 \f CN: 飘浮术\n 消耗：可变的魔法值；1D6点理智值\n 施法用时：即时\n 可令施法者或一个选定的目标在空中缓缓漂浮。施法者必须能接触目标。目标人物每有5点SIZ，漂浮他就需要投入1点魔法值。本法术能让目标飘浮离地3~5尺，持续1D6分钟。如果从高处落下来，目标会以慢动作下落，并且在离地几英尺的高度停止。在法术生效期间每多消耗一点魔法值，使用者就可以让目标水平或竖直移动一码。目标随施法者的意志移动，无法自行停止，除非他抱住大树或者类似的支柱。这种情况下需要做一次对抗检定：目标的STR对抗施法者的标胜出，法术终止，目标落到地面上。\n 别名：指挥重力、颤栗的悬浮 \f EN: LEVITATE/Levitate\n Cost: variable magic points; 1D6 Sanity points\n Casting time: instantaneous\n Causes the caster or a chosen target to float slowly through the air. The caster must be able to touch the target. 1 magic point per 5 points of SIZ of the person to be levitated must be invested. The spell levitates the target 3–5 feet off the ground for 1D6 minutes. If falling from a height, the target falls in slow motion and halts several feet off the ground. Each extra magic point expended during the spell’s effect allows the user to move the target one yard horizontally or vertically. The target floats as the caster wills, helpless to stop moving except by grabbing a tree limb or similar brace. In that case, an opposed roll is made: the target’s STR against the caster’s POW. If the target wins, the spell is broken and the target falls to the ground.\n Alternative names: Command Gravity, Tremulous Suspension."]
 
 
 ["クトゥルフのわしづかみ"]
 export = true
 aliases = ["克苏鲁抓攫术","GRASPOFCTHULHU","GraspofCthulhu"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRASPOFCTHULHU.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRASPOFCTHULHU.json"
-]
-
-
-
+options = ["JP:クトゥルフのわしづかみ \n1人または複数の対象を押しつぶすような圧力に身動きをできなくしてしまい、対象から一時的にSTRを盗み取る。 \fCN:克苏鲁抓攫术 \n消耗：2D6点魔法值（每分钟）；1D6点理智值 \n施法用时：1轮 \n可怕的碾压般的压力定住一个或多个目标，暂时抽取他们的STR。法术的范围是10码，可以同时作用于多人；但是，每多一个目标，维持法术时每分钟就要额外消耗2D6点魔法值——只要施法者有足够的魔法值消耗，法术想持续多少分钟就能持续多少分钟，不需要额外的理智值消耗，但是施法者必须全程专注施法。施法者须和目标进行一次对抗检定并胜出，法术才能生效：若施法者胜出，目标会感到巨大的压力从天而降，身体无法动弹——好像被伟大的克苏鲁的强悍的触手捆住一样。法术每持续一分钟，目标就要暂时失去5D10点STR。若目标的STR减少到0以下，他将昏迷。 \n别名：水海者的窒息触手、窒息术、拉莱耶的礼物 \fEN:GRASPOFCTHULHU/GraspofCthulhu \nCost: 2D6 magic points (per minute); 1D6 Sanity points \nCasting time: 1 round \nImmobilizes one or more targets with a terrible, crushing pressure, temporarily robbing STR. The spell’s range is 10 yards and may affect more than one person at a time; however, each additional target costs an additional 2D6 magic points per minute the spell is sustained—can be extended for as many minutes as the caster’s magic points can buy without additional Sanity point cost, but the caster must concentrate on the spell during the entire time. For the spell to take effect the caster must succeed in an opposed POW roll with the target(s): if the caster wins, the victim(s) feels great pressure bearing down upon his or her body and is unable to move—as though wrapped by the mighty tentacles of Great Cthulhu. For each minute the spell lasts, the target temporarily loses 5D10 STR points. If the target’s STR drops to zero or less, he or she falls unconscious. \nAlternative names: The Suffocating Tentacles of the Watery Deeps, The Smothering, The Gift of R’lyeh."]
 
 
 ["腐った外皮の呪い"]
 export = true
 aliases = ["腐烂外皮之诅咒","CURSEOFTHEPUTRIDHUSK","CurseofthePutridHusk"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHEPUTRIDHUSK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHEPUTRIDHUSK.json"
-]
-
-
-
+options = ["JP:腐った外皮の呪い\nコスト：5MP、10正気度ポイント\n必要ラウンド：1時間\n別名：油断ならぬ悪夢、何時の敵をさいなむ七体の悪魔の召喚、弱気心の萎縮\n対象は自分の皮膚が腐って崩れ落ちる幻影を見て1d10の正気度を失い、2~3分間失神する。対抗INTロールに成功する必要がある。\fCN:腐烂外皮之诅咒\n消耗：5点魔法值；10点理智值\n施法用时：1小时\n本法术会给目标带去理智崩溃的幻觉。目标会发现自己的皮肤明显地开始朽烂腐坏。外观的恶化似乎极其迅速，结果出现巨大的空洞和裂缝，体内的脏器开始从中漫溢而出（这个过程中目标损失1D10点理智值）。随后目标会昏倒，并在几分钟后醒来，毫发无损。施法者须和目标进行一次INT对抗检定并胜出，法术才能生效。如果法术在夜间目标睡着时施放，目标要获得一颗惩罚骰。效果的时间共约二十分钟，包含昏倒的时间。施法者必须认识目标，且必须有一些属于目标的个人物品作为法术的专注点。被这个法术击中的经历是灾难性的；但是「精神分析」检定成功可以让目标接受这些无法理解的梦境和幻觉，恢复此次理智损失的一半。精神科药物对这种攻击没有什么补偿作用。深层魔法：依上文所述，法术产生的幻觉仅有目标可见。如果额外投入5点魔法值，法术产生的幻象会影响所有人；观察者须进行理智检定（损失0/1D6点）。如果施法者消耗20点魔法值、25点POW、20点理智值，他可以让法术效果真实发生；每轮中目标还要受到1D6点伤害，直到其死亡或者施法者因某种原因终止法术。\n别名：阴险梦魇术、七魔从令，折磨汝敌、弱者意志摧残术\fEN:CURSEOFTHEPUTRIDHUSK/CurseofthePutridHusk\nCost: 5 magic points; 10 Sanity points\nCasting time: 1 hour\nBrings sanity wracking illusions to the target of the spell. The target perceives that his or her skin is visibly rotting and corrupting. The outward appearance seems to deteriorate swiftly, so that great rents and tears occur through which internal organs begin to tumble out (with the target losing 1D10 Sanity points in the process). Thereupon the target faints and awakens in a few minutes, whole and normal. For the spell to take effect an opposed INT roll must be made between the caster and target—impose one penalty die on the target if the spell is cast at night while the target is sleeping. The entire cycle of effect takes about twenty minutes. Note that repeated applications can drive a target insane. The caster must know the target, and the caster must have a personal object belonging to the target as a focus. The experience of the spell is devastating; however, successful Psychoanalysis can help the victim come to terms with these inexplicable dreams and hallucinations and restore half of the Sanity loss.\nDeeper magic: as described, the illusory effect of the spell is apparent only to the target. For an extra 5 magic points, the illusion of the spell affects everyone; observers should make a Sanity roll (0/1D6 loss). For the cost of 20 magic points, 25 POW, and 20 Sanity points the caster can make the spell actually physically happen: each round the target also suffers 1D6 damage until death or until the caster is somehow prevented from continuing the spell.\nAlternative names: The Insidious Nightmare, Summon Seven Devils to Afflict Thine Enemy, Wither the Mind of the Weak."]
 
 
 ["黒い束縛"]
 export = true
 aliases = ["僵尸创造术","BLACKBINDING","CreateZombie"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLACKBINDING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLACKBINDING.json"
-]
-
-
-
+options = ["JP:黒い束縛\n普通のゾンビを創造することができる。\fCN:僵尸创造术\n消耗：16 点魔法值；1D6 点理智值\n施法用时：1 星期\n必须泼洒仪式用的液体到尸身上或者尸体葬在的坟墓中。KP 决定仪式液体的成分——至少要有一部分是难以合法取得的。尸体即可自行熟成。在这一个星期结束时，施法者返回坟墓，吟诵束缚仪式。在半个小时的吟唱结束后，尸体会从坟墓中爬出来，之后就开始代行施法者的意愿。僵尸只会执行普通而简单的任务，如“保护这个”“拿那个”“杀了他！”用这种方式制造的僵尸会在复苏以后继续腐坏。所以，想要维持稳定的僵尸仆从的巫师必须定期制造替代品。\n别名：不死之仪式、黑色束缚、苍白斗篷、死者苏生术\fEN:BLACKBINDING/CreateZombie\nCost: 16 magic points; 1D6 Sanity points\nCasting time: 1 week\nA ritual liquid must be poured over a corpse or into the grave where a corpse lies. The Keeper determines the ingredients of the liquid: at least one part should be difficult to obtain legally. The corpse is left to mature. At the end of a week, the caster comes to the grave and intones the binding ritual. At the end of the half-hour chant, the corpse claws its way from the grave and thereafter performs the caster’s will. The zombie will perform mundane and simple tasks such as “guard this,” “fetch that,” or “kill him!” A zombie created in this manner continues to rot after it has risen. Thus a wizard wishing a constant zombie servant must periodically create replacements.\nAlternative names: Ritual of the Undying, Black Binding, The Ashen Cowl, Raising of the Dead."]
 
 
 ["コウモリ形態"]
 export = true
 aliases = ["蝙蝠化形法","BATFORM","BatForm"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BATFORM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BATFORM.json"
-]
-
-
-
+options = ["JP:コウモリ形態\nこの呪文は呪文の使い手にオオコウモリの形態と能力を身につけさせるものだが、その間も自分の知性と意思をそのまま保っている。\fCN:蝙蝠化形法\n消耗：12点魔法值；1D8点理智值\n施法用时：即时\n可以让施法者变成蝙蝠形态并拥有它的能力（飞行和敏锐听力），并保持他的智力和意识。变成蝙蝠形态每次需要1D8点理智值，累计最多损失8点。本法术必须在太阳落山后施放，效果仅持续到第二天日出。深层魔法：有些巫师创造了本法术的替代版本，他们可以变成其他的动物形态，如狼、犬和乌鸦。\n别名：行皮法、女巫作风、异种披风\fEN:BATFORM/BatForm\nCost: 12 magic points; 1D8 Sanity points\nCasting time: instantaneous\nLets the caster assume the form and capabilities (flight and acute hearing) of a bat, while retaining his or her intelligence and intentions. Assuming the form of a bat costs 1D8 Sanity points each time, up to a cumulative total of 8. The spell must be cast while the sun is down and its effects last only until the sun rises.\nDeeper magic: some wizards have crafted alternative versions of this spell, allowing them to assume a different animal form, such as a wolf, dog, or raven.\nAlternative names: Skin Walk, The Witches Way, The Cloak of Another."]
 
 
 ["コルーブラの手"]
 export = true
 aliases = ["蛇臂术","HANDSOFCOLUBRA","HandsofColubra"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HANDSOFCOLUBRA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HANDSOFCOLUBRA.json"
-]
-
-
-
+options = ["JP:コルーブラの手\n呪文の使い手の両手を毒蛇の上半身に変えてしまう呪文。\fCN:蛇臂术\n消耗：12点魔法值；1D10点理智值\n施法用时：即时\n使施法者的两只手臂变成分别两只毒蛇的前半身。本法术只影响施法者，效果持续1D3+3轮。变出来的蛇可以咬到最多8尺外的目标。看到变形的巫师的人需要做理智检定（损失0/1D6点）。每只蛇都可以攻击（使用施法者的「格斗」技能），每咬一次造成1D3点伤害附加注入毒素——如果目标极难CON检定失败，毒素每轮造成1D10点伤害，直到因此受到的伤害达到施法者的五分之一或目标死亡为止。\n别名：蛇之手、伊格的祝福\fEN:HANDSOFCOLUBRA/HandsofColubra\nCost: 12 magic points; 1D10 Sanity points\nCasting time: instantaneous\nTransforms the hands of the caster into the foreparts of two venomous snakes. The spell only affects the caster, with the effect lasting 1D3+3 rounds. The transformed snakes can bite targets up to 8 feet distant. Those viewing the transformed wizard should make a Sanity roll (0/1D6 loss). Each snake may attack (using the caster’s Fighting skill), with each bite delivering 1D3 damage plus injecting venom—if the target fails to make an Extreme CON roll, the venom causes the loss of 1D10 hit points per round until the hit points lost equal one-fifth of the caster’s POW or the target is dead.\nAlternative names: The Serpent’s Fingers, The Blessing of Yig."]
 
 
 ["ゴルゴロスのボディ・ワープ"]
 export = true
 aliases = ["戈尔戈罗斯形体扭曲术","BODYWARPINGOFGORGOROTH","BodyWarpingofGorgoroth"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BODYWARPINGOFGORGOROTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BODYWARPINGOFGORGOROTH.json"
-]
-
-
-
+options = ["JP:ゴルゴロスのボディ・ワープ \nこの呪文によって体の形を変えることができる。\fCN:戈尔戈罗斯形体扭曲术 \n消耗：6+点魔法值；5点POW；2D6点理智值 \n施法用时：1D6+4分钟 \n允许施法者改变其物理形态。施法者可以改变成任何形状和外观，但是保留自己的个人能力。该形态是肉体的，但是能够看上去像石头、木头、毛毯之类的东西。在转变成新形态之后，施法者获得新形态的移动能力。施法者的STR、CON、INT、POW和DEX维持不变。当模仿人类时，施法者的APP将变为被模仿者的APP。施法者只能呈现为他已知的形态。施法者向奈亚拉托提普祈求、反复吟唱咒语，同时支付6点魔法值，如果形体扭曲时SIZ每增减5点，还要再支付1点魔法值。每次施法只能进行一种改变，且效果是永久的，直到本法术被再次施放才能变回。本法术不能对其他生物施放。深层魔法：当模仿他人时，施法者即成为那个人的复制品，包括声音和语言模式。施法者撤销变化时不需要重复本法术——只需要一个简单的动词短语而已。 \n别名：形体扭曲术、血肉大师、行走的画皮、黑法老之触\fEN:BODYWARPINGOFGORGOROTH/BodyWarpingofGorgoroth \nCost: 6+ magic points; 5 POW; 2D6 Sanity points \nCasting time: 1D6+4 minutes \nAllows the caster to change his or her physical form. The sorcerer can change to any shape and appearance, though retains personal abilities. The form is fleshly, but can appear to be made of stone, wood, a rug, etc. Once changed into a new shape, the caster has the mobility of that shape. The caster’s STR, CON, INT, POW and DEX do not change. If emulating a person, the sorcerer’s APP becomes that of the individual emulated. The caster can take on only a form known to them. The caster invokes Nyarlathotep and repeats the phrases of the spell while expending 6 magic points and an additional magic point for each 5 points of SIZ to be gained or lost in the body warping. Only one alteration per casting is possible and the effect is permanent until the spell is recast to change back again. This spell cannot be cast on another being. \nDeeper magic: if imitating an individual, the caster becomes a replica of that person, including voice and speech patterns. The caster does not need to repeat the spell to undo the warping—a simple verbal phrase is all that is required. \nAlternative names: Body Warping, Mastery of the Flesh, Skin Walking, The Black Pharaoh’s Transf iguration."]
 
 
 ["再度の屈辱"]
 export = true
 aliases = ["遗恨术","REMORTIFICATION","Remortification"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REMORTIFICATION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REMORTIFICATION.json"
-]
-
-
-
+options = ["JP:再度の屈辱\n呪文の使い手はかつて自分が殺した人間の亡霊を無理矢理出現させることができる。\fCN:遗恨术\n消耗：1D6+1点理智值\n施法用时：1轮\n强迫已故之人的鬼魂（灵魂、精魄）出现。法术必须在故人的坟茔或死亡之地施放。灵魂会演出它死亡之前最后一段动作。此灵魂是非物质的，但（如果合适）能听到声音——不过灵魂不能听到或感知到施法者；因此它不能回答问题。物体会直接穿过它。它不能在物理上伤害任何人或物，但看见它会损失理智值。\n别名：召唤死者的魂魄、目击临终的脉搏、召起已故者\fEN:REMORTIFICATION/Remortification\nCost: 1D6+1 Sanity points\nCasting time: 1 round\nForces the appearance of the ghost (spirit/essence) of a deceased person. The spell must either be cast over the grave of the deceased or where the person died. The spirit re-enacts the movements made just before its death. The spirit is immaterial, yet (if appropriate) vocalized sound may be heard—although the spirit cannot hear or perceive the caster; thus, it cannot answer questions. Objects pass right through it. It cannot physically harm anyone or anything, but may cost Sanity points to see.\nAlternative names: Summon Spirits of the Dead, Witness the Dying Stroke, Call Up Those Past."]
 
 
 ["魚の招来"]
 export = true
-aliases = ["诱鱼术","CALLFISH","AttractFish"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json"
-]
-
-
-
-
-
-["魚を引きつける"]
-export = true
-aliases = ["诱鱼术","ATTRACTFISH","AttractFish"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ATTRACTFISH.json"
-]
-
-
-
+aliases = ["魚を引きつける","诱鱼术","CALLFISH","ATTRACTFISH","AttractFish"]
+options = ["JP:魚を引きつける\n漁師の助けとなる呪文で海水にも淡水にも使える。\fCN:诱鱼术\n消耗：4点魔法值\n施法用时：5分钟\n召唤鱼类聚集到施法者的位置。施法者必须准备鱼饵（掺入施法者的血液），并将它投入大海（或者开放水域），同时吟唱咒语。1小时之内，将有1D100条本地鱼种的鱼聚集过来。深层魔法：深潜者知道本法术的一个变体，会把它传授给他们觉得值得关注的人。此变体不需要血饵，但需要一枚深潜者制造的护身符，把它扔进海里，同时吟唱达贡的颂歌。有些人说护身符不只会吸引鱼类，还会吸引到一些不那么安全的东西。\n别名：集取大海的丰饶\fEN:ATTRACTFISH/AttractFish\nCost: 4 magic points\nCasting time: 5 minutes\nSummons fish to the caster’s location. The caster must prepare bait (mixed with the caster’s blood), which is then thrown into the ocean (or open water location) while a chant is sung. Within 1 hour 1D100 fish, local to the area, congregate. \nDeeper magic: a variation of this spell is known by the deep ones, who may impart it to those worthy of their attention. The variation does not require blood-bait, but rather a talisman, crafted by the deep ones, which is thrown into the ocean as a chant to Dagon is sung. Some say the talisman doesn’t only attract fish, but also other less wholesome things.\nAlternative names: Gather the Abundance of the Sea."]
 
 
 ["さまよう魂"]
 export = true
 aliases = ["灵魂漫游术","WANDERINGSOUL","WanderingSoul"]
-options = [""]
+options = ["JP:さまよう魂\n呪文の使い手が眠っている時、この呪文はその魂を別の場所へ送って敵の動静を探る。\fCN:灵魂漫游术\n消耗：可变的魔法值；1D4点理智值\n施法用时：5分钟\n可以让施法者送出自己的意识（灵魂之眼、灵魂、精魄），在他们睡眠或冥想的时候观察某个地点。施法者因此可以预知敌人或者看到远处的东西。通常需要消耗一剂特制的饮剂，虽然有些巫师靠冥想来进入意识离开身体行动所需的状态。梦境一般的幻象显示出易于观察的信息。施法者的意识无论如何不能和看到的东西进行互动——它不能打开盒子和书本等等。施法者必须知道他们想要观察的地点，或者至少知道大概的位置。施法者在2D6小时后感觉精疲力尽地醒来，消耗魔法值到仅剩1点。在法术生效期间，拥有100点以上POW的存在可以看见并认出观察的意识（意识拥有施法者的外貌且无法伪装），有75点POW以上的人会感到不安和被监视。\n别名：魂眼旅行术、通向彼方之旅、远侦汝之敌及物\fEN:WANDERINGSOUL/WanderingSoul\nCost: variable magic points; 1D4 Sanity points\nCasting time: 5 minutes\nAllows the caster to send forth their consciousness (mind’s eye, soul, or spirit) to view a location while they sleep or meditate. Thus, the caster may scry their enemies and view matters far away. Usually a specially prepared drink is consumed, although some wizards use mediation to enter the proper state required for their consciousness to journey outside of their body.\nThe dream-like vision reveals information readily observable. The caster’s mind cannot interact with what is seen in any way—it cannot open boxes or books, and so on. The caster must know the location they intend to view, or at least must know the approximate area. The caster wakes 2D6 hours later with a sense of exhaustion, having spent all but one magic point.\nAn entity possessing POW 100 or more can see and identify the scrying mind while the spell is in effect (the consciousness carries the appearance of the caster and cannot be disguised), while those with POW 75 or above have the uneasy feeling of being watched.\nAlternative names: Travel of Mind’s Eye, Journey to Other Places, Spy Thy Enemies and Things Far Off."]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WANDERINGSOUL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WANDERINGSOUL.json"
-]
-
-
-
-
-
-["サメ"]的
+["サメ"]
 export = true
-aliases = ["COMMANDSHARK","CommandShark"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json"
-]
-
-
-
-
-
-["イルカに命令する"]的
-export = true
-aliases = ["COMMANDPORPOISE","CommandPorpoise"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDSHARK.json"
-]
-
-
-
+aliases = ["イルカに命令する","召令鲨鱼","召令海豚","COMMANDSHARK","COMMANDPORPOISE","CommandShark","CommandPorpoise"]
+options = ["JP:サメ/イルカに命令する\fCN:召令鲨鱼/召令海豚\n这道咒文用于把人献祭给海神，最初起源于南太平洋。施法者须支付1点魔力值，每追加1点魔力值，成功率增加10%。咒文必须在海上施放，要呼唤鲨鱼就将少量血液滴入海中，要呼唤海豚就将一些小活鱼投入海中。被唤来的生物会遵从施法者大声喊出的命令。若“幸运”检定成功，会有两只生物一起到来，但施法者无法控制第二只生物。\fEN:COMMANDSHARK/CommandShark/COMMANDPORPOISE/CommandPorpoise\nFor committing a human sacrifice to the gods of the sea. The spells originated in the South Pacific. Each casting costs 1 magic point; for each additional point, the chance of successfully bringing the creature rises by ten percentiles. The spell must be cast over salt water. To bring a shark, splash blood into the sea; for a porpoise, drop in small live fish. The creature follows the shouted commands of the caster. With a successful Luck roll, a second shark or porpoise accompanies the one called for, but the second one is not subject to magical control."]
 
 
 ["視覚を奪う"]
 export = true
-aliases = ["致盲术","CAUSE","Cause"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json"
-]
-
-
-
-
-
-["視覚を回復させる"]
-export = true
-aliases = ["治盲术","CUREBLINDNESS","CureBlindness"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSE.json"
-]
-
-
-
+aliases = ["視覚を回復させる","致盲术","治盲术","CAUSE","CUREBLINDNESS","Cause","CureBlindness"]
+options = ["JP:視覚を奪う/視覚を回復させる\nコスト：8MP、視覚を奪う場合は2d6正気度ポイント\n必要ラウンド：1日\n別名：視力を授ける、暗黒の影、ファラオの呪い\n対象は突然、永久的に視力を失う。目と視神経が傷を負っていなければ視力回復させることも可能。対抗POWロールが必要。\fCN:致盲术/治盲术\n消耗：8点魔法值（致盲术额外消耗2D6点理智值）施法用时：1天\n目标完全且永久失明，好像中风了一样。如果眼睛和视神经的功能没有受损，同样的法术也可以用解除目盲。施放法术需要进行1天的仪式。施法者须和目标进行一次POW对抗检定并胜出，法术才能生效（若目标自愿则自动成功）。\n别名：目盲术、视觉授予、黑暗之影、法老的诅咒\fEN:CAUSE/Cause/CUREBLINDNESS/CureBlindness\nCost: 8 magic points; (plus 2D6 Sanity points for Cause \nBlindness)\nCasting time: 1 day\nThe target suffers complete and permanent blindness, as if by a stroke. The same spell can reverse blindness if the eyes and optic nerves are essentially intact. A day of ritual is required. For the spell to take effect the caster must succeed in an opposed POW roll with the target (automatic success if the target is consenting).\nAlternative names: Blindness, Grant Sight, Shade of Darkness, The Pharaoh’s Curse."]
 
 
 ["時空門の創造"]
