@@ -14,6 +14,8 @@
 > - 尽量提供`中日英释义`、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
 
+[目录](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/README.md)
+
 ## 模组资料(包含图片) ver1.1.5
 
 > [!CAUTION]
