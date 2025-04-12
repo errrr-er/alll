@@ -656,28 +656,10 @@ aliases = ["人面鼠诅咒","CURSEOFTHERATLTHING","CurseoftheRat-thing"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHERATLTHING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFTHERATLTHING.json"
-]
-
-
-
-
-
 ["農作物を枯らす"]
 export = true
 aliases = ["作物枯萎法","BLIGHT","Blight"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json"
-]
-
-
-
 
 
 ["農作物に祝福を与える"]
@@ -686,28 +668,10 @@ aliases = ["作物祝福法","BLESSCROP","BlessCrop"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSCROP.json"
-]
-
-
-
-
-
 ["呪いのホイッスルの創造"]
 export = true
 aliases = ["诅咒之笛创造术","CREATECURSEWHISTLE","CreateCurseWhistle"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATECURSEWHISTLE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATECURSEWHISTLE.json"
-]
-
-
-
 
 
 ["ハートの勇気"]
@@ -716,28 +680,10 @@ aliases = ["心中的勇气","HEART'SCOURAGE","Heart'sCourage"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEART'SCOURAG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEART'SCOURAG.json"
-]
-
-
-
-
-
 ["灰色の束縛"]
 export = true
 aliases = ["灰色束缚","GRAYBINDING","GreyBinding"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAYBINDING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAYBINDING.json"
-]
-
-
-
 
 
 ["破壊"]
@@ -746,28 +692,10 @@ aliases = ["折磨术","WRACK","Wrack"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WRACK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WRACK.json"
-]
-
-
-
-
-
 ["吐き気の魔去円"]
 export = true
 aliases = ["反胃法阵","CIRCLEOFNAUSEA","CircleofNausea"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CIRCLEOFNAUSEA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CIRCLEOFNAUSEA.json"
-]
-
-
-
 
 
 ["ハスターの歌"]
@@ -776,28 +704,10 @@ aliases = ["哈斯塔之歌","SONGOFHASTUR","SongofHastur"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SONGOFHASTUR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SONGOFHASTUR.json"
-]
-
-
-
-
-
 ["ハスターの解放"]
 export = true
 aliases = ["哈斯塔释放术","FREEHASTUR","FreeHastur"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FREEHASTUR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FREEHASTUR.json"
-]
-
-
-
 
 
 ["被害をそらす"]
@@ -806,28 +716,10 @@ aliases = ["伤害偏转术","DEFLECTHARM","DeflectHarm"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DEFLECTHARM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DEFLECTHARM.json"
-]
-
-
-
-
-
 ["光と闇の目"]
 export = true
 aliases = ["光明与黑暗之眼","EYEOFLIGHTANDDARKNESS","EyeofLightandDarkness"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYEOFLIGHTANDDARKNESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYEOFLIGHTANDDARKNESS.json"
-]
-
-
-
 
 
 ["光の空隙"]的
@@ -836,28 +728,10 @@ aliases = ["VOIDLIGHT","VoidLight"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOIDLIGHT.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOIDLIGHT.json"
-]
-
-
-
-
-
 ["光を消す"]
 export = true
 aliases = ["抑光术","DAMPENLIGHT","DampenLight"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DAMPENLIGHT.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DAMPENLIGHT.json"
-]
-
-
-
 
 
 ["雛を取り除く"]
@@ -866,28 +740,10 @@ aliases = ["幼体驱除术","BALKBROOD","BalkBrood"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BALKBROOD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BALKBROOD.json"
-]
-
-
-
-
-
 ["皮膚の制御"]
 export = true
 aliases = ["皮肤控制术","CONTROLSKIN","ControlSkin"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONTROLSKIN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONTROLSKIN.json"
-]
-
-
-
 
 
 ["フェッチ棒の創造"]
@@ -896,28 +752,10 @@ aliases = ["生魂棒创造术","CREATEFETCHSTICK","CreateFetchStick"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEFETCHSTICK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEFETCHSTICK.json"
-]
-
-
-
-
-
 ["布石"]
 export = true
 aliases = ["守卫术","WARDING","Warding"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDING.json"
-]
-
-
-
 
 
 ["復活"]
@@ -926,28 +764,10 @@ aliases = ["复活术","RESURRECTION","Resurrection"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RESURRECTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RESURRECTION.json"
-]
-
-
-
-
-
 ["プリンのアンサタ十字"]
 export = true
 aliases = ["蒲林的埃及十字架","PRINN'SCRUXANSATA","Prinn'sCruxAnsata"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PRINN'SCRUXANSATA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PRINN'SCRUXANSATA.json"
-]
-
-
-
 
 
 ["旧き印"]
@@ -956,28 +776,10 @@ aliases = ["旧印开光术","ELDERSIGN","ElderSign"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ELDERSIGN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ELDERSIGN.json"
-]
-
-
-
-
-
 ["平凡な見せかけ"]
 export = true
 aliases = ["平凡无奇术","POSEMUNDANE","PoseMundane"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POSEMUNDANE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POSEMUNDANE.json"
-]
-
-
-
 
 
 ["仮面"]
@@ -986,28 +788,10 @@ aliases = ["平凡无奇术","MASK","PoseMundane"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MASK.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MASK.json"
-]
-
-
-
-
-
 ["ヘルメス・トリスメギストスの毒塵"]
 export = true
 aliases = ["赫耳墨斯·特里斯墨吉斯忒斯的毒尘","BANEFULDUSTOFHERMESTRISMEGISTUS","BanefulDustofHermesTrismegistus"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BANEFULDUSTOFHERMESTRISMEGISTUS.json"
-]
-
-
-
 
 
 ["忘却の波"]
@@ -1016,28 +800,10 @@ aliases = ["忘却之波","WAVEOFOBLIVION","WaveofOblivion"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WAVEOFOBLIVION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WAVEOFOBLIVION.json"
-]
-
-
-
-
-
 ["亡霊に命令する"]
 export = true
 aliases = ["鬼魂号令法","COMMANDGHOST","CommandGhost"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDGHOST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDGHOST.json"
-]
-
-
-
 
 
 ["卜占"]
@@ -1046,28 +812,10 @@ aliases = ["占卜法","AUGURY","Augury"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/AUGURY.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/AUGURY.json"
-]
-
-
-
-
-
 ["炎の外套"]
 export = true
 aliases = ["火焰斗篷术","CLOAKOFFIRE","CloakofFire"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOAKOFFIRE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLOAKOFFIRE.json"
-]
-
-
-
 
 
 ["マインドブラスト"]
@@ -1076,28 +824,10 @@ aliases = ["精神震爆术","MINDBLAST","Mindblast"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDBLAST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDBLAST.json"
-]
-
-
-
-
-
 ["窓の創造"]的
 export = true
 aliases = ["CREATEWINDOW"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEWINDOW.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEWINDOW.json"
-]
-
-
-
 
 
 ["ミ＝ゴの催眠術"]的
@@ -1106,28 +836,10 @@ aliases = ["MI-GOHYPNOSIS","Mi-GoHypnosis"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MI-GOHYPNOSIS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MI-GOHYPNOSIS.json"
-]
-
-
-
-
-
 ["未来の視察"]
 export = true
 aliases = ["未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LOOKTOTHEFUTURE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LOOKTOTHEFUTURE.json"
-]
-
-
-
 
 
 ["魅惑"]的
@@ -1136,28 +848,10 @@ aliases = ["MESMERIZE","Mesmerize"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MESMERIZE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MESMERIZE.json"
-]
-
-
-
-
-
 ["無欠の投擲"]
 export = true
 aliases = ["无瑕投掷法","IMPECCABLETHROW","ImpeccableThrow"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPECCABLETHROW.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPECCABLETHROW.json"
-]
-
-
-
 
 
 ["向こう側への旅"]
@@ -1166,28 +860,10 @@ aliases = ["彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/JOURNEYTOTHEOTHERSIDE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/JOURNEYTOTHEOTHERSIDE.json"
-]
-
-
-
-
-
 ["冥王星の薬"]的
 export = true
 aliases = ["PLUTONIANDRUG","PlutonianDrug"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PLUTONIANDRUG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PLUTONIANDRUG.json"
-]
-
-
-
 
 
 ["名状し難い誓約"]
@@ -1196,28 +872,10 @@ aliases = ["不可名状的诺言","UNSPEAKABLEPROMISE","UnspeakablePromise"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNSPEAKABLEPROMISE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNSPEAKABLEPROMISE.json"
-]
-
-
-
-
-
 ["目の保護"]
 export = true
 aliases = ["邪眼守卫术","WARDINGTHEEYE","WardingtheEye"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDINGTHEEYE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WARDINGTHEEYE.json"
-]
-
-
-
 
 
 ["モートランのガラスの製造"]
@@ -1226,28 +884,10 @@ aliases = ["莫特兰玻璃幻术","CONJUREGLASSOFMOTLAN","ConjureGlassofMortlan
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONJUREGLASSOFMOTLAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONJUREGLASSOFMOTLAN.json"
-]
-
-
-
-
-
 ["門の観察"]
 export = true
 aliases = ["时空门观察术","VIEWGATE","ViewGate"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VIEWGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VIEWGATE.json"
-]
-
-
-
 
 
 ["門の創造"]
@@ -1256,28 +896,10 @@ aliases = ["时空门创造术","CREATEGATE","CreateGate"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEGATE.json"
-]
-
-
-
-
-
 ["門の発見"]
 export = true
 aliases = ["时空门搜寻术","FINDGATE","FindGate"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FINDGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FINDGATE.json"
-]
-
-
-
 
 
 ["病をもたらす"]
@@ -1286,28 +908,10 @@ aliases = ["致病术","CAUSEDISEASE","CauseDisease"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSEDISEASE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAUSEDISEASE.json"
-]
-
-
-
-
-
 ["幽体の剃刀"]
 export = true
 aliases = ["灵体剃刀术","SPECTRALRAZOR","SoectralRazor"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SPECTRALRAZOR.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SPECTRALRAZOR.json"
-]
-
-
-
 
 
 ["夢の映像"]
@@ -1316,28 +920,10 @@ aliases = ["梦境幻象术","DREAMVISION","DreamVision"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DREAMVISION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DREAMVISION.json"
-]
-
-
-
-
-
 ["夢の薬の製去"]
 export = true
 aliases = ["入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWDREAMDRUG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREWDREAMDRUG.json"
-]
-
-
-
 
 
 ["夢の時代へ送る"]的
@@ -1346,28 +932,10 @@ aliases = ["SENDDREAMING","SendDreaming"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDDREAMING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDDREAMING.json"
-]
-
-
-
-
-
 ["夢みる人の罠"]
 export = true
 aliases = ["梦想家诱捕术","SNAREDREAMER","SnareDreamer"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SNAREDREAMER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SNAREDREAMER.json"
-]
-
-
-
 
 
 ["夢を送る"]
@@ -1376,43 +944,16 @@ aliases = ["梦境发送术","SENDDREAM","SendDream"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDDREAM.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDDREAM.json"
-]
-
-
-
-
-
 ["ヨグ＝ソトースのこぶし"]
 export = true
 aliases = ["犹格-索托斯之拳","FISTOFYOG-SOTHOTH","FistofYog-Sothoth"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FISTOFYOG-SOTHOTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FISTOFYOG-SOTHOTH.json"
-]
-
-
-
-
-
 ["ラーの声"]
 export = true
 aliases = ["拉神之声","VOICEOFRA","VoiceofRa"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOICEOFRA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VOICEOFRA.json"
-]
-
-
-
 
 
 ["リーチ"]
