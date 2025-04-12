@@ -311,19 +311,19 @@ options = ["JP:支配\nコスト：1MP、1正気度ポイント\n必要ラウン
 ["邪眼"]
 export = true
 aliases = ["邪眼术","EVILEYE","EvilEye"]
-options = [""]
+options = ["JP:邪眼\nコスト：10MP、1d4正気度ポイント\n必要ラウンド：1R\n別名：薄幸の儀礼、暗き呪い、魔女の呪い\n対象の幸運ロールとDEXロールの成功率を1/2にし、能力値ロールにペナルティダイスを一つ付ける。射撃は75%以上でジャミングする。召喚/従属呪文の成功率が1/2になる。\fCN:邪眼术\n消耗：10点魔法值；1D4点理智值\n施法用时：1轮\n让一名目标遭受厄运的折磨。目标必须在施法者视野范围之内，但此时目标并不一定能感觉到邪眼术的影响，只是可能在邪眼术初次施放的时候感觉到奇怪的寒意和不安。施法成功后，目标的幸运检定成功率减半*。目标所有的属性和技能检定均得到一颗惩罚骰；他用枪时每当掷骰出75以上枪就会卡壳，用近战武器的时候每当掷骰在75以上武器就会损坏；召唤、束缚术的成功率减半。效果将持续到第二天的日出、或者施法者撤回法术、或者施法者被找到并流血（狠狠地打，打到出血为止）、或者目标死亡。本法术可以被“邪眼守卫术”抵消。*注，如果使用了幸运的可选规则，目标也不能消耗和增加幸运点数。深层魔法：能够召唤克苏鲁神话更深层智慧和知识的人能够对多人（最多五名）使用本法术，他们必须在施法者的视野范围内。\n别名：噩运之仪、诅咒术、黑暗妖术\fEN:EVILEYE/EvilEye\nCost: 10 magic points; 1D4 Sanity points\nCasting time: 1 round\nCauses a target to suffer from bad luck. While the target must be within sight of the caster, he or she will not necessarily sense the Evil Eye’s influence, but is likely to feel an odd chill or unease when the spell is first cast.With a successful casting, the target’s chance for a Luck roll is halved*. The target must apply one penalty die to all characteristic and skill rolls, his or her guns jam on every roll of 75% or higher, melee weapons break on a roll of 75% or higher, and the chance to successfully cast a Summon/Bind spell is halved. The effects continue until the next sunrise, until the caster removes the spell, until the caster is found and blooded (hit hard enough to bleed), or until the target dies. This spell may also be countered by Warding the Eye (page 188).\n*Neither can the target spend or gain luck points if the Optional Luck Rule is being used\nDeeper magic: those able to call upon the greater wisdom and knowledge of the Cthulhu Mythos may direct this spell at a group (up to five individuals) who must all be in the sight of the caster.\nAlternative names: Rite of Ill Fortune, Curse, Dark Hex."]
 
 
 ["シャンを追い出す"]
 export = true
 aliases = ["夏恩逐出术","CASTOUTSHAN","CastOutShan"]
-options = [""]
+options = ["JP:シャンを追い出す\nシャン（シャガイからの昆虫）を生きている宿主から追い出す呪文。\fCN:夏恩逐出术\n消耗：10点魔法值；1+点理智值\n施法用时：1小时\n本法术可以从活体寄主当中驱逐夏恩（夏盖虫族），寄主须在一个用马鞭草摆出的五英尺大小的五角星形区域当中。施法者损失1点理智值（如果对自己施放，施法者消耗2点理智值）。在仪式之后，五角星在接下来的十二小时之内可以保护人不受新的夏恩入侵。\n别名：取出仪式、极恶夏盖的净化、五角守卫\fEN:CASTOUTSHAN/CastOutShan\nCost: 10 magic points; 1+ Sanity point\nCasting time: 1 hour\nExpels a shan (insect from Shaggai) from a living host standing within a five-foot-wide pentagram described with the herb vervain. The spell’s target loses 1 Sanity point (if cast upon themselves, the caster loses 2 Sanity points). After the ceremony, the pentagram is proof against a new shan intrusion for the next twelve hours.\nAlternative names: Rite of Extraction, Cleansing of the Most Foul Shaggai, Ward of the Five Points."]
 
 
-["シュド・メルの赤い印"]的
+["シュド・メルの赤い印"]
 export = true
 aliases = ["修德梅尔赤印术","REDSIGNOFSHUDDEM'ELL","RedSignofShuddeM'ell"]
-options = [""]
+options = ["JP:シュド・メルの赤い印\fCN:修德梅尔赤印术\n这道咒文可令一名或数名牺牲者遭到恐怖的死亡。施法时间为1轮，须支付3点魔力值和1D8点理智值。只要施法者用手指在空中划出正确的纹路，暗红色的法印就会凭空亮起。从下一轮开始，法印会展现出它邪恶的效果；为了维持法印，施法者必须保持精神集中，每轮还要追加支付3点魔力值。\n所有处在法印周围10码内的人每轮损失1D3点耐久，他们的身体会颤抖、痉挛，内脏和血管会剧烈抽搐。周围10码到30码内的人每轮损失1点耐久，30码外的人不受影响。躲在墙壁等不透明的障壁后可免除影响。施法者必须站在法印旁边集中精神，因为离法印过近，他自己也会每轮损失1点耐久。\fEN:REDSIGNOFSHUDDEM'ELL/RedSignofShuddeM'ell\nCauses one or several victims to die horribly. This spell takes 1 combat round, 3 magic points, and 1D8 Sanity points to cast. When formed correctly, a dull red symbol glows in the air as the caster's finger describes it. The sign's malevolent effects manifest the round after its creation. Once formed, the sign must be maintained by concentration, and the expenditure of 3 more magic points each additional round. All those within 10 yards of the sign lose 1D3 hit points per round as their bodies quake and spasm, and their internal organs and blood vessels convulse. Those further than 10 yards but nearer than 30 yards lose one hit point each round. Those further than 30 yards take no damage. It is possible to escape the sign's effect by crawling behind a wall or other opaque barrier. The caster must stand next to the sign and concentrate. The caster loses 1 hit point each round because of proximity."]
 
 
 ["消滅"]
