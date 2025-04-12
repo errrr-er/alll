@@ -284,73 +284,28 @@ options = ["JP:時空門の創造\n未来あるいは過去への門を開く呪
 symbols and chants, able to create multi-pathway Time Gates—thus one door may lead to more than one distant time or future. Only the caster knows which path leads to which time on entering the Gate. Those foolish enough to use the Time Gate unassisted by the caster will be unable to determine the correct path and could arrive at any of the times the Gate is keyed to (roll randomly). The process of creation remains the same (see page 180).\nAlternative names: Create Time Warp, Temporal Vortex.\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/%E6%97%B6%E7%A9%BA%E9%97%A8120.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/%E6%97%B6%E5%85%89%E9%97%A8180.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/gate_creation_122.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/gate_location_123.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/magic_pic/time_gate_180.png?raw=true,type=show]"]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATETIMEGATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATETIMEGATE.json"
-]
-
-
-
-
-
 ["自己保護の創造"]
 export = true
 aliases = ["自保袋创造术","CREATESELF-WARD","CreateSelf-Ward"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESELF-WARD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESELF-WARD.json"
-]
-
-
-
+options = ["JP:自己保護の創造\nこの呪文を使うものは、加齢の速度を遅くすることとともに肉体的なダメージからも身を守ることができる。\fCN:自保袋创造术\n消耗：每天可变的魔法值、POW、理智值\n施法用时：可变（天）\n本法术威力强大，可以有效减缓衰老速度，并且能保护使用者减少物理伤害。这个附魔罕见但强力。自保袋（持有或佩戴时）除了延长寿命还可以引开伤害，数值等于施法者在创造它时投入的魔法值。如果自保袋不被施法者持有，但未被摧毁的话，施法者可以得到一半的保护（小数进位）。\n施法者必须搜集个人物品、头发、指甲等等，并且将它们放到皮袋或布袋当中。接下来的几天中施法者要和袋子贴身接触；每天都要进行仪式的吟唱，并且消耗预定数量的魔法值。此后，衰老的速度取决于创造自保袋用的时间。如果是3天，则每天消耗3点魔法值，施法者此后每3年衰老1岁。如果是6天，则每天消耗6点魔法值，施法者此后每6年衰老1岁，以此类推。在仪式的最后一天，施法者要向自保袋中投入POW，数值等于创造自保袋天数的五倍，且每天需要消耗1D6点理智值。如果自保袋被毁坏或倒空，或者施法者被杀死，法术就终止了。法术终止以后，施法者会快速衰老，直到物理年龄等于按出生年份计算的年龄为止（参考衰老，RB98）。施法者还要损失CON，数值等于自保袋中投入的POW。\n深层魔法：疯狂的施法者可以利用他们可怕的知识，使用自保袋牺牲别人的精血来逆转衰老过程。巫师吟唱咒语，吸取牺牲者的精血，将它用特殊雕刻的铜碗收集起来。自保袋要在新月期间放在碗里。在五天的施法过程中，自保袋将吸尽血液。施法者每花一天创造自保袋，这个过程就会减去施法者10年的年龄——因此如果用3天创造自保袋，巫师的年龄可以减少30岁。\n别名：不老者的仪式、古老的交易、永恒青春的恩惠\fEN:CREATESELF-WARD/CreateSelf-Ward\nCost: variable magic points, POW, and Sanity points per day of casting \nCasting time: variable (days)\nThis mighty spell effectively slows down the advance of age, as well as protecting its user from physical damage. This is a rare and powerful enchantment. Besides the benefit of longer life, the ward-bag (if held or worn) deflects damage equal to the number of magic points sacrificed in creating it. If the ward-bag is not in the possession of the caster but has not been destroyed, he or she receives half of such protection (round up fractions). The caster must gather personal effects, hair, nail clippings, etc., and place them within a small leather or cloth bag. The caster then spends several days in close contact with the bag; each day uttering ritual chants while expending a chosen number of magic points. The subsequent rate of ageing depends on the days spent in creating the Self-Ward. If 3 days, 3 magic points per day are spent, and the caster thereafter ages one year for every three. If 6 days, 6 magic points per day are spent, and the caster thereafter ages one year for every six, and so on. On the final day of the ritual, the user must endow the bag with POW points equal to five times the number of days spent creating the Self-Ward, and 1D6 Sanity points for each day. If the ward-bag is destroyed or emptied, or the caster is killed, this spell is broken. If the spell is broken, the caster rapidly ages until physical age agrees with chronological age (see Aging, page 98, Call of Cthulhu Rulebook). He or she also loses a number of CON points equal to the POW placed in the Self-Ward.\nDeeper magic: drawing upon their hideous knowledge, insane casters may use the ward-bag to reverse the ageing process by sacrificing the lifeblood of another person. The wizard intones a chant while draining the blood from the sacrifice, collecting this in a specially inscribed copper bowl. The ward-bag is then placed in to the bowl during a new moon. Over the course of five days, the ward-bag soaks up the blood. This process removes 10 years from the caster’s age for each day the caster invested in making the bag—thus if 3 days were spent making the bag, a wizard’s age would decrease by 30 years.\nAlternative names: Rite of the Ageless Ones, The Old Bargain, Ye Boon of Eternal Youth."]
 
 
 ["死者を送る"]
 export = true
 aliases = ["死之发送术","SENDINGOFTHEDEAD","SendingoftheDead"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDINGOFTHEDEAD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENDINGOFTHEDEAD.json"
-]
-
-
-
+options = ["JP:死者を送る \n対象に大きな損傷あるいは私をもたらす呪文。 \fCN:死之发送术 \n消耗：10点魔法值；1D6点理智值 \n施法用时：5轮 \n对目标造成重大伤害甚至死亡。施法者或祈求者必须在法术中使用目标的一些个人物品（头发、指甲屑、衣服等等）。这些个人物品要和几捧坟墓中取来的土混合起来。施法者须和目标进行一次POW对抗检定并胜出（距离不限），法术才能生效。法术生效后，施法者或祈求者必须将附魔的个人物品放到目标走过的地方上，或埋到下面。如果目标走过这一物品，死者的魂魄就会进入其身体，造成疼痛、焦虑、精神衰弱甚至物理伤害——投掷1D10决定法术对目标的严重性：KP决定死者的魂魄如何在目标身上显灵，提示包括手指、手掌、颜面部的记号；黑色“无神”的眼睛；用奇怪声音说话的目标等等。详情参照死之发送术效果表。 \n别名：敌之受苦、死者的刁难 \fEN:SENDINGOFTHEDEAD/SendingoftheDead \nCost: 10 magic points; 1D6 Sanity points \nCasting time: 5 rounds \nCauses significant harm or death to the target. The caster or supplicant must use something personal to the target in casting the spell (hair, toenail clippings, clothing, etc.). The personal item is mixed with several handfuls of earth taken from a graveyard. The caster must then win an opposed POW roll with the target (who may be any distance away). The spell performed, the caster or supplicant must now lay the enchanted personal item on or in the earth where the target will walk on it. If the target does walk over the item, the spirits of the dead enter his or her body, causing distress, anxiety, mental decay, and possibly physical damage—roll 1D10 to determine the severity of the spell upon the target (1-5 Target immediately loses 1D10 Sanity points; 6-9 Target suffers a debilitating illness lasting 1D4+1 days, causing 1D6 damage, and the temporary loss of 20 STR and 20 DEX (characteristic losses are regained at 5 points per attribute per day thereafter); 10 Target collapses and falls into a coma lasting 1D6+1 days. On the final day the target dies unless the dead can be expelled (through magical exorcism, another spell, or by getting the caster to revoke the spell).) How the spirits of the dead manifest within the target is determined by the Keeper; suggestions include the imprint of fingers, hands, or faces from within the target’s flesh; black “soulless” eyes; the target speaking in strange voices, and so on. \nAlternative names: Suffer Thy Enemy, Possession, Spite of the Dead."]
 
 
 ["死体の粉の創造"]
 export = true
 aliases = ["坏尸粉创造术","CREATEBAD-CORPSEDUST","CreateBad-CorpseDust"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBAD-CORPSEDUST.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBAD-CORPSEDUST.json"
-]
-
-
-
+options = ["JP:死体の粉の創造 \nゾンビが超えることのできない魔法のバリア（障壁）を作る呪文。 \fCN:坏尸粉创造术 \n消耗：2 点魔法值 \n施法用时：6 小时 \n创造一道僵尸无法通过的屏障。本粉末需要僵尸的肠子、一盎司肉（必须是施法者自己咬下来）、还有一种从雨林蔓藤开的花晒干制成的粉末。这些材料要晒干、粉碎、混合并吟唱几个小时的咒语，最终倒到预先准备的轨道或线上。最后的吟唱可以激活粉末的功用。粉末可以制造一道不可见的魔法墙壁，阻挡通过的僵尸。墙壁会持续到粉末被冲刷或吹干净为止。每次制造的粉末足够制造一道 30 码长的墙壁。 \n别名：死者守卫术、粉尘之线、血肉屏障 \fEN:CREATEBAD-CORPSEDUST/CreateBad-CorpseDust \nCost: 2 magic points \nCasting time: 6 hours \nCreates a barrier that zombies cannot cross. This powder requires the intestines of a zombie, an ounce of flesh (which must be bitten out by the caster), and the dried and powdered flowers of a rare jungle liana (variations of the spell may call for alternatives). The ingredients are dried, pounded together, and chanted over for several hours, then poured in the desired trail or line. A final chant enacts the powder’s power. The dust creates a magical, invisible wall preventing zombies crossing. This barrier remains until the dust is washed or blown away. One such creation of the dust results in enough to form a barrier about 30 yards long. \nAlternative names: Ward of the Dead, Line of Dust, The Flesh Barrier."]
 
 
 ["支配"]
 export = true
 aliases = ["支配术","DOMINATE","Dominate"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DOMINATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DOMINATE.json"
-]
-
-
-
+options = ["JP:支配\nコスト：1MP、1正気度ポイント\n必要ラウンド：瞬時\n別名：魔術師の命令、憑依の詠唱、災いの影響\n対象の意思を曲げて術者の意志の通りにさせることができる。対抗POWロールが必要。\fCN:支配术\n消耗：1点魔法值；1点理智值\n施法用时：即时\n让目标的意志屈从于施法者的意志。施法者须和目标进行一次对抗检定并胜出，法术才能生效。若成功，目标必须服从施法者的命令，没有例外，直到下一个战斗轮结束为止。本法术只能影响单一个体，最大作用范围是10码。显然，命令必须要在目标的智力理解范围之内，并且如果命令和目标本能相悖（例如命令人类去飞行），法术可能会被破坏。只要施法者认为可行的话，支配术就可以反复施放任意多次，使得一名目标被连续不断地控制数分钟。本法术的每次施放都具有相同的消耗和限制。反复施放是即时的。\n别名：巫师令、控制之咏、恶意支配、言于内声\fEN:DOMINATE/Dominate\nCost: 1 magic point; 1 Sanity point\nCasting time: instantaneous\nBends the will of the target to that of the caster. For the spell to take effect the caster must succeed in an opposed POW roll with the target. If successful, the target obeys the commands of the caster without exception until the next round concludes.\n The spell can affect only one individual at a time and has a maximum range of 10 yards. Obviously the command or commands must be intelligible to the target; the spell may be broken if a command contradicts the target’s basic nature (such as instructing a human to fly).\nDominate can be cast and recast as many times as the caster finds possible, allowing a target to be controlled without interruption for several minutes. Each casting of the spell has the same costs and limits. Recasting is instantaneous.\nAlternative names: Command of the Wizard, The Chant of Possession, Baleful Influence, Speake to the Inner Voice."]
 
 
 ["邪眼"]
@@ -359,28 +314,10 @@ aliases = ["邪眼术","EVILEYE","EvilEye"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EVILEYE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EVILEYE.json"
-]
-
-
-
-
-
 ["シャンを追い出す"]
 export = true
 aliases = ["夏恩逐出术","CASTOUTSHAN","CastOutShan"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTSHAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTSHAN.json"
-]
-
-
-
 
 
 ["シュド・メルの赤い印"]的
@@ -389,43 +326,16 @@ aliases = ["修德梅尔赤印术","REDSIGNOFSHUDDEM'ELL","RedSignofShuddeM'ell"
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REDSIGNOFSHUDDEM'ELL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REDSIGNOFSHUDDEM'ELL.json"
-]
-
-
-
-
-
 ["消滅"]
 export = true
 aliases = ["消失术","VANISH","Vanish"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VANISH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/VANISH.json"
-]
-
-
-
-
-
 ["深淵の息"]
 export = true
 aliases = ["深渊之息","BREATHOFTHEDEEP","BreathoftheDeep"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREATHOFTHEDEEP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BREATHOFTHEDEEP.json"
-]
-
-
-
 
 
 ["心臓停止"]
@@ -671,16 +581,7 @@ options_urls = [
 ["憎悪の像の召喚"]
 export = true
 aliases = ["仇恨雕像","SUMMONEFFIGYOFHATE","EffigyofHate"]
-options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONEFFIGYOFHATE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONEFFIGYOFHATE.json"
-]
-
-
-
+options = ["JP:憎悪の像の召喚\fCN:仇恨雕像\n消耗：12点魔法值；45点POW；10点理智值\n施法用时：每晚8小时，持续3晚\n召唤一个可以遵照施法者意愿去执行任务的存在。本法术的仪式必须连续举行三晚，在夜里进行。施法者向法术中投入必需的魔法值，所需的POW一般通过三份祭品（每夜一份）来“捐献”——如果没有祭品，则POW会从施法者身上扣除（每夜15点）。并且，施法者必须准备一具图腾（通常是木质），可以是任何形式（常在施法者的文化中有特殊意义）。三夜之后，该存在就会被召唤，并束缚到图腾上。在第三夜法术的高潮时，仇恨雕像将完全和图腾结合。它遵照施法者的意愿行动，可以开始完成施法者的愿望。仇恨雕像是宇宙恶意的具体化——完全是黑暗和邪恶的集合。它只能短暂离开图腾。因为它没有实体，所以不能触碰和影响现实世界，但可以观察和收集施法者想要的信息。没有实体的雕像不受物理攻击的影响（但魔法攻击会对它造成伤害）。当雕像从施法者的祭品中积累了70点POW后（不包括创造和召唤它的45点POW），它可以获得显形能力，每次最长4小时（但只能在夜里），让它和现实世界互动并受到其影响（即，物理攻击可以对它造成伤害）。雕像每天可以积累10点POW，所以让它实体化通常需要七天七次献祭。\n别名：召来黑暗役魔、进行恶魔的交易、意志的体现\f仇恨雕像（恶意的具体化）\nSTR80 CON55 SIZ50\nDEX70 INT45 APP—\nPOW70 EDU— SAN—\nHP10 伤害加值+1D4 体格1\n移动速率10M 每轮攻击次数2（抓咬\n斗殴45%(22/9)，伤害1D8+DB\n闪避35%(17/7)\n护甲：显形时有3点硬皮。不显形的时候平凡武器无法伤害它，只有魔法攻击和附魔武器能造成伤害，并且它自己不能发动攻击。显形后它就会受到伤害也能对其他人造成伤害。\n技能：收集信息50%，跳跃*40%，聆听60%，潜行*80%，侦查50%，追踪70%。*显形时可用。\n理智值损失：看到显形的仇恨雕像时损失1/1D8点理智值。\fEN:SUMMONEFFIGYOFHATE/EffigyofHate\nCost: 12 magic points; 45 POW; 10 Sanity points\nCasting time: 8 hours per night for 3 nights\nSummons an entity that is bound to the caster’s will to carry out tasks. The ritual for this spell must be held on three consecutive nights, during hours of darkness. While the caster invests the necessary magic points in to the spell, the POW requirement is usually “donated” by three sacrifices (one per night of the casting)—if no sacrifices are available, the POW cost is deducted from the caster (15 points per night). In addition, the caster must prepare a totem (usually in wood), which can take any form (normally a form culturally specific to the caster). Over the course of the three nights, the entity is summoned and bound into the totem. On the third night, at the climax of the spell, the Effigy of Hate is fully coalesced with the totem. It is bound to the caster’s will and may begin to go about fulfilling the caster’s wishes. The Effigy of Hate is the embodiment of cosmic malevolence—a thing of pure darkness and evil. It may only leave the totem for short periods. As it is incorporeal, it is unable to touch or affect the physical world, but is able to observe and gather information as its master chooses. While incorporeal, the Effigy is not affected by physical attacks (though, magical attacks will cause it damage). Once the Effigy has amassed 70 points of POW from sacrifices performed by its master (this in addition to the 45 POW to create and summon it), it gains the ability to physically manifest for up to 4 hours at a time (but only during the hours of darkness), allowing it to interact and be affected by the physical world (i.e. physical attacks now can deal damage). The Effigy may absorb a total of 10 POW per day, so usually seven days and seven sacrifices are required for it to become corporeal.\nAlternative names: Call Forth Dark Minion, Strike the Devil’s Bargain, Manifestation of the Will.\fEFFIGY OF HATE \n\nEmbodiment of Malevolence \nSTR 80* CON 55* SIZ 50* DEX 70* INT 45 APP — POW 70 EDU — SAN — HP 10 \nDamage Bonus: +1D4 Build: 1 Move: 10 MP: 14 \n\nAttacks per round*: 2 (claws, bite) \nFighting 45% (22/9), damage 1D8+DB \nDodge 35% (17/7) \n\nArmor: 3-point hard skin when corporeal. Otherwise, when incorporeal, mundane weapons cannot damage it, only magical attacks and enchanted weapons may cause damage, and it is not capable of performing any attacks of its own. Once corporeal, it may be harmed and also cause harm to others. \n\nSkills: Gather Information 50%, Jump* 40%, Listen 60%, Stealth* 80%, Spot Hidden 50%, Track 70%. \n*When corporeal. \n\nSanity Loss: 1/1D8 Sanity points to see the physical manifestation of the Effigy of Hate."]
 
 
 ["臓器の転移"]
@@ -1994,28 +1895,10 @@ aliases = ["灵魂辨识术","IDENTIFYSPIRIT","IdentifySpirit"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IDENTIFYSPIRIT.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IDENTIFYSPIRIT.json"
-]
-
-
-
-
-
 ["レレイの霧の創造"]
 export = true
 aliases = ["拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEMISTOFR'ELEH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEMISTOFR'ELEH.json"
-]
-
-
-
 
 
 ["レンのガラス"]的
@@ -2024,28 +1907,10 @@ aliases = ["GLASSFROMLENG","GlassFromLeng"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GLASSFROMLENG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GLASSFROMLENG.json"
-]
-
-
-
-
-
 ["ろうそく交信"]
 export = true
 aliases = ["烛光通讯术","CANDLECOMMUNICATION","CandleCommunication"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CANDLECOMMUNICATION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CANDLECOMMUNICATION.json"
-]
-
-
-
 
 
 ["分かれの砂"]
@@ -2054,27 +1919,7 @@ aliases = ["分沙术","PARTINGSANDS","PartingSands"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PARTINGSANDS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/PARTINGSANDS.json"
-]
-
-
-
-
-
 [""]
 export = true
 aliases = ["","",""]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/.json"
-]
-
-
-
-
-

@@ -46,9 +46,11 @@
 |三语|視覚を奪う|致盲术|CAUSE|Cause|
 |三语|視覚を回復させる|治盲术|CUREBLINDNESS|CureBlindness|
 |中+英+简日|時空門の創造|时空门创造术|CREATETIMEGATE|CreateGate|
-|中+英+简日|||||
-|中+英+简日|||||
-|中+英+简日|||||
+|中+英+简日|自己保護の創造|自保袋创造术|CREATESELF-WARD|CreateSelf-Ward|
+|中+英+简日|死者を送る|死之发送术|SENDINGOFTHEDEAD|SendingoftheDead|
+|中+英+简日|死体の粉の創造|坏尸粉创造术|CREATEBAD-CORPSEDUST|CreateBad-CorpseDust|
+|三语|支配|支配术|DOMINATE|Dominate|
+|三语|邪眼|邪眼术|EVILEYE|EvilEye|
 ||||||
 ||||||
 ||||||
@@ -70,9 +72,7 @@
 ||||||
 ||||||
 ||||||
-||||||
-||||||
-||||||
+|中+英|憎悪の像の召喚|仇恨雕像|SUMMONEFFIGYOFHATE|EffigyofHate|
 ||||||
 ||||||
 ||||||
