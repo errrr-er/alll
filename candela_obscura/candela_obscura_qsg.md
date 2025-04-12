@@ -557,50 +557,7 @@ TA害怕这种变化，也害怕伤及无辜，不敢把这件事告诉别人。
 ```
 
 ### 费尔兰的地标
-The Fairelands are incredibly diverse in their 
-geographic range, positioning the city of Newfaire 
-within reach of a variety of locales. Some of these 
-places include: 
-
-**Seasway:** The small, coastal village to the east of 
-Newfaire. Here, structures are built to bend in the fierce 
-wind that sweeps in from the ocean. The majority of 
-fishing families that live and work in Seasway have 
-occupied this stretch of coast for generations.
-
-**Tottergrass:** The rural land south of the city. In 
-Tottergrass, farmers raise livestock and cultivate a 
-variety of crops to great effect, despite the seasonal 
-limits across the world, post-Shiver. The Ascendancy 
-has a strong, decades-long foothold within this region.
-
-**The Verge:** The high cliffs on the western edge of Hale. 
-On a misty day, it appears as if the Verge marks the end 
-of the world and one might fall off this precipice into 
-the sky. At its highest point, a famous monolith covered 
-in Ancient Fairen writing looms over the sea.
-
-**The Bridleborne Mountains:** The mountain range 
-to the east of Newfaire. With the Scarlet Wood at its 
-base, this rocky terrain hosts insular communities 
-and is the home of the most powerful bootleggers 
-in Hale. The Periphery struggles to gain a foothold 
-within Bridleborne, and citizens only truly answer to 
-their own enforcers.
-
-**The Scarlet Wood:** The ancient forest famous for 
-its vibrant red foliage. The trees of the Scarlet Wood 
-produce a hallucinogenic sap, the alcohol and powder 
-from which is prohibited across the Fairelands. 
-Scarlet libations are the foundation of a thriving 
-bootlegging industry.
-
-**Westwreck:** The war-torn land to the west of Newfaire. 
-This area marks the last stand of the war before Hale 
-drove back Otherwhere with electric advancements. 
-Westwreck is well known for the proliferation of 
-landmines that still pose a threat, and travelers must 
-hire a local guide to lead them through.
+0.07以后的版本
 
 # 暗烛
 
