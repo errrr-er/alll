@@ -1,7 +1,7 @@
 [meta]
 title = "模组资料(包含图片)"
 author = "3987681449"
-version = "1.1.4"
+version = "1.1.5"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
 update_date = 2025-04-11
@@ -15,7 +15,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、夏洛克·福尔摩斯症候群、BHBW (Blood Hunt & Bio Watch)\n请根据所需输入对应关键词\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
+options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/README.md"]
 
 
 # 月光舞鞋
@@ -238,7 +238,7 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 
 #夏洛克·福尔摩斯症候群
-["夏洛克·福尔摩斯症候群"]
+["福尔摩斯"]
 export = true
 visible = true
 options = ["关键词：福尔摩斯事前公开"]

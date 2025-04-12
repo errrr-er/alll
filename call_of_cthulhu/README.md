@@ -19,7 +19,7 @@
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/magic_all.png?raw=true)
 
-## 模组资料(包含图片) ver1.1.4
+## 模组资料(包含图片) ver1.1.5
 
 > [!CAUTION]
 > - 手动整理、若有任何遗漏欢迎补充
@@ -81,7 +81,7 @@
             - 幻梦展示1.png
     - 你就刚刚好
         - 风铃草.png
-    - 夏洛克·福尔摩斯症候群
+    - 福尔摩斯 (夏洛克·福尔摩斯症候群)
         - 福尔摩斯事前公开.png x 4
     - BHBW (Blood Hunt & Bio Watch)
         - BHBW事前信息.txt x 3
