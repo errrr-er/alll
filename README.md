@@ -16,7 +16,7 @@
 >         - 弊：涉及链接的修改会导致旧版本无法正常使用
 > - TOML/JSON皆适配海豹系、其它骰系暂且未知、欢迎补充
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
-> ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice_update/sealdice_update_example_pointout.png?raw=true)
+> ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice/sealdice_update_example_pointout.png?raw=true)
 
 # 汇报错误/补充 :inbox_tray:
 
