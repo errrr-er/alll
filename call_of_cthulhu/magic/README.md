@@ -53,7 +53,7 @@
 |三语|邪眼|邪眼术|EVILEYE|EvilEye|
 |中+英+简日|シャンを追い出す|夏恩逐出术|CASTOUTSHAN|CastOutShan|
 |中+英|シュド・メルの赤い印|修德梅尔赤印术|REDSIGNOFSHUDDEM'ELL|RedSignofShuddeM'ell|
-||||||
+|中+英+简日|消滅|消失术|VANISH|Vanish|
 ||||||
 ||||||
 ||||||

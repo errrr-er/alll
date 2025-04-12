@@ -329,7 +329,7 @@ options = ["JP:シュド・メルの赤い印\fCN:修德梅尔赤印术\n这道�
 ["消滅"]
 export = true
 aliases = ["消失术","VANISH","Vanish"]
-options = [""]
+options = ["JP:消滅\n呪文の使い手がふわっと煙のように消えたり、あるいは前もって準備しておいた箱の側に瞬時に戻ってきたりできる呪文。\fCN:消失术\n消耗：5点魔法值；1点理智值；（一次性的10点POW）\n施法用时：即时\n施法者在一阵烟雾中消失，并在预定地点重新出现。该地点在创建一个“时空箱”时确定。时空箱准备完成后，施法者牺牲10点POW（一次性消费）并将他身体的一部分（血液、牙齿或指甲）放进箱子；若取出这些部分清空箱子，法术不会生效，巫师必须重新准备箱子（并再次支付法术消耗）。施法者在读出某个短语或打出某个手势之后，会立即传送到时空箱内部，不管它在什么地方。时空箱甚至可以在几百英里的距离之外。箱子可以在施法者不知情的情况下移动，可能会让旅行的人大吃一惊！每次用这种方式旅行需要消耗5点魔法值和1点理智值。\n别名：巫师的出口、回返万全、身体蒸发术\fEN:VANISH/Vanish\nCost: 5 magic points; 1 Sanity point; (10 POW one-time cost)\nCasting time: instantaneous\nThe caster vanishes in a puff of smoke, to reappear in a prepared location. The location is defined by creating a single Gate Box (page 120). Once the box is prepared, the caster sacrifices 10 POW (a one-time cost) and places elements of their body inside the box (such as blood, teeth, or nails); if these elements are removed and the box purified, the spell will not work, requiring the sorcerer to prepare the box one again (and repay the cost).\nWhen a certain phrase or gesture is performed, the caster is immediately transported to inside the Gate box, wherever it may be. The location of the Gate box might be as far as several hundred miles distant. Presumably the box could be moved without the sorcerer’s knowledge─a surprise on their arrival! Each time the caster travels in this manner it costs 5 magic points and 1 Sanity point.\nAlternative names: The Wizard’s Exit, Return Thee to Safety, Bodily Evaporation."]
 
 
 ["深淵の息"]
@@ -344,28 +344,10 @@ aliases = ["心跳停止术","STOPHEART","StopHeart"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STOPHEART.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/STOPHEART.json"
-]
-
-
-
-
-
 ["心臓の探求"]的
 export = true
 aliases = ["SEEKHEART","SeekHeart"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEEKHEART.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEEKHEART.json"
-]
-
-
-
 
 
 ["身体部分の転移"]
@@ -374,28 +356,10 @@ aliases = ["身体部件转移术","TRANSFERBODYPART","TransferBodyPart"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERBODYPART.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERBODYPART.json"
-]
-
-
-
-
-
 ["人狼の拘束"]
 export = true
 aliases = ["兽化人束缚术","BINDLOUP-GAROU","BindWere-Creature"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDLOUP-GAROU.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDLOUP-GAROU.json"
-]
-
-
-
 
 
 ["種族の橿"]的
@@ -404,28 +368,10 @@ aliases = ["BindLoup-Garou","CAGEOFKIND","CageofKind"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAGEOFKIND.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CAGEOFKIND.json"
-]
-
-
-
-
-
 ["水晶占いの窓の創造"]
 export = true
 aliases = ["占卜窗创造术","CREATESCRYINGWINDOW","CreateScryingWindow"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESCRYINGWINDOW.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATESCRYINGWINDOW.json"
-]
-
-
-
 
 
 ["スベクトラル・ハンターへの変身"]
@@ -434,28 +380,10 @@ aliases = ["灵体猎手变身术","BECOMESPECTRALHUNTER","BecomeSpectralHunter"
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BECOMESPECTRALHUNTER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BECOMESPECTRALHUNTER.json"
-]
-
-
-
-
-
 ["砂嵐を起こす"]
 export = true
 aliases = ["哈布沙暴发生术","BRINGHABOOB","SANDSTORM","BringHaboob"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BRINGHABOOB.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magicBRINGHABOOB.json"
-]
-
-
-
 
 
 ["スレイマンの塵"]
@@ -464,28 +392,10 @@ aliases = ["苏莱曼之尘","DUSTOFSULEIMAN","DustofSuleiman"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DUSTOFSULEIMAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/DUSTOFSULEIMAN.json"
-]
-
-
-
-
-
 ["精神交換"]
 export = true
 aliases = ["精神交换术","MINDEXCHANGE","MindExchange"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDEXCHANGE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDEXCHANGE.json"
-]
-
-
-
 
 
 ["精神的従属"]
@@ -494,28 +404,10 @@ aliases = ["心理暗示术","MENTALSUGGESTION","MentalSuggestion"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json"
-]
-
-
-
-
-
 ["精神転移"]
 export = true
 aliases = ["精神转移术","MINDTANSFER","MindTransfer"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDTANSFER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MINDTANSFER.json"
-]
-
-
-
 
 
 ["精神力吸引"]
@@ -524,28 +416,10 @@ aliases = ["魔力吸取术","POWERDRAIN","PowerDrain"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWERDRAIN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWERDRAIN.json"
-]
-
-
-
-
-
 ["生命の察知"]
 export = true
 aliases = ["生命觉察术","SENSELIFE","SenseLife"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENSELIFE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SENSELIFE.json"
-]
-
-
-
 
 
 ["セイレーンの歌声"]
@@ -554,28 +428,10 @@ aliases = ["塞壬之歌","SIREN'SSONG","Siren'sSong"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SIREN'SSONG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SIREN'SSONG.json"
-]
-
-
-
-
-
 ["セクメンケネッブの言葉"]
 export = true
 aliases = ["真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEKHMENKENHEP'SWORDS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SEKHMENKENHEP'SWORDS.json"
-]
-
-
-
 
 
 ["憎悪の像の召喚"]
@@ -590,28 +446,10 @@ aliases = ["器官转移术","TRANSFERORGAN","TransferOrgan"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERORGAN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/TRANSFERORGAN.json"
-]
-
-
-
-
-
 ["ゾンビの創造"]
 export = true
 aliases = ["活尸创造术","CREATEZOMBI","CreateZombi"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEZOMBI.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEZOMBI.json"
-]
-
-
-
 
 
 ["ゾンビの目"]
@@ -620,28 +458,10 @@ aliases = ["僵尸之眼","EYESOFTHEZOMBIE","EyesoftheZombie"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYESOFTHEZOMBIE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/EYESOFTHEZOMBIE.json"
-]
-
-
-
-
-
 ["タールクン・アテプの鏡"]
 export = true
 aliases = ["塔昆·阿提普之镜","MIRROROFTARKHUNATEP","MirrorofTarkhunAtep"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MIRROROFTARKHUNATEP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MIRROROFTARKHUNATEP.json"
-]
-
-
-
 
 
 ["立ちこめる夜霧"]
@@ -650,28 +470,10 @@ aliases = ["夜雾唤起术","RAISENIGHTFOG","RaiseNightFog"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RAISENIGHTFOG.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/RAISENIGHTFOG.json"
-]
-
-
-
-
-
 ["魂の歌"]
 export = true
 aliases = ["灵魂之歌","SOULSINGING","SoulSinging"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULSINGING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULSINGING.json"
-]
-
-
-
 
 
 ["魂の監禁"]
@@ -680,28 +482,10 @@ aliases = ["精神囚禁术","IMPRISONMIND","ImprisonMind"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPRISONMIND.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/IMPRISONMIND.json"
-]
-
-
-
-
-
 ["魂の束縛"]
 export = true
 aliases = ["灵魂束缚术","BINDSOUL","BindSoul"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDSOUL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDSOUL.json"
-]
-
-
-
 
 
 ["魂の抽出"]
@@ -710,28 +494,10 @@ aliases = ["灵魂抽取术","SOULEXTRACTION","SoulExtraction"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULEXTRACTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOULEXTRACTION.json"
-]
-
-
-
-
-
 ["魂の罠"]
 export = true
 aliases = ["灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOUL-TRAP.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SOUL-TRAP.json"
-]
-
-
-
 
 
 ["チャウグナー・フォーンの奴隷の召喚"]的
@@ -740,28 +506,10 @@ aliases = ["肖格纳尔·方之奴仆召唤术","SUMMONTHRALLOFCHAUGNARFAUGN","
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONTHRALLOFCHAUGNARFAUGN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/SUMMONTHRALLOFCHAUGNARFAUGN.json"
-]
-
-
-
-
-
 ["チャウグナー・フォーンの呪い"]
 export = true
 aliases = ["肖格纳尔·方的诅咒","CURSEOFCHAUGNARFAUGN","CurseofChaugnarFaugn"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFCHAUGNARFAUGN.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CURSEOFCHAUGNARFAUGN.json"
-]
-
-
-
 
 
 ["忠告の注入"]
@@ -770,28 +518,10 @@ aliases = ["IMPLANTSUGGESTION"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MENTALSUGGESTION.json"
-]
-
-
-
-
-
 ["治癒"]
 export = true
 aliases = ["治愈法","HEALING","Healing"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALING.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALING.json"
-]
-
-
-
 
 
 ["手足の萎縮"]
@@ -800,28 +530,10 @@ aliases = ["肢体凋萎术","WITHERLIMB","WitherLimb"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WITHERLIMB.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/WITHERLIMB.json"
-]
-
-
-
-
-
 ["敵の拘束"]
 export = true
 aliases = ["敌人束缚术","BINDENEMY","BindEnemy"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDENEMY.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BINDENEMY.json"
-]
-
-
-
 
 
 ["テツチャプトルのチャイム"]
@@ -830,28 +542,10 @@ aliases = ["特兹查普特尔之铃","CHIMEOFTEZCHAPTL","ChimeofTezchaptl"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHIMEOFTEZCHAPTL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHIMEOFTEZCHAPTL.json"
-]
-
-
-
-
-
 ["天候を変える"]
 export = true
 aliases = ["天气改换术","ALTERWEATHER","AlterWeather"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ALTERWEATHER.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/ALTERWEATHER.json"
-]
-
-
-
 
 
 ["刀身を清める"]
@@ -860,28 +554,10 @@ aliases = ["刀锋祝福术","BLESSBLADE","BlessBlade"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSBLADE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BLESSBLADE.json"
-]
-
-
-
-
-
 ["動物に命令する"]
 export = true
 aliases = ["动物号令法","COMMANDANIMALSPELLS","CommandAnimal"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDANIMALSPELLS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDANIMALSPELLS.json"
-]
-
-
-
 
 
 ["動物の足を不自由にする"]
@@ -890,28 +566,10 @@ aliases = ["动物残废法","LAME","Lame"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LAME.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/LAME.json"
-]
-
-
-
-
-
 ["治癒させる"]
 export = true
 aliases = ["动物治愈法","HEALANIMAL","HealAnimal"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALANIMAL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/HEALANIMAL.json"
-]
-
-
-
 
 
 ["動物を魅了する"]
@@ -920,28 +578,10 @@ aliases = ["动物魅惑法","CHARMANIMAL","CharmAnimal"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHARMANIMAL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHARMANIMAL.json"
-]
-
-
-
-
-
 ["トートの詠唱"]
 export = true
 aliases = ["透特之咏","CHANTOFTHOTH","ChantofThoth"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHANTOFTHOTH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CHANTOFTHOTH.json"
-]
-
-
-
 
 
 ["ドールヘ命令する"]的
@@ -950,28 +590,10 @@ aliases = ["巨噬蠕虫号令法","COMMANDDHOLE","CommandDhole"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDDHOLE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMMANDDHOLE.json"
-]
-
-
-
-
-
 ["ナークーテイトの障壁の創造"]
 export = true
 aliases = ["纳克-提特障壁创造术","CREATEBARRIEROFNAACH-TITH","CreateBarrierofNaach-Tich"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBARRIEROFNAACH-TITH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CREATEBARRIEROFNAACH-TITH.json"
-]
-
-
-
 
 
 ["肉移植"]
@@ -980,28 +602,10 @@ aliases = ["血肉移植术","GRAFTFLESH","GraftFlesh"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAFTFLESH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/GRAFTFLESH.json"
-]
-
-
-
-
-
 ["肉体の屈服"]
 export = true
 aliases = ["肉体屈服术","COMPELFLESH","CompelFlesh"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMPELFLESH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/COMPELFLESH.json"
-]
-
-
-
 
 
 ["肉体の保護"]
@@ -1010,28 +614,10 @@ aliases = ["血肉防护术","FLESHWARD","FleshWard"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FLESHWARD.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/FLESHWARD.json"
-]
-
-
-
-
-
 ["肉の溶解"]
 export = true
 aliases = ["血肉熔解术","MELTFLESH","MeltFlesh"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MELTFLESH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/MELTFLESH.json"
-]
-
-
-
 
 
 ["似姿の利用"]
@@ -1040,28 +626,10 @@ aliases = ["相貌吞食术","CONSUMELIKENESS","ConsumeLikeness"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONSUMELIKENESS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CONSUMELIKENESS.json"
-]
-
-
-
-
-
 ["ニャンベのパワ"]
 export = true
 aliases = ["尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWEROFNYAMBE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/POWEROFNYAMBE.json"
-]
-
-
-
 
 
 ["ニャンベのパワーの招来"]的
@@ -1070,43 +638,16 @@ aliases = ["CALLPOWEROFNYAMBE","PowerofNyambe"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CALLPOWEROFNYAMBE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CALLPOWEROFNYAMBE.json"
-]
-
-
-
-
-
 ["ニョグタのわしづかみ"]
 export = true
 aliases = ["尼约格萨紧握术","CLUTCHOFNYOGTHA","ClutchofNyogtha"]
 options = [""]
 
 
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLUTCHOFNYOGTHA.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CLUTCHOFNYOGTHA.json"
-]
-
-
-
-
-
 ["人間をおびき寄せる"]
 export = true
 aliases = ["人类引诱术","BAITHUMANS","BaitHumans"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BAITHUMANS.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/BAITHUMANS.json"
-]
-
-
-
 
 
 ["ネズミ怪物の呪い"]
@@ -1878,15 +1419,6 @@ options_urls = [
 export = true
 aliases = ["伸触术","REACH","Reach"]
 options = [""]
-
-
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REACH.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/REACH.json"
-]
-
-
-
 
 
 ["霊の識別"]
