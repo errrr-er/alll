@@ -4,27 +4,18 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2024-12-12
-update_date = 2025-01-13
+update_date = 2025-04-11
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/z_magic_all.toml",
   "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/z_magic_all.toml"
 ]
 
+
 ["mhelp"]
 export = true
 visible = true
-
-# 提取云
-cloud_extra = true
-# 云本去重
-dictinct = true
-# github raw 链接
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/magic.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CJE/magic.json"
-]
-
+options = ["https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/README.md"]
 
 
 
