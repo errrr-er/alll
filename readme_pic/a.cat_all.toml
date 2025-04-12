@@ -1,0 +1,37 @@
+[meta]
+title = "猫回复词"
+author = "3987681449"
+version = "1.0.0"
+license = "CC-BY-NC-SA 4.0"
+date = 2025-04-12
+update_date = 2025-04-12
+desc = "https://github.com/errrr-er/alll/tree/main"
+update_Urls = [
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/readme_pic/a.cat_all.toml",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/readme_pic/a.cat_all.toml"
+]
+
+
+["猫help"]
+export = true
+options = [""]
+
+
+["猫翻译"]
+export = true
+options = ["请确保已阅读最新版兑换须知\nerrrr-er.github.io/trpg/\n\n其余可在提问箱内反馈/咨询\nbox.n3ko.cc/_/no_reply31cat\n\n或可加群联系317223427"]
+
+
+["猫discord"]
+export = true
+options = ["猫猫：\nhttps://discord.com/oauth2/authorize?client_id=1266740135853031475&permissions=8&integration_type=0&scope=bot\n\n墨菲林：\nhttps://discord.com/oauth2/authorize?client_id=1114278526695247996&permissions=8&integration_type=0&scope=bot"]
+
+
+["猫zip"]
+export = true
+options = ["(旧方法)\n电脑推荐使用【bandzip】，右键用它打开，打开以后选择【代码页】，根据需求选择对应语言，之后在页面里选择【解压】\n*一般来说能解决绝大多数解压出乱码的情况\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/zip/old-zip1.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/zip/old-zip2.png?raw=true,type=show]"]
+
+
+["猫制卡"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-sc.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-dmg.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-hard-extreme.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-fight.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-fight-dmg.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-explan-weapon-critical.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-explan-fight-extreme.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-explan-fight-critical.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-db-size.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-language.jpg?raw=true,type=show]"]
