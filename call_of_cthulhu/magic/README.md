@@ -45,10 +45,10 @@
 |中+英|イルカに命令する|召令海豚|COMMANDPORPOISE|CommandPorpoise|
 |三语|視覚を奪う|致盲术|CAUSE|Cause|
 |三语|視覚を回復させる|治盲术|CUREBLINDNESS|CureBlindness|
-||||||
-||||||
-||||||
-||||||
+|中+英+简日|時空門の創造|时空门创造术|CREATETIMEGATE|CreateGate|
+|中+英+简日|||||
+|中+英+简日|||||
+|中+英+简日|||||
 ||||||
 ||||||
 ||||||
