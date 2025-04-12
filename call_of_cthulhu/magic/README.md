@@ -4,6 +4,10 @@
 |三语|悪魔の暴露|恶魔揭露术|UNMASKDEMON|UnmaskDemon|
 |三语|悪夢|梦魇术|NIGHTMARE|Nightmare|
 |中英+简日|アザトースの呪詛|阿撒托斯的恐怖诅咒|DREADCURSEOFAZATHOTH|DreadCurseofAzathoth|
+|中英+简日|アブホースを目覚めさせる|阿布霍斯唤醒术|AWAKEABHOTH|AwakeAbhoth|
+|英|アルハザードのランプ|阿尔哈兹莱德的油灯|LAMPOFALHAZRED|LampofAlhazred|
+|三语|暗黒の呪い|黑暗诅咒|CURSEOFDARKNESS|CurseofDarkness|
+|三语|イーデ・エタドの放逐|耶德·艾塔德放逐术|BANISHMENTOFYDEETAD|BanishmentofYdeEtad|
 ||||||
 ||||||
 ||||||
@@ -12,8 +16,3 @@
 ||||||
 ||||||
 ||||||
-||||||
-||||||
-||||||
-||||||
-
