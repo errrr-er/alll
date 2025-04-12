@@ -44,3 +44,5 @@
     - 模组本体(名称请见目录)
 - cq
     - [CQ:image,file=换,type=show]
+- 回复
+    - #{DRAW-关键词}
