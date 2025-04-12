@@ -18,49 +18,22 @@ visible = true
 options = ["https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/magic/README.md"]
 
 
-
-
 ["悪魔退散"]
 export = true
 aliases = ["魔鬼逐出术","CASTOUTDEVIL","CastOutTheDevil"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTDEVIL.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/CASTOUTDEVIL.json"
-]
-
-
-
+options = ["JP:悪魔退散\nコスト：10MP\n必要ラウンド：1日\n異生物に取り憑かれている人物を自由にする呪文。対抗POWロールに成功すると自由にできる。この呪文を知っているものはアシスタントをすることができ、POWの半分を提供して加算することができる。\fCN:魔鬼逐出术\n消耗：10点魔法值；1D4点理智值\n施法用时：1天\n从异界存在手中释放被占据的目标。这个复杂而费力的法术需要一整天来施放，并且需要许多部族魔法的成分。施法者须和占据目标的存在进行一次POW对抗检定并胜出，法术才能生效。最多可以有两名协助者参与，他们必须知道本法术，可以向施法者支援10点魔法值，为检定增加一颗奖励骰。本法术很少在没有协助的情况下施放。不同文化中，比如非洲、凯尔特、阿拉伯群体，存在本法术的不同形式。需要的法术成分要体现施法者的文化传统。本法术可以对许多敌人使用——帮助被伊戈罗纳克、伟大种族伊斯的精神、艾霍特的幼体等等占据的人。如果从目标身体里出现的存在是可见的，在驱魔现场的所有人都要进行相应的理智检定。\n别名：驱魔仪式、强迫恶魔、灵魂谋杀\fEN:CASTOUTDEVIL/CastOutTheDevil\nCost: 10 magic points; 1D4 Sanity points\nCasting time: 1 day\nFrees the target of possession by alien entities. This elaborate and draining spell takes a full day to cast, requiring many components of tribal magic. For the spell to take effect, the caster must succeed in an opposed POW roll with the possessing entity. Up to two willing assistants, who also know the spell, may spend 10 magic points to support the caster, adding a bonus die to the roll. This spell is seldom attempted without such help. Divergent forms of this spell exist in different cultures, such as African, Celtic, or Arabic societies. The material components required reflect the culture of the caster.The spell may be used against many foes—to help a person possessed by Y’golonac or by a mind from the Great Race of Yith, as well as expel the brood of Eihort. If the creature that emerges from the victim is visible, all those present for the exorcism must make the appropriate Sanity roll.\nAlternative names: The Rite of Exorcism, Compel the Demon, Soul Murder."]
 
 
 ["悪魔の暴露"]
 export = true
 aliases = ["恶魔揭露术","UNMASKDEMON","UnmaskDemon"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNMASKDEMON.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/UNMASKDEMON.json"
-]
-
-
-
+options = ["JP:悪魔の暴露\nコスト：任意の量のMP\n必要ラウンド：無精卵を割る間（1ラウンド）\n3人のグループで執り行い、3人の消費するMPと対象のPOWでの対抗ロールを行い、勝つと対象の本当の姿を表すことができる。その結果SANチェックが発生することもある。※7版であればPOW/5で調整が必要\fCN:恶魔揭露术\n施法用时：（每名参与者）5点魔法值、1D4+1点理智值\n施法用时：3轮\n本法术通过神秘的姿势和咒语，破除一个活物的所有魔法伪装。本法术需要至少三人的团体参与施法，他们要清晰且有节奏地吟诵，领唱者还要同时打破一枚未受精的生蛋，蛋上面要画好目标的形象。施法者须和目标进行一次POW对抗检定并胜出，法术才能生效。若成功，法术的参与者将在下一次观察目标时看到他的真实身份。当目标的真实身份揭露出来时，可能会损失理智值。\n别名：现汝蛇形、观察之咏、揭去面纱\fEN:UNMASKDEMON/UnmaskDemon\nCost: 5 magic points (per participant); 1D4+1 Sanity points (per participant)\nCasting time: 3 rounds\nThrough arcane gesticulation and word, this spell destroys any magical disguise used by a living target. The spell requires the participation of a group of at least three people who chant clearly and rhythmically while their leader breaks a raw unfertilized egg on which has been drawn an image of the target. For the spell to take effect the caster must succeed in an opposed POW roll with the target: success allows the participants in the spell to see the real identity of the target when next viewed. Sanity may be lost when the target’s true form is thus revealed.\nAlternative names: Serpent Show Thyself, The Chant of Seeing, Lift the Veil."]
 
 
 ["悪夢"]
 export = true
 aliases = ["梦魇术","NIGHTMARE","Nightmare"]
-options = []
-cloud_extra = true
-dictinct = true
-options_urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/NIGHTMARE.json",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/NIGHTMARE.json"
-]
-
+options = ["JP:悪夢\nコスト：8MP、1正気度ポイント\n必要ラウンド：さまざま（最低１時間）\n眠っている一人に悪夢を見せて1d3正気度ポイントを失わせる。\fCN:梦魇术\n消耗：8点魔法值；1点理智值\n施法用时：2轮\n使目标经受可怕的梦魇，损失1D3点理智值。只要施法者认识目标，本法术就可以在任何距离生效。震惊不已的受害者将无法回忆起梦魇的内容，除非其他人对他使用「精神分析」技能并检定成功。KP决定梦魇的内容，他可以谨慎地提供线索和警示。详情参照梦魇效果表。\n别名：黑暗的想象、惊恐的睡眠、昏昏欲睡的折磨\fEN:NIGHTMARE/Nightmare\nCost: 8 magic points; 1 Sanity point\nCasting time: 2 rounds\nCauses the target to experience a horrific nightmare costing 1D3 Sanity points. The spell can take effect at any range as long as the target is known to the caster. The shaken victim is unable to remember the nightmare unless another person can perform a successful Psychoanalysis roll with them. The nightmare’s content is determined by the Keeper and may provide clues or warnings at their discretion.\nAlternative names: Dark Fancy, Fearful Sleep, Somnolent Ordeal."]
 
 
 
@@ -68,7 +41,7 @@ options_urls = [
 ["アザトースの呪詛"]
 export = true
 aliases = ["阿撒托斯的恐怖诅咒","DREADCURSEOFAZATHOTH","DreadCurseofAzathoth"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -83,7 +56,7 @@ options_urls = [
 ["アブホースを目覚めさせる"]
 export = true
 aliases = ["阿布霍斯唤醒术","AWAKEABHOTH","AwakeAbhoth"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -98,7 +71,7 @@ options_urls = [
 ["アルハザードのランプ"]
 export = true
 aliases = ["阿尔哈兹莱德的油灯","LAMPOFALHAZRED","LampofAlhazred"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -113,7 +86,7 @@ options_urls = [
 ["暗黒の呪い"]
 export = true
 aliases = ["黑暗诅咒","CURSEOFDARKNESS","CurseofDarkness"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -128,7 +101,7 @@ options_urls = [
 ["イーデ・エタドの放逐"]
 export = true
 aliases = ["耶德·艾塔德放逐术","BANISHMENTOFYDEETAD","BanishmentofYdeEtad"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -143,7 +116,7 @@ options_urls = [
 ["イシスの封印"]
 export = true
 aliases = ["伊希斯的封印","SEALOFISIS","SealofIsis"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -158,7 +131,7 @@ options_urls = [
 ["石の呪い"]
 export = true
 aliases = ["石板诅咒","CURSEOFTHESTONE","CurseoftheStone"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -173,7 +146,7 @@ options_urls = [
 ["萎縮"]
 export = true
 aliases = ["枯萎术","SHRIVELLING","Shrivelling"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -188,7 +161,7 @@ options_urls = [
 ["命の糧"]
 export = true
 aliases = ["生命食粮术","FOODOFLIFE","FoodofLife"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -203,7 +176,7 @@ options_urls = [
 ["イブンーグハジの粉"]
 export = true
 aliases = ["伊本-加齐之粉","POWDEROFIBN-GHAZI","PowderofIbn-Ghazi"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -218,7 +191,7 @@ options_urls = [
 ["癒し"]
 export = true
 aliases = ["HEAL","Heal"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -233,7 +206,7 @@ options_urls = [
 ["ヴールの印"]
 export = true
 aliases = ["维瑞之印","VOORISHSIGN","VoorishSign"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -248,7 +221,7 @@ options_urls = [
 ["鋭敏な2人"]
 export = true
 aliases = ["相似的敏锐","KEENNESSOFTWOALIKE","KeennessofTwoAlike"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -263,7 +236,7 @@ options_urls = [
 ["エイボンの霧の車輪"]
 export = true
 aliases = ["伊波恩雾轮术","EIBON'SWHEELOFMIST","Eibon'sWheelofMist"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -278,7 +251,7 @@ options_urls = [
 ["疫病の召喚"]
 export = true
 aliases = ["瘟疫召唤术","SUMMONPLAGUE","SummonPlague"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -293,7 +266,7 @@ options_urls = [
 ["疫病の到来"]
 export = true
 aliases = ["瘟疫发生术","BRINGPESTILENCE","BringPestilence"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -308,7 +281,7 @@ options_urls = [
 ["延長"]
 export = true
 aliases = ["续命术","EXTEND","ExtendLife"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -323,7 +296,7 @@ options_urls = [
 ["黄金の蜂蜜酒の製法"]
 export = true
 aliases = ["黄金蜂蜜酒酿造术","BREWSPACE-MEAD","BrewSpaceMead"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -338,7 +311,7 @@ options_urls = [
 ["カーの分配"]
 export = true
 aliases = ["灵魂分配术","APPORTIONKA","ApportionKa"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -353,7 +326,7 @@ options_urls = [
 ["輝くトラペゾヘドロン"]
 export = true
 aliases = ["闪耀的偏方三八面体","SHININGTRAPEZOHEDRON","ShiningTrapezohedron"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -368,7 +341,7 @@ options_urls = [
 ["川の神の呪い"]
 export = true
 aliases = ["河神的诅咒","RIVERGODISCURSE","RiverGodCurse"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -383,7 +356,7 @@ options_urls = [
 ["完全"]
 export = true
 aliases = ["完善术","PERFECTION","Perfection"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -398,7 +371,7 @@ options_urls = [
 ["記憶を曇らせる"]
 export = true
 aliases = ["记忆模糊术","CLOUDMEMORY","CloudMemory"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -413,7 +386,7 @@ options_urls = [
 ["犠性者を魅了する"]
 export = true
 aliases = ["迷身术","ENTHRALLVICTIM","EnthrallVictim"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -428,7 +401,7 @@ options_urls = [
 ["逆転移"]
 export = true
 aliases = ["反转移术","DETRANSFERENCE","Detransference"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -443,7 +416,7 @@ options_urls = [
 ["吸魂"]
 export = true
 aliases = ["生命偷取术","STEALLIFE","StealLife"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -458,7 +431,7 @@ options_urls = [
 ["狂気の笛"]
 export = true
 aliases = ["疯狂之笛","PIPESOFMADNESS","PipesofMadness"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -473,7 +446,7 @@ options_urls = [
 ["恐怖の注入"]
 export = true
 aliases = ["恐惧植入术","IMPLANTFEAR","ImplantFear"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -488,7 +461,7 @@ options_urls = [
 ["空中浮遊"]
 export = true
 aliases = ["飘浮术","LEVITATE","Levitate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -503,7 +476,7 @@ options_urls = [
 ["クトゥルフのわしづかみ"]
 export = true
 aliases = ["克苏鲁抓攫术","GRASPOFCTHULHU","GraspofCthulhu"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -518,7 +491,7 @@ options_urls = [
 ["腐った外皮の呪い"]
 export = true
 aliases = ["腐烂外皮之诅咒","CURSEOFTHEPUTRIDHUSK","CurseofthePutridHusk"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -533,7 +506,7 @@ options_urls = [
 ["黒い束縛"]
 export = true
 aliases = ["僵尸创造术","BLACKBINDING","CreateZombie"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -548,7 +521,7 @@ options_urls = [
 ["コウモリ形態"]
 export = true
 aliases = ["蝙蝠化形法","BATFORM","BatForm"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -563,7 +536,7 @@ options_urls = [
 ["コルーブラの手"]
 export = true
 aliases = ["蛇臂术","HANDSOFCOLUBRA","HandsofColubra"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -578,7 +551,7 @@ options_urls = [
 ["ゴルゴロスのボディ・ワープ"]
 export = true
 aliases = ["戈尔戈罗斯形体扭曲术","BODYWARPINGOFGORGOROTH","BodyWarpingofGorgoroth"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -593,7 +566,7 @@ options_urls = [
 ["再度の屈辱"]
 export = true
 aliases = ["遗恨术","REMORTIFICATION","Remortification"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -608,7 +581,7 @@ options_urls = [
 ["魚の招来"]
 export = true
 aliases = ["诱鱼术","CALLFISH","AttractFish"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -623,7 +596,7 @@ options_urls = [
 ["魚を引きつける"]
 export = true
 aliases = ["诱鱼术","ATTRACTFISH","AttractFish"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -638,7 +611,7 @@ options_urls = [
 ["さまよう魂"]
 export = true
 aliases = ["灵魂漫游术","WANDERINGSOUL","WanderingSoul"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -653,7 +626,7 @@ options_urls = [
 ["サメ"]
 export = true
 aliases = ["COMMANDSHARK","CommandShark"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -668,7 +641,7 @@ options_urls = [
 ["イルカに命令する"]
 export = true
 aliases = ["COMMANDPORPOISE","CommandPorpoise"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -683,7 +656,7 @@ options_urls = [
 ["視覚を奪う"]
 export = true
 aliases = ["致盲术","CAUSE","Cause"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -698,7 +671,7 @@ options_urls = [
 ["視覚を回復させる"]
 export = true
 aliases = ["治盲术","CUREBLINDNESS","CureBlindness"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -713,7 +686,7 @@ options_urls = [
 ["時空門の創造"]
 export = true
 aliases = ["时空门创造术","CREATETIMEGATE","CreateGate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -728,7 +701,7 @@ options_urls = [
 ["自己保護の創造"]
 export = true
 aliases = ["自保袋创造术","CREATESELF-WARD","CreateSelf-Ward"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -743,7 +716,7 @@ options_urls = [
 ["死者を送る"]
 export = true
 aliases = ["死之发送术","SENDINGOFTHEDEAD","SendingoftheDead"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -758,7 +731,7 @@ options_urls = [
 ["死体の粉の創造"]
 export = true
 aliases = ["坏尸粉创造术","CREATEBAD-CORPSEDUST","CreateBad-CorpseDust"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -773,7 +746,7 @@ options_urls = [
 ["支配"]
 export = true
 aliases = ["支配术","DOMINATE","Dominate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -788,7 +761,7 @@ options_urls = [
 ["邪眼"]
 export = true
 aliases = ["邪眼术","EVILEYE","EvilEye"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -803,7 +776,7 @@ options_urls = [
 ["シャンを追い出す"]
 export = true
 aliases = ["夏恩逐出术","CASTOUTSHAN","CastOutShan"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -818,7 +791,7 @@ options_urls = [
 ["シュド・メルの赤い印"]
 export = true
 aliases = ["修德梅尔赤印术","REDSIGNOFSHUDDEM'ELL","RedSignofShuddeM'ell"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -833,7 +806,7 @@ options_urls = [
 ["消滅"]
 export = true
 aliases = ["消失术","VANISH","Vanish"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -848,7 +821,7 @@ options_urls = [
 ["深淵の息"]
 export = true
 aliases = ["深渊之息","BREATHOFTHEDEEP","BreathoftheDeep"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -863,7 +836,7 @@ options_urls = [
 ["心臓停止"]
 export = true
 aliases = ["心跳停止术","STOPHEART","StopHeart"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -878,7 +851,7 @@ options_urls = [
 ["心臓の探求"]
 export = true
 aliases = ["SEEKHEART","SeekHeart"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -893,7 +866,7 @@ options_urls = [
 ["身体部分の転移"]
 export = true
 aliases = ["身体部件转移术","TRANSFERBODYPART","TransferBodyPart"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -908,7 +881,7 @@ options_urls = [
 ["人狼の拘束"]
 export = true
 aliases = ["兽化人束缚术","BINDLOUP-GAROU","BindWere-Creature"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -923,7 +896,7 @@ options_urls = [
 ["種族の橿"]
 export = true
 aliases = ["BindLoup-Garou","CAGEOFKIND","CageofKind"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -938,7 +911,7 @@ options_urls = [
 ["水晶占いの窓の創造"]
 export = true
 aliases = ["占卜窗创造术","CREATESCRYINGWINDOW","CreateScryingWindow"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -953,7 +926,7 @@ options_urls = [
 ["スベクトラル・ハンターへの変身"]
 export = true
 aliases = ["灵体猎手变身术","BECOMESPECTRALHUNTER","BecomeSpectralHunter"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -968,7 +941,7 @@ options_urls = [
 ["砂嵐を起こす"]
 export = true
 aliases = ["哈布沙暴发生术","BRINGHABOOB","SANDSTORM","BringHaboob"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -983,7 +956,7 @@ options_urls = [
 ["スレイマンの塵"]
 export = true
 aliases = ["苏莱曼之尘","DUSTOFSULEIMAN","DustofSuleiman"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -998,7 +971,7 @@ options_urls = [
 ["精神交換"]
 export = true
 aliases = ["精神交换术","MINDEXCHANGE","MindExchange"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1013,7 +986,7 @@ options_urls = [
 ["精神的従属"]
 export = true
 aliases = ["心理暗示术","MENTALSUGGESTION","MentalSuggestion"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1028,7 +1001,7 @@ options_urls = [
 ["精神転移"]
 export = true
 aliases = ["精神转移术","MINDTANSFER","MindTransfer"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1043,7 +1016,7 @@ options_urls = [
 ["精神力吸引"]
 export = true
 aliases = ["魔力吸取术","POWERDRAIN","PowerDrain"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1058,7 +1031,7 @@ options_urls = [
 ["生命の察知"]
 export = true
 aliases = ["生命觉察术","SENSELIFE","SenseLife"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1073,7 +1046,7 @@ options_urls = [
 ["セイレーンの歌声"]
 export = true
 aliases = ["塞壬之歌","SIREN'SSONG","Siren'sSong"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1088,7 +1061,7 @@ options_urls = [
 ["セクメンケネッブの言葉"]
 export = true
 aliases = ["真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1103,7 +1076,7 @@ options_urls = [
 ["憎悪の像の召喚"]
 export = true
 aliases = ["仇恨雕像","SUMMONEFFIGYOFHATE","EffigyofHate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1118,7 +1091,7 @@ options_urls = [
 ["臓器の転移"]
 export = true
 aliases = ["器官转移术","TRANSFERORGAN","TransferOrgan"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1133,7 +1106,7 @@ options_urls = [
 ["ゾンビの創造"]
 export = true
 aliases = ["活尸创造术","CREATEZOMBI","CreateZombi"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1148,7 +1121,7 @@ options_urls = [
 ["ゾンビの目"]
 export = true
 aliases = ["僵尸之眼","EYESOFTHEZOMBIE","EyesoftheZombie"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1163,7 +1136,7 @@ options_urls = [
 ["タールクン・アテプの鏡"]
 export = true
 aliases = ["塔昆·阿提普之镜","MIRROROFTARKHUNATEP","MirrorofTarkhunAtep"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1178,7 +1151,7 @@ options_urls = [
 ["立ちこめる夜霧"]
 export = true
 aliases = ["夜雾唤起术","RAISENIGHTFOG","RaiseNightFog"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1193,7 +1166,7 @@ options_urls = [
 ["魂の歌"]
 export = true
 aliases = ["灵魂之歌","SOULSINGING","SoulSinging"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1208,7 +1181,7 @@ options_urls = [
 ["魂の監禁"]
 export = true
 aliases = ["精神囚禁术","IMPRISONMIND","ImprisonMind"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1223,7 +1196,7 @@ options_urls = [
 ["魂の束縛"]
 export = true
 aliases = ["灵魂束缚术","BINDSOUL","BindSoul"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1238,7 +1211,7 @@ options_urls = [
 ["魂の抽出"]
 export = true
 aliases = ["灵魂抽取术","SOULEXTRACTION","SoulExtraction"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1253,7 +1226,7 @@ options_urls = [
 ["魂の罠"]
 export = true
 aliases = ["灵魂陷阱术","SOUL-TRAP","Soul-Trap"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1268,7 +1241,7 @@ options_urls = [
 ["チャウグナー・フォーンの奴隷の召喚"]
 export = true
 aliases = ["肖格纳尔·方之奴仆召唤术","SUMMONTHRALLOFCHAUGNARFAUGN","SummonThrallofChaugnarFaugn"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1283,7 +1256,7 @@ options_urls = [
 ["チャウグナー・フォーンの呪い"]
 export = true
 aliases = ["肖格纳尔·方的诅咒","CURSEOFCHAUGNARFAUGN","CurseofChaugnarFaugn"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1298,7 +1271,7 @@ options_urls = [
 ["忠告の注入"]
 export = true
 aliases = ["IMPLANTSUGGESTION"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1313,7 +1286,7 @@ options_urls = [
 ["治癒"]
 export = true
 aliases = ["治愈法","HEALING","Healing"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1328,7 +1301,7 @@ options_urls = [
 ["手足の萎縮"]
 export = true
 aliases = ["肢体凋萎术","WITHERLIMB","WitherLimb"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1343,7 +1316,7 @@ options_urls = [
 ["敵の拘束"]
 export = true
 aliases = ["敌人束缚术","BINDENEMY","BindEnemy"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1358,7 +1331,7 @@ options_urls = [
 ["テツチャプトルのチャイム"]
 export = true
 aliases = ["特兹查普特尔之铃","CHIMEOFTEZCHAPTL","ChimeofTezchaptl"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1373,7 +1346,7 @@ options_urls = [
 ["天候を変える"]
 export = true
 aliases = ["天气改换术","ALTERWEATHER","AlterWeather"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1388,7 +1361,7 @@ options_urls = [
 ["刀身を清める"]
 export = true
 aliases = ["刀锋祝福术","BLESSBLADE","BlessBlade"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1403,7 +1376,7 @@ options_urls = [
 ["動物に命令する"]
 export = true
 aliases = ["动物号令法","COMMANDANIMALSPELLS","CommandAnimal"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1418,7 +1391,7 @@ options_urls = [
 ["動物の足を不自由にする"]
 export = true
 aliases = ["动物残废法","LAME","Lame"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1433,7 +1406,7 @@ options_urls = [
 ["治癒させる"]
 export = true
 aliases = ["动物治愈法","HEALANIMAL","HealAnimal"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1448,7 +1421,7 @@ options_urls = [
 ["動物を魅了する"]
 export = true
 aliases = ["动物魅惑法","CHARMANIMAL","CharmAnimal"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1463,7 +1436,7 @@ options_urls = [
 ["トートの詠唱"]
 export = true
 aliases = ["透特之咏","CHANTOFTHOTH","ChantofThoth"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1478,7 +1451,7 @@ options_urls = [
 ["ドールヘ命令する"]
 export = true
 aliases = ["巨噬蠕虫号令法","COMMANDDHOLE","CommandDhole"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1493,7 +1466,7 @@ options_urls = [
 ["ナークーテイトの障壁の創造"]
 export = true
 aliases = ["纳克-提特障壁创造术","CREATEBARRIEROFNAACH-TITH","CreateBarrierofNaach-Tich"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1508,7 +1481,7 @@ options_urls = [
 ["肉移植"]
 export = true
 aliases = ["血肉移植术","GRAFTFLESH","GraftFlesh"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1523,7 +1496,7 @@ options_urls = [
 ["肉体の屈服"]
 export = true
 aliases = ["肉体屈服术","COMPELFLESH","CompelFlesh"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1538,7 +1511,7 @@ options_urls = [
 ["肉体の保護"]
 export = true
 aliases = ["血肉防护术","FLESHWARD","FleshWard"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1553,7 +1526,7 @@ options_urls = [
 ["肉の溶解"]
 export = true
 aliases = ["血肉熔解术","MELTFLESH","MeltFlesh"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1568,7 +1541,7 @@ options_urls = [
 ["似姿の利用"]
 export = true
 aliases = ["相貌吞食术","CONSUMELIKENESS","ConsumeLikeness"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1583,7 +1556,7 @@ options_urls = [
 ["ニャンベのパワ"]
 export = true
 aliases = ["尼安贝的魔力","POWEROFNYAMBE","PowerofNyambe"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1598,7 +1571,7 @@ options_urls = [
 ["ニャンベのパワーの招来"]
 export = true
 aliases = ["CALLPOWEROFNYAMBE","PowerofNyambe"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1613,7 +1586,7 @@ options_urls = [
 ["ニョグタのわしづかみ"]
 export = true
 aliases = ["尼约格萨紧握术","CLUTCHOFNYOGTHA","ClutchofNyogtha"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1628,7 +1601,7 @@ options_urls = [
 ["人間をおびき寄せる"]
 export = true
 aliases = ["人类引诱术","BAITHUMANS","BaitHumans"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1643,7 +1616,7 @@ options_urls = [
 ["ネズミ怪物の呪い"]
 export = true
 aliases = ["人面鼠诅咒","CURSEOFTHERATLTHING","CurseoftheRat-thing"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1658,7 +1631,7 @@ options_urls = [
 ["農作物を枯らす"]
 export = true
 aliases = ["作物枯萎法","BLIGHT","Blight"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1673,7 +1646,7 @@ options_urls = [
 ["農作物に祝福を与える"]
 export = true
 aliases = ["作物祝福法","BLESSCROP","BlessCrop"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1688,7 +1661,7 @@ options_urls = [
 ["呪いのホイッスルの創造"]
 export = true
 aliases = ["诅咒之笛创造术","CREATECURSEWHISTLE","CreateCurseWhistle"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1703,7 +1676,7 @@ options_urls = [
 ["ハートの勇気"]
 export = true
 aliases = ["心中的勇气","HEART'SCOURAGE","Heart'sCourage"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1718,7 +1691,7 @@ options_urls = [
 ["灰色の束縛"]
 export = true
 aliases = ["灰色束缚","GRAYBINDING","GreyBinding"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1733,7 +1706,7 @@ options_urls = [
 ["破壊"]
 export = true
 aliases = ["折磨术","WRACK","Wrack"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1748,7 +1721,7 @@ options_urls = [
 ["吐き気の魔去円"]
 export = true
 aliases = ["反胃法阵","CIRCLEOFNAUSEA","CircleofNausea"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1763,7 +1736,7 @@ options_urls = [
 ["ハスターの歌"]
 export = true
 aliases = ["哈斯塔之歌","SONGOFHASTUR","SongofHastur"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1778,7 +1751,7 @@ options_urls = [
 ["ハスターの解放"]
 export = true
 aliases = ["哈斯塔释放术","FREEHASTUR","FreeHastur"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1793,7 +1766,7 @@ options_urls = [
 ["被害をそらす"]
 export = true
 aliases = ["伤害偏转术","DEFLECTHARM","DeflectHarm"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1808,7 +1781,7 @@ options_urls = [
 ["光と闇の目"]
 export = true
 aliases = ["光明与黑暗之眼","EYEOFLIGHTANDDARKNESS","EyeofLightandDarkness"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1823,7 +1796,7 @@ options_urls = [
 ["光の空隙"]
 export = true
 aliases = ["VOIDLIGHT","VoidLight"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1838,7 +1811,7 @@ options_urls = [
 ["光を消す"]
 export = true
 aliases = ["抑光术","DAMPENLIGHT","DampenLight"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1853,7 +1826,7 @@ options_urls = [
 ["雛を取り除く"]
 export = true
 aliases = ["幼体驱除术","BALKBROOD","BalkBrood"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1868,7 +1841,7 @@ options_urls = [
 ["皮膚の制御"]
 export = true
 aliases = ["皮肤控制术","CONTROLSKIN","ControlSkin"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1883,7 +1856,7 @@ options_urls = [
 ["フェッチ棒の創造"]
 export = true
 aliases = ["生魂棒创造术","CREATEFETCHSTICK","CreateFetchStick"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1898,7 +1871,7 @@ options_urls = [
 ["布石"]
 export = true
 aliases = ["守卫术","WARDING","Warding"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1913,7 +1886,7 @@ options_urls = [
 ["復活"]
 export = true
 aliases = ["复活术","RESURRECTION","Resurrection"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1928,7 +1901,7 @@ options_urls = [
 ["プリンのアンサタ十字"]
 export = true
 aliases = ["蒲林的埃及十字架","PRINN'SCRUXANSATA","Prinn'sCruxAnsata"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1943,7 +1916,7 @@ options_urls = [
 ["旧き印"]
 export = true
 aliases = ["旧印开光术","ELDERSIGN","ElderSign"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1958,7 +1931,7 @@ options_urls = [
 ["平凡な見せかけ"]
 export = true
 aliases = ["平凡无奇术","POSEMUNDANE","PoseMundane"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1973,7 +1946,7 @@ options_urls = [
 ["仮面"]
 export = true
 aliases = ["平凡无奇术","MASK","PoseMundane"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -1988,7 +1961,7 @@ options_urls = [
 ["ヘルメス・トリスメギストスの毒塵"]
 export = true
 aliases = ["赫耳墨斯·特里斯墨吉斯忒斯的毒尘","BANEFULDUSTOFHERMESTRISMEGISTUS","BanefulDustofHermesTrismegistus"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2003,7 +1976,7 @@ options_urls = [
 ["忘却の波"]
 export = true
 aliases = ["忘却之波","WAVEOFOBLIVION","WaveofOblivion"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2018,7 +1991,7 @@ options_urls = [
 ["亡霊に命令する"]
 export = true
 aliases = ["鬼魂号令法","COMMANDGHOST","CommandGhost"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2033,7 +2006,7 @@ options_urls = [
 ["卜占"]
 export = true
 aliases = ["占卜法","AUGURY","Augury"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2048,7 +2021,7 @@ options_urls = [
 ["炎の外套"]
 export = true
 aliases = ["火焰斗篷术","CLOAKOFFIRE","CloakofFire"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2063,7 +2036,7 @@ options_urls = [
 ["マインドブラスト"]
 export = true
 aliases = ["精神震爆术","MINDBLAST","Mindblast"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2078,7 +2051,7 @@ options_urls = [
 ["窓の創造"]
 export = true
 aliases = ["CREATEWINDOW"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2093,7 +2066,7 @@ options_urls = [
 ["ミ＝ゴの催眠術"]
 export = true
 aliases = ["MI-GOHYPNOSIS","Mi-GoHypnosis"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2108,7 +2081,7 @@ options_urls = [
 ["未来の視察"]
 export = true
 aliases = ["未来观测术","LOOKTOTHEFUTURE","LooktotheFuture"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2123,7 +2096,7 @@ options_urls = [
 ["魅惑"]
 export = true
 aliases = ["MESMERIZE","Mesmerize"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2138,7 +2111,7 @@ options_urls = [
 ["無欠の投擲"]
 export = true
 aliases = ["无瑕投掷法","IMPECCABLETHROW","ImpeccableThrow"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2153,7 +2126,7 @@ options_urls = [
 ["向こう側への旅"]
 export = true
 aliases = ["彼端之旅","JOURNEYTOTHEOTHERSIDE","JourneytotheOtherSide"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2168,7 +2141,7 @@ options_urls = [
 ["冥王星の薬"]
 export = true
 aliases = ["PLUTONIANDRUG","PlutonianDrug"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2183,7 +2156,7 @@ options_urls = [
 ["名状し難い誓約"]
 export = true
 aliases = ["不可名状的诺言","UNSPEAKABLEPROMISE","UnspeakablePromise"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2198,7 +2171,7 @@ options_urls = [
 ["目の保護"]
 export = true
 aliases = ["邪眼守卫术","WARDINGTHEEYE","WardingtheEye"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2213,7 +2186,7 @@ options_urls = [
 ["モートランのガラスの製造"]
 export = true
 aliases = ["莫特兰玻璃幻术","CONJUREGLASSOFMOTLAN","ConjureGlassofMortlan"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2228,7 +2201,7 @@ options_urls = [
 ["門の観察"]
 export = true
 aliases = ["时空门观察术","VIEWGATE","ViewGate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2243,7 +2216,7 @@ options_urls = [
 ["門の創造"]
 export = true
 aliases = ["时空门创造术","CREATEGATE","CreateGate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2258,7 +2231,7 @@ options_urls = [
 ["門の発見"]
 export = true
 aliases = ["时空门搜寻术","FINDGATE","FindGate"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2273,7 +2246,7 @@ options_urls = [
 ["病をもたらす"]
 export = true
 aliases = ["致病术","CAUSEDISEASE","CauseDisease"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2288,7 +2261,7 @@ options_urls = [
 ["幽体の剃刀"]
 export = true
 aliases = ["灵体剃刀术","SPECTRALRAZOR","SoectralRazor"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2303,7 +2276,7 @@ options_urls = [
 ["夢の映像"]
 export = true
 aliases = ["梦境幻象术","DREAMVISION","DreamVision"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2318,7 +2291,7 @@ options_urls = [
 ["夢の薬の製去"]
 export = true
 aliases = ["入梦之药酿造术","BREWDREAMDRUG","BrewDreamDrug"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2333,7 +2306,7 @@ options_urls = [
 ["夢の時代へ送る"]
 export = true
 aliases = ["SENDDREAMING","SendDreaming"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2348,7 +2321,7 @@ options_urls = [
 ["夢みる人の罠"]
 export = true
 aliases = ["梦想家诱捕术","SNAREDREAMER","SnareDreamer"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2363,7 +2336,7 @@ options_urls = [
 ["夢を送る"]
 export = true
 aliases = ["梦境发送术","SENDDREAM","SendDream"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2378,7 +2351,7 @@ options_urls = [
 ["ヨグ＝ソトースのこぶし"]
 export = true
 aliases = ["犹格-索托斯之拳","FISTOFYOG-SOTHOTH","FistofYog-Sothoth"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2393,7 +2366,7 @@ options_urls = [
 ["ラーの声"]
 export = true
 aliases = ["拉神之声","VOICEOFRA","VoiceofRa"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2408,7 +2381,7 @@ options_urls = [
 ["リーチ"]
 export = true
 aliases = ["伸触术","REACH","Reach"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2423,7 +2396,7 @@ options_urls = [
 ["霊の識別"]
 export = true
 aliases = ["灵魂辨识术","IDENTIFYSPIRIT","IdentifySpirit"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2438,7 +2411,7 @@ options_urls = [
 ["レレイの霧の創造"]
 export = true
 aliases = ["拉莱耶造雾术","CREATEMISTOFR'ELEH","CreateMistofR'lyeh"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2453,7 +2426,7 @@ options_urls = [
 ["レンのガラス"]
 export = true
 aliases = ["GLASSFROMLENG","GlassFromLeng"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2468,7 +2441,7 @@ options_urls = [
 ["ろうそく交信"]
 export = true
 aliases = ["烛光通讯术","CANDLECOMMUNICATION","CandleCommunication"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2483,7 +2456,7 @@ options_urls = [
 ["分かれの砂"]
 export = true
 aliases = ["分沙术","PARTINGSANDS","PartingSands"]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
@@ -2498,7 +2471,7 @@ options_urls = [
 [""]
 export = true
 aliases = ["","",""]
-options = []
+options = [""]
 cloud_extra = true
 dictinct = true
 options_urls = [
