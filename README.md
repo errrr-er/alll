@@ -1,5 +1,5 @@
 > [!TIP]
-> 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists_pointout.png?raw=true)
+> 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists/readme_lists_pointout.png?raw=true)
 
 > [!CAUTION]
 > - 除非有特殊说明、使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
