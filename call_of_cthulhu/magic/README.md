@@ -66,10 +66,10 @@
 |三语|スレイマンの塵|苏莱曼之尘|DUSTOFSULEIMAN|DustofSuleiman|
 |三语|精神交換|精神交换术|MINDEXCHANGE|MindExchange|
 |三语|精神的従属/忠告の注入|心理暗示术|MENTALSUGGESTION/IMPLANTSUGGESTION|MentalSuggestion|
-|三语|||||
-||||||
-||||||
-||||||
+|三语|精神転移|精神转移术|MINDTANSFER|MindTransfer|
+|中+英|精神力吸引|魔力吸取术|POWERDRAIN|PowerDrain|
+||生命の察知|生命觉察术|SENSELIFE|SenseLife|
+||セイレーンの歌声|塞壬之歌|SIREN'SSONG|Siren'sSong|
 ||||||
 ||||||
 |中+英|憎悪の像の召喚|仇恨雕像|SUMMONEFFIGYOFHATE|EffigyofHate|
