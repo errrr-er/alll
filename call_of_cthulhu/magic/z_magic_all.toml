@@ -418,19 +418,19 @@ options = ["JP:精神力吸引\fCN:魔力吸取术\n消耗：1D8点理智值\n�
 ["生命の察知"]
 export = true
 aliases = ["生命觉察术","SENSELIFE","SenseLife"]
-options = [""]
+options = ["JP:生命の察知\fCN:生命觉察术\n消耗：1点魔法值；1点理智值\n施法用时：1到5轮（由搜索的区域决定）\n可以让施法者侦测特定地点的生命迹象。法术的范围大约是一栋房子的大小。施法者必须在场。法术可以让施法者区分物种（如狗或人），但无法辨认特定的人物。施法者可以侦测生命迹象并找到大概地点，但无法找到精确的位置。\n别名：直感他人的存在、定位生命共振\fEN:SENSELIFE/SenseLife\nCost: 1 magic point; 1 Sanity point\nCasting time: 1 to 5 rounds (depending on area being searched)\nAllows the caster to detect the presence of life in a particular place. The spell has an approximate range equivalent to that of an average house. The caster must be present in the area. The spell allows the caster to distinguish species (such as a dog or a person), but not to recognize specific individuals. The caster can detect a living presence and its general location, but not with pinpoint precision.\nAlternative names: Intuit Presence of the Other, Locate Living Resonances."]
 
 
 ["セイレーンの歌声"]
 export = true
 aliases = ["塞壬之歌","SIREN'SSONG","Siren'sSong"]
-options = [""]
+options = ["JP:セイレーンの歌声\fCN:塞壬之歌\n消耗：6点魔法值；5点理智值\n施法用时：2轮\n施法者通过吟唱一段歌谣或旋律，诱骗一名目标，以为施法者就是他或她心中所念之人。施法者须和目标进行一次POW对抗检定并胜出，法术才能生效。若成功，目标的行动好像完全被施法者魅惑了一般——他愿意照着施法者的意愿说任何话、做任何事。若目标被强迫去做对施法者所爱的他人或者目标自己造成伤害的行动时，需要再次进行POW对抗检定。法术会影响所有听到歌声的人，每个人都要各自和施法者进行POW对抗，否则会受到影响。法术的效果持续1D10小时。\n别名：魅力术、美人鱼的催眠曲、精神敏感术\fEN:SIREN'SSONG/Siren'sSong\nCost: 6 magic point; 5 Sanity points\nCasting time: 2 rounds\nThrough an enchanting song or melody the caster beguiles a target into believing that the caster is all that his or her heart desires. For the spell to take effect the caster must succeed in an opposed POW roll with the target: if successful, the target acts as if completely charmed by the caster—willing to act and say as the caster desires. If the target is compelled to undertake an action that would inflict harm on another whom the caster loves or upon the target him or herself, a second opposed POW roll may be called for.\nThe spell affects all who hear the song, with each person affected needing to win an opposed POW roll with the caster to be unaffected. The spell’s effect lasts for 1D10 hours.\nAlternative names: Glamour, The Mermaid’s Lullaby, Mental Receptivity."]
 
 
 ["セクメンケネッブの言葉"]
 export = true
 aliases = ["真言术","SEKHMENKENHEP'SWORDS","WordsofPower"]
-options = [""]
+options = ["JP:セクメンケネッブの言葉\fCN:真言术\n消耗：3+ 点魔法值；1D6 点理智值\n施法用时：10+ 分钟\n施法者与大群听众创造强烈的联系。施法者必须即兴演讲并看似真诚，来维持听众的注意力。施法者在讲到每个论据、论点和命令时都要消耗3 点魔法值并进行一次 KP 认为合适的社交检定（「魅惑」「话术」或「说服」）并成功，不然演讲会在困惑不解中犹犹豫豫地结束。在演讲成功结束后，听众会在 1D3 天中完全相信演讲的内容。\n别名：塞克曼克尼普 (Sekhmenkenhep) 真言术、邪恶唬骗术\fEN:SEKHMENKENHEP'SWORDS/WordsofPower\nCost: 3+ magic points; 1D6 Sanity points\nCasting time: 10+ minutes\nCreates an intense bond with a large group of listeners. The caster must speak extemporaneously and seemingly from the heart, maintaining the audience’s attention. For each argument, point of view, or command, the caster expends 3 magic points and must make a successful communication roll as the Keeper thinks appropriate (Charm, Fast Talk, or Persuade), or the speech ends indecisively and in confusion. At the end of a successful speech, the audience thoroughly believes what has been said for 1D3 days.\nAlternative names: Sekhmenkenhep’s Words, Beguile the Unrighteous, Mastery of the Mob."]
 
 
 ["憎悪の像の召喚"]
