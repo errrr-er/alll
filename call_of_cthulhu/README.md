@@ -23,6 +23,8 @@
 
 # 参考资料
 
+- [Toml在线编辑(校验)器](https://www.bejson.com/validators/toml_editor/)
+
 ## 旧版手册呪文(三语对照)
 
 - 中
