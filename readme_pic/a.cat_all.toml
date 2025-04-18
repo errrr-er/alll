@@ -35,6 +35,11 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 ########## [CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]
 
 
+["猫车卡"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]"]
+
+
 ["猫招募"]
 export = true
 options = ["1.1 岭下暗影"]
