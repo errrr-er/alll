@@ -19,8 +19,6 @@
 > [!CAUTION]
 > - 手动整理、若有任何遗漏欢迎补充
 
-[目录](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/README.md)
-
 # 参考资料
 
 - [Toml在线编辑(校验)器](https://www.bejson.com/validators/toml_editor/)
