@@ -1,5 +1,5 @@
 [meta]
-title = "猫回复词"
+title = "猫回复词&招募"
 author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
@@ -30,3 +30,10 @@ options = ["(旧方法)\n电脑推荐使用【bandzip】，右键用它打开，
 ["猫制卡"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-sc.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-dmg.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-hard-extreme.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-fight.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-fight-dmg.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-explan-weapon-critical.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-explan-fight-extreme.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-explan-fight-critical.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-db-size.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%A7%84%E5%88%99%E7%9B%B8%E5%85%B3/coc-language.jpg?raw=true,type=show]"]
+
+
+##########
+
+
+["猫岭下暗影"]
+export = true
