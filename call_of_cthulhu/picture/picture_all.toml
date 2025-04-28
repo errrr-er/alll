@@ -15,7 +15,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW、警正\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n警正 = 警察探索者正常开展搜查\n\n最新完整版可在此查看\nhttps://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/README.md"]
+options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW、警正\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n警正 = 警察探索者正常开展搜查"]
 
 
 # 月光舞鞋
@@ -70,7 +70,7 @@ options = ["SAN 1D10+2"]
 ["幽暗之门"]
 export = true
 visible = true
-options = ["预设卡关键词：幽暗预设/幽暗预设全\f岭下暗影关键词：岭下地图/岭下地图/岭下地图/岭下展示/岭下展示/岭下房屋/岭下文献馆/岭下音乐室/岭下茧房\f哈索恩山关键词：哈索地图/哈索地图/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示\f湖之仆从关键词：仆从地图/仆从地图/仆从展示/仆从展示/仆从展示\f血浓于水关键词：血浓地图/血浓地图/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓尸体\f了却幻梦关键词：幻梦地图/幻梦展示"]
+options = ["预设卡关键词：幽暗预设/幽暗预设全\f岭下暗影关键词：岭下事前/岭下地图/岭下地图/岭下地图/岭下展示/岭下展示/岭下房屋/岭下文献馆/岭下音乐室/岭下茧房\f哈索恩山关键词：哈索事前/哈索地图/哈索地图/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示/哈索展示\f湖之仆从关键词：仆从事前/仆从地图/仆从地图/仆从展示/仆从展示/仆从展示\f血浓于水关键词：血浓事前/血浓地图/血浓地图/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓展示/血浓尸体\f了却幻梦关键词：幻梦事前/幻梦地图/幻梦展示"]
 
 ["幽暗预设"]
 export = true
@@ -81,6 +81,10 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE%E5%85%A8.png?raw=true,type=show]"]
 
 # 幽暗之门·岭下暗影
+["岭下事前"]
+export = true
+options = ["适用于二到六位调查员进行游戏，但在稍做修改后也可用于单个玩家。此事件可以发生在1920年代的任何一个时间段，而且经过略微改动后也可将其发生年代移至任何一个时期。调查员们被他们的一位熟人，乔什·文斯考特召集在一起，后者近日在其地窖中找到了一条隧道。"]
+
 ["岭下地图1"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
@@ -118,6 +122,10 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%B2%AD%E4%B8%8B%E6%9A%97%E5%BD%B1/%E5%B2%AD%E4%B8%8B%E8%8C%A7%E6%88%BF.png?raw=true,type=show]"]
 
 # 幽暗之门·哈索恩山
+["哈索事前"]
+export = true
+options = ["适合2~6名玩家游玩，也可以通过一些调整使其成为单人模组，模组的舞台是丹佛斯州，马萨诸塞州，波士顿北部十八英里处，阿卡姆和塞勒姆（Salem）近郊。模组的时间被设定为1925年，但也可以调整为1920年代的任意时间发生。"]
+
 ["哈索地图1"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
@@ -151,6 +159,10 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E5%93%88%E7%B4%A2%E6%81%A9%E5%B1%B1/%E5%93%88%E7%B4%A2%E5%B1%95%E7%A4%BA6.png?raw=true,type=show]\f丹弗斯医院突发死亡事件\n\n近日丹弗斯医院爆出病人安德鲁·麦克布莱德的死讯，享年未知。麦克布莱德今早在他的房间中被发现全无反应。詹姆斯·伯格宣布死因为自杀：“发生这种事真是一个悲剧”，他这样说道，“我们无法妥善安置所有向我们寻求帮助的灵魂。他现在已经去了一个更好的地方”麦克布莱德在这里没有任何已知的亲属。"]
 
 # 幽暗之门·湖之仆从
+["仆从事前"]
+export = true
+options = ["故事发生在洛夫克拉夫特地区，位于金斯波特以北以及阿卡姆西南的一片湖周围。此模组适用于2到4名新手调查员来进行，但通过增加敌人的数量，守秘人也可让更有经验的玩家们来挑战这一模组。这个模组可以在一次跑团活动中完成，其发生地也可以自由地进行调整以适用于任何一个已有的战役。虽然故事的发生时间被设定在了1920年代，但也可以改成是在现代发生的事情（建议守秘人将斯夸特斯湖周边一带设定为手机无信号或信号极弱的区域）。"]
+
 ["仆从地图1"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
@@ -172,6 +184,10 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%B1%95%E7%A4%BA3-1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E6%B9%96%E4%B9%8B%E4%BB%86%E4%BB%8E/%E4%BB%86%E4%BB%8E%E5%B1%95%E7%A4%BA3.png?raw=true,type=show]"]
 
 # 幽暗之门·血浓于水
+["血浓事前"]
+export = true
+options = ["任何野兽都凶猛不过护崽的母亲。在克苏鲁神话中，这道理对于神话生物更甚。调查员们在这场冒险中将很快见识到这一点。本模组适用于2到6个初始调查员。模组发生在1920年代的洛式国度（本格）里，位于伊普斯维奇，靠近阿卡姆。守秘人可以花点儿功夫把模组搬到马塞诸塞州的其他地方，或者更远的外地。模组的时代也同样可以被轻松地挪移至现代。不过在考虑重大变动前，守秘人还是要考虑到一件事：并非其他所有地方都拥有密斯卡托尼克大学那些独特的资源。"]
+
 ["血浓地图1"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
@@ -209,6 +225,10 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E8%A1%80%E6%B5%93%E4%BA%8E%E6%B0%B4/%E8%A1%80%E6%B5%93%E5%B0%B8%E4%BD%93.png?raw=true,type=show]"]
 
 # 幽暗之门·了却幻梦
+["幻梦事前"]
+export = true
+options = ["适用于二至六个玩家。模组可发生在任何拥有大学的乡镇/城市中。这会是向新玩家们首次引入恶灵作祟的阿卡姆城以及密斯卡托尼克大学的大好机会。模组年代定于1920年代，不过在守秘人细微调整过后，本模组也完全可以用现代背景展开。"]
+
 ["幻梦地图1"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E4%BA%86%E5%8D%B4%E5%B9%BB%E6%A2%A6/%E5%B9%BB%E6%A2%A6%E5%9C%B0%E5%9B%BE1.png?raw=true,type=show]"]
