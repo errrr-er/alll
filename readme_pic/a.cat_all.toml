@@ -42,9 +42,27 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic
 
 ["猫招募"]
 export = true
-options = ["1.1 岭下暗影"]
+options = ["\n1.1 岭下暗影\n2.0 BHBW\n2.1 BHBW HO1 (剧透)\n2.2 BHBW HO2 (剧透)\n3. 警正\f缩写解释：\nBHBW = Blood Hunt & Bio Watch\n警正 = 警察探索者正常开展搜查"]
 
 
 ["猫1.1"]
 export = true
 options = ["《岭下暗影》\n适用于二到六位调查员进行游戏，但在稍做修改后也可用于单个玩家。此事件可以发生在1920年代的任何一个时间段，而且经过略微改动后也可将其发生年代移至任何一个时期。调查员们被他们的一位熟人，乔什·文斯考特召集在一起，后者近日在最近继承的房屋其地窖中找到了一条隧道。\n\n预设卡 → .draw幽暗预设全\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]\npc互相之间认识的情况下至少需要一位与乔什·文斯考特相识\npc非互相之间认识的情况下需要都与乔什·文斯考特相识\n（相识理由不限，pl自行决定）\n\n乔什·文斯考特来自一个自傲且曾经富有的新英格兰家族，目前以撰写题材广泛的杂志文章为生，偶尔也会创作短故事。"]
+
+
+["猫2.0"]
+export = true
+options = ["《Blood Hunt & Bio Watch》\n危险的黑暗潜伏在这座城市里。\n第一位受害者失去了右臂，\n第二位受害者失去了左臂和右腿，\n第三位受害者失去了双臂，\n第四位受害者失去了双腿。\n\n猎犬的职责是追捕和惩罚罪犯。\n警犬的职责是防止更多受害者出现。\n\n必须联手解决这个案件。\n\nHO1 猎犬：为了惩罚罪犯。\nHO2 警犬：为了保护人民。\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]\n角色制作：\n探索者属于大阪府警刑事部调查第一课的刑警。\n自从半年多前加入同一科以来，曾经多次一起共事。\n\n刑事部搜查第一课：\n负责杀人、抢劫、暴行、伤害、绑架、寻衅滋事、性、纵火等恶劣罪行。\n\n出于对模组背景的考虑，希望探索者是日本人(或有其血统)。\n另外，由于有不得不脱离法律进行搜查的场面，因此在任何情况下都要遵循法律性格的探索者不适合本模组。\n请避免探索者的背景与对HO相同(可理解为选了1后，设定不可和2的一样)。"]
+
+["猫2.1"]
+export = true
+options = ["《Blood Hunt & Bio Watch》\nHO1：猎犬\n你的重要之人曾被罪犯杀害。\n你憎恨罪犯，为惩罚他们而成为刑警\n\nHO1与被杀的重要人物是什么样的关系等一系列详细设定，交给玩家自由决定。"]
+
+["猫2.2"]
+export = true
+options = ["《Blood Hunt & Bio Watch》\nHO2：警犬\n你曾被刑警救下。\n你崇拜刑警，为保护人民而成为刑警。\n\nHO2是从什么样的生命危机中被救下等一系列详细设定，交给玩家自由决定。"]
+
+
+["猫3"]
+export = true
+options = ["《警察探索者正常开展搜查》\n★共通HO\n你们被他人视（或视他人）为竞争对手。\n\n※模组中有以怪锤vol.2为参考的原创神话生物登场（不擅长的话请小心）\n\n▼关于模组\n警察探索者正常开展搜查的模组。\n但因NPC的原因恐怕会变成搞笑风。\n\n▼事前信息\n探索者们居住的市町村发生了一系列失踪事件。\n引人注目的是失踪者主要为上层人士（富人）。\n\n▼对手班\n是探索者的对手，相当优秀。\n如果探索者落后于他们的话，就会说“嗯，看来搜查这方面还是我们更擅长”等。\n\n★对手班NPC\n佳成优秀\n竞争对手班的班长，把探索者视为最大的对手。\n一天结束的时，一定会确认探索者的进度，留下一句话后离开。\n印象中，是学生时代当过学生会长的类型（顾名思义很优秀）。\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]"]
