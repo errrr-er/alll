@@ -47,7 +47,7 @@ options = ["\n1.1 岭下暗影\n2.0 BHBW\n2.1 BHBW HO1 (剧透)\n2.2 BHBW HO2 (�
 
 ["猫1.1"]
 export = true
-options = ["《岭下暗影》\n适用于二到六位调查员进行游戏，但在稍做修改后也可用于单个玩家。此事件可以发生在1920年代的任何一个时间段，而且经过略微改动后也可将其发生年代移至任何一个时期。调查员们被他们的一位熟人，乔什·文斯考特召集在一起，后者近日在最近继承的房屋其地窖中找到了一条隧道。\n\n预设卡 → .draw幽暗预设全\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]\npc互相之间认识的情况下至少需要一位与乔什·文斯考特相识\npc非互相之间认识的情况下需要都与乔什·文斯考特相识\n（相识理由不限，pl自行决定）\n\n乔什·文斯考特来自一个自傲且曾经富有的新英格兰家族，目前以撰写题材广泛的杂志文章为生，偶尔也会创作短故事。"]
+options = ["《岭下暗影》\n适用于二到六位调查员进行游戏，但在稍做修改后也可用于单个玩家。此事件可以发生在1920年代的任何一个时间段，而且经过略微改动后也可将其发生年代移至任何一个时期。调查员们被他们的一位熟人，乔什·文斯考特召集在一起，后者近日在最近继承的房屋其地窖中找到了一条隧道。\n\n预设卡 → [CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E9%A2%84%E8%AE%BE%E5%8D%A1/%E5%B9%BD%E6%9A%97%E9%A2%84%E8%AE%BE%E5%85%A8.png?raw=true,type=show]\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]\npc互相之间认识的情况下至少需要一位与乔什·文斯考特相识\npc非互相之间认识的情况下需要都与乔什·文斯考特相识\n（相识理由不限，pl自行决定）\n\n乔什·文斯考特来自一个自傲且曾经富有的新英格兰家族，目前以撰写题材广泛的杂志文章为生，偶尔也会创作短故事。"]
 
 
 ["猫2.0"]
