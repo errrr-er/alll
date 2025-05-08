@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-12
-update_date = 2025-04-18
+update_date = 2025-05-08
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/readme_pic/a.cat_all.toml",
@@ -45,6 +45,6 @@ export = true
 options = ["1.1 岭下暗影"]
 
 
-["猫岭下暗影"]
+["猫1.1"]
 export = true
 options = ["《岭下暗影》\n适用于二到六位调查员进行游戏，但在稍做修改后也可用于单个玩家。此事件可以发生在1920年代的任何一个时间段，而且经过略微改动后也可将其发生年代移至任何一个时期。调查员们被他们的一位熟人，乔什·文斯考特召集在一起，后者近日在最近继承的房屋其地窖中找到了一条隧道。\n\n预设卡 → .draw幽暗预设全\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/mods/card.png?raw=true,type=show]\npc互相之间认识的情况下至少需要一位与乔什·文斯考特相识\npc非互相之间认识的情况下需要都与乔什·文斯考特相识\n（相识理由不限，pl自行决定）\n\n乔什·文斯考特来自一个自傲且曾经富有的新英格兰家族，目前以撰写题材广泛的杂志文章为生，偶尔也会创作短故事。"]
