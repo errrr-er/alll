@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
-update_date = 2025-04-28
+update_date = 2025-05-09
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml",
@@ -15,7 +15,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW、警正\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n警正 = 警察探索者正常开展搜查"]
+options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、活神之手、幽暗之门、你就刚刚好、福尔摩斯、BHBW、警正、幽灵之舞\n\n请根据所需输入对应关键词\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\nBHBW = Blood Hunt & Bio Watch\n警正 = 警察探索者正常开展搜查"]
 
 
 # 月光舞鞋
@@ -287,3 +287,14 @@ options = ["关键词：警正事前"]
 ["警正事前"]
 export = true
 options = ["▼概要\n规则：克苏鲁神话TRPG6版\n舞台：现代日本（可更改）\n时间：1.5-3h\n人数：2-4（可加KPC）\nLOST：有\nHO：共通\n\n★共通HO\n你们被他人视（或视他人）为竞争对手。\n\n※模组中有以怪锤vol.2为参考的原创神话生物登场（不擅长的话请小心）\f▼关于模组\n警察探索者正常开展搜查的模组。\n但因NPC的原因恐怕会变成搞笑风。\n\n▼事前信息\n探索者们居住的市町村发生了一系列失踪事件。\n引人注目的是失踪者主要为上层人士（富人）。\f▼对手班\n是探索者的对手，相当优秀。\n如果探索者落后于他们的话，\n就会说“嗯，看来搜查这方面还是我们更擅长”等。\n\n★对手班NPC\n佳成优秀\n竞争对手班的班长，把探索者视为最大的对手。\n一天结束的时，一定会确认探索者的进度，留下一句话后离开。\n印象中，是学生时代当过学生会长的类型（顾名思义很优秀）。"]
+
+
+# 幽灵之舞
+["幽灵之舞"]
+export = true
+visible = true
+options = ["关键词：幽灵结团"]
+
+["幽灵结团"]
+export = true
+options = ["SAN+1d3\n幽灵舞者(奖杯) 舞蹈+1d10"]
