@@ -32,9 +32,9 @@ function generateGroupList() {
     const groupInfo = groupMap[groupName];
     let aliasText = '';
     if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-      aliasText = `(别名: ${groupInfo.aliases.join('、')})`;
+      aliasText = `(${groupInfo.aliases.join('、')})`;
     }
-    listLines.push(`${groupName}${aliasText} → 群号: ${groupInfo.groupNumber}`);
+    listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
   }
   return listLines.join('\n');
 }
