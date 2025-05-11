@@ -11,6 +11,7 @@
 // @updateUrl    https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
 
+
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
   ext = seal.ext.new('KP群汇总', 'er', '1.0.0');
@@ -24,12 +25,31 @@ const groupMap = {
     groupNumber: "666391763",
     aliases: ["ty", "tyjn"]
   },
+  // 可以在这里添加更多群组
+  // "示例": {
+  //   groupNumber: "123456789",
+  //   aliases: ["sl", "sljm"]
+  // }
 };
+
+// 生成帮助信息，包含主关键词和别名
+function generateHelpText() {
+  let helpLines = [];
+  for (const groupName in groupMap) {
+    const aliases = groupMap[groupName].aliases;
+    let aliasText = '';
+    if (aliases && aliases.length > 0) {
+      aliasText = `(或${aliases.join('、')})`;
+    }
+    helpLines.push(`${groupName}${aliasText}`);
+  }
+  return helpLines.join(', ');
+}
 
 // 创建.kp指令
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
-cmdKp.help = '.kp <关键词> // 根据关键词返回对应的KP群号\n可用关键词: ' + Object.keys(groupMap).join(', ');
+cmdKp.help = '.kp <关键词> // 根据关键词返回对应的KP群号\n可用关键词: ' + generateHelpText();
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
   let ret = seal.ext.newCmdExecuteResult(true);
@@ -63,7 +83,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     const replyText = `【${input}】的KP群号是: ${foundGroup.groupNumber}`;
     seal.replyToSender(ctx, msg, replyText);
   } else {
-    const availableGroups = Object.keys(groupMap).join(', ');
+    const availableGroups = generateHelpText();
     seal.replyToSender(ctx, msg, `未找到与"${input}"匹配的KP群。可用关键词: ${availableGroups}`);
   }
   
