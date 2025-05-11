@@ -50,6 +50,19 @@ const groupMap = {
 	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
 	"void":{ groupNumber: "1170037255" },
 	"细胞复位":{ groupNumber: "892835680" },
+  "废楼怪谈":{ groupNumber: "563488359" },
+	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春"] },
+	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
+	"演绎&本我":{ groupNumber: "583290817", aliases: ["yybw"] },
+	"庭师所吟为何物":{ groupNumber: "656434498", aliases: ["庭师"] },
+	"幽世常世的满天下":{ groupNumber: "749173986" },
+	"恶辣":{ groupNumber: "620832218" },
+	"畜牲道":{ groupNumber: "738570884" },
+	"magnificas":{ groupNumber: "477317221", aliases: ["mag"] },
+	"沼泽人":{ groupNumber: "913354882" },
+	"渡春风":{ groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
+	"哀歌弥赛亚":{ groupNumber: "609355937", aliases: ["哀歌"] },
+	"哑蝉的剖白":{ groupNumber: "613231813", aliases: ["哑蝉"] },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
