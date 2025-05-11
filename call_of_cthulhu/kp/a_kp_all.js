@@ -21,9 +21,7 @@ if (!ext) {
 // 创建群号映射表
 // 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
 const groupMap = {
-  "天衍": {
-    groupNumber: "666391763",
-    aliases: ["ty", "tyjn"]
+  "天衍": { groupNumber: "666391763", aliases: ["ty", "tyjn"]
   },
 };
 
