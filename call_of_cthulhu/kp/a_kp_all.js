@@ -157,14 +157,14 @@ const groupMap = {
 	"今古空名": { groupNumber: "962147366" },
 	"求我": { groupNumber: "978495486" },
 	"暗河": { groupNumber: "1031974789" },
-	"恰故人归(下载群)": { groupNumber: "939600700" },
+	"恰故人归": { groupNumber: "939600700\n*下载群" },
 	"坤元劫": { groupNumber: "862291565" },
 	"difftruth": { groupNumber: "849680089" },
 	"柏拉图的余谈": { groupNumber: "574918635" },
 	"告密者": { groupNumber: "623768354" },
 	"浮生安梦": { groupNumber: "881234029" },
 	"残败桃源": { groupNumber: "2154036156" },
-	"VEЯ": { groupNumber: "798805482" },
+	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
