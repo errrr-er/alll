@@ -7,10 +7,46 @@ date = 2025-05-11
 update_date = 2025-5-11
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/z_kp_all.toml",
-  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/z_kp_all.toml"
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/kp_all.js",
+  "https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/kp_all.js"
 ]
 
 ["kp群"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.jpg?raw=true,type=show]"]
+
+
+["aib"]
+export = true
+options = ["112077093"]
+
+["沧渺山"]
+export = true
+aliases = ["cms"]
+options = ["855215735"]
+
+["天衍纪年"]
+export = true
+aliases = ["ty", "天衍", "tyjn"]
+options = ["666391763、675869524"]
+
+["雪与箱庭之梦"]
+export = true
+aliases = ["雪箱"]
+options = ["413941306"]
+
+["海盗啊海盗"]
+export = true
+aliases = ["海盗"]
+options = ["928270526"]
+
+["左川之国失落谭"]
+export = true
+aliases = ["左川"]
+options = ["770779991"]
+
+["脓堕"]
+export = true
+aliases = ["nd"]
+options = ["183186533"]
+
