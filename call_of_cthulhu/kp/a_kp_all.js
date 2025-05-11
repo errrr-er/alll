@@ -71,7 +71,7 @@ const groupMap = {
 	"屋怪异谭":{ groupNumber: "174136022" },
 	"moon cell":{ groupNumber: "817071819" },
 	"wts":{ groupNumber: "763188284" },
-	"不死灭灭":{ groupNumber: "279755638", aliases: ["东京G"] },
+	"不死灭灭":{ groupNumber: "279755638", },
 	"东京g":{ groupNumber: "201906582" },
 	"远星者":{ groupNumber: "820393813" },
 	"全景敞视主义的陷阱:":{ groupNumber: "792650936" },
