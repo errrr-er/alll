@@ -174,7 +174,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   
   // 列出所有群组
   if (input === 'list') {
-    const listText = `所有KP群信息:\n${generateGroupList()}\f请以图片里的为准：\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.jpg?raw=true,type=show]`;
+    const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.jpg?raw=true,type=show]`;
     seal.replyToSender(ctx, msg, listText);
     return ret;
   }
