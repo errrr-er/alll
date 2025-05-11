@@ -11,7 +11,6 @@
 // @updateUrl    https://ghp.ci/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
 
-
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
   ext = seal.ext.new('KP群汇总', 'er', '1.0.0');
@@ -25,24 +24,27 @@ const groupMap = {
   },
 };
 
-// 生成帮助信息，包含主关键词和别名
-function generateHelpText() {
-  let helpLines = [];
+// 生成所有群组信息
+function generateGroupList() {
+  let listLines = [];
   for (const groupName in groupMap) {
-    const aliases = groupMap[groupName].aliases;
+    const groupInfo = groupMap[groupName];
     let aliasText = '';
-    if (aliases && aliases.length > 0) {
-      aliasText = `(或${aliases.join('、')})`;
+    if (groupInfo.aliases && groupInfo.aliases.length > 0) {
+      aliasText = `(别名: ${groupInfo.aliases.join('、')})`;
     }
-    helpLines.push(`${groupName}${aliasText}`);
+    listLines.push(`${groupName}${aliasText} → 群号: ${groupInfo.groupNumber}`);
   }
-  return helpLines.join(', ');
+  return listLines.join('\n');
 }
 
 // 创建.kp指令
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
-cmdKp.help = '.kp <关键词> // 根据关键词返回对应的KP群号\n可用关键词: ' + generateHelpText();
+cmdKp.help = `KP群查询指令
+.kp <关键词>    // 查询特定KP群号
+.kp list        // 列出所有KP群信息
+.kp help        // 显示本帮助`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
   let ret = seal.ext.newCmdExecuteResult(true);
@@ -51,6 +53,13 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   // 帮助命令
   if (input === 'help' || input === '') {
     ret.showHelp = true;
+    return ret;
+  }
+  
+  // 列出所有群组
+  if (input === 'list') {
+    const listText = `所有KP群信息:\n${generateGroupList()}`;
+    seal.replyToSender(ctx, msg, listText);
     return ret;
   }
   
@@ -76,8 +85,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     const replyText = `【${input}】的KP群号是: ${foundGroup.groupNumber}`;
     seal.replyToSender(ctx, msg, replyText);
   } else {
-    const availableGroups = generateHelpText();
-    seal.replyToSender(ctx, msg, `未找到与"${input}"匹配的KP群。可用关键词: ${availableGroups}`);
+    seal.replyToSender(ctx, msg, `未找到与"${input}"匹配的KP群。使用 .kp list 查看所有可用群组。`);
   }
   
   return ret;
