@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1746954661
+// @timestamp    1746956538
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -76,11 +76,13 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   // 2. 检查所有群组的别名
   else {
     for (const groupName in groupMap) {
-      if (groupMap[groupName].aliases.includes(input)) {
-        foundGroup = groupMap[groupName];
+      const groupInfo = groupMap[groupName];
+      if (groupInfo.aliases && groupInfo.aliases.includes(input)) {
+        foundGroup = groupInfo;
         break;
       }
     }
+  }
   }
   
   // 返回结果
