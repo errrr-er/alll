@@ -83,7 +83,6 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
       }
     }
   }
-  }
   
   // 返回结果
   if (foundGroup) {
