@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1746953357
+// @timestamp    1746954661
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -22,7 +22,7 @@ if (!ext) {
 // 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
 const groupMap = {
   "天衍": { groupNumber: "666391763", aliases: ["ty", "tyjn"] },
-  
+
 };
 
 // 生成所有群组信息
