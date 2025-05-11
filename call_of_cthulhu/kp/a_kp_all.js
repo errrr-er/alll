@@ -25,11 +25,6 @@ const groupMap = {
     groupNumber: "666391763",
     aliases: ["ty", "tyjn"]
   },
-  // 可以在这里添加更多群组
-  // "示例": {
-  //   groupNumber: "123456789",
-  //   aliases: ["sl", "sljm"]
-  // }
 };
 
 // 生成帮助信息，包含主关键词和别名
