@@ -21,7 +21,9 @@ if (!ext) {
 // 创建群号映射表
 // 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
 const groupMap = {
-  "天衍": { groupNumber: "666391763", aliases: ["ty", "tyjn"] },
+  "aib":{ groupNumber: "112077093" },
+  "沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
+  "天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
 
 };
 
