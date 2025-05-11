@@ -63,6 +63,21 @@ const groupMap = {
 	"渡春风":{ groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
 	"哀歌弥赛亚":{ groupNumber: "609355937", aliases: ["哀歌"] },
 	"哑蝉的剖白":{ groupNumber: "613231813", aliases: ["哑蝉"] },
+  "燃花":{ groupNumber: "795081215" },
+	"为谢幕献上祝福的齿轮":{ groupNumber: "714364138", aliases: ["齿轮"] },
+	"圣餐":{ groupNumber: "659334919" },
+	"终焉之歌为谁而唱":{ groupNumber: "272502055" },
+	"ssk":{ groupNumber: "708231245" },
+	"屋怪异谭":{ groupNumber: "174136022" },
+	"moon cell":{ groupNumber: "817071819" },
+	"wts":{ groupNumber: "763188284" },
+	"不死灭灭":{ groupNumber: "279755638", aliases: ["东京G"] },
+	"东京g":{ groupNumber: "201906582" },
+	"远星者":{ groupNumber: "820393813" },
+	"全景敞视主义的陷阱:":{ groupNumber: "792650936" },
+	"花&葬送者":{ groupNumber: "555632875" },
+	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
+	"代号行者":{ groupNumber: "433389798" },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
@@ -159,7 +174,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   
   // 列出所有群组
   if (input === 'list') {
-    const listText = `所有KP群信息:\n${generateGroupList()}`;
+    const listText = `所有KP群信息:\n${generateGroupList()}\f请以图片里的为准：\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.jpg?raw=true,type=show]`;
     seal.replyToSender(ctx, msg, listText);
     return ret;
   }
