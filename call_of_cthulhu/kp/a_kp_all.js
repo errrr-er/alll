@@ -169,6 +169,10 @@ const groupMap = {
 
 // 计算两个字符串的相似度 (Levenshtein距离)
 function getSimilarity(s1, s2) {
+  // 转换为小写进行比较
+  s1 = s1.toLowerCase();
+  s2 = s2.toLowerCase();
+  
   const len1 = s1.length;
   const len2 = s2.length;
   
@@ -198,6 +202,9 @@ function getSimilarity(s1, s2) {
 
 // 查找最相似的群组
 function findSimilarGroup(input) {
+  // 转换为小写进行比较
+  input = input.toLowerCase();
+  
   let bestMatch = null;
   let highestScore = 0;
   
@@ -206,7 +213,7 @@ function findSimilarGroup(input) {
     const groupInfo = groupMap[groupName];
     
     // 检查主名称
-    const mainScore = getSimilarity(input, groupName);
+    const mainScore = getSimilarity(input, groupName.toLowerCase());
     if (mainScore > highestScore) {
       highestScore = mainScore;
       bestMatch = { name: groupName, info: groupInfo };
@@ -215,7 +222,7 @@ function findSimilarGroup(input) {
     // 检查别名
     if (groupInfo.aliases) {
       for (const alias of groupInfo.aliases) {
-        const aliasScore = getSimilarity(input, alias);
+        const aliasScore = getSimilarity(input, alias.toLowerCase());
         if (aliasScore > highestScore) {
           highestScore = aliasScore;
           bestMatch = { name: groupName, info: groupInfo };
@@ -224,31 +231,10 @@ function findSimilarGroup(input) {
     }
   }
   
-  return highestScore > 0.4 ? { match: bestMatch, score: highestScore } : null;  // 设置相似度阈值为0.4
+  return highestScore > 0.4 ? { match: bestMatch, score: highestScore } : null;
 }
 
-// 生成所有群组信息
-function generateGroupList() {
-  let listLines = [];
-  for (const groupName in groupMap) {
-    const groupInfo = groupMap[groupName];
-    let aliasText = '';
-    if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-      aliasText = `(${groupInfo.aliases.join('、')})`;
-    }
-    listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
-  }
-  return listLines.join('\n');
-}
-
-// 创建.kp指令
-const cmdKp = seal.ext.newCmdItemInfo();
-cmdKp.name = 'kp';
-cmdKp.help = `KP群查询指令
-.kp <关键词>    // 查询特定KP群号
-.kp list        // 列出所有KP群信息
-.kp help        // 显示本帮助`;
-
+// 修改.kp指令的solve函数
 cmdKp.solve = (ctx, msg, cmdArgs) => {
   let ret = seal.ext.newCmdExecuteResult(true);
   const input = cmdArgs.getArgN(1);
@@ -260,7 +246,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   }
   
   // 列出所有群组
-  if (input === 'list') {
+  if (input.toLowerCase() === 'list') {
     const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.jpg?raw=true,type=show]`;
     seal.replyToSender(ctx, msg, listText);
     return ret;
@@ -270,20 +256,30 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   let foundGroup = null;
   let exactMatch = false;
   
-  // 1. 检查主关键词
-  if (groupMap[input]) {
-    foundGroup = { match: { name: input, info: groupMap[input] }, score: 1 };
-    exactMatch = true;
-  } 
-  // 2. 检查所有群组的别名
-  else {
+  // 1. 检查主关键词（不区分大小写）
+  const lowerInput = input.toLowerCase();
+  for (const groupName in groupMap) {
+    if (groupName.toLowerCase() === lowerInput) {
+      foundGroup = { match: { name: groupName, info: groupMap[groupName] }, score: 1 };
+      exactMatch = true;
+      break;
+    }
+  }
+  
+  // 2. 检查所有群组的别名（不区分大小写）
+  if (!foundGroup) {
     for (const groupName in groupMap) {
       const groupInfo = groupMap[groupName];
-      if (groupInfo.aliases && groupInfo.aliases.includes(input)) {
-        foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
-        exactMatch = true;
-        break;
+      if (groupInfo.aliases) {
+        for (const alias of groupInfo.aliases) {
+          if (alias.toLowerCase() === lowerInput) {
+            foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
+            exactMatch = true;
+            break;
+          }
+        }
       }
+      if (exactMatch) break;
     }
   }
   
@@ -296,7 +292,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   if (foundGroup) {
     let replyText;
     if (exactMatch) {
-      replyText = `【${input}】的KP群号是: ${foundGroup.match.info.groupNumber}`;
+      replyText = `【${foundGroup.match.name}】的KP群号是: ${foundGroup.match.info.groupNumber}`;
     } else {
       replyText = `未找到精确匹配的"${input}"，最相似的是【${foundGroup.match.name}】(相似度${Math.round(foundGroup.score * 100)}%)，群号: ${foundGroup.match.info.groupNumber}`;
     }
