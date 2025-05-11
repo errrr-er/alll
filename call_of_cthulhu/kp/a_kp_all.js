@@ -36,6 +36,20 @@ const groupMap = {
   "快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
+  "生下他吧":{ groupNumber: "705913038" },
+	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
+	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅馆的捕食者", "吕布"] },
+	"nobody*2":{ groupNumber: "694908547", aliases: ["nobodynobody", "nobodyx2"] },
+	"4s":{ groupNumber: "926664565", aliases: ["ssss"] },
+	"蛙徒的祭典":{ groupNumber: "655890716", aliases: ["蛙祭", "挖机"] },
+	"怪物们与邪典仙境":{ groupNumber: "592577986" },
+	"莫索里哀的圣职者":{ groupNumber: "435690433", aliases: ["msla"] },
+	"谢娘娘点化":{ groupNumber: "878626807", aliases: ["谢娘娘"] },
+	"西比拉":{ groupNumber: "669808359" },
+	"远方呢喃":{ groupNumber: "761735153" },
+	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
+	"void":{ groupNumber: "1170037255" },
+	"细胞复位":{ groupNumber: "892835680" },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
