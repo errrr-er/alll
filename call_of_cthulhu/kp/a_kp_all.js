@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1746961323
+// @timestamp    1746956538
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -169,6 +169,35 @@ const groupMap = {
 
 // 计算两个字符串的相似度 (Levenshtein距离)
 function getSimilarity(s1, s2) {
+  const len1 = s1.length;
+  const len2 = s2.length;
+  
+  const matrix = [];
+  for (let i = 0; i <= len1; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= len2; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= len1; i++) {
+    for (let j = 1; j <= len2; j++) {
+      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,     // 删除
+        matrix[i][j - 1] + 1,     // 插入
+        matrix[i - 1][j - 1] + cost  // 替换
+      );
+    }
+  }
+  
+  const distance = matrix[len1][len2];
+  const maxLen = Math.max(len1, len2);
+  return 1 - distance / maxLen;
+}
+
+// 计算两个字符串的相似度 (Levenshtein距离)
+function getSimilarity(s1, s2) {
   // 转换为小写进行比较
   s1 = s1.toLowerCase();
   s2 = s2.toLowerCase();
@@ -233,6 +262,28 @@ function findSimilarGroup(input) {
   
   return highestScore > 0.4 ? { match: bestMatch, score: highestScore } : null;
 }
+
+// 生成所有群组信息
+function generateGroupList() {
+  let listLines = [];
+  for (const groupName in groupMap) {
+    const groupInfo = groupMap[groupName];
+    let aliasText = '';
+    if (groupInfo.aliases && groupInfo.aliases.length > 0) {
+      aliasText = `(${groupInfo.aliases.join('、')})`;
+    }
+    listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
+  }
+  return listLines.join('\n');
+}
+
+// 创建.kp指令
+const cmdKp = seal.ext.newCmdItemInfo();
+cmdKp.name = 'kp';
+cmdKp.help = `KP群查询指令
+.kp <关键词>    // 查询特定KP群号
+.kp list        // 列出所有KP群信息
+.kp help        // 显示本帮助`;
 
 // 修改.kp指令的solve函数
 cmdKp.solve = (ctx, msg, cmdArgs) => {
