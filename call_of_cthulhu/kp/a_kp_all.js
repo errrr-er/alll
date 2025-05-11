@@ -11,6 +11,7 @@
 // @updateUrl    https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
 
+
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
   ext = seal.ext.new('KP群汇总', 'er', '1.0.0');
@@ -24,8 +25,78 @@ const groupMap = {
   "aib":{ groupNumber: "112077093" },
   "沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
   "天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
-
+  "雪与箱庭之梦":{ groupNumber: "413941306", aliases: ["雪箱"] },
+  "海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
+  "左川之国失落谭":{ groupNumber: "770779991", aliases: ["左川"] },
+  "脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
+  "欲望之箱":{ groupNumber: "739976718" },
+  "油盐不进":{ groupNumber: "575319883" },
+  "BASH":{ groupNumber: "774156947", aliases: ["bash"] },
+  "燃烧的星辰":{ groupNumber: "1049443592" },
+  "快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
+	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
+	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
 };
+
+// 计算两个字符串的相似度 (Levenshtein距离)
+function getSimilarity(s1, s2) {
+  const len1 = s1.length;
+  const len2 = s2.length;
+  
+  const matrix = [];
+  for (let i = 0; i <= len1; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= len2; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= len1; i++) {
+    for (let j = 1; j <= len2; j++) {
+      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,     // 删除
+        matrix[i][j - 1] + 1,     // 插入
+        matrix[i - 1][j - 1] + cost  // 替换
+      );
+    }
+  }
+  
+  const distance = matrix[len1][len2];
+  const maxLen = Math.max(len1, len2);
+  return 1 - distance / maxLen;
+}
+
+// 查找最相似的群组
+function findSimilarGroup(input) {
+  let bestMatch = null;
+  let highestScore = 0;
+  
+  // 检查所有群组名称和别名
+  for (const groupName in groupMap) {
+    const groupInfo = groupMap[groupName];
+    
+    // 检查主名称
+    const mainScore = getSimilarity(input, groupName);
+    if (mainScore > highestScore) {
+      highestScore = mainScore;
+      bestMatch = { name: groupName, info: groupInfo };
+    }
+    
+    // 检查别名
+    if (groupInfo.aliases) {
+      for (const alias of groupInfo.aliases) {
+        const aliasScore = getSimilarity(input, alias);
+        if (aliasScore > highestScore) {
+          highestScore = aliasScore;
+          bestMatch = { name: groupName, info: groupInfo };
+        }
+      }
+    }
+  }
+  
+  return highestScore > 0.4 ? { match: bestMatch, score: highestScore } : null;  // 设置相似度阈值为0.4
+}
 
 // 生成所有群组信息
 function generateGroupList() {
@@ -68,25 +139,38 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   
   // 查找匹配的群组
   let foundGroup = null;
+  let exactMatch = false;
   
   // 1. 检查主关键词
   if (groupMap[input]) {
-    foundGroup = groupMap[input];
+    foundGroup = { match: { name: input, info: groupMap[input] }, score: 1 };
+    exactMatch = true;
   } 
   // 2. 检查所有群组的别名
   else {
     for (const groupName in groupMap) {
       const groupInfo = groupMap[groupName];
       if (groupInfo.aliases && groupInfo.aliases.includes(input)) {
-        foundGroup = groupInfo;
+        foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
+        exactMatch = true;
         break;
       }
     }
   }
   
+  // 3. 如果没有精确匹配，尝试近似匹配
+  if (!foundGroup) {
+    foundGroup = findSimilarGroup(input);
+  }
+  
   // 返回结果
   if (foundGroup) {
-    const replyText = `【${input}】的KP群号是: ${foundGroup.groupNumber}`;
+    let replyText;
+    if (exactMatch) {
+      replyText = `【${input}】的KP群号是: ${foundGroup.match.info.groupNumber}`;
+    } else {
+      replyText = `未找到精确匹配的"${input}"，最相似的是【${foundGroup.match.name}】(相似度${Math.round(foundGroup.score * 100)}%)，群号: ${foundGroup.match.info.groupNumber}`;
+    }
     seal.replyToSender(ctx, msg, replyText);
   } else {
     seal.replyToSender(ctx, msg, `未找到与"${input}"匹配的KP群。使用 .kp list 查看所有可用群组。`);
