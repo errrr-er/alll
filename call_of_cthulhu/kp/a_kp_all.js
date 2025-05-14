@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.0
+// @version      1.0.1
 // @description  有问题可进群2150284119联系
-// @timestamp    1746962697
+// @timestamp    1747234229
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.0');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.1');
   seal.ext.register(ext);
 }
 
@@ -22,21 +22,21 @@ if (!ext) {
 // 创建群号映射表
 // 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
 const groupMap = {
-  "aib":{ groupNumber: "112077093" },
-  "沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
-  "天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
-  "雪与箱庭之梦":{ groupNumber: "413941306", aliases: ["雪箱"] },
-  "海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
-  "左川之国失落谭":{ groupNumber: "770779991", aliases: ["左川"] },
-  "脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
-  "欲望之箱":{ groupNumber: "739976718" },
-  "油盐不进":{ groupNumber: "575319883" },
-  "BASH":{ groupNumber: "774156947" },
-  "燃烧的星辰":{ groupNumber: "1049443592" },
-  "快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
+	"aib":{ groupNumber: "112077093" },
+  	"沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
+  	"天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
+  	"雪与箱庭之梦":{ groupNumber: "413941306", aliases: ["雪箱"] },
+  	"海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
+  	"左川之国失落谭":{ groupNumber: "770779991", aliases: ["左川"] },
+  	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
+  	"欲望之箱":{ groupNumber: "739976718" },
+  	"油盐不进":{ groupNumber: "575319883" },
+  	"BASH":{ groupNumber: "774156947" },
+  	"燃烧的星辰":{ groupNumber: "1049443592" },
+  	"快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
-  "生下他吧":{ groupNumber: "705913038" },
+  	"生下他吧":{ groupNumber: "705913038" },
 	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
 	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅馆的捕食者", "吕布"] },
 	"nobody*2":{ groupNumber: "694908547", aliases: ["nobodynobody", "nobodyx2"] },
@@ -50,7 +50,7 @@ const groupMap = {
 	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
 	"void":{ groupNumber: "1170037255" },
 	"细胞复位":{ groupNumber: "892835680" },
-  "废楼怪谈":{ groupNumber: "563488359" },
+ 	"废楼怪谈":{ groupNumber: "563488359" },
 	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春"] },
 	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
 	"演绎&本我":{ groupNumber: "583290817", aliases: ["yybw"] },
@@ -63,7 +63,7 @@ const groupMap = {
 	"渡春风":{ groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
 	"哀歌弥赛亚":{ groupNumber: "609355937", aliases: ["哀歌"] },
 	"哑蝉的剖白":{ groupNumber: "613231813", aliases: ["哑蝉"] },
-  "燃花":{ groupNumber: "795081215" },
+	"燃花":{ groupNumber: "795081215" },
 	"为谢幕献上祝福的齿轮":{ groupNumber: "714364138", aliases: ["齿轮"] },
 	"圣餐":{ groupNumber: "659334919" },
 	"终焉之歌为谁而唱":{ groupNumber: "272502055" },
@@ -165,7 +165,7 @@ const groupMap = {
 	"浮生安梦": { groupNumber: "881234029" },
 	"残败桃源": { groupNumber: "2154036156" },
 	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
-  "三尺微命": { groupNumber: "1031833569\n*无作者" },
+  	"三尺微命": { groupNumber: "1031833569\n*无作者" },
 	"天地一灯": { groupNumber: "974274779" },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
 	"北东路疑案": { groupNumber: "953349303" },
@@ -198,7 +198,7 @@ const groupMap = {
 	"流浪武士": { groupNumber: "994791183\n*下载群" },
 	"东方快车上的恐怖": { groupNumber: "639753886" },
 	"戏法师的感知": { groupNumber: "144919125" },
-  "多灾多难梵达林": { groupNumber: "570879430\n*矿坑+冰塔峰+风暴君王?+风骸岛?", aliases: ["矿坑", "冰塔峰", "风暴君王","风骸岛"] },
+  	"多灾多难梵达林": { groupNumber: "570879430\n*矿坑+冰塔峰+风暴君王?+风骸岛?", aliases: ["矿坑", "冰塔峰", "风暴君王","风骸岛"] },
 	"湮灭之墓": { groupNumber: "868114556" },
 	"冰风谷": { groupNumber: "537262507" },
 	"斯特拉德的诅咒": { groupNumber: "824773454" },
@@ -225,7 +225,7 @@ const groupMap = {
 	"萨里希斯之光": { groupNumber: "473373105" },
 	"博德之门的英雄们": { groupNumber: "1005326913" },
 	"维克那的崛起/陨落": { groupNumber: "812018837" },
-  "魔道书": { groupNumber: "759960406" },
+  	"魔道书": { groupNumber: "759960406" },
 	"insane": { groupNumber: "650600421" },
 	"赛博朋克d20": { groupNumber: "135248365、283334218" },
 	"黑幕圣杯": { groupNumber: "602145072" },
@@ -256,7 +256,7 @@ const groupMap = {
 	"永夜后日谈": { groupNumber: "710242752" },
 	"心脏": { groupNumber: "883465896\n*无全译本" },
 	"神话时代": { groupNumber: "316394180\n*无全译本" },
-  "异神成渊": { groupNumber: "916464615" },
+  	"异神成渊": { groupNumber: "916464615" },
 	"弥勒佛Mythras": { groupNumber: "316394180" },
 	"武侠克苏鲁woc": { groupNumber: "524086123" },
 	"永trpg": { groupNumber: "1092736604" },
@@ -266,7 +266,8 @@ const groupMap = {
 	"侠界之旅": { groupNumber: "210679492" },
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
 	"求道": { groupNumber: "983418886" },
-	"口胡专用": { groupNumber: "106133577" }
+	"口胡专用": { groupNumber: "106133577" },
+	"举头三尺": { groupNumber: "334821036\n*暂时不在图里" }
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
@@ -362,7 +363,7 @@ function findSimilarGroup(input) {
     }
   }
   
-  return highestScore > 0.4 ? { match: bestMatch, score: highestScore } : null;
+  return highestScore > 0.5 ? { match: bestMatch, score: highestScore } : null;
 }
 
 // 生成所有群组信息
