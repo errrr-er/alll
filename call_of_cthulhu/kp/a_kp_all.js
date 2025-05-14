@@ -351,8 +351,45 @@ function getSimilarity(s1, s2) {
 function findSimilarGroup(input) {
   input = input.toLowerCase();
   const matchedGroups = [];
+  let hasPerfectMatch = false;
 
-  // 遍历所有群组
+  // 第一轮：优先检查完全匹配（100%相似度）
+  for (const groupName in groupMap) {
+    const groupInfo = groupMap[groupName];
+
+    // 检查主名称是否完全匹配（包括大小写无关）
+    if (groupName.toLowerCase() === input) {
+      matchedGroups.push({
+        name: groupName,
+        info: groupInfo,
+        score: 1  // 标记为100%匹配
+      });
+      hasPerfectMatch = true;
+      continue; // 完全匹配时跳过别名检查
+    }
+
+    // 检查别名是否完全匹配
+    if (groupInfo.aliases) {
+      for (const alias of groupInfo.aliases) {
+        if (alias.toLowerCase() === input) {
+          matchedGroups.push({
+            name: groupName,
+            info: groupInfo,
+            score: 1
+          });
+          hasPerfectMatch = true;
+          break;
+        }
+      }
+    }
+  }
+
+  // 如果有完全匹配，直接返回（不显示其他相似结果）
+  if (hasPerfectMatch) {
+    return matchedGroups;
+  }
+
+  // 第二轮：无完全匹配时，检查相似度≥0.3的结果
   for (const groupName in groupMap) {
     const groupInfo = groupMap[groupName];
     let highestScore = 0;
@@ -369,12 +406,12 @@ function findSimilarGroup(input) {
       }
     }
 
-    // 记录相似度>=0.3的群组
+    // 记录相似度≥0.3的群组
     if (highestScore >= 0.3) {
       matchedGroups.push({
         name: groupName,
         info: groupInfo,
-        score: highestScore  // 保留相似度用于排序
+        score: highestScore
       });
     }
   }
@@ -465,10 +502,23 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   const matchedGroups = findSimilarGroup(input);
 
   if (matchedGroups) {
-    let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
-    matchedGroups.forEach(group => {
-      replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
-    });
+    let replyText = ``;
+    
+    // 完全匹配时仅显示完全匹配结果
+    if (matchedGroups[0].score === 1) {
+      replyText = `找到完全匹配【${input}】的KP群：\n`;
+      matchedGroups.forEach(group => {
+        replyText += `\n【${group.name}】→ ${group.info.groupNumber}`;
+      });
+    } 
+    // 否则显示所有相似度≥0.3的结果
+    else {
+      replyText = `未找到完全匹配，以下是最相似的KP群（相似度≥30%）：\n`;
+      matchedGroups.forEach(group => {
+        replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
+      });
+    }
+    
     seal.replyToSender(ctx, msg, replyText);
   } else {
     seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群。使用 .kp list 查看所有群组。`);
