@@ -78,7 +78,7 @@ const groupMap = {
 	"花&葬送者":{ groupNumber: "555632875" },
 	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
 	"代号行者":{ groupNumber: "433389798" },
-  "属于吾等的安乐之所":{ groupNumber: "826771926" },
+  	"属于吾等的安乐之所":{ groupNumber: "826771926" },
 	"狼藉夜行":{ groupNumber: "779021829" },
 	"黄昏熔解":{ groupNumber: "826823719" },
 	"蒙娜丽莎杀死格尔尼卡": { groupNumber: "580704423" },
@@ -129,7 +129,7 @@ const groupMap = {
 	"太岁": { groupNumber: "703542083" },
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"金酒狂热": { groupNumber: "794429121" },
-  "天下第一刀": { groupNumber: "369645861" },
+  	"天下第一刀": { groupNumber: "369645861" },
 	"雪域下的金色宝藏": { groupNumber: "307758220" },
 	"无为有处有还无": { groupNumber: "768399206" },
 	"追书人": { groupNumber: "942014926" },
@@ -267,11 +267,17 @@ const groupMap = {
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
 	"求道": { groupNumber: "983418886" },
 	"口胡专用": { groupNumber: "106133577" },
-	"举头三尺": { groupNumber: "334821036\n*暂时不在图里" }
+	"举头三尺": { groupNumber: "334821036\n*暂时不在图里" },
+	"角色桌": { groupNumber: "471191700\n*暂时不在图里", aliases: ["语擦"] }
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
 function getSimilarity(s1, s2) {
+  // 对字符排序后计算Levenshtein距离（语序无关）
+  const sorted1 = s1.toLowerCase().split('').sort().join('');
+  const sorted2 = s2.toLowerCase().split('').sort().join('');
+  
+  // 继续使用原有的Levenshtein距离计算
   const len1 = s1.length;
   const len2 = s2.length;
   
@@ -299,37 +305,47 @@ function getSimilarity(s1, s2) {
   return 1 - distance / maxLen;
 }
 
-// 计算两个字符串的相似度 (Levenshtein距离)
+// 计算两个字符串的相似度（结合Levenshtein和Jaccard）
 function getSimilarity(s1, s2) {
-  // 转换为小写进行比较
+  // 转换为小写
   s1 = s1.toLowerCase();
   s2 = s2.toLowerCase();
-  
-  const len1 = s1.length;
-  const len2 = s2.length;
-  
-  const matrix = [];
-  for (let i = 0; i <= len1; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= len2; j++) {
-    matrix[0][j] = j;
-  }
-  
-  for (let i = 1; i <= len1; i++) {
-    for (let j = 1; j <= len2; j++) {
-      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
-      matrix[i][j] = Math.min(
-        matrix[i - 1][j] + 1,     // 删除
-        matrix[i][j - 1] + 1,     // 插入
-        matrix[i - 1][j - 1] + cost  // 替换
-      );
+
+  // 1. 计算Levenshtein相似度（原有方法）
+  function getLevenshteinScore(a, b) {
+    const len1 = a.length;
+    const len2 = b.length;
+    const matrix = [];
+    for (let i = 0; i <= len1; i++) matrix[i] = [i];
+    for (let j = 0; j <= len2; j++) matrix[0][j] = j;
+    for (let i = 1; i <= len1; i++) {
+      for (let j = 1; j <= len2; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j - 1] + cost
+        );
+      }
     }
+    const distance = matrix[len1][len2];
+    return 1 - distance / Math.max(len1, len2);
   }
-  
-  const distance = matrix[len1][len2];
-  const maxLen = Math.max(len1, len2);
-  return 1 - distance / maxLen;
+
+  // 2. 计算Jaccard相似度（语序无关）
+  function getJaccardScore(a, b) {
+    const set1 = new Set(a.split(''));
+    const set2 = new Set(b.split(''));
+    const intersection = new Set([...set1].filter(c => set2.has(c))).size;
+    const union = new Set([...set1, ...set2]).size;
+    return union === 0 ? 0 : intersection / union;
+  }
+
+  // 返回两种相似度的最大值（兼顾精准度和语序容忍）
+  return Math.max(
+    getLevenshteinScore(s1, s2),
+    getJaccardScore(s1, s2)
+  );
 }
 
 // 查找最相似的群组
