@@ -348,38 +348,41 @@ function getSimilarity(s1, s2) {
   );
 }
 
-// 查找最相似的群组
 function findSimilarGroup(input) {
-  // 转换为小写进行比较
   input = input.toLowerCase();
-  
-  let bestMatch = null;
-  let highestScore = 0;
-  
-  // 检查所有群组名称和别名
+  const matchedGroups = [];
+
+  // 遍历所有群组
   for (const groupName in groupMap) {
     const groupInfo = groupMap[groupName];
-    
-    // 检查主名称
+    let highestScore = 0;
+
+    // 计算主名称相似度
     const mainScore = getSimilarity(input, groupName.toLowerCase());
-    if (mainScore > highestScore) {
-      highestScore = mainScore;
-      bestMatch = { name: groupName, info: groupInfo };
-    }
-    
-    // 检查别名
+    highestScore = Math.max(highestScore, mainScore);
+
+    // 计算别名相似度
     if (groupInfo.aliases) {
       for (const alias of groupInfo.aliases) {
         const aliasScore = getSimilarity(input, alias.toLowerCase());
-        if (aliasScore > highestScore) {
-          highestScore = aliasScore;
-          bestMatch = { name: groupName, info: groupInfo };
-        }
+        highestScore = Math.max(highestScore, aliasScore);
       }
     }
+
+    // 记录相似度>=0.3的群组
+    if (highestScore >= 0.3) {
+      matchedGroups.push({
+        name: groupName,
+        info: groupInfo,
+        score: highestScore  // 保留相似度用于排序
+      });
+    }
   }
-  
-  return highestScore >= 0.3 ? { match: bestMatch, score: highestScore } : null;
+
+  // 按相似度降序排列
+  matchedGroups.sort((a, b) => b.score - a.score);
+
+  return matchedGroups.length > 0 ? matchedGroups : null;
 }
 
 // 生成所有群组信息
@@ -458,19 +461,19 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     foundGroup = findSimilarGroup(input);
   }
   
-  // 返回结果
-  if (foundGroup) {
-    let replyText;
-    if (exactMatch) {
-      replyText = `【${foundGroup.match.name}】的KP群号是: ${foundGroup.match.info.groupNumber}`;
-    } else {
-      replyText = `未找到精确匹配的"${input}"，最相似的是【${foundGroup.match.name}】(相似度${Math.round(foundGroup.score * 100)}%)，群号: ${foundGroup.match.info.groupNumber}`;
-    }
+  // 查找匹配的群组
+  const matchedGroups = findSimilarGroup(input);
+
+  if (matchedGroups) {
+    let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
+    matchedGroups.forEach(group => {
+      replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
+    });
     seal.replyToSender(ctx, msg, replyText);
   } else {
-    seal.replyToSender(ctx, msg, `未找到与"${input}"匹配的KP群。使用 .kp list 查看所有可用群组。`);
+    seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群。使用 .kp list 查看所有群组。`);
   }
-  
+
   return ret;
 };
 
