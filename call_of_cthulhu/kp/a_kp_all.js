@@ -363,7 +363,7 @@ function findSimilarGroup(input) {
     }
   }
   
-  return highestScore > 0.5 ? { match: bestMatch, score: highestScore } : null;
+  return highestScore >= 0.3 ? { match: bestMatch, score: highestScore } : null;
 }
 
 // 生成所有群组信息
