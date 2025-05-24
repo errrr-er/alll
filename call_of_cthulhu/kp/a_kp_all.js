@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.1
+// @version      1.0.2
 // @description  有问题可进群2150284119联系
 // @timestamp    1747236139
 // 2025-05-11 16:49:17
@@ -268,7 +268,9 @@ const groupMap = {
 	"求道": { groupNumber: "983418886" },
 	"口胡专用": { groupNumber: "106133577" },
 	"举头三尺": { groupNumber: "334821036\n*暂时不在图里" },
-	"角色桌": { groupNumber: "471191700\n*暂时不在图里", aliases: ["语擦"] }
+	"角色桌": { groupNumber: "471191700\n*暂时不在图里", aliases: ["语擦"] },
+	"吹笛子的海獭": { groupNumber: "468213532\n*暂时不在图里" },
+	"dnd纯女": { groupNumber: "560604565、960874614、780528057\n*暂时不在图里" }
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
