@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         光明世界D6池系统
 // @author       3987681449
-// @version      1.1.0
+// @version      1.0.0
 // @description  暗烛规则适用、出bug可进群2150284119联系
 // @timestamp    1746956836
 // 2025-01-17 00:00:40 UTC
@@ -13,7 +13,7 @@
 
 let ext = seal.ext.find('illumi');
 if (!ext) {
-  ext = seal.ext.new('illumi', 'er', '1.1.0');
+  ext = seal.ext.new('illumi', 'er', '1.0.0');
   seal.ext.register(ext);
 }
 
