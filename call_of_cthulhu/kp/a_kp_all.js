@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.2
+// @version      1.0.3
 // @description  有问题可进群2150284119联系
-// @timestamp    1748098858
+// @timestamp    1748606070
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.1');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.3');
   seal.ext.register(ext);
 }
 
@@ -31,18 +31,18 @@ const groupMap = {
   	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
   	"欲望之箱":{ groupNumber: "739976718" },
   	"油盐不进":{ groupNumber: "575319883" },
-  	"BASH":{ groupNumber: "774156947" },
+  	"BASH":{ groupNumber: "774156947", aliases: ["燃星"] },
   	"燃烧的星辰":{ groupNumber: "1049443592" },
   	"快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
   	"生下他吧":{ groupNumber: "705913038" },
 	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
-	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅馆的捕食者", "吕布"] },
-	"nobody*2":{ groupNumber: "694908547", aliases: ["nobodynobody", "nobodyx2"] },
+	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅捕", "吕布"] },
+	"nobody*2":{ groupNumber: "694908547", aliases: ["nbd"] },
 	"4s":{ groupNumber: "926664565", aliases: ["ssss"] },
 	"蛙徒的祭典":{ groupNumber: "655890716", aliases: ["蛙祭", "挖机"] },
-	"怪物们与邪典仙境":{ groupNumber: "592577986" },
+	"怪物们与邪典仙境":{ groupNumber: "592577986", aliases: ["鞋垫"] },
 	"莫索里哀的圣职者":{ groupNumber: "435690433", aliases: ["msla"] },
 	"谢娘娘点化":{ groupNumber: "878626807", aliases: ["谢娘娘"] },
 	"西比拉":{ groupNumber: "669808359" },
@@ -51,7 +51,7 @@ const groupMap = {
 	"void":{ groupNumber: "1170037255" },
 	"细胞复位":{ groupNumber: "892835680" },
  	"废楼怪谈":{ groupNumber: "563488359" },
-	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春"] },
+	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春", "mjzc"] },
 	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
 	"演绎&本我":{ groupNumber: "583290817", aliases: ["yybw"] },
 	"庭师所吟为何物":{ groupNumber: "656434498", aliases: ["庭师"] },
@@ -73,8 +73,7 @@ const groupMap = {
 	"wts":{ groupNumber: "763188284" },
 	"不死灭灭":{ groupNumber: "279755638", },
 	"东京g":{ groupNumber: "201906582" },
-	"远星者":{ groupNumber: "820393813" },
-	"全景敞视主义的陷阱:":{ groupNumber: "792650936" },
+	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
 	"花&葬送者":{ groupNumber: "555632875" },
 	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
 	"代号行者":{ groupNumber: "433389798" },
@@ -111,10 +110,9 @@ const groupMap = {
 	"abs": { groupNumber: "941349942" },
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
 	"天椎谶纬": { groupNumber: "656026457" },
-	"ROP": { groupNumber: "783947110、780307937\n*(有/无作者)" },
+	"ROP": { groupNumber: "783947110、780307937\n*有/无作者" },
 	"东京v": { groupNumber: "613821934" },
 	"新世界": { groupNumber: "943798191" },
-	"再见新世界": { groupNumber: "909369023" },
 	"废案重组": { groupNumber: "857972438" },
 	"清平乐": { groupNumber: "814959956" },
 	"舞榭歌台": { groupNumber: "147313715" },
@@ -156,7 +154,6 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 	"今古空名": { groupNumber: "962147366" },
 	"求我": { groupNumber: "978495486" },
-	"暗河": { groupNumber: "1031974789" },
 	"恰故人归": { groupNumber: "939600700\n*下载群" },
 	"坤元劫": { groupNumber: "862291565" },
 	"difftruth": { groupNumber: "849680089" },
@@ -217,7 +214,6 @@ const groupMap = {
 	"烛堡": { groupNumber: "467303448" },
 	"黄金宝库": { groupNumber: "546468457" },
 	"SKT": { groupNumber: "376500876" },
-	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	"游龙之年组": { groupNumber: "693371984" },
 	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
 	"毁灭亲王": { groupNumber: "882887120" },
@@ -270,7 +266,10 @@ const groupMap = {
 	"举头三尺": { groupNumber: "334821036\n*暂时不在图里" },
 	"角色桌": { groupNumber: "471191700\n*暂时不在图里", aliases: ["语擦"] },
 	"吹笛子的海獭": { groupNumber: "468213532\n*暂时不在图里" },
-	"dnd纯女": { groupNumber: "560604565、960874614、780528057\n*暂时不在图里" }
+	"dnd纯女": { groupNumber: "560604565、960874614、780528057\n*暂时不在图里" },
+	"dnd纯dm": { groupNumber: "421678315\n*暂时不在图里" },
+	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载群\n*暂时不在图里\n*仅限扫码进群" },
+	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群\n*暂时不在图里" },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)

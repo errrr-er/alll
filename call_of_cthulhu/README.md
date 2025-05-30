@@ -2,7 +2,7 @@
 
 - TOML
     - 旧版手册呪文(三语对照)
-    - 模组简介&资料(包含图片)
+    - 模组图片资料
     - KP群汇总
 
 ## 旧版手册呪文(三语对照)
@@ -15,7 +15,7 @@
 > - 尽量提供`中日英释义`、但大部分将会是`日名+中英释义`
 > - 若有任何遗漏欢迎补充
 
-## 模组简介&资料(包含图片)
+## 模组图片资料
 
 > [!CAUTION]
 > - 手动整理、若有任何遗漏欢迎补充
@@ -47,7 +47,7 @@
     - [Grimoire Spells Specific](http://www.gubaba.org/mi2/wiki/index.php/Grimoire_Spells_Specific)（by MI2wiki）
     - The Grand Grimoire of Cthulhu Mythos Magic（by Mike Mason, Matt Sanderson）
 
-## 模组简介&资料(包含图片)
+## 模组图片资料
 - 图
     - 模组本体(名称请见目录)
 - cq
