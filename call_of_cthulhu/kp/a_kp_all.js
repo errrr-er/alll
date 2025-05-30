@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.3
+// @version      1.0.4
 // @description  有问题可进群2150284119联系
 // @timestamp    1748606070
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.3');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.4');
   seal.ext.register(ext);
 }
 
@@ -270,7 +270,7 @@ const groupMap = {
 	"dnd纯dm": { groupNumber: "421678315\n*暂时不在图里" },
 	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载群\n*暂时不在图里\n*仅限扫码进群" },
 	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群\n*暂时不在图里" },
-	"CandelaObscura": { groupNumber: "1053180006\n*暂时不在图里", aliases: ["暗烛"] },
+	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*交流/LP群\n*暂时不在图里", aliases: ["暗烛"] },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
