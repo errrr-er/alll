@@ -270,7 +270,7 @@ const groupMap = {
 	"dnd纯dm": { groupNumber: "421678315\n*暂时不在图里" },
 	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载群\n*暂时不在图里\n*仅限扫码进群" },
 	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群\n*暂时不在图里" },
-	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*交流/KP群\n*暂时不在图里", aliases: ["暗烛"] },
+	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*交流/GM群\n*暂时不在图里", aliases: ["暗烛"] },
 };
 
 // 计算两个字符串的相似度 (Levenshtein距离)
