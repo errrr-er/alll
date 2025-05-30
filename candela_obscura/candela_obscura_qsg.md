@@ -2,7 +2,7 @@
 | :-: | :-: | :-: | :-: |
 | 创建：2023-06-23 | 阅前必读：[README](https://github.com/errrr-er/alll/tree/main/candela_obscura) | [快速入门指南](https://shop.critrole.com/products/candela-obscura-quickstart-guide) | [光明世界D6池系统](https://github.com/errrr-er/alll/blob/main/candela_obscura/illuminated_worlds.js) 自制JS插件 | [实况&相关视频](https://www.youtube.com/playlist?list=PL1tiwbzkOjQwrPBNkPgQEQtNVDvJwrqTm) |  |
 | 更新：2025-05-30 | 译文协议：[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans) | [角色表与其它相关材料](https://darringtonpress.com/candela/) | 1053180006 交流群 |
-| [下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md) |  | [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) |  |
+| [下载使用](https://github.com/errrr-er/alll/blob/main/candela_obscura/candela_obscura_qsg.md) |  | [规则书电子版（$19.99）](https://shop.critrole.com/collections/books/products/candela-obscura-core-rulebook-pdf) | 1049162012 KP群 |
 | [在线使用](https://errrr-er.github.io/Candela_QSG/) |  | [规则书实体&电子版（$39.99）](https://shop.critrole.com/products/candela-obscura-core-rulebook) |  |
 
 此译本为非官方翻译，仅供参考。<br/>
