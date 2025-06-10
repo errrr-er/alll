@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.4
+// @version      1.0.5
 // @description  有问题可进群2150284119联系
-// @timestamp    1748606070
+// @timestamp    1749564344
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.4');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.5');
   seal.ext.register(ext);
 }
 
@@ -73,6 +73,7 @@ const groupMap = {
 	"wts":{ groupNumber: "763188284" },
 	"不死灭灭":{ groupNumber: "279755638", },
 	"东京g":{ groupNumber: "201906582" },
+	"远星者":{ groupNumber: "820393813"},
 	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
 	"花&葬送者":{ groupNumber: "555632875" },
 	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
@@ -154,6 +155,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 	"今古空名": { groupNumber: "962147366" },
 	"求我": { groupNumber: "978495486" },
+	"暗河": { groupNumber: "1031974789" },
 	"恰故人归": { groupNumber: "939600700\n*下载群" },
 	"坤元劫": { groupNumber: "862291565" },
 	"difftruth": { groupNumber: "849680089" },
@@ -185,9 +187,11 @@ const groupMap = {
 	"幸福与心动的民谣": { groupNumber: "1036780211" },
 	"怪胎": { groupNumber: "639870851" },
 	"往明": { groupNumber: "1039312225" },
+	"正伪的ideal": { groupNumber: "667098598" },
 	"列文菲舍变例": { groupNumber: "1040678581" },
 	"升平世旧": { groupNumber: "1041314728" },
 	"造物者": { groupNumber: "948914482" },
+	"拉普拉斯": { groupNumber: "1050071534" },
 	"乌洛波洛斯的末日巡演": { groupNumber: "451471718" },
 	"奈面": { groupNumber: "933493427" },
 	"卡镇": { groupNumber: "297175538" },
@@ -214,6 +218,7 @@ const groupMap = {
 	"烛堡": { groupNumber: "467303448" },
 	"黄金宝库": { groupNumber: "546468457" },
 	"SKT": { groupNumber: "376500876" },
+	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	"游龙之年组": { groupNumber: "693371984" },
 	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
 	"毁灭亲王": { groupNumber: "882887120" },
@@ -263,16 +268,24 @@ const groupMap = {
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
 	"求道": { groupNumber: "983418886" },
 	"口胡专用": { groupNumber: "106133577" },
-	"举头三尺": { groupNumber: "334821036\n*暂时不在图里" },
-	"角色桌": { groupNumber: "471191700\n*暂时不在图里", aliases: ["语擦"] },
-	"吹笛子的海獭": { groupNumber: "468213532\n*暂时不在图里" },
-	"dnd纯女": { groupNumber: "560604565、960874614、780528057\n*暂时不在图里" },
-	"dnd纯dm": { groupNumber: "421678315\n*暂时不在图里" },
-	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载群\n*暂时不在图里\n*仅限扫码进群" },
-	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群\n*暂时不在图里" },
-	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*交流/GM群\n*暂时不在图里", aliases: ["暗烛"] },
-	"春花秋月": { groupNumber: "813932679\n*暂时不在图里" },
+	"举头三尺": { groupNumber: "334821036" },
+	"角色桌": { groupNumber: "471191700", aliases: ["语擦"] },
+	"吹笛子的海獭": { groupNumber: "468213532" },
+	"dnd纯女": { groupNumber: "560604565、960874614、780528057" },
+	"dnd纯dm": { groupNumber: "421678315" },
+	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载群\n*仅限扫码进群" },
+	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群" },
+	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*交流/GM群", aliases: ["暗烛"] },
+	"春花秋月": { groupNumber: "813932679" },
+	"小众规则综合群": { groupNumber: "945728295" },
+	"摇曳群青": { groupNumber: "513712312" },
+	"幽诱 , 于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
+	"星海孤舟": { groupNumber: "657774576\n*下载群" },
 };
+
+// "": { groupNumber: "" },
+
+// "": { groupNumber: "",aliases: [""] },
 
 // 计算两个字符串的相似度 (Levenshtein距离)
 function getSimilarity(s1, s2) {
@@ -423,7 +436,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   
   // 列出所有群组
   if (input.toLowerCase() === 'list') {
-    const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.jpg?raw=true,type=show]`;
+    const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
     seal.replyToSender(ctx, msg, listText);
     return ret;
   }
