@@ -281,6 +281,7 @@ const groupMap = {
 	"摇曳群青": { groupNumber: "513712312" },
 	"幽诱 , 于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
 	"星海孤舟": { groupNumber: "657774576\n*下载群" },
+	"龙滨不良": { groupNumber: "597585029" },
 };
 
 // "": { groupNumber: "" },
