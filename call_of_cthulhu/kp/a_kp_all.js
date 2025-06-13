@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.5
+// @version      1.0.6
 // @description  有问题可进群2150284119联系
 // @timestamp    1749564344
 // 2025-05-11 16:49:17
@@ -125,7 +125,7 @@ const groupMap = {
 	"天命所归": { groupNumber: "875210475" },
 	"纯阳轶事": { groupNumber: "977656290" },
 	"相约98": { groupNumber: "542398417" },
-	"太岁": { groupNumber: "703542083" },
+	"太岁": { groupNumber: "615878940、703542083\n*发布群/KP群" },
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"金酒狂热": { groupNumber: "794429121" },
   	"天下第一刀": { groupNumber: "369645861" },
@@ -282,6 +282,7 @@ const groupMap = {
 	"幽诱 , 于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
 	"星海孤舟": { groupNumber: "657774576\n*下载群" },
 	"龙滨不良": { groupNumber: "597585029" },
+	"侦探可有翅膀吗": { groupNumber: "963854131",aliases: ["侦探翅"] },
 };
 
 // "": { groupNumber: "" },
