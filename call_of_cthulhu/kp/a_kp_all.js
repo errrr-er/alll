@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.6
 // @description  有问题可进群2150284119联系
-// @timestamp    1749564344
+// @timestamp    1749965233
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -283,6 +283,7 @@ const groupMap = {
 	"星海孤舟": { groupNumber: "657774576\n*下载群" },
 	"龙滨不良": { groupNumber: "597585029" },
 	"侦探可有翅膀吗": { groupNumber: "963854131",aliases: ["侦探翅"] },
+	"一梦": { groupNumber: "431528579\n*发布+KP群" },
 };
 
 // "": { groupNumber: "" },
