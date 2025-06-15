@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.5');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.6');
   seal.ext.register(ext);
 }
 
