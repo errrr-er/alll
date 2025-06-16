@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.7
+// @version      1.0.8
 // @description  有问题可进群2150284119联系
-// @timestamp    1750008196
+// @timestamp    1750055329
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.7');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.8');
   seal.ext.register(ext);
 }
 
@@ -285,6 +285,7 @@ const groupMap = {
 	"侦探可有翅膀吗": { groupNumber: "963854131",aliases: ["侦探翅"] },
 	"一梦": { groupNumber: "431528579\n*发布+KP群" },
 	"异能儿童管理机构": { groupNumber: "786412774、817252450\n*发布群/KP群(仅扫码)" },
+	"雪山密室": { groupNumber: "901413729" },
 };
 
 // "": { groupNumber: "" },
