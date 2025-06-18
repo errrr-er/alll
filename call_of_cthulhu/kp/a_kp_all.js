@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      1.0.8
+// @version      1.0.9
 // @description  有问题可进群2150284119联系
 // @timestamp    1750055329
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '1.0.8');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.9');
   seal.ext.register(ext);
 }
 
@@ -286,6 +286,7 @@ const groupMap = {
 	"一梦": { groupNumber: "431528579\n*发布+KP群" },
 	"异能儿童管理机构": { groupNumber: "786412774、817252450\n*发布群/KP群(仅扫码)" },
 	"雪山密室": { groupNumber: "901413729" },
+	"凤去台空江自流": { groupNumber: "979768022、985261346\n瑰绿的决心+天地熔金+凤去台空江自流\n发布群*",aliases: ["瑰绿的决心", "天地熔金"] },
 };
 
 // "": { groupNumber: "" },
