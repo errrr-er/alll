@@ -36,7 +36,7 @@ const groupMap = {
   	"快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
-  	"生下他吧":{ groupNumber: "705913038" },
+  	"生下他吧":{ groupNumber: "705913038", aliases: ["请生"] },
 	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
 	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅捕", "吕布"] },
 	"nobody*2":{ groupNumber: "694908547", aliases: ["nbd"] },
