@@ -11,7 +11,7 @@
 > [!IMPORTANT]
 > - 导入前须知&本体更新方式
 >   - TOML内附带的图片皆由[cq码](https://docs.go-cqhttp.org/cqcode/#%E5%9B%BE%E7%89%87)实现，如果骰子不支持则会无法正常使用
-> - TOML适配海豹系、其它骰系暂且未知、欢迎补充
+> - TOML/JSON适配海豹系、其它骰系暂且未知、欢迎补充
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
 > ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice/sealdice_update_example_pointout.png?raw=true)
 
