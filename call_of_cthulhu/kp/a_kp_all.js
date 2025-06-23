@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1750661665
+// @timestamp    1750694504
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -128,7 +128,7 @@ const groupMap = {
 	"太岁": { groupNumber: "615878940、703542083\n*发布群/KP群" },
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"金酒狂热": { groupNumber: "794429121" },
-  	"天下第一刀": { groupNumber: "369645861" },
+  	"天下第一刀": { groupNumber: "369645861、369645861\n*有/无作者" },
 	"雪域下的金色宝藏": { groupNumber: "307758220" },
 	"无为有处有还无": { groupNumber: "768399206" },
 	"追书人": { groupNumber: "942014926" },
