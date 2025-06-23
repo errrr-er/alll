@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1750649588
+// @timestamp    1750661665
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -286,7 +286,7 @@ const groupMap = {
 	"一梦": { groupNumber: "431528579\n*发布+KP群" },
 	"异能儿童管理机构": { groupNumber: "786412774、817252450\n*发布群/KP群(仅扫码)" },
 	"雪山密室": { groupNumber: "901413729" },
-	"凤去台空江自流": { groupNumber: "979768022、985261346\n瑰绿的决心+天地熔金+凤去台空江自流\n发布群*",aliases: ["瑰绿的决心", "天地熔金"] },
+	"凤去台空江自流": { groupNumber: "979768022、985261346\n瑰绿的决心+天地熔金+凤去台空江自流\n*发布群",aliases: ["瑰绿的决心", "天地熔金"] },
 	"靖海难": { groupNumber: "343026343" },
 };
 
