@@ -75,7 +75,7 @@ const groupMap = {
 	"东京g":{ groupNumber: "201906582" },
 	"远星者":{ groupNumber: "820393813"},
 	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
-	"花&葬送者":{ groupNumber: "555632875、106559548" },
+	"花&葬送者":{ groupNumber: "555632875、106559548", aliases: ["花葬"] },
 	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
 	"代号行者":{ groupNumber: "433389798" },
   	"属于吾等的安乐之所":{ groupNumber: "826771926" },
