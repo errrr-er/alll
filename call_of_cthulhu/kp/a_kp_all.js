@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1750694504
+// @timestamp    1750832595
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -75,7 +75,7 @@ const groupMap = {
 	"东京g":{ groupNumber: "201906582" },
 	"远星者":{ groupNumber: "820393813"},
 	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
-	"花&葬送者":{ groupNumber: "555632875" },
+	"花&葬送者":{ groupNumber: "555632875、106559548" },
 	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
 	"代号行者":{ groupNumber: "433389798" },
   	"属于吾等的安乐之所":{ groupNumber: "826771926" },
