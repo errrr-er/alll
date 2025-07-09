@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1751844468
+// @timestamp    1752081205
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -290,6 +290,7 @@ const groupMap = {
 	"靖海难": { groupNumber: "343026343" },
 	"魂夜逃避行": { groupNumber: "1046944266、1009337218\n*发布群/KP群" },
 	"鲸落万物生": { groupNumber: "598393390、1051952972\n*发布群/KP群",aliases: ["鲸落"] },
+	"继续工作直到毁灭": { groupNumber: "822840569" },
 };
 
 // "": { groupNumber: "" },
