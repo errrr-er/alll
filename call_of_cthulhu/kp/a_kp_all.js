@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1752081205
+// @timestamp    1752409806
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -157,7 +157,7 @@ const groupMap = {
 	"求我": { groupNumber: "978495486" },
 	"暗河": { groupNumber: "1031974789" },
 	"恰故人归": { groupNumber: "939600700\n*下载群" },
-	"坤元劫": { groupNumber: "862291565" },
+	"": { groupNumber: "862291565" },
 	"difftruth": { groupNumber: "849680089" },
 	"柏拉图的余谈": { groupNumber: "574918635" },
 	"告密者": { groupNumber: "623768354" },
@@ -291,6 +291,7 @@ const groupMap = {
 	"魂夜逃避行": { groupNumber: "1046944266、1009337218\n*发布群/KP群" },
 	"鲸落万物生": { groupNumber: "598393390、1051952972\n*发布群/KP群",aliases: ["鲸落"] },
 	"继续工作直到毁灭": { groupNumber: "822840569" },
+	"坤元劫": { groupNumber: "954535020\n*发布群" },
 };
 
 // "": { groupNumber: "" },
