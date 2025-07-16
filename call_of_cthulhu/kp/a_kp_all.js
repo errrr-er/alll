@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1752629126
+// @timestamp    1752640343
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -292,6 +292,7 @@ const groupMap = {
 	"鲸落万物生": { groupNumber: "598393390、1051952972\n*发布群/KP群",aliases: ["鲸落"] },
 	"继续工作直到毁灭": { groupNumber: "822840569" },
 	"坤元劫": { groupNumber: "954535020\n*发布群" },
+	"逆命仙途": { groupNumber: "796368505" },
 };
 
 // "": { groupNumber: "" },
@@ -467,6 +468,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
   鲸落万物生598393390发布群1051952972KP群
   继续工作直到毁灭822840569
   坤元劫954535020发布群
+  逆命仙途796368505 ←这个是规则群
 
   图中已有但补充：
   太岁615878940发布群
