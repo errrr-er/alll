@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1752642633
+// @timestamp    1752672040
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -294,6 +294,7 @@ const groupMap = {
 	"坤元劫": { groupNumber: "954535020\n*发布群" },
 	"逆命仙途": { groupNumber: "796368505" },
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
+	"coc纯女": { groupNumber: "947095759\n*审核群" },
 };
 
 // "": { groupNumber: "" },
@@ -471,6 +472,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 坤元劫954535020发布群
 逆命仙途796368505 ←这个是规则群
 高塔之死623768354战役集KP群
+coc纯女947095759审核群
 
 图中已有但补充：
 太岁615878940发布群
