@@ -430,9 +430,9 @@ function generateGroupList() {
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
-.kp <关键词>    // 查询特定KP群号
-.kp list        // 列出所有KP群信息
-.kp help        // 显示本帮助
+.kp <关键词>	// 查询特定KP群号
+.kp list	// 列出所有KP群信息
+.kp help	// 显示本帮助
 .kp new		// 不存在于图中的群组`;
 
 // 修改.kp指令的solve函数
