@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1752766672
+// @timestamp    1752865472
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -296,6 +296,7 @@ const groupMap = {
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
 	"coc纯女": { groupNumber: "947095759\n*审核群" },
 	"匕首之心": { groupNumber: "791858682" },
+	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World",aliases: [""] },
 };
 
 // "": { groupNumber: "" },
@@ -475,6 +476,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 高塔之死623768354战役集KP群
 coc纯女947095759审核群
 匕首之心791858682 ←规则群
+WWRPG818401752 ←规则群*全名Wizarding World
 
 图中已有但补充：
 太岁615878940发布群
