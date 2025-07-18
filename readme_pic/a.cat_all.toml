@@ -14,7 +14,7 @@ update_Urls = [
 
 ["猫翻译"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/readme_pic/reply/github.jpg?raw=true,type=show]"]
 
 
 ["猫discord"]
