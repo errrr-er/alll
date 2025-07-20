@@ -11,25 +11,21 @@
 // @updateUrl    https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/pic_clue.js
 // ==/UserScript==
 
-
 let ext = seal.ext.find('模组图片资料');
 if (!ext) {
   ext = seal.ext.new('模组图片资料', 'er', '1.0.0');
   seal.ext.register(ext);
 }
 
-
 // 创建映射表
 const groupMap = {
-	//月光舞鞋
-	"西大附中": { groupNumber: "[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]" },
+    //月光舞鞋
+    "西大附中": { 
+        groupNumber: "[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]",
+        aliases: ["西大"]  // 可以添加别名
+    },
+    // 可以继续添加其他模组
 };
-
-// "": { groupNumber: "" },
-
-// "": { groupNumber: "",aliases: [""] },
-
-// [CQ:image,file=,type=show]
 
 // 创建.pic指令
 const cmdPic = seal.ext.newCmdItemInfo();
@@ -49,14 +45,22 @@ cmdPic.solve = (ctx, msg, cmdArgs) => {
     return ret;
   }
   
-  // 列出所有群组
+  // 列出所有支持模组
   if (input.toLowerCase() === 'list') {
-    const listText = `所有KP群信息:\n请查看完整图片\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
+    let listText = "当前支持的模组关键词列表：\n";
+    for (const groupName in groupMap) {
+        listText += `- ${groupName}`;
+        if (groupMap[groupName].aliases) {
+            listText += ` (别名: ${groupMap[groupName].aliases.join("、")})`;
+        }
+        listText += "\n";
+    }
+    listText += "\n输入 .pic <关键词> 查询具体图片";
     seal.replyToSender(ctx, msg, listText);
     return ret;
   }
   
-  // 查找精确匹配的群组
+  // 查找精确匹配的模组
   let foundGroup = null;
   const lowerInput = input.toLowerCase();
   
@@ -85,10 +89,10 @@ cmdPic.solve = (ctx, msg, cmdArgs) => {
   }
   
   if (foundGroup) {
-    // 找到精确匹配，显示图片
-    seal.replyToSender(ctx, msg, `KP群图片查询结果：\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`);
+    // 找到精确匹配，显示对应的图片
+    seal.replyToSender(ctx, msg, `模组图片查询结果：\n${foundGroup.groupNumber}`);
   } else {
-    seal.replyToSender(ctx, msg, `未找到精确匹配【${input}】的KP群。使用 .pic list 查看所有群组图片。`);
+    seal.replyToSender(ctx, msg, `未找到精确匹配【${input}】的模组。使用 .pic list 查看支持的模组列表。`);
   }
 
   return ret;
