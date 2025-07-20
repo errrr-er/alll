@@ -4,7 +4,7 @@
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
 // @timestamp    1753038344
-// 2025-07-20 13:37:34
+// 2025-04-08
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/pic_clue.js
@@ -21,7 +21,8 @@ if (!ext) {
 
 // 创建映射表
 const groupMap = {
-
+	//月光舞鞋
+	"西大附中": { groupNumber: "[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]" },
 };
 
 // "": { groupNumber: "" },
