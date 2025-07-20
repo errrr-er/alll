@@ -48,8 +48,8 @@ cmdPic.solve = (ctx, msg, cmdArgs) => {
   
   // 列出所有支持模组
   if (input.toLowerCase() === 'list') {
-    let listText = "！模组资料包含图片！\n！含剧透请谨慎使用！\n！.pic all显示图片版完整目录(强剧透谨慎使用)！\n\n。";
-    listText += "\n输入 .pic <关键词> 查询具体图片";
+    let listText = "！模组资料包含图片！\n！含剧透请谨慎使用！\n！.pic all显示图片版完整目录(强剧透谨慎使用)！\n请根据所需输入对应关键词(请忽视括号及内容)\n事前 = 简介\n例：.draw望君长留\n\n缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\f";
+    listText += "。";
     seal.replyToSender(ctx, msg, listText);
     return ret;
   }
