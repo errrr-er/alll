@@ -19,7 +19,8 @@ if (!ext) {
 
 // 创建映射表
 const groupMap = {
-	"all": { groupNumber: "" },
+	"all": { groupNumber: "！模组资料包含图片！\n！含剧透请谨慎使用！\n.pic all显示图片版完整目录(强剧透谨慎使用)\n请根据所需输入对应关键词(请忽视括号及内容)\n\n事前 = 简介\n\n缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\f目录：\n月光舞鞋\n望君长留\n幽暗之门\n你就刚刚好\n福尔摩斯(仅有事前)" },
+	"list": { groupNumber: "" },
     //月光舞鞋
     "西大附中": { groupNumber: "[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]" },
 };
@@ -45,14 +46,6 @@ cmdPic.solve = (ctx, msg, cmdArgs) => {
   // 帮助命令
   if (input === 'help' || input === '') {
     ret.showHelp = true;
-    return ret;
-  }
-  
-  // 列出所有支持模组
-  if (input.toLowerCase() === 'list') {
-    let listText = "！模组资料包含图片！\n！含剧透请谨慎使用！\n.pic all显示图片版完整目录(强剧透谨慎使用)\n请根据所需输入对应关键词(请忽视括号及内容)\n\n事前 = 简介\n\n缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群";
-    listText += "\f？我是";
-    seal.replyToSender(ctx, msg, listText);
     return ret;
   }
   
