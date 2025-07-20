@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
-update_date = 2025-06-20
+update_date = 2025-07-20
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml",
@@ -15,8 +15,13 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群"]
+options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n！.draw pichelp显示图片版完整目录(强剧透谨慎使用)！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群"]
 
+["pichelp"]
+export = true
+visible = true
+options = ["[CQ:image,file=
+,type=show]"]
 
 # 月光舞鞋
 ["月光舞鞋"]
