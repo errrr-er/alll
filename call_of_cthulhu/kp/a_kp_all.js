@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1752943979
+// @timestamp    1753038344
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -154,7 +154,7 @@ const groupMap = {
 	"伊卡忠": { groupNumber: "749121463" },
 	"长兴镇": { groupNumber: "906847246" },
 	"今古空名": { groupNumber: "962147366" },
-	"求我": { groupNumber: "978495486" },
+	"求我": { groupNumber: "338494770、979194858、978495486\n*下载x2/KP群" },
 	"暗河": { groupNumber: "1031974789" },
 	"恰故人归": { groupNumber: "939600700\n*下载群" },
 	"": { groupNumber: "862291565" },
@@ -483,7 +483,8 @@ WWRPG818401752 ←规则群*全名Wizarding World
 图中已有但补充：
 太岁615878940发布群
 天下第一刀369645861无作者
-花&葬送者106559548`;
+花&葬送者106559548
+求我338494770、979194858下载群x2`;
     seal.replyToSender(ctx, msg, newGroupsText);
     return ret;
   }
