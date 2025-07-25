@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1753268760
+// @timestamp    1753486393
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -298,6 +298,8 @@ const groupMap = {
 	"匕首之心": { groupNumber: "791858682" },
 	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World",aliases: ["Wizarding World"] },
 	"晨钟旧事": { groupNumber: "655068229\n*发布群" },
+	"GURPS": { groupNumber: "577412220" },
+	"雪中形骸": { groupNumber: "829092202" },
 };
 
 // "": { groupNumber: "" },
@@ -479,6 +481,8 @@ coc纯女947095759、797863427审核群
 匕首之心791858682 ←规则群
 WWRPG818401752 ←规则群*全名Wizarding World
 晨钟旧事655068229发布群
+GURPS577412220 ←规则群
+雪中形骸829092202
 
 图中已有但补充：
 太岁615878940发布群
