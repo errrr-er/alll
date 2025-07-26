@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1753486393
+// @timestamp    1753538567
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -300,6 +300,8 @@ const groupMap = {
 	"晨钟旧事": { groupNumber: "655068229\n*发布群" },
 	"GURPS": { groupNumber: "577412220" },
 	"雪中形骸": { groupNumber: "829092202" },
+	"弃约社会": { groupNumber: "972643133、916122224\n*发布群/KP群" },
+
 };
 
 // "": { groupNumber: "" },
@@ -483,6 +485,7 @@ WWRPG818401752 ←规则群*全名Wizarding World
 晨钟旧事655068229发布群
 GURPS577412220 ←规则群
 雪中形骸829092202
+弃约社会972643133发布群916122224KP群
 
 图中已有但补充：
 太岁615878940发布群
