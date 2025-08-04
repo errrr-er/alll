@@ -18,6 +18,9 @@ visible = true
 options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n事前 = 简介\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)、蓝鲸列车\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\n蓝鲸列车 = 蓝鲸列车·驶向起点的鲸鱼"]
 
 
+
+
+
 # 月光舞鞋
 ["月光舞鞋"]
 export = true
@@ -27,6 +30,9 @@ options = ["关键词：西大附中"]
 ["西大附中"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%88%E5%85%89%E8%88%9E%E9%9E%8B/%E8%A5%BF%E5%A4%A7%E9%99%84%E4%B8%AD.png?raw=true,type=show]"]
+
+
+
 
 
 # 望君长留
@@ -46,6 +52,9 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 ["釜村一家"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%9C%9B%E5%90%9B%E9%95%BF%E7%95%99/%E9%87%9C%E6%9D%91%E4%B8%80%E5%AE%B6.png?raw=true,type=show]"]
+
+
+
 
 
 # 幽暗之门·预设卡
@@ -220,6 +229,9 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E5%B9%BD%E6%9A%97%E4%B9%8B%E9%97%A8/%E4%BA%86%E5%8D%B4%E5%B9%BB%E6%A2%A6/%E5%B9%BB%E6%A2%A6%E5%B1%95%E7%A4%BA1.png?raw=true,type=show]"]
 
 
+
+
+
 # 你就刚刚好
 ["你就刚刚好"]
 export = true
@@ -229,6 +241,9 @@ options = ["关键词：风铃草"]
 ["风铃草"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%BD%A0%E5%B0%B1%E5%88%9A%E5%88%9A%E5%A5%BD/%E2%BB%9B%E9%93%83%E8%8D%89.png?raw=true,type=show]"]
+
+
+
 
 
 #夏洛克·福尔摩斯症候群
@@ -242,6 +257,9 @@ export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F1.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F2.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F3.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E7%A6%8F%E5%B0%94%E6%91%A9%E6%96%AF/%E7%A6%8F4.png?raw=true,type=show]"]
 
 
+
+
+
 # 蓝鲸列车
 ["蓝鲸列车"]
 export = true
@@ -250,35 +268,28 @@ options = ["关键词：起点地图/起点101/起点102/起点103/起点105/起
 
 ["起点地图"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/MAP.png?raw=true,type=show]"]
 
 ["起点101"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/101.jpg?raw=true,type=show]"]
 
 ["起点102"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/102-1.jpg?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/102-2.jpg?raw=true,type=show]"]
 
 ["起点103"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/103.jpg?raw=true,type=show]"]
 
 ["起点105"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/105.jpg?raw=true,type=show]"]
 
 ["起点106"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/106-1.jpg?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/106-2.jpg?raw=true,type=show]"]
 
 ["起点107"]
 export = true
-options = ["[CQ:image,file=
-,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E8%93%9D%E9%B2%B8%E5%88%97%E8%BD%A6%C2%B7%E9%A9%B6%E5%90%91%E8%B5%B7%E7%82%B9%E7%9A%84%E9%B2%B8%E9%B1%BC/107.jpg?raw=true,type=show]"]
