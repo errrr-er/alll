@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
-update_date = 2025-08-03
+update_date = 2025-08-05
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml",
@@ -264,7 +264,11 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 ["蓝鲸列车"]
 export = true
 visible = true
-options = ["关键词：起点地图/起点101/起点102/起点103/起点105/起点106/起点107"]
+options = ["关键词：蓝列结团/起点地图/起点101/起点102/起点103/起点105/起点106/起点107"]
+
+["蓝列结团"]
+export = true
+options = ["收集奖励\n此模组集并非战役，但其中都包含“死亡会发出蓝色的光”信息。虽然这对单个模组来说没有什么特殊意义，但还是准备了收集奖励以感谢完成模组的您。\n\n收集数量1\nSAN+1D3\n\n收集数量2\nSAN+1D3+1\n医学+1\n\n收集数量3\nSAN+1D3+3\n医学+1D6"]
 
 ["起点地图"]
 export = true
