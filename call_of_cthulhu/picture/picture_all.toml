@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
-update_date = 2025-08-05
+update_date = 2025-08-07
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml",
@@ -318,11 +318,11 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 ["大空月夜"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%B2%89%E7%9D%A1%E7%9A%84%E6%9C%88%E4%BA%AE%E6%AD%8C%E5%A7%AC/%E5%A4%A7%E7%A9%BA%E6%9C%88%E5%A4%9C.png?raw=true,type=show]"]
 
 ["大空朝阳"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%B2%89%E7%9D%A1%E7%9A%84%E6%9C%88%E4%BA%AE%E6%AD%8C%E5%A7%AC/%E5%A4%A7%E7%A9%BA%E6%9C%9D%E9%98%B3.png?raw=true,type=show]"]
 
 
 
