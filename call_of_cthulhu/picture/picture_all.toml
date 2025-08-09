@@ -332,28 +332,107 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 ["乐园在海底"]
 export = true
 visible = true
-options = ["关键词：乐园共通/乐园HO1/乐园HO2/乐园HO3"]
+options = ["关键词：乐园共通/乐园HO1/乐园HO2/乐园HO3/乐园NPC/乐园机体"]
 
 ["乐园共通"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E5%85%B1%E9%80%9A/1.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E5%85%B1%E9%80%9A/2.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E5%85%B1%E9%80%9A/3.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E5%85%B1%E9%80%9A/4.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E5%85%B1%E9%80%9A/5.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E5%85%B1%E9%80%9A/6.png?raw=true,type=show]"]
 
 ["乐园HO1"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/HO1/1.png?raw=true,type=show]"]
 
 ["乐园HO2"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/HO2/1.png?raw=true,type=show]"]
 
 ["乐园HO3"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/HO3/1.png?raw=true,type=show][CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/HO3/2.png?raw=true,type=show]"]
 
+["乐园NPC"]
+export = true
+options = ["关键词：Faisal/阳向咲绫/Nero/月馆湊/Stella/西荫晃/北见信也/朝仓玲人/宫方幸助/风见诗信/佐佐木裕树/Nana/Saku"]
 
+["Faisal"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%B5%E3%83%AB%E3%83%BB%E3%82%A2%E3%83%AB%E3%83%8F%E3%82%B6%E3%83%BC%E3%83%89.png?raw=true,type=show]"]
 
+["阳向咲绫"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E9%99%BD%E5%90%91%E5%92%B2%E7%B6%BE.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E9%99%BD%E5%90%91%E5%92%B2%E7%B6%BE2.png?raw=true,type=show]"]
 
+["Nero"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E3%83%8D%E3%83%AD.png?raw=true,type=show]"]
 
+["月馆湊"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E6%9C%88%E8%88%98%E6%B9%8A.png?raw=true,type=show]\f[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E6%9C%88%E8%88%98%E6%B9%8A2.png?raw=true,type=show]"]
+
+["Stella"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E3%82%B9%E3%83%86%E3%83%A9.PNG?raw=true,type=show]"]
+
+["西荫晃"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E8%A5%BF%E8%94%AD%E6%99%83.PNG?raw=true,type=show]"]
+
+["北见信也"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E5%8C%97%E8%A6%8B%E4%BF%A1%E4%B9%9F.PNG?raw=true,type=show]"]
+
+["朝仓玲人"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E6%9C%9D%E5%80%89%E7%8E%B2%E4%BA%BA.png?raw=true,type=show]"]
+
+["宫方幸助"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E5%AE%AE%E6%96%B9%E5%B9%B8%E5%8A%A9.png?raw=true,type=show]"]
+
+["风见诗信"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E9%A2%A8%E8%A6%8B%E8%A9%A9%E4%BF%A1.png?raw=true,type=show]"]
+
+["佐佐木裕树"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E4%BD%90%E3%80%85%E6%9C%A8%E8%A3%95%E6%A8%B9.png?raw=true,type=show]"]
+
+["Nana"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E3%83%8A%E3%83%8A.PNG?raw=true,type=show]"]
+
+["Saku"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/NPC/%E3%82%B5%E3%82%AF.png?raw=true,type=show]"]
+
+["乐园机体"]
+export = true
+options = ["关键词：Orcus/Sonneillon/Gressil/Verrine/Uriel/Messiah"]
+
+["Orcus"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E6%9C%BA%E4%BD%93/%E3%82%AA%E3%83%AB%E3%82%AF%E3%82%B9.png?raw=true,type=show]"]
+
+["Sonneillon"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E6%9C%BA%E4%BD%93/%E3%82%BD%E3%83%8D%E3%82%A4%E3%83%AD%E3%83%B3.png?raw=true,type=show]"]
+
+["Gressil"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E6%9C%BA%E4%BD%93/%E3%82%B0%E3%83%AC%E3%82%B7%E3%83%AB.png?raw=true,type=show]"]
+
+["Verrine"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E6%9C%BA%E4%BD%93/%E3%82%A6%E3%82%A7%E3%83%AA%E3%83%8D.png?raw=true,type=show]"]
+
+["Uriel"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E6%9C%BA%E4%BD%93/%E3%82%A6%E3%83%AA%E3%82%A8%E3%83%AB.png?raw=true,type=show]"]
+
+["Messiah"]
+export = true
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E4%B9%90%E5%9B%AD%E5%9C%A8%E6%B5%B7%E5%BA%95/%E6%9C%BA%E4%BD%93/%E3%83%A1%E3%82%B5%E3%82%A4%E3%82%A2%E3%83%BB%E3%83%AB%E3%82%B7%E3%83%95%E3%82%A1%E3%83%BC.png?raw=true,type=show]"]
 
 
 
