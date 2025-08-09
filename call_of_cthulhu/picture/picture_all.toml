@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
-update_date = 2025-08-07
+update_date = 2025-08-09
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml",
@@ -332,11 +332,25 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 ["乐园在海底"]
 export = true
 visible = true
-options = ["关键词：乐园共通"]
+options = ["关键词：乐园共通/乐园HO1/乐园HO2/乐园HO3"]
 
 ["乐园共通"]
 export = true
 options = ["[CQ:image,file=,type=show]"]
+
+["乐园HO1"]
+export = true
+options = ["[CQ:image,file=,type=show]"]
+
+["乐园HO2"]
+export = true
+options = ["[CQ:image,file=,type=show]"]
+
+["乐园HO3"]
+export = true
+options = ["[CQ:image,file=,type=show]"]
+
+
 
 
 
