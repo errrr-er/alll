@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1754963669
+// @timestamp    1755012268
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -305,6 +305,7 @@ const groupMap = {
 	"再见新世界": { groupNumber: "1004914022\n*发布群" },
 	"缉邪司": { groupNumber: "876339982" },
 	"三角机构": { groupNumber: "1056836484" },
+	"星升": { groupNumber: "872362745" },
 };
 
 // "": { groupNumber: "" },
@@ -493,6 +494,7 @@ GURPS577412220 ←规则群
 再见新世界1004914022发布群
 缉邪司876339982
 三角机构1056836484 ←规则群
+星升872362745 ←规则群
 
 图中已有但补充：
 太岁615878940发布群
