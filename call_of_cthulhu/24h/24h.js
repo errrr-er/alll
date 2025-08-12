@@ -79,7 +79,7 @@ class ReminderSystem {
 
 // 初始化系统
 if (!seal.ext.find('24hReminder')) {
-    const ext = seal.ext.new('24hReminder', 'YourName', '1.1');
+    const ext = seal.ext.new('24hReminder', 'er', '1.0');
     const reminderSystem = new ReminderSystem();
 
     // 创建命令
