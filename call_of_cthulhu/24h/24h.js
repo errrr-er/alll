@@ -22,7 +22,7 @@ class ReminderSystem {
         this.clearTimer(userId); // 先清除现有定时器
         this.isActive.set(userId, true);
         this.setTimer(userId, ctx, msg);
-        seal.replyToSender(ctx, msg, "24小时提醒已开启，期间收到新消息将重置计时（[、(、【、（开头的消息除外）");
+        seal.replyToSender(ctx, msg, "24小时提醒已开启，期间收到新消息将重置计时[(（开头的消息除外");
     }
 
     // 关闭提醒
@@ -87,7 +87,7 @@ if (!seal.ext.find('24hReminder')) {
     cmdReminder.name = '提醒';
     cmdReminder.help = '24小时提醒功能\n' +
                       '使用说明:\n' +
-                      '.提醒开 - 开启24小时提醒（[、(、【、（开头的消息不会重置计时）\n' +
+                      '.提醒开 - 开启24小时提醒[(（开头的消息不会重置计时\n' +
                       '.提醒关 - 关闭提醒';
 
     cmdReminder.solve = (ctx, msg, cmdArgs) => {
