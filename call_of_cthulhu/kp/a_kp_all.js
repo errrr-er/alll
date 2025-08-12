@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1754107533
+// @timestamp    1754963669
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -294,7 +294,8 @@ const groupMap = {
 	"坤元劫": { groupNumber: "954535020\n*发布群" },
 	"逆命仙途": { groupNumber: "796368505" },
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
-	"coc纯女": { groupNumber: "947095759、797863427\n*审核群" },
+	"coc纯女审核": { groupNumber: "947095759、797863427" },
+	"coc纯女": { groupNumber: "485231082" },
 	"匕首之心": { groupNumber: "791858682" },
 	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World",aliases: ["Wizarding World"] },
 	"晨钟旧事": { groupNumber: "655068229\n*发布群" },
@@ -482,6 +483,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 逆命仙途796368505 ←规则群
 高塔之死623768354战役集KP群
 coc纯女947095759、797863427审核群
+coc纯女485231082
 匕首之心791858682 ←规则群
 WWRPG818401752 ←规则群*全名Wizarding World
 晨钟旧事655068229发布群
