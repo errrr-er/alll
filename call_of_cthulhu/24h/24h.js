@@ -4,7 +4,7 @@
 // @version      1.0.0
 // @author       er
 // @license      MIT
-// @timestamp 1755012268
+// @timestamp 1755096714
 // 2025-08-12 11:50
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/24h/24h.js
@@ -39,7 +39,7 @@ class ReminderSystem {
         this.clearTimer(userId); // 先清除现有定时器
 
         const timer = setTimeout(() => {
-            seal.replyToSender(ctx, msg, "");
+            seal.replyToSender(ctx, msg, "[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/24h/rp.png?raw=true,type=show]");
             this.isActive.delete(userId);
             this.timers.delete(userId);
         }, 24 * 60 * 60 * 1000); // 24小时
