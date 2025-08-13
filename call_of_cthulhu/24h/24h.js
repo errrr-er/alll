@@ -39,7 +39,7 @@ class ReminderSystem {
         this.clearTimer(userId); // 先清除现有定时器
 
         const timer = setTimeout(() => {
-            seal.replyToSender(ctx, msg, "24小时提醒时间到！");
+            seal.replyToSender(ctx, msg, "");
             this.isActive.delete(userId);
             this.timers.delete(userId);
         }, 24 * 60 * 60 * 1000); // 24小时
