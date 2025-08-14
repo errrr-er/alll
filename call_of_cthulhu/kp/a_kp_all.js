@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1755012268
+// @timestamp    1755215555
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -306,6 +306,7 @@ const groupMap = {
 	"缉邪司": { groupNumber: "876339982" },
 	"三角机构": { groupNumber: "1056836484" },
 	"星升": { groupNumber: "872362745" },
+	"海龟汤": { groupNumber: "295820752" },
 };
 
 // "": { groupNumber: "" },
@@ -495,6 +496,7 @@ GURPS577412220 ←规则群
 缉邪司876339982
 三角机构1056836484 ←规则群
 星升872362745 ←规则群
+海龟汤295820752
 
 图中已有但补充：
 太岁615878940发布群
