@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1755478107
+// @timestamp    1755527470
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -309,6 +309,8 @@ const groupMap = {
 	"海龟汤": { groupNumber: "295820752" },
 	"语音团": { groupNumber: "893711161\n*dnd为主但不限规则" },
 	"祭日颂": { groupNumber: "717598559" },
+	"机翻存放": { groupNumber: "1053204546" },
+	"来到这里的你们放弃希望吧": { groupNumber: "939600700、1047069694\n*下载群/KP群" },
 };
 
 // "": { groupNumber: "" },
@@ -501,6 +503,8 @@ GURPS577412220 ←规则群
 海龟汤295820752
 语音团893711161 ←*dnd为主但不限规则
 祭日颂717598559
+机翻存放1053204546
+来到这里的你们放弃希望吧939600700下载群1047069694KP群
 
 图中已有但补充：
 太岁615878940发布群
