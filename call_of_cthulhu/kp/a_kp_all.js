@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1755527470
+// @timestamp    1755527691
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -156,7 +156,7 @@ const groupMap = {
 	"今古空名": { groupNumber: "962147366" },
 	"求我": { groupNumber: "338494770、979194858、978495486\n*下载x2/KP群" },
 	"暗河": { groupNumber: "1031974789" },
-	"恰故人归": { groupNumber: "939600700\n*下载群" },
+	"恰故人归": { groupNumber: "939600700、607468653\n*下载群/KP群" },
 	"": { groupNumber: "862291565" },
 	"difftruth": { groupNumber: "849680089" },
 	"柏拉图的余谈": { groupNumber: "574918635" },
@@ -510,7 +510,8 @@ GURPS577412220 ←规则群
 太岁615878940发布群
 天下第一刀369645861无作者
 花&葬送者106559548
-求我338494770、979194858下载群x2`;
+求我338494770、979194858下载群x2
+恰故人归607468653`;
     seal.replyToSender(ctx, msg, newGroupsText);
     return ret;
   }
