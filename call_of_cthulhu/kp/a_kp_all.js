@@ -320,7 +320,7 @@ const groupMap = {
 	"花盗人之恋": { groupNumber: "966519249" },
 	"遗香巡游": { groupNumber: "535538005" },
 	"染色空白卡": { groupNumber: "657347350" },
-	"你是谁？请支持百日○纪！": { groupNumber: "1057449882" },
+	"你是谁？请支持百日○纪！": { groupNumber: "1057449882",aliases: ["百日"] },
 };
 
 // "": { groupNumber: "" },
