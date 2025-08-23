@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1755790691
+// @timestamp    1755955704
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -315,6 +315,10 @@ const groupMap = {
 	"玉台新薤": { groupNumber: "881091572、439862498\n*交流群/KP群" },
 	"ccf搭房": { groupNumber: "805511454" },
 	"one way straight": { groupNumber: "978645254\n*发布群" },
+	"寻仙I神仙索": { groupNumber: "746673328\*发布群" },
+	"还来不见仙": { groupNumber: "852596665\n*发布群" },
+	"花盗人之恋": { groupNumber: "966519249" },
+	"遗香巡游": { groupNumber: "535538005" },
 };
 
 // "": { groupNumber: "" },
@@ -513,6 +517,10 @@ GURPS577412220 ←规则群
 玉台新薤881091572交流群439862498KP群
 ccf搭房805511454
 one way straight978645254发布群
+寻仙I神仙索746673328发布群
+还来不见仙852596665发布群
+花盗人之恋966519249
+遗香巡游535538005
 
 图中已有但补充：
 太岁615878940发布群
