@@ -271,7 +271,7 @@ const groupMap = {
 	"举头三尺": { groupNumber: "334821036" },
 	"角色桌": { groupNumber: "471191700", aliases: ["语擦"] },
 	"吹笛子的海獭": { groupNumber: "468213532" },
-	"dnd纯女": { groupNumber: "560604565、960874614、780528057" },
+	"dnd纯女": { groupNumber: "560604565、960874614、780528057、1016631080" },
 	"dnd纯dm": { groupNumber: "421678315" },
 	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载群\n*仅限扫码进群" },
 	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群" },
@@ -294,8 +294,7 @@ const groupMap = {
 	"坤元劫": { groupNumber: "954535020、862291565\n*发布群/KP群" },
 	"逆命仙途": { groupNumber: "796368505" },
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
-	"coc纯女审核": { groupNumber: "947095759、797863427" },
-	"coc纯女": { groupNumber: "485231082" },
+	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080" },
 	"匕首之心": { groupNumber: "791858682" },
 	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World",aliases: ["Wizarding World"] },
 	"晨钟旧事": { groupNumber: "655068229\n*发布群" },
@@ -498,8 +497,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 坤元劫954535020发布群862291565KP群
 逆命仙途796368505 ←规则群
 高塔之死623768354战役集KP群
-coc纯女947095759、797863427审核群
-coc纯女485231082
+coc纯女485231082、947095759、797863427、1016631080
 匕首之心791858682 ←规则群
 WWRPG818401752 ←规则群*全名Wizarding World
 晨钟旧事655068229发布群
@@ -531,7 +529,8 @@ one way straight978645254发布群
 天下第一刀369645861无作者
 花&葬送者106559548
 求我338494770、979194858下载群x2
-恰故人归607468653`;
+恰故人归607468653
+dnd纯女1016631080`;
     seal.replyToSender(ctx, msg, newGroupsText);
     return ret;
   }
