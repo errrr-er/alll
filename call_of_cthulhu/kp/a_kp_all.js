@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1755963911
+// @timestamp    1756217897
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -320,6 +320,7 @@ const groupMap = {
 	"遗香巡游": { groupNumber: "535538005" },
 	"染色空白卡": { groupNumber: "657347350" },
 	"你是谁？请支持百日○纪！": { groupNumber: "1057449882",aliases: ["百日"] },
+	"孤岛恋综": { groupNumber: "932315790\n*发布群" },
 };
 
 // "": { groupNumber: "" },
@@ -523,6 +524,7 @@ one way straight978645254发布群
 遗香巡游535538005
 染色空白卡657347350
 你是谁？请支持百日○纪！1057449882发布群
+孤岛恋综932315790发布群
 
 图中已有但补充：
 太岁615878940发布群
