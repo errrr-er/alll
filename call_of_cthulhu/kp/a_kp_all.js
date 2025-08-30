@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.1.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1756520487
+// @timestamp    1756557398
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -324,6 +324,7 @@ const groupMap = {
 	"白影": { groupNumber: "825032832\n*下载+KP群" },
 	"极乐颂歌": { groupNumber: "701200710、967165493\n*下载/KP群" },
 	"神明起舞之日": { groupNumber: "494739702\n*下载+KP群" },
+	"要继承的遗产里有嫂子怎么办": { groupNumber: "519716458",aliases: ["嫂子", "黑乌鸦与不死犬"] },
 };
 
 // "": { groupNumber: "" },
@@ -532,6 +533,7 @@ one way straight978645254下载
 白影825032832下载+KP群
 极乐颂歌701200710下载967165493KP群
 神明起舞之日494739702下载+KP群
+要继承的遗产里有嫂子怎么办519716458
 
 图中已有但补充：
 太岁615878940下载
