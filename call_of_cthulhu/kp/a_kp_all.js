@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      2.0.0
+// @version      2.1.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1756495270
+// @timestamp    1756517514
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '2.0.0');
+  ext = seal.ext.new('KP群汇总', 'er', '2.1.0');
   seal.ext.register(ext);
 }
 
@@ -23,7 +23,7 @@ if (!ext) {
 // 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
 const groupMap = {
 	"aib":{ groupNumber: "112077093" },
-  	"沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
+	"沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
   	"天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
   	"雪与箱庭之梦":{ groupNumber: "413941306", aliases: ["雪箱"] },
   	"海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
@@ -324,6 +324,7 @@ const groupMap = {
 	"抽刀": { groupNumber: "1057856638" },
 	"白影": { groupNumber: "825032832\n*下载+KP群" },
 	"极乐颂歌": { groupNumber: "701200710、967165493\n*下载/KP群" },
+	"神明起舞之日": { groupNumber: "494739702\n*下载+KP群" },
 };
 
 // "": { groupNumber: "" },
@@ -531,6 +532,7 @@ one way straight978645254下载
 抽刀1057856638
 白影825032832下载+KP群
 极乐颂歌701200710下载967165493KP群
+神明起舞之日494739702下载+KP群
 
 图中已有但补充：
 太岁615878940下载
@@ -583,21 +585,20 @@ dnd纯女1016631080`;
   
   // 3. 如果没有精确匹配，尝试近似匹配
   if (!foundGroup) {
-    foundGroup = findSimilarGroup(input);
-  }
-  
-  // 查找匹配的群组
-  const matchedGroups = findSimilarGroup(input);
-
-  if (matchedGroups) {
-    let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
-    matchedGroups.forEach(group => {
-      replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
-    });
-    seal.replyToSender(ctx, msg, replyText);
-  } else {
-    seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群。使用 .kp list 查看所有群组。`);
-  }
+	const matchedGroups = findSimilarGroup(input);
+	if (matchedGroups) {
+		let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
+		matchedGroups.forEach(group => {
+		replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
+		});
+		seal.replyToSender(ctx, msg, replyText);
+	} else {
+		seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或请进2150284119反馈。`);
+	}
+	} else {
+	// 精确匹配输出
+	seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}】→ ${foundGroup.match.info.groupNumber}`);
+	}
 
   return ret;
 };
