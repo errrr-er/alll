@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.1.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1756517514
+// @timestamp    1756520487
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -103,7 +103,6 @@ const groupMap = {
 	"渡仙劫": { groupNumber: "634208409" },
 	"孤灯弃城": { groupNumber: "877858567" },
 	"zinki": { groupNumber: "761916849" },
-	"沧渺山": { groupNumber: "855215735" },
 	"幕临": { groupNumber: "160438930" },
 	"别来无恙": { groupNumber: "907810853" },
 	"二重身的证迹": { groupNumber: "285230351" },
@@ -593,7 +592,7 @@ dnd纯女1016631080`;
 		});
 		seal.replyToSender(ctx, msg, replyText);
 	} else {
-		seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或请进2150284119反馈。`);
+		seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
 	}
 	} else {
 	// 精确匹配输出
