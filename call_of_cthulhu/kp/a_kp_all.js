@@ -281,7 +281,7 @@ const groupMap = {
 	"摇曳群青": { groupNumber: "513712312" },
 	"幽诱 , 于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
 	"星海孤舟": { groupNumber: "657774576\n*下载" },
-	"龙滨不良": { groupNumber: "597585029" },
+	"龙滨不良": { groupNumber: "597585029",aliases: ["lbbl"] },
 	"侦探可有翅膀吗": { groupNumber: "963854131",aliases: ["侦探翅"] },
 	"一梦": { groupNumber: "431528579\n*发布+KP群" },
 	"异能儿童管理机构": { groupNumber: "786412774、817252450\n*下载/KP群(仅扫码)" },
