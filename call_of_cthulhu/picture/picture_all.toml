@@ -496,7 +496,9 @@ export = true
 visible = true
 options = ["关键词：SSFEMD"]
 
-
+["SSFEMD"]
+export = true
+options = ["报酬\nHP+1D10\nSAN+1D10"]
 
 
 
