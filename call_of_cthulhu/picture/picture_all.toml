@@ -4,7 +4,7 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2025-04-08
-update_date = 2025-08-10
+update_date = 2025-09-02
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
   "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/picture/picture_all.toml",
@@ -15,7 +15,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)、蓝鲸列车、沉睡、乐园在海底\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\n蓝鲸列车 = 蓝鲸列车·驶向起点的鲸鱼\n沉睡 = 沉睡的月亮歌姬"]
+options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)、蓝鲸列车、沉睡、乐园在海底、SSF\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\n蓝鲸列车 = 蓝鲸列车·驶向起点的鲸鱼\n沉睡 = 沉睡的月亮歌姬、nSSF = SANset Flower's"]
 
 
 
@@ -483,6 +483,29 @@ options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_ct
 
 
 
+
+
+
+
+
+
+
+# SANset Flower's
+["SSF"]
+export = true
+visible = true
+options = ["关键词：SSFEMD"]
+
+
+
+
+
+
+
+
+
+
+# 
 
 
 
