@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.1.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1756557398
+// @timestamp    1756784045
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -270,7 +270,7 @@ const groupMap = {
 	"举头三尺": { groupNumber: "334821036" },
 	"角色桌": { groupNumber: "471191700", aliases: ["语擦"] },
 	"吹笛子的海獭": { groupNumber: "468213532" },
-	"dnd纯女": { groupNumber: "560604565、960874614、780528057、1016631080" },
+	"dnd纯女": { groupNumber: "560604565、960874614、780528057、1016631080、1057887916\n*最后一个北美洲时差" },
 	"dnd纯dm": { groupNumber: "421678315" },
 	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载\n*仅限扫码" },
 	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群" },
@@ -293,7 +293,7 @@ const groupMap = {
 	"坤元劫": { groupNumber: "954535020、862291565\n*下载/KP群" },
 	"逆命仙途": { groupNumber: "796368505" },
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
-	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080" },
+	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080、1057887916\n*最后一个北美洲时差" },
 	"匕首之心": { groupNumber: "791858682" },
 	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World",aliases: ["Wizarding World"] },
 	"晨钟旧事": { groupNumber: "655068229\n*下载" },
@@ -325,6 +325,7 @@ const groupMap = {
 	"极乐颂歌": { groupNumber: "701200710、967165493\n*下载/KP群" },
 	"神明起舞之日": { groupNumber: "494739702\n*下载+KP群" },
 	"要继承的遗产里有嫂子怎么办": { groupNumber: "519716458",aliases: ["嫂子", "黑乌鸦与不死犬"] },
+	
 };
 
 // "": { groupNumber: "" },
@@ -502,7 +503,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 坤元劫954535020下载862291565KP群
 逆命仙途796368505 ←规则群
 高塔之死623768354战役集KP群
-coc纯女485231082、947095759、797863427、1016631080
+coc纯女485231082、947095759、797863427、1016631080、1057887916*最后一个北美洲时差
 匕首之心791858682 ←规则群
 WWRPG818401752 ←规则群*全名Wizarding World
 晨钟旧事655068229下载
@@ -541,7 +542,7 @@ one way straight978645254下载
 花&葬送者106559548
 求我338494770、979194858下载x2
 恰故人归607468653
-dnd纯女1016631080`;
+dnd纯女1016631080、1057887916*最后一个北美洲时差`;
     seal.replyToSender(ctx, msg, newGroupsText);
     return ret;
   }
