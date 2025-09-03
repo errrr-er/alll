@@ -515,17 +515,27 @@ options = ["关键词：罗丹斯流程/佐藤爱/黑葛原真由理"]
 
 ["罗丹斯流程"]
 export = true
-options = [""]
+options = ["[CQ:image,file=,type=show]"]
 
 
 ["佐藤爱"]
 export = true
-options = [""]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E9%9D%A9%E5%91%BD%E5%B0%91%E5%A5%B3%E7%BD%97%E4%B8%B9%E6%96%AF/%E4%BD%90%E8%97%A4%E6%84%9B.png?raw=true,type=show]"]
 
 ["黑葛原真由理"]
 export = true
-options = [""]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E9%9D%A9%E5%91%BD%E5%B0%91%E5%A5%B3%E7%BD%97%E4%B8%B9%E6%96%AF/%E9%BB%92%E8%91%9B%E5%8E%9F%E3%81%BE%E3%82%86%E3%82%8A.png?raw=true,type=show]"]
 
+
+
+
+
+
+
+
+
+
+# 
 
 
 
