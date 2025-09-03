@@ -515,7 +515,7 @@ options = ["关键词：罗丹斯流程/佐藤爱/黑葛原真由理"]
 
 ["罗丹斯流程"]
 export = true
-options = ["[CQ:image,file=,type=show]"]
+options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E9%9D%A9%E5%91%BD%E5%B0%91%E5%A5%B3%E7%BD%97%E4%B8%B9%E6%96%AF/%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true,type=show]"]
 
 
 ["佐藤爱"]
