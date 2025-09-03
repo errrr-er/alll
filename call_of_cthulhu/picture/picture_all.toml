@@ -15,7 +15,7 @@ update_Urls = [
 ["phelp"]
 export = true
 visible = true
-options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)、蓝鲸列车、沉睡、乐园在海底、SSF\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\n蓝鲸列车 = 蓝鲸列车·驶向起点的鲸鱼\n沉睡 = 沉睡的月亮歌姬、nSSF = SANset Flower's"]
+options = ["！模组资料包含图片！\n！含剧透请谨慎使用！\n目前支持：月光舞鞋、望君长留、幽暗之门、你就刚刚好、福尔摩斯(仅有事前)、蓝鲸列车、沉睡、乐园在海底、SSF、罗丹斯\n\n请根据所需输入对应关键词(请忽视括号及内容)\n例：.draw望君长留\f缩写解释：\n福尔摩斯 = 夏洛克·福尔摩斯症候群\n蓝鲸列车 = 蓝鲸列车·驶向起点的鲸鱼\n沉睡 = 沉睡的月亮歌姬\nSSF = SANset Flower's\n罗丹斯 = 革命少女罗丹斯"]
 
 
 
@@ -352,9 +352,9 @@ options = ["报酬\n生还者\nSAN+2D6"]
 ["沉睡"]
 export = true
 visible = true
-options = ["关键词：沉睡流程图/大空月夜/大空朝阳"]
+options = ["关键词：沉睡流程/大空月夜/大空朝阳"]
 
-["沉睡流程图"]
+["沉睡流程"]
 export = true
 options = ["[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/picture/pic/%E6%B2%89%E7%9D%A1%E7%9A%84%E6%9C%88%E4%BA%AE%E6%AD%8C%E5%A7%AC/%E6%B5%81%E7%A8%8B%E5%9B%BE.png?raw=true,type=show]"]
 
@@ -507,7 +507,29 @@ options = ["报酬\nHP+1D10\nSAN+1D10"]
 
 
 
-# 
+# 革命少女罗丹斯
+["SSF"]
+export = true
+visible = true
+options = ["关键词：罗丹斯流程/佐藤爱/黑葛原真由理"]
+
+["罗丹斯流程"]
+export = true
+options = [""]
+
+
+["佐藤爱"]
+export = true
+options = [""]
+
+["黑葛原真由理"]
+export = true
+options = [""]
+
+
+
+
+
 
 
 
@@ -517,3 +539,14 @@ options = ["报酬\nHP+1D10\nSAN+1D10"]
 [""]
 export = true
 options = ["[CQ:image,file=,type=show]"]
+
+
+
+
+
+
+
+
+
+
+# 
