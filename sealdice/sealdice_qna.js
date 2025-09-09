@@ -24,9 +24,12 @@ const sealMap = {
   "官网": "https://dice.weizaima.com/",
   "手册": "https://docs.sealdice.com/",
   "WebUI密码": "综合设置→基本设置→访问控制\n*保存键在页面最底下\n*重置密码详见手册",
+  "异地登录告警" : "请尝试使用WebUI提供的13325辅助端口让手机ip与服务器ip一致后再扫码，具体配置与操作请看海豹官方手册内的教程\nhttps://docs.sealdice.com/use/faq.html#_1-%E9%A6%96%E9%80%89-%E8%AE%A9%E6%89%8B%E6%9C%BA%E8%B7%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E7%9A%84%E5%A4%84%E4%BA%8E%E5%90%8C%E4%B8%80%E4%B8%AA%E7%BD%91%E7%BB%9C",
   "文件同步": "https://sealfile.cn.xuetao.host/",
   "拉格兰一键包": "https://lgrbuild.cn.xuetao.host/",
 };
+
+// "" : "",
 
 // 生成带编号的列表
 function generateNumberedList() {
