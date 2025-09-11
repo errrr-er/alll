@@ -23,6 +23,7 @@ if (!ext) {
 const sealMap = {
   "官网": "https://dice.weizaima.com/",
   "手册": "https://docs.sealdice.com/",
+  "入群": "新人好，请看群公告\n\n当前最新版本为1.5.0dev2，【务必】更新到最新版本再使用。\n看到有滑条验证的先看一下海豹版本是不是1.5.0dev2，不是的话去升级一下，重新添加账号即可正常使用。\n请直接从官网进，不必走内置的检测更新。\n\n必须先看教程手册，有问题必须截图，截图不截日志等于溜群友❗️\n截日志请务必用截图，拍屏不但不会被回答并且还会被群友拍死‼️\n如果没看手册就来问可能会被无视，不要做伸手党，不要不看手册教程就直接问❗️\n\n海豹手册链接： https://dice.weizaima.com/manual/ \n（手册有搜索工具，大家善用这个功能）\n\n现在1.5.0dev2海豹可用内置客户端登录，其他可靠方案还有LiteLoader（llonebot）、Lagrange和NapCat，请你去手册上看细节https://dice.weizaima.com/manual/deploy/platform-qq.html\n链接在这里↑",
   "文件同步": "https://sealfile.cn.xuetao.host/",
   "146": "备份data+backup文件夹后升150，目前核心最新版为0114的测试版\n*backup文件夹想备份就备份不想就不备，但推荐留几个以防万一",
   "拍屏" : "不要拍屏，拍屏看不清，截图时请点击日志页面右下角的小三角，或者是截取红色一片黄色一片的地方，请尽可能截全",
