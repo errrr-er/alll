@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.1.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1757543972
+// @timestamp    1757602486
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -330,7 +330,9 @@ const groupMap = {
 	"犹格索托斯之影": { groupNumber: "579586813" },
 	"仙人抚顶": { groupNumber: "1056213411" },
 	"歌味觉死": { groupNumber: "616756545\n*路易斯安那系列+畅梦人+淤泥之花与空心石" },
+	"彩虹社角色桌": { groupNumber: "1062894359" },
 };
+
 
 // "": { groupNumber: "" },
 
@@ -544,6 +546,7 @@ one way straight978645254下载
 犹格索托斯之影579586813
 仙人抚顶1056213411
 歌味觉死616756545*路易斯安那系列+畅梦人+淤泥之花与空心石
+彩虹社角色桌1062894359
 
 图中已有但补充：
 太岁615878940下载
