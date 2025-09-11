@@ -11,17 +11,15 @@
 > [!IMPORTANT]
 > - 导入前须知&本体更新方式
 >   - 图片皆由[cq码](https://docs.go-cqhttp.org/cqcode/#%E5%9B%BE%E7%89%87)搭配GitHub实现，如果骰子不支持则无法正常使用
-> - TOML/JSON适配海豹系、其它骰系暂且未知、欢迎补充
+> - 插件均适配海豹系、其它骰系暂且未知、欢迎补充
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
 > ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice/sealdice_update_example_pointout.png?raw=true)
 
 # 汇报错误/补充 :inbox_tray:
 
-提问箱 - https://box.n3ko.cc/_/no_reply31cat
-
 qq群 - 2150284119
 
-以上方式选其一即可、反馈时请带上相关截图!!!
+反馈时请带上相关截图!!!
 
 # README
 - [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
