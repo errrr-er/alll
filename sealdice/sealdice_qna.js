@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1757441259
+// @timestamp    1757605099
 // 2025-09-09 09:09:30
 // @license      MIT
 // @homepageURL  https://github.com/errrr-er/trpg/tree/main
@@ -24,10 +24,12 @@ const sealMap = {
   "官网": "https://dice.weizaima.com/",
   "手册": "https://docs.sealdice.com/",
   "文件同步": "https://sealfile.cn.xuetao.host/",
-  "拍屏" : "不要拍屏，请使用系统自带或应用自带的截屏功能，之后请截最新日志，点击日志页面右下角的小三角，或者是红色一片黄色一片的地方，请尽可能截全",
+  "拍屏" : "不要拍屏，拍屏看不清，截图时请点击日志页面右下角的小三角，或者是截取红色一片黄色一片的地方，请尽可能截全",
   "日志截图" : "请截最新日志，点击日志页面右下角的小三角，或者是红色一片黄色一片的地方，请尽可能截全",
-  "WebUI密码": "记得加密码！一定！\n综合设置→基本设置→访问控制\n*保存键在页面最底下\n*重置密码详见海豹官方手册：\n首先彻底关闭海豹。用文本编辑器打开 dice/dice.yaml，删除 uiPasswordHash 一行，保存。重新启动海豹。",
+  "WaitingForScan" : "海豹在等你扫码",
+  "另一台终端登录" : "海豹在使用电脑版qq，请不要跟海豹抢电脑\n(人话：把你那电脑端的登录给退了然后UI里删账号再重连)",
   "异地登录告警" : "请尝试使用WebUI提供的13325辅助端口让手机ip与服务器ip一致后再扫码，具体配置与操作请看海豹官方手册\nhttps://docs.sealdice.com/use/faq.html#_1-%E9%A6%96%E9%80%89-%E8%AE%A9%E6%89%8B%E6%9C%BA%E8%B7%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9C%9F%E7%9A%84%E5%A4%84%E4%BA%8E%E5%90%8C%E4%B8%80%E4%B8%AA%E7%BD%91%E7%BB%9C",
+  "WebUI密码": "记得加密码！一定！\n综合设置→基本设置→访问控制\n*保存键在页面最底下\n*重置密码详见海豹官方手册：\n首先彻底关闭海豹。用文本编辑器打开 dice/dice.yaml，删除 uiPasswordHash 一行，保存。重新启动海豹。",
   "拉格兰一键包": "https://lgrbuild.cn.xuetao.host/",
 };
 
