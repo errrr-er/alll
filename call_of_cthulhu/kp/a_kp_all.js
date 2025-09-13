@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.2.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1757730643
+// @timestamp    1757773932
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -302,6 +302,7 @@ const groupMap = {
 	"x告白": { groupNumber: "575451544" },
 	"X休止": { groupNumber: "623836728" },
 	"zinki": { groupNumber: "761916849" },
+	"于赤土腹中再会": { groupNumber: "1060512906" },
 
 
 	// 反馈(混合)
@@ -340,7 +341,6 @@ const groupMap = {
 	"one way straight": { groupNumber: "978645254\n*下载" },
 	"the name": { groupNumber: "324809275\n*下载", aliases: ["遗书"] },
 };
-
 
 // "": { groupNumber: "" },
 
@@ -557,6 +557,7 @@ one way straight978645254下载
 彩虹社角色桌1062894359
 应天劫231734390/2811466327*下载/墙
 将潮水遗忘之物也一并收下吧904394289*下载群
+于赤土腹中再会1060512906
 
 图中已有但补充：
 太岁615878940下载
