@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.2.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1757711310
+// @timestamp    1757730643
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -309,7 +309,7 @@ const groupMap = {
 	"晨钟旧事": { groupNumber: "655068229\n*下载" },
 	"此夜不可离": { groupNumber: "522206940\n*下载" },
 	"孤岛恋综": { groupNumber: "932315790\n*下载" },
-	"还来不见仙": { groupNumber: "852596665\n*下载" },
+	"还来不见仙": { groupNumber: "590220813、984420519\n*下载/KP群" },
 	"魂夜逃避行": { groupNumber: "1046944266、1009337218\n*下载/KP群" },
 	"极乐颂歌": { groupNumber: "701200710、967165493\n*下载/KP群" },
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289\n*下载",aliases: ["潮水"] },
@@ -535,7 +535,7 @@ GURPS577412220 ←规则群
 ccf搭房805511454
 one way straight978645254下载
 寻仙I神仙索+寻仙II观音土746673328下载
-还来不见仙852596665下载
+还来不见仙590220813、984420519*下载/KP群
 花盗人之恋966519249
 遗香巡游535538005
 染色空白卡657347350
