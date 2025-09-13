@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.2.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1757775503
+// @timestamp    1757785739
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -298,11 +298,12 @@ const groupMap = {
 	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
 	"void":{ groupNumber: "1170037255" },
 	"wts":{ groupNumber: "763188284" },
-	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World",aliases: ["Wizarding World"] },
+	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World", aliases: ["Wizarding World"] },
 	"x告白": { groupNumber: "575451544" },
 	"X休止": { groupNumber: "623836728" },
 	"zinki": { groupNumber: "761916849" },
 	"于赤土腹中再会": { groupNumber: "1060512906" },
+	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
 
 
 	// 反馈(混合)
@@ -560,6 +561,7 @@ one way straight978645254下载
 将潮水遗忘之物也一并收下吧904394289*下载群
 于赤土腹中再会1060512906
 人间见闻录921349225*下载
+亲爱的，我把脑子丢了839027414
 
 
 图中已有但补充：
