@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.2.0
 // @description  有问题可进群2150284119联系
-// @timestamp    1757773932
+// @timestamp    1757775503
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -340,6 +340,7 @@ const groupMap = {
 	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*下载/GM群", aliases: ["暗烛"] },
 	"one way straight": { groupNumber: "978645254\n*下载" },
 	"the name": { groupNumber: "324809275\n*下载", aliases: ["遗书"] },
+	"人间见闻录": { groupNumber: "921349225\n*下载" },
 };
 
 // "": { groupNumber: "" },
@@ -558,6 +559,8 @@ one way straight978645254下载
 应天劫231734390/2811466327*下载/墙
 将潮水遗忘之物也一并收下吧904394289*下载群
 于赤土腹中再会1060512906
+人间见闻录921349225*下载
+
 
 图中已有但补充：
 太岁615878940下载
