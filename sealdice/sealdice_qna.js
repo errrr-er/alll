@@ -2,7 +2,7 @@
 // @name         海豹自助问答(非官方)
 // @author       3987681449
 // @version      1.0.0
-// @description  有问题可进群2150284119联系
+// @description  (.seal)有问题可进群2150284119联系
 // @timestamp    1757605099
 // 2025-09-09 09:09:30
 // @license      MIT
