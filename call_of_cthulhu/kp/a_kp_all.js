@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.2.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1757900441
+// @timestamp    1758289027
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -197,7 +197,7 @@ const groupMap = {
 	"屋怪异谭":{ groupNumber: "174136022" },
 	"无名集": { groupNumber: "663572400" },
 	"无声二重唱": { groupNumber: "965715801" },
-	"无为有处有还无": { groupNumber: "768399206" },
+	"无为有处有还无": { groupNumber: "768399206", aliases: ["wwyc"]  },
 	"无限": { groupNumber: "301122594" },
 	"午夜的沙": { groupNumber: "864767076" },
 	"武侠克苏鲁woc": { groupNumber: "524086123" },
@@ -308,6 +308,8 @@ const groupMap = {
 	"革命少女罗丹斯": { groupNumber: "641481529" },
 	"文手": { groupNumber: "512451066" },
 	"于赤土": { groupNumber: "1060512906" },
+	"coj写作": { groupNumber: "761666326" },
+	"生离": { groupNumber: "1061116172" },
 
 	// 反馈(混合)
 	"还来不见仙": { groupNumber: "590220813、984420519\n*反馈/KP群" },
@@ -323,7 +325,7 @@ const groupMap = {
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289\n*下载",aliases: ["潮水"] },
 	"鲸落万物生": { groupNumber: "598393390、1051952972\n*下载/KP群",aliases: ["鲸落"] },
 	"空箱间": { groupNumber: "858801418、1044331385\n*下载/KP群" },
-	"坤元劫": { groupNumber: "954535020、862291565\n*下载/KP群" },
+	"坤元劫": { groupNumber: "954535020、862291565\n*下载/KP群",aliases: ["kyj"] },
 	"来到这里的你们放弃希望吧": { groupNumber: "939600700、1047069694\n*下载/KP群" },
 	"流浪武士": { groupNumber: "994791183\n*下载" },
 	"弃约社会": { groupNumber: "972643133、916122224\n*下载/KP群" },
@@ -345,6 +347,7 @@ const groupMap = {
 	"one way straight": { groupNumber: "978645254\n*下载" },
 	"the name": { groupNumber: "324809275\n*下载", aliases: ["遗书"] },
 	"人间见闻录": { groupNumber: "921349225\n*下载" },
+	
 };
 
 // "": { groupNumber: "" },
@@ -569,6 +572,8 @@ one way straight978645254下载
 革命少女罗丹斯641481529
 文手512451066
 于赤土1060512906
+coj写作761666326
+生离1061116172
 
 图中已有但补充：
 太岁615878940下载
