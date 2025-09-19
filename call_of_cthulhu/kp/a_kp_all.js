@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      2.2.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758289027
+// @timestamp    1758307753
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -310,9 +310,17 @@ const groupMap = {
 	"于赤土": { groupNumber: "1060512906" },
 	"coj写作": { groupNumber: "761666326" },
 	"生离": { groupNumber: "1061116172" },
+	"似人非人": { groupNumber: "869916259" },
+
+
+
+
 
 	// 反馈(混合)
 	"还来不见仙": { groupNumber: "590220813、984420519\n*反馈/KP群" },
+
+
+
 
 
 	// 下载(混合)
@@ -574,6 +582,7 @@ one way straight978645254下载
 于赤土1060512906
 coj写作761666326
 生离1061116172
+似人非人869916259
 
 图中已有但补充：
 太岁615878940下载
