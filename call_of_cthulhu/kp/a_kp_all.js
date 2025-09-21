@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      2.2.0
+// @version      3.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758307753
+// @timestamp    1758429401
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '2.2.0');
+  ext = seal.ext.new('KP群汇总', 'er', '3.0.0');
   seal.ext.register(ext);
 }
 
@@ -311,7 +311,7 @@ const groupMap = {
 	"coj写作": { groupNumber: "761666326" },
 	"生离": { groupNumber: "1061116172" },
 	"似人非人": { groupNumber: "869916259" },
-
+	"log存放": { groupNumber: "675664988" },
 
 
 
@@ -361,6 +361,24 @@ const groupMap = {
 // "": { groupNumber: "" },
 
 // "": { groupNumber: "",aliases: [""] },
+
+// 创建群号到群组名称的反向映射
+const groupNumberToNameMap = {};
+for (const groupName in groupMap) {
+    const groupInfo = groupMap[groupName];
+    const groupNumbers = groupInfo.groupNumber.split(/[、]/); // 处理多个群号的情况
+    
+    groupNumbers.forEach(number => {
+        // 清理群号（移除\n号后的说明文字）
+        const cleanNumber = number.split('\n')[0].trim();
+        if (cleanNumber) {
+            if (!groupNumberToNameMap[cleanNumber]) {
+                groupNumberToNameMap[cleanNumber] = [];
+            }
+            groupNumberToNameMap[cleanNumber].push(groupName);
+        }
+    });
+}
 
 // 计算两个字符串的相似度 (Levenshtein距离)
 function getSimilarity(s1, s2) {
@@ -583,6 +601,7 @@ one way straight978645254下载
 coj写作761666326
 生离1061116172
 似人非人869916259
+log存放675664988
 
 图中已有但补充：
 太岁615878940下载
@@ -602,7 +621,26 @@ dnd纯女1016631080、1061755248、1057887916*最后一个北美洲时差`;
     seal.replyToSender(ctx, msg, listText);
     return ret;
   }
-  
+
+  // 群号反向查询功能
+	if (/^\d+$/.test(input)) {
+    	// 输入的是纯数字，尝试作为群号查询
+    	const matchedGroups = groupNumberToNameMap[input] || [];
+    
+		if (matchedGroups.length > 0) {
+			let replyText = ``;
+			matchedGroups.forEach(groupName => {
+				const groupInfo = groupMap[groupName];
+				replyText += `【${groupName}】→ ${groupInfo.groupNumber}`;
+			});
+			seal.replyToSender(ctx, msg, replyText);
+		} else {
+			// 直接返回未找到，不进行部分匹配检查
+			seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
+		}
+		return ret;
+}
+     
   // 查找匹配的群组
   let foundGroup = null;
   let exactMatch = false;
