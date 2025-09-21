@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      3.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758463898
+// @timestamp    1758464150
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -312,7 +312,7 @@ const groupMap = {
 	"生离": { groupNumber: "1061116172" },
 	"似人非人": { groupNumber: "869916259" },
 	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
-
+	"海盗之宴": { groupNumber: "1062169852" },
 
 
 
@@ -602,6 +602,7 @@ coj写作761666326
 生离1061116172
 似人非人869916259
 log相关675664988存放985865497交流
+海盗之宴1062169852
 
 图中已有但补充：
 太岁615878940下载
