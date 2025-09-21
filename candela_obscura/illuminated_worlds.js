@@ -2,8 +2,8 @@
 // @name         光明世界D6池系统
 // @author       3987681449
 // @version      1.0.0
-// @description  暗烛规则适用、出bug可进群2150284119联系
-// @timestamp    1746956836
+// @description  (.iw)有问题可进群2150284119联系、暗烛规则适用
+// @timestamp    1758433197
 // 2025-01-17 00:00:40 UTC
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
