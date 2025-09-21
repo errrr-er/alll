@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      3.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758429401
+// @timestamp    1758463898
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -311,7 +311,7 @@ const groupMap = {
 	"coj写作": { groupNumber: "761666326" },
 	"生离": { groupNumber: "1061116172" },
 	"似人非人": { groupNumber: "869916259" },
-	"log存放": { groupNumber: "675664988" },
+	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
 
 
 
@@ -601,7 +601,7 @@ one way straight978645254下载
 coj写作761666326
 生离1061116172
 似人非人869916259
-log存放675664988
+log相关675664988存放985865497交流
 
 图中已有但补充：
 太岁615878940下载
