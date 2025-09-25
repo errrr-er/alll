@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.0.0
+// @version      3.0.2
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758464150
+// @timestamp    1758835103
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.0.0');
+  ext = seal.ext.new('KP群汇总', 'er', '3.0.2');
   seal.ext.register(ext);
 }
 
@@ -89,7 +89,7 @@ const groupMap = {
 	"缉邪司": { groupNumber: "876339982" },
 	"继续工作直到毁灭": { groupNumber: "822840569" },
 	"祭日颂": { groupNumber: "717598559" },
-	"角色桌": { groupNumber: "471191700", aliases: ["语擦"] },
+	"角色桌": { groupNumber: "471191700、363017687", aliases: ["语擦"] },
 	"今古空名": { groupNumber: "962147366" },
 	"金酒狂热": { groupNumber: "794429121" },
 	"靖海难": { groupNumber: "343026343" },
@@ -275,6 +275,7 @@ const groupMap = {
 	"BASH":{ groupNumber: "774156947", aliases: ["燃星"] },
 	"brp": { groupNumber: "788438516" },
 	"ccf搭房": { groupNumber: "805511454" },
+	"ccf招募": { groupNumber: "1060652550" },
 	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080、1061755248、1057887916\n*最后一个北美洲时差" },
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
@@ -603,6 +604,8 @@ coj写作761666326
 似人非人869916259
 log相关675664988存放985865497交流
 海盗之宴1062169852
+语擦363017687
+ccf招募1060652550
 
 图中已有但补充：
 太岁615878940下载
