@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.0.2
+// @version      3.0.3
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758835103
+// @timestamp    1758907414
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.0.2');
+  ext = seal.ext.new('KP群汇总', 'er', '3.0.3');
   seal.ext.register(ext);
 }
 
@@ -314,6 +314,7 @@ const groupMap = {
 	"似人非人": { groupNumber: "869916259" },
 	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
 	"海盗之宴": { groupNumber: "1062169852" },
+	"愚者的祈雨": { groupNumber: "1062832797" },
 
 
 
@@ -606,6 +607,7 @@ log相关675664988存放985865497交流
 海盗之宴1062169852
 语擦363017687
 ccf招募1060652550
+愚者的祈雨1062832797
 
 图中已有但补充：
 太岁615878940下载
