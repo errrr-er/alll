@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.0.3
+// @version      3.0.4
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1758907414
+// @timestamp    1758989539
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.0.3');
+  ext = seal.ext.new('KP群汇总', 'er', '3.0.4');
   seal.ext.register(ext);
 }
 
@@ -357,6 +357,8 @@ const groupMap = {
 	"one way straight": { groupNumber: "978645254\n*下载" },
 	"the name": { groupNumber: "324809275\n*下载", aliases: ["遗书"] },
 	"人间见闻录": { groupNumber: "921349225\n*下载" },
+	"冤缘远怨": { groupNumber: "1033066580\n*下载" },
+
 	
 };
 
@@ -608,6 +610,7 @@ log相关675664988存放985865497交流
 语擦363017687
 ccf招募1060652550
 愚者的祈雨1062832797
+冤缘远怨1033066580下载
 
 图中已有但补充：
 太岁615878940下载
