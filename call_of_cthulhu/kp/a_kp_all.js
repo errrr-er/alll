@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.0.5
+// @version      3.0.6
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1759117226
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.0.5');
+  ext = seal.ext.new('KP群汇总', 'er', '3.0.6');
   seal.ext.register(ext);
 }
 
@@ -315,6 +315,7 @@ const groupMap = {
 	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
 	"海盗之宴": { groupNumber: "1062169852" },
 	"愚者的祈雨": { groupNumber: "1062832797" },
+	"芝加哥之王": { groupNumber: "559366167" },
 
 
 
@@ -613,6 +614,7 @@ ccf招募1060652550
 愚者的祈雨1062832797
 冤缘远怨1033066580下载
 讨债鬼973867121下载
+芝加哥之王559366167
 
 图中已有但补充：
 太岁615878940下载
