@@ -39,7 +39,6 @@ const groupMap = {
 	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
 	"不见蓬山": { groupNumber: "834893891" },
 	"不死灭灭":{ groupNumber: "279755638", },
-	"彩虹社角色桌": { groupNumber: "1062894359" },
 	"残败桃源": { groupNumber: "2154036156" },
 	"沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
 	"常夜国骑士谭:真祖红舞曲": { groupNumber: "769437181" },
@@ -68,12 +67,10 @@ const groupMap = {
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
 	"告密者": { groupNumber: "623768354" },
 	"歌味觉死": { groupNumber: "616756545\n*路易斯安那系列+畅梦人+淤泥之花与空心石" },
-	"共鸣性怪异": { groupNumber: "903173796" },
 	"孤灯弃城": { groupNumber: "877858567" },
 	"怪胎": { groupNumber: "639870851" },
 	"怪物们与邪典仙境":{ groupNumber: "592577986", aliases: ["鞋垫"] },
 	"海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
-	"海龟汤": { groupNumber: "295820752" },
 	"海国战役设定集": { groupNumber: "567135881" },
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
 	"黑幕圣杯": { groupNumber: "602145072" },
@@ -87,7 +84,6 @@ const groupMap = {
 	"缉邪司": { groupNumber: "876339982" },
 	"继续工作直到毁灭": { groupNumber: "822840569" },
 	"祭日颂": { groupNumber: "717598559" },
-	"角色桌": { groupNumber: "471191700、363017687", aliases: ["语擦"] },
 	"今古空名": { groupNumber: "962147366" },
 	"金酒狂热": { groupNumber: "794429121" },
 	"靖海难": { groupNumber: "343026343" },
@@ -95,7 +91,6 @@ const groupMap = {
 	"举头三尺": { groupNumber: "334821036" },
 	"卡镇": { groupNumber: "297175538" },
 	"恐怖墓穴": { groupNumber: "329392650" },
-	"口胡专用": { groupNumber: "106133577" },
 	"快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
 	"拉普拉斯": { groupNumber: "1050071534" },
@@ -123,7 +118,6 @@ const groupMap = {
 	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春", "mjzc"] },
 	"溟渊的呼唤": { groupNumber: "431242151" },
 	"命运转轮": { groupNumber: "241837204" },
-	"魔道书": { groupNumber: "759960406" },
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
 	"魔女与彩爱": { groupNumber: "421693159" },
 	"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
@@ -231,7 +225,6 @@ const groupMap = {
 	"异教徒": { groupNumber: "810537153", aliases: ["风暴岛"] },
 	"异能警察不是什么英雄": { groupNumber: "873824063" },
 	"异神成渊": { groupNumber: "916464615" },
-	"音乐剧角色桌": { groupNumber: "892348859" },
 	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
 	"永夜后日谈": { groupNumber: "710242752" },
 	"幽世常世的满天下":{ groupNumber: "749173986" },
@@ -275,7 +268,6 @@ const groupMap = {
 	"ROP": { groupNumber: "783947110、780307937\n*有/无作者" },
 	"Sillage香水屋": { groupNumber: "921302134" },
 	"SKT": { groupNumber: "376500876" },
-	"SPC基金会": { groupNumber: "602431810" },
 	"ssk":{ groupNumber: "708231245" },
 	"ventangle": { groupNumber: "754138533" },
 	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
@@ -360,6 +352,12 @@ const groupMap = {
 	"武侠克苏鲁woc": { groupNumber: "524086123" },
 	"克苏鲁迷踪TOC": { groupNumber: "780909682" },
 	"星海迷城": { groupNumber: "719566794" },
+	"SPC基金会": { groupNumber: "602431810" },
+	"魔道书": { groupNumber: "759960406" },
+	"共鸣性怪异": { groupNumber: "903173796" },
+
+
+	
 	
 	
 
@@ -382,6 +380,15 @@ const groupMap = {
 
 	"ccf搭房": { groupNumber: "805511454" },
 	"ccf招募": { groupNumber: "1060652550" },
+	
+	"彩虹社角色桌": { groupNumber: "1062894359" },
+	"角色桌": { groupNumber: "471191700、363017687", aliases: ["语擦"] },
+	"音乐剧角色桌": { groupNumber: "892348859" },
+	
+	"口胡专用": { groupNumber: "106133577" },
+	"海龟汤": { groupNumber: "295820752" },
+	
+	
 };
 
 // "": { groupNumber: "" },
