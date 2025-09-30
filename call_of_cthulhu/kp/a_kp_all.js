@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.0.7
+// @version      3.1.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759235042
+// @timestamp    1759238986
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.0.7');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.0');
   seal.ext.register(ext);
 }
 
@@ -32,7 +32,6 @@ const groupMap = {
 	"柏拉图的余谈": { groupNumber: "574918635" },
 	"北东路疑案": { groupNumber: "953349303" },
 	"北欧奇谭": { groupNumber: "655192271" },
-	"匕首之心": { groupNumber: "791858682" },
 	"彼都": { groupNumber: "952122633" },
 	"别来无恙": { groupNumber: "907810853" },
 	"冰风谷": { groupNumber: "537262507" },
@@ -60,7 +59,6 @@ const groupMap = {
 	"多灾多难梵达林": { groupNumber: "570879430\n*矿坑+冰塔峰+风暴君王?+风骸岛?", aliases: ["矿坑", "冰塔峰", "风暴君王","风骸岛"] },
 	"恶辣":{ groupNumber: "620832218" },
 	"二重身的证迹": { groupNumber: "285230351" },
-	"翻译存放": { groupNumber: "1053204546、972416799、377896614、1040799893、317223427、1033917987、1043393781、872345826、220150371\n*最后一个是韩模" },
 	"非正经修仙": { groupNumber: "645560269" },
 	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
 	"废案重组": { groupNumber: "857972438" },
@@ -96,7 +94,6 @@ const groupMap = {
 	"镜语礼赞": { groupNumber: "882672657" },
 	"举头三尺": { groupNumber: "334821036" },
 	"卡镇": { groupNumber: "297175538" },
-	"克苏鲁迷踪TOC": { groupNumber: "780909682" },
 	"恐怖墓穴": { groupNumber: "329392650" },
 	"口胡专用": { groupNumber: "106133577" },
 	"快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
@@ -134,7 +131,6 @@ const groupMap = {
 	"幕临": { groupNumber: "160438930" },
 	"奈面": { groupNumber: "933493427" },
 	"你是谁？请支持百日○纪！": { groupNumber: "1057449882",aliases: ["百日"] },
-	"逆命仙途": { groupNumber: "796368505" },
 	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
 	"帕瑞卡颂马戏团": { groupNumber: "760671074" },
 	"起承转结": { groupNumber: "1043452922" },
@@ -150,10 +146,8 @@ const groupMap = {
 	"人生restart": { groupNumber: "537691966" },
 	"忍神": { groupNumber: "750542419、866506419" },
 	"萨里希斯之光": { groupNumber: "473373105" },
-	"赛博朋克d20": { groupNumber: "135248365、283334218" },
 	"三尺微命": { groupNumber: "1031833569\n*无作者" },
 	"三尺之下": { groupNumber: "976406595" },
-	"三角机构": { groupNumber: "1056836484" },
 	"山歌唤梦": { groupNumber: "972586937" },
 	"少恶世界": { groupNumber: "849810896\n*少恶世界+蚀甚", aliases: ["蚀甚"] },
 	"深眠雾梦": { groupNumber: "523093958" },
@@ -200,7 +194,6 @@ const groupMap = {
 	"无为有处有还无": { groupNumber: "768399206", aliases: ["wwyc"]  },
 	"无限": { groupNumber: "301122594" },
 	"午夜的沙": { groupNumber: "864767076" },
-	"武侠克苏鲁woc": { groupNumber: "524086123" },
 	"舞榭歌台": { groupNumber: "147313715" },
 	"夕妖晚谣": { groupNumber: "746417676" },
 	"西比拉":{ groupNumber: "669808359" },
@@ -210,12 +203,10 @@ const groupMap = {
 	"侠界之旅": { groupNumber: "210679492" },
 	"仙人抚顶": { groupNumber: "1056213411" },
 	"相约98": { groupNumber: "542398417" },
-	"小众规则综合群": { groupNumber: "945728295" },
 	"谢娘娘点化":{ groupNumber: "878626807", aliases: ["谢娘娘"] },
 	"心脏": { groupNumber: "883465896\n*无全译本" },
 	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
 	"新世界": { groupNumber: "943798191" },
-	"星升": { groupNumber: "872362745" },
 	"猩红文档": { groupNumber: "159022627" },
 	"幸福与心动的民谣": { groupNumber: "1036780211" },
 	"雪山密室": { groupNumber: "901413729" },
@@ -243,13 +234,11 @@ const groupMap = {
 	"音乐剧角色桌": { groupNumber: "892348859" },
 	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
 	"永夜后日谈": { groupNumber: "710242752" },
-	"永trpg": { groupNumber: "1092736604" },
 	"幽世常世的满天下":{ groupNumber: "749173986" },
 	"幽诱 , 于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
 	"犹格索托斯之影": { groupNumber: "579586813" },
 	"油盐不进":{ groupNumber: "575319883" },
 	"游龙之年组": { groupNumber: "693371984" },
-	"语音团": { groupNumber: "893711161\n*dnd为主但不限规则" },
 	"欲望之箱":{ groupNumber: "739976718" },
 	"远方呢喃":{ groupNumber: "761735153" },
 	"远星者":{ groupNumber: "820393813"},
@@ -273,17 +262,10 @@ const groupMap = {
 	"aib":{ groupNumber: "112077093" },
 	"Antinomy": { groupNumber: "101476385" },
 	"BASH":{ groupNumber: "774156947", aliases: ["燃星"] },
-	"brp": { groupNumber: "788438516" },
-	"ccf搭房": { groupNumber: "805511454" },
-	"ccf招募": { groupNumber: "1060652550" },
-	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080、1061755248、609993185、1057887916\n*609993185限21+\n*1057887916北美洲时差" },
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
-	"dnd纯女": { groupNumber: "560604565、960874614、780528057、1016631080、609993185、1057887916\n*609993185限21+\n*1057887916北美洲时差" },
-	"dnd纯dm": { groupNumber: "421678315" },
 	"GinGin": { groupNumber: "1035861353" },
 	"GODARCA": { groupNumber: "869783432" },
-	"GURPS": { groupNumber: "577412220" },
 	"H:tv": { groupNumber: "684526713" },
 	"insane": { groupNumber: "650600421" },
 	"magnificas":{ groupNumber: "477317221" },
@@ -299,7 +281,6 @@ const groupMap = {
 	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
 	"void":{ groupNumber: "1170037255" },
 	"wts":{ groupNumber: "763188284" },
-	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World", aliases: ["Wizarding World"] },
 	"x告白": { groupNumber: "575451544" },
 	"X休止": { groupNumber: "623836728" },
 	"zinki": { groupNumber: "761916849" },
@@ -309,10 +290,8 @@ const groupMap = {
 	"革命少女罗丹斯": { groupNumber: "641481529" },
 	"文手": { groupNumber: "512451066" },
 	"于赤土": { groupNumber: "1060512906" },
-	"coj写作": { groupNumber: "761666326" },
 	"生离": { groupNumber: "1061116172" },
 	"似人非人": { groupNumber: "869916259" },
-	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
 	"海盗之宴": { groupNumber: "1062169852" },
 	"愚者的祈雨": { groupNumber: "1062832797" },
 	"芝加哥之王": { groupNumber: "559366167" },
@@ -361,7 +340,47 @@ const groupMap = {
 	"冤缘远怨": { groupNumber: "1033066580\n*下载" },
 	"讨债鬼": { groupNumber: "973867121\n*下载" },
 
+
+
+
+
+	//规则
+	"恋爱党政trpg": { groupNumber: "263776524" },
+	"永7trpg": { groupNumber: "1092736604" },
+	"星升": { groupNumber: "872362745" },
+	"三角机构": { groupNumber: "1056836484" },
+	"GURPS": { groupNumber: "577412220" },
+	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World", aliases: ["Wizarding World"] },
+	"匕首之心": { groupNumber: "791858682、583981590" },
+	"逆命仙途": { groupNumber: "796368505" },
+	"brp": { groupNumber: "788438516" },
+	"赛博朋克d20": { groupNumber: "135248365、283334218" },
+	"小众规则综合群": { groupNumber: "945728295" },
+	"剪月集": { groupNumber: "631939804" },
+	"武侠克苏鲁woc": { groupNumber: "524086123" },
+	"克苏鲁迷踪TOC": { groupNumber: "780909682" },
 	
+	
+
+
+
+
+
+	//其它
+	"翻译存放": { groupNumber: "1053204546、972416799、377896614、1040799893、317223427、1033917987、1043393781、872345826、220150371\n*最后一个是韩模" },
+	
+	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
+
+	"coj写作": { groupNumber: "761666326" },
+
+	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080、1061755248、609993185、1057887916\n*609993185限21+\n*1057887916北美洲时差" },
+	
+	"dnd纯dm": { groupNumber: "421678315" },
+	"dnd纯女": { groupNumber: "560604565、960874614、780528057、1016631080、609993185、1057887916\n*609993185限21+\n*1057887916北美洲时差" },
+	"dnd语音团": { groupNumber: "893711161\n*dnd为主但不限规则" },
+
+	"ccf搭房": { groupNumber: "805511454" },
+	"ccf招募": { groupNumber: "1060652550" },
 };
 
 // "": { groupNumber: "" },
@@ -558,7 +577,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 逆命仙途796368505 ←规则群
 高塔之死623768354战役集KP群
 coc纯女485231082、947095759、797863427、1016631080、609993185限定21+、1057887916北美洲时差
-匕首之心791858682 ←规则群
+匕首之心791858682、583981590 ←规则群
 WWRPG818401752 ←规则群*全名Wizarding World
 晨钟旧事655068229下载
 GURPS577412220 ←规则群
@@ -615,6 +634,8 @@ ccf招募1060652550
 冤缘远怨1033066580下载
 讨债鬼973867121下载
 芝加哥之王559366167
+恋爱党政trpg263776524 ←规则群
+剪月集631939804 ←规则群
 
 图中已有但补充：
 太岁615878940下载
