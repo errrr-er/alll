@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.0
+// @version      3.1.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759240134
+// @timestamp    1759284528
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.0');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.1');
   seal.ext.register(ext);
 }
 
@@ -355,7 +355,7 @@ const groupMap = {
 	"SPC基金会": { groupNumber: "602431810" },
 	"魔道书": { groupNumber: "759960406" },
 	"共鸣性怪异": { groupNumber: "903173796" },
-
+	"罗小黑": { groupNumber: "687753523" },
 
 	
 	
@@ -645,6 +645,7 @@ ccf招募1060652550
 恋爱党政trpg263776524 ←规则群
 剪月集631939804 ←规则群
 星海迷城719566794 ←规则群
+罗小黑687753523 ←规则群
 
 图中已有但补充：
 太岁615878940下载
