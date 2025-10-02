@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.2
+// @version      3.1.3
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759336029
+// @timestamp    1759410692
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.2');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.3');
   seal.ext.register(ext);
 }
 
@@ -332,6 +332,7 @@ const groupMap = {
 	"冤缘远怨": { groupNumber: "1033066580\n*下载" },
 	"讨债鬼": { groupNumber: "973867121\n*下载" },
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911\n*下载", aliases: ["钟表"] },
+	"化作海上之雨": { groupNumber: "399589228\n*下载", aliases: ["海雨"] },
 
 
 
@@ -647,7 +648,8 @@ ccf招募1060652550
 剪月集631939804 ←规则群
 星海迷城719566794 ←规则群
 罗小黑687753523 ←规则群
-将钟表拨回茶杯摔破之前651922911*下载
+将钟表拨回茶杯摔破之前651922911下载
+化作海上之雨399589228下载
 
 图中已有但补充：
 太岁615878940下载
