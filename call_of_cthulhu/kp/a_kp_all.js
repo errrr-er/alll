@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.3
+// @version      3.1.4
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759410692
+// @timestamp    1759415070
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.3');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.4');
   seal.ext.register(ext);
 }
 
@@ -287,6 +287,7 @@ const groupMap = {
 	"海盗之宴": { groupNumber: "1062169852" },
 	"愚者的祈雨": { groupNumber: "1062832797" },
 	"芝加哥之王": { groupNumber: "559366167" },
+	"海·在遗忘之前的晴天": { groupNumber: "710881226", aliases: ["晴天"] },
 
 
 
@@ -333,6 +334,7 @@ const groupMap = {
 	"讨债鬼": { groupNumber: "973867121\n*下载" },
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911\n*下载", aliases: ["钟表"] },
 	"化作海上之雨": { groupNumber: "399589228\n*下载", aliases: ["海雨"] },
+	"VirtuaLive": { groupNumber: "664998654\n*下载" },
 
 
 
@@ -650,6 +652,8 @@ ccf招募1060652550
 罗小黑687753523 ←规则群
 将钟表拨回茶杯摔破之前651922911下载
 化作海上之雨399589228下载
+海·在遗忘之前的晴天710881226
+VirtuaLive664998654下载
 
 图中已有但补充：
 太岁615878940下载
