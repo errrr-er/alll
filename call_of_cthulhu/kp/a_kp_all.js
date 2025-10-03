@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.4
+// @version      3.1.5
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759415070
+// @timestamp    1759504199
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.4');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.5');
   seal.ext.register(ext);
 }
 
@@ -288,6 +288,7 @@ const groupMap = {
 	"愚者的祈雨": { groupNumber: "1062832797" },
 	"芝加哥之王": { groupNumber: "559366167" },
 	"海·在遗忘之前的晴天": { groupNumber: "710881226", aliases: ["晴天"] },
+	"鳞翅": { groupNumber: "963578553" },
 
 
 
@@ -654,6 +655,7 @@ ccf招募1060652550
 化作海上之雨399589228下载
 海·在遗忘之前的晴天710881226
 VirtuaLive664998654下载
+鳞翅963578553
 
 图中已有但补充：
 太岁615878940下载
