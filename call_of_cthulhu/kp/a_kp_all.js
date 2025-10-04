@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.7
+// @version      3.1.8
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1759549941
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.7');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.8');
   seal.ext.register(ext);
 }
 
@@ -361,12 +361,9 @@ const groupMap = {
 	"魔道书": { groupNumber: "759960406" },
 	"共鸣性怪异": { groupNumber: "903173796" },
 	"罗小黑": { groupNumber: "687753523" },
-	"pathfinder 2e": { groupNumber: "695214825",aliases: ["pf2"] },
+	"pathfinder 2e": { groupNumber: "695214825\n*全名pathfinder 2e",aliases: ["pf2"] },
+	"喵影奇谋": { groupNumber: "1047473677\n*喵影奇谋+赛博朋克RED+辐射",aliases: ["辐射", "赛博朋克RED"] },
 	
-	
-	
-
-
 
 
 
@@ -656,7 +653,10 @@ ccf招募1060652550
 海·在遗忘之前的晴天710881226
 VirtuaLive664998654下载
 鳞翅963578553
-
+pathfinder2e695214825
+为生命献上砂糖、可可、和肉桂粉628435591下载
+喵影奇谋+赛博朋克RED+辐射1047473677
+	
 图中已有但补充：
 太岁615878940下载
 天下第一刀369645861无作者
