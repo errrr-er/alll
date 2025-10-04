@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.6
+// @version      3.1.7
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1759549941
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.6');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.7');
   seal.ext.register(ext);
 }
 
@@ -336,7 +336,7 @@ const groupMap = {
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911\n*下载", aliases: ["钟表"] },
 	"化作海上之雨": { groupNumber: "399589228\n*下载", aliases: ["海雨"] },
 	"VirtuaLive": { groupNumber: "664998654\n*下载" },
-
+	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591\n*下载",aliases: ["可可"] },
 
 
 
