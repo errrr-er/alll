@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.5
+// @version      3.1.6
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759504199
+// @timestamp    1759549941
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.5');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.6');
   seal.ext.register(ext);
 }
 
@@ -361,7 +361,7 @@ const groupMap = {
 	"魔道书": { groupNumber: "759960406" },
 	"共鸣性怪异": { groupNumber: "903173796" },
 	"罗小黑": { groupNumber: "687753523" },
-
+	"pathfinder 2e": { groupNumber: "695214825",aliases: ["pf2"] },
 	
 	
 	
