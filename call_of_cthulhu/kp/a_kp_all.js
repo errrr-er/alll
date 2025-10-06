@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.8
+// @version      3.1.9
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759552565
+// @timestamp    1759766280
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.8');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.9');
   seal.ext.register(ext);
 }
 
@@ -337,7 +337,9 @@ const groupMap = {
 	"化作海上之雨": { groupNumber: "399589228\n*下载", aliases: ["海雨"] },
 	"VirtuaLive": { groupNumber: "664998654\n*下载" },
 	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591\n*下载",aliases: ["可可"] },
-
+	"石榴": { groupNumber: "1063443035\n*下载" },
+	"无罪之歌": { groupNumber: "1018018649\n*下载" },
+	"合欢宗遇上无情道": { groupNumber: "1048818266\n*下载" },
 
 
 
@@ -656,7 +658,10 @@ VirtuaLive664998654下载
 pathfinder2e695214825
 为生命献上砂糖、可可、和肉桂粉628435591下载
 喵影奇谋+赛博朋克RED+辐射1047473677
-	
+石榴1063443035下载
+无罪之歌1018018649下载
+合欢宗遇上无情道1048818266下载
+
 图中已有但补充：
 太岁615878940下载
 天下第一刀369645861无作者
