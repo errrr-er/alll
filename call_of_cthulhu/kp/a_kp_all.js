@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.9
+// @version      3.1.10
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759766280
+// @timestamp    1759841453
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.9');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.10');
   seal.ext.register(ext);
 }
 
@@ -340,7 +340,7 @@ const groupMap = {
 	"石榴": { groupNumber: "1063443035\n*下载" },
 	"无罪之歌": { groupNumber: "1018018649\n*下载" },
 	"合欢宗遇上无情道": { groupNumber: "1048818266\n*下载" },
-
+	"绿月": { groupNumber: "1064264349\n*下载" },
 
 
 	//规则
@@ -661,6 +661,7 @@ pathfinder2e695214825
 石榴1063443035下载
 无罪之歌1018018649下载
 合欢宗遇上无情道1048818266下载
+绿月1064264349下载
 
 图中已有但补充：
 太岁615878940下载
