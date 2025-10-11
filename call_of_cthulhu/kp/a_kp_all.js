@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.11
+// @version      3.1.12
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1760159946
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.11');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.12');
   seal.ext.register(ext);
 }
 
@@ -400,7 +400,8 @@ const groupMap = {
 	
 	"口胡专用": { groupNumber: "106133577" },
 	"海龟汤": { groupNumber: "295820752" },
-	
+
+	"时差": { groupNumber: "北美1057887916\n欧洲1054398710、602634416\n*602634416coj向" },
 	
 };
 
@@ -683,6 +684,7 @@ MTG世设1043664376
 谦卑林941662352
 斯坦哈德929033286
 巨龙迷城1057192428
+欧洲时差1054398710、602634416
 
 图中已有但补充：
 太岁615878940下载
