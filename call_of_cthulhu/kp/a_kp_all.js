@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.10
+// @version      3.1.11
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1759841453
+// @timestamp    1760159946
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.10');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.11');
   seal.ext.register(ext);
 }
 
@@ -31,7 +31,6 @@ const groupMap = {
 	"白玉风会录": { groupNumber: "942449479" },
 	"柏拉图的余谈": { groupNumber: "574918635" },
 	"北东路疑案": { groupNumber: "953349303" },
-	"北欧奇谭": { groupNumber: "655192271" },
 	"彼都": { groupNumber: "952122633" },
 	"别来无恙": { groupNumber: "907810853" },
 	"冰风谷": { groupNumber: "537262507" },
@@ -154,7 +153,6 @@ const groupMap = {
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"属于吾等的安乐之所":{ groupNumber: "826771926" },
 	"树不子英雄传": { groupNumber: "960918320", aliases: ["RWBY"] },
-	"双人搜查": { groupNumber: "616576634" },
 	"双重十字": { groupNumber: "651709429" },
 	"朔月笔谈": { groupNumber: "825664784" },
 	"斯特拉德的诅咒": { groupNumber: "824773454" },
@@ -228,7 +226,7 @@ const groupMap = {
 	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
 	"永夜后日谈": { groupNumber: "710242752" },
 	"幽世常世的满天下":{ groupNumber: "749173986" },
-	"幽诱 , 于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
+	"幽诱,于指尖燃起": { groupNumber: "978331360",aliases: ["幽诱"] },
 	"犹格索托斯之影": { groupNumber: "579586813" },
 	"油盐不进":{ groupNumber: "575319883" },
 	"游龙之年组": { groupNumber: "693371984" },
@@ -289,7 +287,17 @@ const groupMap = {
 	"芝加哥之王": { groupNumber: "559366167" },
 	"海·在遗忘之前的晴天": { groupNumber: "710881226", aliases: ["晴天"] },
 	"鳞翅": { groupNumber: "963578553" },
-
+	"龙王的奥德赛": { groupNumber: "238873224" },
+	"游龙之年": { groupNumber: "693371984" },
+	"鸦阁领域": { groupNumber: "836306797" },
+	"MTG世设": { groupNumber: "1043664376" },
+	"德拉肯海姆之墟": { groupNumber: "856703297" },
+	"末日剑湾": { groupNumber: "812018837" },
+	"战争神谕": { groupNumber: "413947504" },
+	"谦卑林": { groupNumber: "941662352" },
+	"斯坦哈德": { groupNumber: "929033286" },
+	"巨龙迷城": { groupNumber: "1057192428" },
+	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭",aliases: ["诡月奇谭"] },
 
 
 	// 反馈(混合)
@@ -365,8 +373,8 @@ const groupMap = {
 	"罗小黑": { groupNumber: "687753523" },
 	"pathfinder 2e": { groupNumber: "695214825\n*全名pathfinder 2e",aliases: ["pf2"] },
 	"喵影奇谋": { groupNumber: "1047473677\n*喵影奇谋+赛博朋克RED+辐射",aliases: ["辐射", "赛博朋克RED"] },
-	
-
+	"北欧奇谭": { groupNumber: "655192271" },
+	"双人搜查": { groupNumber: "616576634" },
 
 
 	//其它
@@ -388,6 +396,7 @@ const groupMap = {
 	"彩虹社角色桌": { groupNumber: "1062894359" },
 	"角色桌": { groupNumber: "471191700、363017687", aliases: ["语擦"] },
 	"音乐剧角色桌": { groupNumber: "892348859" },
+	"1999角色桌": { groupNumber: "937290560" },
 	
 	"口胡专用": { groupNumber: "106133577" },
 	"海龟汤": { groupNumber: "295820752" },
@@ -662,6 +671,18 @@ pathfinder2e695214825
 无罪之歌1018018649下载
 合欢宗遇上无情道1048818266下载
 绿月1064264349下载
+1999角色桌937290560
+龙王的奥德赛238873224
+游龙之年 693371984
+鸦阁领域836306797
+MTG世设1043664376
+歪月339403801诡月奇谭
+德拉肯海姆之墟856703297
+末日剑湾812018837
+战争神谕413947504
+谦卑林941662352
+斯坦哈德929033286
+巨龙迷城1057192428
 
 图中已有但补充：
 太岁615878940下载
