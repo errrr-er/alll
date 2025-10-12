@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.13
+// @version      3.2.0
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1760286094
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.13');
+  ext = seal.ext.new('KP群汇总', 'er', '3.2.0');
   seal.ext.register(ext);
 }
 
