@@ -3,12 +3,12 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.iw)有问题可进群2150284119联系、暗烛规则适用
-// @timestamp    1758433197
+// @timestamp    1760287119
 // 2025-01-17 00:00:40 UTC
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
 // @updateUrl    https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
+// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/candela_obscura/illuminated_worlds.js
 // ==/UserScript==
 
 let ext = seal.ext.find('illumi');
