@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.1.12
+// @version      3.1.13
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760204666
+// @timestamp    1760286094
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.1.12');
+  ext = seal.ext.new('KP群汇总', 'er', '3.1.13');
   seal.ext.register(ext);
 }
 
@@ -298,8 +298,12 @@ const groupMap = {
 	"斯坦哈德": { groupNumber: "929033286" },
 	"巨龙迷城": { groupNumber: "1057192428" },
 	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭",aliases: ["诡月奇谭"] },
+	"Snow Spine": { groupNumber: "1070979351",aliases: ["雪脊"] },
 
 
+
+
+	
 	// 反馈(混合)
 	"还来不见仙": { groupNumber: "590220813、984420519\n*反馈/KP群" },
 
@@ -685,6 +689,7 @@ MTG世设1043664376
 斯坦哈德929033286
 巨龙迷城1057192428
 欧洲时差1054398710、602634416
+Snow Spine雪脊1070979351
 
 图中已有但补充：
 太岁615878940下载
