@@ -4,11 +4,11 @@ author = "3987681449"
 version = "1.0.0"
 license = "CC-BY-NC-SA 4.0"
 date = 2024-12-12
-update_date = 2025-04-14
+update_date = 2025-10-12
 desc = "https://github.com/errrr-er/alll/tree/main"
 update_Urls = [
-  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/z_magic_all.toml",
-  "https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/z_magic_all.toml"
+  "https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/z_magic_all.toml",
+  "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/magic/z_magic_all.toml"
 ]
 
 
