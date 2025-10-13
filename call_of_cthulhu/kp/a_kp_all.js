@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.2.0
+// @version      3.2.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760287015
+// @timestamp    1760366046
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.2.0');
+  ext = seal.ext.new('KP群汇总', 'er', '3.2.1');
   seal.ext.register(ext);
 }
 
@@ -80,7 +80,7 @@ const groupMap = {
 	"黄昏熔解":{ groupNumber: "826823719" },
 	"黄金宝库": { groupNumber: "546468457" },
 	"毁灭亲王": { groupNumber: "882887120" },
-	"缉邪司": { groupNumber: "876339982" },
+	"缉邪司": { groupNumber: "876339982", aliases: ["jxs"] },
 	"继续工作直到毁灭": { groupNumber: "822840569" },
 	"祭日颂": { groupNumber: "717598559" },
 	"今古空名": { groupNumber: "962147366" },
@@ -299,7 +299,7 @@ const groupMap = {
 	"巨龙迷城": { groupNumber: "1057192428" },
 	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭",aliases: ["诡月奇谭"] },
 	"Snow Spine": { groupNumber: "1070979351",aliases: ["雪脊"] },
-
+	
 
 
 
@@ -353,7 +353,7 @@ const groupMap = {
 	"无罪之歌": { groupNumber: "1018018649\n*下载" },
 	"合欢宗遇上无情道": { groupNumber: "1048818266\n*下载" },
 	"绿月": { groupNumber: "1064264349\n*下载" },
-
+	"The Moist Star": { groupNumber: "1035170762\n*下载" },
 
 	//规则
 	"恋爱党政trpg": { groupNumber: "263776524" },
@@ -690,6 +690,9 @@ MTG世设1043664376
 巨龙迷城1057192428
 欧洲时差1054398710、602634416
 Snow Spine雪脊1070979351
+The Moist Star濡湿星辰1035170762下载
+
+
 
 图中已有但补充：
 太岁615878940下载
