@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.2.1
+// @version      3.2.2
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760366046
+// @timestamp    1760413366
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.2.1');
+  ext = seal.ext.new('KP群汇总', 'er', '3.2.2');
   seal.ext.register(ext);
 }
 
@@ -80,7 +80,6 @@ const groupMap = {
 	"黄昏熔解":{ groupNumber: "826823719" },
 	"黄金宝库": { groupNumber: "546468457" },
 	"毁灭亲王": { groupNumber: "882887120" },
-	"缉邪司": { groupNumber: "876339982", aliases: ["jxs"] },
 	"继续工作直到毁灭": { groupNumber: "822840569" },
 	"祭日颂": { groupNumber: "717598559" },
 	"今古空名": { groupNumber: "962147366" },
@@ -299,8 +298,8 @@ const groupMap = {
 	"巨龙迷城": { groupNumber: "1057192428" },
 	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭",aliases: ["诡月奇谭"] },
 	"Snow Spine": { groupNumber: "1070979351",aliases: ["雪脊"] },
+	"梦里百花深处": { groupNumber: "490454774",aliases: ["梦花深"] },
 	
-
 
 
 	
@@ -354,7 +353,12 @@ const groupMap = {
 	"合欢宗遇上无情道": { groupNumber: "1048818266\n*下载" },
 	"绿月": { groupNumber: "1064264349\n*下载" },
 	"The Moist Star": { groupNumber: "1035170762\n*下载" },
+	"缉邪司": { groupNumber: "884145991、876339982\n*下载/KP群", aliases: ["jxs"] },
+	
 
+
+
+	
 	//规则
 	"恋爱党政trpg": { groupNumber: "263776524" },
 	"永7trpg": { groupNumber: "1092736604" },
@@ -387,6 +391,7 @@ const groupMap = {
 	"log相关": { groupNumber: "675664988、985865497\n*存放/整理" },
 
 	"coj写作": { groupNumber: "761666326" },
+	"c全女写作": { groupNumber: "734417134" },
 
 	"coc纯女": { groupNumber: "485231082、947095759、797863427、1016631080、1061755248、609993185、1057887916\n*609993185限21+\n*1057887916北美洲时差" },
 	
@@ -610,7 +615,7 @@ GURPS577412220 ←规则群
 雪中形骸829092202
 弃约社会972643133下载916122224KP群
 再见新世界1004914022下载
-缉邪司876339982
+缉邪司884145991下载876339982KP群
 三角机构1056836484 ←规则群
 星升872362745 ←规则群
 海龟汤295820752
@@ -691,8 +696,9 @@ MTG世设1043664376
 欧洲时差1054398710、602634416
 Snow Spine雪脊1070979351
 The Moist Star濡湿星辰1035170762下载
-
-
+缉邪司884145991下载
+全女写作734417134
+梦里百花深处490454774
 
 图中已有但补充：
 太岁615878940下载
