@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.2.2
+// @version      3.2.3
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760413366
+// @timestamp    1760458234
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.2.2');
+  ext = seal.ext.new('KP群汇总', 'er', '3.2.3');
   seal.ext.register(ext);
 }
 
@@ -354,7 +354,7 @@ const groupMap = {
 	"绿月": { groupNumber: "1064264349\n*下载" },
 	"The Moist Star": { groupNumber: "1035170762\n*下载" },
 	"缉邪司": { groupNumber: "884145991、876339982\n*下载/KP群", aliases: ["jxs"] },
-	
+	"Stifle, and with hymn": { groupNumber: "1064285359、1062672838\n*下载/KP群", aliases: ["hymn"] },
 
 
 
@@ -699,6 +699,7 @@ The Moist Star濡湿星辰1035170762下载
 缉邪司884145991下载
 全女写作734417134
 梦里百花深处490454774
+Stifle, and with hymn1064285359下载1062672838KP群
 
 图中已有但补充：
 太岁615878940下载
