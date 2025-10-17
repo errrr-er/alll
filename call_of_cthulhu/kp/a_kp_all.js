@@ -18,9 +18,9 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
-// 时间戳
+// 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1760726748;
+    return 1760728950;
 }
 
 // 提醒历史
@@ -68,7 +68,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
         if (githubVersion.timestamp > currentTimestamp) {
             setTimeout(() => {
                 seal.replyToSender(ctx, msg, 
-                    `发现新版本！\n最后更新：${githubVersion.formattedDate}\n更新检查冷却开始，可使用重载JS刷新`
+                    `发现新版本！更新检查冷却开始\n最后更新：${githubVersion.formattedDate}`
                 );
             }, 1000);
         }
