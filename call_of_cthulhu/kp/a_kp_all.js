@@ -68,7 +68,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
         if (githubVersion.timestamp > currentTimestamp) {
             setTimeout(() => {
                 seal.replyToSender(ctx, msg, 
-                    `发现新版本！\n最后更新：{githubVersion.formattedDate}\n更新检查冷却开始`
+                    `发现新版本！\n最后更新：${githubVersion.formattedDate}\n更新检查冷却开始`
                 );
             }, 1000);
         }
