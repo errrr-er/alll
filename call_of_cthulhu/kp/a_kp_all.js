@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.3.1
+// @version      4.0.0
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1760458239
 // 2025-05-11 16:49:17
@@ -14,17 +14,17 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.3.1');
+  ext = seal.ext.new('KP群汇总', 'er', '4.0.0');
   seal.ext.register(ext);
 }
 
 // 自动获取当前脚本的时间戳
 function getCurrentTimestamp() {
-    // 直接从脚本头部元数据获取
-    return 1760458234; // 这个值就是你的 @timestamp
+    return 1746972557;
 }
 
-let hasNotifiedUpdate = false;
+// 用户提醒记录
+const userLastNotify = new Map();
 
 // 获取GitHub最新版本信息
 async function getGitHubVersion() {
@@ -58,19 +58,17 @@ async function getGitHubVersion() {
 }
 
 // 后台检查更新的函数
-async function checkUpdateOnce(ctx, msg) {
+async function checkUpdateOnce(ctx, msg, userId) {
     try {
         const githubVersion = await getGitHubVersion();
         if (!githubVersion) return;
         
-        // 自动获取当前时间戳
         const currentTimestamp = getCurrentTimestamp();
         
         if (githubVersion.timestamp > currentTimestamp) {
-            hasNotifiedUpdate = true;
             setTimeout(() => {
                 seal.replyToSender(ctx, msg, 
-                    `🔄 发现新版本！最后更新: ${githubVersion.formattedDate}\n使用 .kp check 查看详情`
+                    `发现新版本！最后更新: ${githubVersion.formattedDate}`
                 );
             }, 1000);
         }
@@ -481,10 +479,9 @@ const groupMap = {
 const groupNumberToNameMap = {};
 for (const groupName in groupMap) {
     const groupInfo = groupMap[groupName];
-    const groupNumbers = groupInfo.groupNumber.split(/[、]/); // 处理多个群号的情况
+    const groupNumbers = groupInfo.groupNumber.split(/[、]/);
     
     groupNumbers.forEach(number => {
-        // 清理群号（移除\n号后的说明文字）
         const cleanNumber = number.split('\n')[0].trim();
         if (cleanNumber) {
             if (!groupNumberToNameMap[cleanNumber]) {
@@ -497,11 +494,9 @@ for (const groupName in groupMap) {
 
 // 计算两个字符串的相似度
 function getSimilarity(s1, s2) {
-    // 转换为小写
     s1 = s1.toLowerCase();
     s2 = s2.toLowerCase();
 
-    // 计算Levenshtein相似度
     function getLevenshteinScore(a, b) {
         const len1 = a.length;
         const len2 = b.length;
@@ -522,7 +517,6 @@ function getSimilarity(s1, s2) {
         return 1 - distance / Math.max(len1, len2);
     }
 
-    // 计算Jaccard相似度
     function getJaccardScore(a, b) {
         const set1 = new Set(a.split(''));
         const set2 = new Set(b.split(''));
@@ -541,16 +535,13 @@ function findSimilarGroup(input) {
     input = input.toLowerCase();
     const matchedGroups = [];
 
-    // 遍历所有群组
     for (const groupName in groupMap) {
         const groupInfo = groupMap[groupName];
         let highestScore = 0;
 
-        // 计算主名称相似度
         const mainScore = getSimilarity(input, groupName.toLowerCase());
         highestScore = Math.max(highestScore, mainScore);
 
-        // 计算别名相似度
         if (groupInfo.aliases) {
             for (const alias of groupInfo.aliases) {
                 const aliasScore = getSimilarity(input, alias.toLowerCase());
@@ -558,7 +549,6 @@ function findSimilarGroup(input) {
             }
         }
 
-        // 记录相似度>=0.3的群组
         if (highestScore >= 0.3) {
             matchedGroups.push({
                 name: groupName,
@@ -568,9 +558,7 @@ function findSimilarGroup(input) {
         }
     }
 
-    // 按相似度降序排列
     matchedGroups.sort((a, b) => b.score - a.score);
-
     return matchedGroups.length > 0 ? matchedGroups : null;
 }
 
@@ -600,9 +588,14 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
     const input = cmdArgs.getArgN(1);
     
-    // 检查更新
-    if (!hasNotifiedUpdate) {
-        checkUpdateOnce(ctx, msg).catch(console.error);
+    // 按用户检查更新（每个用户24小时提醒一次）
+    const userId = msg.sender.userId;
+    const now = Date.now();
+    const lastNotify = userLastNotify.get(userId) || 0;
+    
+    if (now - lastNotify > 24 * 60 * 60 * 1000) {
+        userLastNotify.set(userId, now);
+        checkUpdateOnce(ctx, msg, userId).catch(console.error);
     }
     
     // 帮助命令
