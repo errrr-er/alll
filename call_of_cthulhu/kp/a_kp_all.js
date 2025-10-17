@@ -18,6 +18,66 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
+// 自动获取当前脚本的时间戳
+function getCurrentTimestamp() {
+    // 直接从脚本头部元数据获取
+    return 1760458234; // 这个值就是你的 @timestamp
+}
+
+let hasNotifiedUpdate = false;
+
+// 获取GitHub最新版本信息
+async function getGitHubVersion() {
+    try {
+        const rawUrl = 'https://raw.githubusercontent.com/errrr-er/alll/main/call_of_cthulhu/kp/a_kp_all.js';
+        const response = await fetch(rawUrl);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const content = await response.text();
+        
+        // 解析时间戳
+        const timestampMatch = content.match(/@timestamp\s+(\d+)/);
+        if (timestampMatch) {
+            const timestamp = parseInt(timestampMatch[1]);
+            const date = new Date(timestamp * 1000);
+            return {
+                timestamp: timestamp,
+                date: date,
+                formattedDate: date.toLocaleString('zh-CN')
+            };
+        }
+        
+        return null;
+    } catch (error) {
+        console.error('获取GitHub版本时出错:', error);
+        throw error;
+    }
+}
+
+// 后台检查更新的函数
+async function checkUpdateOnce(ctx, msg) {
+    try {
+        const githubVersion = await getGitHubVersion();
+        if (!githubVersion) return;
+        
+        // 自动获取当前时间戳
+        const currentTimestamp = getCurrentTimestamp();
+        
+        if (githubVersion.timestamp > currentTimestamp) {
+            hasNotifiedUpdate = true;
+            setTimeout(() => {
+                seal.replyToSender(ctx, msg, 
+                    `🔄 发现新版本！最后更新: ${githubVersion.formattedDate}\n使用 .kp check 查看详情`
+                );
+            }, 1000);
+        }
+    } catch (error) {
+        // 静默处理
+    }
+}
 
 // 创建群号映射表
 // 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
@@ -435,132 +495,97 @@ for (const groupName in groupMap) {
     });
 }
 
-// 计算两个字符串的相似度 (Levenshtein距离)
+// 计算两个字符串的相似度
 function getSimilarity(s1, s2) {
-  // 对字符排序后计算Levenshtein距离（语序无关）
-  const sorted1 = s1.toLowerCase().split('').sort().join('');
-  const sorted2 = s2.toLowerCase().split('').sort().join('');
-  
-  // 继续使用原有的Levenshtein距离计算
-  const len1 = s1.length;
-  const len2 = s2.length;
-  
-  const matrix = [];
-  for (let i = 0; i <= len1; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= len2; j++) {
-    matrix[0][j] = j;
-  }
-  
-  for (let i = 1; i <= len1; i++) {
-    for (let j = 1; j <= len2; j++) {
-      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
-      matrix[i][j] = Math.min(
-        matrix[i - 1][j] + 1,     // 删除
-        matrix[i][j - 1] + 1,     // 插入
-        matrix[i - 1][j - 1] + cost  // 替换
-      );
+    // 转换为小写
+    s1 = s1.toLowerCase();
+    s2 = s2.toLowerCase();
+
+    // 计算Levenshtein相似度
+    function getLevenshteinScore(a, b) {
+        const len1 = a.length;
+        const len2 = b.length;
+        const matrix = [];
+        for (let i = 0; i <= len1; i++) matrix[i] = [i];
+        for (let j = 0; j <= len2; j++) matrix[0][j] = j;
+        for (let i = 1; i <= len1; i++) {
+            for (let j = 1; j <= len2; j++) {
+                const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j] + 1,
+                    matrix[i][j - 1] + 1,
+                    matrix[i - 1][j - 1] + cost
+                );
+            }
+        }
+        const distance = matrix[len1][len2];
+        return 1 - distance / Math.max(len1, len2);
     }
-  }
-  
-  const distance = matrix[len1][len2];
-  const maxLen = Math.max(len1, len2);
-  return 1 - distance / maxLen;
-}
 
-// 计算两个字符串的相似度（结合Levenshtein和Jaccard）
-function getSimilarity(s1, s2) {
-  // 转换为小写
-  s1 = s1.toLowerCase();
-  s2 = s2.toLowerCase();
-
-  // 1. 计算Levenshtein相似度（原有方法）
-  function getLevenshteinScore(a, b) {
-    const len1 = a.length;
-    const len2 = b.length;
-    const matrix = [];
-    for (let i = 0; i <= len1; i++) matrix[i] = [i];
-    for (let j = 0; j <= len2; j++) matrix[0][j] = j;
-    for (let i = 1; i <= len1; i++) {
-      for (let j = 1; j <= len2; j++) {
-        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j - 1] + cost
-        );
-      }
+    // 计算Jaccard相似度
+    function getJaccardScore(a, b) {
+        const set1 = new Set(a.split(''));
+        const set2 = new Set(b.split(''));
+        const intersection = new Set([...set1].filter(c => set2.has(c))).size;
+        const union = new Set([...set1, ...set2]).size;
+        return union === 0 ? 0 : intersection / union;
     }
-    const distance = matrix[len1][len2];
-    return 1 - distance / Math.max(len1, len2);
-  }
 
-  // 2. 计算Jaccard相似度（语序无关）
-  function getJaccardScore(a, b) {
-    const set1 = new Set(a.split(''));
-    const set2 = new Set(b.split(''));
-    const intersection = new Set([...set1].filter(c => set2.has(c))).size;
-    const union = new Set([...set1, ...set2]).size;
-    return union === 0 ? 0 : intersection / union;
-  }
-
-  // 返回两种相似度的最大值（兼顾精准度和语序容忍）
-  return Math.max(
-    getLevenshteinScore(s1, s2),
-    getJaccardScore(s1, s2)
-  );
+    return Math.max(
+        getLevenshteinScore(s1, s2),
+        getJaccardScore(s1, s2)
+    );
 }
 
 function findSimilarGroup(input) {
-  input = input.toLowerCase();
-  const matchedGroups = [];
+    input = input.toLowerCase();
+    const matchedGroups = [];
 
-  // 遍历所有群组
-  for (const groupName in groupMap) {
-    const groupInfo = groupMap[groupName];
-    let highestScore = 0;
+    // 遍历所有群组
+    for (const groupName in groupMap) {
+        const groupInfo = groupMap[groupName];
+        let highestScore = 0;
 
-    // 计算主名称相似度
-    const mainScore = getSimilarity(input, groupName.toLowerCase());
-    highestScore = Math.max(highestScore, mainScore);
+        // 计算主名称相似度
+        const mainScore = getSimilarity(input, groupName.toLowerCase());
+        highestScore = Math.max(highestScore, mainScore);
 
-    // 计算别名相似度
-    if (groupInfo.aliases) {
-      for (const alias of groupInfo.aliases) {
-        const aliasScore = getSimilarity(input, alias.toLowerCase());
-        highestScore = Math.max(highestScore, aliasScore);
-      }
+        // 计算别名相似度
+        if (groupInfo.aliases) {
+            for (const alias of groupInfo.aliases) {
+                const aliasScore = getSimilarity(input, alias.toLowerCase());
+                highestScore = Math.max(highestScore, aliasScore);
+            }
+        }
+
+        // 记录相似度>=0.3的群组
+        if (highestScore >= 0.3) {
+            matchedGroups.push({
+                name: groupName,
+                info: groupInfo,
+                score: highestScore
+            });
+        }
     }
 
-    // 记录相似度>=0.3的群组
-    if (highestScore >= 0.3) {
-      matchedGroups.push({
-        name: groupName,
-        info: groupInfo,
-        score: highestScore  // 保留相似度用于排序
-      });
-    }
-  }
+    // 按相似度降序排列
+    matchedGroups.sort((a, b) => b.score - a.score);
 
-  // 按相似度降序排列
-  matchedGroups.sort((a, b) => b.score - a.score);
-
-  return matchedGroups.length > 0 ? matchedGroups : null;
+    return matchedGroups.length > 0 ? matchedGroups : null;
 }
 
 // 生成所有群组信息
 function generateGroupList() {
-  let listLines = [];
-  for (const groupName in groupMap) {
-    const groupInfo = groupMap[groupName];
-    let aliasText = '';
-    if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-      aliasText = `(${groupInfo.aliases.join('、')})`;
+    let listLines = [];
+    for (const groupName in groupMap) {
+        const groupInfo = groupMap[groupName];
+        let aliasText = '';
+        if (groupInfo.aliases && groupInfo.aliases.length > 0) {
+            aliasText = `(${groupInfo.aliases.join('、')})`;
+        }
+        listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
     }
-    listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
-  }
-  return listLines.join('\n');
+    return listLines.join('\n');
 }
 
 // 创建.kp指令
@@ -571,100 +596,94 @@ cmdKp.help = `KP群查询指令
 .kp list	// 列出所有KP群信息(超长慎用)
 .kp help	// 显示本帮助`;
 
-// 修改.kp指令的solve函数
-cmdKp.solve = (ctx, msg, cmdArgs) => {
-  let ret = seal.ext.newCmdExecuteResult(true);
-  const input = cmdArgs.getArgN(1);
-  
-  // 帮助命令
-  if (input === 'help' || input === '') {
-    ret.showHelp = true;
-    return ret;
-  }
-
-  //2.3.0之前的群，后续不更新了(但旧的目前依旧留着，以后可能会删)
-  // 新增群组(不存在于图中).kp new
-  // if (input.toLowerCase() === 'new') {
-    // const newGroupsText = `【不存在于图中的群组】图中重复的：沧渺山、万人无我、春花秋月、举头三尺、吹笛子的海獭不在图中的：摇曳群青513712312幽诱 , 于指尖燃起978331360星海孤舟657774576下载龙滨不良597585029侦探可有翅膀吗963854131一梦431528579发布+KP群异能儿童管理机构786412774下载817252450KP群(仅扫码)雪山密室901413729瑰绿的决心+天地熔金+凤去台空江自流+人间烟火+问天地979768022、985261346下载靖海难343026343魂夜逃避行1046944266下载1009337218KP群鲸落万物生598393390下载1051952972KP群继续工作直到毁灭822840569坤元劫954535020下载862291565KP群逆命仙途796368505 ←规则群高塔之死623768354战役集KP群coc纯女485231082、947095759、797863427、1016631080、609993185限定21+、1057887916北美洲时差匕首之心791858682、583981590 ←规则群WWRPG818401752 ←规则群*全名Wizarding World晨钟旧事655068229下载GURPS577412220 ←规则群雪中形骸829092202弃约社会972643133下载916122224KP群再见新世界1004914022下载缉邪司884145991下载876339982KP群三角机构1056836484 ←规则群星升872362745 ←规则群海龟汤295820752语音团893711161 ←*dnd为主但不限规则祭日颂717598559翻译存放1053204546、972416799、377896614、1040799893、317223427、1033917987、1043393781、872345826、1061035045、220150371*220150371韩模来到这里的你们放弃希望吧939600700下载1047069694KP群如此渺小的橡果827206593下载264764228KP群玉台新薤881091572交流群439862498KP群ccf搭房805511454one way straight978645254下载寻仙I神仙索+寻仙II观音土746673328下载还来不见仙590220813、984420519*反馈/KP群花盗人之恋966519249遗香巡游535538005染色空白卡657347350你是谁？请支持百日○纪！1057449882下载孤岛恋综932315790下载抽刀1057856638白影825032832下载+KP群极乐颂歌701200710下载967165493KP群神明起舞之日494739702下载+KP群要继承的遗产里有嫂子怎么办519716458连海密录926024691音乐剧角色桌892348859犹格索托斯之影579586813仙人抚顶1056213411歌味觉死616756545*路易斯安那系列+畅梦人+淤泥之花与空心石彩虹社角色桌1062894359应天劫231734390/2811466327*下载/墙将潮水遗忘之物也一并收下吧904394289*下载群于赤土腹中再会1060512906人间见闻录921349225*下载亲爱的，我把脑子丢了839027414乐园在海底641157488革命少女罗丹斯641481529文手512451066于赤土1060512906coj写作761666326生离1061116172似人非人869916259log相关675664988存放985865497交流海盗之宴1062169852语擦363017687ccf招募1060652550愚者的祈雨1062832797冤缘远怨1033066580下载讨债鬼973867121下载芝加哥之王559366167恋爱党政trpg263776524 ←规则群剪月集631939804 ←规则群星海迷城719566794 ←规则群罗小黑687753523 ←规则群将钟表拨回茶杯摔破之前651922911下载化作海上之雨399589228下载海·在遗忘之前的晴天710881226VirtuaLive664998654下载鳞翅963578553pathfinder2e695214825为生命献上砂糖、可可、和肉桂粉628435591下载喵影奇谋+赛博朋克RED+辐射1047473677石榴1063443035下载无罪之歌1018018649下载合欢宗遇上无情道1048818266下载绿月1064264349下载1999角色桌937290560龙王的奥德赛238873224游龙之年 693371984鸦阁领域836306797MTG世设1043664376歪月339403801诡月奇谭德拉肯海姆之墟856703297末日剑湾812018837战争神谕413947504谦卑林941662352斯坦哈德929033286巨龙迷城1057192428欧洲时差1054398710、602634416Snow Spine雪脊1070979351The Moist Star濡湿星辰1035170762下载缉邪司884145991下载全女写作734417134梦里百花深处490454774Stifle, and with hymn1064285359下载1062672838KP群图中已有但补充：太岁615878940下载天下第一刀369645861无作者花&葬送者106559548求我338494770、979194858下载x2恰故人归607468653绿色三角洲1061755248dnd纯女1016631080、1061755248、609993185限定21+、1057887916北美洲时差、1021578589`;
-   // seal.replyToSender(ctx, msg, newGroupsText);
-   // return ret;
- // }
-	
-  // 列出所有群组
-  if (input.toLowerCase() === 'list') {
-    const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
-    seal.replyToSender(ctx, msg, listText);
-    return ret;
-  }
-
-  // 群号反向查询功能
-	if (/^\d+$/.test(input)) {
-    	// 输入的是纯数字，尝试作为群号查询
-    	const matchedGroups = groupNumberToNameMap[input] || [];
+cmdKp.solve = async (ctx, msg, cmdArgs) => {
+    let ret = seal.ext.newCmdExecuteResult(true);
+    const input = cmdArgs.getArgN(1);
     
-		if (matchedGroups.length > 0) {
-			let replyText = ``;
-			matchedGroups.forEach(groupName => {
-				const groupInfo = groupMap[groupName];
-				replyText += `【${groupName}】→ ${groupInfo.groupNumber}`;
-			});
-			seal.replyToSender(ctx, msg, replyText);
-		} else {
-			// 直接返回未找到，不进行部分匹配检查
-			seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
-		}
-		return ret;
-}
-     
-  // 查找匹配的群组
-  let foundGroup = null;
-  let exactMatch = false;
-  
-  // 1. 检查主关键词（不区分大小写）
-  const lowerInput = input.toLowerCase();
-  for (const groupName in groupMap) {
-    if (groupName.toLowerCase() === lowerInput) {
-      foundGroup = { match: { name: groupName, info: groupMap[groupName] }, score: 1 };
-      exactMatch = true;
-      break;
+    // 检查更新
+    if (!hasNotifiedUpdate) {
+        checkUpdateOnce(ctx, msg).catch(console.error);
     }
-  }
-  
-  // 2. 检查所有群组的别名（不区分大小写）
-  if (!foundGroup) {
+    
+    // 帮助命令
+    if (input === 'help' || input === '') {
+        ret.showHelp = true;
+        return ret;
+    }
+
+    // 列出所有群组
+    if (input.toLowerCase() === 'list') {
+        const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
+        seal.replyToSender(ctx, msg, listText);
+        return ret;
+    }
+
+    // 群号反向查询功能
+    if (/^\d+$/.test(input)) {
+        const matchedGroups = groupNumberToNameMap[input] || [];
+        
+        if (matchedGroups.length > 0) {
+            let replyText = ``;
+            matchedGroups.forEach(groupName => {
+                const groupInfo = groupMap[groupName];
+                replyText += `【${groupName}】→ ${groupInfo.groupNumber}`;
+            });
+            seal.replyToSender(ctx, msg, replyText);
+        } else {
+            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
+        }
+        return ret;
+    }
+     
+    // 查找匹配的群组
+    let foundGroup = null;
+    let exactMatch = false;
+    
+    // 1. 检查主关键词（不区分大小写）
+    const lowerInput = input.toLowerCase();
     for (const groupName in groupMap) {
-      const groupInfo = groupMap[groupName];
-      if (groupInfo.aliases) {
-        for (const alias of groupInfo.aliases) {
-          if (alias.toLowerCase() === lowerInput) {
-            foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
+        if (groupName.toLowerCase() === lowerInput) {
+            foundGroup = { match: { name: groupName, info: groupMap[groupName] }, score: 1 };
             exactMatch = true;
             break;
-          }
         }
-      }
-      if (exactMatch) break;
     }
-  }
-  
-  // 3. 如果没有精确匹配，尝试近似匹配
-  if (!foundGroup) {
-	const matchedGroups = findSimilarGroup(input);
-	if (matchedGroups) {
-		let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
-		matchedGroups.forEach(group => {
-		replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
-		});
-		seal.replyToSender(ctx, msg, replyText);
-	} else {
-		seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
-	}
-	} else {
-	// 精确匹配输出
-	seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}】→ ${foundGroup.match.info.groupNumber}`);
-	}
+    
+    // 2. 检查所有群组的别名（不区分大小写）
+    if (!foundGroup) {
+        for (const groupName in groupMap) {
+            const groupInfo = groupMap[groupName];
+            if (groupInfo.aliases) {
+                for (const alias of groupInfo.aliases) {
+                    if (alias.toLowerCase() === lowerInput) {
+                        foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
+                        exactMatch = true;
+                        break;
+                    }
+                }
+            }
+            if (exactMatch) break;
+        }
+    }
+    
+    // 3. 如果没有精确匹配，尝试近似匹配
+    if (!foundGroup) {
+        const matchedGroups = findSimilarGroup(input);
+        if (matchedGroups) {
+            let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
+            matchedGroups.forEach(group => {
+                replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
+            });
+            seal.replyToSender(ctx, msg, replyText);
+        } else {
+            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
+        }
+    } else {
+        // 精确匹配输出
+        seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}】→ ${foundGroup.match.info.groupNumber}`);
+    }
 
-  return ret;
+    return ret;
 };
 
 // 注册指令
