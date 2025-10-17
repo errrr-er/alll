@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      3.3.0
+// @version      3.3.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760458234
+// @timestamp    1760458239
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '3.3.0');
+  ext = seal.ext.new('KP群汇总', 'er', '3.3.1');
   seal.ext.register(ext);
 }
 
