@@ -18,18 +18,18 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
-// 自动获取当前脚本的时间戳
+// 时间戳
 function getCurrentTimestamp() {
     return 1746972557;
 }
 
-// 用户提醒记录
+// 用户提醒历史
 const userLastNotify = new Map();
 
 // 获取GitHub最新版本信息
 async function getGitHubVersion() {
     try {
-        const rawUrl = 'https://raw.githubusercontent.com/errrr-er/alll/main/call_of_cthulhu/kp/a_kp_all.js';
+        const rawUrl = 'https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
         const response = await fetch(rawUrl);
         
         if (!response.ok) {
@@ -52,7 +52,7 @@ async function getGitHubVersion() {
         
         return null;
     } catch (error) {
-        console.error('获取GitHub版本时出错:', error);
+        console.error('获取GitHub版本出错:', error);
         throw error;
     }
 }
