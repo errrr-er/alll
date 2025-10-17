@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760726747
+// @timestamp    1760726748
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 
 // 时间戳
 function getCurrentTimestamp() {
-    return 1746972557;
+    return 1760726748;
 }
 
 // 提醒历史
@@ -29,7 +29,7 @@ const userLastNotify = new Map();
 // 获取GitHub最新版本编号
 async function getGitHubVersion() {
     try {
-        const rawUrl = 'https://raw.githubusercontent.com/errrr-er/alll/main/call_of_cthulhu/kp/a_kp_all.js';
+        const rawUrl = 'https://ghfast.tophttps://raw.githubusercontent.com/errrr-er/alll/main/call_of_cthulhu/kp/a_kp_all.js';
         const response = await fetch(rawUrl);
         
         if (!response.ok) {
