@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760721961
+// @timestamp    1760725147
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -23,10 +23,10 @@ function getCurrentTimestamp() {
     return 1746972557;
 }
 
-// 用户提醒历史
+// 提醒历史
 const userLastNotify = new Map();
 
-// 获取GitHub最新版本信息
+// 获取GitHub最新版本编号
 async function getGitHubVersion() {
     try {
         const rawUrl = 'https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
@@ -57,7 +57,7 @@ async function getGitHubVersion() {
     }
 }
 
-// 后台检查更新的函数
+// 检查更新
 async function checkUpdateOnce(ctx, msg, userId) {
     try {
         const githubVersion = await getGitHubVersion();
@@ -68,7 +68,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
         if (githubVersion.timestamp > currentTimestamp) {
             setTimeout(() => {
                 seal.replyToSender(ctx, msg, 
-                    `发现新版本！最后更新: ${githubVersion.formattedDate}`
+                    `发现新版本！\n最后更新：{githubVersion.formattedDate}\n更新检查冷却开始`
                 );
             }, 1000);
         }
@@ -77,8 +77,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
     }
 }
 
-// 创建群号映射表
-// 格式: { 主关键词: {群号: "123456", 别名: ["alias1", "alias2"]} }
+// 群号映射表
 const groupMap = {
 	// KP
 	"4s":{ groupNumber: "926664565", aliases: ["ssss"] },
@@ -475,7 +474,7 @@ const groupMap = {
 
 // "": { groupNumber: "",aliases: [""] },
 
-// 创建群号到群组名称的反向映射
+// 反向映射
 const groupNumberToNameMap = {};
 for (const groupName in groupMap) {
     const groupInfo = groupMap[groupName];
@@ -492,7 +491,7 @@ for (const groupName in groupMap) {
     });
 }
 
-// 计算两个字符串的相似度
+// 字符串相似度
 function getSimilarity(s1, s2) {
     s1 = s1.toLowerCase();
     s2 = s2.toLowerCase();
@@ -562,7 +561,7 @@ function findSimilarGroup(input) {
     return matchedGroups.length > 0 ? matchedGroups : null;
 }
 
-// 生成所有群组信息
+// 所有群组信息
 function generateGroupList() {
     let listLines = [];
     for (const groupName in groupMap) {
@@ -576,7 +575,7 @@ function generateGroupList() {
     return listLines.join('\n');
 }
 
-// 创建.kp指令
+// .kp指令
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
@@ -588,7 +587,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
     const input = cmdArgs.getArgN(1);
     
-    // 按用户检查更新（每个用户24小时提醒一次）
+    // 24H提醒检查更新
     const userId = msg.sender.userId;
     const now = Date.now();
     const lastNotify = userLastNotify.get(userId) || 0;
@@ -598,7 +597,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
         checkUpdateOnce(ctx, msg, userId).catch(console.error);
     }
     
-    // 帮助命令
+    // help命令
     if (input === 'help' || input === '') {
         ret.showHelp = true;
         return ret;
@@ -611,7 +610,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
         return ret;
     }
 
-    // 群号反向查询功能
+    // 反向查询
     if (/^\d+$/.test(input)) {
         const matchedGroups = groupNumberToNameMap[input] || [];
         
