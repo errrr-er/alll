@@ -29,7 +29,7 @@ const userLastNotify = new Map();
 // 获取GitHub最新版本编号
 async function getGitHubVersion() {
     try {
-        const rawUrl = 'https://ghfast.tophttps://raw.githubusercontent.com/errrr-er/alll/main/call_of_cthulhu/kp/a_kp_all.js';
+        const rawUrl = 'https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
         const response = await fetch(rawUrl);
         
         if (!response.ok) {
