@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.0.0
+// @version      4.0.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1760729515
+// @timestamp    1761224758
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -14,13 +14,13 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.0.0');
+  ext = seal.ext.new('KP群汇总', 'er', '4.0.1');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1760729515;
+    return 1761224758;
 }
 
 // 提醒历史
@@ -356,7 +356,7 @@ const groupMap = {
 	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭",aliases: ["诡月奇谭"] },
 	"Snow Spine": { groupNumber: "1070979351",aliases: ["雪脊"] },
 	"梦里百花深处": { groupNumber: "490454774",aliases: ["梦花深"] },
-	
+	"rebay": { groupNumber: "334767023" },
 
 
 	
@@ -412,7 +412,7 @@ const groupMap = {
 	"The Moist Star": { groupNumber: "1035170762\n*下载" },
 	"缉邪司": { groupNumber: "884145991、876339982\n*下载/KP群", aliases: ["jxs"] },
 	"Stifle, and with hymn": { groupNumber: "1064285359、1062672838\n*下载/KP群", aliases: ["hymn"] },
-
+	"长天摘星": { groupNumber: "595926395" },
 
 
 	
@@ -440,7 +440,12 @@ const groupMap = {
 	"喵影奇谋": { groupNumber: "1047473677\n*喵影奇谋+赛博朋克RED+辐射",aliases: ["辐射", "赛博朋克RED"] },
 	"北欧奇谭": { groupNumber: "655192271" },
 	"双人搜查": { groupNumber: "616576634" },
+	"枪骑兵": { groupNumber: "702215091" },
 
+
+
+
+	
 
 	//其它
 	"翻译存放": { groupNumber: "1053204546、972416799、377896614、1040799893、317223427、1033917987、1043393781、872345826、1061035045、220150371\n*220150371韩模" },
@@ -467,7 +472,8 @@ const groupMap = {
 	"海龟汤": { groupNumber: "295820752" },
 
 	"时差": { groupNumber: "北美1057887916\n欧洲1054398710、602634416\n*602634416coj向" },
-	
+
+	"画手": { groupNumber: "1014072522\n跑团only画手稿群卫星群" },
 };
 
 // "": { groupNumber: "" },
