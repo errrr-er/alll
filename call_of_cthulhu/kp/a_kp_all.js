@@ -89,6 +89,9 @@ const groupMap = {
 	
 	// B
 	"BASH":{ groupNumber: "774156947", aliases: ["燃星"] },
+	"不死灭灭":{ groupNumber: "279755638" },
+	"不见蓬山": { groupNumber: "834893891" },
+	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
 	
 	// C
 	"GODARCA": { groupNumber: "869783432" },
@@ -97,6 +100,9 @@ const groupMap = {
     // D
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
+	"东京g":{ groupNumber: "201906582" },
+	"东京v": { groupNumber: "613821934" },
+	"东方快车上的恐怖": { groupNumber: "639753886", aliases: ["东快"] },
 	
 	// E
 	// F
@@ -130,6 +136,8 @@ const groupMap = {
 	"Snow Spine": { groupNumber: "1070979351", aliases: ["雪脊"] },
 	"ssk":{ groupNumber: "708231245" },
 	"SKT": { groupNumber: "376500876" },
+	"三尺之下": { groupNumber: "976406595" },
+	"三尺微命": { groupNumber: "1031833569*无作者" },
 	
 	// T
 	// U
@@ -140,13 +148,15 @@ const groupMap = {
 	
 	// W
 	"wts":{ groupNumber: "763188284" },
+	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	
 	// X
 	"X休止": { groupNumber: "623836728" },
+	"X告白": { groupNumber: "575451544" },
 	
 	// Y
 	// Z
-
+	"zinki": { groupNumber: "761916849" },
 	
 
 
