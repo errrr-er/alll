@@ -53,6 +53,7 @@ async function getGitHubVersion() {
         return null;
     } catch (error) {
         console.error('获取GitHub版本出错:', error);
+		// 前台输出提醒(不知道有没有用)
 		seal.replyToSender(ctx, msg, '获取GitHub版本出错:', error);
         throw error;
     }
