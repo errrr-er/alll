@@ -94,6 +94,7 @@ const groupMap = {
 	"不死灭灭":{ groupNumber: "279755638" },
 	"不见蓬山": { groupNumber: "834893891" },
 	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
+	"白影": { groupNumber: "825032832*下载+KP" },
 	
 	// C
 	"GODARCA": { groupNumber: "869783432" },
@@ -187,11 +188,11 @@ const groupMap = {
 
 
 	// 下载(混合)
-	"白影": { groupNumber: "825032832*下载+KP" },
-	"晨钟旧事": { groupNumber: "655068229\n*下载" },
-	"此夜不可离": { groupNumber: "522206940\n*下载" },
-	"孤岛恋综": { groupNumber: "932315790\n*下载" },
-	"魂夜逃避行": { groupNumber: "1046944266、1009337218\n*下载/KP群" },
+	
+	"晨钟旧事": { groupNumber: "655068229*下载" },
+	"此夜不可离": { groupNumber: "522206940*下载" },
+	"孤岛恋综": { groupNumber: "932315790*下载" },
+	"魂夜逃避行": { groupNumber: "1046944266*下载\n1009337218*KP" },
 	"极乐颂歌": { groupNumber: "701200710、967165493\n*下载/KP群" },
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289\n*下载", aliases: ["潮水"] },
 	"鲸落万物生": { groupNumber: "598393390、1051952972\n*下载/KP群", aliases: ["鲸落"] },
