@@ -474,6 +474,9 @@ const groupMap = {
 	"时差": { groupNumber: "北美1057887916\n欧洲1054398710、602634416\n*602634416coj向" },
 
 	"画手": { groupNumber: "1014072522\n跑团only画手稿群卫星群" },
+
+	"天师": { groupNumber: "587952595下载" },
+	"vamp": { groupNumber: "553675094" },
 };
 
 // "": { groupNumber: "" },
