@@ -131,7 +131,8 @@ const groupMap = {
 	"MTG世设": { groupNumber: "1043664376" },
 
 	// N
-	"nobody*2":{ groupNumber: "694908547", aliases: ["nbd"] },
+	"nobody":{ groupNumber: "694908547", aliases: ["nbd"] },
+	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
 	
 	// O
 	// P
@@ -175,10 +176,12 @@ const groupMap = {
 	// Y
 	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
+	"以撒的狂想曲": { groupNumber: "907783672" },
+	"伊卡洛斯的忠堰": { groupNumber: "749121463", aliases: ["伊卡忠"] },
 	
 	// Z
 	"zinki": { groupNumber: "761916849" },
-	
+	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
 
 
 
@@ -259,7 +262,7 @@ const groupMap = {
 	"枪骑兵": { groupNumber: "702215091" },
 	"insane": { groupNumber: "650600421" },
 
-
+"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
 
 	
 
@@ -296,10 +299,8 @@ const groupMap = {
 
 
 	
-	"以撒的狂想曲": { groupNumber: "907783672" },
-	"伊卡忠": { groupNumber: "749121463" },
-	"伊卡洛斯的忠堰": { groupNumber: "749121463" },
-	"众妙之门": { groupNumber: "785654926" },
+	
+	
 	"伪装者": { groupNumber: "965809145" },
 	"似人非人": { groupNumber: "869916259" },
 	"你是谁？请支持百日○纪！": { groupNumber: "1057449882", aliases: ["百日"] },
@@ -462,7 +463,7 @@ const groupMap = {
 	"耀光城": { groupNumber: "728536185" },
 	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
 	"胜率制圣杯": { groupNumber: "535057473" },
-	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
+	
 	"舞榭歌台": { groupNumber: "147313715" },
 	"艺术是死": { groupNumber: "902444229" },
 	"芝加哥之王": { groupNumber: "559366167" },
@@ -507,7 +508,7 @@ const groupMap = {
 	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
 	"魔女与彩爱": { groupNumber: "421693159" },
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
-	"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
+	
 	"鳞翅": { groupNumber: "963578553" },
 	"鸦阁领域": { groupNumber: "836306797" },
 	"黄昏熔解":{ groupNumber: "826823719" },
