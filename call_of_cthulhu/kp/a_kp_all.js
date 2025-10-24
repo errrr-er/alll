@@ -88,6 +88,7 @@ const groupMap = {
 	"ABS": { groupNumber: "941349942" },
 	"AIB":{ groupNumber: "112077093" },
 	"Antinomy": { groupNumber: "101476385" },
+	"哀歌弥赛亚":{ groupNumber: "609355937", aliases: ["哀歌"] },
 	
 	// B
 	"BASH":{ groupNumber: "774156947", aliases: ["燃星"] },
@@ -95,6 +96,10 @@ const groupMap = {
 	"不见蓬山": { groupNumber: "834893891" },
 	"不辜马戏团":{ groupNumber: "759642443", aliases: ["不辜"] },
 	"白影": { groupNumber: "825032832*下载+KP" },
+	"冰风谷": { groupNumber: "537262507" },
+	"别来无恙": { groupNumber: "907810853" },
+	"北东路疑案": { groupNumber: "953349303" },
+	"博德之门的英雄们": { groupNumber: "1005326913" },
 	
 	// C
 	"GODARCA": { groupNumber: "869783432" },
@@ -134,6 +139,7 @@ const groupMap = {
 	// N
 	"nobody":{ groupNumber: "694908547", aliases: ["nbd"] },
 	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
+	"你是谁？请支持百日○纪！": { groupNumber: "1057449882", aliases: ["百日"] },
 	
 	// O
 	// P
@@ -141,6 +147,8 @@ const groupMap = {
 
 	// Q
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
+	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
+	"全蓝综合征": { groupNumber: "941349942" },
 	
 	// R
 	"reaby": { groupNumber: "334767023" },
@@ -154,8 +162,18 @@ const groupMap = {
 	"SKT": { groupNumber: "376500876" },
 	"三尺之下": { groupNumber: "976406595" },
 	"三尺微命": { groupNumber: "1031833569*无作者" },
+	"似人非人": { groupNumber: "869916259" },
+	"升平世旧": { groupNumber: "1041314728" },
+	"圣土遗梦": { groupNumber: "146415338" },
+	"圣餐":{ groupNumber: "659334919" },
 	
 	// T
+	"天命所归": { groupNumber: "875210475" },
+	"天地一灯": { groupNumber: "974274779" },
+	"天椎谶纬": { groupNumber: "656026457" },
+	"天衍剧组": { groupNumber: "637230426" },
+	"天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
+	
 	// U
 	// V
 	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
@@ -168,11 +186,16 @@ const groupMap = {
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	"为谢幕献上祝福的齿轮":{ groupNumber: "714364138", aliases: ["齿轮"] },
 	"乌洛波洛斯的末日巡演": { groupNumber: "451471718" },
+	"伪装者": { groupNumber: "965809145" },
+	"午夜的沙": { groupNumber: "864767076" },
 	
 	// X
 	"X休止": { groupNumber: "623836728" },
 	"X告白": { groupNumber: "575451544" },
 	"仙人抚顶": { groupNumber: "1056213411" },
+	"侠界之旅": { groupNumber: "210679492" },
+	"侠骨生花": { groupNumber: "617241018" },
+
 	
 	// Y
 	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
@@ -183,6 +206,7 @@ const groupMap = {
 	// Z
 	"zinki": { groupNumber: "761916849" },
 	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
+	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
 
 
 
@@ -236,34 +260,33 @@ const groupMap = {
 
 
 	
-	//规则
-	"恋爱党政trpg": { groupNumber: "263776524" },
-	"永7trpg": { groupNumber: "1092736604" },
+	// 规则
+	"恋爱党政": { groupNumber: "263776524" },
+	"永7": { groupNumber: "1092736604" },
 	"星升": { groupNumber: "872362745" },
 	"三角机构": { groupNumber: "1056836484" },
 	"GURPS": { groupNumber: "577412220" },
-	"WWRPG": { groupNumber: "818401752\n*全名Wizarding World", aliases: ["Wizarding World"] },
+	"WWRPG": { groupNumber: "818401752", aliases: ["Wizarding World"] },
 	"匕首之心": { groupNumber: "791858682、583981590" },
 	"逆命仙途": { groupNumber: "796368505" },
 	"brp": { groupNumber: "788438516" },
 	"赛博朋克d20": { groupNumber: "135248365、283334218" },
 	"小众规则综合群": { groupNumber: "945728295" },
 	"剪月集": { groupNumber: "631939804" },
-	"武侠克苏鲁woc": { groupNumber: "524086123" },
-	"克苏鲁迷踪TOC": { groupNumber: "780909682" },
+	"武侠克苏鲁woc": { groupNumber: "524086123", aliases: ["woc"] },
+	"克苏鲁迷踪toc": { groupNumber: "780909682", aliases: ["toc"] },
 	"星海迷城": { groupNumber: "719566794" },
 	"SPC基金会": { groupNumber: "602431810" },
 	"魔道书": { groupNumber: "759960406" },
 	"共鸣性怪异": { groupNumber: "903173796" },
 	"罗小黑": { groupNumber: "687753523" },
-	"pathfinder 2e": { groupNumber: "695214825\n*全名pathfinder 2e", aliases: ["pf2"] },
-	"喵影奇谋": { groupNumber: "1047473677\n*喵影奇谋+赛博朋克RED+辐射", aliases: ["辐射", "赛博朋克RED"] },
+	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
+	"喵影奇谋": { groupNumber: "1047473677*喵影奇谋+赛博朋克RED+辐射", aliases: ["辐射", "赛博朋克RED"] },
 	"北欧奇谭": { groupNumber: "655192271" },
 	"双人搜查": { groupNumber: "616576634" },
 	"枪骑兵": { groupNumber: "702215091" },
 	"insane": { groupNumber: "650600421" },
-
-"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
+	"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
 
 	
 
@@ -302,41 +325,34 @@ const groupMap = {
 	
 	
 	
-	"伪装者": { groupNumber: "965809145" },
-	"似人非人": { groupNumber: "869916259" },
-	"你是谁？请支持百日○纪！": { groupNumber: "1057449882", aliases: ["百日"] },
-	"侠界之旅": { groupNumber: "210679492" },
-	"侠骨生花": { groupNumber: "617241018" },
-	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
-	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
-	"全蓝综合征": { groupNumber: "941349942" },
-	"冰风谷": { groupNumber: "537262507" },
+	
+	
+	
+	"双重十字": { groupNumber: "651709429" },
+	
+	
+	
+	
 	"凤去台空江自流": { groupNumber: "979768022、985261346\n瑰绿的决心+天地熔金+凤去台空江自流+人间烟火+问天地\n*下载", aliases: ["瑰绿的决心", "天地熔金", "人间烟火", "问天地"] },
 	"列文菲舍变例": { groupNumber: "1040678581" },
-	"别来无恙": { groupNumber: "907810853" },
-	"北东路疑案": { groupNumber: "953349303" },
-	"升平世旧": { groupNumber: "1041314728" },
-	"午夜的沙": { groupNumber: "864767076" },
-	"博德之门的英雄们": { groupNumber: "1005326913" },
+	
 	"卡镇": { groupNumber: "297175538" },
-	"双重十字": { groupNumber: "651709429" },
+	
+	
+	
+	
 	"吹笛子的海獭": { groupNumber: "468213532" },
 	"告密者": { groupNumber: "623768354" },
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
 	"命运转轮": { groupNumber: "241837204" },
-	"哀歌弥赛亚":{ groupNumber: "609355937", aliases: ["哀歌"] },
+	
 	"哑蝉的剖白":{ groupNumber: "613231813", aliases: ["哑蝉"] },
-	"圣土遗梦": { groupNumber: "146415338" },
-	"圣餐":{ groupNumber: "659334919" },
+	
 	"坠入阿弗纳斯": { groupNumber: "223713820" },
 	"夕妖晚谣": { groupNumber: "746417676" },
 	"多灾多难梵达林": { groupNumber: "570879430\n*矿坑+冰塔峰+风暴君王?+风骸岛?", aliases: ["矿坑", "冰塔峰", "风暴君王","风骸岛"] },
 	"天下第一刀": { groupNumber: "369645861、369645861\n*有/无作者" },
-	"天命所归": { groupNumber: "875210475" },
-	"天地一灯": { groupNumber: "974274779" },
-	"天椎谶纬": { groupNumber: "656026457" },
-	"天衍剧组": { groupNumber: "637230426" },
-	"天衍纪年":{ groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
+	
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"奈面": { groupNumber: "933493427" },
 	"妄想症": { groupNumber: "278636978" },
