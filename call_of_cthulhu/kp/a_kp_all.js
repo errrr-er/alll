@@ -295,6 +295,9 @@ const groupMap = {
 	"画手": { groupNumber: "1014072522\n跑团only画手稿群卫星群" },
 
 	"天师": { groupNumber: "587952595下载" },
+
+
+
 	
 	"以撒的狂想曲": { groupNumber: "907783672" },
 	"伊卡忠": { groupNumber: "749121463" },
