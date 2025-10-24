@@ -89,6 +89,8 @@ const groupMap = {
 	"AIB":{ groupNumber: "112077093" },
 	"Antinomy": { groupNumber: "101476385" },
 	"哀歌弥赛亚":{ groupNumber: "609355937", aliases: ["哀歌"] },
+	"暗影狂奔": { groupNumber: "245525828" },
+	"暗河": { groupNumber: "1031974789" },
 	
 	// B
 	"BASH":{ groupNumber: "774156947", aliases: ["燃星"] },
@@ -101,13 +103,22 @@ const groupMap = {
 	"北东路疑案": { groupNumber: "953349303" },
 	"博德之门的英雄们": { groupNumber: "1005326913" },
 	"彼都": { groupNumber: "952122633" },
+	"匕首之心": { groupNumber: "791858682、583981590" },
+	"brp": { groupNumber: "788438516" },
+	"北欧奇谭": { groupNumber: "655192271" },
 	
 	// C
 	"GODARCA": { groupNumber: "869783432" },
 	"GinGin": { groupNumber: "1035861353" },
 	"吹笛子的海獭": { groupNumber: "468213532" },
 	"常夜国骑士谭:真祖红舞曲": { groupNumber: "769437181" },
-	
+	"此夜不可离": { groupNumber: "522206940*下载" },
+	"晨钟旧事": { groupNumber: "655068229*下载" },
+	"CandelaObscura": { groupNumber: "1053180006*下载\n1049162012*GM", aliases: ["暗烛"] },
+	"长天摘星": { groupNumber: "595926395" },
+	"抽刀": { groupNumber: "1057856638" },
+	"春花秋月": { groupNumber: "813932679" },
+
     // D
 	"dear-flip-flops":{ groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
@@ -117,7 +128,10 @@ const groupMap = {
 	"代号行者":{ groupNumber: "433389798" },
 	"多灾多难梵达林": { groupNumber: "570879430\n矿坑+冰塔峰+风暴君王?+风骸岛?", aliases: ["矿坑", "冰塔峰", "风暴君王","风骸岛"] },
 	"德拉肯海姆之墟": { groupNumber: "856703297" },
-	
+	"渡仙劫": { groupNumber: "634208409" },
+	"渡圆之": { groupNumber: "953195114" },
+	"渡春风":{ groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
+
 	// E
 	"二重身的证迹": { groupNumber: "285230351" },
 	"恶辣":{ groupNumber: "620832218" },
@@ -132,28 +146,55 @@ const groupMap = {
 	"孤灯弃城": { groupNumber: "877858567" },
 	"怪物们与邪典仙境":{ groupNumber: "592577986", aliases: ["鞋垫"] },
 	"怪胎": { groupNumber: "639870851" },
+	"孤岛恋综": { groupNumber: "932315790*下载" },
+	"GURPS": { groupNumber: "577412220" },
+	"共鸣性怪异": { groupNumber: "903173796" },
 	
 	// H
 	"H:tv": { groupNumber: "684526713" },
 	"还来不见仙": { groupNumber: "590220813*反馈\n984420519*KP" },
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
-	
+	"魂夜逃避行": { groupNumber: "1046944266*下载\n1009337218*KP" },
+	"化作海上之雨": { groupNumber: "399589228*下载", aliases: ["海雨"] },
+	"合欢宗遇上无情道": { groupNumber: "1048818266*下载" },
+	"海国战役设定集": { groupNumber: "567135881" },
+	"海盗之宴": { groupNumber: "1062169852" },
+	"海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
+
 	// I
+	"insane": { groupNumber: "650600421" },
+
 	// J
 	"举头三尺": { groupNumber: "334821036" },
 	"今古空名": { groupNumber: "962147366" },
 	"巨龙迷城": { groupNumber: "1057192428" },
-	
+	"极乐颂歌": { groupNumber: "701200710*下载\n967165493*KP" },
+	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289*下载", aliases: ["潮水"] },
+	"鲸落万物生": { groupNumber: "598393390*下载\n1051952972*KP", aliases: ["鲸落"] },
+	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911*下载", aliases: ["钟表"] },
+	"缉邪司": { groupNumber: "884145991*下载\n876339982*KP", aliases: ["jxs"] },
+	"剪月集": { groupNumber: "631939804" },
+
 	// K
 	"卡镇": { groupNumber: "297175538" },
 	"快刀乱魔":{ groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰":{ groupNumber: "417453795", aliases: ["快刀2"] },
 	"恐怖墓穴": { groupNumber: "329392650" },
-	
+	"空箱间": { groupNumber: "858801418*下载\n1044331385*KP" },
+	"坤元劫": { groupNumber: "954535020*下载\n862291565*KP", aliases: ["kyj"] },
+	"克苏鲁迷踪toc": { groupNumber: "780909682", aliases: ["toc"] },
+
 	// L
 	"乐园在海底": { groupNumber: "641157488" },
 	"列文菲舍变例": { groupNumber: "1040678581" },
-	
+	"来到这里的你们放弃希望吧": { groupNumber: "939600700*下载\n1047069694*KP", aliases: ["十二字"] },
+	"流浪武士": { groupNumber: "994791183*下载" },
+	"绿月": { groupNumber: "1064264349*下载" },
+	"恋爱党政": { groupNumber: "263776524" },
+	"罗小黑": { groupNumber: "687753523" },
+	"拉普拉斯": { groupNumber: "1050071534" },
+	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅捕", "吕布"] },
+
 	// M
 	"magnificas":{ groupNumber: "477317221", aliases: ["mag"] },
 	"moon cell":{ groupNumber: "817071819" },
@@ -161,28 +202,45 @@ const groupMap = {
 	"命运转轮": { groupNumber: "241837204" },
 	"幕临": { groupNumber: "160438930" },
 	"弥勒佛Mythras": { groupNumber: "316394180" },
+	"魔道书": { groupNumber: "759960406" },
+	"喵影奇谋": { groupNumber: "1047473677\n喵影奇谋+赛博朋克RED+辐射", aliases: ["辐射", "赛博朋克RED"] },
+	"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
+	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春", "mjzc"] },
+	"末日剑湾": { groupNumber: "812018837" },
 
 	// N
 	"nobody":{ groupNumber: "694908547", aliases: ["nbd"] },
 	"脓堕":{ groupNumber: "183186533", aliases: ["nd"] },
 	"你是谁？请支持百日○纪！": { groupNumber: "1057449882", aliases: ["百日"] },
 	"奈面": { groupNumber: "933493427" },
+	"逆命仙途": { groupNumber: "796368505" },
 	
 	// O
+	"one way straight": { groupNumber: "978645254*下载" },
+
 	// P
 	"帕瑞卡颂马戏团": { groupNumber: "760671074" },
 	"PAC": { groupNumber: "720930120" },
+	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 
 	// Q
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
 	"全景敞视主义的陷阱":{ groupNumber: "792650936" },
 	"全蓝综合征": { groupNumber: "941349942" },
-	
+	"弃约社会": { groupNumber: "972643133*下载\n916122224*KP" },
+	"恰故人归": { groupNumber: "939600700*下载\n607468653*KP" },
+	"求我": { groupNumber: "338494770*下载\n979194858*下载\n978495486*KP" },
+	"枪骑兵": { groupNumber: "702215091" },
+	"求不得": { groupNumber: "887012952" },
+	"求道": { groupNumber: "983418886" },
+
 	// R
 	"reaby": { groupNumber: "334767023" },
 	"ROP": { groupNumber: "783947110*有作者\n780307937*无作者" },
 	"人生restart": { groupNumber: "537691966" },
 	"忍神": { groupNumber: "750542419、866506419" },
+	"如此渺小的橡果": { groupNumber: "827206593*下载\n264764228*KP" },
+	"人间见闻录": { groupNumber: "921349225*下载" },
 
 	// S
 	"Sillage香水屋": { groupNumber: "921302134", aliases: ["Sillage", "香水屋"] },
@@ -200,7 +258,19 @@ const groupMap = {
 	"属于吾等的安乐之所":{ groupNumber: "826771926" },
 	"山歌唤梦": { groupNumber: "972586937" },
 	"双重十字": { groupNumber: "651709429" },
-	
+	"神明起舞之日": { groupNumber: "494739702*下载+KP" },
+	"石榴": { groupNumber: "1063443035*下载" },
+	"Stifle, and with hymn": { groupNumber: "1064285359*下载\n1062672838*KP", aliases: ["hymn"] },
+	"三角机构": { groupNumber: "1056836484" },
+	"赛博朋克d20": { groupNumber: "135248365、283334218" },
+	"SPC基金会": { groupNumber: "602431810" },
+	"双人搜查": { groupNumber: "616576634" },
+	"斯坦哈德": { groupNumber: "929033286" },
+	"斯特拉德的诅咒": { groupNumber: "824773454" },
+	"朔月笔谈": { groupNumber: "825664784" },
+	"死刑执行": { groupNumber: "830833837" },
+	"死神的圣域": { groupNumber: "1028029280" },
+
 	// T
 	"天命所归": { groupNumber: "875210475" },
 	"天地一灯": { groupNumber: "974274779" },
@@ -210,6 +280,11 @@ const groupMap = {
 	"天下第一刀": { groupNumber: "369645861*有作者\n369645861*无作者" },
 	"庭师所吟为何物":{ groupNumber: "656434498", aliases: ["庭师"] },
 	"天师": { groupNumber: "587952595*下载" },
+	"太岁": { groupNumber: "615878940*下载\n703542083*KP" },
+	"the name": { groupNumber: "324809275*下载", aliases: ["遗书"] },
+	"讨债鬼": { groupNumber: "973867121*下载" },
+	"The Moist Star": { groupNumber: "1035170762*下载" },
+	"提灯铁鼠": { groupNumber: "882067951" },
 	
 	// U
 	// V
@@ -217,8 +292,10 @@ const groupMap = {
 	"ventangle": { groupNumber: "754138533" },
 	"void":{ groupNumber: "1170037255" },
 	"vamp": { groupNumber: "553675094" },
+	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
+	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载", aliases: ["可可"] },
 	"wts":{ groupNumber: "763188284" },
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	"为谢幕献上祝福的齿轮":{ groupNumber: "714364138", aliases: ["齿轮"] },
@@ -234,7 +311,12 @@ const groupMap = {
 	"无名集": { groupNumber: "663572400" },
 	"无声二重唱": { groupNumber: "965715801" },
 	"无限": { groupNumber: "301122594" },
-	
+	"无罪之歌": { groupNumber: "1018018649*下载" },
+	"WWRPG": { groupNumber: "818401752", aliases: ["Wizarding World"] },
+	"武侠克苏鲁woc": { groupNumber: "524086123", aliases: ["woc"] },
+	"望君长留": { groupNumber: "700583235" },
+	"未交予的落白": { groupNumber: "1007853163" },
+
 	// X
 	"心脏": { groupNumber: "883465896*无全译本" },
 	"X休止": { groupNumber: "623836728" },
@@ -245,7 +327,15 @@ const groupMap = {
 	"夕妖晚谣": { groupNumber: "746417676" },
 	"幸福与心动的民谣": { groupNumber: "1036780211" },
 	"戏法师的感知": { groupNumber: "144919125" },
-	
+	"星海孤舟": { groupNumber: "657774576*下载" },
+	"雪域下的黄金宝藏": { groupNumber: "527406942*下载" },
+	"寻仙I神仙索": { groupNumber: "746673328*下载\n寻仙I神仙索+寻仙II观音土", aliases: ["寻仙II观音土", "寻仙"] },
+	"星升": { groupNumber: "872362745" },
+	"小众规则综合": { groupNumber: "945728295" },
+	"星海迷城": { groupNumber: "719566794" },
+	"新世界": { groupNumber: "943798191" },
+	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
+
 	// Y
 	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
@@ -258,17 +348,33 @@ const groupMap = {
 	"异神成渊": { groupNumber: "916464615" },
 	"异能警察不是什么英雄": { groupNumber: "873824063" },
 	"愚者的祈雨": { groupNumber: "1062832797" },
-	
+	"一梦": { groupNumber: "431528579*下载+KP" },
+	"异能儿童管理机构": { groupNumber: "786412774*下载\n817252450*KP" },
+	"应天劫": { groupNumber: "231734390*下载\n2811466327*墙" },
+	"玉台新薤": { groupNumber: "881091572*交流\n439862498*KP" },
+	"冤缘远怨": { groupNumber: "1033066580*下载" },
+	"永7": { groupNumber: "1092736604" },
+	"摇曳群青": { groupNumber: "513712312" },
+	"月蜂": { groupNumber: "110208332" },
+	"月计": { groupNumber: "702203298" },
+	"永夜后日谈": { groupNumber: "710242752" },
+	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
+
 	// Z
 	"zinki": { groupNumber: "761916849" },
 	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
 	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
 	"坠入阿弗纳斯": { groupNumber: "223713820" },
 	"左川之国失落谭":{ groupNumber: "770779991", aliases: ["左川"] },
+	"再见新世界": { groupNumber: "1004914022*下载" },
+	"掌中雪": { groupNumber: "860685448*下载" },
+	"战争神谕": { groupNumber: "413947504" },
+	"斩我": { groupNumber: "776965370" },
 
 	// 非强关联
 	"画手": { groupNumber: "1014072522" },
 	"log": { groupNumber: "675664988*存放\n985865497*整理" },
+	"文手": { groupNumber: "512451066" },
 	"写作": { groupNumber: "734417134*纯女\n761666326*coj" },
 	"翻译": { groupNumber: "1053204546、972416799、377896614、1040799893、317223427、1033917987、1043393781、872345826、1061035045、220150371*韩模" },
 
@@ -304,168 +410,7 @@ const groupMap = {
 
 	// 后面都是还没排序的
 
-	// c
-	"晨钟旧事": { groupNumber: "655068229*下载" },
-	"此夜不可离": { groupNumber: "522206940*下载" },
-	
-	// g
-	"孤岛恋综": { groupNumber: "932315790*下载" },
-	
-	// h
-	"魂夜逃避行": { groupNumber: "1046944266*下载\n1009337218*KP" },
 
-	// j
-	"极乐颂歌": { groupNumber: "701200710*下载\n967165493*KP" },
-	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289*下载", aliases: ["潮水"] },
-	"鲸落万物生": { groupNumber: "598393390*下载\n1051952972*KP", aliases: ["鲸落"] },
-
-	// k
-	"空箱间": { groupNumber: "858801418*下载\n1044331385*KP" },
-	"坤元劫": { groupNumber: "954535020*下载\n862291565*KP", aliases: ["kyj"] },
-	
-	"来到这里的你们放弃希望吧": { groupNumber: "939600700*下载\n1047069694*KP" },
-	"流浪武士": { groupNumber: "994791183*下载" },
-	
-	"弃约社会": { groupNumber: "972643133*下载\n916122224*KP" },
-	"恰故人归": { groupNumber: "939600700*下载\n607468653*KP" },
-	"求我": { groupNumber: "338494770*下载\n979194858*下载\n978495486*KP" },
-	
-	"如此渺小的橡果": { groupNumber: "827206593*下载\n264764228*KP" },
-	
-	"神明起舞之日": { groupNumber: "494739702*下载+KP" },
-
-
-
-
-
-
-
-	
-	"太岁": { groupNumber: "615878940、703542083\n*下载/KP群" },
-	"星海孤舟": { groupNumber: "657774576\n*下载" },
-	"雪域下的黄金宝藏": { groupNumber: "527406942\n*下载\n*仅限扫码" },
-	"寻仙I神仙索": { groupNumber: "746673328\n寻仙I神仙索+寻仙II观音土\n*下载", aliases: ["寻仙II观音土"] },
-	"一梦": { groupNumber: "431528579\n*下载+KP群" },
-	"异能儿童管理机构": { groupNumber: "786412774、817252450\n*下载/KP群(仅扫码)" },
-	"应天劫": { groupNumber: "231734390/2811466327\n*下载/墙" },
-	"玉台新薤": { groupNumber: "881091572、439862498\n*交流/KP群" },
-	"再见新世界": { groupNumber: "1004914022\n*下载" },
-	"掌中雪": { groupNumber: "860685448\n*下载" },
-	"CandelaObscura": { groupNumber: "1053180006、1049162012\n*下载/GM群", aliases: ["暗烛"] },
-	"one way straight": { groupNumber: "978645254\n*下载" },
-	"the name": { groupNumber: "324809275\n*下载", aliases: ["遗书"] },
-	"人间见闻录": { groupNumber: "921349225\n*下载" },
-	"冤缘远怨": { groupNumber: "1033066580\n*下载" },
-	"讨债鬼": { groupNumber: "973867121\n*下载" },
-	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911\n*下载", aliases: ["钟表"] },
-	"化作海上之雨": { groupNumber: "399589228\n*下载", aliases: ["海雨"] },
-	"VirtuaLive": { groupNumber: "664998654\n*下载" },
-	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591\n*下载", aliases: ["可可"] },
-	"石榴": { groupNumber: "1063443035\n*下载" },
-	"无罪之歌": { groupNumber: "1018018649\n*下载" },
-	"合欢宗遇上无情道": { groupNumber: "1048818266\n*下载" },
-	"绿月": { groupNumber: "1064264349\n*下载" },
-	"The Moist Star": { groupNumber: "1035170762\n*下载" },
-	"缉邪司": { groupNumber: "884145991、876339982\n*下载/KP群", aliases: ["jxs"] },
-	"Stifle, and with hymn": { groupNumber: "1064285359、1062672838\n*下载/KP群", aliases: ["hymn"] },
-	"长天摘星": { groupNumber: "595926395" },
-
-
-	
-	// 规则
-	"恋爱党政": { groupNumber: "263776524" },
-	"永7": { groupNumber: "1092736604" },
-	"星升": { groupNumber: "872362745" },
-	"三角机构": { groupNumber: "1056836484" },
-	"GURPS": { groupNumber: "577412220" },
-	"WWRPG": { groupNumber: "818401752", aliases: ["Wizarding World"] },
-	"匕首之心": { groupNumber: "791858682、583981590" },
-	"逆命仙途": { groupNumber: "796368505" },
-	"brp": { groupNumber: "788438516" },
-	"赛博朋克d20": { groupNumber: "135248365、283334218" },
-	"小众规则综合群": { groupNumber: "945728295" },
-	"剪月集": { groupNumber: "631939804" },
-	"武侠克苏鲁woc": { groupNumber: "524086123", aliases: ["woc"] },
-	"克苏鲁迷踪toc": { groupNumber: "780909682", aliases: ["toc"] },
-	"星海迷城": { groupNumber: "719566794" },
-	"SPC基金会": { groupNumber: "602431810" },
-	"魔道书": { groupNumber: "759960406" },
-	"共鸣性怪异": { groupNumber: "903173796" },
-	"罗小黑": { groupNumber: "687753523" },
-	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
-	"喵影奇谋": { groupNumber: "1047473677*喵影奇谋+赛博朋克RED+辐射", aliases: ["辐射", "赛博朋克RED"] },
-	"北欧奇谭": { groupNumber: "655192271" },
-	"双人搜查": { groupNumber: "616576634" },
-	"枪骑兵": { groupNumber: "702215091" },
-	"insane": { groupNumber: "650600421" },
-	"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
-
-	
-
-	//其它
-
-
-	
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-	
-
-
-	"战争神谕": { groupNumber: "413947504" },
-	"抽刀": { groupNumber: "1057856638" },
-	"拉普拉斯": { groupNumber: "1050071534" },
-	"提灯铁鼠": { groupNumber: "882067951" },
-	"摇曳群青": { groupNumber: "513712312" },
-	"文手": { groupNumber: "512451066" },
-	"斩我": { groupNumber: "776965370" },
-	"斯坦哈德": { groupNumber: "929033286" },
-	"斯特拉德的诅咒": { groupNumber: "824773454" },
-	"新世界": { groupNumber: "943798191" },
-	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
-	"旅馆的捕食者":{ groupNumber: "884768719", aliases: ["旅捕", "吕布"] },
-	
-	"明镜，仿佛可以斩断春天":{ groupNumber: "921034670", aliases: ["明镜斩春", "mjzc"] },
-	"春花秋月": { groupNumber: "813932679" },
-	"暗影狂奔": { groupNumber: "245525828" },
-	"暗河": { groupNumber: "1031974789" },
-	"月蜂": { groupNumber: "110208332" },
-	"月计": { groupNumber: "702203298" },
-	"朔月笔谈": { groupNumber: "825664784" },
-	"望君长留": { groupNumber: "700583235" },
-	"未交予的落白": { groupNumber: "1007853163" },
-	"末日剑湾": { groupNumber: "812018837" },
 	"柏拉图的余谈": { groupNumber: "574918635" },
 	"染色空白卡": { groupNumber: "657347350" },
 	"树不子英雄传": { groupNumber: "960918320", aliases: ["RWBY"] },
@@ -473,33 +418,25 @@ const groupMap = {
 	"梦里百花深处": { groupNumber: "490454774", aliases: ["梦花深"] },
 	"棉花不谢": { groupNumber: "1038645659" },
 	"欲望之箱":{ groupNumber: "739976718" },
-	"歌味觉死": { groupNumber: "616756545\n*路易斯安那系列+畅梦人+淤泥之花与空心石" },
+	"歌味觉死": { groupNumber: "616756545\n路易斯安那系列+畅梦人+淤泥之花与空心石" },
 	"正伪的ideal": { groupNumber: "667098598" },
-	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭", aliases: ["诡月奇谭"] },
-	"死刑执行": { groupNumber: "830833837" },
-	"死神的圣域": { groupNumber: "1028029280" },
+	"歪月": { groupNumber: "339403801\n歪月+诡月奇谭", aliases: ["诡月奇谭"] },
+
 	"残败桃源": { groupNumber: "2154036156" },
 	"毁灭亲王": { groupNumber: "882887120" },
-	"永夜后日谈": { groupNumber: "710242752" },
-	"永虹灰归的Polis":{ groupNumber: "696523899", aliases: ["永虹"] },
-	"求不得": { groupNumber: "887012952" },
-	"求道": { groupNumber: "983418886" },
+
+
 	"沧渺山":{ groupNumber: "855215735", aliases: ["cms"] },
 	"油盐不进":{ groupNumber: "575319883" },
 	"沼泽人":{ groupNumber: "913354882" },
 	"流水线心脏": { groupNumber: "793350464" },
 	"浮生安梦": { groupNumber: "881234029" },
 	"海·在遗忘之前的晴天": { groupNumber: "710881226", aliases: ["晴天"] },
-	"海国战役设定集": { groupNumber: "567135881" },
-	"海盗之宴": { groupNumber: "1062169852" },
-	"海盗啊海盗":{ groupNumber: "928270526", aliases: ["海盗"] },
+
 	"深眠雾梦": { groupNumber: "523093958" },
 	"清平乐": { groupNumber: "814959956" },
-	"渡仙劫": { groupNumber: "634208409" },
-	"渡圆之": { groupNumber: "953195114" },
-	"渡春风":{ groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
+
 	"游龙之年": { groupNumber: "693371984" },
-	"游龙之年组": { groupNumber: "693371984" },
 	"湮灭之墓": { groupNumber: "868114556" },
 	"溟渊的呼唤": { groupNumber: "431242151" },
 	"演绎&本我":{ groupNumber: "583290817", aliases: ["yybw"] },
@@ -516,7 +453,7 @@ const groupMap = {
 	"白玉风会录": { groupNumber: "942449479" },
 	"盐沼幽魂": { groupNumber: "926412005" },
 	"相约98": { groupNumber: "542398417" },
-	"神话时代": { groupNumber: "316394180\n*无全译本" },
+	"神话时代": { groupNumber: "316394180*无全译本" },
 	"祭日颂": { groupNumber: "717598559" },
 	"秋永录":{ groupNumber: "922420972、712714985", aliases: ["yql"] },
 	"纯阳轶事": { groupNumber: "977656290" },
@@ -528,7 +465,6 @@ const groupMap = {
 	"耀光城": { groupNumber: "728536185" },
 	"肥皂学校":{ groupNumber: "980188286", aliases: ["肥皂", "皂校"] },
 	"胜率制圣杯": { groupNumber: "535057473" },
-	
 	"舞榭歌台": { groupNumber: "147313715" },
 	"艺术是死": { groupNumber: "902444229" },
 	"芝加哥之王": { groupNumber: "559366167" },
@@ -570,10 +506,9 @@ const groupMap = {
 	"非正经修仙": { groupNumber: "645560269" },
 	"面包骑士物语": { groupNumber: "951729026" },
 	"革命少女罗丹斯": { groupNumber: "641481529" },
-	"高塔之死": { groupNumber: "623768354\n*战役集KP群" },
+	"高塔之死": { groupNumber: "623768354*战役集" },
 	"魔女与彩爱": { groupNumber: "421693159" },
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
-	
 	"鳞翅": { groupNumber: "963578553" },
 	"鸦阁领域": { groupNumber: "836306797" },
 	"黄昏熔解":{ groupNumber: "826823719" },
@@ -582,7 +517,7 @@ const groupMap = {
 	"黑幕圣杯": { groupNumber: "602145072" },
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
 	"龙后之影": { groupNumber: "595576485" },
-	"龙后的宝山": { groupNumber: "343516463\n*龙后的宝山+提亚马特的崛起", aliases: ["提亚马特的崛起"] },
+	"龙后的宝山": { groupNumber: "343516463\n龙后的宝山+提亚马特的崛起", aliases: ["提亚马特的崛起"] },
 	"龙滨不良": { groupNumber: "597585029", aliases: ["lbbl"] },
 	"龙王的奥德赛": { groupNumber: "238873224" },
 	"龙蛋物语": { groupNumber: "772645004" },
@@ -717,7 +652,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
         checkUpdateOnce(ctx, msg, userId).catch(console.error);
     }
     
-    // help命令
+    // 命令help
     if (input === 'help' || input === '') {
         ret.showHelp = true;
         return ret;
@@ -725,7 +660,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
 
     // 列出所有群组
     if (input.toLowerCase() === 'list') {
-        const listText = `所有KP群信息:\n${generateGroupList()}\n\n请以图片里的为准，有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
+        const listText = `所有KP群信息:\n${generateGroupList()}\n\n图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
         seal.replyToSender(ctx, msg, listText);
         return ret;
     }
@@ -742,7 +677,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
-            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
+            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，请先检查插件是否为最新版，接着使用 .kp list 查看所有群组(超长慎用)，或进2150284119反馈。`);
         }
         return ret;
     }
@@ -788,7 +723,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
-            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，使用 .kp list 查看所有群组，或进2150284119反馈。`);
+            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，请先检查插件是否为最新版，接着使用 .kp list 查看所有群组(超长慎用)，或进2150284119反馈。`);
         }
     } else {
         // 精确匹配输出
