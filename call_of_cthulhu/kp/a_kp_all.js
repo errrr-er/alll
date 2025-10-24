@@ -105,6 +105,8 @@ const groupMap = {
 	"东方快车上的恐怖": { groupNumber: "639753886", aliases: ["东快"] },
 	
 	// E
+	"二重身的证迹": { groupNumber: "285230351" },
+	
 	// F
 	// G
 	// H
@@ -112,8 +114,13 @@ const groupMap = {
 	
 	// I
 	// J
+	"举头三尺": { groupNumber: "334821036" },
+	"今古空名": { groupNumber: "962147366" },
+	
 	// K
 	// L
+	"乐园在海底": { groupNumber: "641157488" },
+	
 	// M
 	"magnificas":{ groupNumber: "477317221", aliases: ["mag"] },
 	"moon cell":{ groupNumber: "817071819" },
@@ -127,9 +134,12 @@ const groupMap = {
 	"PAC": { groupNumber: "720930120" },
 
 	// Q
+	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
+	
 	// R
 	"reaby": { groupNumber: "334767023" },
 	"ROP": { groupNumber: "783947110*有作者\n780307937*无作者" },
+	"人生restart": { groupNumber: "537691966" },
 
 	// S
 	"Sillage香水屋": { groupNumber: "921302134", aliases: ["Sillage", "香水屋"] },
@@ -149,12 +159,17 @@ const groupMap = {
 	// W
 	"wts":{ groupNumber: "763188284" },
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
+	"为谢幕献上祝福的齿轮":{ groupNumber: "714364138", aliases: ["齿轮"] },
+	"乌洛波洛斯的末日巡演": { groupNumber: "451471718" },
 	
 	// X
 	"X休止": { groupNumber: "623836728" },
 	"X告白": { groupNumber: "575451544" },
 	
 	// Y
+	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
+	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
+	
 	// Z
 	"zinki": { groupNumber: "761916849" },
 	
