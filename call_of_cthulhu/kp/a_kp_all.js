@@ -79,7 +79,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表
 const groupMap = {
-	// 纯KP
+	// KP
 
 	// A
 	"ABO同工同酬": { groupNumber: "991872893" },
@@ -112,6 +112,7 @@ const groupMap = {
 	// G
 	// H
 	"H:tv": { groupNumber: "684526713" },
+	"还来不见仙": { groupNumber: "590220813*反馈\n984420519*KP" },
 	
 	// I
 	// J
@@ -178,16 +179,10 @@ const groupMap = {
 	
 
 
-	
-	// 反馈(混合)
-	"还来不见仙": { groupNumber: "590220813、984420519\n*反馈/KP群" },
-
-
-
 
 
 	// 下载(混合)
-	"白影": { groupNumber: "825032832\n*下载+KP群" },
+	"白影": { groupNumber: "825032832*下载+KP" },
 	"晨钟旧事": { groupNumber: "655068229\n*下载" },
 	"此夜不可离": { groupNumber: "522206940\n*下载" },
 	"孤岛恋综": { groupNumber: "932315790\n*下载" },
