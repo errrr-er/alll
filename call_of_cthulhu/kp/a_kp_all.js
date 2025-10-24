@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.0.1
+// @version      4.0.2
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1761224758
 // 2025-05-11 16:49:17
@@ -14,7 +14,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.0.1');
+  ext = seal.ext.new('KP群汇总', 'er', '4.0.2');
   seal.ext.register(ext);
 }
 
@@ -356,7 +356,7 @@ const groupMap = {
 	"歪月": { groupNumber: "339403801\n*歪月+诡月奇谭",aliases: ["诡月奇谭"] },
 	"Snow Spine": { groupNumber: "1070979351",aliases: ["雪脊"] },
 	"梦里百花深处": { groupNumber: "490454774",aliases: ["梦花深"] },
-	"rebay": { groupNumber: "334767023" },
+	"reaby": { groupNumber: "334767023" },
 
 
 	
