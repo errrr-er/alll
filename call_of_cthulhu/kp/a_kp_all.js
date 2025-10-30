@@ -299,6 +299,7 @@ const groupMap = {
 	"人间见闻录": { groupNumber: "921349225*下载" },
 	"燃烧的星辰":{ groupNumber: "1049443592" },
 	"燃花":{ groupNumber: "795081215" },
+	"Regnagleppod":{ groupNumber: "939930942" },
 
 	// S
 	"Sillage香水屋": { groupNumber: "921302134", aliases: ["Sillage", "香水屋"] },
