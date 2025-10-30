@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.1.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1761828614
+// @timestamp    1761837996
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1761828614;
+    return 1761837996;
 }
 
 // 提醒历史
@@ -138,7 +138,8 @@ const groupMap = {
 	"德拉肯海姆之墟": { groupNumber: "856703297" },
 	"渡仙劫": { groupNumber: "634208409" },
 	"渡圆之": { groupNumber: "953195114" },
-	"渡春风":{ groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
+	"渡春风": { groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
+	"电子悖论失乐园": { groupNumber: "995398768*下载\n1033563821*KP", aliases: ["失乐园", "电子"] },
 
 	// E
 	"二重身的证迹": { groupNumber: "285230351" },
