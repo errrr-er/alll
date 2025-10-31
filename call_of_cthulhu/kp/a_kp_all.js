@@ -164,6 +164,7 @@ const groupMap = {
 	"歌味觉死": { groupNumber: "616756545\n路易斯安那系列+畅梦人+淤泥之花与空心石" },
 	"革命少女罗丹斯": { groupNumber: "641481529" },
 	"高塔之死": { groupNumber: "623768354*战役集" },
+	"沽上潮生来": { groupNumber: "655068229*下载" },
 	
 	// H
 	"H:tv": { groupNumber: "684526713" },
