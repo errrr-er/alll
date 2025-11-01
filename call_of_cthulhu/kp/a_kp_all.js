@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.1.2
+// @version      4.1.3
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1761927322
 // 2025-05-11 16:49:17
@@ -13,7 +13,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.1.2');
+  ext = seal.ext.new('KP群汇总', 'er', '4.1.3');
   seal.ext.register(ext);
 }
 
@@ -423,6 +423,7 @@ const groupMap = {
 	"雪山密室": { groupNumber: "901413729" },
 
 	// Y
+	"抑或地位未定": { groupNumber: "1041670093" },
 	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
 	"以撒的狂想曲": { groupNumber: "907783672" },
