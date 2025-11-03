@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.2.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1762185375
+// @timestamp    1762185374
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1762185375;
+    return 1762185374;
 }
 
 // 提醒历史
@@ -500,8 +500,6 @@ const groupMap = {
 	"口胡": { groupNumber: "106133577" },
 	"海龟汤": { groupNumber: "295820752" },
 	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999", aliases: ["语擦"] },
-
-	
 };
 
 // "": { groupNumber: "" },
