@@ -500,6 +500,9 @@ const groupMap = {
 	"口胡": { groupNumber: "106133577" },
 	"海龟汤": { groupNumber: "295820752" },
 	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999", aliases: ["语擦"] },
+
+	// 先不修了就这样吧
+	"help": { groupNumber: "KP群查询指令\n.kp <关键词>	// 查询特定KP群号(支持反向查询)\n.kp list	// 列出所有KP群信息(超长慎用)\n.kp help	// 显示本帮助"}，
 };
 
 // "": { groupNumber: "" },
@@ -636,7 +639,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
     
     // 命令help
     if (input === 'help' || input === '') {
-        seal.replyToSender(ctx, msg, cmdKp.help);
+        ret.showHelp = true;
         return ret;
     }
 
