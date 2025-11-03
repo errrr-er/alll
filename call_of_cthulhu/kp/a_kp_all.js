@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.2.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1762184962
+// @timestamp    1762185374
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1762184962;
+    return 1762185374;
 }
 
 // 提醒历史
@@ -487,7 +487,7 @@ const groupMap = {
 
 	"画手": { groupNumber: "1014072522" },
 	"文手": { groupNumber: "512451066" },
-	"写作": { groupNumber: "734417134*纯女\n761666326*coj\n" },
+	"写作": { groupNumber: "纯女\n734417134、761666326*coj" },
 	"翻译": { groupNumber: "1053204546、972416799、377896614、1040799893、317223427、1033917987、1043393781、872345826、1061035045、220150371*韩模" },
 
 	"纯dm": { groupNumber: "421678315" },
@@ -510,24 +510,23 @@ const groupMap = {
 const groupNumberToNameMap = {};
 for (const groupName in groupMap) {
     const groupInfo = groupMap[groupName];
-    // 使用多种分隔符：顿号、换行符、逗号等
-    const groupNumbers = groupInfo.groupNumber.split(/[、\n,，]/);
+    // 分隔符
+    const groupNumbers = groupInfo.groupNumber.split(/[、\n*]/);
     
     groupNumbers.forEach(number => {
-        // 提取纯数字部分（去掉*号后面的注释和其他非数字内容）
-        const cleanNumber = number.trim().split('*')[0].trim();
-        // 确保是纯数字
+        const cleanNumber = number.trim();
+        // 确保是纯数字且不为空
         if (cleanNumber && /^\d+$/.test(cleanNumber)) {
             if (!groupNumberToNameMap[cleanNumber]) {
                 groupNumberToNameMap[cleanNumber] = [];
             }
-            // 避免重复添加
             if (!groupNumberToNameMap[cleanNumber].includes(groupName)) {
                 groupNumberToNameMap[cleanNumber].push(groupName);
             }
         }
     });
 }
+
 // 字符串相似度
 function getSimilarity(s1, s2) {
     s1 = s1.toLowerCase();
@@ -585,6 +584,7 @@ function findSimilarGroup(input) {
             }
         }
 
+		// 相似度高于或等于30%
         if (highestScore >= 0.3) {
             matchedGroups.push({
                 name: groupName,
@@ -616,7 +616,7 @@ function generateGroupList() {
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
-.kp <关键词>	// 查询特定KP群号
+.kp <关键词>	// 查询特定KP群号(支持反向查询)
 .kp list	// 列出所有KP群信息(超长慎用)
 .kp help	// 显示本帮助`;
 
