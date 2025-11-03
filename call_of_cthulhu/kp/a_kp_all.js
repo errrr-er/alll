@@ -636,7 +636,7 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
     
     // 命令help
     if (input === 'help' || input === '') {
-        ret.showHelp = true;
+        seal.replyToSender(ctx, msg, cmdKp.help);
         return ret;
     }
 
