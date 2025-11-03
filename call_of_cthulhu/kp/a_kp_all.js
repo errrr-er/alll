@@ -510,19 +510,24 @@ const groupMap = {
 const groupNumberToNameMap = {};
 for (const groupName in groupMap) {
     const groupInfo = groupMap[groupName];
-    const groupNumbers = groupInfo.groupNumber.split(/[、]/);
+    // 使用多种分隔符：顿号、换行符、逗号等
+    const groupNumbers = groupInfo.groupNumber.split(/[、\n,，]/);
     
     groupNumbers.forEach(number => {
-        const cleanNumber = number.split('\n')[0].trim();
-        if (cleanNumber) {
+        // 提取纯数字部分（去掉*号后面的注释和其他非数字内容）
+        const cleanNumber = number.trim().split('*')[0].trim();
+        // 确保是纯数字
+        if (cleanNumber && /^\d+$/.test(cleanNumber)) {
             if (!groupNumberToNameMap[cleanNumber]) {
                 groupNumberToNameMap[cleanNumber] = [];
             }
-            groupNumberToNameMap[cleanNumber].push(groupName);
+            // 避免重复添加
+            if (!groupNumberToNameMap[cleanNumber].includes(groupName)) {
+                groupNumberToNameMap[cleanNumber].push(groupName);
+            }
         }
     });
 }
-
 // 字符串相似度
 function getSimilarity(s1, s2) {
     s1 = s1.toLowerCase();
