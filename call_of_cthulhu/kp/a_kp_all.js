@@ -11,6 +11,10 @@
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
 
+// 按照海豹格式写的插件，非海豹核心可能无法使用
+// 已适配青果，请前往GitHub查看
+// https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp
+
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
   ext = seal.ext.new('KP群汇总', 'er', '4.2.0');
