@@ -9,11 +9,11 @@
         - 反向查询
             - 通过群号反向查询对应名称
 - 青果
-    - [oliva_kp_all.json](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/olivia_kp_all.json)
+    - [oliva_kp_akk.opk]()
         - 精确查询
             - 精确输出100%对应的查询结果
             - 包含已录入的花名
-        - 触发词修改
-            - 删除所有触发词中包含的空格
-    - [oliva_kp_akk.opk]()
-        -
+        - 模糊查询
+            - 除精确匹配外输出所有匹配值超过30%的查询结果
+        - 反向查询
+            - 通过群号反向查询对应名称
