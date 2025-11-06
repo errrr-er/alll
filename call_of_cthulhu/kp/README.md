@@ -8,8 +8,11 @@
             - 除精确匹配外输出所有匹配值超过30%的查询结果
         - 反向查询
             - 通过群号反向查询对应名称
+        - 更新提醒
+            - 使用时自动触发，接着进入24H勿打扰时间
+            - 对比文件与GitHub中的TimeStamp(手动填写)部分
 - 青果
-    - [oliva_kp_akk.opk]()
+    - [oliva_kp_akk.opk](https://github.com/errrr-er/alll/raw/refs/heads/main/call_of_cthulhu/kp/oliva_kp_all.opk)
         - 精确查询
             - 精确输出100%对应的查询结果
             - 包含已录入的花名
