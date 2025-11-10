@@ -1,11 +1,11 @@
 {
     "name": "KP群汇总",
     "author": "3987681449",
-    "namespace": "KPGroupFinder",
+    "namespace": "oliva_kp_all",
     "info": "有问题可进群2150284119联系，最新版请进GitHub或群文件下载，支持青果/海豹核心https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp",
     "priority": 30000,
     "svn": 1,
-    "version": "1.0.0",
+    "version": "1.1.1",
     "compatible_svn": 100,
     "message_mode": "olivos_string",
     "support": [

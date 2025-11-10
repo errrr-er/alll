@@ -290,7 +290,7 @@ def init_global_data():
         "VirtuaLive": { "groupNumber": "664998654*下载" },
         
         # W
-        "为生命献上砂糖、可可、和肉桂粉": { "groupNumber": "628435591*下载", "aliases": ["可可"] },
+        "为生命献上砂糖、可可、和肉桂粉": { "groupNumber": "628435591*下载\n1037886003*有作者\n817342041*无作者", "aliases": ["可可"] },
         "wts": { "groupNumber": "763188284" },
         "万人无我": { "groupNumber": "929768460", "aliases": ["wrww"] },
         "为谢幕献上祝福的齿轮": { "groupNumber": "714364138", "aliases": ["齿轮"] },
@@ -461,8 +461,11 @@ class Event(object):
 def process_kp_command(plugin_event):
     try:
         message = plugin_event.data.message
-        if not message or not message.startswith('.kp'):
+        if not message:
             return
+        if not any(message.startswith(prefix + 'kp') for prefix in ('.', '，', '。', '/')):
+            return
+
             
         parts = message.split()
         if len(parts) < 2:
@@ -478,7 +481,7 @@ def process_kp_command(plugin_event):
         else:
             search_group(plugin_event, command)
     except Exception as e:
-        plugin_event.reply("处理命令时出现错误")
+        plugin_event.reply("处理命令时出现错误 | 请进2150284119反馈")
 
 def send_group_list(plugin_event):
     list_lines = []
