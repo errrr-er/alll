@@ -266,6 +266,7 @@ def init_global_data():
         "ssss": { "groupNumber": "926664565", "aliases": ["4s"] },
 
         # T
+        "天启劫火": { "groupNumber": "1059690417" },
         "天命所归": { "groupNumber": "875210475" },
         "天地一灯": { "groupNumber": "974274779" },
         "天椎谶纬": { "groupNumber": "656026457" },

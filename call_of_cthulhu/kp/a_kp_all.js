@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.3.0
+// @version      4.3.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1762792864
+// @timestamp    1763137399
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -17,13 +17,13 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.0');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.1');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1762792864;
+    return 1763137399;
 }
 
 // 提醒历史
@@ -343,6 +343,7 @@ const groupMap = {
 	"ssss": { groupNumber: "926664565", aliases: ["4s"] },
 
 	// T
+	"天启劫火": { groupNumber: "1059690417" },
 	"天命所归": { groupNumber: "875210475" },
 	"天地一灯": { groupNumber: "974274779" },
 	"天椎谶纬": { groupNumber: "656026457" },
