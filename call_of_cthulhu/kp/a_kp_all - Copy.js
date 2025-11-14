@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         KP群汇总
-// @author       3987681449
+// @author       3987681450
 // @version      4.3.1
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1763137399
@@ -20,110 +20,82 @@ class AutoUpdater {
     constructor() {
         this.localVersion = getCurrentTimestamp();
         this.updateChecked = false;
-        this.updateInterval = 24 * 60 * 60 * 1000; // 24小时检查一次
     }
 
-    // 检查并执行更新
     async checkAndUpdate(ctx, msg) {
-        if (this.updateChecked) return;
+        seal.replyToSender(ctx, msg, "🔄 开始检查更新...");
         
         try {
             const githubVersion = await getGitHubVersion();
-            if (!githubVersion) return;
-
-            if (githubVersion.timestamp > this.localVersion) {
-                console.log(`发现新版本: ${githubVersion.timestamp} > ${this.localVersion}`);
-                
-                // 执行JSON文件更新
-                const success = await this.updateJsonFile();
-                
-                if (success) {
-                    seal.replyToSender(ctx, msg, 
-                        `✅ KP群数据已自动更新到最新版！\n` +
-                        `📅 更新时间: ${githubVersion.formattedDate}\n` +
-                        `🔄 数据已生效`
-                    );
-                    
-                    this.localVersion = githubVersion.timestamp;
-                }
+            if (!githubVersion) {
+                seal.replyToSender(ctx, msg, "❌ 获取GitHub版本信息失败");
+                return;
             }
-            this.updateChecked = true;
+
+            seal.replyToSender(ctx, msg, `📊 本地版本: ${this.localVersion}, 远程版本: ${githubVersion.timestamp}`);
+            
+            if (githubVersion.timestamp > this.localVersion) {
+                seal.replyToSender(ctx, msg, "✅ 发现新版本，开始更新JSON文件...");
+                await this.updateJsonFile(ctx, msg);
+            } else {
+                seal.replyToSender(ctx, msg, "✅ 当前已是最新版本");
+            }
         } catch (error) {
-            console.log('自动更新检查失败:', error.message);
+            seal.replyToSender(ctx, msg, `❌ 更新检查失败: ${error.message}`);
         }
     }
 
-    // 更新JSON文件
-    async updateJsonFile() {
+    async updateJsonFile(ctx, msg) {
         try {
-            console.log('开始更新JSON文件...');
+            seal.replyToSender(ctx, msg, "📥 正在准备更新JSON文件...");
             
-            // 从GitHub获取最新的JS文件内容
-            const rawUrl = 'https://ghproxy.net/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
-            const response = await fetch(rawUrl);
+            const fs = require('fs');
+            const path = require('path');
             
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status}`);
+            // 动态检测路径
+            seal.replyToSender(ctx, msg, "📍 开始检测文件路径...");
+            const currentDir = __dirname;
+            seal.replyToSender(ctx, msg, `📂 当前脚本位置: ${currentDir}`);
+            
+            // 往上推两级到 data 目录，然后进入 helpdoc
+            const dataDir = path.join(currentDir, '..', '..');
+            const helpdocDir = path.join(dataDir, 'helpdoc');
+            const jsonPath = path.join(helpdocDir, 'kp_groupMap.json');
+            
+            seal.replyToSender(ctx, msg, `📁 推算的JSON路径: ${jsonPath}`);
+            
+            // 检查路径是否存在
+            if (fs.existsSync(helpdocDir)) {
+                seal.replyToSender(ctx, msg, "✅ helpdoc目录存在");
+            } else {
+                seal.replyToSender(ctx, msg, "❌ helpdoc目录不存在，尝试创建");
+                fs.mkdirSync(helpdocDir, { recursive: true });
+                seal.replyToSender(ctx, msg, "✅ helpdoc目录创建成功");
             }
             
-            const jsContent = await response.text();
+            seal.replyToSender(ctx, msg, `📄 目标文件路径: ${jsonPath}`);
             
-            // 从JS内容中提取groupMap数据
-            const groupMapData = this.extractGroupMapFromJS(jsContent);
-            if (!groupMapData) return false;
-            
-            // 构建JSON数据
+            // 构建JSON数据 - 使用当前内存中的groupMap
+            seal.replyToSender(ctx, msg, "📋 正在构建JSON数据...");
             const jsonData = {
                 version: "1.0.0",
                 timestamp: this.localVersion,
-                group_map: groupMapData
+                group_map: groupMap  // 使用当前内存中的groupMap数据
             };
             
-            // 保存到helpdoc目录
-            const fs = require('fs');
-            const path = require('path');
-            const jsonPath = path.join(seal.helpDocDir, 'kp_groupMap.json');
+            seal.replyToSender(ctx, msg, `📊 数据统计: ${Object.keys(groupMap).length} 个群组`);
+            seal.replyToSender(ctx, msg, "💾 正在写入文件...");
             
-            // 写入JSON文件
             fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2), 'utf8');
-            console.log('JSON文件更新成功:', jsonPath);
             
-            return true;
+            seal.replyToSender(ctx, msg, "✅ JSON文件更新完成！");
+            
         } catch (error) {
-            console.error('更新JSON文件失败:', error);
-            return false;
-        }
-    }
-
-    // 从JS内容中提取groupMap
-    extractGroupMapFromJS(jsContent) {
-        try {
-            // 查找groupMap定义
-            const groupMapMatch = jsContent.match(/const groupMap = \{[\s\S]*?\};/);
-            if (!groupMapMatch) return null;
-            
-            // 执行提取的代码来获取groupMap对象
-            const groupMapCode = groupMapMatch[0];
-            
-            // 创建一个沙盒环境来执行代码并获取groupMap
-            const vm = require('vm');
-            const sandbox = {
-                groupMap: null
-            };
-            
-            // 执行groupMap定义代码
-            const script = new vm.Script(groupMapCode + '; sandbox.groupMap = groupMap;');
-            script.runInNewContext(sandbox);
-            
-            return sandbox.groupMap;
-        } catch (error) {
-            console.error('提取groupMap失败:', error);
-            return null;
+            seal.replyToSender(ctx, msg, `❌ 更新JSON文件失败: ${error.message}`);
         }
     }
 }
 
-// 创建自动更新器实例
 const autoUpdater = new AutoUpdater();
 
 let ext = seal.ext.find('KP群汇总');
@@ -174,21 +146,8 @@ async function getGitHubVersion() {
 
 // 检查更新
 async function checkUpdate(ctx, msg, userId) {
-    try {
-        // 24小时检查限制
-        const now = Date.now();
-        const lastNotify = userLastNotify.get(userId) || 0;
-        
-        if (now - lastNotify < autoUpdater.updateInterval) {
-            return;
-        }
-        
-        userLastNotify.set(userId, now);
-        await autoUpdater.checkAndUpdate(ctx, msg);
-        
-    } catch (error) {
-        console.log('更新检查错误:', error.message);
-    }
+    seal.replyToSender(ctx, msg, "⏰ 触发更新检查...");
+    await autoUpdater.checkAndUpdate(ctx, msg);
 }
 
 // 从JSON文件加载群号映射表
@@ -196,11 +155,17 @@ function loadGroupMapFromJSON() {
     try {
         const fs = require('fs');
         const path = require('path');
-        const jsonPath = path.join(seal.helpDocDir, 'kp_groupMap.json');
+        
+        // 使用动态路径检测
+        const currentDir = __dirname;
+        const dataDir = path.join(currentDir, '..', '..');
+        const helpdocDir = path.join(dataDir, 'helpdoc');
+        const jsonPath = path.join(helpdocDir, 'kp_groupMap.json');
         
         if (fs.existsSync(jsonPath)) {
             const jsonContent = fs.readFileSync(jsonPath, 'utf8');
             const jsonData = JSON.parse(jsonContent);
+            console.log('从JSON文件加载groupMap成功');
             return jsonData.group_map;
         } else {
             // 如果JSON文件不存在，创建一个空的groupMap
@@ -335,8 +300,9 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
     const input = cmdArgs.getArgN(1);
     
-    // 自动检查更新（不阻塞主流程）
+    // 自动检查更新
     const userId = msg.sender.userId;
+    seal.replyToSender(ctx, msg, "🔍 后台检查更新中...");
     setTimeout(() => {
         checkUpdate(ctx, msg, userId).catch(console.error);
     }, 1000);
