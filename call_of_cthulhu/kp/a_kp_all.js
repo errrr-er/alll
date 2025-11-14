@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.2.1
+// @version      4.3.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1762750849
+// @timestamp    1762792864
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -12,18 +12,18 @@
 // ==/UserScript==
 
 // 按照海豹格式写的插件，非海豹核心可能无法使用
-// 正在适配青果，具体文件请前往GitHub查看
+// 已适配青果OPK，具体请前往GitHub查看
 // https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.2.1');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.0');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1762750849;
+    return 1762792864;
 }
 
 // 提醒历史
@@ -32,7 +32,7 @@ const userLastNotify = new Map();
 // 获取GitHub最新版本编号
 async function getGitHubVersion() {
     try {
-		// 理论上是镜像(不知道有没有用)
+		// 镜像
         const rawUrl = 'https://ghproxy.net/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
         const response = await fetch(rawUrl);
         
@@ -56,8 +56,6 @@ async function getGitHubVersion() {
         
         return null;
     } catch (error) {
-        console.error('获取GitHub版本出错:', error);
-		// 前台输出提醒(不知道有没有用)
 		seal.replyToSender(ctx, msg, '获取GitHub版本出错:', error);
         throw error;
     }
@@ -74,7 +72,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
         if (githubVersion.timestamp > currentTimestamp) {
             setTimeout(() => {
                 seal.replyToSender(ctx, msg, 
-                    `发现新版本！更新检查冷却开始\n最后更新：${githubVersion.formattedDate}`
+                    `发现<KP群汇总>插件有新版本！\n更新检查冷却开始~请及时更新\n最后更新：${githubVersion.formattedDate}`
                 );
             }, 1000);
         }
@@ -624,7 +622,7 @@ cmdKp.help = `KP群查询指令
 .kp list	// 列出所有KP群信息(超长慎用)
 .kp help	// 显示本帮助`;
 
-cmdKp.solve = async (ctx, msg, cmdArgs) => {
+cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
     const input = cmdArgs.getArgN(1);
     
@@ -645,11 +643,37 @@ cmdKp.solve = async (ctx, msg, cmdArgs) => {
     }
 
     // 列出所有群组
-    if (input.toLowerCase() === 'list') {
-        const listText = `所有KP群信息:\n${generateGroupList()}\n\n图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]`;
-        seal.replyToSender(ctx, msg, listText);
-        return ret;
+    function sendGroupListSegmented(ctx, msg, listText) {
+    const lines = listText.split('\n');
+    const segmentSize = 20; // 每段行数
+    const segments = [];
+    
+    // 分段处理
+    for (let i = 0; i < lines.length; i += segmentSize) {
+        const segment = lines.slice(i, i + segmentSize).join('\n');
+        segments.push(segment);
     }
+    
+    // 分段发送
+    segments.forEach((segment, index) => {
+        setTimeout(() => {
+            const header = segments.length > 1 ? `【第 ${index + 1}/${segments.length} 段】\n` : '';
+            seal.replyToSender(ctx, msg, header + segment);
+        }, index * 1500); // 每段间隔，避免发送过快
+    });
+    
+    // 最后发送图片
+    setTimeout(() => {
+        seal.replyToSender(ctx, msg, '图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
+    }, segments.length * 500 + 200);
+	}
+
+	// list命令
+	if (input.toLowerCase() === 'list') {
+		const listText = `所有KP群信息:\n${generateGroupList()}`;
+		sendGroupListSegmented(ctx, msg, listText);
+		return ret;
+	}
 
     // 反向查询
     if (/^\d+$/.test(input)) {

@@ -1,0 +1,31 @@
+{
+  "version": "1.1.0",
+  "last_updated": "2025-11-11",
+  "group_map": {
+    "ABO同工同酬": {
+      "groupNumber": "991872893",
+      "aliases": []
+    },
+    "ABS": {
+      "groupNumber": "941349942",
+      "aliases": []
+    },
+    "AIB": {
+      "groupNumber": "112077093",
+      "aliases": []
+    },
+    "Antinomy": {
+      "groupNumber": "101476385",
+      "aliases": []
+    },
+    "哀歌弥赛亚": {
+      "groupNumber": "609355937",
+      "aliases": ["哀歌"]
+    },
+    "BASH": {
+      "groupNumber": "774156947",
+      "aliases": ["燃星"]
+    }
+    // ... 其他所有群组数据
+  }
+}
