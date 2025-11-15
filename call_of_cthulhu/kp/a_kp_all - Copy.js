@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         KP群汇总
-// @author       3987681450
+// @author       3987681449
 // @version      4.3.1
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1763137399
@@ -18,25 +18,61 @@
 // 自动更新管理器
 class AutoUpdater {
     constructor() {
-        this.localVersion = getCurrentTimestamp();
+        this.localVersion = null;
         this.updateChecked = false;
+    }
+
+    // 获取本地时间戳
+    getLocalTimestamp() {
+        try {
+            const fs = require('fs');
+            const path = require('path');
+            
+            // 动态检测JSON文件路径
+            const currentDir = __dirname;
+            const dataDir = path.join(currentDir, '..', '..');
+            const helpdocDir = path.join(dataDir, 'helpdoc');
+            const jsonPath = path.join(helpdocDir, 'kp_groupMap.json');
+            
+            if (fs.existsSync(jsonPath)) {
+                const jsonContent = fs.readFileSync(jsonPath, 'utf8');
+                const jsonData = JSON.parse(jsonContent);
+                
+                if (jsonData.timestamp) {
+                    return jsonData.timestamp;
+                }
+            }
+            
+            // 如果JSON文件不存在或没有时间戳，返回null
+            return null;
+            
+        } catch (error) {
+            console.error('获取本地时间戳失败:', error);
+            return null;
+        }
     }
 
     async checkAndUpdate(ctx, msg) {
         seal.replyToSender(ctx, msg, "🔄 开始检查更新...");
         
         try {
+            // 获取本地版本
+            this.localVersion = this.getLocalTimestamp();
+            seal.replyToSender(ctx, msg, `📊 本地版本: ${this.localVersion || '未找到'}`);
+            
+            // 获取GitHub版本
             const githubVersion = await getGitHubVersion();
             if (!githubVersion) {
                 seal.replyToSender(ctx, msg, "❌ 获取GitHub版本信息失败");
                 return;
             }
 
-            seal.replyToSender(ctx, msg, `📊 本地版本: ${this.localVersion}, 远程版本: ${githubVersion.timestamp}`);
+            seal.replyToSender(ctx, msg, `🌐 远程版本: ${githubVersion.timestamp}`);
             
-            if (githubVersion.timestamp > this.localVersion) {
+            // 如果没有本地版本或者远程版本更新，则更新
+            if (!this.localVersion || githubVersion.timestamp > this.localVersion) {
                 seal.replyToSender(ctx, msg, "✅ 发现新版本，开始更新JSON文件...");
-                await this.updateJsonFile(ctx, msg);
+                await this.updateJsonFile(ctx, msg, githubVersion.timestamp);
             } else {
                 seal.replyToSender(ctx, msg, "✅ 当前已是最新版本");
             }
@@ -45,7 +81,7 @@ class AutoUpdater {
         }
     }
 
-    async updateJsonFile(ctx, msg) {
+    async updateJsonFile(ctx, msg, newTimestamp) {
         try {
             seal.replyToSender(ctx, msg, "📥 正在准备更新JSON文件...");
             
@@ -55,9 +91,6 @@ class AutoUpdater {
             // 动态检测路径
             seal.replyToSender(ctx, msg, "📍 开始检测文件路径...");
             const currentDir = __dirname;
-            seal.replyToSender(ctx, msg, `📂 当前脚本位置: ${currentDir}`);
-            
-            // 往上推两级到 data 目录，然后进入 helpdoc
             const dataDir = path.join(currentDir, '..', '..');
             const helpdocDir = path.join(dataDir, 'helpdoc');
             const jsonPath = path.join(helpdocDir, 'kp_groupMap.json');
@@ -73,17 +106,17 @@ class AutoUpdater {
                 seal.replyToSender(ctx, msg, "✅ helpdoc目录创建成功");
             }
             
-            seal.replyToSender(ctx, msg, `📄 目标文件路径: ${jsonPath}`);
-            
-            // 构建JSON数据 - 使用当前内存中的groupMap
             seal.replyToSender(ctx, msg, "📋 正在构建JSON数据...");
+            
+            // 构建JSON数据 - 使用新的时间戳
             const jsonData = {
                 version: "1.0.0",
-                timestamp: this.localVersion,
-                group_map: groupMap  // 使用当前内存中的groupMap数据
+                timestamp: newTimestamp,
+                group_map: groupMap
             };
             
             seal.replyToSender(ctx, msg, `📊 数据统计: ${Object.keys(groupMap).length} 个群组`);
+            seal.replyToSender(ctx, msg, `⏰ 新时间戳: ${newTimestamp}`);
             seal.replyToSender(ctx, msg, "💾 正在写入文件...");
             
             fs.writeFileSync(jsonPath, JSON.stringify(jsonData, null, 2), 'utf8');
@@ -104,42 +137,37 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
-// 时间戳(需要手动更新)
-function getCurrentTimestamp() {
-    return 1763137399;
-}
-
-// 提醒历史
-const userLastNotify = new Map();
-
 // 获取GitHub最新版本编号
 async function getGitHubVersion() {
     try {
-        // 镜像
-        const rawUrl = 'https://ghproxy.net/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
-        const response = await fetch(rawUrl);
+        seal.replyToSender(ctx, msg, "🌐 正在从GitHub获取最新版本...");
+        
+        // 直接从GitHub的JSON文件获取版本信息
+        const jsonUrl = 'https://ghproxy.net/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/kp_groupMap.json';
+        const response = await fetch(jsonUrl);
         
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
         
-        const content = await response.text();
+        const jsonContent = await response.text();
+        const jsonData = JSON.parse(jsonContent);
         
-        // 解析时间戳
-        const timestampMatch = content.match(/@timestamp\s+(\d+)/);
-        if (timestampMatch) {
-            const timestamp = parseInt(timestampMatch[1]);
-            const date = new Date(timestamp * 1000);
+        if (jsonData.timestamp) {
+            const date = new Date(jsonData.timestamp * 1000);
+            seal.replyToSender(ctx, msg, `✅ 获取到GitHub版本: ${jsonData.timestamp}`);
+            
             return {
-                timestamp: timestamp,
+                timestamp: jsonData.timestamp,
                 date: date,
                 formattedDate: date.toLocaleString('zh-CN')
             };
+        } else {
+            throw new Error('GitHub JSON文件中没有timestamp字段');
         }
         
-        return null;
     } catch (error) {
-        console.error('获取GitHub版本出错:', error);
+        seal.replyToSender(ctx, msg, `❌ 获取GitHub版本失败: ${error.message}`);
         return null;
     }
 }
