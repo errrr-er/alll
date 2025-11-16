@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.3.2
+// @version      4.3.3
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1763261647
+// @timestamp    1763264579
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -15,15 +15,19 @@
 // 已适配青果OPK，具体请前往GitHub查看
 // https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp
 
+// "": { groupNumber: "" },
+
+// "": { groupNumber: "", aliases: [""] },
+
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.2');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.3');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1763261647;
+    return 1763264579;
 }
 
 // 提醒历史
@@ -242,6 +246,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 
 	// M
+	"墨拉亚的羊群": { groupNumber: "671767814*下载" },
 	"magnificas": { groupNumber: "477317221", aliases: ["mag"] },
 	"moon cell": { groupNumber: "817071819" },
 	"MTG世设": { groupNumber: "1043664376" },
@@ -505,10 +510,6 @@ const groupMap = {
 	"海龟汤": { groupNumber: "295820752" },
 	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999", aliases: ["语擦"] },
 };
-
-// "": { groupNumber: "" },
-
-// "": { groupNumber: "", aliases: [""] },
 
 // 反向映射
 const groupNumberToNameMap = {};

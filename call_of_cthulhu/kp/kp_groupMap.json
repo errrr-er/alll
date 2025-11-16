@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "timestamp": 1763137400,
+  "version": "1.0.1",
+  "timestamp": 1763264579,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -159,6 +159,7 @@
     "龙金劫": { "groupNumber": "947826784" },
 
     "# M": { "groupNumber": "" },
+    "墨拉亚的羊群": { "groupNumber": "671767814*下载" },
     "magnificas": { "groupNumber": "477317221", "aliases": ["mag"] },
     "moon cell": { "groupNumber": "817071819" },
     "MTG世设": { "groupNumber": "1043664376" },
