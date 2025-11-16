@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "timestamp": 1763137400,
   "group_map": {
-    "# A": { "groupNumber": ""},
+    "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
     "ABS": { "groupNumber": "941349942" },
     "AIB": { "groupNumber": "112077093" },
@@ -12,7 +12,7 @@
     "暗河": { "groupNumber": "1031974789" },
     "阿斯蒙蒂斯之链coa": { "groupNumber": "581885602" },
     
-    "# B": { "groupNumber": ""},
+    "# B": { "groupNumber": "" },
     "BASH": { "groupNumber": "774156947", "aliases": ["燃星"] },
     "不死灭灭": { "groupNumber": "279755638" },
     "不见蓬山": { "groupNumber": "834893891" },
@@ -29,7 +29,7 @@
     "柏拉图的余谈": { "groupNumber": "574918635" },
     "白玉风会录": { "groupNumber": "942449479" },
     
-    "# C": { "groupNumber": ""},
+    "# C": { "groupNumber": "" },
     "GODARCA": { "groupNumber": "869783432" },
     "GinGin": { "groupNumber": "1035861353" },
     "吹笛子的海獭": { "groupNumber": "468213532" },
@@ -46,7 +46,7 @@
     "纯阳轶事": { "groupNumber": "977656290" },
     "长兴镇": { "groupNumber": "906847246" },
 
-    "# D": { "groupNumber": ""},
+    "# D": { "groupNumber": "" },
     "dear-flip-flops": { "groupNumber": "345837146", "aliases": ["dff"] },
     "difftruth": { "groupNumber": "849680089" },
     "东京g": { "groupNumber": "201906582" },
@@ -60,11 +60,11 @@
     "渡春风": { "groupNumber": "199382863", "aliases": ["dcf", "蛋炒饭"] },
     "电子悖论失乐园": { "groupNumber": "995398768*下载\n1033563821*KP", "aliases": ["失乐园", "电子"] },
 
-    "# E": { "groupNumber": ""},
+    "# E": { "groupNumber": "" },
     "二重身的证迹": { "groupNumber": "285230351" },
     "恶辣": { "groupNumber": "620832218" },
     
-    "# F": { "groupNumber": ""},
+    "# F": { "groupNumber": "" },
     "凤去台空江自流": { "groupNumber": "979768022*下载\n985261346*下载\n瑰绿的决心+天地熔金+凤去台空江自流+人间烟火+问天地", "aliases": ["瑰绿的决心", "天地熔金", "人间烟火", "问天地"] },
     "废案重组": { "groupNumber": "857972438" },
     "废楼怪谈": { "groupNumber": "563488359" },
@@ -72,7 +72,7 @@
     "肥皂学校": { "groupNumber": "980188286", "aliases": ["肥皂", "皂校"] },
     "非正经修仙": { "groupNumber": "645560269" },
 
-    "# G": { "groupNumber": ""},
+    "# G": { "groupNumber": "" },
     "告密者": { "groupNumber": "623768354" },
     "孤灯弃城": { "groupNumber": "877858567" },
     "怪物们与邪典仙境": { "groupNumber": "592577986", "aliases": ["鞋垫"] },
@@ -85,7 +85,7 @@
     "高塔之死": { "groupNumber": "623768354*战役集" },
     "沽上潮生来": { "groupNumber": "655068229*下载" },
     
-    "# H": { "groupNumber": ""},
+    "# H": { "groupNumber": "" },
     "H:tv": { "groupNumber": "684526713" },
     "还来不见仙": { "groupNumber": "590220813*反馈\n984420519*KP" },
     "呼唤爱的谢幕": { "groupNumber": "929268821" },
@@ -105,10 +105,10 @@
     "黑幕圣杯": { "groupNumber": "602145072" },
     "黑暗世界": { "groupNumber": "985683120", "aliases": ["wod"] },
 
-    "# I": { "groupNumber": ""},
+    "# I": { "groupNumber": "" },
     "insane": { "groupNumber": "650600421" },
 
-    "# J": { "groupNumber": ""},
+    "# J": { "groupNumber": "" },
     "举头三尺": { "groupNumber": "334821036" },
     "今古空名": { "groupNumber": "962147366" },
     "巨龙迷城": { "groupNumber": "1057192428" },
@@ -124,7 +124,7 @@
     "镜语礼赞": { "groupNumber": "882672657" },
     "靖海难": { "groupNumber": "343026343" },
 
-    "# K": { "groupNumber": ""},
+    "# K": { "groupNumber": "" },
     "卡镇": { "groupNumber": "297175538" },
     "快刀乱魔": { "groupNumber": "238285939", "aliases": ["快刀"] },
     "快刀乱魔贰": { "groupNumber": "417453795", "aliases": ["快刀2"] },
@@ -133,7 +133,7 @@
     "坤元劫": { "groupNumber": "954535020*下载\n862291565*KP", "aliases": ["kyj"] },
     "克苏鲁迷踪toc": { "groupNumber": "780909682", "aliases": ["toc"] },
 
-    "# L": { "groupNumber": ""},
+    "# L": { "groupNumber": "" },
     "乐园在海底": { "groupNumber": "641157488" },
     "列文菲舍变例": { "groupNumber": "1040678581" },
     "来到这里的你们放弃希望吧": { "groupNumber": "939600700*下载\n1047069694*KP", "aliases": ["十二字"] },
@@ -158,7 +158,7 @@
     "龙蛋物语": { "groupNumber": "772645004" },
     "龙金劫": { "groupNumber": "947826784" },
 
-    "# M": { "groupNumber": ""},
+    "# M": { "groupNumber": "" },
     "magnificas": { "groupNumber": "477317221", "aliases": ["mag"] },
     "moon cell": { "groupNumber": "817071819" },
     "MTG世设": { "groupNumber": "1043664376" },
@@ -182,22 +182,22 @@
     "魔女与彩爱": { "groupNumber": "421693159" },
     "魔法少女歌唱死亡": { "groupNumber": "868665011" },
 
-    "# N": { "groupNumber": ""},
+    "# N": { "groupNumber": "" },
     "nobody": { "groupNumber": "694908547", "aliases": ["nbd"] },
     "脓堕": { "groupNumber": "183186533", "aliases": ["nd"] },
     "你是谁？请支持百日○纪！": { "groupNumber": "1057449882", "aliases": ["百日"] },
     "奈面": { "groupNumber": "933493427" },
     "逆命仙途": { "groupNumber": "796368505" },
     
-    "# O": { "groupNumber": ""},
+    "# O": { "groupNumber": "" },
     "one way straight": { "groupNumber": "978645254*下载" },
 
-    "# P": { "groupNumber": ""},
+    "# P": { "groupNumber": "" },
     "帕瑞卡颂马戏团": { "groupNumber": "760671074" },
     "PAC": { "groupNumber": "720930120" },
     "pathfinder 2e": { "groupNumber": "695214825", "aliases": ["pf2"] },
 
-    "# Q": { "groupNumber": ""},
+    "# Q": { "groupNumber": "" },
     "亲爱的，我把脑子丢了": { "groupNumber": "839027414", "aliases": ["脑丢", "丢脑"] },
     "全景敞视主义的陷阱": { "groupNumber": "792650936" },
     "全蓝综合征": { "groupNumber": "941349942" },
@@ -211,7 +211,7 @@
     "谦卑林": { "groupNumber": "941662352" },
     "起承转结": { "groupNumber": "1043452922" },
 
-    "# R": { "groupNumber": ""},
+    "# R": { "groupNumber": "" },
     "reaby": { "groupNumber": "334767023" },
     "ROP": { "groupNumber": "783947110*有作者\n780307937*无作者" },
     "人生restart": { "groupNumber": "537691966" },
@@ -222,7 +222,7 @@
     "燃花": { "groupNumber": "795081215" },
     "Regnagleppod": { "groupNumber": "939930942" },
 
-    "# S": { "groupNumber": ""},
+    "# S": { "groupNumber": "" },
     "Sillage香水屋": { "groupNumber": "921302134", "aliases": ["Sillage", "香水屋"] },
     "Snow Spine": { "groupNumber": "1070979351", "aliases": ["雪脊"] },
     "ssk": { "groupNumber": "708231245" },
@@ -259,7 +259,7 @@
     "萨里希斯之光": { "groupNumber": "473373105" },
     "ssss": { "groupNumber": "926664565", "aliases": ["4s"] },
 
-    "# T": { "groupNumber": ""},
+    "# T": { "groupNumber": "" },
     "天启劫火": { "groupNumber": "1059690417" },
     "天命所归": { "groupNumber": "875210475" },
     "天地一灯": { "groupNumber": "974274779" },
@@ -276,15 +276,15 @@
     "提灯铁鼠": { "groupNumber": "882067951" },
     "逃离深渊": { "groupNumber": "513100948" },
     
-    "# U": { "groupNumber": ""},
-    "# V": { "groupNumber": ""},
+    "# U": { "groupNumber": "" },
+    "# V": { "groupNumber": "" },
     "VEЯ": { "groupNumber": "798805482", "aliases": ["ver"] },
     "ventangle": { "groupNumber": "754138533" },
     "void": { "groupNumber": "1170037255" },
     "vamp": { "groupNumber": "553675094" },
     "VirtuaLive": { "groupNumber": "664998654*下载" },
     
-    "# W": { "groupNumber": ""},
+    "# W": { "groupNumber": "" },
     "为生命献上砂糖、可可、和肉桂粉": { "groupNumber": "628435591*下载\n1037886003*有作者\n817342041*无作者", "aliases": ["可可"] },
     "wts": { "groupNumber": "763188284" },
     "万人无我": { "groupNumber": "929768460", "aliases": ["wrww"] },
@@ -312,7 +312,8 @@
     "蛙徒的祭典": { "groupNumber": "655890716", "aliases": ["蛙祭", "挖机"] },
     "问道苍生": { "groupNumber": "758798519、578441689" },
 
-    "# X": { "groupNumber": ""},
+    "# X": { "groupNumber": "" },
+    "虚诞的毁灭": { "groupNumber": "1046244155"},
     "心脏": { "groupNumber": "883465896*无全译本" },
     "X休止": { "groupNumber": "623836728" },
     "X告白": { "groupNumber": "575451544" },
@@ -342,7 +343,7 @@
     "雪域下的金色宝藏": { "groupNumber": "307758220" },
     "雪山密室": { "groupNumber": "901413729" },
 
-    "# Y": { "groupNumber": ""},
+    "# Y": { "groupNumber": "" },
     "抑或地位未定": { "groupNumber": "1041670093" },
     "于赤土腹中再会": { "groupNumber": "1060512906", "aliases": ["于赤土"] },
     "亚里斯特拉魔法学院": { "groupNumber": "759411294" },
@@ -382,7 +383,7 @@
     "遗香巡游": { "groupNumber": "535538005" },
     "鸦阁领域": { "groupNumber": "836306797" },
 
-    "# Z": { "groupNumber": ""},
+    "# Z": { "groupNumber": "" },
     "zinki": { "groupNumber": "761916849" },
     "众妙之门": { "groupNumber": "785654926", "aliases": ["zmzm"] },
     "侦探可有翅膀吗": { "groupNumber": "963854131", "aliases": ["侦探翅"] },
@@ -401,7 +402,7 @@
     "追书人": { "groupNumber": "942014926" },
     "造物者": { "groupNumber": "948914482" },
 
-    "# 非强关联": { "groupNumber": ""},
+    "# 非强关联": { "groupNumber": "" },
     "log": { "groupNumber": "675664988*存放\n985865497*整理" },
     "染色空白卡": { "groupNumber": "657347350" },
 
