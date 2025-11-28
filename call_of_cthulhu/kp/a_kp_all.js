@@ -246,6 +246,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 
 	// M
+	"moon cell": { groupNumber: "972416799*下载" },
 	"墨拉亚的羊群": { groupNumber: "671767814*下载" },
 	"magnificas": { groupNumber: "477317221", aliases: ["mag"] },
 	"moon cell": { groupNumber: "817071819" },
@@ -311,6 +312,7 @@ const groupMap = {
 	"Regnagleppod": { groupNumber: "939930942" },
 
 	// S
+	"赎罪邮局": { groupNumber: "1064670977" },
 	"Sillage香水屋": { groupNumber: "921302134", aliases: ["Sillage", "香水屋"] },
 	"Snow Spine": { groupNumber: "1070979351", aliases: ["雪脊"] },
 	"ssk": { groupNumber: "708231245" },
@@ -508,7 +510,7 @@ const groupMap = {
 	
 	"口胡": { groupNumber: "106133577" },
 	"海龟汤": { groupNumber: "295820752" },
-	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999", aliases: ["语擦"] },
+	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999\n302014132*边狱巴士", aliases: ["语擦"] },
 };
 
 // 反向映射
