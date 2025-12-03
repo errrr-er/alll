@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.3.4
+// @version      4.3.5
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1764374031
+// @timestamp    1764773560
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -21,13 +21,13 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.4');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.5');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1764374031;
+    return 1764773560;
 }
 
 // 提醒历史
@@ -287,6 +287,7 @@ const groupMap = {
 	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 
 	// Q
+	"青春自杀": { groupNumber: "953788807" },
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
 	"全景敞视主义的陷阱": { groupNumber: "792650936" },
 	"全蓝综合征": { groupNumber: "941349942" },
@@ -309,7 +310,7 @@ const groupMap = {
 	"人间见闻录": { groupNumber: "921349225*下载" },
 	"燃烧的星辰": { groupNumber: "1049443592" },
 	"燃花": { groupNumber: "795081215" },
-	"Regnagleppod": { groupNumber: "939930942" },
+	"Regnagleppod": { groupNumber: "939930942", aliases: ["玻璃人"] },
 
 	// S
 	"赎罪邮局": { groupNumber: "1064670977" },
