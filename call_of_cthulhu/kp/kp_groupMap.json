@@ -1,6 +1,6 @@
 {
-  "version": "1.0.2",
-  "timestamp": 1764374031,
+  "version": "1.0.3",
+  "timestamp": 1764773560,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -200,6 +200,7 @@
     "pathfinder 2e": { "groupNumber": "695214825", "aliases": ["pf2"] },
 
     "# Q": { "groupNumber": "" },
+    "青春自杀": { "groupNumber": "953788807" },
     "亲爱的，我把脑子丢了": { "groupNumber": "839027414", "aliases": ["脑丢", "丢脑"] },
     "全景敞视主义的陷阱": { "groupNumber": "792650936" },
     "全蓝综合征": { "groupNumber": "941349942" },
@@ -222,7 +223,7 @@
     "人间见闻录": { "groupNumber": "921349225*下载" },
     "燃烧的星辰": { "groupNumber": "1049443592" },
     "燃花": { "groupNumber": "795081215" },
-    "Regnagleppod": { "groupNumber": "939930942" },
+    "Regnagleppod": { "groupNumber": "939930942", "aliases": ["玻璃人"] },
 
     "# S": { "groupNumber": "" },
     "赎罪邮局": { groupNumber: "1064670977" },
