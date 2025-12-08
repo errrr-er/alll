@@ -1,6 +1,6 @@
 {
-  "version": "1.0.4",
-  "timestamp": 1765122520,
+  "version": "1.0.5",
+  "timestamp": 1765222513,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -13,6 +13,7 @@
     "阿斯蒙蒂斯之链coa": { "groupNumber": "581885602" },
     
     "# B": { "groupNumber": "" },
+    "拜昆仑": { "groupNumber": "248817589" },
     "BASH": { "groupNumber": "774156947", "aliases": ["燃星"] },
     "不死灭灭": { "groupNumber": "279755638" },
     "不见蓬山": { "groupNumber": "834893891" },
