@@ -1,9 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.3.6
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1765122520
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -21,13 +19,13 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.5');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.7');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 function getCurrentTimestamp() {
-    return 1764773560;
+    return 1765222513;
 }
 
 // 提醒历史
@@ -100,6 +98,7 @@ const groupMap = {
 	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	
 	// B
+	"拜昆仑": { groupNumber: "248817589" },
 	"BASH": { groupNumber: "774156947", aliases: ["燃星"] },
 	"不死灭灭": { groupNumber: "279755638" },
 	"不见蓬山": { groupNumber: "834893891" },
