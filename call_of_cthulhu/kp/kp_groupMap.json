@@ -1,6 +1,6 @@
 {
-  "version": "1.0.5",
-  "timestamp": 1765222513,
+  "version": "1.0.6",
+  "timestamp": 1765465565,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -110,6 +110,7 @@
     "insane": { "groupNumber": "650600421" },
 
     "# J": { "groupNumber": "" },
+    "极地追凶": { "groupNumber": "1057328944*下载" },
     "举头三尺": { "groupNumber": "334821036" },
     "今古空名": { "groupNumber": "962147366" },
     "巨龙迷城": { "groupNumber": "1057192428" },
@@ -216,6 +217,7 @@
     "起承转结": { "groupNumber": "1043452922" },
 
     "# R": { "groupNumber": "" },
+    "R∈D - Re:Dawn -": { "groupNumber": "859997225", "aliases": ["R∈D", "Re:Dawn", "red"] },
     "reaby": { "groupNumber": "334767023" },
     "ROP": { "groupNumber": "783947110*有作者\n780307937*无作者" },
     "人生restart": { "groupNumber": "537691966" },
