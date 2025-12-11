@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
+// @version      4.3.8
 // @description  (.kp)有问题可进群2150284119联系
+// @timestamp    1765465565
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -15,17 +17,22 @@
 
 // "": { groupNumber: "" },
 
+// "": { "groupNumber": "" },
+
 // "": { groupNumber: "", aliases: [""] },
+
+// "": { "groupNumber": "", "aliases": [""] },
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.7');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.8');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
+// timestamp
 function getCurrentTimestamp() {
-    return 1765222513;
+    return 1765465565;
 }
 
 // 提醒历史
@@ -195,6 +202,7 @@ const groupMap = {
 	"insane": { groupNumber: "650600421" },
 
 	// J
+	"极地追凶": { groupNumber: "1057328944*下载" },
 	"举头三尺": { groupNumber: "334821036" },
 	"今古空名": { groupNumber: "962147366" },
 	"巨龙迷城": { groupNumber: "1057192428" },
@@ -301,6 +309,7 @@ const groupMap = {
 	"起承转结": { groupNumber: "1043452922" },
 
 	// R
+	"R∈D - Re:Dawn -": { groupNumber: "859997225", aliases: ["R∈D", "Re:Dawn", "red"] },
 	"reaby": { groupNumber: "334767023" },
 	"ROP": { groupNumber: "783947110*有作者\n780307937*无作者" },
 	"人生restart": { groupNumber: "537691966" },
