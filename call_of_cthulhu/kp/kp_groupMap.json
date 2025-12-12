@@ -1,6 +1,6 @@
 {
-  "version": "1.0.6",
-  "timestamp": 1765465565,
+  "version": "1.0.7",
+  "timestamp": 1765550396,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -284,6 +284,8 @@
     "逃离深渊": { "groupNumber": "513100948" },
     
     "# U": { "groupNumber": "" },
+    "U name it": { "groupNumber": "1072212301" },
+    
     "# V": { "groupNumber": "" },
     "VEЯ": { "groupNumber": "798805482", "aliases": ["ver"] },
     "ventangle": { "groupNumber": "754138533" },
