@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.3.9
+// @version      4.3.10
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1765550396
+// @timestamp    1765596656
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -25,14 +25,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.9');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.10');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1765550396;
+    return 1765596656;
 }
 
 // 提醒历史
@@ -522,6 +522,8 @@ const groupMap = {
 	"口胡": { groupNumber: "106133577" },
 	"海龟汤": { groupNumber: "295820752" },
 	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999\n302014132*边狱巴士", aliases: ["语擦"] },
+
+	"周边": { groupNumber: "945344459*汇总\n1073238820*交易", aliases: ["谷子"] },
 };
 
 // 反向映射
