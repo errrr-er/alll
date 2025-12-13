@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.4.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1765654531
+// @timestamp    1765654648
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -32,7 +32,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1765654531;
+    return 1765654648;
 }
 
 // 提醒历史
@@ -105,6 +105,7 @@ const groupMap = {
 	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	
 	// B
+	"Bubble on Stage": { groupNumber: "734220119" },
 	"拜昆仑": { groupNumber: "248817589" },
 	"BASH": { groupNumber: "774156947", aliases: ["燃星"] },
 	"不死灭灭": { groupNumber: "279755638" },
@@ -199,6 +200,7 @@ const groupMap = {
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
 
 	// I
+	"IQ游行Re：LOAD": { groupNumber: "1062159214" },
 	"insane": { groupNumber: "650600421" },
 
 	// J
@@ -253,6 +255,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 
 	// M
+	"冒充神明的童话": { groupNumber: "1062511494" },
 	"moon cell": { groupNumber: "972416799*下载" },
 	"墨拉亚的羊群": { groupNumber: "671767814*下载" },
 	"magnificas": { groupNumber: "477317221", aliases: ["mag"] },
@@ -414,6 +417,7 @@ const groupMap = {
 	"问道苍生": { groupNumber: "758798519、578441689" },
 
 	// X
+	"神星落乐": { groupNumber: "831229728" },
 	"虚诞的毁灭": { groupNumber: "1046244155" },
 	"心脏": { groupNumber: "883465896*无全译本" },
 	"X休止": { groupNumber: "623836728" },
