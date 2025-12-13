@@ -1,6 +1,6 @@
 {
-  "version": "1.0.7",
-  "timestamp": 1765550396,
+  "version": "1.0.8",
+  "timestamp": 1765596656,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -161,7 +161,7 @@
     "龙金劫": { "groupNumber": "947826784" },
 
     "# M": { "groupNumber": "" },
-    "moon cell": { groupNumber: "972416799*下载" },
+    "moon cell": { "groupNumber": "972416799*下载" },
     "墨拉亚的羊群": { "groupNumber": "671767814*下载" },
     "magnificas": { "groupNumber": "477317221", "aliases": ["mag"] },
     "moon cell": { "groupNumber": "817071819" },
@@ -429,6 +429,8 @@
     
     "口胡": { "groupNumber": "106133577" },
     "海龟汤": { "groupNumber": "295820752" },
-    "角色桌": { "groupNumber": "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999\n302014132*边狱巴士", "aliases": ["语擦"] }
+    "角色桌": { "groupNumber": "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n937290560*1999\n302014132*边狱巴士", "aliases": ["语擦"] },
+
+    "周边": { "groupNumber": "945344459*汇总\n1073238820*交易", "aliases": ["谷子"] }
   }
 }
