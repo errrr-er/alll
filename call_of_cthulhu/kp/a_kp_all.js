@@ -389,7 +389,7 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
-	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载\n1037886003*有作者\n817342041*无作者", aliases: ["可可"] },
+	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载\n1037886003*有作者\n817342041*无作者", aliases: ["可可", "为生命献上砂糖可可和肉桂粉"] },
 	"wts": { groupNumber: "763188284" },
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	"为谢幕献上祝福的齿轮": { groupNumber: "714364138", aliases: ["齿轮"] },
