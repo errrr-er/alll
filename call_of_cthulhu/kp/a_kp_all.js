@@ -808,7 +808,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         output += `// @timestamp    ${currentTimestamp}\n`;
         output += `// ${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
         
-        // 第一种格式：带引号的键名
+        // JSON青果
         output += `第一种格式（带引号的键名）：\n`;
         groups.forEach(group => {
             output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
