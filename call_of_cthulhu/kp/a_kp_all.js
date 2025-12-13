@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.3.10
+// @version      4.3.11
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1765596656
+// @timestamp    1765640129
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -25,14 +25,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.3.10');
+  ext = seal.ext.new('KP群汇总', 'er', '4.3.11');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1765596656;
+    return 1765640129;
 }
 
 // 提醒历史
@@ -445,6 +445,7 @@ const groupMap = {
 	"雪山密室": { groupNumber: "901413729" },
 
 	// Y
+	"缘因何为": { groupNumber: "656621118*下载" },
 	"抑或地位未定": { groupNumber: "1041670093" },
 	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
