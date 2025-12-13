@@ -721,9 +721,10 @@ function parseMKInput(input) {
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
-.kp <关键词>	// 查询特定KP群号(支持反向查询)
-.kp list	// 列出所有KP群信息(超长慎用)
-.kp help	// 显示本帮助`;
+.kp <关键词>    // 查询特定KP群号(支持反向查询)
+.kp list    // 列出所有KP群信息(超长慎用)
+.kp mk    // 生成群组代码格式(一行或多行输入)
+.kp help    // 显示本帮助`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
