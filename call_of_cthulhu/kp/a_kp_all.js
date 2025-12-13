@@ -748,36 +748,92 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 
     // 列出所有群组
     function sendGroupListSegmented(ctx, msg, listText) {
-    const lines = listText.split('\n');
-    const segmentSize = 20; // 每段行数
-    const segments = [];
-    
-    // 分段处理
-    for (let i = 0; i < lines.length; i += segmentSize) {
-        const segment = lines.slice(i, i + segmentSize).join('\n');
-        segments.push(segment);
-    }
-    
-    // 分段发送
-    segments.forEach((segment, index) => {
+        const lines = listText.split('\n');
+        const segmentSize = 20; // 每段行数
+        const segments = [];
+        
+        // 分段处理
+        for (let i = 0; i < lines.length; i += segmentSize) {
+            const segment = lines.slice(i, i + segmentSize).join('\n');
+            segments.push(segment);
+        }
+        
+        // 分段发送
+        segments.forEach((segment, index) => {
+            setTimeout(() => {
+                const header = segments.length > 1 ? `【第 ${index + 1}/${segments.length} 段】\n` : '';
+                seal.replyToSender(ctx, msg, header + segment);
+            }, index * 1500); // 每段间隔，避免发送过快
+        });
+        
+        // 最后发送图片
         setTimeout(() => {
-            const header = segments.length > 1 ? `【第 ${index + 1}/${segments.length} 段】\n` : '';
-            seal.replyToSender(ctx, msg, header + segment);
-        }, index * 1500); // 每段间隔，避免发送过快
-    });
-    
-    // 最后发送图片
-    setTimeout(() => {
-        seal.replyToSender(ctx, msg, '图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
-    }, segments.length * 500 + 200);
-	}
+            seal.replyToSender(ctx, msg, '图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
+        }, segments.length * 500 + 200);
+    }
 
-	// list命令
-	if (input.toLowerCase() === 'list') {
-		const listText = `所有KP群信息:\n${generateGroupList()}`;
-		sendGroupListSegmented(ctx, msg, listText);
-		return ret;
-	}
+    // mk命令 - 生成群组代码格式（放在list命令之前检查）
+    if (input.toLowerCase() === 'mk') {
+        // 获取完整的输入内容
+        const fullText = msg.message;
+        
+        // 使用正则匹配 .kp mk 后面的内容
+        const mkMatch = fullText.match(/\.kp\s+mk\s+(.+)/is);
+        if (!mkMatch) {
+            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
+            return ret;
+        }
+        
+        const mkContent = mkMatch[1].trim();
+        
+        // 解析输入的群组信息
+        const groups = parseMKInput(mkContent);
+        
+        if (groups.length === 0) {
+            seal.replyToSender(ctx, msg, "未找到有效的群组信息，请检查输入格式。支持分隔符：逗号(,)、中文逗号(，)、顿号(、)或换行");
+            return ret;
+        }
+        
+        // 生成当前时间戳
+        const currentTimestamp = Math.floor(Date.now() / 1000);
+        const year = new Date().getFullYear();
+        const month = String(new Date().getMonth() + 1).padStart(2, '0');
+        const day = String(new Date().getDate()).padStart(2, '0');
+        const hours = String(new Date().getHours()).padStart(2, '0');
+        const minutes = String(new Date().getMinutes()).padStart(2, '0');
+        const seconds = String(new Date().getSeconds()).padStart(2, '0');
+        
+        // 生成完整的输出
+        let output = `当前时间戳：\n`;
+        output += `// @timestamp    ${currentTimestamp}\n`;
+        output += `// ${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
+        
+        // 第一种格式：带引号的键名
+        output += `第一种格式（带引号的键名）：\n`;
+        groups.forEach(group => {
+            output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
+        });
+        
+        output += `\n第二种格式（不带引号的键名）：\n`;
+        groups.forEach(group => {
+            output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
+        });
+        
+        output += `\n解析到 ${groups.length} 个群组：\n`;
+        groups.forEach((group, index) => {
+            output += `${index + 1}. ${group.name} → ${group.number}\n`;
+        });
+        
+        seal.replyToSender(ctx, msg, output);
+        return ret;
+    }
+
+    // list命令
+    if (input.toLowerCase() === 'list') {
+        const listText = `所有KP群信息:\n${generateGroupList()}`;
+        sendGroupListSegmented(ctx, msg, listText);
+        return ret;
+    }
 
     // 反向查询
     if (/^\d+$/.test(input)) {
@@ -844,63 +900,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}】→ ${foundGroup.match.info.groupNumber}`);
     }
 
-
-	// mk命令 - 生成群组代码格式
-if (input.toLowerCase() === 'mk') {
-    // 获取完整的输入内容
-    const fullText = msg.message;
-    
-    // 使用正则匹配 .kp mk 后面的内容
-    const mkMatch = fullText.match(/\.kp\s+mk\s+(.+)/is);
-    if (!mkMatch) {
-        seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
-        return ret;
-    }
-    
-    const mkContent = mkMatch[1].trim();
-    
-    // 解析输入的群组信息
-    const groups = parseMKInput(mkContent);
-    
-    if (groups.length === 0) {
-        seal.replyToSender(ctx, msg, "未找到有效的群组信息，请检查输入格式。支持分隔符：逗号(,)、中文逗号(，)、顿号(、)或换行");
-        return ret;
-    }
-    
-    // 生成当前时间戳
-    const currentTimestamp = Math.floor(Date.now() / 1000);
-    const dateStr = new Date().toLocaleString('zh-CN');
-    const year = new Date().getFullYear();
-    const month = String(new Date().getMonth() + 1).padStart(2, '0');
-    const day = String(new Date().getDate()).padStart(2, '0');
-    const hours = String(new Date().getHours()).padStart(2, '0');
-    const minutes = String(new Date().getMinutes()).padStart(2, '0');
-    const seconds = String(new Date().getSeconds()).padStart(2, '0');
-    
-    // 生成完整的输出
-    let output = `当前时间戳：\n`;
-    output += `// @timestamp    ${currentTimestamp}\n`;
-    output += `// ${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
-    
-    // 第一种格式：带引号的键名
-    output += `第一种格式（带引号的键名）：\n`;
-    groups.forEach(group => {
-        output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
-    });
-    
-    output += `\n第二种格式（不带引号的键名）：\n`;
-    groups.forEach(group => {
-        output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
-    });
-    
-    output += `\n解析到 ${groups.length} 个群组：\n`;
-    groups.forEach((group, index) => {
-        output += `${index + 1}. ${group.name} → ${group.number}\n`;
-    });
-    
-    seal.replyToSender(ctx, msg, output);
     return ret;
-}
 };
 
 // 注册指令
