@@ -805,16 +805,16 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         
         // 生成完整的输出
         let output = `当前时间戳：\n`;
-        output += `// @timestamp    ${currentTimestamp}\n`;
-        output += `// ${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
+        output += `${currentTimestamp}\n`;
+        output += `${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
         
-        // JSON青果
-        output += `第一种格式（带引号的键名）：\n`;
+        // 两种格式
+        output += `JSON（适配青果）：\n`;
         groups.forEach(group => {
             output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
         });
         
-        output += `\n第二种格式（不带引号的键名）：\n`;
+        output += `\nJS（适配海豹）：\n`;
         groups.forEach(group => {
             output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
         });
