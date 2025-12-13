@@ -843,7 +843,6 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}】→ ${foundGroup.match.info.groupNumber}`);
     }
 
-    return ret;
 
 	// mk命令 - 生成群组代码格式
 if (input.toLowerCase() === 'mk') {
