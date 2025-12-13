@@ -633,6 +633,90 @@ function generateGroupList() {
     return listLines.join('\n');
 }
 
+// 解析 .kp mk 的输入
+function parseMKInput(input) {
+    const groups = [];
+    
+    // 尝试多种解析方式：
+    
+    // 1. 逗号分隔的单行格式：名称1,号码1,名称2,号码2,...
+    if (input.includes(',')) {
+        // 先按逗号分割
+        const parts = input.split(',').map(p => p.trim()).filter(p => p);
+        
+        // 然后检查每个部分是否包含中文顿号
+        const finalParts = [];
+        parts.forEach(part => {
+            if (part.includes('、')) {
+                // 如果部分内包含中文顿号，进一步分割
+                finalParts.push(...part.split('、').map(p => p.trim()).filter(p => p));
+            } else {
+                finalParts.push(part);
+            }
+        });
+        
+        for (let i = 0; i < finalParts.length; i += 2) {
+            if (i + 1 < finalParts.length) {
+                groups.push({
+                    name: finalParts[i],
+                    number: finalParts[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 2. 中文顿号分隔的单行格式：名称1、号码1、名称2、号码2、...
+    if (groups.length === 0 && input.includes('、')) {
+        const parts = input.split('、').map(p => p.trim()).filter(p => p);
+        
+        for (let i = 0; i < parts.length; i += 2) {
+            if (i + 1 < parts.length) {
+                groups.push({
+                    name: parts[i],
+                    number: parts[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 3. 多行格式：每两行为一组（名称 + 号码）
+    if (groups.length === 0) {
+        const lines = input.split(/[\n\r]+/).map(line => line.trim()).filter(line => line);
+        
+        for (let i = 0; i < lines.length; i += 2) {
+            if (i + 1 < lines.length) {
+                groups.push({
+                    name: lines[i],
+                    number: lines[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 4. 混合格式（逗号和中文逗号）
+    if (groups.length === 0 && (input.includes(',') || input.includes('，'))) {
+        // 统一替换中文逗号为英文逗号
+        const normalizedInput = input.replace(/，/g, ',');
+        const parts = normalizedInput.split(',').map(p => p.trim()).filter(p => p);
+        
+        for (let i = 0; i < parts.length; i += 2) {
+            if (i + 1 < parts.length) {
+                groups.push({
+                    name: parts[i],
+                    number: parts[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 过滤掉无效的条目（号码为空或不包含数字）
+    return groups.filter(group => 
+        group.name && 
+        group.number && 
+        /\d/.test(group.number)
+    );
+}
+
 // .kp指令
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
@@ -760,6 +844,63 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     }
 
     return ret;
+
+	// mk命令 - 生成群组代码格式
+if (input.toLowerCase() === 'mk') {
+    // 获取完整的输入内容
+    const fullText = msg.message;
+    
+    // 使用正则匹配 .kp mk 后面的内容
+    const mkMatch = fullText.match(/\.kp\s+mk\s+(.+)/is);
+    if (!mkMatch) {
+        seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
+        return ret;
+    }
+    
+    const mkContent = mkMatch[1].trim();
+    
+    // 解析输入的群组信息
+    const groups = parseMKInput(mkContent);
+    
+    if (groups.length === 0) {
+        seal.replyToSender(ctx, msg, "未找到有效的群组信息，请检查输入格式。支持分隔符：逗号(,)、中文逗号(，)、顿号(、)或换行");
+        return ret;
+    }
+    
+    // 生成当前时间戳
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    const dateStr = new Date().toLocaleString('zh-CN');
+    const year = new Date().getFullYear();
+    const month = String(new Date().getMonth() + 1).padStart(2, '0');
+    const day = String(new Date().getDate()).padStart(2, '0');
+    const hours = String(new Date().getHours()).padStart(2, '0');
+    const minutes = String(new Date().getMinutes()).padStart(2, '0');
+    const seconds = String(new Date().getSeconds()).padStart(2, '0');
+    
+    // 生成完整的输出
+    let output = `当前时间戳：\n`;
+    output += `// @timestamp    ${currentTimestamp}\n`;
+    output += `// ${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
+    
+    // 第一种格式：带引号的键名
+    output += `第一种格式（带引号的键名）：\n`;
+    groups.forEach(group => {
+        output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
+    });
+    
+    output += `\n第二种格式（不带引号的键名）：\n`;
+    groups.forEach(group => {
+        output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
+    });
+    
+    output += `\n解析到 ${groups.length} 个群组：\n`;
+    groups.forEach((group, index) => {
+        output += `${index + 1}. ${group.name} → ${group.number}\n`;
+    });
+    
+    seal.replyToSender(ctx, msg, output);
+    return ret;
+}
 };
 
 // 注册指令
