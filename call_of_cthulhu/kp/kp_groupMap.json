@@ -4,7 +4,7 @@
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
-    "ABS": { "groupNumber": "941349942" },
+    "ABS": { "groupNumber": "941349942", "aliases": ["全蓝综合征"] },
     "AIB": { "groupNumber": "112077093" },
     "Antinomy": { "groupNumber": "101476385" },
     "哀歌弥赛亚": { "groupNumber": "609355937", "aliases": ["哀歌"] },
@@ -76,7 +76,6 @@
     "非正经修仙": { "groupNumber": "645560269" },
 
     "# G": { "groupNumber": "" },
-    "告密者": { "groupNumber": "623768354" },
     "孤灯弃城": { "groupNumber": "877858567" },
     "怪物们与邪典仙境": { "groupNumber": "592577986", "aliases": ["鞋垫"] },
     "怪胎": { "groupNumber": "639870851" },
@@ -85,7 +84,7 @@
     "共鸣性怪异": { "groupNumber": "903173796" },
     "歌味觉死": { "groupNumber": "616756545\n路易斯安那系列+畅梦人+淤泥之花与空心石" },
     "革命少女罗丹斯": { "groupNumber": "641481529" },
-    "高塔之死": { "groupNumber": "623768354*战役集" },
+    "高塔之死": { "groupNumber": "623768354*战役集", "aliases": ["告密者"] },
     "沽上潮生来": { "groupNumber": "655068229*下载" },
     
     "# H": { "groupNumber": "" },
@@ -208,7 +207,6 @@
     "青春自杀": { "groupNumber": "953788807" },
     "亲爱的，我把脑子丢了": { "groupNumber": "839027414", "aliases": ["脑丢", "丢脑"] },
     "全景敞视主义的陷阱": { "groupNumber": "792650936" },
-    "全蓝综合征": { "groupNumber": "941349942" },
     "弃约社会": { "groupNumber": "972643133*下载\n916122224*KP" },
     "恰故人归": { "groupNumber": "939600700*下载\n607468653*KP" },
     "求我": { "groupNumber": "338494770*下载\n979194858*下载\n978495486*KP" },
@@ -337,7 +335,7 @@
     "幸福与心动的民谣": { "groupNumber": "1036780211" },
     "戏法师的感知": { "groupNumber": "144919125" },
     "星海孤舟": { "groupNumber": "657774576*下载" },
-    "雪域下的黄金宝藏": { "groupNumber": "527406942*下载" },
+    "雪域下的黄金宝藏": { "groupNumber": "527406942*下载\n307758220*KP", "aliases": ["雪域下的金色宝藏"] },
     "寻仙I神仙索": { "groupNumber": "746673328*下载\n寻仙I神仙索+寻仙II观音土", "aliases": ["寻仙II观音土", "寻仙"] },
     "星升": { "groupNumber": "872362745" },
     "小众规则综合": { "groupNumber": "945728295" },
@@ -353,7 +351,6 @@
     "雪下残生": { "groupNumber": "592418282" },
     "雪与箱庭之梦": { "groupNumber": "413941306", "aliases": ["雪箱"] },
     "雪中形骸": { "groupNumber": "829092202" },
-    "雪域下的金色宝藏": { "groupNumber": "307758220" },
     "雪山密室": { "groupNumber": "901413729" },
 
     "# Y": { "groupNumber": "" },
