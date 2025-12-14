@@ -641,30 +641,23 @@ function generateGroupList() {
 function parseMKInput(input) {
     const groups = [];
     
-    // 1. 保留原始换行符用于显示，但在解析时特殊处理
-    // 先将换行符替换为特殊标记，解析后再恢复
-    const processedInput = input.replace(/\n/g, '|n|').replace(/\r/g, '|r|');
-    
-    // 2. 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
-    let normalizedInput = processedInput
+    // 简单处理：只使用逗号和中文逗号作为分隔符
+    // 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
+    let normalizedInput = input
         .replace(/，/g, ',')  // 中文逗号转英文逗号
         .replace(/、/g, ','); // 中文顿号转英文逗号
     
-    // 3. 分割并过滤空项
+    // 分割并过滤空项
     const parts = normalizedInput.split(',')
         .map(p => p.trim())
         .filter(p => p.length > 0);
     
-    // 4. 每两个部分为一组（名称，号码）
+    // 每两个部分为一组（名称，号码）
     for (let i = 0; i < parts.length; i += 2) {
         if (i + 1 < parts.length) {
-            // 恢复换行符
-            const name = parts[i].replace(/\|n\|/g, '\n').replace(/\|r\|/g, '\r');
-            const number = parts[i + 1].replace(/\|n\|/g, '\n').replace(/\|r\|/g, '\r');
-            
             groups.push({
-                name: name,
-                number: number
+                name: parts[i],
+                number: parts[i + 1]
             });
         }
     }
@@ -732,42 +725,29 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, segments.length * 500 + 200);
     }
 
-    // 先检查 mk 命令 - 必须放在前面！
+    // mk命令 - 生成群组代码格式
     if (input.toLowerCase() === 'mk') {
         // 获取完整的输入内容
         const fullText = msg.message;
         
-        // 调试：查看实际接收到的消息
-        console.log("收到消息:", fullText);
+        // 简单直接的方法：截取 .kp mk 后面的所有内容
+        const prefix = '.kp mk ';
+        const prefixLower = '.kp mk ';
         
-        // 方法1：使用更简单的正则匹配
-        // 匹配 .kp mk 或者 .kp MK 后面直到消息结束的所有内容
-        const mkMatch = fullText.match(/^\.kp\s+mk\s+(.+)$/i);
-        
-        if (!mkMatch) {
-            // 方法2：尝试更宽松的匹配
-            const mkMatch2 = fullText.match(/\.kp\s+mk\s+(.+)/i);
-            if (!mkMatch2) {
-                seal.replyToSender(ctx, msg, "用法：.kp mk [群组信息]\n示例：\n.kp mk 断头爱丽丝,1073575754\n.kp mk 断头爱丽丝，1073575754");
-                return ret;
-            }
-            var mkContent = mkMatch2[1].trim();
-        } else {
-            var mkContent = mkMatch[1].trim();
+        if (!fullText.toLowerCase().startsWith(prefixLower)) {
+            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
+            return ret;
         }
         
-        console.log("提取的内容:", mkContent);
+        const mkContent = fullText.substring(prefix.length).trim();
         
-        // 如果 mkContent 为空，返回帮助信息
         if (!mkContent) {
-            seal.replyToSender(ctx, msg, "用法：.kp mk [群组信息]\n示例：\n.kp mk 断头爱丽丝,1073575754\n.kp mk 断头爱丽丝，1073575754");
+            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
             return ret;
         }
         
         // 解析输入的群组信息
         const groups = parseMKInput(mkContent);
-        
-        console.log("解析结果:", groups);
         
         if (groups.length === 0) {
             seal.replyToSender(ctx, msg, `未找到有效的群组信息。\n输入内容：${mkContent}\n支持分隔符：逗号(,)、中文逗号(，)、顿号(、)`);
