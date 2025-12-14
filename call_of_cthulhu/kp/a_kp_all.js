@@ -732,7 +732,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, segments.length * 500 + 200);
     }
 
-    // mk命令 - 生成群组代码格式（放在list命令之前检查）
+    // 先检查 mk 命令 - 必须放在前面！
     if (input.toLowerCase() === 'mk') {
         // 获取完整的输入内容
         const fullText = msg.message;
@@ -771,17 +771,20 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         // 两种格式
         output += `JSON（适配青果）：\n`;
         groups.forEach(group => {
-            output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
+            // 将实际的换行符转义为 \n 以便在字符串中正确显示
+            const escapedNumber = group.number.replace(/\n/g, '\\n');
+            output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
         });
         
         output += `\nJS（适配海豹）：\n`;
         groups.forEach(group => {
-            output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
+            const escapedNumber = group.number.replace(/\n/g, '\\n');
+            output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
         });
         
         output += `\n解析到 ${groups.length} 个群组：\n`;
         groups.forEach((group, index) => {
-            output += `${index + 1}. ${group.name} → ${group.number}\n`;
+            output += `${index + 1}. ${group.name} → ${group.number.replace(/\n/g, '\\n')}\n`;
         });
         
         seal.replyToSender(ctx, msg, output);
