@@ -643,50 +643,9 @@ function parseMKInput(input) {
     
     // 尝试多种解析方式：
     
-    // 1. 逗号分隔的单行格式：名称1,号码1,名称2,号码2,...
-    if (input.includes(',')) {
-        // 先按逗号分割
-        const parts = input.split(',').map(p => p.trim()).filter(p => p);
-        
-        // 然后检查每个部分是否包含中文顿号
-        const finalParts = [];
-        parts.forEach(part => {
-            if (part.includes('、')) {
-                // 如果部分内包含中文顿号，进一步分割
-                finalParts.push(...part.split('、').map(p => p.trim()).filter(p => p));
-            } else {
-                finalParts.push(part);
-            }
-        });
-        
-        for (let i = 0; i < finalParts.length; i += 2) {
-            if (i + 1 < finalParts.length) {
-                groups.push({
-                    name: finalParts[i],
-                    number: finalParts[i + 1]
-                });
-            }
-        }
-    }
-    
-    // 2. 中文顿号分隔的单行格式：名称1、号码1、名称2、号码2、...
-    if (groups.length === 0 && input.includes('、')) {
-        const parts = input.split('、').map(p => p.trim()).filter(p => p);
-        
-        for (let i = 0; i < parts.length; i += 2) {
-            if (i + 1 < parts.length) {
-                groups.push({
-                    name: parts[i],
-                    number: parts[i + 1]
-                });
-            }
-        }
-    }
-    
-    // 3. 多行格式：每两行为一组（名称 + 号码）
-    if (groups.length === 0) {
-        const lines = input.split(/[\n\r]+/).map(line => line.trim()).filter(line => line);
-        
+    // 1. 先处理换行格式：每两行为一组（名称 + 号码）
+    const lines = input.split(/[\n\r]+/).map(line => line.trim()).filter(line => line);
+    if (lines.length >= 2) {
         for (let i = 0; i < lines.length; i += 2) {
             if (i + 1 < lines.length) {
                 groups.push({
@@ -697,12 +656,19 @@ function parseMKInput(input) {
         }
     }
     
-    // 4. 混合格式（逗号和中文逗号）
-    if (groups.length === 0 && (input.includes(',') || input.includes('，'))) {
-        // 统一替换中文逗号为英文逗号
-        const normalizedInput = input.replace(/，/g, ',');
-        const parts = normalizedInput.split(',').map(p => p.trim()).filter(p => p);
+    // 2. 如果换行格式没有解析出结果，尝试分隔符格式
+    if (groups.length === 0) {
+        // 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
+        let normalizedInput = input
+            .replace(/，/g, ',')  // 中文逗号转英文逗号
+            .replace(/、/g, ','); // 中文顿号转英文逗号
         
+        // 分割并过滤空项
+        const parts = normalizedInput.split(',')
+            .map(p => p.trim())
+            .filter(p => p.length > 0);
+        
+        // 每两个部分为一组（名称，号码）
         for (let i = 0; i < parts.length; i += 2) {
             if (i + 1 < parts.length) {
                 groups.push({
@@ -713,9 +679,10 @@ function parseMKInput(input) {
         }
     }
     
-    // 过滤掉无效的条目（号码为空或不包含数字）
+    // 过滤掉无效的条目（名称不为空，号码包含数字）
     return groups.filter(group => 
         group.name && 
+        group.name.length > 0 &&
         group.number && 
         /\d/.test(group.number)
     );
