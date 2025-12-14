@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.4.0
+// @version      4.5.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1765654648
+// @timestamp    1765735373
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -25,14 +25,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.4.0');
+  ext = seal.ext.new('KP群汇总', 'er', '4.5.0');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1765654648;
+    return 1765735373;
 }
 
 // 提醒历史
@@ -141,6 +141,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 
     // D
+	"断头爱丽丝": { groupNumber: "1073575754" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
 	"东京g": { groupNumber: "201906582" },
@@ -185,7 +186,7 @@ const groupMap = {
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
 	"魂夜逃避行": { groupNumber: "1046944266*下载\n1009337218*KP" },
 	"化作海上之雨": { groupNumber: "399589228*下载", aliases: ["海雨"] },
-	"合欢宗遇上无情道": { groupNumber: "1048818266*下载" },
+	"当合欢宗遇上无情道": { groupNumber: "1048818266*下载\n736394722*下载\n112452157*KP", aliases: ["合欢宗"] },
 	"海国战役设定集": { groupNumber: "567135881" },
 	"海盗之宴": { groupNumber: "1062169852" },
 	"海盗啊海盗": { groupNumber: "928270526", aliases: ["海盗"] },
