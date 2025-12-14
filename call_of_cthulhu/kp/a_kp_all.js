@@ -821,20 +821,19 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         // 两种格式
         output += `JSON（适配青果）：\n`;
         groups.forEach(group => {
-            // 将实际的换行符转义为 \n 以便在字符串中正确显示
-            const escapedNumber = group.number.replace(/\n/g, '\\n');
-            output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
+            // 不再转义 \n，直接保留原始文本
+            output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
         });
         
         output += `\nJS（适配海豹）：\n`;
         groups.forEach(group => {
-            const escapedNumber = group.number.replace(/\n/g, '\\n');
-            output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
+            // 不再转义 \n，直接保留原始文本
+            output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
         });
         
         output += `\n解析到 ${groups.length} 个群组：\n`;
         groups.forEach((group, index) => {
-            output += `${index + 1}. ${group.name} → ${group.number.replace(/\n/g, '\\n')}\n`;
+            output += `${index + 1}. ${group.name} → ${group.number}\n`;
         });
         
         seal.replyToSender(ctx, msg, output);
