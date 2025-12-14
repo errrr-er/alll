@@ -641,41 +641,31 @@ function generateGroupList() {
 function parseMKInput(input) {
     const groups = [];
     
-    // 尝试多种解析方式：
+    // 1. 保留原始换行符用于显示，但在解析时特殊处理
+    // 先将换行符替换为特殊标记，解析后再恢复
+    const processedInput = input.replace(/\n/g, '|n|').replace(/\r/g, '|r|');
     
-    // 1. 先处理换行格式：每两行为一组（名称 + 号码）
-    const lines = input.split(/[\n\r]+/).map(line => line.trim()).filter(line => line);
-    if (lines.length >= 2) {
-        for (let i = 0; i < lines.length; i += 2) {
-            if (i + 1 < lines.length) {
-                groups.push({
-                    name: lines[i],
-                    number: lines[i + 1]
-                });
-            }
-        }
-    }
+    // 2. 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
+    let normalizedInput = processedInput
+        .replace(/，/g, ',')  // 中文逗号转英文逗号
+        .replace(/、/g, ','); // 中文顿号转英文逗号
     
-    // 2. 如果换行格式没有解析出结果，尝试分隔符格式
-    if (groups.length === 0) {
-        // 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
-        let normalizedInput = input
-            .replace(/，/g, ',')  // 中文逗号转英文逗号
-            .replace(/、/g, ','); // 中文顿号转英文逗号
-        
-        // 分割并过滤空项
-        const parts = normalizedInput.split(',')
-            .map(p => p.trim())
-            .filter(p => p.length > 0);
-        
-        // 每两个部分为一组（名称，号码）
-        for (let i = 0; i < parts.length; i += 2) {
-            if (i + 1 < parts.length) {
-                groups.push({
-                    name: parts[i],
-                    number: parts[i + 1]
-                });
-            }
+    // 3. 分割并过滤空项
+    const parts = normalizedInput.split(',')
+        .map(p => p.trim())
+        .filter(p => p.length > 0);
+    
+    // 4. 每两个部分为一组（名称，号码）
+    for (let i = 0; i < parts.length; i += 2) {
+        if (i + 1 < parts.length) {
+            // 恢复换行符
+            const name = parts[i].replace(/\|n\|/g, '\n').replace(/\|r\|/g, '\r');
+            const number = parts[i + 1].replace(/\|n\|/g, '\n').replace(/\|r\|/g, '\r');
+            
+            groups.push({
+                name: name,
+                number: number
+            });
         }
     }
     
