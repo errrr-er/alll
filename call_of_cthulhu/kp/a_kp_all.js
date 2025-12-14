@@ -742,21 +742,54 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, segments.length * 500 + 200);
     }
 
-    // mk命令 - 生成群组代码格式
+        // mk命令 - 生成群组代码格式
     if (input.toLowerCase() === 'mk') {
         // 获取完整的输入内容
-        const fullText = msg.message;
+        const fullText = msg.message.trim();
         
-        // 简单直接的方法：截取 .kp mk 后面的所有内容
-        const prefix = '.kp mk ';
-        const prefixLower = '.kp mk ';
+        // 检查多种前缀
+        let mkContent = '';
+        let foundPrefix = false;
         
-        if (!fullText.toLowerCase().startsWith(prefixLower)) {
+        // 尝试匹配各种前缀
+        const prefixes = [
+            '.kp mk ',
+            '。kp mk ',
+            ',kp mk ',
+            '，kp mk '
+        ];
+        
+        for (const prefix of prefixes) {
+            if (fullText.toLowerCase().startsWith(prefix.toLowerCase())) {
+                mkContent = fullText.substring(prefix.length).trim();
+                foundPrefix = true;
+                break;
+            }
+        }
+        
+        // 如果没找到标准前缀，尝试不带空格的情况
+        if (!foundPrefix) {
+            const prefixesNoSpace = [
+                '.kpmk ',
+                '/kpmk ',
+                '。kpmk ',
+                ',kpmk ',
+                'kpmk '
+            ];
+            
+            for (const prefix of prefixesNoSpace) {
+                if (fullText.toLowerCase().startsWith(prefix.toLowerCase())) {
+                    mkContent = fullText.substring(prefix.length).trim();
+                    foundPrefix = true;
+                    break;
+                }
+            }
+        }
+        
+        if (!foundPrefix) {
             seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
             return ret;
         }
-        
-        const mkContent = fullText.substring(prefix.length).trim();
         
         if (!mkContent) {
             seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
@@ -767,7 +800,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         const groups = parseMKInput(mkContent);
         
         if (groups.length === 0) {
-            seal.replyToSender(ctx, msg, `未找到有效的群组信息。\n输入内容：${mkContent}\n支持分隔符：逗号(,)、中文逗号(，)、顿号(、)`);
+            seal.replyToSender(ctx, msg, `未找到有效的群组信息。\n输入内容：${mkContent}`);
             return ret;
         }
         
@@ -775,7 +808,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         const currentTimestamp = Math.floor(Date.now() / 1000);
         const year = new Date().getFullYear();
         const month = String(new Date().getMonth() + 1).padStart(2, '0');
-        const day = String(new Date().getDate()).padStart(2, '0');
+        const day = String(newDate().getDate()).padStart(2, '0');
         const hours = String(new Date().getHours()).padStart(2, '0');
         const minutes = String(new Date().getMinutes()).padStart(2, '0');
         const seconds = String(new Date().getSeconds()).padStart(2, '0');
