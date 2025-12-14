@@ -641,24 +641,41 @@ function generateGroupList() {
 function parseMKInput(input) {
     const groups = [];
     
-    // 简单处理：只使用逗号和中文逗号作为分隔符
-    // 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
-    let normalizedInput = input
-        .replace(/，/g, ',')  // 中文逗号转英文逗号
-        .replace(/、/g, ','); // 中文顿号转英文逗号
+    // 方法1：先按真正的换行符分割（多行格式）
+    const lines = input.split(/[\r\n]+/).map(line => line.trim()).filter(line => line.length > 0);
     
-    // 分割并过滤空项
-    const parts = normalizedInput.split(',')
-        .map(p => p.trim())
-        .filter(p => p.length > 0);
+    if (lines.length >= 2 && lines.length % 2 === 0) {
+        // 如果行数是偶数且>=2，尝试按两行一组解析
+        for (let i = 0; i < lines.length; i += 2) {
+            if (i + 1 < lines.length) {
+                groups.push({
+                    name: lines[i],
+                    number: lines[i + 1]
+                });
+            }
+        }
+    }
     
-    // 每两个部分为一组（名称，号码）
-    for (let i = 0; i < parts.length; i += 2) {
-        if (i + 1 < parts.length) {
-            groups.push({
-                name: parts[i],
-                number: parts[i + 1]
-            });
+    // 方法2：如果多行格式没解析出结果，尝试逗号分隔格式
+    if (groups.length === 0) {
+        // 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
+        let normalizedInput = input
+            .replace(/，/g, ',')  // 中文逗号转英文逗号
+            .replace(/、/g, ','); // 中文顿号转英文逗号
+        
+        // 分割并过滤空项
+        const parts = normalizedInput.split(',')
+            .map(p => p.trim())
+            .filter(p => p.length > 0);
+        
+        // 每两个部分为一组（名称，号码）
+        for (let i = 0; i < parts.length; i += 2) {
+            if (i + 1 < parts.length) {
+                groups.push({
+                    name: parts[i],
+                    number: parts[i + 1]
+                });
+            }
         }
     }
     
