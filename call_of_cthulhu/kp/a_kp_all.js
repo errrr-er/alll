@@ -821,19 +821,22 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         // 两种格式
         output += `JSON（适配青果）：\n`;
         groups.forEach(group => {
-            // 不再转义 \n，直接保留原始文本
-            output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
+            // 使用 JSON.stringify 自动处理转义
+            const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+            output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
         });
         
         output += `\nJS（适配海豹）：\n`;
         groups.forEach(group => {
-            // 不再转义 \n，直接保留原始文本
-            output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
+            const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+            output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
         });
         
         output += `\n解析到 ${groups.length} 个群组：\n`;
         groups.forEach((group, index) => {
-            output += `${index + 1}. ${group.name} → ${group.number}\n`;
+            // 显示时使用转义后的版本
+            const displayNumber = JSON.stringify(group.number).slice(1, -1);
+            output += `${index + 1}. ${group.name} → ${displayNumber}\n`;
         });
         
         seal.replyToSender(ctx, msg, output);
