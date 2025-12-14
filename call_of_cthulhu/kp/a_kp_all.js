@@ -737,20 +737,40 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         // 获取完整的输入内容
         const fullText = msg.message;
         
-        // 使用正则匹配 .kp mk 后面的内容
-        const mkMatch = fullText.match(/\.kp\s+mk\s+(.+)/is);
+        // 调试：查看实际接收到的消息
+        console.log("收到消息:", fullText);
+        
+        // 方法1：使用更简单的正则匹配
+        // 匹配 .kp mk 或者 .kp MK 后面直到消息结束的所有内容
+        const mkMatch = fullText.match(/^\.kp\s+mk\s+(.+)$/i);
+        
         if (!mkMatch) {
-            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
-            return ret;
+            // 方法2：尝试更宽松的匹配
+            const mkMatch2 = fullText.match(/\.kp\s+mk\s+(.+)/i);
+            if (!mkMatch2) {
+                seal.replyToSender(ctx, msg, "用法：.kp mk [群组信息]\n示例：\n.kp mk 断头爱丽丝,1073575754\n.kp mk 断头爱丽丝，1073575754");
+                return ret;
+            }
+            var mkContent = mkMatch2[1].trim();
+        } else {
+            var mkContent = mkMatch[1].trim();
         }
         
-        const mkContent = mkMatch[1].trim();
+        console.log("提取的内容:", mkContent);
+        
+        // 如果 mkContent 为空，返回帮助信息
+        if (!mkContent) {
+            seal.replyToSender(ctx, msg, "用法：.kp mk [群组信息]\n示例：\n.kp mk 断头爱丽丝,1073575754\n.kp mk 断头爱丽丝，1073575754");
+            return ret;
+        }
         
         // 解析输入的群组信息
         const groups = parseMKInput(mkContent);
         
+        console.log("解析结果:", groups);
+        
         if (groups.length === 0) {
-            seal.replyToSender(ctx, msg, "未找到有效的群组信息，请检查输入格式。支持分隔符：逗号(,)、中文逗号(，)、顿号(、)或换行");
+            seal.replyToSender(ctx, msg, `未找到有效的群组信息。\n输入内容：${mkContent}\n支持分隔符：逗号(,)、中文逗号(，)、顿号(、)`);
             return ret;
         }
         
