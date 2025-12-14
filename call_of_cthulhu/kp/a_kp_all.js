@@ -641,38 +641,81 @@ function generateGroupList() {
 function parseMKInput(input) {
     const groups = [];
     
-    // 1. 保留原始换行符用于显示，但在解析时特殊处理
-    // 先将换行符替换为特殊标记，解析后再恢复
-    const processedInput = input.replace(/\n/g, '|n|').replace(/\r/g, '|r|');
+    // 尝试多种解析方式：
     
-    // 2. 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
-    let normalizedInput = processedInput
-        .replace(/，/g, ',')  // 中文逗号转英文逗号
-        .replace(/、/g, ','); // 中文顿号转英文逗号
-    
-    // 3. 分割并过滤空项
-    const parts = normalizedInput.split(',')
-        .map(p => p.trim())
-        .filter(p => p.length > 0);
-    
-    // 4. 每两个部分为一组（名称，号码）
-    for (let i = 0; i < parts.length; i += 2) {
-        if (i + 1 < parts.length) {
-            // 恢复换行符
-            const name = parts[i].replace(/\|n\|/g, '\n').replace(/\|r\|/g, '\r');
-            const number = parts[i + 1].replace(/\|n\|/g, '\n').replace(/\|r\|/g, '\r');
-            
-            groups.push({
-                name: name,
-                number: number
-            });
+    // 1. 逗号分隔的单行格式：名称1,号码1,名称2,号码2,...
+    if (input.includes(',')) {
+        // 先按逗号分割
+        const parts = input.split(',').map(p => p.trim()).filter(p => p);
+        
+        // 然后检查每个部分是否包含中文顿号
+        const finalParts = [];
+        parts.forEach(part => {
+            if (part.includes('、')) {
+                // 如果部分内包含中文顿号，进一步分割
+                finalParts.push(...part.split('、').map(p => p.trim()).filter(p => p));
+            } else {
+                finalParts.push(part);
+            }
+        });
+        
+        for (let i = 0; i < finalParts.length; i += 2) {
+            if (i + 1 < finalParts.length) {
+                groups.push({
+                    name: finalParts[i],
+                    number: finalParts[i + 1]
+                });
+            }
         }
     }
     
-    // 过滤掉无效的条目（名称不为空，号码包含数字）
+    // 2. 中文顿号分隔的单行格式：名称1、号码1、名称2、号码2、...
+    if (groups.length === 0 && input.includes('、')) {
+        const parts = input.split('、').map(p => p.trim()).filter(p => p);
+        
+        for (let i = 0; i < parts.length; i += 2) {
+            if (i + 1 < parts.length) {
+                groups.push({
+                    name: parts[i],
+                    number: parts[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 3. 多行格式：每两行为一组（名称 + 号码）
+    if (groups.length === 0) {
+        const lines = input.split(/[\n\r]+/).map(line => line.trim()).filter(line => line);
+        
+        for (let i = 0; i < lines.length; i += 2) {
+            if (i + 1 < lines.length) {
+                groups.push({
+                    name: lines[i],
+                    number: lines[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 4. 混合格式（逗号和中文逗号）
+    if (groups.length === 0 && (input.includes(',') || input.includes('，'))) {
+        // 统一替换中文逗号为英文逗号
+        const normalizedInput = input.replace(/，/g, ',');
+        const parts = normalizedInput.split(',').map(p => p.trim()).filter(p => p);
+        
+        for (let i = 0; i < parts.length; i += 2) {
+            if (i + 1 < parts.length) {
+                groups.push({
+                    name: parts[i],
+                    number: parts[i + 1]
+                });
+            }
+        }
+    }
+    
+    // 过滤掉无效的条目（号码为空或不包含数字）
     return groups.filter(group => 
         group.name && 
-        group.name.length > 0 &&
         group.number && 
         /\d/.test(group.number)
     );
@@ -732,45 +775,25 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, segments.length * 500 + 200);
     }
 
-    // 先检查 mk 命令 - 必须放在前面！
+    // mk命令 - 生成群组代码格式（放在list命令之前检查）
     if (input.toLowerCase() === 'mk') {
         // 获取完整的输入内容
         const fullText = msg.message;
         
-        // 调试：查看实际接收到的消息
-        console.log("收到消息:", fullText);
-        
-        // 方法1：使用更简单的正则匹配
-        // 匹配 .kp mk 或者 .kp MK 后面直到消息结束的所有内容
-        const mkMatch = fullText.match(/^\.kp\s+mk\s+(.+)$/i);
-        
+        // 使用正则匹配 .kp mk 后面的内容
+        const mkMatch = fullText.match(/\.kp\s+mk\s+(.+)/is);
         if (!mkMatch) {
-            // 方法2：尝试更宽松的匹配
-            const mkMatch2 = fullText.match(/\.kp\s+mk\s+(.+)/i);
-            if (!mkMatch2) {
-                seal.replyToSender(ctx, msg, "用法：.kp mk [群组信息]\n示例：\n.kp mk 断头爱丽丝,1073575754\n.kp mk 断头爱丽丝，1073575754");
-                return ret;
-            }
-            var mkContent = mkMatch2[1].trim();
-        } else {
-            var mkContent = mkMatch[1].trim();
-        }
-        
-        console.log("提取的内容:", mkContent);
-        
-        // 如果 mkContent 为空，返回帮助信息
-        if (!mkContent) {
-            seal.replyToSender(ctx, msg, "用法：.kp mk [群组信息]\n示例：\n.kp mk 断头爱丽丝,1073575754\n.kp mk 断头爱丽丝，1073575754");
+            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
             return ret;
         }
+        
+        const mkContent = mkMatch[1].trim();
         
         // 解析输入的群组信息
         const groups = parseMKInput(mkContent);
         
-        console.log("解析结果:", groups);
-        
         if (groups.length === 0) {
-            seal.replyToSender(ctx, msg, `未找到有效的群组信息。\n输入内容：${mkContent}\n支持分隔符：逗号(,)、中文逗号(，)、顿号(、)`);
+            seal.replyToSender(ctx, msg, "未找到有效的群组信息，请检查输入格式。支持分隔符：逗号(,)、中文逗号(，)、顿号(、)或换行");
             return ret;
         }
         
@@ -791,20 +814,17 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         // 两种格式
         output += `JSON（适配青果）：\n`;
         groups.forEach(group => {
-            // 将实际的换行符转义为 \n 以便在字符串中正确显示
-            const escapedNumber = group.number.replace(/\n/g, '\\n');
-            output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
+            output += `"${group.name}": { "groupNumber": "${group.number}" },\n`;
         });
         
         output += `\nJS（适配海豹）：\n`;
         groups.forEach(group => {
-            const escapedNumber = group.number.replace(/\n/g, '\\n');
-            output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
+            output += `"${group.name}": { groupNumber: "${group.number}" },\n`;
         });
         
         output += `\n解析到 ${groups.length} 个群组：\n`;
         groups.forEach((group, index) => {
-            output += `${index + 1}. ${group.name} → ${group.number.replace(/\n/g, '\\n')}\n`;
+            output += `${index + 1}. ${group.name} → ${group.number}\n`;
         });
         
         seal.replyToSender(ctx, msg, output);
