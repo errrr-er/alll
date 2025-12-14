@@ -1,6 +1,6 @@
 {
-  "version": "1.0.10",
-  "timestamp": 1765654648,
+  "version": "1.0.11",
+  "timestamp": 1765735373,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -49,6 +49,7 @@
     "长兴镇": { "groupNumber": "906847246" },
 
     "# D": { "groupNumber": "" },
+    "断头爱丽丝": { "groupNumber": "1073575754" },
     "dear-flip-flops": { "groupNumber": "345837146", "aliases": ["dff"] },
     "difftruth": { "groupNumber": "849680089" },
     "东京g": { "groupNumber": "201906582" },
@@ -93,7 +94,7 @@
     "呼唤爱的谢幕": { "groupNumber": "929268821" },
     "魂夜逃避行": { "groupNumber": "1046944266*下载\n1009337218*KP" },
     "化作海上之雨": { "groupNumber": "399589228*下载", "aliases": ["海雨"] },
-    "合欢宗遇上无情道": { "groupNumber": "1048818266*下载" },
+    "当合欢宗遇上无情道": { "groupNumber": "1048818266*下载\n736394722*下载\n112452157*KP", "aliases": ["合欢宗"] },
     "海国战役设定集": { "groupNumber": "567135881" },
     "海盗之宴": { "groupNumber": "1062169852" },
     "海盗啊海盗": { "groupNumber": "928270526", "aliases": ["海盗"] },
