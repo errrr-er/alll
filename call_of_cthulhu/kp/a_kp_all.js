@@ -257,10 +257,9 @@ const groupMap = {
 
 	// M
 	"冒充神明的童话": { groupNumber: "1062511494" },
-	"moon cell": { groupNumber: "972416799*下载" },
+	"moon cell": { groupNumber: "972416799*下载\n817071819*KP" },
 	"墨拉亚的羊群": { groupNumber: "671767814*下载" },
 	"magnificas": { groupNumber: "477317221", aliases: ["mag"] },
-	"moon cell": { groupNumber: "817071819" },
 	"MTG世设": { groupNumber: "1043664376" },
 	"命运转轮": { groupNumber: "241837204" },
 	"幕临": { groupNumber: "160438930" },
