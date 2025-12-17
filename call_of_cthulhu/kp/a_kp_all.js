@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.5.0
+// @version      4.5.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1765735373
+// @timestamp    1765993881
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -25,14 +25,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.5.0');
+  ext = seal.ext.new('KP群汇总', 'er', '4.5.1');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1765735373;
+    return 1765993881;
 }
 
 // 提醒历史
@@ -255,6 +255,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 
 	// M
+	"木马&短刀": { groupNumber: "873593450*有作者\n564501697*无作者" },
 	"冒充神明的童话": { groupNumber: "1062511494" },
 	"moon cell": { groupNumber: "972416799*下载\n817071819*KP" },
 	"墨拉亚的羊群": { groupNumber: "671767814*下载" },
