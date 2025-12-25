@@ -1,6 +1,6 @@
 {
-  "version": "1.0.12",
-  "timestamp": 1765993881,
+  "version": "1.0.13",
+  "timestamp": 1766642040,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -231,6 +231,7 @@
     "Regnagleppod": { "groupNumber": "939930942", "aliases": ["玻璃人"] },
 
     "# S": { "groupNumber": "" },
+    "圣诞快乐，玛丽小姐": { "groupNumber": "864404671*下载\n1041629808*KP" },
     "赎罪邮局": { "groupNumber": "1064670977" },
     "Sillage香水屋": { "groupNumber": "921302134", "aliases": ["Sillage", "香水屋"] },
     "Snow Spine": { "groupNumber": "1070979351", "aliases": ["雪脊"] },
