@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
-// @author       1766642040
-// @version      4.5.2
+// @author       1767010781
+// @version      4.5.3
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1765993881
 // 2025-05-11 16:49:17
@@ -25,14 +25,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.5.2');
+  ext = seal.ext.new('KP群汇总', 'er', '4.5.3');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1766642040;
+    return 1767010781;
 }
 
 // 提醒历史
