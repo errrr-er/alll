@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.5.3
+// @version      4.5.4
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1767010781
+// @timestamp    1767115138
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -25,14 +25,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.5.3');
+  ext = seal.ext.new('KP群汇总', 'er', '4.5.4');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1767010781;
+    return 1767115138;
 }
 
 // 提醒历史
@@ -180,6 +180,7 @@ const groupMap = {
 	"沽上潮生来": { groupNumber: "655068229*下载" },
 	
 	// H
+	"活神之手": { groupNumber: "1075504939" },
 	"H:tv": { groupNumber: "684526713" },
 	"还来不见仙": { groupNumber: "590220813*反馈\n984420519*KP" },
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
