@@ -11,16 +11,9 @@
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
 
-// 按照海豹格式写的插件，非海豹核心可能无法使用
-// 已适配青果OPK，具体请前往GitHub查看
-// https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp
-
 // "": { groupNumber: "" },
-
 // "": { "groupNumber": "" },
-
 // "": { groupNumber: "", aliases: [""] },
-
 // "": { "groupNumber": "", "aliases": [""] },
 
 let ext = seal.ext.find('KP群汇总');
