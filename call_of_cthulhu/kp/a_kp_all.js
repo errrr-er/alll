@@ -631,8 +631,8 @@ function generateGroupList() {
     return listLines.join('\n');
 }
 
-// 获取字符串的首字母（支持中英文）
-function getFirstLetter(str) {
+// 获取字符串的首字母（支持中英文）- 精确版
+function getFirstLetterAccurate(str) {
     if (!str || str.length === 0) return '#';
     
     const firstChar = str.charAt(0);
@@ -642,59 +642,7 @@ function getFirstLetter(str) {
         return firstChar.toUpperCase();
     }
     
-    // 如果是中文，通过Unicode编码获取拼音首字母
-    if (/[\u4e00-\u9fa5]/.test(firstChar)) {
-        const code = firstChar.charCodeAt(0);
-        
-        // 根据汉字Unicode编码范围粗略判断拼音首字母
-        // 这个映射基于常用汉字的Unicode分布规律
-        if (code >= 0x4e00 && code <= 0x9fa5) {
-            // 简化版的拼音首字母判断
-            const pinyinCode = code - 0x4e00;
-            
-            // 按Unicode范围粗略分组（这是简化算法，准确率约80%）
-            if (pinyinCode < 1000) return 'A';
-            else if (pinyinCode < 3000) return 'B';
-            else if (pinyinCode < 5000) return 'C';
-            else if (pinyinCode < 7000) return 'D';
-            else if (pinyinCode < 8000) return 'E';
-            else if (pinyinCode < 9500) return 'F';
-            else if (pinyinCode < 11000) return 'G';
-            else if (pinyinCode < 12500) return 'H';
-            else if (pinyinCode < 13000) return 'J';
-            else if (pinyinCode < 14000) return 'K';
-            else if (pinyinCode < 15500) return 'L';
-            else if (pinyinCode < 17000) return 'M';
-            else if (pinyinCode < 18000) return 'N';
-            else if (pinyinCode < 18500) return 'O';
-            else if (pinyinCode < 19000) return 'P';
-            else if (pinyinCode < 20000) return 'Q';
-            else if (pinyinCode < 21000) return 'R';
-            else if (pinyinCode < 22500) return 'S';
-            else if (pinyinCode < 24000) return 'T';
-            else if (pinyinCode < 24500) return 'W';
-            else if (pinyinCode < 26000) return 'X';
-            else if (pinyinCode < 27500) return 'Y';
-            else return 'Z';
-        }
-    }
-    
-    // 数字或特殊字符
-    return '#';
-}
-
-// 改进版：使用更精确的中文拼音首字母判断
-function getFirstLetterAccurate(str) {
-    if (!str || str.length === 0) return '#';
-    
-    const firstChar = str.charAt(0);
-    
-    // 英文直接返回大写
-    if (/[a-zA-Z]/.test(firstChar)) {
-        return firstChar.toUpperCase();
-    }
-    
-    // 中文使用精确的Unicode范围映射
+    // 如果是中文，使用精确的Unicode范围映射
     if (/[\u4e00-\u9fa5]/.test(firstChar)) {
         const unicode = firstChar.charCodeAt(0);
         
@@ -720,57 +668,42 @@ function getFirstLetterAccurate(str) {
         else if (unicode >= 0x8C39 && unicode <= 0x8DE8) return 'T';
         else if (unicode >= 0x8DE9 && unicode <= 0x8FA8) return 'W';
         else if (unicode >= 0x8FA9 && unicode <= 0x9171) return 'X';
-        else if (unicode >= 0x9172 && unicode <= 0x95e4) return 'Y';
-        else if (unicode >= 0x95e5 && unicode <= 0x9FA5) return 'Z';
+        else if (unicode >= 0x9172 && unicode <= 0x95E4) return 'Y';
+        else if (unicode >= 0x95E5 && unicode <= 0x9FA5) return 'Z';
     }
     
+    // 数字或特殊字符
     return '#';
 }
 
-// 按首字母分组并排序
-function groupByFirstLetter(groups) {
-    const grouped = {};
-    
-    groups.forEach(group => {
-        const letter = getFirstLetterAccurate(group.name);
-        if (!grouped[letter]) {
-            grouped[letter] = [];
-        }
-        grouped[letter].push(group);
-    });
-    
-    // 按字母顺序排序
-    const sorted = {};
-    Object.keys(grouped).sort().forEach(key => {
-        sorted[key] = grouped[key];
-    });
-    
-    return sorted;
-}
-
-// 生成带分类的输出
+// 生成带分类的输出（完全保持输入顺序，只在首字母变化时添加注释）
 function generateClassifiedOutput(groups) {
-    const groupedData = groupByFirstLetter(groups);
-    
     let jsonOutput = '';
     let jsOutput = '';
     
-    Object.keys(groupedData).forEach((letter, index) => {
-        // 添加字母注释
-        if (index > 0) {
-            jsonOutput += '\n';
-            jsOutput += '\n';
+    // 记录当前正在处理的字母
+    let currentLetter = '';
+    
+    groups.forEach((group, index) => {
+        // 获取当前群组的首字母
+        const groupLetter = getFirstLetterAccurate(group.name);
+        
+        // 如果字母发生变化，添加字母注释
+        if (groupLetter !== currentLetter) {
+            currentLetter = groupLetter;
+            // 如果不是第一个群组，先添加空行分隔
+            if (index > 0) {
+                jsonOutput += '\n';
+                jsOutput += '\n';
+            }
+            jsonOutput += `\t// ${currentLetter}\n`;
+            jsOutput += `\t// ${currentLetter}\n`;
         }
         
-        jsonOutput += `\t// ${letter}\n`;
-        jsOutput += `\t// ${letter}\n`;
-        
-        // 添加该字母下的所有群组
-        groupedData[letter].forEach(group => {
-            const escapedNumber = JSON.stringify(group.number).slice(1, -1);
-            jsonOutput += `\t"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
-            jsOutput += `\t"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
-        });
+        // 添加群组信息
+        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+        jsonOutput += `\t"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
+        jsOutput += `\t"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
     });
     
     return { jsonOutput, jsOutput };
@@ -841,7 +774,7 @@ cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
 .kp <关键词>    // 查询特定KP群号(支持反向查询)
 .kp list    // 列出所有KP群信息(超长慎用)
-.kp mk      // 生成群组代码格式(支持分类)
+.kp mk      // 生成群组代码格式(保持输入顺序)
 .kp help    // 显示本帮助`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
@@ -929,7 +862,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         const now = new Date();
         const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
         
-        // 使用分类输出函数
+        // 使用分类输出函数（保持输入顺序）
         const { jsonOutput, jsOutput } = generateClassifiedOutput(groups);
         
         let output = `当前时间戳：${currentTimestamp}\n${dateStr}\n\n`;
