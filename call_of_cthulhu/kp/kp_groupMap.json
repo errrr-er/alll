@@ -1,6 +1,6 @@
 {
-  "version": "1.0.15",
-  "timestamp": 1767115138,
+  "version": "1.0.16",
+  "timestamp": 1767205687,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -13,6 +13,7 @@
     "阿斯蒙蒂斯之链coa": { "groupNumber": "581885602" },
     
     "# B": { "groupNumber": "" },
+    "边狱巴士同人规则": { "groupNumber": "765965290" },
     "Bubble on Stage": { "groupNumber": "734220119" },
     "拜昆仑": { "groupNumber": "248817589" },
     "BASH": { "groupNumber": "774156947", "aliases": ["燃星"] },
@@ -113,6 +114,8 @@
     "insane": { "groupNumber": "650600421" },
 
     "# J": { "groupNumber": "" },
+    "镜花水月•云上天篇": { "groupNumber": "2151061466" },
+    "汲水": { "groupNumber": "1014352186*下载" },
     "即兴喜剧": { "groupNumber": "1023883963" },
     "极地追凶": { "groupNumber": "1057328944*下载" },
     "举头三尺": { "groupNumber": "334821036" },
