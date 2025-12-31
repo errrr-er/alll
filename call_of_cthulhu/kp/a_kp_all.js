@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.5.4
+// @version      4.6.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1767115138
+// @timestamp    1767205687
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.5.4');
+  ext = seal.ext.new('KP群汇总', 'er', '4.6.0');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1767115138;
+    return 1767205687;
 }
 
 // 提醒历史
@@ -98,6 +98,7 @@ const groupMap = {
 	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	
 	// B
+	"边狱巴士同人规则": { groupNumber: "765965290" },
 	"Bubble on Stage": { groupNumber: "734220119" },
 	"拜昆仑": { groupNumber: "248817589" },
 	"BASH": { groupNumber: "774156947", aliases: ["燃星"] },
@@ -198,6 +199,8 @@ const groupMap = {
 	"insane": { groupNumber: "650600421" },
 
 	// J
+	"镜花水月•云上天篇": { groupNumber: "2151061466" },
+	"汲水": { groupNumber: "1014352186*下载" },
 	"即兴喜剧": { groupNumber: "1023883963" },
 	"极地追凶": { groupNumber: "1057328944*下载" },
 	"举头三尺": { groupNumber: "334821036" },
