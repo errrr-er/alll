@@ -635,36 +635,50 @@ function generateGroupList() {
 function parseMKInput(input) {
     const groups = [];
     
-    // 方法1：先按真正的换行符分割（多行格式）
-    const lines = input.split(/[\r\n]+/).map(line => line.trim()).filter(line => line.length > 0);
+    // 方法1：多行格式（按换行符分割）
+    const lines = input.split(/[\r\n]+/)
+        .map(line => line.trim())
+        .filter(line => line.length > 0);
     
     if (lines.length >= 2 && lines.length % 2 === 0) {
-        // 如果行数是偶数且>=2，尝试按两行一组解析
-        for (let i = 0; i < lines.length; i += 2) {
-            if (i + 1 < lines.length) {
-                groups.push({
-                    name: lines[i],
-                    number: lines[i + 1]
-                });
+        let allValid = true;
+        // 检查是否为有效的多行格式（奇数行是名称，偶数行是号码）
+        for (let i = 1; i < lines.length; i += 2) {
+            if (!/\d/.test(lines[i])) {
+                allValid = false;
+                break;
             }
+        }
+        
+        if (allValid) {
+            for (let i = 0; i < lines.length; i += 2) {
+                if (i + 1 < lines.length) {
+                    groups.push({
+                        name: lines[i],
+                        number: lines[i + 1]
+                    });
+                }
+            }
+            return groups; // 成功解析多行格式，直接返回
         }
     }
     
-    // 方法2：如果多行格式没解析出结果，尝试逗号分隔格式
-    if (groups.length === 0) {
-        // 统一处理分隔符：将中文逗号、顿号都替换为英文逗号
-        let normalizedInput = input
-            .replace(/，/g, ',')  // 中文逗号转英文逗号
-            .replace(/、/g, ','); // 中文顿号转英文逗号
-        
-        // 分割并过滤空项
-        const parts = normalizedInput.split(',')
-            .map(p => p.trim())
-            .filter(p => p.length > 0);
-        
-        // 每两个部分为一组（名称，号码）
-        for (let i = 0; i < parts.length; i += 2) {
-            if (i + 1 < parts.length) {
+    // 方法2：单行分隔格式
+    // 统一分隔符：中文逗号、顿号 → 英文逗号
+    let normalizedInput = input
+        .replace(/，/g, ',')
+        .replace(/、/g, ',')
+        .replace(/\s+/g, ''); // 移除所有空格
+    
+    const parts = normalizedInput.split(',')
+        .map(p => p.trim())
+        .filter(p => p.length > 0);
+    
+    // 每两个部分为一组
+    for (let i = 0; i < parts.length; i += 2) {
+        if (i + 1 < parts.length) {
+            // 验证第二个参数包含数字
+            if (/\d/.test(parts[i + 1])) {
                 groups.push({
                     name: parts[i],
                     number: parts[i + 1]
@@ -673,13 +687,7 @@ function parseMKInput(input) {
         }
     }
     
-    // 过滤掉无效的条目（名称不为空，号码包含数字）
-    return groups.filter(group => 
-        group.name && 
-        group.name.length > 0 &&
-        group.number && 
-        /\d/.test(group.number)
-    );
+    return groups;
 }
 
 // .kp指令
@@ -736,106 +744,63 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, segments.length * 500 + 200);
     }
 
-        // mk命令 - 生成群组代码格式
-    if (input.toLowerCase() === 'mk') {
-        // 获取完整的输入内容
-        const fullText = msg.message.trim();
-        
-        // 检查多种前缀
-        let mkContent = '';
-        let foundPrefix = false;
-        
-        // 尝试匹配各种前缀
-        const prefixes = [
-            '.kp mk ',
-            '。kp mk ',
-            ',kp mk ',
-            '，kp mk '
-        ];
-        
-        for (const prefix of prefixes) {
-            if (fullText.toLowerCase().startsWith(prefix.toLowerCase())) {
-                mkContent = fullText.substring(prefix.length).trim();
-                foundPrefix = true;
-                break;
-            }
-        }
-        
-        // 如果没找到标准前缀，尝试不带空格的情况
-        if (!foundPrefix) {
-            const prefixesNoSpace = [
-                '.kpmk ',
-                '/kpmk ',
-                '。kpmk ',
-                ',kpmk ',
-                'kpmk '
-            ];
-            
-            for (const prefix of prefixesNoSpace) {
-                if (fullText.toLowerCase().startsWith(prefix.toLowerCase())) {
-                    mkContent = fullText.substring(prefix.length).trim();
-                    foundPrefix = true;
-                    break;
-                }
-            }
-        }
-        
-        if (!foundPrefix) {
-            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
-            return ret;
-        }
-        
-        if (!mkContent) {
-            seal.replyToSender(ctx, msg, "用法：.kp mk [群组名] [群号]，支持以下格式：\n1. 单行逗号分隔：名称,号码,名称,号码\n2. 单行顿号分隔：名称、号码、名称、号码\n3. 多行格式：每两行为一组");
-            return ret;
-        }
-        
-        // 解析输入的群组信息
-        const groups = parseMKInput(mkContent);
-        
-        if (groups.length === 0) {
-            seal.replyToSender(ctx, msg, `未找到有效的群组信息。\n输入内容：${mkContent}`);
-            return ret;
-        }
-        
-        // 生成当前时间戳
-        const currentTimestamp = Math.floor(Date.now() / 1000);
-        const year = new Date().getFullYear();
-        const month = String(new Date().getMonth() + 1).padStart(2, '0');
-        const day = String(new Date().getDate()).padStart(2, '0');
-        const hours = String(new Date().getHours()).padStart(2, '0');
-        const minutes = String(new Date().getMinutes()).padStart(2, '0');
-        const seconds = String(new Date().getSeconds()).padStart(2, '0');
-        
-        // 生成完整的输出
-        let output = `当前时间戳：\n`;
-        output += `${currentTimestamp}\n`;
-        output += `${year}-${month}-${day} ${hours}:${minutes}:${seconds}\n\n`;
-        
-        // 两种格式
-        output += `JSON（适配青果）：\n`;
-        groups.forEach(group => {
-            // 使用 JSON.stringify 自动处理转义
-            const escapedNumber = JSON.stringify(group.number).slice(1, -1);
-            output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
-        });
-        
-        output += `\nJS（适配海豹）：\n`;
-        groups.forEach(group => {
-            const escapedNumber = JSON.stringify(group.number).slice(1, -1);
-            output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
-        });
-        
-        output += `\n解析到 ${groups.length} 个群组：\n`;
-        groups.forEach((group, index) => {
-            // 显示时使用转义后的版本
-            const displayNumber = JSON.stringify(group.number).slice(1, -1);
-            output += `${index + 1}. ${group.name} → ${displayNumber}\n`;
-        });
-        
-        seal.replyToSender(ctx, msg, output);
+// mk命令 - 生成群组代码格式
+if (input.toLowerCase() === 'mk') {
+    // 获取 mk 后面的所有参数
+    const mkContent = cmdArgs.rawArgs.trim();
+    
+    if (!mkContent) {
+        seal.replyToSender(ctx, msg, 
+            "用法：.kp mk [内容]\n" +
+            "支持以下格式：\n" +
+            "1. 逗号分隔：名称,号码,名称,号码\n" +
+            "2. 顿号分隔：名称、号码、名称、号码\n" +
+            "3. 多行格式：\n名称\n号码\n名称\n号码\n\n" +
+            "示例：.kp mk 测试群,123456,示例群,789012"
+        );
         return ret;
     }
+    
+    // 解析输入的群组信息
+    const groups = parseMKInput(mkContent);
+    
+    if (groups.length === 0) {
+        seal.replyToSender(ctx, msg, 
+            `解析失败，未找到有效的群组信息。\n\n` +
+            `接收到的内容：\n${mkContent}\n\n` +
+            `请检查格式是否正确。`
+        );
+        return ret;
+    }
+    
+    // 生成当前时间戳
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    const now = new Date();
+    const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+    
+    // 生成输出
+    let output = `当前时间戳：${currentTimestamp}\n${dateStr}\n\n`;
+    
+    output += `JSON格式（适配青果）：\n`;
+    groups.forEach(group => {
+        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+        output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
+    });
+    
+    output += `\nJS格式（适配海豹）：\n`;
+    groups.forEach(group => {
+        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+        output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
+    });
+    
+    output += `\n成功解析 ${groups.length} 个群组：\n`;
+    groups.forEach((group, index) => {
+        output += `${index + 1}. ${group.name} → ${group.number}\n`;
+    });
+    
+    seal.replyToSender(ctx, msg, output);
+    return ret;
+}
 
     // list命令
     if (input.toLowerCase() === 'list') {
