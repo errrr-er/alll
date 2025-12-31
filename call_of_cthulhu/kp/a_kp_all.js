@@ -746,8 +746,13 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 
 // mk命令 - 生成群组代码格式
 if (input.toLowerCase() === 'mk') {
-    // 获取 mk 后面的所有参数
-    const mkContent = cmdArgs.rawArgs.trim();
+    // 获取 mk 后面的所有参数（去掉 "mk" 本身）
+    let mkContent = cmdArgs.rawArgs.trim();
+    
+    // 移除开头的 "mk" 字符串
+    if (mkContent.toLowerCase().startsWith('mk')) {
+        mkContent = mkContent.substring(2).trim();
+    }
     
     if (!mkContent) {
         seal.replyToSender(ctx, msg, 
