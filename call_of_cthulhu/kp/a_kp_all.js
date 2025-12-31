@@ -603,7 +603,7 @@ function findSimilarGroup(input) {
             }
         }
 
-        // 相似度高于或等于30%
+		// 相似度高于或等于30%
         if (highestScore >= 0.3) {
             matchedGroups.push({
                 name: groupName,
@@ -629,84 +629,6 @@ function generateGroupList() {
         listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
     }
     return listLines.join('\n');
-}
-
-// 获取字符串的首字母（支持中英文）- 精确版
-function getFirstLetterAccurate(str) {
-    if (!str || str.length === 0) return '#';
-    
-    const firstChar = str.charAt(0);
-    
-    // 如果是英文字母，直接返回大写
-    if (/[a-zA-Z]/.test(firstChar)) {
-        return firstChar.toUpperCase();
-    }
-    
-    // 如果是中文，使用精确的Unicode范围映射
-    if (/[\u4e00-\u9fa5]/.test(firstChar)) {
-        const unicode = firstChar.charCodeAt(0);
-        
-        // 基于GB2312编码的拼音首字母映射（更准确）
-        if (unicode >= 0x4E00 && unicode <= 0x5516) return 'A';
-        else if (unicode >= 0x5517 && unicode <= 0x5A00) return 'B';
-        else if (unicode >= 0x5A01 && unicode <= 0x5DD0) return 'C';
-        else if (unicode >= 0x5DD1 && unicode <= 0x6258) return 'D';
-        else if (unicode >= 0x6259 && unicode <= 0x636E) return 'E';
-        else if (unicode >= 0x636F && unicode <= 0x6469) return 'F';
-        else if (unicode >= 0x646A && unicode <= 0x6842) return 'G';
-        else if (unicode >= 0x6843 && unicode <= 0x6D24) return 'H';
-        else if (unicode >= 0x6D25 && unicode <= 0x6FF0) return 'J';
-        else if (unicode >= 0x6FF1 && unicode <= 0x7421) return 'K';
-        else if (unicode >= 0x7422 && unicode <= 0x785D) return 'L';
-        else if (unicode >= 0x785E && unicode <= 0x7CFE) return 'M';
-        else if (unicode >= 0x7CFF && unicode <= 0x7EAA) return 'N';
-        else if (unicode >= 0x7EAB && unicode <= 0x7F51) return 'O';
-        else if (unicode >= 0x7F52 && unicode <= 0x8032) return 'P';
-        else if (unicode >= 0x8033 && unicode <= 0x8286) return 'Q';
-        else if (unicode >= 0x8287 && unicode <= 0x84BE) return 'R';
-        else if (unicode >= 0x84BF && unicode <= 0x8C38) return 'S';
-        else if (unicode >= 0x8C39 && unicode <= 0x8DE8) return 'T';
-        else if (unicode >= 0x8DE9 && unicode <= 0x8FA8) return 'W';
-        else if (unicode >= 0x8FA9 && unicode <= 0x9171) return 'X';
-        else if (unicode >= 0x9172 && unicode <= 0x95E4) return 'Y';
-        else if (unicode >= 0x95E5 && unicode <= 0x9FA5) return 'Z';
-    }
-    
-    // 数字或特殊字符
-    return '#';
-}
-
-// 生成带分类的输出（完全保持输入顺序，只在首字母变化时添加注释）
-function generateClassifiedOutput(groups) {
-    let jsonOutput = '';
-    let jsOutput = '';
-    
-    // 记录当前正在处理的字母
-    let currentLetter = '';
-    
-    groups.forEach((group, index) => {
-        // 获取当前群组的首字母
-        const groupLetter = getFirstLetterAccurate(group.name);
-        
-        // 如果字母发生变化，添加字母注释
-        if (groupLetter !== currentLetter) {
-            currentLetter = groupLetter;
-            // 如果不是第一个群组，先添加空行分隔
-            if (index > 0) {
-                jsonOutput += '\n';
-                jsOutput += '\n';
-            }
-            jsonOutput += `\t// ${currentLetter}\n`;
-            jsOutput += `\t// ${currentLetter}\n`;
-        }
-        
-        // 添加群组信息
-        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
-        jsonOutput += `\t"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
-        jsOutput += `\t"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
-    });
-    
-    return { jsonOutput, jsOutput };
 }
 
 // 解析 .kp mk 的输入
@@ -774,7 +696,6 @@ cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
 .kp <关键词>    // 查询特定KP群号(支持反向查询)
 .kp list    // 列出所有KP群信息(超长慎用)
-.kp mk      // 生成群组代码格式(保持输入顺序)
 .kp help    // 显示本帮助`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
@@ -823,59 +744,67 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, segments.length * 500 + 200);
     }
 
-    // mk命令 - 生成群组代码格式
-    if (input.toLowerCase() === 'mk') {
-        // 获取 mk 后面的所有参数（去掉 "mk" 本身）
-        let mkContent = cmdArgs.rawArgs.trim();
-        
-        // 移除开头的 "mk" 字符串
-        if (mkContent.toLowerCase().startsWith('mk')) {
-            mkContent = mkContent.substring(2).trim();
-        }
-        
-        if (!mkContent) {
-            seal.replyToSender(ctx, msg, 
-                "用法：.kp mk [内容]\n" +
-                "支持以下格式：\n" +
-                "1. 逗号分隔：名称,号码,名称,号码\n" +
-                "2. 顿号分隔：名称、号码、名称、号码\n" +
-                "3. 多行格式：\n名称\n号码\n名称\n号码\n\n" +
-                "示例：\n.kp mk 测试群1,123456,测试群2,234567"
-            );
-            return ret;
-        }
-        
-        // 解析输入的群组信息
-        const groups = parseMKInput(mkContent);
-        
-        if (groups.length === 0) {
-            seal.replyToSender(ctx, msg, 
-                `解析失败，未找到有效的群组信息。\n\n` +
-                `接收到的内容：\n${mkContent}\n\n` +
-                `请检查格式是否正确。`
-            );
-            return ret;
-        }
-        
-        // 生成当前时间戳
-        const currentTimestamp = Math.floor(Date.now() / 1000);
-        const now = new Date();
-        const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
-        
-        // 使用分类输出函数（保持输入顺序）
-        const { jsonOutput, jsOutput } = generateClassifiedOutput(groups);
-        
-        let output = `当前时间戳：${currentTimestamp}\n${dateStr}\n\n`;
-        output += `JSON格式（适配青果）：\n${jsonOutput}`;
-        output += `\nJS格式（适配海豹）：\n${jsOutput}`;
-        output += `\n成功解析 ${groups.length} 个群组：\n`;
-        groups.forEach((group, index) => {
-            output += `${index + 1}. ${group.name} → ${group.number}\n`;
-        });
-        
-        seal.replyToSender(ctx, msg, output);
+// mk命令 - 生成群组代码格式
+if (input.toLowerCase() === 'mk') {
+    // 获取 mk 后面的所有参数（去掉 "mk" 本身）
+    let mkContent = cmdArgs.rawArgs.trim();
+    
+    // 移除开头的 "mk" 字符串
+    if (mkContent.toLowerCase().startsWith('mk')) {
+        mkContent = mkContent.substring(2).trim();
+    }
+    
+    if (!mkContent) {
+        seal.replyToSender(ctx, msg, 
+            "用法：.kp mk [内容]\n" +
+            "支持以下格式：\n" +
+            "1. 逗号分隔：名称,号码,名称,号码\n" +
+            "2. 顿号分隔：名称、号码、名称、号码\n" +
+            "3. 多行格式：\n名称\n号码\n名称\n号码"
+        );
         return ret;
     }
+    
+    // 解析输入的群组信息
+    const groups = parseMKInput(mkContent);
+    
+    if (groups.length === 0) {
+        seal.replyToSender(ctx, msg, 
+            `解析失败，未找到有效的群组信息。\n\n` +
+            `接收到的内容：\n${mkContent}\n\n` +
+            `请检查格式是否正确。`
+        );
+        return ret;
+    }
+    
+    // 生成当前时间戳
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    const now = new Date();
+    const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+    
+    // 生成输出
+    let output = `当前时间戳：${currentTimestamp}\n${dateStr}\n\n`;
+    
+    output += `JSON格式（适配青果）：\n`;
+    groups.forEach(group => {
+        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+        output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
+    });
+    
+    output += `\nJS格式（适配海豹）：\n`;
+    groups.forEach(group => {
+        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
+        output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
+    });
+    
+    output += `\n成功解析 ${groups.length} 个群组：\n`;
+    groups.forEach((group, index) => {
+        output += `${index + 1}. ${group.name} → ${group.number}\n`;
+    });
+    
+    seal.replyToSender(ctx, msg, output);
+    return ret;
+}
 
     // list命令
     if (input.toLowerCase() === 'list') {
