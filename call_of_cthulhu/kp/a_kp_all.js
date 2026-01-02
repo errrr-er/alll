@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.6.0
+// @version      4.6.1
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1767205687
+// @timestamp    1767323989
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.6.0');
+  ext = seal.ext.new('KP群汇总', 'er', '4.6.1');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1767205687;
+    return 1767323989;
 }
 
 // 提醒历史
@@ -387,6 +387,7 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
+	"王之褴褛": { groupNumber: "1078850322" },
 	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载\n1037886003*有作者\n817342041*无作者", aliases: ["可可", "为生命献上砂糖可可和肉桂粉"] },
 	"wts": { groupNumber: "763188284" },
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
