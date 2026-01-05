@@ -1,6 +1,6 @@
 {
-  "version": "1.0.19",
-  "timestamp": 1767576576,
+  "version": "1.0.20",
+  "timestamp": 1767621680,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -169,6 +169,7 @@
     "龙金劫": { "groupNumber": "947826784" },
 
     "# M": { "groupNumber": "" },
+    "m大随机杀人事件": { "groupNumber": "548428936" },
     "木马&短刀": { "groupNumber": "873593450*有作者\n564501697*无作者" },
     "冒充神明的童话": { "groupNumber": "1062511494" },
     "moon cell": { "groupNumber": "972416799*下载\n817071819*KP" },
@@ -237,6 +238,7 @@
     "Regnagleppod": { "groupNumber": "939930942", "aliases": ["玻璃人"] },
 
     "# S": { "groupNumber": "" },
+    "石榴": { "groupNumber": "1063443035*下载" },
     "圣诞快乐，玛丽小姐": { "groupNumber": "864404671*下载\n1041629808*KP" },
     "赎罪邮局": { "groupNumber": "1064670977" },
     "Sillage香水屋": { "groupNumber": "921302134", "aliases": ["Sillage", "香水屋"] },
