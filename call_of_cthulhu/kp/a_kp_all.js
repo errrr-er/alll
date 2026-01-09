@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.6.5
+// @version      4.6.6
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1767621680
+// @timestamp    1767983506
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.6.5');
+  ext = seal.ext.new('KP群汇总', 'er', '4.6.6');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1767621680;
+    return 1767983506;
 }
 
 // 提醒历史
@@ -406,7 +406,7 @@ const groupMap = {
 	"无为有处有还无": { groupNumber: "768399206", aliases: ["wwyc"]  },
 	"无名集": { groupNumber: "663572400" },
 	"无声二重唱": { groupNumber: "965715801" },
-	"无限": { groupNumber: "301122594" },
+	"星光无限流": { groupNumber: "301122594" },
 	"无罪之歌": { groupNumber: "1018018649*下载" },
 	"WWRPG": { groupNumber: "818401752", aliases: ["Wizarding World"] },
 	"武侠克苏鲁woc": { groupNumber: "524086123", aliases: ["woc"] },
