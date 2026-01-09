@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.6.4
+// @version      4.6.5
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1767621680
 // 2025-05-11 16:49:17
@@ -18,7 +18,7 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.6.4');
+  ext = seal.ext.new('KP群汇总', 'er', '4.6.5');
   seal.ext.register(ext);
 }
 
@@ -346,7 +346,7 @@ const groupMap = {
 	"Stifle, and with hymn": { groupNumber: "1064285359*下载\n1062672838*KP", aliases: ["hymn"] },
 	"三角机构": { groupNumber: "1056836484" },
 	"赛博朋克d20": { groupNumber: "135248365、283334218" },
-	"SPC基金会": { groupNumber: "602431810" },
+	"SCP基金会": { groupNumber: "602431810", aliases: ["FITF", "Fear in the Foundation"] },
 	"双人搜查": { groupNumber: "616576634" },
 	"斯坦哈德": { groupNumber: "929033286" },
 	"斯特拉德的诅咒": { groupNumber: "824773454" },
