@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.6.6
+// @version      4.7.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1767983506
+// @timestamp    1768080919
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.6.6');
+  ext = seal.ext.new('KP群汇总', 'er', '4.6.7');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1767983506;
+    return 1768080919;
 }
 
 // 提醒历史
@@ -363,12 +363,13 @@ const groupMap = {
 	"ssss": { groupNumber: "926664565", aliases: ["4s"] },
 
 	// T
+	"天衍江湖录": { groupNumber: "463467776" },
 	"天启劫火": { groupNumber: "1059690417" },
 	"天命所归": { groupNumber: "875210475" },
 	"天地一灯": { groupNumber: "974274779" },
 	"天椎谶纬": { groupNumber: "656026457" },
 	"天衍剧组": { groupNumber: "637230426" },
-	"天衍纪年": { groupNumber: "666391763、675869524", aliases: ["天衍", "ty", "tyjn"] },
+	"天衍纪年": { groupNumber: "666391763、675869524", aliases: ["tyjn"] },
 	"天下第一刀": { groupNumber: "369645861*有作者\n369645861*无作者" },
 	"庭师所吟为何物": { groupNumber: "656434498", aliases: ["庭师"] },
 	"天师": { groupNumber: "587952595*下载" },
