@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KP群汇总
-// @author       3987681449
-// @version      4.7.0
+// @author       1769012162
+// @version      4.7.1
 // @description  (.kp)有问题可进群2150284119联系
 // @timestamp    1768080919
 // 2025-05-11 16:49:17
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.6.7');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.1');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1768080919;
+    return 1769012162;
 }
 
 // 提醒历史
@@ -174,6 +174,7 @@ const groupMap = {
 	"沽上潮生来": { groupNumber: "655068229*下载" },
 	
 	// H
+	"黑水溪": { groupNumber: "1071548693" },
 	"活神之手": { groupNumber: "1075504939" },
 	"H:tv": { groupNumber: "684526713" },
 	"还来不见仙": { groupNumber: "590220813*反馈\n984420519*KP" },
@@ -323,6 +324,7 @@ const groupMap = {
 	"Regnagleppod": { groupNumber: "939930942", aliases: ["玻璃人"] },
 
 	// S
+	"十六段夜谈": { groupNumber: "938304846" },
 	"石榴": { groupNumber: "1063443035*下载" },
 	"圣诞快乐，玛丽小姐": { groupNumber: "864404671*下载\n1041629808*KP" },
 	"赎罪邮局": { groupNumber: "1064670977" },
@@ -451,6 +453,7 @@ const groupMap = {
 	"雪山密室": { groupNumber: "901413729" },
 
 	// Y
+	"月背迷踪": { groupNumber: "1037660739*下载" },
 	"缘因何为": { groupNumber: "656621118*下载" },
 	"抑或地位未定": { groupNumber: "1041670093" },
 	"于赤土腹中再会": { groupNumber: "1060512906", aliases: ["于赤土"] },
@@ -492,6 +495,7 @@ const groupMap = {
 	"鸦阁领域": { groupNumber: "836306797" },
 
 	// Z
+	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"zinki": { groupNumber: "761916849" },
 	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
 	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
