@@ -145,7 +145,6 @@ const groupMap = {
 	"多灾多难梵达林": { groupNumber: "570879430\n矿坑+冰塔峰+风暴君王?+风骸岛?", aliases: ["矿坑", "冰塔峰", "风暴君王","风骸岛"] },
 	"德拉肯海姆之墟": { groupNumber: "856703297" },
 	"渡仙劫": { groupNumber: "634208409" },
-	"渡圆之": { groupNumber: "953195114" },
 	"渡春风": { groupNumber: "199382863", aliases: ["dcf", "蛋炒饭"] },
 	"电子悖论失乐园": { groupNumber: "995398768*下载\n1033563821*KP", aliases: ["失乐园", "电子"] },
 
@@ -395,6 +394,7 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
+	"为渡圆寂之都": { groupNumber: "953195114" },
 	"王之褴褛": { groupNumber: "1078850322" },
 	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载\n1037886003*有作者\n817342041*无作者", aliases: ["可可", "为生命献上砂糖可可和肉桂粉"] },
 	"wts": { groupNumber: "763188284" },
