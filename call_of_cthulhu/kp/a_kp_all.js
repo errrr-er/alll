@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
-// @author       1769012162
-// @version      4.7.1
+// @author       3987681449
+// @version      4.7.2
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1768080919
+// @timestamp    1769576958
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.1');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.2');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1769012162;
+    return 1769576958;
 }
 
 // 提醒历史
@@ -298,6 +298,7 @@ const groupMap = {
 	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 
 	// Q
+	"崎蜀藏观音": { groupNumber: "652844613" },
 	"青春自杀": { groupNumber: "953788807" },
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
 	"全景敞视主义的陷阱": { groupNumber: "792650936" },
@@ -324,6 +325,7 @@ const groupMap = {
 	"Regnagleppod": { groupNumber: "939930942", aliases: ["玻璃人"] },
 
 	// S
+	"死者的顿足舞": { groupNumber: "1081620177" },
 	"十六段夜谈": { groupNumber: "938304846" },
 	"石榴": { groupNumber: "1063443035*下载" },
 	"圣诞快乐，玛丽小姐": { groupNumber: "864404671*下载\n1041629808*KP" },
