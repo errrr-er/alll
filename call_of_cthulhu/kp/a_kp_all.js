@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.2
+// @version      4.7.3
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1769576958
+// @timestamp    1769702099
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.2');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.3');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1769576958;
+    return 1769702099;
 }
 
 // 提醒历史
@@ -282,6 +282,7 @@ const groupMap = {
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
 
 	// N
+	"内锈": { groupNumber: "1061071715" },
 	"nobody": { groupNumber: "694908547", aliases: ["nbd"] },
 	"脓堕": { groupNumber: "183186533", aliases: ["nd"] },
 	"你是谁？请支持百日○纪！": { groupNumber: "1057449882", aliases: ["百日"] },
@@ -503,7 +504,7 @@ const groupMap = {
 	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
 	"坠入阿弗纳斯": { groupNumber: "223713820" },
 	"左川之国失落谭": { groupNumber: "770779991", aliases: ["左川"] },
-	"再见新世界": { groupNumber: "1004914022*下载" },
+	"再见新世界": { groupNumber: "1004914022*下载\n909369023*KP" },
 	"掌中雪": { groupNumber: "860685448*下载" },
 	"战争神谕": { groupNumber: "413947504" },
 	"斩我": { groupNumber: "776965370" },
