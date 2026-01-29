@@ -1,6 +1,6 @@
 {
-  "version": "1.1.2",
-  "timestamp": 1769576958,
+  "version": "1.1.3",
+  "timestamp": 1769702099,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -197,6 +197,7 @@
     "魔法少女歌唱死亡": { "groupNumber": "868665011" },
 
     "# N": { "groupNumber": "" },
+    "内锈": { "groupNumber": "1061071715" },
     "nobody": { "groupNumber": "694908547", "aliases": ["nbd"] },
     "脓堕": { "groupNumber": "183186533", "aliases": ["nd"] },
     "你是谁？请支持百日○纪！": { "groupNumber": "1057449882", "aliases": ["百日"] },
@@ -418,7 +419,7 @@
     "侦探可有翅膀吗": { "groupNumber": "963854131", "aliases": ["侦探翅"] },
     "坠入阿弗纳斯": { "groupNumber": "223713820" },
     "左川之国失落谭": { "groupNumber": "770779991", "aliases": ["左川"] },
-    "再见新世界": { "groupNumber": "1004914022*下载" },
+    "再见新世界": { "groupNumber": "1004914022*下载\n909369023*KP" },
     "掌中雪": { "groupNumber": "860685448*下载" },
     "战争神谕": { "groupNumber": "413947504" },
     "斩我": { "groupNumber": "776965370" },
