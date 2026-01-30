@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.3
+// @version      4.7.4
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1769702099
+// @timestamp    1769788838
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.3');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.4');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1769702099;
+    return 1769788838;
 }
 
 // 提醒历史
@@ -135,6 +135,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 
     // D
+	"当代电影": { groupNumber: "1023220397" },
 	"断头爱丽丝": { groupNumber: "1073575754" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
@@ -153,6 +154,8 @@ const groupMap = {
 	"恶辣": { groupNumber: "620832218" },
 	
 	// F
+	"焚天之战": { groupNumber: "1065925723" },
+	"疯法师的地城": { groupNumber: "1025248586" },
 	"凤去台空江自流": { groupNumber: "979768022*下载\n985261346*下载\n瑰绿的决心+天地熔金+凤去台空江自流+人间烟火+问天地", aliases: ["瑰绿的决心", "天地熔金", "人间烟火", "问天地"] },
 	"废案重组": { groupNumber: "857972438" },
 	"废楼怪谈": { groupNumber: "563488359" },
@@ -173,6 +176,7 @@ const groupMap = {
 	"沽上潮生来": { groupNumber: "655068229*下载" },
 	
 	// H
+	"哈欠门": { groupNumber: "631595428" },
 	"黑水溪": { groupNumber: "1071548693" },
 	"活神之手": { groupNumber: "1075504939" },
 	"H:tv": { groupNumber: "684526713" },
@@ -184,7 +188,7 @@ const groupMap = {
 	"海国战役设定集": { groupNumber: "567135881" },
 	"海盗之宴": { groupNumber: "1062169852" },
 	"海盗啊海盗": { groupNumber: "928270526", aliases: ["海盗"] },
-	"毁灭亲王": { groupNumber: "882887120" },
+	"毁灭亲王": { groupNumber: "882887120", aliases: ["POTA"] },
 	"海·在遗忘之前的晴天": { groupNumber: "710881226", aliases: ["晴天"] },
 	"花&葬送者": { groupNumber: "555632875、106559548", aliases: ["花葬"] },
 	"花盗人之恋": { groupNumber: "966519249" },
@@ -246,7 +250,7 @@ const groupMap = {
 	"连海密录": { groupNumber: "926024691" },
 	"鳞翅": { groupNumber: "963578553" },
 	"黎明之盏": { groupNumber: "835468159" },
-	"龙后之影": { groupNumber: "595576485" },
+	"龙后之影": { groupNumber: "595576485", aliases: ["龙枪"] },
 	"龙后的宝山": { groupNumber: "343516463\n龙后的宝山+提亚马特的崛起", aliases: ["提亚马特的崛起"] },
 	"龙滨不良": { groupNumber: "597585029", aliases: ["lbbl"] },
 	"龙王的奥德赛": { groupNumber: "238873224" },
@@ -272,7 +276,7 @@ const groupMap = {
 	"梅林杯": { groupNumber: "905396897" },
 	"梦里百花深处": { groupNumber: "490454774", aliases: ["梦花深"] },
 	"棉花不谢": { groupNumber: "1038645659" },
-	"溟渊的呼唤": { groupNumber: "431242151" },
+	"溟渊的呼唤": { groupNumber: "431242151", aliases: ["艾桑椎亚"] },
 	"猫寿司": { groupNumber: "831331659" },
 	"莫索里哀的圣职者": { groupNumber: "435690433", aliases: ["msla"] },
 	"蒙娜丽莎杀死格尔尼卡": { groupNumber: "580704423" },
@@ -325,6 +329,7 @@ const groupMap = {
 	"Regnagleppod": { groupNumber: "939930942", aliases: ["玻璃人"] },
 
 	// S
+	"斯翠海文": { groupNumber: "838512466" },
 	"死者的顿足舞": { groupNumber: "1081620177" },
 	"十六段夜谈": { groupNumber: "938304846" },
 	"石榴": { groupNumber: "1063443035*下载" },
@@ -363,7 +368,7 @@ const groupMap = {
 	"生离": { groupNumber: "1061116172" },
 	"神话时代": { groupNumber: "316394180*无全译本" },
 	"胜率制圣杯": { groupNumber: "535057473" },
-	"萨里希斯之光": { groupNumber: "473373105" },
+	"萨里希斯之光": { groupNumber: "473373105、930332469" },
 	"ssss": { groupNumber: "926664565", aliases: ["4s"] },
 
 	// T
@@ -395,6 +400,8 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
+	"无尽阶梯": { groupNumber: "923944293" },
+	"维克那毁灭前夕": { groupNumber: "1045993659" },
 	"为渡圆寂之都": { groupNumber: "953195114" },
 	"王之褴褛": { groupNumber: "1078850322" },
 	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载\n1037886003*有作者\n817342041*无作者", aliases: ["可可", "为生命献上砂糖可可和肉桂粉"] },
@@ -425,6 +432,7 @@ const groupMap = {
 	"问道苍生": { groupNumber: "758798519、578441689" },
 
 	// X
+	"心愿寄于清夏": { groupNumber: "599817890" },
 	"神星落乐": { groupNumber: "831229728" },
 	"虚诞的毁灭": { groupNumber: "1046244155" },
 	"心脏": { groupNumber: "883465896*无全译本" },
@@ -525,7 +533,9 @@ const groupMap = {
 	"文手": { groupNumber: "512451066" },
 	"写作": { groupNumber: "纯女\n734417134、761666326*coj" },
 	"翻译": { groupNumber: "1073856681、1053204546、972416799、377896614、1040799893、pd59993369、1033917987、1043393781、872345826、1061035045、220150371*韩模" },
-
+	"模组拼车": { groupNumber: "983412936" },
+	"非出版短模组": { groupNumber: "1032540988" },
+	
 	"纯dm": { groupNumber: "421678315" },
 	"地区": { groupNumber: "福建936981574\n江浙沪855687184山河四省771840771\n\n北美1057887916\n欧洲1054398710、602634416*coj向", aliases: ["时差"] },
 	"纯女": { groupNumber: "coc\n947095759、797863427、1061755248、923952181、770689154、1061755248 *+绿色三角洲\n\ndnd\n560604565、960874614、780528057、1021578589\n\ncoc+dnd\n869660310、1016631080、1057887916*北美洲时差、609993185*限21+无限流" },
