@@ -276,7 +276,7 @@ const groupMap = {
 	"梅林杯": { groupNumber: "905396897" },
 	"梦里百花深处": { groupNumber: "490454774", aliases: ["梦花深"] },
 	"棉花不谢": { groupNumber: "1038645659" },
-	"溟渊的呼唤": { groupNumber: "431242151", aliases: ["艾桑椎亚"] },
+	"溟渊的呼唤": { groupNumber: "431242151", aliases: ["艾桑椎亚", "冥渊"] },
 	"猫寿司": { groupNumber: "831331659" },
 	"莫索里哀的圣职者": { groupNumber: "435690433", aliases: ["msla"] },
 	"蒙娜丽莎杀死格尔尼卡": { groupNumber: "580704423" },
