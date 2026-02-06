@@ -1,6 +1,6 @@
 {
-  "version": "1.1.3",
-  "timestamp": 1769788838,
+  "version": "1.1.4",
+  "timestamp": 1770397053,
   "group_map": {
     "# A": { "groupNumber": "" },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -118,6 +118,8 @@
     "insane": { "groupNumber": "650600421" },
 
     "# J": { "groupNumber": "" },
+    "教师A的终焉": { "groupNumber": "966092780*下载", "aliases": ["7-Day Cricle", "七日之轮"] },
+    "京痕雨记": { "groupNumber": "496904508*下载" },
     "绝对励弩": { "groupNumber": "1079402848" },
     "镜花水月•云上天篇": { "groupNumber": "2151061466" },
     "汲水": { "groupNumber": "1014352186*下载" },
@@ -148,6 +150,8 @@
     "克苏鲁迷踪toc": { "groupNumber": "780909682", "aliases": ["toc"] },
 
     "# L": { "groupNumber": "" },
+    "卢埃德街的海鸣": { "groupNumber": "972416799*下载" },
+    "LUCA": { "groupNumber": "1077454734*下载" },
     "乐园在海底": { "groupNumber": "641157488" },
     "列文菲舍变例": { "groupNumber": "1040678581" },
     "来到这里的你们放弃希望吧": { "groupNumber": "939600700*下载\n1047069694*KP", "aliases": ["十二字"] },
@@ -173,7 +177,7 @@
     "龙金劫": { "groupNumber": "947826784" },
 
     "# M": { "groupNumber": "" },
-    "m大随机杀人事件": { "groupNumber": "548428936" },
+    "m大随机杀人事件": { "groupNumber": "1079465494*下载\n548428936*KP" },
     "木马&短刀": { "groupNumber": "873593450*有作者\n564501697*无作者" },
     "冒充神明的童话": { "groupNumber": "1062511494" },
     "moon cell": { "groupNumber": "972416799*下载\n817071819*KP" },
@@ -244,6 +248,7 @@
     "Regnagleppod": { "groupNumber": "939930942", "aliases": ["玻璃人"] },
 
     "# S": { "groupNumber": "" },
+    "什么叫做kpc……": { "groupNumber": "1079232693*下载" },
     "斯翠海文": { "groupNumber": "838512466" },
     "死者的顿足舞": { "groupNumber": "1081620177" },
     "十六段夜谈": { "groupNumber": "938304846" },
@@ -421,6 +426,7 @@
     "鸦阁领域": { "groupNumber": "836306797" },
 
     "# Z": { "groupNumber": "" },
+    "斩仙槐": { "groupNumber": "690343204*KP\n973867121*下载" },
     "致我不灭的": { "groupNumber": "1073548076*下载\n1077901406*KP" },
     "zinki": { "groupNumber": "761916849" },
     "众妙之门": { "groupNumber": "785654926", "aliases": ["zmzm"] },
