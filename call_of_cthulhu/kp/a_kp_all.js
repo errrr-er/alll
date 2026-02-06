@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.4
+// @version      4.7.5
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1769788838
+// @timestamp    1770397053
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,14 +18,14 @@
 
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.4');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.5');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1769788838;
+    return 1770397053;
 }
 
 // 提醒历史
@@ -203,6 +203,8 @@ const groupMap = {
 	"insane": { groupNumber: "650600421" },
 
 	// J
+	"教师A的终焉": { groupNumber: "966092780*下载", aliases: ["7-Day Cricle", "七日之轮"] },
+	"京痕雨记": { groupNumber: "496904508*下载" },
 	"绝对励弩": { groupNumber: "1079402848" },
 	"镜花水月•云上天篇": { groupNumber: "2151061466" },
 	"汲水": { groupNumber: "1014352186*下载" },
@@ -233,6 +235,8 @@ const groupMap = {
 	"克苏鲁迷踪toc": { groupNumber: "780909682", aliases: ["toc"] },
 
 	// L
+	"卢埃德街的海鸣": { groupNumber: "972416799*下载" },
+	"LUCA": { groupNumber: "1077454734*下载" },
 	"乐园在海底": { groupNumber: "641157488" },
 	"列文菲舍变例": { groupNumber: "1040678581" },
 	"来到这里的你们放弃希望吧": { groupNumber: "939600700*下载\n1047069694*KP", aliases: ["十二字"] },
@@ -258,7 +262,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 
 	// M
-	"m大随机杀人事件": { groupNumber: "548428936" },
+	"m大随机杀人事件": { groupNumber: "1079465494*下载\n548428936*KP" },
 	"木马&短刀": { groupNumber: "873593450*有作者\n564501697*无作者" },
 	"冒充神明的童话": { groupNumber: "1062511494" },
 	"moon cell": { groupNumber: "972416799*下载\n817071819*KP" },
@@ -329,6 +333,7 @@ const groupMap = {
 	"Regnagleppod": { groupNumber: "939930942", aliases: ["玻璃人"] },
 
 	// S
+	"什么叫做kpc……": { groupNumber: "1079232693*下载" },
 	"斯翠海文": { groupNumber: "838512466" },
 	"死者的顿足舞": { groupNumber: "1081620177" },
 	"十六段夜谈": { groupNumber: "938304846" },
@@ -506,6 +511,7 @@ const groupMap = {
 	"鸦阁领域": { groupNumber: "836306797" },
 
 	// Z
+	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"zinki": { groupNumber: "761916849" },
 	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
