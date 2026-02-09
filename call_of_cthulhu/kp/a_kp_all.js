@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.5
+// @version      4.7.6
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1770397053
+// @timestamp    1770681461
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -11,21 +11,16 @@
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
 
-// "": { groupNumber: "" },
-// "": { "groupNumber": "" },
-// , aliases: [""]
-// , "aliases": [""]
-
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.5');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.6');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1770397053;
+    return 1770681461;
 }
 
 // 提醒历史
@@ -333,6 +328,7 @@ const groupMap = {
 	"Regnagleppod": { groupNumber: "939930942", aliases: ["玻璃人"] },
 
 	// S
+	"三台风月": { groupNumber: "1084095765" },
 	"什么叫做kpc……": { groupNumber: "1079232693*下载" },
 	"斯翠海文": { groupNumber: "838512466" },
 	"死者的顿足舞": { groupNumber: "1081620177" },
