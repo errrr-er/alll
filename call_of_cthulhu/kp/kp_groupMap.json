@@ -1,8 +1,8 @@
 {
-  "version": "1.1.6",
-  "timestamp": 1770681461,
+  "version": "1.1.7",
+  "timestamp": 1770821525,
   "group_map": {
-    "# A": { "groupNumber": "" },
+    "# A": { "groupNumber": "", "aliases": [""] },
     "ABO同工同酬": { "groupNumber": "991872893" },
     "ABS": { "groupNumber": "941349942", "aliases": ["全蓝综合征"] },
     "AIB": { "groupNumber": "112077093" },
@@ -33,6 +33,7 @@
     "白玉风会录": { "groupNumber": "942449479" },
     
     "# C": { "groupNumber": "" },
+    "翠色的光与影": { "groupNumber": "1081639467" },
     "GODARCA": { "groupNumber": "869783432" },
     "GinGin": { "groupNumber": "1035861353" },
     "吹笛子的海獭": { "groupNumber": "468213532" },
@@ -79,6 +80,7 @@
     "非正经修仙": { "groupNumber": "645560269" },
 
     "# G": { "groupNumber": "" },
+    "哥谭39:永恒之镜": { "groupNumber": "858799831", "aliases": ["Gotham39: The Mirror Eternal"] },
     "孤灯弃城": { "groupNumber": "877858567" },
     "怪物们与邪典仙境": { "groupNumber": "592577986", "aliases": ["鞋垫"] },
     "怪胎": { "groupNumber": "639870851" },
@@ -177,6 +179,7 @@
     "龙金劫": { "groupNumber": "947826784" },
 
     "# M": { "groupNumber": "" },
+    "明港市灵异调查组": { "groupNumber": "970189117" },
     "m大随机杀人事件": { "groupNumber": "1079465494*下载\n548428936*KP" },
     "木马&短刀": { "groupNumber": "873593450*有作者\n564501697*无作者" },
     "冒充神明的童话": { "groupNumber": "1062511494" },
@@ -205,6 +208,7 @@
     "魔法少女歌唱死亡": { "groupNumber": "868665011" },
 
     "# N": { "groupNumber": "" },
+    "鸟啼歌": { "groupNumber": "1076715464" },
     "内锈": { "groupNumber": "1061071715" },
     "nobody": { "groupNumber": "694908547", "aliases": ["nbd"] },
     "脓堕": { "groupNumber": "183186533", "aliases": ["nd"] },
@@ -427,6 +431,7 @@
     "鸦阁领域": { "groupNumber": "836306797" },
 
     "# Z": { "groupNumber": "" },
+    "镇魂歌": { "groupNumber": "709032901" },
     "斩仙槐": { "groupNumber": "973867121*下载\n690343204*KP" },
     "致我不灭的": { "groupNumber": "1073548076*下载\n1077901406*KP" },
     "zinki": { "groupNumber": "761916849" },
