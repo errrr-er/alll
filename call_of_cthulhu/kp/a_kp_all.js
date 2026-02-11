@@ -1,26 +1,26 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.6
+// @version      4.7.7
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1770681461
+// @timestamp    1770821525
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // ==/UserScript==
-
+// , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.6');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.7');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1770681461;
+    return 1770821525;
 }
 
 // 提醒历史
@@ -113,6 +113,7 @@ const groupMap = {
 	"白玉风会录": { groupNumber: "942449479" },
 	
 	// C
+	"翠色的光与影": { groupNumber: "1081639467" },
 	"GODARCA": { groupNumber: "869783432" },
 	"GinGin": { groupNumber: "1035861353" },
 	"吹笛子的海獭": { groupNumber: "468213532" },
@@ -159,6 +160,7 @@ const groupMap = {
 	"非正经修仙": { groupNumber: "645560269" },
 
 	// G
+	"哥谭39:永恒之镜": { groupNumber: "858799831", aliases: ["Gotham39: The Mirror Eternal"] },
 	"孤灯弃城": { groupNumber: "877858567" },
 	"怪物们与邪典仙境": { groupNumber: "592577986", aliases: ["鞋垫"] },
 	"怪胎": { groupNumber: "639870851" },
@@ -257,6 +259,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 
 	// M
+	"明港市灵异调查组": { groupNumber: "970189117" },
 	"m大随机杀人事件": { groupNumber: "1079465494*下载\n548428936*KP" },
 	"木马&短刀": { groupNumber: "873593450*有作者\n564501697*无作者" },
 	"冒充神明的童话": { groupNumber: "1062511494" },
@@ -285,6 +288,7 @@ const groupMap = {
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
 
 	// N
+	"鸟啼歌": { groupNumber: "1076715464" },
 	"内锈": { groupNumber: "1061071715" },
 	"nobody": { groupNumber: "694908547", aliases: ["nbd"] },
 	"脓堕": { groupNumber: "183186533", aliases: ["nd"] },
@@ -507,6 +511,7 @@ const groupMap = {
 	"鸦阁领域": { groupNumber: "836306797" },
 
 	// Z
+	"镇魂歌": { groupNumber: "709032901" },
 	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"zinki": { groupNumber: "761916849" },
