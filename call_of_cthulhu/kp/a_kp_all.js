@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.7
+// @version      4.7.8
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1770821525
+// @timestamp    1771002928
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.7');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.8');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1770821525;
+    return 1771002928;
 }
 
 // 提醒历史
@@ -437,6 +437,7 @@ const groupMap = {
 	"问道苍生": { groupNumber: "758798519、578441689" },
 
 	// X
+	"行行重": { groupNumber: "720893039" },
 	"心愿寄于清夏": { groupNumber: "599817890" },
 	"神星落乐": { groupNumber: "831229728" },
 	"虚诞的毁灭": { groupNumber: "1046244155" },
