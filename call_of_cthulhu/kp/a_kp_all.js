@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.8
+// @version      4.7.9
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1771002928
+// @timestamp    1771253443
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.8');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.9');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1771002928;
+    return 1771253443;
 }
 
 // 提醒历史
@@ -320,6 +320,7 @@ const groupMap = {
 	"起承转结": { groupNumber: "1043452922" },
 
 	// R
+	"rEpl∀λ": { groupNumber: "1082342542", aliases: ["回溯"] },
 	"R∈D - Re:Dawn -": { groupNumber: "859997225", aliases: ["R∈D", "Re:Dawn", "red"] },
 	"reaby": { groupNumber: "334767023" },
 	"ROP": { groupNumber: "783947110*有作者\n780307937*无作者" },
@@ -405,6 +406,7 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
+	"我的同桌才没有那么可爱": { groupNumber: "1076334102*下载\n1022387123*下载\n980074681*KP" },
 	"无尽阶梯": { groupNumber: "923944293" },
 	"维克那毁灭前夕": { groupNumber: "1045993659" },
 	"为渡圆寂之都": { groupNumber: "953195114" },
