@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.9
+// @version      4.7.10
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1771253443
+// @timestamp    1771512671
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.9');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.10');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1771253443;
+    return 1771512671;
 }
 
 // 提醒历史
@@ -131,6 +131,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 
     // D
+	"断梦行": { groupNumber: "1051020748*PL\n1029592193*KP" },
 	"当代电影": { groupNumber: "1023220397" },
 	"断头爱丽丝": { groupNumber: "1073575754" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
@@ -150,6 +151,7 @@ const groupMap = {
 	"恶辣": { groupNumber: "620832218" },
 	
 	// F
+	"缝春": { groupNumber: "798106857*KP" },
 	"焚天之战": { groupNumber: "1065925723" },
 	"疯法师的地城": { groupNumber: "1025248586" },
 	"凤去台空江自流": { groupNumber: "979768022*下载\n985261346*下载\n瑰绿的决心+天地熔金+凤去台空江自流+人间烟火+问天地", aliases: ["瑰绿的决心", "天地熔金", "人间烟火", "问天地"] },
@@ -406,7 +408,7 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
-	"我的同桌才没有那么可爱": { groupNumber: "1076334102*下载\n1022387123*下载\n980074681*KP" },
+	"我的同桌才没有那么可爱": { groupNumber: "1076334102*下载\n1022387123*下载\n1085169094*下载\n980074681*KP" },
 	"无尽阶梯": { groupNumber: "923944293" },
 	"维克那毁灭前夕": { groupNumber: "1045993659" },
 	"为渡圆寂之都": { groupNumber: "953195114" },
