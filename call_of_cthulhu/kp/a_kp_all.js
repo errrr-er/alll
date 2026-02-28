@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.10
+// @version      4.7.11
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1771512671
+// @timestamp    1772294795
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.10');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.11');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1771512671;
+    return 1772294795;
 }
 
 // 提醒历史
@@ -151,6 +151,7 @@ const groupMap = {
 	"恶辣": { groupNumber: "620832218" },
 	
 	// F
+	"逢春": { groupNumber: "248473557" },
 	"缝春": { groupNumber: "798106857*KP" },
 	"焚天之战": { groupNumber: "1065925723" },
 	"疯法师的地城": { groupNumber: "1025248586" },
@@ -234,6 +235,7 @@ const groupMap = {
 	"克苏鲁迷踪toc": { groupNumber: "780909682", aliases: ["toc"] },
 
 	// L
+	"龙港围城": { groupNumber: "1079345156", "aliases": ["龙门围城"] },
 	"卢埃德街的海鸣": { groupNumber: "972416799*下载" },
 	"LUCA": { groupNumber: "1077454734*下载" },
 	"乐园在海底": { groupNumber: "641157488" },
@@ -441,6 +443,8 @@ const groupMap = {
 	"问道苍生": { groupNumber: "758798519、578441689" },
 
 	// X
+    "心愿寄于清夏": { groupNumber: "599817890" },
+    "星星的葬礼": { groupNumber: "973867121*下载" },
 	"行行重": { groupNumber: "720893039" },
 	"心愿寄于清夏": { groupNumber: "599817890" },
 	"神星落乐": { groupNumber: "831229728" },
