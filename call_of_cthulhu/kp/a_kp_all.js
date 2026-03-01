@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.11
+// @version      4.7.12
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1772294795
+// @timestamp    1772332193
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.11');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.12');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1772294795;
+    return 1772332193;
 }
 
 // 提醒历史
@@ -176,6 +176,7 @@ const groupMap = {
 	"沽上潮生来": { groupNumber: "655068229*下载" },
 	
 	// H
+	"怀抱秘密的妻子": { groupNumber: "1054698251", aliases: ["ヒミツの奥様"] },
 	"哈欠门": { groupNumber: "631595428" },
 	"黑水溪": { groupNumber: "1071548693" },
 	"活神之手": { groupNumber: "1075504939" },
