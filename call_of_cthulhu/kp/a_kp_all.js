@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.8.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1772458879
+// @timestamp    1772462573
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1772458879;
+    return 1772462573;
 }
 
 // 提醒历史
@@ -390,7 +390,7 @@ const groupMap = {
 	"天椎谶纬": { groupNumber: "656026457" },
 	"天衍剧组": { groupNumber: "637230426" },
 	"天衍纪年": { groupNumber: "666391763、675869524", aliases: ["tyjn"] },
-	"天下第一刀": { groupNumber: "369645861*有作者\n369645861*无作者" },
+	"天下第一刀": { groupNumber: "369645861*无作者" },
 	"庭师所吟为何物": { groupNumber: "656434498", aliases: ["庭师"] },
 	"天师": { groupNumber: "587952595*下载" },
 	"太岁": { groupNumber: "615878940*下载\n703542083*KP" },
