@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.7.12
+// @version      4.7.13
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1772332193
+// @timestamp    1772458879
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.7.12');
+  ext = seal.ext.new('KP群汇总', 'er', '4.7.13');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1772332193;
+    return 1772458879;
 }
 
 // 提醒历史
@@ -325,6 +325,7 @@ const groupMap = {
 	"起承转结": { groupNumber: "1043452922" },
 
 	// R
+	"日夜行人": { groupNumber: "238797418" },
 	"rEpl∀λ": { groupNumber: "1082342542", aliases: ["回溯"] },
 	"R∈D - Re:Dawn -": { groupNumber: "859997225", aliases: ["R∈D", "Re:Dawn", "red"] },
 	"reaby": { groupNumber: "334767023" },
