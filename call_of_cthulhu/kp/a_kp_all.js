@@ -344,7 +344,6 @@ const groupMap = {
 	"斯翠海文": { groupNumber: "838512466" },
 	"死者的顿足舞": { groupNumber: "1081620177" },
 	"十六段夜谈": { groupNumber: "938304846" },
-	"石榴": { groupNumber: "1063443035*下载" },
 	"圣诞快乐，玛丽小姐": { groupNumber: "864404671*下载\n1041629808*KP" },
 	"赎罪邮局": { groupNumber: "1064670977" },
 	"Sillage香水屋": { groupNumber: "921302134", aliases: ["Sillage", "香水屋"] },
@@ -445,7 +444,6 @@ const groupMap = {
 	"问道苍生": { groupNumber: "758798519、578441689" },
 
 	// X
-    "心愿寄于清夏": { groupNumber: "599817890" },
     "星星的葬礼": { groupNumber: "973867121*下载" },
 	"行行重": { groupNumber: "720893039" },
 	"心愿寄于清夏": { groupNumber: "599817890" },
