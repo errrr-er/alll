@@ -131,6 +131,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 
     // D
+	"町葬屋怪异谭": { groupNumber: "174136022" },
 	"断梦行": { groupNumber: "1051020748*PL\n1029592193*KP" },
 	"当代电影": { groupNumber: "1023220397" },
 	"断头爱丽丝": { groupNumber: "1073575754" },
@@ -411,6 +412,7 @@ const groupMap = {
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	
 	// W
+	"万木惊春时": { groupNumber: "371709132" },
 	"我的同桌才没有那么可爱": { groupNumber: "1076334102*下载\n1022387123*下载\n1085169094*下载\n980074681*KP" },
 	"无尽阶梯": { groupNumber: "923944293" },
 	"维克那毁灭前夕": { groupNumber: "1045993659" },
@@ -424,7 +426,6 @@ const groupMap = {
 	"伪装者": { groupNumber: "965809145" },
 	"午夜的沙": { groupNumber: "864767076" },
 	"妄想症": { groupNumber: "278636978" },
-	"屋怪异谭": { groupNumber: "174136022" },
 	"巫光之外的荒野": { groupNumber: "594209337" },
 	"帷灯匣剑": { groupNumber: "850934230*下载\n984247613*KP" },
 	"往明": { groupNumber: "1039312225" },
@@ -444,6 +445,7 @@ const groupMap = {
 	"问道苍生": { groupNumber: "758798519、578441689" },
 
 	// X
+	"虚白馆·无人生还": { groupNumber: "1085269036" },
     "星星的葬礼": { groupNumber: "973867121*下载" },
 	"行行重": { groupNumber: "720893039" },
 	"心愿寄于清夏": { groupNumber: "599817890" },
@@ -520,6 +522,7 @@ const groupMap = {
 	"鸦阁领域": { groupNumber: "836306797" },
 
 	// Z
+	"掷骰演出": { groupNumber: "1090720849*下载" },
 	"镇魂歌": { groupNumber: "709032901" },
 	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
