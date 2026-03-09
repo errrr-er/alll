@@ -200,8 +200,12 @@ if (typeof seal.ext.registerTask === 'function') {
 const cmdSilence = seal.ext.newCmdItemInfo();
 cmdSilence.name = '沉默';
 cmdSilence.help = `设置群内沉默提醒阈值。
-.沉默 <分钟>  设置本群无人说话多少分钟后提醒（设0关闭）
-.沉默 状态     查看本群当前设置和最后活跃时间`;
+.沉默 <分钟>    设置本群无人说话多少分钟后提醒（设0关闭）
+.沉默           查看本群当前设置和最后活跃时间
+
+常用参考
+24时、1440分
+48时、2880分`;
 
 cmdSilence.solve = (ctx, msg, cmdArgs) => {
     try {
@@ -267,7 +271,7 @@ cmdSilence.solve = (ctx, msg, cmdArgs) => {
 
         const minutes = parseInt(subCmd, 10);
         if (isNaN(minutes) || minutes < 0) {
-            seal.replyToSender(ctx, msg, '请输入有效的分钟数（非负整数）');
+            seal.replyToSender(ctx, msg, '设置群内沉默提醒阈值。\n.沉默 <分钟>    设置本群无人说话多少分钟后提醒（设0关闭）\n.沉默           查看本群当前设置和最后活跃时间\n\n常用参考\n24时、1440分\n48时、2880分');
             return seal.ext.newCmdExecuteResult(true);
         }
 
