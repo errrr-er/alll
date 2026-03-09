@@ -7,8 +7,8 @@
 // 2026-03-09 17:22:53
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://ghfast.top/https://github.com/errrr-er/alll/blob/main/dice_common/silence/a_silence.js
-// @updateUrl    https://github.com/errrr-er/alll/blob/main/dice_common/silence/a_silence.js
+// @updateUrl    https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/silence/a_silence.js
+// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/silence/a_silence.js
 // ==/UserScript==
 
 let ext = seal.ext.find('silence');
@@ -29,7 +29,7 @@ const silenceUserLastNotify = new Map();
 async function silenceGetGitHubVersion() {
     try {
         // 镜像
-        const rawUrl = 'https://ghfast.top/https://github.com/errrr-er/alll/blob/main/dice_common/silence/a_silence.js';
+        const rawUrl = 'https://ghfast.top/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/silence/a_silence.js';
         const response = await fetch(rawUrl);
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
