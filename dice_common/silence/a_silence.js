@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.沉默 help)有问题可进群2150284119联系
-// @timestamp    1773092384  
+// @timestamp    1773092650  
 // 2026-03-09 17:22:53
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(需要手动更新)
 function silenceGetCurrentTimestamp() {
-    return 1773092384;
+    return 1773092650;
 }
 
 // 提醒历史
