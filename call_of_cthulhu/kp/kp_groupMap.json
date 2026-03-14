@@ -1,6 +1,6 @@
 {
-  "version": "1.2.1",
-  "timestamp": 1772678716,
+  "version": "1.2.2",
+  "timestamp": 1773507529,
   "group_map": {
     "# A": { "groupNumber": "", "aliases": [""] },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -51,6 +51,7 @@
     "长兴镇": { "groupNumber": "906847246" },
 
     "# D": { "groupNumber": "" },
+	"大德歌": { "groupNumber": "1092691584" },
     "町葬屋怪异谭": { "groupNumber": "174136022" },
     "断梦行": { "groupNumber": "1051020748*PL\n1029592193*KP" },
     "当代电影": { "groupNumber": "1023220397" },
@@ -231,6 +232,7 @@
     "pathfinder 2e": { "groupNumber": "695214825", "aliases": ["pf2"] },
 
     "# Q": { "groupNumber": "" },
+	"奇异医科": { "groupNumber": "1033132363*下载" },
     "崎蜀藏观音": { "groupNumber": "652844613" },
     "青春自杀": { "groupNumber": "953788807" },
     "亲爱的，我把脑子丢了": { "groupNumber": "839027414", "aliases": ["脑丢", "丢脑"] },
@@ -442,6 +444,7 @@
     "鸦阁领域": { "groupNumber": "836306797" },
 
     "# Z": { "groupNumber": "" },
+	"致让我们死去活来仍然热爱的冰上的一切": { "groupNumber": "1087789609*下载\n1087899806*KP" },
 	"掷骰演出": { "groupNumber": "1090720849*下载" },
     "镇魂歌": { "groupNumber": "709032901" },
     "斩仙槐": { "groupNumber": "973867121*下载\n690343204*KP" },
