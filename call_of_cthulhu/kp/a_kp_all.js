@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.8.1
+// @version      4.8.2
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1772678716
+// @timestamp    1773507529
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.8.1');
+  ext = seal.ext.new('KP群汇总', 'er', '4.8.2');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1772678716;
+    return 1773507529;
 }
 
 // 提醒历史
@@ -131,6 +131,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 
     // D
+	"大德歌": { groupNumber: "1092691584" },
 	"町葬屋怪异谭": { groupNumber: "174136022" },
 	"断梦行": { groupNumber: "1051020748*PL\n1029592193*KP" },
 	"当代电影": { groupNumber: "1023220397" },
@@ -311,6 +312,7 @@ const groupMap = {
 	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 
 	// Q
+	"奇异医科": { groupNumber: "1033132363*下载" },
 	"崎蜀藏观音": { groupNumber: "652844613" },
 	"青春自杀": { groupNumber: "953788807" },
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢", "丢脑"] },
@@ -522,6 +524,7 @@ const groupMap = {
 	"鸦阁领域": { groupNumber: "836306797" },
 
 	// Z
+	"致让我们死去活来仍然热爱的冰上的一切": { groupNumber: "1087789609*下载\n1087899806*KP" },
 	"掷骰演出": { groupNumber: "1090720849*下载" },
 	"镇魂歌": { groupNumber: "709032901" },
 	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
