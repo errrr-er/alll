@@ -113,6 +113,7 @@ const groupMap = {
 	"白玉风会录": { groupNumber: "942449479" },
 	
 	// C
+	"穿插、跳跃、结束，你与我的日常": { groupNumber: "1085073731" },
 	"翠色的光与影": { groupNumber: "1081639467" },
 	"GODARCA": { groupNumber: "869783432" },
 	"GinGin": { groupNumber: "1035861353" },
@@ -390,7 +391,7 @@ const groupMap = {
 	"ssss": { groupNumber: "926664565", aliases: ["4s"] },
 
 	// T
-	"天启伏诛": { groupNumber: "1075156103*下载" },
+	"天启伏诛": { groupNumber: "1075156103*下载\n1093079819*KP" },
 	"天衍江湖录": { groupNumber: "463467776" },
 	"天启劫火": { groupNumber: "1059690417" },
 	"天命所归": { groupNumber: "875210475" },
