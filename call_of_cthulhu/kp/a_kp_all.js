@@ -314,7 +314,7 @@ const groupMap = {
 	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 
 	// Q
-	"永秋录": { groupNumber: "922420972、712714985", aliases: ["qyl"] },
+	"秋永录": { groupNumber: "922420972、712714985", aliases: ["qyl"] },
 	"奇异医科": { groupNumber: "1033132363*下载" },
 	"崎蜀藏观音": { groupNumber: "652844613" },
 	"青春自杀": { groupNumber: "953788807" },
