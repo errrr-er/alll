@@ -1,6 +1,6 @@
 # Call of Cthulhu
 
-## [.kp] KP群汇总（JSON/OPK）
+## [.kp] KP群汇总（JS/OPK）
 
 > [!CAUTION]
 > 按万能群内群友的图片无授权个人手动整理+群友补充、若有任何差漏欢迎反馈
