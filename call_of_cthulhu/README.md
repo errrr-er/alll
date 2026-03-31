@@ -1,6 +1,6 @@
 # Call of Cthulhu
 
-## KP群汇总（JSON/OPK）
+## [.kp] KP群汇总（JSON/OPK）
 
 【兼容】
 - 精确查询（精确输出100%对应的查询结果、包含部分已录入的花名）
