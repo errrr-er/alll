@@ -132,6 +132,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 
     // D
+	"大道纪年": { groupNumber: "932560339" },
 	"大德歌": { groupNumber: "1092691584" },
 	"町葬屋怪异谭": { groupNumber: "174136022" },
 	"断梦行": { groupNumber: "1051020748*PL\n1029592193*KP" },
@@ -208,6 +209,8 @@ const groupMap = {
 	"insane": { groupNumber: "650600421" },
 
 	// J
+	"天才剑修▆▆法则": { groupNumber: "1095791459" },
+	"寂静挽歌": { groupNumber: "1084909160" },
 	"教师A的终焉": { groupNumber: "966092780*下载", aliases: ["7-Day Cricle", "七日之轮"] },
 	"京痕雨记": { groupNumber: "496904508*下载" },
 	"绝对励弩": { groupNumber: "1079402848" },
@@ -300,6 +303,7 @@ const groupMap = {
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
 
 	// N
+	"你这什么跑团，你这coj害人不浅啊": { groupNumber: "745155380*下载" },
 	"鸟啼歌": { groupNumber: "1076715464" },
 	"内锈": { groupNumber: "1061071715" },
 	"nobody": { groupNumber: "694908547", aliases: ["nbd"] },
@@ -317,6 +321,7 @@ const groupMap = {
 	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 
 	// Q
+	"囚人医療部": { groupNumber: "689946642*下载" },
 	"秋永录": { groupNumber: "922420972、712714985", aliases: ["qyl"] },
 	"奇异医科": { groupNumber: "1033132363*下载" },
 	"崎蜀藏观音": { groupNumber: "652844613" },
