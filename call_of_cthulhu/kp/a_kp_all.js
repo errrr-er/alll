@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.8.7
+// @version      4.8.8
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1775159818
+// @timestamp    1775322327
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.8.7');
+  ext = seal.ext.new('KP群汇总', 'er', '4.8.8');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1775159818;
+    return 1775322327;
 }
 
 // 提醒历史
@@ -234,7 +234,7 @@ const groupMap = {
 	"靖海难": { groupNumber: "343026343" },
 
 	// K
-	"卡镇": { groupNumber: "297175538" },
+	"卡森德拉的黑色嘉年华": { groupNumber: "297175538", aliases: ["卡镇"] },
 	"快刀乱魔": { groupNumber: "238285939", aliases: ["快刀"] },
 	"快刀乱魔贰": { groupNumber: "417453795", aliases: ["快刀2"] },
 	"恐怖墓穴": { groupNumber: "329392650" },
