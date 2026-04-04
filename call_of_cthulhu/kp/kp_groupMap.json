@@ -1,6 +1,6 @@
 {
-  "version": "1.2.7",
-  "timestamp": 1775159818,
+  "version": "1.2.8",
+  "timestamp": 1775322327,
   "group_map": {
     "# A": { "groupNumber": "", "aliases": [""] },
     "ABO同工同酬": { "groupNumber": "991872893" },
@@ -153,7 +153,7 @@
     "靖海难": { "groupNumber": "343026343" },
 
     "# K": { "groupNumber": "" },
-    "卡镇": { "groupNumber": "297175538" },
+    "卡森德拉的黑色嘉年华": { "groupNumber": "297175538", "aliases": ["卡镇"] },
     "快刀乱魔": { "groupNumber": "238285939", "aliases": ["快刀"] },
     "快刀乱魔贰": { "groupNumber": "417453795", "aliases": ["快刀2"] },
     "恐怖墓穴": { "groupNumber": "329392650" },
