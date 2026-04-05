@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      4.8.8
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1775322327
+// @timestamp    1775407321
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1775322327;
+    return 1775407321;
 }
 
 // 提醒历史
@@ -93,6 +93,7 @@ const groupMap = {
 	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	
 	// B
+	"波子汽水": { groupNumber: "562672318" },
 	"边狱巴士同人规则": { groupNumber: "765965290" },
 	"Bubble on Stage": { groupNumber: "734220119" },
 	"拜昆仑": { groupNumber: "248817589" },
