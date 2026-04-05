@@ -5,8 +5,7 @@ on:
   push:
     paths:
       - 'call_of_cthulhu/kp/**'
-    paths-ignore:
-      - 'auto_pack/**'
+      - '!auto_pack/**'
 
 jobs:
   pack:
