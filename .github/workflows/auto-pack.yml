@@ -1,0 +1,46 @@
+name: Auto Pack
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'call_of_cthulhu/kp/**'
+    paths-ignore:
+      - 'auto_pack/**'
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Create output folder
+      run: mkdir -p auto_pack
+
+    # KP群插件（海豹）
+    - name: Pack seal_kp.zip
+      run: |
+        zip -j auto_pack/seal_kp.zip call_of_cthulhu/kp/a_kp_all.js
+
+    # KP群插件（青果）
+    - name: Pack oliva_kp.opk
+      run: |
+        cd call_of_cthulhu/kp/oliva_kp_all
+
+        zip -r ../../../auto_pack/oliva_kp.zip . -j
+
+        cd -
+
+        mv auto_pack/oliva_kp.zip auto_pack/oliva_kp.opk
+
+    - name: Commit
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+
+        git add auto_pack/
+
+        git diff --cached --quiet || git commit -m "auto pack"
+        git push
