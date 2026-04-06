@@ -6,7 +6,7 @@
 > - 除非有特殊说明、使用时默认同意并遵守[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)许可协议
 > - 发布地点有且仅有[GitHub(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
 > - 仓内均为无原作授权的个人制作/整理/人机混翻、若内容有误/漏欢迎补充
-> - 仓内收录内容 ≠ 官方、请勿将两者混淆
+> - 仓内收录 ≠ 官方 ≠ 内容完整、请勿将其混淆
 > - 本人不负责因不正当使用(包括但不限于多转/商用等)而产生/导致的任何问题/情况
 > - 更新后会传至同样位置(但不另行通知)
 
