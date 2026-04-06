@@ -11,7 +11,7 @@
 
 > [!IMPORTANT]
 > - 导入前须知
->   - 图片皆由[CQ码](https://docs.go-cqhttp.org/cqcode/#%E5%9B%BE%E7%89%87)搭配GitHub实现，如果骰子不支持则无法正常使用
+>   - 图片皆由[CQ码](https://docs.go-cqhttp.org/cqcode/#%E5%9B%BE%E7%89%87)搭配GitHub实现，如果骰子不支持则很可能导致无法正常使用
 >   - 插件均适配海豹系、其它骰系暂且未知、欢迎补充
 > - 本体更新方式
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
