@@ -21,7 +21,7 @@
 
 # 文件下载
 
-根目录auto_pack内文件
+[auto_pack](https://github.com/errrr-er/alll/tree/main/auto_pack)
 
 # 汇报错误/补充 :inbox_tray:
 
