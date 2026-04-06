@@ -27,7 +27,7 @@
 # 汇报错误/补充（反馈时请带上相关截图!!!）
 
 - 提交[issue](https://github.com/errrr-er/alll/issues)
-- 2150284119(qq群)
+- 2150284119（QQ群）
 
 # README（缓慢修）
 
