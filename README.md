@@ -29,7 +29,7 @@
 - 提交[issues](https://github.com/errrr-er/alll/issues)
 - 2150284119(qq群)
 
-# README（都在缓慢修，最后可能全部融进本md内）
+# README（缓慢修）
 
 - [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
 - [Candela Obscura](https://github.com/errrr-er/alll/tree/main/candela_obscura)
