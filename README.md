@@ -1,3 +1,7 @@
+# 文件下载
+
+根目录auto_pack内文件
+
 > [!TIP]
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists/readme_lists_pointout.png?raw=true)
 
