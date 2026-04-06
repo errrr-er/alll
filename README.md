@@ -1,4 +1,4 @@
-# 前言
+# 前言&免责声明
 > [!TIP]
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists/readme_lists_pointout.png?raw=true)
 
@@ -7,7 +7,7 @@
 > - 发布地点有且仅有[GitHub(errr-er)](https://github.com/errrr-er/alll)、[QQ空间(3612464276)](https://user.qzone.qq.com/3612464276)、[微博(@裗浳)](https://m.weibo.cn/u/7850658576?luicode=10000011&lfid=1005056364573448)
 > - 仓内均为无原作授权的个人制作/整理/人机混翻、若内容有误/漏欢迎补充
 > - 仓内收录内容 ≠ 官方、请勿将两者混淆
-> - 本人不负责因多转(或不正当使用)产生/导致的任何问题/情况
+> - 本人不负责因不正当使用(包括但不限于多转/商用等)而产生/导致的任何问题/情况
 > - 更新后会传至同样位置(但不另行通知)
 
 > [!IMPORTANT]
