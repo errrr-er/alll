@@ -1,7 +1,4 @@
-# 文件下载
-
-根目录auto_pack内文件
-
+# 前言
 > [!TIP]
 > 善用目录`箭头旁按钮`![](https://github.com/errrr-er/alll/blob/main/readme_pic/readme_lists/readme_lists_pointout.png?raw=true)
 
@@ -13,11 +10,17 @@
 > - 更新后会传至同样位置(但不另行通知)
 
 > [!IMPORTANT]
-> - 导入前须知&本体更新方式
+> - 导入前须知
 >   - 图片皆由[cq码](https://docs.go-cqhttp.org/cqcode/#%E5%9B%BE%E7%89%87)搭配GitHub实现，如果骰子不支持则无法正常使用
-> - 插件均适配海豹系、其它骰系暂且未知、欢迎补充
+>   - 插件均适配海豹系、其它骰系暂且未知、欢迎补充
+> - 本体更新方式
 >     - 海豹系：`扩展功能`->`牌堆管理/JS扩展`->`更新`
 > ![](https://github.com/errrr-er/alll/blob/main/readme_pic/sealdice/sealdice_update_example_pointout.png?raw=true)
+>     - 青果系：目前为自动更新，骰主无需操心任何
+
+# 文件下载
+
+根目录auto_pack内文件
 
 # 汇报错误/补充 :inbox_tray:
 
