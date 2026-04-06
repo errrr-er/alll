@@ -1,4 +1,4 @@
-# Dice
+# Dice Common
 
 ## [.沉默 help] 沉默提醒（JS）
 
