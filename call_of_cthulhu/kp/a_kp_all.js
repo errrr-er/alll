@@ -258,7 +258,7 @@ const groupMap = {
 	"罗小黑": { groupNumber: "687753523", aliases: ["妖灵会馆"] },
 	"拉普拉斯": { groupNumber: "1050071534" },
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕", "吕布"] },
-	"流水线心脏": { groupNumber: "793350464" },
+	"流水线心脏": { groupNumber: "793350464", aliases: ["流心"] },
 	"狼藉夜行": { groupNumber: "779021829" },
 	"绿色三角洲": { groupNumber: "623759380、984765632、253302384、1061755248", aliases: ["dg"] },
 	"落石": { groupNumber: "603178528" },
