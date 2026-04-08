@@ -17,7 +17,7 @@ jobs:
         run: |
           node -e "
           const fs = require('fs');
-          const content = fs.readFileSync('a_kp_all.js','utf8');
+          const content = fs.readFileSync('call_of_cthulhu/kp/a_kp_all.js', 'utf8');
 
           // 取 groupMap
           const mapMatch = content.match(/const groupMap = ({[\s\S]*?});/);
