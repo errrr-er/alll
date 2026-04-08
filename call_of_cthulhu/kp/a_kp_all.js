@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         KP群汇总
 // @author       3987681449
-// @version      4.8.9
+// @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1775407321
+// @timestamp    1775662644
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -13,14 +13,14 @@
 // , aliases: [""]
 let ext = seal.ext.find('KP群汇总');
 if (!ext) {
-  ext = seal.ext.new('KP群汇总', 'er', '4.8.9');
+  ext = seal.ext.new('KP群汇总', 'er', '1.0.0');
   seal.ext.register(ext);
 }
 
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1775407321;
+    return 1775662644;
 }
 
 // 提醒历史
