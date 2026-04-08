@@ -25,24 +25,32 @@ jobs:
           // 取 groupMap
           const mapMatch = content.match(/const groupMap = ({[\s\S]*?});/);
           if (!mapMatch) throw 'no groupMap';
-
           const groupMap = eval('(' + mapMatch[1] + ')');
 
           // 取 @timestamp
           const tsMatch = content.match(/@timestamp\s+(\d+)/);
           const timestamp = tsMatch ? Number(tsMatch[1]) : Math.floor(Date.now()/1000);
 
-          // 取 @versio（可选）
+          // 取 @version
           const verMatch = content.match(/@version\s+([\\d\\.]+)/);
           const version = verMatch ? verMatch[1] : 'auto';
 
-          const output = {
-            version,
-            timestamp,
-            group_map: groupMap
-          };
+          const output = { version, timestamp, group_map: groupMap };
 
-          fs.writeFileSync('call_of_cthulhu/kp/kp_groupMap.json', JSON.stringify(output, null, 2));
+          // 每个群一行
+          const groupLines = Object.entries(groupMap)
+            .map(([k, v]) => `\"${k}\": ${JSON.stringify(v)}`)
+            .join(',\n  ');
+
+          const finalJson = `{
+            \"version\": \"${version}\",
+            \"timestamp\": ${timestamp},
+            \"group_map\": {
+            ${groupLines}
+            }
+          }`;
+
+          fs.writeFileSync('call_of_cthulhu/kp/kp_groupMap.json', finalJson);
           console.log('done');
           "
 
