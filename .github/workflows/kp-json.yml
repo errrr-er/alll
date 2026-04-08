@@ -6,6 +6,9 @@ on:
     paths:
       - 'call_of_cthulhu/kp/a_kp_all.js'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
