@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: kp-json
+  group: coc_kp
   cancel-in-progress: false
 
 jobs:
