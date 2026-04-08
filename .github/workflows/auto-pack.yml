@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: kp-json
+  cancel-in-progress: false
+
 jobs:
   pack:
     runs-on: ubuntu-latest
