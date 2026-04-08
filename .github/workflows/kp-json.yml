@@ -35,20 +35,9 @@ jobs:
           const verMatch = content.match(/@version\s+([\\d\\.]+)/);
           const version = verMatch ? verMatch[1] : 'auto';
 
-          const output = { version, timestamp, group_map: groupMap };
-
-          // 每个群一行
-          const groupLines = Object.entries(groupMap)
-            .map(([k, v]) => `\"${k}\": ${JSON.stringify(v)}`)
-            .join(',\n  ');
-
-          const finalJson = `{
-            \"version\": \"${version}\",
-            \"timestamp\": ${timestamp},
-            \"group_map\": {
-            ${groupLines}
-            }
-          }`;
+          // 拼接 JSON，每个群一行
+          const lines = Object.entries(groupMap).map(([k, v]) => \`\"\${k}\": \${JSON.stringify(v)}\`);
+          const finalJson = \`{\n  \"version\": \"\${version}\",\n  \"timestamp\": \${timestamp},\n  \"group_map\": {\n    \${lines.join(\",\\n    \")}\n  }\n}\`;
 
           fs.writeFileSync('call_of_cthulhu/kp/kp_groupMap.json', finalJson);
           console.log('done');
