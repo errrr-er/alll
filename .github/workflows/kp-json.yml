@@ -47,6 +47,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add groupMap.json
+          git add kp_groupMap.json
           git commit -m "KP json" || echo "no change"
           git push
