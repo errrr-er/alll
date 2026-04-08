@@ -1,0 +1,52 @@
+name: KP json
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'call_of_cthulhu/kp/a_kp_all.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate JSON
+        run: |
+          node -e "
+          const fs = require('fs');
+          const content = fs.readFileSync('a_kp_all.js','utf8');
+
+          // 取 groupMap
+          const mapMatch = content.match(/const groupMap = ({[\s\S]*?});/);
+          if (!mapMatch) throw 'no groupMap';
+
+          const groupMap = eval('(' + mapMatch[1] + ')');
+
+          // 取 @timestamp
+          const tsMatch = content.match(/@timestamp\s+(\d+)/);
+          const timestamp = tsMatch ? Number(tsMatch[1]) : Math.floor(Date.now()/1000);
+
+          // 取 @versio（可选）
+          const verMatch = content.match(/@version\s+([\\d\\.]+)/);
+          const version = verMatch ? verMatch[1] : 'auto';
+
+          const output = {
+            version,
+            timestamp,
+            group_map: groupMap
+          };
+
+          fs.writeFileSync('kp_groupMap.json', JSON.stringify(output, null, 2));
+          console.log('done');
+          "
+
+      - name: Commit
+        run: |
+          git config user.name github-actions
+          git config user.email actions@github.com
+          git add groupMap.json
+          git commit -m "KP json" || echo "no change"
+          git push
