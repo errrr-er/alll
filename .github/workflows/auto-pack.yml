@@ -56,6 +56,7 @@ jobs:
 
         if ! git diff --cached --quiet; then
           git commit -m "auto pack"
+          git pull --rebase origin main
           git push origin HEAD:${GITHUB_REF#refs/heads/}
         else
           echo "No changes to commit"
