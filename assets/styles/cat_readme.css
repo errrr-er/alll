@@ -1,8 +1,6 @@
 @font-face {
   font-family: 'WenKai';
-  src: url('../../assets/fonts/LXGWWenKai.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('./fonts/LXGWWenKai.ttf') format('truetype');
 }
 
 body {
@@ -19,7 +17,6 @@ body {
   font-size: 15px;
 }
 
-/* 标题 */
 h1, h2, h3 {
   margin-top: 1.2em;
   margin-bottom: 0.6em;
@@ -27,12 +24,10 @@ h1, h2, h3 {
   padding-bottom: 6px;
 }
 
-/* 段落 */
 p {
   margin: 0.6em 0;
 }
 
-/* 代码块 */
 pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
@@ -44,7 +39,6 @@ pre {
   overflow-x: auto;
 }
 
-/* 引用块 */
 blockquote {
   border-left: 4px solid #eca204;
   padding-left: 12px;
@@ -52,7 +46,6 @@ blockquote {
   margin-left: 0;
 }
 
-/* 链接 */
 a {
   color: #8b4303;
   text-decoration: none;
@@ -62,43 +55,12 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 图片 */
 img {
   max-width: 100%;
   display: block;
   margin: 12px auto;
 }
 
-/* 按钮样式（你原来的保留优化版） */
-.my-btn {
-  background-color: #eca204;
-  padding: 0.5em 1.3em;
-  border-radius: 9999px;
-  font-size: 0.9rem;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-
-.my-btn:hover {
-  background-color: #8b4303;
-}
-
-.my-btn-nd {
-  background-color: #8c6748;
-  padding: 0.5em 1.3em;
-  border-radius: 9999px;
-  font-size: 0.9rem;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-
-.my-btn-nd:hover {
-  background-color: #8b4303;
-}
-
-/* pandoc 生成的标题隐藏块（可选） */
 .title {
   display: none;
 }
