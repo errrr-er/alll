@@ -17,12 +17,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install tools + fonts
+      - name: install tools
         run: |
           sudo apt update
-          sudo apt install -y pandoc wkhtmltopdf fonts-noto-cjk
+          sudo apt install -y pandoc wkhtmltopdf fontconfig fonts-noto-cjk
 
-      - name: convert md to image
+      - name: prepare assets (VERY IMPORTANT)
+        run: |
+          cp -r assets readme_pic/cat/
+
+      - name: convert md to png
         run: |
           find readme_pic/cat -name "*.md" | while read file; do
             dir=$(dirname "$file")
@@ -31,23 +35,25 @@ jobs:
             html="$dir/$name.html"
             png="$dir/$name.png"
 
-            # 1. md -> html（强制UTF-8 + HTML5）
+            # 1. md -> html
             pandoc "$file" \
               -f markdown \
               -t html5 \
-              -o "$html" \
-              --metadata charset="utf-8"
+              --standalone \
+              --metadata charset=utf-8 \
+              --css=assets/styles/cat_readme.css \
+              -o "$html"
 
-            # 2. html -> png（强制编码 + 本地资源）
+            # 2. html -> png
             wkhtmltoimage \
               --encoding utf-8 \
               --enable-local-file-access \
+              --disable-smart-width \
               --width 800 \
-              "$html" \
-              "$png"
+              "$html" "$png"
 
-            # 3. 成功才删 html
-            if [ -f "$png" ]; then
+            # 3. delete html if success
+            if [ -s "$png" ]; then
               rm "$html"
             fi
 
@@ -56,13 +62,13 @@ jobs:
           echo "==== files ===="
           ls -R
 
-      - name: upload
+      - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: imgs
           path: "**/*.png"
 
-      - name: Commit
+      - name: commit png
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
@@ -72,7 +78,5 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "md to png"
             git pull --rebase origin main
-            git push origin HEAD:${GITHUB_REF#refs/heads/}
-          else
-            echo "No changes to commit"
+            git push
           fi
