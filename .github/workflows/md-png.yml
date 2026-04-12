@@ -21,16 +21,17 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y pandoc wkhtmltopdf
-
+          
       - name: convert md to image
         run: |
           find . -name "*.md" | while read file; do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
-
             pandoc "$file" -o "$dir/$name.html"
             wkhtmltoimage "$dir/$name.html" "$dir/$name.png"
           done
+          echo "==== files ===="
+          ls -R
 
       - name: upload
         uses: actions/upload-artifact@v4
