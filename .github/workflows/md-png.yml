@@ -20,7 +20,7 @@ jobs:
       - name: install tools
         run: |
           sudo apt update
-          sudo apt install -y pandoc wkhtmltoimage
+          sudo apt install -y pandoc wkhtmltopdf
 
       - name: convert md to image
         run: |
