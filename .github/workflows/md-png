@@ -1,0 +1,54 @@
+name: md to png
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'readme_pic/cat/**'
+      - '!auto_pack/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: install tools
+        run: |
+          sudo apt update
+          sudo apt install -y pandoc wkhtmltoimage
+
+      - name: convert md to image
+        run: |
+          find . -name "*.md" | while read file; do
+            dir=$(dirname "$file")
+            name=$(basename "$file" .md)
+
+            pandoc "$file" -o "$dir/$name.html"
+            wkhtmltoimage "$dir/$name.html" "$dir/$name.png"
+          done
+
+      - name: upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: imgs
+          path: "**/*.png"
+
+    - name: Commit
+      run: |
+        git config user.name "github-actions"
+        git config user.email "actions@github.com"
+
+        git add auto_pack/
+
+        if ! git diff --cached --quiet; then
+          git commit -m "md to png"
+          git pull --rebase origin main
+          git push origin HEAD:${GITHUB_REF#refs/heads/}
+        else
+          echo "No changes to commit"
+        fi
