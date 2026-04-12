@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'WenKai';
-  src: url('./assets/fonts/LXGWWenKai.ttf') format('truetype');
+  src: url('../../assets/fonts/LXGWWenKai.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,15 +20,12 @@ body {
 }
 
 h1, h2, h3 {
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
+  margin: 1.2em 0 0.6em;
   border-bottom: 1px solid #eee;
   padding-bottom: 6px;
 }
 
-p {
-  margin: 0.6em 0;
-}
+p { margin: 0.6em 0; }
 
 pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -45,24 +42,13 @@ blockquote {
   border-left: 4px solid #eca204;
   padding-left: 12px;
   color: #555;
-  margin-left: 0;
 }
 
-a {
-  color: #8b4303;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
+a { color: #8b4303; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 img {
   max-width: 100%;
   display: block;
   margin: 12px auto;
-}
-
-.title {
-  display: none;
 }
