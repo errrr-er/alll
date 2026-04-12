@@ -5,7 +5,6 @@ on:
   push:
     paths:
       - 'readme_pic/cat/**'
-      - 'assets/**'
 
 permissions:
   contents: write
@@ -17,54 +16,60 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install tools + fonts
+      - name: install tools
         run: |
           sudo apt update
-          sudo apt install -y pandoc wkhtmltopdf fontconfig fonts-noto-cjk
+          sudo apt install -y pandoc fonts-noto-cjk chromium-browser
 
-      - name: convert md to png
+      - name: prepare assets
+        run: |
+          mkdir -p readme_pic/cat/assets
+          cp -r assets readme_pic/cat/
+
+      - name: md -> html
         run: |
           find readme_pic/cat -name "*.md" | while read file; do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
 
-            html="$dir/$name.html"
-            png="$dir/$name.png"
-
-            # md -> html（关键：--standalone）
             pandoc "$file" \
               -f markdown \
               -t html5 \
               --standalone \
-              --metadata charset=utf-8 \
-              --css="../../../assets/styles/cat_readme.css" \
-              -o "$html"
-
-            # html -> png
-            wkhtmltoimage \
-              --encoding utf-8 \
-              --enable-local-file-access \
-              --width 800 \
-              "$html" "$png"
-
-            # 成功才删 html
-            if [ -f "$png" ]; then
-              rm "$html"
-            fi
+              --metadata title=" " \
+              --css=assets/styles/cat_readme.css \
+              -o "$dir/$name.html"
           done
 
-          echo "==== files ===="
-          ls -R
+      - name: html -> png (chrome screenshot)
+        run: |
+          for file in $(find readme_pic/cat -name "*.html"); do
+            png="${file%.html}.png"
 
-      - name: commit png
+            chromium-browser \
+              --headless \
+              --disable-gpu \
+              --no-sandbox \
+              --window-size=900,1200 \
+              --screenshot="$png" \
+              "file://$(realpath $file)"
+          done
+
+      - name: cleanup html
+        run: |
+          find readme_pic/cat -name "*.html" -delete
+
+      - name: commit png only
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add readme_pic/cat/
+          git add readme_pic/cat
 
           if ! git diff --cached --quiet; then
             git commit -m "md to png"
             git pull --rebase origin main
             git push
+          else
+            echo "no changes"
           fi
