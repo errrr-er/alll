@@ -20,7 +20,7 @@ jobs:
       - name: install tools + fonts
         run: |
           sudo apt update
-          sudo apt install -y pandoc wkhtmltoimage fontconfig fonts-noto-cjk
+          sudo apt install -y pandoc wkhtmltopdf fontconfig fonts-noto-cjk
 
       - name: convert md to png
         run: |
