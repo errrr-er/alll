@@ -5,7 +5,7 @@ on:
   push:
     paths:
       - 'readme_pic/cat/**'
-      - '!auto_pack/**'
+      - 'assets/**'
 
 permissions:
   contents: write
@@ -20,16 +20,7 @@ jobs:
       - name: install tools + fonts
         run: |
           sudo apt update
-          sudo apt install -y pandoc wkhtmltopdf fontconfig fonts-noto-cjk
-
-      # 关键：把 assets 复制到 cat 目录（让 HTML 能访问）
-      - name: prepare assets
-        run: |
-          mkdir -p readme_pic/cat/assets/fonts
-          mkdir -p readme_pic/cat/assets/styles
-
-          cp -r assets/fonts/* readme_pic/cat/assets/fonts/
-          cp -r assets/styles/* readme_pic/cat/assets/styles/
+          sudo apt install -y pandoc wkhtmltoimage fontconfig fonts-noto-cjk
 
       - name: convert md to png
         run: |
@@ -40,13 +31,13 @@ jobs:
             html="$dir/$name.html"
             png="$dir/$name.png"
 
-            # markdown -> html
+            # md -> html（关键：--standalone）
             pandoc "$file" \
               -f markdown \
               -t html5 \
               --standalone \
               --metadata charset=utf-8 \
-              --css=assets/styles/cat_readme.css \
+              --css="../../../assets/styles/cat_readme.css" \
               -o "$html"
 
             # html -> png
@@ -56,20 +47,14 @@ jobs:
               --width 800 \
               "$html" "$png"
 
-            # 成功才删除 html
-            if [ -s "$png" ]; then
+            # 成功才删 html
+            if [ -f "$png" ]; then
               rm "$html"
             fi
           done
 
           echo "==== files ===="
           ls -R
-
-      - name: upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: imgs
-          path: "**/*.png"
 
       - name: commit png
         run: |
@@ -82,6 +67,4 @@ jobs:
             git commit -m "md to png"
             git pull --rebase origin main
             git push
-          else
-            echo "no changes"
           fi
