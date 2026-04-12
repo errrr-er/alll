@@ -70,5 +70,6 @@ jobs:
 
           git diff --cached --quiet && echo "no changes" || (
             git commit -m "md to png"
+            git pull --rebase origin main
             git push
           )
