@@ -22,9 +22,11 @@ jobs:
           sudo apt update
           sudo apt install -y pandoc wkhtmltopdf fontconfig fonts-noto-cjk
 
-      - name: prepare assets (VERY IMPORTANT)
+      - name: prepare assets
         run: |
-          cp -r assets readme_pic/cat/
+          mkdir -p readme_pic/cat/assets
+          cp -r assets/fonts readme_pic/cat/assets/
+          cp -r assets/styles readme_pic/cat/assets/
 
       - name: convert md to png
         run: |
