@@ -1,66 +1,114 @@
-@font-face {
-  font-family: 'WenKai';
-  src: url('../../assets/fonts/LXGWWenKai.ttf') format('truetype');
-}
+name: md to png
 
-body {
-  font-family: 'WenKai', 'Noto Sans CJK SC', 'Noto Sans CJK JP', sans-serif;
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'readme_pic/cat/**'
+      - 'assets/**'
 
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 28px;
+permissions:
+  contents: write
 
-  background: #ffffff;
-  color: #222;
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  line-height: 1.75;
-  font-size: 15px;
-}
+    steps:
+      - uses: actions/checkout@v4
 
-h1, h2, h3 {
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 6px;
-}
+      - name: install tools
+        run: |
+          sudo apt update
+          sudo apt install -y pandoc fonts-noto-cjk nodejs npm
+          npm install puppeteer
 
-p {
-  margin: 0.6em 0;
-}
+      - name: prepare assets
+        run: |
+          mkdir -p readme_pic/cat/assets
+          cp -r assets/* readme_pic/cat/assets/
 
-pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
+      - name: md -> html
+        run: |
+          find readme_pic/cat -name "*.md" | while read file; do
+            dir=$(dirname "$file")
+            name=$(basename "$file" .md)
 
-pre {
-  background: #f6f8fa;
-  padding: 12px;
-  border-radius: 6px;
-  overflow-x: auto;
-}
+            pandoc "$file" \
+              -f markdown \
+              -t html5 \
+              --standalone \
+              --metadata title=" " \
+              --css=assets/styles/cat_readme.css \
+              -o "$dir/$name.html"
+          done
 
-blockquote {
-  border-left: 4px solid #eca204;
-  padding-left: 12px;
-  color: #555;
-  margin-left: 0;
-}
+      - name: html -> ultra HD long png
+        run: |
+          node << 'EOF'
+const fs = require("fs");
+const path = require("path");
+const puppeteer = require("puppeteer");
 
-a {
-  color: #8b4303;
-  text-decoration: none;
-}
+(async () => {
+  const files = fs
+    .readdirSync("readme_pic/cat", { recursive: true })
+    .filter(f => f.endsWith(".html"))
+    .map(f => path.join("readme_pic/cat", f));
 
-a:hover {
-  text-decoration: underline;
-}
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox"]
+  });
 
-img {
-  max-width: 100%;
-  display: block;
-  margin: 12px auto;
-}
+  const page = await browser.newPage();
 
-.title {
-  display: none;
-}
+  for (const file of files) {
+    const out = file.replace(".html", ".png");
+
+    await page.setViewport({
+      width: 900,
+      height: 800,
+      deviceScaleFactor: 2
+    });
+
+    await page.goto("file://" + path.resolve(file), {
+      waitUntil: "networkidle0"
+    });
+
+    const height = await page.evaluate(() => {
+      return document.body.scrollHeight;
+    });
+
+    await page.setViewport({
+      width: 900,
+      height: height,
+      deviceScaleFactor: 2
+    });
+
+    await page.screenshot({
+      path: out,
+      fullPage: true
+    });
+
+    console.log("Rendered:", out);
+  }
+
+  await browser.close();
+})();
+EOF
+
+      - name: cleanup html
+        run: |
+          find readme_pic/cat -name "*.html" -delete
+
+      - name: commit png
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add readme_pic/cat
+
+          git diff --cached --quiet && echo "no changes" || (
+            git commit -m "md to png"
+            git push
+          )
