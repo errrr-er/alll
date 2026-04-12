@@ -24,11 +24,12 @@ jobs:
           
       - name: convert md to image
         run: |
-          find . -name "*.md" | while read file; do
+          find readme_pic/cat -name "*.md" | while read file; do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
+      
             pandoc "$file" -o "$dir/$name.html"
-            wkhtmltoimage "$dir/$name.html" "$dir/$name.png"
+            wkhtmltoimage --width 800 "$dir/$name.html" "$dir/$name.png"
           done
           echo "==== files ===="
           ls -R
