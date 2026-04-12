@@ -38,17 +38,17 @@ jobs:
           name: imgs
           path: "**/*.png"
 
-    - name: Commit
-      run: |
-        git config user.name "github-actions"
-        git config user.email "actions@github.com"
-
-        git add auto_pack/
-
-        if ! git diff --cached --quiet; then
-          git commit -m "md to png"
-          git pull --rebase origin main
-          git push origin HEAD:${GITHUB_REF#refs/heads/}
-        else
-          echo "No changes to commit"
-        fi
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+      
+          git add auto_pack/
+      
+          if ! git diff --cached --quiet; then
+            git commit -m "md to png"
+            git pull --rebase origin main
+            git push origin HEAD:${GITHUB_REF#refs/heads/}
+          else
+            echo "No changes to commit"
+          fi
