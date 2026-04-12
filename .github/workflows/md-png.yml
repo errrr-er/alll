@@ -17,19 +17,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install tools
+      - name: install deps
         run: |
           sudo apt update
-          sudo apt install -y pandoc fonts-noto-cjk chromium
+          sudo apt install -y pandoc fonts-noto-cjk chromium-browser
 
-      - name: prepare assets
+      - name: prepare assets (fix path)
         run: |
+          mkdir -p build_assets
+          cp -r assets build_assets/
+
           mkdir -p readme_pic/cat/assets
           cp -r assets/* readme_pic/cat/assets/
 
       - name: md -> html
         run: |
-          find readme_pic/cat -name "*.md" | while read file; do
+          for file in $(find readme_pic/cat -name "*.md"); do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
 
@@ -42,33 +45,36 @@ jobs:
               -o "$dir/$name.html"
           done
 
-      - name: html -> png
+      - name: html -> full page screenshot
         run: |
-          find readme_pic/cat -name "*.html" | while read file; do
+          for file in $(find readme_pic/cat -name "*.html"); do
             png="${file%.html}.png"
 
-            echo "Rendering $file -> $png"
-
-            chromium \
+            chromium-browser \
               --headless \
-              --no-sandbox \
               --disable-gpu \
-              --window-size=900,1200 \
+              --no-sandbox \
+              --hide-scrollbars \
+              --virtual-time-budget=20000 \
+              --window-size=900,2000 \
               --screenshot="$png" \
               "file://$(realpath $file)"
+
+            # 成功才删 html
+            if [ -f "$png" ]; then
+              rm "$file"
+            fi
           done
 
-      - name: cleanup html
-        run: find readme_pic/cat -name "*.html" -delete
-
-      - name: commit
+      - name: commit png only
         run: |
           git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.email "actions@github.com"
 
           git add readme_pic/cat
 
-          git diff --cached --quiet && echo "no changes" || (
+          if ! git diff --cached --quiet; then
             git commit -m "md to png"
+            git pull --rebase origin main
             git push
-          )
+          fi
