@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'readme_pic/cat/**'
+      - 'assets/**'
 
 permissions:
   contents: write
@@ -19,12 +20,12 @@ jobs:
       - name: install tools
         run: |
           sudo apt update
-          sudo apt install -y pandoc fonts-noto-cjk chromium-browser
+          sudo apt install -y pandoc fonts-noto-cjk chromium
 
       - name: prepare assets
         run: |
           mkdir -p readme_pic/cat/assets
-          cp -r assets readme_pic/cat/
+          cp -r assets/* readme_pic/cat/assets/
 
       - name: md -> html
         run: |
@@ -41,35 +42,33 @@ jobs:
               -o "$dir/$name.html"
           done
 
-      - name: html -> png (chrome screenshot)
+      - name: html -> png
         run: |
-          for file in $(find readme_pic/cat -name "*.html"); do
+          find readme_pic/cat -name "*.html" | while read file; do
             png="${file%.html}.png"
 
-            chromium-browser \
+            echo "Rendering $file -> $png"
+
+            chromium \
               --headless \
-              --disable-gpu \
               --no-sandbox \
+              --disable-gpu \
               --window-size=900,1200 \
               --screenshot="$png" \
               "file://$(realpath $file)"
           done
 
       - name: cleanup html
-        run: |
-          find readme_pic/cat -name "*.html" -delete
+        run: find readme_pic/cat -name "*.html" -delete
 
-      - name: commit png only
+      - name: commit
         run: |
           git config user.name "github-actions"
-          git config user.email "actions@github.com"
+          git config user.email "github-actions@github.com"
 
           git add readme_pic/cat
 
-          if ! git diff --cached --quiet; then
+          git diff --cached --quiet && echo "no changes" || (
             git commit -m "md to png"
-            git pull --rebase origin main
             git push
-          else
-            echo "no changes"
-          fi
+          )
