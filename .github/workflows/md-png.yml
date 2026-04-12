@@ -17,20 +17,42 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install tools
+      - name: install tools + fonts
         run: |
           sudo apt update
-          sudo apt install -y pandoc wkhtmltopdf
-          
+          sudo apt install -y pandoc wkhtmltopdf fonts-noto-cjk
+
       - name: convert md to image
         run: |
           find readme_pic/cat -name "*.md" | while read file; do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
-      
-            pandoc "$file" -o "$dir/$name.html"
-            wkhtmltoimage --width 800 "$dir/$name.html" "$dir/$name.png"
+
+            html="$dir/$name.html"
+            png="$dir/$name.png"
+
+            # 1. md -> html（强制UTF-8 + HTML5）
+            pandoc "$file" \
+              -f markdown \
+              -t html5 \
+              -o "$html" \
+              --metadata charset="utf-8"
+
+            # 2. html -> png（强制编码 + 本地资源）
+            wkhtmltoimage \
+              --encoding utf-8 \
+              --enable-local-file-access \
+              --width 800 \
+              "$html" \
+              "$png"
+
+            # 3. 成功才删 html
+            if [ -f "$png" ]; then
+              rm "$html"
+            fi
+
           done
+
           echo "==== files ===="
           ls -R
 
@@ -44,9 +66,9 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-      
+
           git add readme_pic/cat/
-      
+
           if ! git diff --cached --quiet; then
             git commit -m "md to png"
             git pull --rebase origin main
