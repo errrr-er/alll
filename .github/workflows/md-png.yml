@@ -22,7 +22,7 @@ jobs:
           sudo apt update
           sudo apt install -y pandoc wkhtmltopdf fontconfig fonts-noto-cjk
 
-      # 把 assets 拷贝到 cat 目录下（关键）
+      # 关键：把 assets 复制到 cat 目录（让 HTML 能访问）
       - name: prepare assets
         run: |
           mkdir -p readme_pic/cat/assets/fonts
@@ -40,7 +40,7 @@ jobs:
             html="$dir/$name.html"
             png="$dir/$name.png"
 
-            # md -> html
+            # markdown -> html
             pandoc "$file" \
               -f markdown \
               -t html5 \
@@ -56,11 +56,10 @@ jobs:
               --width 800 \
               "$html" "$png"
 
-            # 成功才删 html
+            # 成功才删除 html
             if [ -s "$png" ]; then
               rm "$html"
             fi
-
           done
 
           echo "==== files ===="
