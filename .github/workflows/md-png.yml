@@ -5,7 +5,6 @@ on:
   push:
     paths:
       - 'readme_pic/cat/**'
-      - 'assets/**'
 
 permissions:
   contents: write
@@ -17,22 +16,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install deps
+      - name: install tools
         run: |
           sudo apt update
           sudo apt install -y pandoc fonts-noto-cjk chromium-browser
 
-      - name: prepare assets (fix path)
+      - name: prepare assets
         run: |
-          mkdir -p build_assets
-          cp -r assets build_assets/
-
           mkdir -p readme_pic/cat/assets
-          cp -r assets/* readme_pic/cat/assets/
+          cp -r assets readme_pic/cat/
 
       - name: md -> html
         run: |
-          for file in $(find readme_pic/cat -name "*.md"); do
+          find readme_pic/cat -name "*.md" | while read file; do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
 
@@ -45,7 +41,7 @@ jobs:
               -o "$dir/$name.html"
           done
 
-      - name: html -> full page screenshot
+      - name: html -> png (chrome screenshot)
         run: |
           for file in $(find readme_pic/cat -name "*.html"); do
             png="${file%.html}.png"
@@ -54,17 +50,14 @@ jobs:
               --headless \
               --disable-gpu \
               --no-sandbox \
-              --hide-scrollbars \
-              --virtual-time-budget=20000 \
-              --window-size=900,2000 \
+              --window-size=900,1200 \
               --screenshot="$png" \
               "file://$(realpath $file)"
-
-            # 成功才删 html
-            if [ -f "$png" ]; then
-              rm "$file"
-            fi
           done
+
+      - name: cleanup html
+        run: |
+          find readme_pic/cat -name "*.html" -delete
 
       - name: commit png only
         run: |
@@ -77,4 +70,6 @@ jobs:
             git commit -m "md to png"
             git pull --rebase origin main
             git push
+          else
+            echo "no changes"
           fi
