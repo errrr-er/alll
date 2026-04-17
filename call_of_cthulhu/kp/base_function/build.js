@@ -2,68 +2,106 @@ const fs = require("fs");
 
 const body = process.env.ISSUE_BODY || "";
 
-// ===== 1. 提取 JSON =====
+// ========== 1. 解析 JSON ==========
 let data;
 
 try {
   const match = body.match(/\{[\s\S]*\}/);
   if (!match) throw new Error("no json found");
-
   data = JSON.parse(match[0]);
 } catch (e) {
   console.log("JSON parse failed:", e.message);
   process.exit(1);
 }
 
-// ===== 2. 校验结构 =====
-if (!data.items || !Array.isArray(data.items)) {
+if (!Array.isArray(data.items)) {
   console.log("invalid format: items missing");
   process.exit(1);
 }
 
-// ===== 3. 构建 groupMap =====
+// ========== 2. 构建 ==========
 const groupMap = {};
+const check = {
+  duplicateName: [],
+  duplicateGroupNumber: [],
+  invalid: []
+};
+
+const groupNumberIndex = new Map();
+
+function normalizeGroupNumber(str) {
+  if (!str) return "";
+
+  // 保留数字 + 中文 + 逗号拆分
+  return str
+    .split("\n")
+    .map(v => v.replace(/\*(.+)?$/, "").trim())
+    .filter(Boolean)
+    .join(",");
+}
 
 for (const item of data.items) {
-  if (!item.name || !item.groupNumber) continue;
+  if (!item.name) {
+    check.invalid.push(item);
+    continue;
+  }
 
-  groupMap[item.name] = {
-    groupNumber: item.groupNumber,
-    tag: item.tag || "",
-    aliases: Array.isArray(item.aliases) ? item.aliases : []
+  const name = item.name.trim();
+
+  const groupNumber = normalizeGroupNumber(item.groupNumber);
+  const aliases = Array.isArray(item.aliases) ? item.aliases : [];
+
+  // 重复 name 检查
+  if (groupMap[name]) {
+    check.duplicateName.push(name);
+  }
+
+  // groupNumber 重复检测
+  if (groupNumberIndex.has(groupNumber)) {
+    check.duplicateGroupNumber.push({
+      groupNumber,
+      first: groupNumberIndex.get(groupNumber),
+      current: name
+    });
+  } else {
+    groupNumberIndex.set(groupNumber, name);
+  }
+
+  groupMap[name] = {
+    groupNumber,
+    ...(aliases.length ? { aliases } : {})
   };
 }
 
-// ===== 4. 输出目录（重点改动）=====
-const outDir = "call_of_cthulhu/kp/base_function/result";
+// ========== 3. 输出最终 JSON ==========
+const output = {
+  version: "1.0.0",
+  timestamp: Math.floor(Date.now() / 1000),
+  group_map: groupMap
+};
 
-// 自动创建目录
-fs.mkdirSync(outDir, { recursive: true });
-
-// ===== 5. 输出 JSON =====
 fs.writeFileSync(
-  `${outDir}/groupmap.json`,
-  JSON.stringify(groupMap, null, 2),
+  "result/groupmap.json",
+  JSON.stringify(output, null, 2),
   "utf-8"
 );
 
-// ===== 6. 输出检查文件 =====
-let md = "# GroupMap Build Result\n\n";
+// ========== 4. 输出检查文件 ==========
+const md =
+`# Build Check Report
 
-const keys = Object.keys(groupMap).sort((a, b) =>
-  a.localeCompare(b, "zh-Hans-CN")
-);
+## Duplicate Names
+${check.duplicateName.map(v => `- ${v}`).join("\n") || "None"}
 
-for (const k of keys) {
-  const v = groupMap[k];
+## Duplicate Group Numbers
+${check.duplicateGroupNumber.map(v =>
+  `- ${v.groupNumber} (${v.first} → ${v.current})`
+).join("\n") || "None"}
 
-  const aliasText =
-    v.aliases.length > 0 ? ` (aliases: ${v.aliases.join(", ")})` : "";
+## Invalid Items
+${check.invalid.length}
+`;
 
-  md += `- ${k}${aliasText} → ${v.groupNumber}\n`;
-}
+fs.writeFileSync("result/build_check.md", md, "utf-8");
 
-fs.writeFileSync(`${outDir}/build_check.md`, md, "utf-8");
-
-// ===== 7. 输出日志 =====
-console.log("build done:", keys.length, "groups");
+console.log("build done:", Object.keys(groupMap).length);
