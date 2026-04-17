@@ -1,26 +1,19 @@
 const fs = require("fs");
 const path = require("path");
 
-// ===== 路径 =====
-const baseDir = __dirname;
-const resultDir = path.join(baseDir, "result");
-const outputPath = path.join(resultDir, "groupmap.json");
+const body = process.env.ISSUE_BODY || "";
 
-// ===== 保证目录存在 =====
+// ===== 0. 输出路径 =====
+const resultDir = path.join(__dirname, "result");
 if (!fs.existsSync(resultDir)) {
   fs.mkdirSync(resultDir, { recursive: true });
 }
 
-// ===== 读取 issue =====
-const body = process.env.ISSUE_BODY || "";
-
-// ===== 解析 JSON =====
+// ===== 1. 解析 JSON =====
 let data;
-
 try {
   const match = body.match(/\{[\s\S]*\}/);
   if (!match) throw new Error("no json found");
-
   data = JSON.parse(match[0]);
 } catch (e) {
   console.log("JSON parse failed:", e.message);
@@ -28,74 +21,101 @@ try {
 }
 
 if (!Array.isArray(data.items)) {
-  console.log("invalid format: items missing");
+  console.log("invalid format");
   process.exit(1);
 }
 
-// ===== 读取旧数据（用于 merge）=====
-let oldData = {
-  version: "1.0.0",
-  timestamp: Math.floor(Date.now() / 1000),
-  group_map: {}
-};
+// ===== 2. 拼音排序（中英统一）=====
+const pinyin = require("pinyin");
 
-if (fs.existsSync(outputPath)) {
-  try {
-    oldData = JSON.parse(fs.readFileSync(outputPath, "utf-8"));
-  } catch (e) {
-    console.log("old file broken, reset");
-  }
+function sortKey(str) {
+  if (!str) return "";
+
+  const py = pinyin(str, {
+    style: pinyin.STYLE_NORMAL
+  }).flat().join("");
+
+  return py.toLowerCase();
 }
 
-// ===== merge =====
-const groupMap = oldData.group_map || {};
+// ===== 3. 构建 =====
+const groupMap = {};
+
+const groupNumberSet = new Set();
+const aliasSet = new Set();
+
+const warnings = {
+  duplicateGroupNumber: [],
+  duplicateAlias: [],
+  nameConflict: []
+};
 
 for (const item of data.items) {
   if (!item.name || !item.groupNumber) continue;
 
   const name = item.name.trim();
+  const groupNumber = String(item.groupNumber);
 
-  const newEntry = {
-    groupNumber: item.groupNumber,
-    aliases: item.aliases || []
-  };
-
-  if (groupMap[name]) {
-    const prev = groupMap[name];
-
-    groupMap[name] = {
-      groupNumber: prev.groupNumber || newEntry.groupNumber,
-      aliases: Array.from(new Set([
-        ...(prev.aliases || []),
-        ...(newEntry.aliases || [])
-      ]))
-    };
-  } else {
-    groupMap[name] = newEntry;
+  // groupNumber 重复检测
+  if (groupNumberSet.has(groupNumber)) {
+    warnings.duplicateGroupNumber.push(groupNumber);
   }
+  groupNumberSet.add(groupNumber);
+
+  // alias 重复检测
+  const aliases = item.aliases || [];
+  for (const a of aliases) {
+    if (aliasSet.has(a)) {
+      warnings.duplicateAlias.push(a);
+    }
+    aliasSet.add(a);
+  }
+
+  groupMap[name] = {
+    groupNumber,
+    tag: item.tag || "",
+    aliases
+  };
 }
 
-// ===== 输出 =====
-const lines = Object.entries(groupMap)
-  .map(([k, v]) => `    "${k}": ${JSON.stringify(v)}`)
-  .join(",\n");
+// ===== 4. 排序（核心）=====
+const sortedEntries = Object.entries(groupMap).sort((a, b) => {
+  return sortKey(a[0]).localeCompare(sortKey(b[0]));
+});
 
-const finalJson = `{
-  "version": "${oldData.version || "1.0.0"}",
-  "timestamp": ${Math.floor(Date.now() / 1000)},
-  "group_map": {
-${lines}
-  }
-}`;
+const sortedGroupMap = {};
+for (const [k, v] of sortedEntries) {
+  sortedGroupMap[k] = v;
+}
 
-fs.writeFileSync(outputPath, finalJson, "utf-8");
+// ===== 5. 输出最终 JSON（单行紧凑 + 可读混合）=====
+const output = {
+  version: "1.0.0",
+  timestamp: Math.floor(Date.now() / 1000),
+  group_map: sortedGroupMap
+};
 
-// ===== check 文件 =====
+// 👉 你要的“尽量一行结构”
+const jsonText = JSON.stringify(output, null, 0);
+
+fs.writeFileSync(
+  path.join(resultDir, "groupmap.json"),
+  jsonText,
+  "utf-8"
+);
+
+// ===== 6. build_check =====
 let md = "# GroupMap Build Check\n\n";
 
-for (const k in groupMap) {
-  md += `- ${k} → ${groupMap[k].groupNumber}\n`;
-}
+md += "## Duplicate groupNumber\n";
+md += warnings.duplicateGroupNumber.length
+  ? warnings.duplicateGroupNumber.map(x => `- ${x}`).join("\n")
+  : "- none";
+
+md += "\n\n## Duplicate aliases\n";
+md += warnings.duplicateAlias.length
+  ? warnings.duplicateAlias.map(x => `- ${x}`).join("\n")
+  : "- none";
 
 fs.writeFileSync(
   path.join(resultDir, "build_check.md"),
