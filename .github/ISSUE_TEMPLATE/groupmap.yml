@@ -1,0 +1,28 @@
+name: GroupMap 批量添加
+description: 用于批量添加群组数据（JSON格式）
+title: "[groupmap] 添加群组数据"
+labels: ["groupmap"]
+
+body:
+  - type: textarea
+    id: payload
+    attributes:
+      label: JSON 数据（支持批量）
+      description: |
+        请按以下格式填写：
+
+        {
+          "type": "groupmap",
+          "items": [
+            {
+              "name": "请修改此处",
+              "groupNumber": "请修改此处",
+              "tag": "请修改此处",
+              "aliases": ["请修改此处"]
+            }
+          ]
+        }
+      placeholder: |
+        粘贴你的 JSON 数据
+    validations:
+      required: true
