@@ -15,12 +15,15 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # ===== 创建分支 =====
       - name: Create branch name
         id: branch
         run: |
@@ -30,11 +33,13 @@ jobs:
         run: |
           git checkout -b ${{ steps.branch.outputs.branch }}
 
+      # ===== 运行 build =====
       - name: Run build.js
         run: node call_of_cthulhu/kp/base_function/build.js
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
 
+      # ===== commit =====
       - name: Commit changes
         run: |
           git config user.name "github-actions"
@@ -44,24 +49,29 @@ jobs:
 
           git commit -m "update groupmap from issue #${{ github.event.issue.number }}" || echo "no changes"
 
+      # ===== push branch =====
       - name: Push branch
         run: |
           git push origin ${{ steps.branch.outputs.branch }}
 
+      # ===== 创建 PR =====
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ steps.branch.outputs.branch }}
+          base: main
           title: "[groupmap] issue #${{ github.event.issue.number }}"
           body: |
             自动生成 GroupMap 更新
 
-            Issue: #${{ github.event.issue.number }}
+            Closes #${{ github.event.issue.number }}
 
-            请检查：
+            请检查以下内容：
             - groupNumber 是否正确
-            - 是否重复
+            - 是否有重复群名
             - aliases 是否冲突
-          base: main
+          labels: |
+            groupmap
+            auto-generated
           draft: false
