@@ -9,69 +9,44 @@ permissions:
   pull-requests: write
 
 jobs:
-  process:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # ===== 创建分支 =====
-      - name: Create branch name
-        id: branch
-        run: |
-          echo "branch=groupmap/issue-${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+      - name: Install deps
+        run: npm i pinyin
 
-      - name: Create new branch
-        run: |
-          git checkout -b ${{ steps.branch.outputs.branch }}
-
-      # ===== 运行 build =====
-      - name: Run build.js
+      - name: Run build
         run: node call_of_cthulhu/kp/base_function/build.js
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
 
-      # ===== commit =====
-      - name: Commit changes
+      - name: Create PR branch
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add result/
+          BRANCH=auto/groupmap-${{ github.event.issue.number }}
+
+          git checkout -b $BRANCH
+
+          git add call_of_cthulhu/kp/base_function/result/
 
           git commit -m "update groupmap from issue #${{ github.event.issue.number }}" || echo "no changes"
 
-      # ===== push branch =====
-      - name: Push branch
-        run: |
-          git push origin ${{ steps.branch.outputs.branch }}
+          git push origin $BRANCH
 
-      # ===== 创建 PR =====
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.branch.outputs.branch }}
-          base: main
+          branch: auto/groupmap-${{ github.event.issue.number }}
           title: "[groupmap] issue #${{ github.event.issue.number }}"
-          body: |
-            自动生成 GroupMap 更新
-
-            Closes #${{ github.event.issue.number }}
-
-            请检查以下内容：
-            - groupNumber 是否正确
-            - 是否有重复群名
-            - aliases 是否冲突
-          labels: |
-            groupmap
-            auto-generated
-          draft: false
+          body: "Auto generated from issue"
+          base: main
