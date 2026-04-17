@@ -1,19 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 
-// ====== 0. 路径 ======
+// ===== 路径 =====
 const baseDir = __dirname;
 const resultDir = path.join(baseDir, "result");
 const outputPath = path.join(resultDir, "groupmap.json");
 
+// ===== 保证目录存在 =====
 if (!fs.existsSync(resultDir)) {
   fs.mkdirSync(resultDir, { recursive: true });
 }
 
-// ====== 1. 读取 issue ======
+// ===== 读取 issue =====
 const body = process.env.ISSUE_BODY || "";
 
-// ====== 2. 解析 JSON ======
+// ===== 解析 JSON =====
 let data;
 
 try {
@@ -31,7 +32,7 @@ if (!Array.isArray(data.items)) {
   process.exit(1);
 }
 
-// ====== 3. 读取旧数据（关键升级点） ======
+// ===== 读取旧数据（用于 merge）=====
 let oldData = {
   version: "1.0.0",
   timestamp: Math.floor(Date.now() / 1000),
@@ -42,11 +43,11 @@ if (fs.existsSync(outputPath)) {
   try {
     oldData = JSON.parse(fs.readFileSync(outputPath, "utf-8"));
   } catch (e) {
-    console.log("old json broken, fallback to empty");
+    console.log("old file broken, reset");
   }
 }
 
-// ====== 4. merge 逻辑 ======
+// ===== merge =====
 const groupMap = oldData.group_map || {};
 
 for (const item of data.items) {
@@ -59,7 +60,6 @@ for (const item of data.items) {
     aliases: item.aliases || []
   };
 
-  // 如果已经存在 → 合并（不是覆盖）
   if (groupMap[name]) {
     const prev = groupMap[name];
 
@@ -75,22 +75,14 @@ for (const item of data.items) {
   }
 }
 
-// ====== 5. 输出 ======
-const output = {
-  version: oldData.version || "1.0.0",
-  timestamp: Math.floor(Date.now() / 1000),
-  group_map: groupMap
-};
-
-// ====== 6. 写文件（每行一个 entry） ======
+// ===== 输出 =====
 const lines = Object.entries(groupMap)
   .map(([k, v]) => `    "${k}": ${JSON.stringify(v)}`)
   .join(",\n");
 
-const finalJson =
-`{
-  "version": "${output.version}",
-  "timestamp": ${output.timestamp},
+const finalJson = `{
+  "version": "${oldData.version || "1.0.0"}",
+  "timestamp": ${Math.floor(Date.now() / 1000)},
   "group_map": {
 ${lines}
   }
@@ -98,12 +90,11 @@ ${lines}
 
 fs.writeFileSync(outputPath, finalJson, "utf-8");
 
-// ====== 7. check 文件 ======
+// ===== check 文件 =====
 let md = "# GroupMap Build Check\n\n";
 
 for (const k in groupMap) {
-  const v = groupMap[k];
-  md += `- ${k} → ${v.groupNumber}\n`;
+  md += `- ${k} → ${groupMap[k].groupNumber}\n`;
 }
 
 fs.writeFileSync(
@@ -112,5 +103,4 @@ fs.writeFileSync(
   "utf-8"
 );
 
-// ====== 8. log ======
 console.log("build done:", Object.keys(groupMap).length);
