@@ -28,7 +28,12 @@ jobs:
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
 
-      - name: Commit & Create Pull Request
+      - name: Debug output (important)
+        run: |
+          echo "=== RESULT DIR ==="
+          ls -R call_of_cthulhu/kp/base_function/result || true
+
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "update groupmap from issue #${{ github.event.issue.number }}"
@@ -37,7 +42,11 @@ jobs:
             Auto generated from issue #${{ github.event.issue.number }}
 
             Closes #${{ github.event.issue.number }}
+
+            ---
+            ⚠️ Auto build system
           branch: auto/groupmap-${{ github.event.issue.number }}
           base: main
           add-paths: |
             call_of_cthulhu/kp/base_function/result/
+          delete-branch: true
