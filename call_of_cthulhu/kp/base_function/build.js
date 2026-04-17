@@ -1,44 +1,51 @@
 const fs = require("fs");
 const path = require("path");
-const pinyin = require("pinyin");
 
-// 🔥 强制稳定路径（关键修复）
-process.chdir(__dirname);
-
-const body = process.env.ISSUE_BODY || "";
-
-// ===== 0. 输出目录 =====
-const resultDir = path.join(__dirname, "result");
+// =======================
+// 0. 输出目录（必须存在）
+// =======================
+const baseDir = __dirname;
+const resultDir = path.join(baseDir, "result");
 fs.mkdirSync(resultDir, { recursive: true });
 
-// ===== 1. 解析 JSON =====
+// =======================
+// 1. 读取 issue
+// =======================
+const body = process.env.ISSUE_BODY || "";
+
+// =======================
+// 2. 清洗 + 解析 JSON
+// =======================
 let data;
+let error = null;
 
 try {
-  const match = body.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error("no json found");
+  const cleaned = body
+    .replace(/```json/g, "")
+    .replace(/```/g, "")
+    .trim();
+
+  const match = cleaned.match(/\{[\s\S]*\}/);
+  if (!match) throw new Error("no json found in issue body");
+
   data = JSON.parse(match[0]);
 } catch (e) {
-  console.log("JSON parse failed:", e.message);
-  process.exit(1);
+  error = e.message;
+  data = { items: [] };
 }
 
-if (!Array.isArray(data.items)) {
-  console.log("invalid format");
-  process.exit(1);
+// 如果失败，写错误报告（避免空PR）
+if (error) {
+  fs.writeFileSync(
+    path.join(resultDir, "build_error.md"),
+    `# Build Failed\n\n${error}`,
+    "utf-8"
+  );
 }
 
-// ===== 2. 拼音排序 key =====
-function sortKey(str) {
-  return pinyin(str, {
-    style: pinyin.STYLE_NORMAL
-  })
-    .flat()
-    .join("")
-    .toLowerCase();
-}
-
-// ===== 3. 构建 =====
+// =======================
+// 3. 构建 groupMap
+// =======================
 const groupMap = {};
 
 const groupNumberSet = new Set();
@@ -49,56 +56,70 @@ const warnings = {
   duplicateAlias: []
 };
 
-for (const item of data.items) {
-  if (!item.name || !item.groupNumber) continue;
+if (Array.isArray(data.items)) {
+  for (const item of data.items) {
+    if (!item.name || !item.groupNumber) continue;
 
-  const name = item.name.trim();
-  const groupNumber = String(item.groupNumber);
+    const name = item.name.trim();
+    const groupNumber = String(item.groupNumber);
 
-  // groupNumber 去重检查
-  if (groupNumberSet.has(groupNumber)) {
-    warnings.duplicateGroupNumber.push(groupNumber);
-  }
-  groupNumberSet.add(groupNumber);
-
-  // alias 去重检查
-  const aliases = item.aliases || [];
-  for (const a of aliases) {
-    if (aliasSet.has(a)) {
-      warnings.duplicateAlias.push(a);
+    // groupNumber 重复检测
+    if (groupNumberSet.has(groupNumber)) {
+      warnings.duplicateGroupNumber.push(groupNumber);
     }
-    aliasSet.add(a);
-  }
+    groupNumberSet.add(groupNumber);
 
-  // ❌ 已删除 tag（你要求的）
-  groupMap[name] = {
-    groupNumber,
-    aliases
-  };
+    // alias 重复检测
+    const aliases = item.aliases || [];
+    for (const a of aliases) {
+      if (aliasSet.has(a)) {
+        warnings.duplicateAlias.push(a);
+      }
+      aliasSet.add(a);
+    }
+
+    groupMap[name] = {
+      groupNumber,
+      aliases
+    };
+  }
 }
 
-// ===== 4. 拼音排序（中英混合）=====
+// =======================
+// 4. 排序（拼音排序）
+// =======================
+const pinyin = require("pinyin");
+
+function sortKey(str) {
+  return pinyin(str, {
+    style: pinyin.STYLE_NORMAL
+  }).flat().join("").toLowerCase();
+}
+
 const sorted = Object.entries(groupMap).sort((a, b) =>
   sortKey(a[0]).localeCompare(sortKey(b[0]))
 );
 
-const sortedGroupMap = Object.fromEntries(sorted);
+const sortedMap = Object.fromEntries(sorted);
 
-// ===== 5. 输出 JSON（单行紧凑）=====
+// =======================
+// 5. 输出 JSON（紧凑一行结构）
+// =======================
 const output = {
   version: "1.0.0",
   timestamp: Math.floor(Date.now() / 1000),
-  group_map: sortedGroupMap
+  group_map: sortedMap
 };
 
-// 👉 一行 JSON（你要的）
 fs.writeFileSync(
   path.join(resultDir, "groupmap.json"),
-  JSON.stringify(output),
+  JSON.stringify(output, null, 0),
   "utf-8"
 );
 
-// ===== 6. build_check =====
+// =======================
+// 6. build_check
+// =======================
 let md = "# GroupMap Build Check\n\n";
 
 md += "## Duplicate groupNumber\n";
