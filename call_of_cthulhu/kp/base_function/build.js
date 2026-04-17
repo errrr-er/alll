@@ -2,8 +2,9 @@ const fs = require("fs");
 
 const body = process.env.ISSUE_BODY || "";
 
-// 提取
+// ===== 1. 提取 JSON =====
 let data;
+
 try {
   const match = body.match(/\{[\s\S]*\}/);
   if (!match) throw new Error("no json found");
@@ -14,12 +15,13 @@ try {
   process.exit(1);
 }
 
+// ===== 2. 校验结构 =====
 if (!data.items || !Array.isArray(data.items)) {
   console.log("invalid format: items missing");
   process.exit(1);
 }
 
-// 构建
+// ===== 3. 构建 groupMap =====
 const groupMap = {};
 
 for (const item of data.items) {
@@ -28,25 +30,40 @@ for (const item of data.items) {
   groupMap[item.name] = {
     groupNumber: item.groupNumber,
     tag: item.tag || "",
-    aliases: item.aliases || []
+    aliases: Array.isArray(item.aliases) ? item.aliases : []
   };
 }
 
-// 输出
+// ===== 4. 输出目录（重点改动）=====
+const outDir = "call_of_cthulhu/kp/base_function/result";
+
+// 自动创建目录
+fs.mkdirSync(outDir, { recursive: true });
+
+// ===== 5. 输出 JSON =====
 fs.writeFileSync(
-  "groupmap.json",
+  `${outDir}/groupmap.json`,
   JSON.stringify(groupMap, null, 2),
   "utf-8"
 );
 
-// 同时输出一个可读 md
+// ===== 6. 输出检查文件 =====
 let md = "# GroupMap Build Result\n\n";
 
-for (const k in groupMap) {
+const keys = Object.keys(groupMap).sort((a, b) =>
+  a.localeCompare(b, "zh-Hans-CN")
+);
+
+for (const k of keys) {
   const v = groupMap[k];
-  md += `- ${k} → ${v.groupNumber}\n`;
+
+  const aliasText =
+    v.aliases.length > 0 ? ` (aliases: ${v.aliases.join(", ")})` : "";
+
+  md += `- ${k}${aliasText} → ${v.groupNumber}\n`;
 }
 
-fs.writeFileSync("build_check.md", md, "utf-8");
+fs.writeFileSync(`${outDir}/build_check.md`, md, "utf-8");
 
-console.log("build done:", Object.keys(groupMap).length);
+// ===== 7. 输出日志 =====
+console.log("build done:", keys.length, "groups");
