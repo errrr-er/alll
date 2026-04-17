@@ -1,18 +1,19 @@
 const fs = require("fs");
 const path = require("path");
 
-// ====== 0. 路径安全处理 ======
+// ====== 0. 路径 ======
 const baseDir = __dirname;
 const resultDir = path.join(baseDir, "result");
+const outputPath = path.join(resultDir, "groupmap.json");
 
 if (!fs.existsSync(resultDir)) {
   fs.mkdirSync(resultDir, { recursive: true });
 }
 
-// ====== 1. 读取 Issue ======
+// ====== 1. 读取 issue ======
 const body = process.env.ISSUE_BODY || "";
 
-// ====== 2. 提取 JSON ======
+// ====== 2. 解析 JSON ======
 let data;
 
 try {
@@ -25,40 +26,79 @@ try {
   process.exit(1);
 }
 
-if (!data.items || !Array.isArray(data.items)) {
+if (!Array.isArray(data.items)) {
   console.log("invalid format: items missing");
   process.exit(1);
 }
 
-// ====== 3. 构建逻辑 ======
-const groupMap = {};
+// ====== 3. 读取旧数据（关键升级点） ======
+let oldData = {
+  version: "1.0.0",
+  timestamp: Math.floor(Date.now() / 1000),
+  group_map: {}
+};
+
+if (fs.existsSync(outputPath)) {
+  try {
+    oldData = JSON.parse(fs.readFileSync(outputPath, "utf-8"));
+  } catch (e) {
+    console.log("old json broken, fallback to empty");
+  }
+}
+
+// ====== 4. merge 逻辑 ======
+const groupMap = oldData.group_map || {};
 
 for (const item of data.items) {
   if (!item.name || !item.groupNumber) continue;
 
   const name = item.name.trim();
 
-  groupMap[name] = {
+  const newEntry = {
     groupNumber: item.groupNumber,
-    tag: item.tag || "",
     aliases: item.aliases || []
   };
+
+  // 如果已经存在 → 合并（不是覆盖）
+  if (groupMap[name]) {
+    const prev = groupMap[name];
+
+    groupMap[name] = {
+      groupNumber: prev.groupNumber || newEntry.groupNumber,
+      aliases: Array.from(new Set([
+        ...(prev.aliases || []),
+        ...(newEntry.aliases || [])
+      ]))
+    };
+  } else {
+    groupMap[name] = newEntry;
+  }
 }
 
-// ====== 4. 输出 JSON ======
+// ====== 5. 输出 ======
 const output = {
-  version: "1.0.0",
+  version: oldData.version || "1.0.0",
   timestamp: Math.floor(Date.now() / 1000),
   group_map: groupMap
 };
 
-fs.writeFileSync(
-  path.join(resultDir, "groupmap.json"),
-  JSON.stringify(output, null, 2),
-  "utf-8"
-);
+// ====== 6. 写文件（每行一个 entry） ======
+const lines = Object.entries(groupMap)
+  .map(([k, v]) => `    "${k}": ${JSON.stringify(v)}`)
+  .join(",\n");
 
-// ====== 5. 输出 check 文件 ======
+const finalJson =
+`{
+  "version": "${output.version}",
+  "timestamp": ${output.timestamp},
+  "group_map": {
+${lines}
+  }
+}`;
+
+fs.writeFileSync(outputPath, finalJson, "utf-8");
+
+// ====== 7. check 文件 ======
 let md = "# GroupMap Build Check\n\n";
 
 for (const k in groupMap) {
@@ -72,5 +112,5 @@ fs.writeFileSync(
   "utf-8"
 );
 
-// ====== 6. log ======
+// ====== 8. log ======
 console.log("build done:", Object.keys(groupMap).length);
