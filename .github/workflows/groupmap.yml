@@ -42,11 +42,14 @@ jobs:
           git commit -m "update groupmap from issue #${{ github.event.issue.number }}" || echo "no changes"
 
           git push origin $BRANCH
-
+      
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           branch: auto/groupmap-${{ github.event.issue.number }}
           title: "[groupmap] issue #${{ github.event.issue.number }}"
-          body: "Auto generated from issue"
+          body: |
+            Auto generated from issue #${{ github.event.issue.number }}
+            
+            Closes #${{ github.event.issue.number }}
           base: main
