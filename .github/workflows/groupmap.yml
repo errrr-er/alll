@@ -1,0 +1,31 @@
+name: GroupMap Processor
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run build.js
+        run: node call_of_cthulhu/kp/base_function/build.js
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "update groupmap" || echo "no changes"
+          git push
