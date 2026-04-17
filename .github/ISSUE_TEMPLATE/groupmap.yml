@@ -9,13 +9,10 @@ body:
     attributes:
       label: 数据（支持批量）
       description: |
-        规则：
-        - type 必须是 groupmap
+        结构如下（可直接修改）：
         - items 支持多个对象
         - groupNumber 可带换行或多个编号
         - aliases 可选，没有就留 []
-
-        示例结构如下（可直接修改）：
       value: |
         {
           "type": "groupmap",
