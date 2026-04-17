@@ -20,7 +20,6 @@ body:
             {
               "name": "示例",
               "groupNumber": "示例",
-              "tag": "示例",
               "aliases": ["示例"]
             }
           ]
