@@ -1,5 +1,5 @@
 name: 新增KP群
-description: 请使用内置格式
+description: 请参考内置格式
 title: "[groupmap] 添加群组数据"
 labels: ["groupmap"]
 
@@ -7,22 +7,26 @@ body:
   - type: textarea
     id: payload
     attributes:
-      label: JSON 数据（支持批量）
+      label: 数据（支持批量）
       description: |
-        请按以下格式填写：
+        规则：
+        - type 必须是 groupmap
+        - items 支持多个对象
+        - groupNumber 可带换行或多个编号
+        - aliases 可选，没有就留 []
 
+        示例结构如下（可直接修改）：
+      value: |
         {
           "type": "groupmap",
           "items": [
             {
-              "name": "请修改此处",
-              "groupNumber": "请修改此处",
-              "tag": "请修改此处",
-              "aliases": ["请修改此处"]
+              "name": "示例",
+              "groupNumber": "示例",
+              "tag": "示例",
+              "aliases": ["示例"]
             }
           ]
         }
-      placeholder: |
-        粘贴你的 JSON 数据
     validations:
       required: true
