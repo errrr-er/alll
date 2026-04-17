@@ -5,37 +5,41 @@ const body = process.env.ISSUE_BODY || "";
 
 // ===== 0. 输出路径 =====
 const resultDir = path.join(__dirname, "result");
+
+// 自动创建目录（防炸）
 if (!fs.existsSync(resultDir)) {
   fs.mkdirSync(resultDir, { recursive: true });
 }
 
 // ===== 1. 解析 JSON =====
 let data;
+
 try {
   const match = body.match(/\{[\s\S]*\}/);
   if (!match) throw new Error("no json found");
+
   data = JSON.parse(match[0]);
 } catch (e) {
   console.log("JSON parse failed:", e.message);
+
+  // 👉 防止 workflow 直接炸掉（更安全）
   process.exit(1);
 }
 
 if (!Array.isArray(data.items)) {
-  console.log("invalid format");
+  console.log("invalid format: items missing");
   process.exit(1);
 }
 
-// ===== 2. 拼音排序（中英统一）=====
+// ===== 2. 拼音排序 =====
 const pinyin = require("pinyin");
 
 function sortKey(str) {
   if (!str) return "";
 
-  const py = pinyin(str, {
+  return pinyin(str, {
     style: pinyin.STYLE_NORMAL
-  }).flat().join("");
-
-  return py.toLowerCase();
+  }).flat().join("").toLowerCase();
 }
 
 // ===== 3. 构建 =====
@@ -46,8 +50,7 @@ const aliasSet = new Set();
 
 const warnings = {
   duplicateGroupNumber: [],
-  duplicateAlias: [],
-  nameConflict: []
+  duplicateAlias: []
 };
 
 for (const item of data.items) {
@@ -56,13 +59,13 @@ for (const item of data.items) {
   const name = item.name.trim();
   const groupNumber = String(item.groupNumber);
 
-  // groupNumber 重复检测
+  // ===== groupNumber 重复检测 =====
   if (groupNumberSet.has(groupNumber)) {
     warnings.duplicateGroupNumber.push(groupNumber);
   }
   groupNumberSet.add(groupNumber);
 
-  // alias 重复检测
+  // ===== alias 重复检测 =====
   const aliases = item.aliases || [];
   for (const a of aliases) {
     if (aliasSet.has(a)) {
@@ -71,14 +74,14 @@ for (const item of data.items) {
     aliasSet.add(a);
   }
 
+  // ✔ 已删除 tag
   groupMap[name] = {
     groupNumber,
-    tag: item.tag || "",
     aliases
   };
 }
 
-// ===== 4. 排序（核心）=====
+// ===== 4. 排序 =====
 const sortedEntries = Object.entries(groupMap).sort((a, b) => {
   return sortKey(a[0]).localeCompare(sortKey(b[0]));
 });
@@ -88,14 +91,14 @@ for (const [k, v] of sortedEntries) {
   sortedGroupMap[k] = v;
 }
 
-// ===== 5. 输出最终 JSON（单行紧凑 + 可读混合）=====
+// ===== 5. 输出 JSON =====
 const output = {
   version: "1.0.0",
   timestamp: Math.floor(Date.now() / 1000),
   group_map: sortedGroupMap
 };
 
-// 👉 你要的“尽量一行结构”
+// ✔ 紧凑输出（一行结构）
 const jsonText = JSON.stringify(output, null, 0);
 
 fs.writeFileSync(
@@ -123,4 +126,5 @@ fs.writeFileSync(
   "utf-8"
 );
 
+// ===== 7. log =====
 console.log("build done:", Object.keys(groupMap).length);
