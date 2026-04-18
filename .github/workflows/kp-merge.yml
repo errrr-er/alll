@@ -24,21 +24,20 @@ jobs:
 
       - name: Generate groupMap from database and update JS file
         run: |
-          node -e "
-            const fs = require('fs');
-            const path = require('path');
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
 
-            const dbPath = 'call_of_cthulhu/kp/issues_base/database.json';
-            const jsPath = 'call_of_cthulhu/kp/a_kp_all.js';
+            const dbPath = "call_of_cthulhu/kp/issues_base/database.json";
+            const jsPath = "call_of_cthulhu/kp/a_kp_all.js";
 
             if (!fs.existsSync(dbPath)) {
-              console.error('❌ database.json not found');
+              console.error("❌ database.json not found");
               process.exit(1);
             }
 
-            const entries = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+            const entries = JSON.parse(fs.readFileSync(dbPath, "utf8"));
 
-            // 构建 groupMap 对象（保持 database.json 的顺序，已排序）
             const groupMap = {};
             for (const entry of entries) {
               groupMap[entry.key] = {
@@ -47,53 +46,47 @@ jobs:
               };
             }
 
-            let jsContent = fs.readFileSync(jsPath, 'utf8');
+            let jsContent = fs.readFileSync(jsPath, "utf8");
 
-            // 1. 更新时间戳
             const timestamp = Math.floor(Date.now() / 1000);
             jsContent = jsContent.replace(
               /(\/\/ @timestamp\s+)\d+/,
-              '\$1' + timestamp
+              "$1" + timestamp
             );
             jsContent = jsContent.replace(
               /(return\s+)\d+(;)/,
-              '\$1' + timestamp + '\$2'
+              "$1" + timestamp + "$2"
             );
 
-            // 2. 生成新的 groupMap 代码块（格式化）
             const keys = Object.keys(groupMap);
             const groupMapLines = [];
-            groupMapLines.push('const groupMap = {');
+            groupMapLines.push("const groupMap = {");
             for (let i = 0; i < keys.length; i++) {
               const key = keys[i];
               const value = groupMap[key];
-              const comma = i < keys.length - 1 ? ',' : '';
+              const comma = i < keys.length - 1 ? "," : "";
               const aliasesStr = value.aliases && value.aliases.length > 0 
-                ? ', aliases: ' + JSON.stringify(value.aliases)
-                : '';
-              groupMapLines.push(`\t${JSON.stringify(key)}: { groupNumber: ${JSON.stringify(value.groupNumber)}${aliasesStr} }${comma}`);
+                ? ", aliases: " + JSON.stringify(value.aliases)
+                : "";
+              groupMapLines.push("\t" + JSON.stringify(key) + ": { groupNumber: " + JSON.stringify(value.groupNumber) + aliasesStr + " }" + comma);
             }
-            groupMapLines.push('};');
-            const newGroupMapBlock = groupMapLines.join('\n');
+            groupMapLines.push("};");
+            const newGroupMapBlock = groupMapLines.join("\n");
 
-            // 3. 替换整个 groupMap 块
-            // 匹配从 'const groupMap = {' 开始，到第一个匹配的 '};' 结束（支持跨行）
             const groupMapRegex = /const groupMap = \{[\s\S]*?\n\};/;
             if (!groupMapRegex.test(jsContent)) {
-              console.error('❌ Could not locate groupMap block in JS file using regex');
+              console.error("❌ Could not locate groupMap block in JS file using regex");
               process.exit(1);
             }
             jsContent = jsContent.replace(groupMapRegex, newGroupMapBlock);
 
-            // 4. 调试输出（可选）
-            console.log('🔧 Updated timestamp to:', timestamp);
+            console.log("🔧 Updated timestamp to:", timestamp);
             console.log(`📦 Replaced groupMap with ${keys.length} entries.`);
 
-            // 5. 写回文件
-            fs.writeFileSync(jsPath, jsContent, 'utf8');
+            fs.writeFileSync(jsPath, jsContent, "utf8");
             
-            console.log('✅ JS file updated successfully');
-          "
+            console.log("✅ JS file updated successfully");
+          '
 
       - name: Commit and push changes
         run: |
@@ -101,5 +94,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add call_of_cthulhu/kp/a_kp_all.js
           git commit -m "chore: update timestamp and groupMap from PR #${{ github.event.pull_request.number }}" || echo "No changes to commit"
-          git pull --rebase origin main
           git push
