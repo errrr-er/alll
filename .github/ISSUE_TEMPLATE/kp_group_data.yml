@@ -1,0 +1,24 @@
+name: KP群组更新
+description: 内置示例
+title: "[KP_groupMap] "
+labels: ["data-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请直接在示例中修改
+  - type: textarea
+    id: data_content
+    attributes:
+      label: 数据内容
+      description: 在下方修改和添加
+      placeholder: |
+        {
+          "": {
+            "groupNumber": "",
+            "aliases": [""]
+          }
+        }
+      render: json
+    validations:
+      required: true
