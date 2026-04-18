@@ -1,6 +1,6 @@
 name: KP群组更新
 description: 内置示例
-title: "[KP_groupMap] "
+title: "[KP_groupMap] 新增内容"
 labels: ["data-submission"]
 body:
   - type: markdown
@@ -12,7 +12,7 @@ body:
     attributes:
       label: 数据内容
       description: 在下方修改和添加
-      placeholder: |
+      value: |
         {
           "": {
             "groupNumber": "",
