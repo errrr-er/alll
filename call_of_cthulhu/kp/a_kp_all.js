@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776525998
+// @timestamp    1776526684
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776525998;
+    return 1776526684;
 }
 
 // 提醒历史
@@ -80,6 +80,19 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表
 const groupMap = {
+	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
+	"哀歌弥赛亚": { groupNumber: "609355937", aliases: ["哀歌"] },
+	"暗河": { groupNumber: "1031974789" },
+	"暗影狂奔": { groupNumber: "245525828" },
+	"拜昆仑": { groupNumber: "248817589" },
+	"边狱巴士同人规则": { groupNumber: "765965290" },
+	"波子汽水": { groupNumber: "562672318" },
+	"ABO同工同酬": { groupNumber: "991872893" },
+	"ABS": { groupNumber: "941349942", aliases: ["全蓝综合征"] },
+	"AIB": { groupNumber: "112077093" },
+	"Antinomy": { groupNumber: "101476385" },
+	"BASH": { groupNumber: "774156947", aliases: ["燃星"] },
+	"Bubble on Stage": { groupNumber: "734220119" }
 };
 
 // 反向映射
