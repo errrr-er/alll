@@ -1,4 +1,4 @@
-name: Process KP Data Issue
+name: kp issue
 
 on:
   issues:
