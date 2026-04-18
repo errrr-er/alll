@@ -174,7 +174,7 @@ jobs:
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
             fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
 
-      - name: Update Database File
+            - name: Update Database File
         run: |
           node -e "
             const fs = require('fs');
@@ -191,12 +191,25 @@ jobs:
 
             const newEntries = JSON.parse(fs.readFileSync(newEntriesPath, 'utf8'));
 
+            // 合并
             for (const entry of newEntries) {
               const idx = existing.findIndex(e => e.key === entry.key);
               if (idx >= 0) {
                 existing[idx] = entry;
               } else {
                 existing.push(entry);
+              }
+            }
+
+            // 对合并后的数组按 key 排序（中英文混合拼音排序）
+            existing.sort((a, b) => {
+              return a.key.localeCompare(b.key, 'zh-CN', { sensitivity: 'base' });
+            });
+
+            // 清理空 aliases 数组以节省空间（可选）
+            for (const entry of existing) {
+              if (entry.aliases && entry.aliases.length === 0) {
+                delete entry.aliases;
               }
             }
 
