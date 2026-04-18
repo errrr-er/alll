@@ -102,7 +102,7 @@ jobs:
               user: context.payload.issue.user.login
             }, null, 2));
 
-            - name: Run Validation & Generate Report
+      - name: Run Validation & Generate Report
         id: validate
         uses: actions/github-script@v7
         with:
@@ -180,7 +180,7 @@ jobs:
             }
 
             // 5. 检查新数据内部别名重复
-            const aliasMap = new Map(); // alias -> 所属键列表
+            const aliasMap = new Map();
             for (const entry of newEntries) {
               for (const alias of entry.aliases) {
                 if (!aliasMap.has(alias)) {
@@ -205,11 +205,11 @@ jobs:
 
             ## 📊 校验报告
             ${reportContent}`;
-                        const prBodyPath = path.join(baseDir, 'pr_body.md');
-                        fs.writeFileSync(prBodyPath, prBody);
-            
-                        const newEntriesPath = path.join(baseDir, 'new_entries.json');
-                        fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
+            const prBodyPath = path.join(baseDir, 'pr_body.md');
+            fs.writeFileSync(prBodyPath, prBody);
+
+            const newEntriesPath = path.join(baseDir, 'new_entries.json');
+            fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
 
       - name: Update Database File
         run: |
