@@ -1,0 +1,94 @@
+name: Process Data Update Issue
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  process:
+    if: contains(github.event.issue.labels.*.name, 'data-submission')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Parse and Validate Issue Body
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body;
+            const issueNumber = context.payload.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // 辅助函数：添加标签
+            async function addLabel(label) {
+              await github.rest.issues.addLabels({
+                owner, repo,
+                issue_number: issueNumber,
+                labels: [label]
+              });
+            }
+
+            // 辅助函数：评论报错
+            async function commentError(msg) {
+              await github.rest.issues.createComment({
+                owner, repo,
+                issue_number: issueNumber,
+                body: `**处理失败**\n\n${msg}\n\n请修正后重新编辑 Issue 内容，或手动处理。`
+              });
+            }
+
+            // 正则提取数据内容文本框中的内容（匹配代码块内的 JSON）
+            const match = body.match(/### 数据内容\s+```json\s*([\s\S]*?)\s*```/);
+            if (!match) {
+              await addLabel('needs-review');
+              await commentError('未找到数据内容，请确保在 `数据内容` 文本框的 JSON 代码块中填写。');
+              core.setFailed('未找到数据内容');
+              return;
+            }
+
+            let data;
+            try {
+              data = JSON.parse(match[1]);
+            } catch (e) {
+              await addLabel('bug');
+              await commentError(`JSON 格式无效：${e.message}`);
+              core.setFailed('JSON 解析失败');
+              return;
+            }
+
+            // 校验数据结构（例如每个条目必须包含 groupNumber 字段）
+            const errors = [];
+            for (const [key, value] of Object.entries(data)) {
+              if (!value.groupNumber || typeof value.groupNumber !== 'string') {
+                errors.push(`键 "${key}" 缺少 groupNumber 或格式不正确`);
+              }
+              if (!Array.isArray(value.aliases)) {
+                errors.push(`键 "${key}" 的 aliases 必须是数组`);
+              }
+            }
+
+            if (errors.length > 0) {
+              await addLabel('needs-review');
+              await commentError(`数据校验未通过：\n- ${errors.join('\n- ')}`);
+              core.setFailed('数据校验失败');
+              return;
+            }
+
+            // 保存解析后的数据供后续使用
+            const fs = require('fs');
+            fs.writeFileSync('submitted_data.json', JSON.stringify({
+              data: data,
+              issue_number: issueNumber,
+              user: context.payload.issue.user.login
+            }, null, 2));
+
+            // 将数据写入环境变量
+            core.exportVariable('DATA_FILE', 'submitted_data.json');
