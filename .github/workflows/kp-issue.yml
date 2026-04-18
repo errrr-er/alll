@@ -1,4 +1,4 @@
-name: Process Data Update Issue
+name: Process KP Data Issue
 
 on:
   issues:
