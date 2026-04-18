@@ -203,12 +203,6 @@ jobs:
             fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
           "
 
-      - name: Clean up temporary files
-        run: |
-          rm -f call_of_cthulhu/kp/issues_base/submitted_data.json
-          rm -f call_of_cthulhu/kp/issues_base/new_entries.json
-          rm -f call_of_cthulhu/kp/issues_base/report.md
-
       - name: Debug - List generated files
         run: |
           echo "=== 检查目标目录文件 ==="
@@ -217,6 +211,34 @@ jobs:
           cat call_of_cthulhu/kp/issues_base/database.json || echo "文件不存在"
           echo "=== Git 状态 ==="
           git status
+
+      - name: Ensure labels exist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = ['kp-pr', 'data-update'];
+            for (const label of labels) {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: label
+                });
+                console.log(`✅ Label "${label}" already exists`);
+              } catch (error) {
+                if (error.status === 404) {
+                  await github.rest.issues.createLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    name: label,
+                    color: '0052cc'  // 蓝色，可自定义
+                  });
+                  console.log(`🆕 Created label "${label}"`);
+                } else {
+                  throw error;
+                }
+              }
+            }
 
       - name: Create Pull Request
         id: create-pr
