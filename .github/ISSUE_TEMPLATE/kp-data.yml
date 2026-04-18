@@ -1,7 +1,7 @@
 name: KP群组更新
 description: 内置示例
 title: "[KP_groupMap] 新增内容"
-labels: ["data-submission"]
+labels: ["kp-data"]
 body:
   - type: markdown
     attributes:
