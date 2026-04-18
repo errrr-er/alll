@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776527855
+// @timestamp    1776528916
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776527855;
+    return 1776528916;
 }
 
 // 提醒历史
@@ -106,7 +106,7 @@ const groupMap = {
 	"晨钟旧事": { groupNumber: "655068229*下载", aliases: ["沽上潮生来"] },
 	"抽刀": { groupNumber: "1057856638" },
 	"畜牲道": { groupNumber: "738570884" },
-	"穿插、跳跃、结束，你与我的日常": { groupNumber: "1085073731" },
+	"穿插、跳跃、结束，你与我的日常": { groupNumber: "1085073731、1097464299" },
 	"吹笛子的海獭": { groupNumber: "468213532" },
 	"春花秋月": { groupNumber: "813932679" },
 	"纯女": { groupNumber: "coc\n947095759、797863427、923952181、770689154、1061755248*+绿色三角洲\n\ndnd\n560604565、960874614、780528057、1021578589\n\ncoc+dnd\n869660310、1016631080、1057887916*北美洲时差、609993185*限21+无限流" },
@@ -148,6 +148,7 @@ const groupMap = {
 	"哥谭39:永恒之镜": { groupNumber: "858799831", aliases: ["Gotham39: The Mirror Eternal"] },
 	"歌味觉死": { groupNumber: "616756545\n路易斯安那系列+畅梦人+淤泥之花与空心石" },
 	"革命少女罗丹斯": { groupNumber: "641481529" },
+	"公若渡河": { groupNumber: "1095875707*下载\n1101528355*KP" },
 	"共鸣性怪异": { groupNumber: "903173796" },
 	"孤岛恋综": { groupNumber: "932315790*下载" },
 	"孤灯弃城": { groupNumber: "877858567" },
@@ -160,7 +161,7 @@ const groupMap = {
 	"海盗之宴": { groupNumber: "1062169852" },
 	"海龟汤": { groupNumber: "295820752" },
 	"海国战役设定集": { groupNumber: "567135881" },
-	"黑暗世界": { groupNumber: "985683120", aliases: ["wod"] },
+	"黑暗世界": { groupNumber: "985683120", aliases: ["wod","vtm"] },
 	"黑幕圣杯": { groupNumber: "602145072" },
 	"黑水溪": { groupNumber: "1071548693" },
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
@@ -192,6 +193,7 @@ const groupMap = {
 	"今古空名": { groupNumber: "962147366" },
 	"金酒狂热": { groupNumber: "794429121" },
 	"京痕雨记": { groupNumber: "496904508*下载" },
+	"荆山祭": { groupNumber: "1092255456*下载" },
 	"鲸落万物生": { groupNumber: "598393390*下载\n1051952972*KP", aliases: ["鲸落"] },
 	"靖海难": { groupNumber: "343026343" },
 	"镜花水月•云上天篇": { groupNumber: "2151061466" },
@@ -382,7 +384,7 @@ const groupMap = {
 	"仙人抚顶": { groupNumber: "1056213411" },
 	"相约98": { groupNumber: "542398417" },
 	"小众规则综合": { groupNumber: "945728295" },
-	"写作": { groupNumber: "纯女\n734417134、761666326*coj" },
+	"写作": { groupNumber: "629998485*魔都\n734417134*纯女、761666326*纯女coj" },
 	"谢娘娘点化": { groupNumber: "878626807", aliases: ["谢娘娘"] },
 	"心愿寄于清夏": { groupNumber: "599817890" },
 	"心脏": { groupNumber: "883465896*无全译本" },
