@@ -169,6 +169,11 @@ jobs:
             const reportPath = path.join(baseDir, 'report.md');
             fs.writeFileSync(reportPath, reportContent);
 
+            // 生成 PR 描述文件
+            const prBody = `关联 Issue: #${submitted.issue_number}\n提交者: @${submitted.user}\n\n## 📊 校验报告\n${reportContent}`;
+            const prBodyPath = path.join(baseDir, 'pr_body.md');
+            fs.writeFileSync(prBodyPath, prBody);
+
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
             fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
 
@@ -224,7 +229,7 @@ jobs:
         run: |
           rm -f call_of_cthulhu/kp/issues_base/new_entries.json
           rm -f call_of_cthulhu/kp/issues_base/submitted_data.json
-          echo "已清理临时文件，保留 database.json 和 report.md"
+          echo "已清理临时文件，保留 database.json, report.md, pr_body.md"
 
       - name: Ensure labels exist
         uses: actions/github-script@v7
@@ -262,14 +267,13 @@ jobs:
           commit-message: "data: update from issue #${{ github.event.issue.number }}"
           branch: "kp-data/issue-${{ github.event.issue.number }}"
           title: "[KP数据更新] Issue #${{ github.event.issue.number }}"
-          body: |
-            关联 Issue: #${{ github.event.issue.number }}
-            提交者: @${{ github.event.issue.user.login }}
-
-            ## 📊 校验报告
-            $(cat call_of_cthulhu/kp/issues_base/report.md 2>/dev/null || echo "报告生成失败，请检查 Actions 日志。")
+          body-path: call_of_cthulhu/kp/issues_base/pr_body.md
           labels: "kp-pr"
           delete-branch: true
+
+      - name: Clean up PR body file
+        if: always()
+        run: rm -f call_of_cthulhu/kp/issues_base/pr_body.md
 
       - name: Comment Success on Issue
         if: success()
