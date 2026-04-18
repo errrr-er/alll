@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Generate sorted groupMap and update JS file
+            - name: Generate groupMap from database and update JS file
         run: |
           node -e "
             const fs = require('fs');
@@ -38,24 +38,13 @@ jobs:
 
             const entries = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 
-            // 构建 groupMap 对象
+            // 构建 groupMap 对象（保持 database.json 的顺序）
             const groupMap = {};
             for (const entry of entries) {
               groupMap[entry.key] = {
                 groupNumber: entry.groupNumber,
-                aliases: entry.aliases || []
+                ...(entry.aliases && { aliases: entry.aliases })
               };
-            }
-
-            // 按拼音/字母排序键名
-            const sortedKeys = Object.keys(groupMap).sort((a, b) => {
-              // 使用 localeCompare 支持中文拼音排序
-              return a.localeCompare(b, 'zh-CN', { sensitivity: 'base' });
-            });
-
-            const sortedGroupMap = {};
-            for (const key of sortedKeys) {
-              sortedGroupMap[key] = groupMap[key];
             }
 
             // 读取原 JS 文件
@@ -77,12 +66,6 @@ jobs:
             );
 
             // 替换 groupMap 对象
-            // 使用正则匹配 const groupMap = { ... };
-            const groupMapRegex = /(const groupMap = )\{[\s\S]*?\n\};/;
-            const newGroupMapStr = 'const groupMap = ' + JSON.stringify(sortedGroupMap, null, '\t') + ';';
-            
-            // 因为原文件中的 groupMap 带有注释和特殊格式，我们用更精确的替换方式：
-            // 找到 const groupMap = { 开始，直到匹配到以 }; 结尾且前面有换行缩进的 }
             const startMarker = 'const groupMap = {';
             const endMarker = '\n};';
             
@@ -94,14 +77,15 @@ jobs:
               process.exit(1);
             }
             
-            // 生成格式化后的 groupMap 代码（带缩进）
+            // 生成格式化后的 groupMap 代码
             const groupMapLines = [];
             groupMapLines.push('const groupMap = {');
             
-            const entriesList = Object.entries(sortedGroupMap);
-            for (let i = 0; i < entriesList.length; i++) {
-              const [key, value] = entriesList[i];
-              const comma = i < entriesList.length - 1 ? ',' : '';
+            const keys = Object.keys(groupMap);
+            for (let i = 0; i < keys.length; i++) {
+              const key = keys[i];
+              const value = groupMap[key];
+              const comma = i < keys.length - 1 ? ',' : '';
               const aliasesStr = value.aliases && value.aliases.length > 0 
                 ? ', aliases: ' + JSON.stringify(value.aliases)
                 : '';
@@ -116,7 +100,7 @@ jobs:
             // 写回文件
             fs.writeFileSync(jsPath, jsContent, 'utf8');
             
-            console.log('✅ Updated a_kp_all.js with new timestamp and sorted groupMap');
+            console.log('✅ Updated a_kp_all.js with timestamp and groupMap from sorted database');
           "
 
       - name: Commit and push changes
