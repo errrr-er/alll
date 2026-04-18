@@ -66,16 +66,13 @@ jobs:
             // 基础字段校验
             const errors = [];
             for (const [key, value] of Object.entries(data)) {
-              // 键名不能为空
               if (!key || key.trim() === '') {
                 errors.push(`键名不能为空字符串`);
                 continue;
               }
-              // groupNumber 必须存在且为字符串
               if (!value.groupNumber || typeof value.groupNumber !== 'string') {
                 errors.push(`键 "${key}" 缺少 groupNumber 或格式不正确`);
               }
-              // aliases 若存在则必须为数组
               if (value.aliases !== undefined && !Array.isArray(value.aliases)) {
                 errors.push(`键 "${key}" 的 aliases 必须是数组`);
               }
@@ -197,7 +194,6 @@ jobs:
 
             const newEntries = JSON.parse(fs.readFileSync('new_entries.json', 'utf8'));
 
-            // 合并：相同 key 覆盖，否则追加
             for (const entry of newEntries) {
               const idx = existing.findIndex(e => e.key === entry.key);
               if (idx >= 0) {
@@ -210,10 +206,20 @@ jobs:
             fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
           "
 
+      - name: Debug - List generated files
+        run: |
+          echo "=== 检查生成的目录和文件 ==="
+          ls -la call_of_cthulhu/kp/issues_base/ || echo "目录不存在"
+          echo "=== database.json 内容 ==="
+          cat call_of_cthulhu/kp/issues_base/database.json || echo "文件不存在"
+          echo "=== Git 状态 ==="
+          git status
+
       - name: Create Pull Request
         id: create-pr
         uses: peter-evans/create-pull-request@v6
         with:
+          base: main   # 如果默认分支不是 main，请改为你的默认分支名
           commit-message: "data: update from issue #${{ github.event.issue.number }}"
           branch: "kp-data/issue-${{ github.event.issue.number }}"
           title: "[KP数据更新] Issue #${{ github.event.issue.number }}"
