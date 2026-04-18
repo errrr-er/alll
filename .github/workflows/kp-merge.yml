@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   pull_request:
     types: [closed]
-  push:
-    paths:
-      - 'call_of_cthulhu/kp/issues_base/database.json'
 
 permissions:
   contents: write
