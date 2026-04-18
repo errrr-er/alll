@@ -308,25 +308,18 @@ jobs:
       - name: Clean up PR body file
         if: always()
         run: rm -f call_of_cthulhu/kp/issues_base/pr_body.md
-
+        
       - name: Comment Success on Issue
         if: success()
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            const path = require('path');
             const prNumber = '${{ steps.create-pr.outputs.pull-request-number }}';
-            const reportPath = path.join('call_of_cthulhu', 'kp', 'issues_base', 'report.md');
-            let report = '✅ 所有检查通过，未发现冲突或异常。';
-            if (fs.existsSync(reportPath)) {
-              report = fs.readFileSync(reportPath, 'utf8');
-            }
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.issue.number,
-              body: `✅ 数据已处理，并创建 PR #${prNumber} 等待审核。\n\n${report}`
+              body: `✅ 数据已处理，并创建 PR #${prNumber} 等待审核。\n\n详细校验报告请查看 PR 描述。`
             });
 
       - name: Add kp-pr label to Issue
