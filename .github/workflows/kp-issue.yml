@@ -232,7 +232,7 @@ jobs:
 
             ## 📊 校验报告
             ${{ env.REPORT }}
-          labels: "kp-pr, data-update"
+          labels: "kp-pr"
           delete-branch: true
 
       - name: Comment Success on Issue
