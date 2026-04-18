@@ -102,7 +102,7 @@ jobs:
               user: context.payload.issue.user.login
             }, null, 2));
 
-      - name: Run Validation & Generate Report
+            - name: Run Validation & Generate Report
         id: validate
         uses: actions/github-script@v7
         with:
@@ -133,35 +133,66 @@ jobs:
 
             const report = [];
             const allExistingGroups = existing.map(e => e.groupNumber);
-            const allExistingAliases = existing.flatMap(e => e.aliases || []);
 
+            // 1. 检查群号完全重复（与已有数据）
             for (const entry of newEntries) {
               if (allExistingGroups.includes(entry.groupNumber)) {
                 const conflict = existing.find(e => e.groupNumber === entry.groupNumber);
-                report.push(`⚠️ 群号 \`${entry.groupNumber}\` (键: ${entry.key}) 已存在于键 \`${conflict.key}\`，提交后将覆盖。`);
+                report.push(`⚠️ 群号 \`${entry.groupNumber}\` (本次提交键: ${entry.key}) 已存在于已有键 \`${conflict.key}\`，提交后将覆盖。`);
               }
             }
 
+            // 2. 检查群号部分相似（包含关系）
             for (const entry of newEntries) {
               const similar = existing.filter(e => 
                 e.groupNumber.includes(entry.groupNumber) || entry.groupNumber.includes(e.groupNumber)
               );
               if (similar.length > 0 && !allExistingGroups.includes(entry.groupNumber)) {
-                report.push(`🔍 群号 \`${entry.groupNumber}\` 与已有群号相似：${similar.map(e => e.groupNumber).join(', ')}`);
+                const similarInfo = similar.map(s => `\`${s.groupNumber}\` (键: ${s.key})`).join(', ');
+                report.push(`🔍 群号 \`${entry.groupNumber}\` 与已有群号相似：${similarInfo}`);
               }
             }
 
+            // 3. 检查别名冲突（与已有数据）
             for (const entry of newEntries) {
-              const conflictAliases = entry.aliases.filter(a => allExistingAliases.includes(a));
-              if (conflictAliases.length > 0) {
-                report.push(`🔄 别名冲突：${conflictAliases.join(', ')} 已存在于其他条目中。`);
+              for (const alias of entry.aliases) {
+                const conflictEntries = existing.filter(e => e.aliases && e.aliases.includes(alias));
+                if (conflictEntries.length > 0) {
+                  const conflictInfo = conflictEntries.map(c => `\`${c.key}\``).join('、');
+                  report.push(`🔄 别名冲突：\`${alias}\` (本次提交键: ${entry.key}) 已存在于已有键: ${conflictInfo}`);
+                }
               }
             }
 
-            const newGroupNumbers = newEntries.map(e => e.groupNumber);
-            const internalDup = newGroupNumbers.filter((v, i, a) => a.indexOf(v) !== i);
-            if (internalDup.length > 0) {
-              report.push(`❌ 提交数据内部群号重复：${internalDup.join(', ')}`);
+            // 4. 检查新数据内部群号重复
+            const groupNumberMap = new Map();
+            for (const entry of newEntries) {
+              const num = entry.groupNumber;
+              if (!groupNumberMap.has(num)) {
+                groupNumberMap.set(num, []);
+              }
+              groupNumberMap.get(num).push(entry.key);
+            }
+            for (const [num, keys] of groupNumberMap.entries()) {
+              if (keys.length > 1) {
+                report.push(`❌ 提交数据内部群号重复：群号 \`${num}\` 同时出现在键: ${keys.map(k => `\`${k}\``).join('、')}`);
+              }
+            }
+
+            // 5. 检查新数据内部别名重复
+            const aliasMap = new Map(); // alias -> 所属键列表
+            for (const entry of newEntries) {
+              for (const alias of entry.aliases) {
+                if (!aliasMap.has(alias)) {
+                  aliasMap.set(alias, []);
+                }
+                aliasMap.get(alias).push(entry.key);
+              }
+            }
+            for (const [alias, keys] of aliasMap.entries()) {
+              if (keys.length > 1) {
+                report.push(`🟡 提交数据内部别名重复：别名 \`${alias}\` 同时出现在键: ${keys.map(k => `\`${k}\``).join('、')}`);
+              }
             }
 
             const reportContent = report.length ? report.join('\n\n') : '✅ 所有检查通过，未发现冲突或异常。';
@@ -169,13 +200,16 @@ jobs:
             const reportPath = path.join(baseDir, 'report.md');
             fs.writeFileSync(reportPath, reportContent);
 
-            // 生成 PR 描述文件
-            const prBody = `关联 Issue: #${submitted.issue_number}\n提交者: @${submitted.user}\n\n## 📊 校验报告\n${reportContent}`;
-            const prBodyPath = path.join(baseDir, 'pr_body.md');
-            fs.writeFileSync(prBodyPath, prBody);
+            const prBody = `关联 Issue: #${submitted.issue_number}
+            提交者: @${submitted.user}
 
-            const newEntriesPath = path.join(baseDir, 'new_entries.json');
-            fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
+            ## 📊 校验报告
+            ${reportContent}`;
+                        const prBodyPath = path.join(baseDir, 'pr_body.md');
+                        fs.writeFileSync(prBodyPath, prBody);
+            
+                        const newEntriesPath = path.join(baseDir, 'new_entries.json');
+                        fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
 
       - name: Update Database File
         run: |
