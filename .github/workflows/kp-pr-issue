@@ -1,0 +1,49 @@
+name: Close KP Issue on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  close-issue:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract Issue Number from PR Body
+        id: extract
+        run: |
+          # 从 PR body 中提取形如 "#数字" 的第一个匹配项
+          ISSUE_NUM=$(echo "${{ github.event.pull_request.body }}" | grep -oE '#[0-9]+' | head -1 | tr -d '#')
+          echo "ISSUE_NUM=$ISSUE_NUM" >> $GITHUB_OUTPUT
+          echo "提取到的 Issue 编号: $ISSUE_NUM"
+
+      - name: Close Linked Issue
+        if: steps.extract.outputs.ISSUE_NUM != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = parseInt('${{ steps.extract.outputs.ISSUE_NUM }}');
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // 关闭 Issue
+            await github.rest.issues.update({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              state: 'closed'
+            });
+
+            // 添加关闭评论
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issueNumber,
+              body: `🎉 关联的 PR #${{ github.event.pull_request.number }} 已合并，本 Issue 自动关闭。感谢贡献！`
+            });
+
+            console.log(`✅ Issue #${issueNumber} 已关闭`);
