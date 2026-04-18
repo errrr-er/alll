@@ -1,4 +1,4 @@
-name: KP json
+name: kp json
 
 on:
   workflow_dispatch:
