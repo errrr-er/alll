@@ -165,11 +165,13 @@ jobs:
             }
 
             const reportContent = report.length ? report.join('\n\n') : '✅ 所有检查通过，未发现冲突或异常。';
+            
+            // 保存报告到 issues_base 目录
             const reportPath = path.join(baseDir, 'report.md');
             fs.writeFileSync(reportPath, reportContent);
             
-            // 同时将报告内容保存到临时文件，供后续步骤读取
-            fs.writeFileSync('report_content.txt', reportContent);
+            const reportTxtPath = path.join(baseDir, 'report_content.txt');
+            fs.writeFileSync(reportTxtPath, reportContent);
 
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
             fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
@@ -263,7 +265,7 @@ jobs:
             提交者: @${{ github.event.issue.user.login }}
 
             ## 📊 校验报告
-            $(cat report_content.txt)
+            $(cat call_of_cthulhu/kp/issues_base/report_content.txt 2>/dev/null || echo "报告生成失败，请检查 Actions 日志。")
           labels: "kp-pr"
           delete-branch: true
 
@@ -273,8 +275,13 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const path = require('path');
             const prNumber = '${{ steps.create-pr.outputs.pull-request-number }}';
-            const report = fs.readFileSync('report_content.txt', 'utf8');
+            const reportPath = path.join('call_of_cthulhu', 'kp', 'issues_base', 'report_content.txt');
+            let report = '✅ 所有检查通过，未发现冲突或异常。';
+            if (fs.existsSync(reportPath)) {
+              report = fs.readFileSync(reportPath, 'utf8');
+            }
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
