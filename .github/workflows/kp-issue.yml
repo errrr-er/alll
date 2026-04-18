@@ -47,7 +47,7 @@ jobs:
             // 提取数据内容
             const match = body.match(/### 数据内容\s+```json\s*([\s\S]*?)\s*```/);
             if (!match) {
-              await addLabel('needs-review');
+              await addLabel('kp-review');
               await commentError('未找到数据内容，请确保在 `数据内容` 文本框的 JSON 代码块中填写。');
               core.setFailed('未找到数据内容');
               return;
@@ -82,7 +82,7 @@ jobs:
             }
 
             if (errors.length > 0) {
-              await addLabel('needs-review');
+              await addLabel('kp-review');
               await commentError(`数据校验未通过：\n- ${errors.join('\n- ')}`);
               core.setFailed('数据校验失败');
               return;
