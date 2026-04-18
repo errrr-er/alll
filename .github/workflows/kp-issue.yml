@@ -92,6 +92,9 @@ jobs:
             for (const key of Object.keys(data)) {
               if (!data[key].aliases) {
                 data[key].aliases = [];
+              } else {
+                // 过滤掉空字符串或仅含空格的别名
+                data[key].aliases = data[key].aliases.filter(a => a && a.trim() !== '');
               }
             }
 
