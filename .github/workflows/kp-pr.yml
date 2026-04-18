@@ -1,4 +1,4 @@
-name: Close KP Issue on PR Merge
+name: kp pr
 
 on:
   pull_request:
