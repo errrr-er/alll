@@ -1,0 +1,129 @@
+name: kp merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  update-js:
+    if: github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'kp-pr')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 确保在最新主分支上操作
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate sorted groupMap and update JS file
+        run: |
+          node -e "
+            const fs = require('fs');
+            const path = require('path');
+
+            const dbPath = 'call_of_cthulhu/kp/issues_base/database.json';
+            const jsPath = 'call_of_cthulhu/kp/a_kp_all.js';
+
+            if (!fs.existsSync(dbPath)) {
+              console.error('database.json not found');
+              process.exit(1);
+            }
+
+            const entries = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+
+            // 构建 groupMap 对象
+            const groupMap = {};
+            for (const entry of entries) {
+              groupMap[entry.key] = {
+                groupNumber: entry.groupNumber,
+                aliases: entry.aliases || []
+              };
+            }
+
+            // 按拼音/字母排序键名
+            const sortedKeys = Object.keys(groupMap).sort((a, b) => {
+              // 使用 localeCompare 支持中文拼音排序
+              return a.localeCompare(b, 'zh-CN', { sensitivity: 'base' });
+            });
+
+            const sortedGroupMap = {};
+            for (const key of sortedKeys) {
+              sortedGroupMap[key] = groupMap[key];
+            }
+
+            // 读取原 JS 文件
+            let jsContent = fs.readFileSync(jsPath, 'utf8');
+
+            // 生成新的时间戳
+            const timestamp = Math.floor(Date.now() / 1000);
+
+            // 替换 @timestamp 行
+            jsContent = jsContent.replace(
+              /\/\/ @timestamp\s+\d+/,
+              '// @timestamp    ' + timestamp
+            );
+
+            // 替换 getCurrentTimestamp 函数返回值
+            jsContent = jsContent.replace(
+              /return\s+\d+;/,
+              'return ' + timestamp + ';'
+            );
+
+            // 替换 groupMap 对象
+            // 使用正则匹配 const groupMap = { ... };
+            const groupMapRegex = /(const groupMap = )\{[\s\S]*?\n\};/;
+            const newGroupMapStr = 'const groupMap = ' + JSON.stringify(sortedGroupMap, null, '\t') + ';';
+            
+            // 因为原文件中的 groupMap 带有注释和特殊格式，我们用更精确的替换方式：
+            // 找到 const groupMap = { 开始，直到匹配到以 }; 结尾且前面有换行缩进的 }
+            const startMarker = 'const groupMap = {';
+            const endMarker = '\n};';
+            
+            const startIdx = jsContent.indexOf(startMarker);
+            const endIdx = jsContent.indexOf(endMarker, startIdx) + endMarker.length;
+            
+            if (startIdx === -1 || endIdx === -1) {
+              console.error('Could not locate groupMap in JS file');
+              process.exit(1);
+            }
+            
+            // 生成格式化后的 groupMap 代码（带缩进）
+            const groupMapLines = [];
+            groupMapLines.push('const groupMap = {');
+            
+            const entriesList = Object.entries(sortedGroupMap);
+            for (let i = 0; i < entriesList.length; i++) {
+              const [key, value] = entriesList[i];
+              const comma = i < entriesList.length - 1 ? ',' : '';
+              const aliasesStr = value.aliases && value.aliases.length > 0 
+                ? ', aliases: ' + JSON.stringify(value.aliases)
+                : '';
+              groupMapLines.push(`\t${JSON.stringify(key)}: { groupNumber: ${JSON.stringify(value.groupNumber)}${aliasesStr} }${comma}`);
+            }
+            groupMapLines.push('};');
+            
+            const newGroupMapBlock = groupMapLines.join('\n');
+            
+            jsContent = jsContent.substring(0, startIdx) + newGroupMapBlock + jsContent.substring(endIdx);
+
+            // 写回文件
+            fs.writeFileSync(jsPath, jsContent, 'utf8');
+            
+            console.log('✅ Updated a_kp_all.js with new timestamp and sorted groupMap');
+          "
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add call_of_cthulhu/kp/a_kp_all.js
+          git commit -m "chore: update timestamp and groupMap from PR #${{ github.event.pull_request.number }}" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push
