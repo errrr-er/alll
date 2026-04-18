@@ -16,7 +16,6 @@ jobs:
       - name: Extract Issue Number from PR Body
         id: extract
         run: |
-          # 从 PR body 中提取形如 "#数字" 的第一个匹配项
           ISSUE_NUM=$(echo "${{ github.event.pull_request.body }}" | grep -oE '#[0-9]+' | head -1 | tr -d '#')
           echo "ISSUE_NUM=$ISSUE_NUM" >> $GITHUB_OUTPUT
           echo "提取到的 Issue 编号: $ISSUE_NUM"
@@ -30,7 +29,6 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
 
-            // 关闭 Issue
             await github.rest.issues.update({
               owner,
               repo,
@@ -38,7 +36,6 @@ jobs:
               state: 'closed'
             });
 
-            // 添加关闭评论
             await github.rest.issues.createComment({
               owner,
               repo,
