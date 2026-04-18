@@ -166,12 +166,8 @@ jobs:
 
             const reportContent = report.length ? report.join('\n\n') : '✅ 所有检查通过，未发现冲突或异常。';
             
-            // 保存报告到 issues_base 目录
             const reportPath = path.join(baseDir, 'report.md');
             fs.writeFileSync(reportPath, reportContent);
-            
-            const reportTxtPath = path.join(baseDir, 'report_content.txt');
-            fs.writeFileSync(reportTxtPath, reportContent);
 
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
             fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
@@ -224,6 +220,12 @@ jobs:
           echo "=== Git 状态 ==="
           git status
 
+      - name: Clean up temporary files before PR
+        run: |
+          rm -f call_of_cthulhu/kp/issues_base/new_entries.json
+          rm -f call_of_cthulhu/kp/issues_base/submitted_data.json
+          echo "已清理临时文件，保留 database.json 和 report.md"
+
       - name: Ensure labels exist
         uses: actions/github-script@v7
         with:
@@ -265,7 +267,7 @@ jobs:
             提交者: @${{ github.event.issue.user.login }}
 
             ## 📊 校验报告
-            $(cat call_of_cthulhu/kp/issues_base/report_content.txt 2>/dev/null || echo "报告生成失败，请检查 Actions 日志。")
+            $(cat call_of_cthulhu/kp/issues_base/report.md 2>/dev/null || echo "报告生成失败，请检查 Actions 日志。")
           labels: "kp-pr"
           delete-branch: true
 
@@ -277,7 +279,7 @@ jobs:
             const fs = require('fs');
             const path = require('path');
             const prNumber = '${{ steps.create-pr.outputs.pull-request-number }}';
-            const reportPath = path.join('call_of_cthulhu', 'kp', 'issues_base', 'report_content.txt');
+            const reportPath = path.join('call_of_cthulhu', 'kp', 'issues_base', 'report.md');
             let report = '✅ 所有检查通过，未发现冲突或异常。';
             if (fs.existsSync(reportPath)) {
               report = fs.readFileSync(reportPath, 'utf8');
@@ -288,3 +290,16 @@ jobs:
               issue_number: context.payload.issue.number,
               body: `✅ 数据已处理，并创建 PR #${prNumber} 等待审核。\n\n${report}`
             });
+
+      - name: Add kp-pr label to Issue
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              labels: ['kp-pr']
+            });
+            console.log(`🏷️ Added 'kp-pr' label to issue #${context.payload.issue.number}`);
