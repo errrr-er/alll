@@ -23,10 +23,16 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            const path = require('path');
             const body = context.payload.issue.body;
             const issueNumber = context.payload.issue.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
+
+            const baseDir = 'call_of_cthulhu/kp/issues_base';
+            if (!fs.existsSync(baseDir)) {
+              fs.mkdirSync(baseDir, { recursive: true });
+            }
 
             async function addLabel(label) {
               await github.rest.issues.addLabels({
@@ -44,7 +50,6 @@ jobs:
               });
             }
 
-            // 提取数据内容
             const match = body.match(/### 数据内容\s+```json\s*([\s\S]*?)\s*```/);
             if (!match) {
               await addLabel('kp-review');
@@ -63,7 +68,6 @@ jobs:
               return;
             }
 
-            // 基础字段校验
             const errors = [];
             for (const [key, value] of Object.entries(data)) {
               if (!key || key.trim() === '') {
@@ -85,21 +89,20 @@ jobs:
               return;
             }
 
-            // 确保每个条目都有 aliases 数组（缺失时设为空数组）
             for (const key of Object.keys(data)) {
               if (!data[key].aliases) {
                 data[key].aliases = [];
               }
             }
 
-            // 保存解析后的数据供后续使用
-            fs.writeFileSync('submitted_data.json', JSON.stringify({
+            const submittedPath = path.join(baseDir, 'submitted_data.json');
+            fs.writeFileSync(submittedPath, JSON.stringify({
               data: data,
               issue_number: issueNumber,
               user: context.payload.issue.user.login
             }, null, 2));
 
-            core.exportVariable('DATA_FILE', 'submitted_data.json');
+            core.exportVariable('DATA_FILE', submittedPath);
 
       - name: Run Validation & Generate Report
         id: validate
@@ -108,15 +111,12 @@ jobs:
           script: |
             const fs = require('fs');
             const path = require('path');
+            const baseDir = 'call_of_cthulhu/kp/issues_base';
+            const dbPath = path.join(baseDir, 'database.json');
+            const submittedPath = path.join(baseDir, 'submitted_data.json');
 
-            const submitted = JSON.parse(fs.readFileSync('submitted_data.json', 'utf8'));
-            const dbPath = 'call_of_cthulhu/kp/issues_base/database.json';
+            const submitted = JSON.parse(fs.readFileSync(submittedPath, 'utf8'));
 
-            // 确保目录和文件存在
-            const dir = path.dirname(dbPath);
-            if (!fs.existsSync(dir)) {
-              fs.mkdirSync(dir, { recursive: true });
-            }
             let existing = [];
             if (fs.existsSync(dbPath)) {
               try {
@@ -137,7 +137,6 @@ jobs:
             const allExistingGroups = existing.map(e => e.groupNumber);
             const allExistingAliases = existing.flatMap(e => e.aliases || []);
 
-            // 1. 检查群号完全重复
             for (const entry of newEntries) {
               if (allExistingGroups.includes(entry.groupNumber)) {
                 const conflict = existing.find(e => e.groupNumber === entry.groupNumber);
@@ -145,7 +144,6 @@ jobs:
               }
             }
 
-            // 2. 检查群号部分相似（包含关系）
             for (const entry of newEntries) {
               const similar = existing.filter(e => 
                 e.groupNumber.includes(entry.groupNumber) || entry.groupNumber.includes(e.groupNumber)
@@ -155,7 +153,6 @@ jobs:
               }
             }
 
-            // 3. 检查别名冲突（完全匹配）
             for (const entry of newEntries) {
               const conflictAliases = entry.aliases.filter(a => allExistingAliases.includes(a));
               if (conflictAliases.length > 0) {
@@ -163,7 +160,6 @@ jobs:
               }
             }
 
-            // 4. 检查新数据内部群号重复
             const newGroupNumbers = newEntries.map(e => e.groupNumber);
             const internalDup = newGroupNumbers.filter((v, i, a) => a.indexOf(v) !== i);
             if (internalDup.length > 0) {
@@ -171,20 +167,21 @@ jobs:
             }
 
             const reportContent = report.length ? report.join('\n\n') : '✅ 所有检查通过，未发现冲突或异常。';
-            fs.writeFileSync('report.md', reportContent);
+            const reportPath = path.join(baseDir, 'report.md');
+            fs.writeFileSync(reportPath, reportContent);
             core.exportVariable('REPORT', reportContent);
 
-            // 保存处理后的条目数组供更新步骤使用
-            fs.writeFileSync('new_entries.json', JSON.stringify(newEntries, null, 2));
+            const newEntriesPath = path.join(baseDir, 'new_entries.json');
+            fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
 
       - name: Update Database File
         run: |
           node -e "
             const fs = require('fs');
             const path = require('path');
-            const dbPath = 'call_of_cthulhu/kp/issues_base/database.json';
-            const dir = path.dirname(dbPath);
-            if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+            const baseDir = 'call_of_cthulhu/kp/issues_base';
+            const dbPath = path.join(baseDir, 'database.json');
+            const newEntriesPath = path.join(baseDir, 'new_entries.json');
 
             let existing = [];
             if (fs.existsSync(dbPath)) {
@@ -192,7 +189,7 @@ jobs:
               if (!Array.isArray(existing)) existing = [];
             }
 
-            const newEntries = JSON.parse(fs.readFileSync('new_entries.json', 'utf8'));
+            const newEntries = JSON.parse(fs.readFileSync(newEntriesPath, 'utf8'));
 
             for (const entry of newEntries) {
               const idx = existing.findIndex(e => e.key === entry.key);
@@ -206,9 +203,15 @@ jobs:
             fs.writeFileSync(dbPath, JSON.stringify(existing, null, 2));
           "
 
+      - name: Clean up temporary files
+        run: |
+          rm -f call_of_cthulhu/kp/issues_base/submitted_data.json
+          rm -f call_of_cthulhu/kp/issues_base/new_entries.json
+          rm -f call_of_cthulhu/kp/issues_base/report.md
+
       - name: Debug - List generated files
         run: |
-          echo "=== 检查生成的目录和文件 ==="
+          echo "=== 检查目标目录文件 ==="
           ls -la call_of_cthulhu/kp/issues_base/ || echo "目录不存在"
           echo "=== database.json 内容 ==="
           cat call_of_cthulhu/kp/issues_base/database.json || echo "文件不存在"
@@ -219,7 +222,7 @@ jobs:
         id: create-pr
         uses: peter-evans/create-pull-request@v6
         with:
-          base: main   # 如果默认分支不是 main，请改为你的默认分支名
+          base: main
           commit-message: "data: update from issue #${{ github.event.issue.number }}"
           branch: "kp-data/issue-${{ github.event.issue.number }}"
           title: "[KP数据更新] Issue #${{ github.event.issue.number }}"
@@ -229,7 +232,7 @@ jobs:
 
             ## 📊 校验报告
             ${{ env.REPORT }}
-          labels: "data-update"
+          labels: "kp-pr, data-update"
           delete-branch: true
 
       - name: Comment Success on Issue
