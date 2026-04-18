@@ -1,5 +1,9 @@
 [
   {
+    "key": "阿斯蒙蒂斯之链coa",
+    "groupNumber": "581885602"
+  },
+  {
     "key": "哀歌弥赛亚",
     "groupNumber": "609355937",
     "aliases": [
@@ -13,6 +17,18 @@
   {
     "key": "暗影狂奔",
     "groupNumber": "245525828"
+  },
+  {
+    "key": "拜昆仑",
+    "groupNumber": "248817589"
+  },
+  {
+    "key": "边狱巴士同人规则",
+    "groupNumber": "765965290"
+  },
+  {
+    "key": "波子汽水",
+    "groupNumber": "562672318"
   },
   {
     "key": "ABO同工同酬",
@@ -32,5 +48,16 @@
   {
     "key": "Antinomy",
     "groupNumber": "101476385"
+  },
+  {
+    "key": "BASH",
+    "groupNumber": "774156947",
+    "aliases": [
+      "燃星"
+    ]
+  },
+  {
+    "key": "Bubble on Stage",
+    "groupNumber": "734220119"
   }
 ]
