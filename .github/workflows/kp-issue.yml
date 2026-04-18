@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   process:
-    if: contains(github.event.issue.labels.*.name, 'data-submission')
+    if: contains(github.event.issue.labels.*.name, 'kp-data')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
