@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776603301
+// @timestamp    1776603537
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776603301;
+    return 1776603537;
 }
 
 // 提醒历史
@@ -231,7 +231,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 	"龙台掠雪": { groupNumber: "921013368*官方禁言通知\n1051220082*同好交流" },
 	"龙王的奥德赛": { groupNumber: "238873224" },
-	"卢埃德街的海鸣": { groupNumber: "972416799*下载" },
+	"卢埃德街的海鸣": { groupNumber: "972416799*下载", aliases: ["性转潜入免女郎俱乐部是认真的吗"] },
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕","吕布"] },
 	"绿色三角洲": { groupNumber: "623759380、984765632、253302384、1061755248", aliases: ["dg"] },
 	"绿月": { groupNumber: "1064264349*下载" },
@@ -468,6 +468,7 @@ const groupMap = {
 	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
 	"周边": { groupNumber: "945344459*汇总\n1073238820*交易", aliases: ["谷子"] },
 	"烛堡": { groupNumber: "467303448" },
+	"撞邪": { groupNumber: "415568723" },
 	"追书人": { groupNumber: "942014926" },
 	"坠入阿弗纳斯": { groupNumber: "223713820" },
 	"左川之国失落谭": { groupNumber: "770779991", aliases: ["左川"] },
@@ -482,6 +483,7 @@ const groupMap = {
 	"ccf": { groupNumber: "805511454*搭房\n1060652550*招募" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
+	"fist": { groupNumber: "830324938" },
 	"GinGin": { groupNumber: "1035861353" },
 	"GODARCA": { groupNumber: "869783432" },
 	"GURPS": { groupNumber: "577412220" },
