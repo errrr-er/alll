@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776603638
+// @timestamp    1776605748
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776603638;
+    return 1776605748;
 }
 
 // 提醒历史
@@ -190,7 +190,7 @@ const groupMap = {
 	"剪月集": { groupNumber: "631939804" },
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289*下载", aliases: ["潮水"] },
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911*下载", aliases: ["钟表"] },
-	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n302014132*边狱巴士\n862922419*崩铁", aliases: ["语擦"] },
+	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n302014132*边狱巴士\n862922419*崩铁\n223628950*第五", aliases: ["语擦"] },
 	"教师A的终焉": { groupNumber: "966092780*下载", aliases: ["7-Day Cricle","七日之轮"] },
 	"今古空名": { groupNumber: "962147366" },
 	"金酒狂热": { groupNumber: "794429121" },
@@ -231,6 +231,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 	"龙台掠雪": { groupNumber: "921013368*官方禁言通知\n1051220082*同好交流" },
 	"龙王的奥德赛": { groupNumber: "238873224" },
+	"龙族": { groupNumber: "603211139" },
 	"卢埃德街的海鸣": { groupNumber: "972416799*下载", aliases: ["性转潜入免女郎俱乐部是认真的吗"] },
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕","吕布"] },
 	"绿色三角洲": { groupNumber: "623759380、984765632、253302384、1061755248", aliases: ["dg"] },
@@ -399,6 +400,7 @@ const groupMap = {
 	"猩红文档": { groupNumber: "159022627" },
 	"行行重": { groupNumber: "720893039" },
 	"幸福与心动的民谣": { groupNumber: "1036780211" },
+	"性福安心委員会": { groupNumber: "https://koufukuanshiniinkai.wixsite.com/trpg", aliases: ["委员会"] },
 	"虚白馆·无人生还": { groupNumber: "1085269036" },
 	"虚诞的毁灭": { groupNumber: "1046244155" },
 	"雪山密室": { groupNumber: "901413729" },
@@ -447,6 +449,7 @@ const groupMap = {
 	"月背迷踪": { groupNumber: "1037660739*下载" },
 	"月蜂": { groupNumber: "110208332" },
 	"月计": { groupNumber: "702203298" },
+	"云黑": { groupNumber: "795251459" },
 	"再见新世界": { groupNumber: "1004914022*下载\n909369023*KP" },
 	"造物者": { groupNumber: "948914482" },
 	"斩我": { groupNumber: "776965370" },
@@ -465,7 +468,7 @@ const groupMap = {
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"掷骰演出": { groupNumber: "1090720849*下载" },
 	"终焉之歌为谁而唱": { groupNumber: "272502055" },
-	"众妙之门": { groupNumber: "785654926", aliases: ["zmzm"] },
+	"众妙之门": { groupNumber: "785654926、651350563", aliases: ["zmzm"] },
 	"周边": { groupNumber: "945344459*汇总\n1073238820*交易", aliases: ["谷子"] },
 	"烛堡": { groupNumber: "467303448" },
 	"撞邪": { groupNumber: "415568723" },
@@ -482,6 +485,7 @@ const groupMap = {
 	"Bubble on Stage": { groupNumber: "734220119" },
 	"CandelaObscura": { groupNumber: "1053180006*下载\n1049162012*GM", aliases: ["暗烛"] },
 	"ccf": { groupNumber: "805511454*搭房\n1060652550*招募" },
+	"coj模组": { groupNumber: "530070122" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
 	"fist": { groupNumber: "830324938" },
@@ -499,6 +503,7 @@ const groupMap = {
 	"MTG世设": { groupNumber: "1043664376" },
 	"nobody": { groupNumber: "694908547", aliases: ["nbd"] },
 	"one way straight": { groupNumber: "978645254*下载" },
+	"Over kill the festival": { groupNumber: "https://seesaawiki.jp/trpgyarouzu/d/Over%20kill%20the%20festival" },
 	"PAC": { groupNumber: "720930120" },
 	"pathfinder 2e": { groupNumber: "695214825", aliases: ["pf2"] },
 	"R∈D - Re:Dawn -": { groupNumber: "859997225", aliases: ["R∈D","Re:Dawn","red"] },
