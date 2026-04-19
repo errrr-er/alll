@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776529430
+// @timestamp    1776603301
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776529430;
+    return 1776603301;
 }
 
 // 提醒历史
@@ -84,6 +84,7 @@ const groupMap = {
 	"哀歌弥赛亚": { groupNumber: "609355937", aliases: ["哀歌"] },
 	"暗河": { groupNumber: "1031974789" },
 	"暗影狂奔": { groupNumber: "245525828" },
+	"八方旅人": { groupNumber: "549132432" },
 	"白影": { groupNumber: "825032832*下载+KP" },
 	"白玉风会录": { groupNumber: "942449479" },
 	"柏拉图的余谈": { groupNumber: "574918635" },
@@ -133,6 +134,7 @@ const groupMap = {
 	"恶辣": { groupNumber: "620832218" },
 	"二重身的证迹": { groupNumber: "285230351" },
 	"翻译": { groupNumber: "1073856681、1053204546、972416799、377896614、1040799893、pd59993369、1033917987、1043393781、872345826、1061035045、220150371*韩模、ny40y57197" },
+	"泛界旅者": { groupNumber: "375452673" },
 	"非出版短模组": { groupNumber: "1032540988" },
 	"非正经修仙": { groupNumber: "645560269" },
 	"肥皂学校": { groupNumber: "980188286", aliases: ["肥皂","皂校"] },
@@ -451,7 +453,7 @@ const groupMap = {
 	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
 	"战争神谕": { groupNumber: "413947504" },
 	"蟑螂启示录": { groupNumber: "957865225" },
-	"长天摘星": { groupNumber: "595926395" },
+	"长天摘星": { groupNumber: "552342168*PL\n595926395*KP" },
 	"长兴镇": { groupNumber: "906847246" },
 	"掌中雪": { groupNumber: "860685448*下载" },
 	"沼泽人": { groupNumber: "913354882" },
