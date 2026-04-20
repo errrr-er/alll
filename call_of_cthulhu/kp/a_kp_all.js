@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776605748
+// @timestamp    1776702099
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776605748;
+    return 1776702099;
 }
 
 // 提醒历史
@@ -122,6 +122,7 @@ const groupMap = {
 	"当合欢宗遇上无情道": { groupNumber: "1048818266*下载\n736394722*下载\n112452157*KP", aliases: ["合欢宗"] },
 	"德拉肯海姆之墟": { groupNumber: "856703297" },
 	"地区": { groupNumber: "福建936981574\n江浙沪855687184\n山河四省771840771\n\n北美1057887916\n欧洲1054398710、602634416*coj向", aliases: ["时差"] },
+	"地图制作": { groupNumber: "https://watabou.itch.io/perilous-shores\n大尺度，区域地图，可商用\nhttps://watabou.itch.io/one-page-dungeon\n随机生成，单层地下城地图，可商用\nhttps://watabou.itch.io/medieval-fantasy-city-generator\n中世纪，城镇地图，可商用\nhttps://probabletrain.itch.io/dungeon-scrawl\n方格地下城，扩展度高，可做多层，遵循cc0协议\nhttps://deepnight.itch.io/tabletop-rpg-map-editor\n房间地图，像素二维，可商用\nhttps://probabletrain.itch.io/city-generator\n随机，现代城市地图，可商用\nhttps://watabou.itch.io/neighbourhood\n彩色城镇地图，可商用\nhttps://watabou.itch.io/village-generator\n村庄地图，可商用\nhttps://wyvernindustries.itch.io/stationgen\n空间站地图，可编辑，付费\nhttps://watabou.itch.io/fantasy-manor\n随机庄园，可商用\nhttps://watabou.itch.io/city-viewer\n3D城市，随机，可商用\nhttps://watabou.itch.io/procgen-mansion\n豪宅、洋馆，随机，可制平面图，定制程度高，可商用\nhttps://chillcash.itch.io/map-generator\n世界地图生成\nhttps://ngreend.itch.io/hexmappy\n六角地图\nhttps://thowsenmedia.itch.io/worldshaper\n支持3D的地图、地形生成\nhttps://playest.itch.io/hextml\n六边形地图制作\nhttps://tortue.itch.io/terraingenerator\n2D地形生成" },
 	"电子悖论失乐园": { groupNumber: "995398768*下载\n1033563821*KP", aliases: ["失乐园","电子"] },
 	"东方快车上的恐怖": { groupNumber: "639753886", aliases: ["东快"] },
 	"东京g": { groupNumber: "201906582" },
@@ -254,7 +255,7 @@ const groupMap = {
 	"明镜，仿佛可以斩断春天": { groupNumber: "921034670", aliases: ["明镜斩春","mjzc"] },
 	"溟渊的呼唤": { groupNumber: "431242151", aliases: ["艾桑椎亚","冥渊"] },
 	"命运转轮": { groupNumber: "241837204" },
-	"模组拼车": { groupNumber: "983412936" },
+	"模组拼车": { groupNumber: "686079835、983412936", aliases: ["私翻"] },
 	"魔道书": { groupNumber: "759960406" },
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
 	"魔女与彩爱": { groupNumber: "421693159" },
@@ -366,6 +367,7 @@ const groupMap = {
 	"为谢幕献上祝福的齿轮": { groupNumber: "714364138", aliases: ["齿轮"] },
 	"未交予的落白": { groupNumber: "1007853163" },
 	"文手": { groupNumber: "512451066" },
+	"文字乱码制作": { groupNumber: "https://anytexteditor.com/cn/cursed-text-generator" },
 	"问道苍生": { groupNumber: "758798519、578441689" },
 	"我的同桌才没有那么可爱": { groupNumber: "1076334102*下载\n1022387123*下载\n1085169094*下载\n980074681*KP" },
 	"乌洛波洛斯的末日巡演": { groupNumber: "451471718" },
@@ -495,7 +497,7 @@ const groupMap = {
 	"H:tv": { groupNumber: "684526713" },
 	"insane": { groupNumber: "650600421" },
 	"IQ游行Re：LOAD": { groupNumber: "1062159214" },
-	"log": { groupNumber: "675664988*存放\n985865497*整理" },
+	"log": { groupNumber: "675664988*存放\n873371415*存放\n985865497*整理" },
 	"LUCA": { groupNumber: "1077454734*下载" },
 	"m大随机杀人事件": { groupNumber: "1079465494*下载\n548428936*KP" },
 	"magnificas": { groupNumber: "477317221", aliases: ["mag"] },
