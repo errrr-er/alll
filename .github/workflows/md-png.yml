@@ -27,8 +27,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Puppeteer
-        run: npm install -g puppeteer
+      # 🔁 关键修正：本地安装 puppeteer，而非全局安装
+      - name: Install Puppeteer locally
+        run: npm install puppeteer
 
       - name: Prepare assets
         run: |
@@ -50,13 +51,13 @@ jobs:
               -o "$dir/$name.html"
           done
 
-      - name: HTML to PNG (full page)
+      - name: HTML to PNG (full page screenshot)
         run: |
           find readme_pic/cat -name "*.html" | while read file; do
             png="${file%.html}.png"
             echo "Rendering $file -> $png"
 
-            # 使用 Puppeteer 进行全页面截图
+            # 使用本地 node_modules 中的 puppeteer
             node -e "
               const puppeteer = require('puppeteer');
               (async () => {
