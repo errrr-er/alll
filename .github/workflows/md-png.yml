@@ -17,17 +17,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: install tools
+      - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y pandoc fonts-noto-cjk chromium
+          sudo apt install -y pandoc fonts-noto-cjk
 
-      - name: prepare assets
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Puppeteer
+        run: npm install -g puppeteer
+
+      - name: Prepare assets
         run: |
           mkdir -p readme_pic/cat/assets
           cp -r assets/* readme_pic/cat/assets/
 
-      - name: md -> html
+      - name: Convert MD to HTML
         run: |
           find readme_pic/cat -name "*.md" | while read file; do
             dir=$(dirname "$file")
@@ -42,26 +50,30 @@ jobs:
               -o "$dir/$name.html"
           done
 
-      - name: html -> png
+      - name: HTML to PNG (full page)
         run: |
           find readme_pic/cat -name "*.html" | while read file; do
             png="${file%.html}.png"
-
             echo "Rendering $file -> $png"
 
-            chromium \
-              --headless \
-              --no-sandbox \
-              --disable-gpu \
-              --window-size=900,1200 \
-              --screenshot="$png" \
-              "file://$(realpath $file)"
+            # 使用 Puppeteer 进行全页面截图
+            node -e "
+              const puppeteer = require('puppeteer');
+              (async () => {
+                const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-gpu'] });
+                const page = await browser.newPage();
+                await page.setViewport({ width: 900, height: 800 });
+                await page.goto('file://' + process.cwd() + '/$file', { waitUntil: 'networkidle0' });
+                await page.screenshot({ path: '$png', fullPage: true });
+                await browser.close();
+              })();
+            "
           done
 
-      - name: cleanup html
+      - name: Cleanup HTML files
         run: find readme_pic/cat -name "*.html" -delete
 
-      - name: commit
+      - name: Commit PNGs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
@@ -69,7 +81,7 @@ jobs:
           git add readme_pic/cat
 
           if ! git diff --cached --quiet; then
-            git commit -m "md to png"
+            git commit -m "md to png (full page screenshot)"
             git pull --rebase origin main
             git push origin HEAD:${GITHUB_REF#refs/heads/}
           else
