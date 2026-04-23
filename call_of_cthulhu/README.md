@@ -29,7 +29,7 @@
 - 第二个框是群号（支持数字符号文字混合）
 - 第三个是别名，也可以是缩写（可填也可留空，留空不影响）
 
-![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true))
+![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true)
 
 【其它】
 - 数据组的维护流程从纯人工变成半人工半github action，整个流程刚改完，以及合并了一些多个模组使用同一个下载群的情况，所以也不清楚会不会出问题，有问题随时可@或小窗群主
