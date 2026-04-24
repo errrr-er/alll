@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1776702099
+// @timestamp    1777071518
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1776702099;
+    return 1777071518;
 }
 
 // 提醒历史
@@ -94,6 +94,7 @@ const groupMap = {
 	"匕首之心": { groupNumber: "791858682、583981590" },
 	"彼都": { groupNumber: "952122633" },
 	"边狱巴士同人规则": { groupNumber: "765965290" },
+	"便当杀人事件": { groupNumber: "1098707012*下载" },
 	"别来无恙": { groupNumber: "907810853" },
 	"冰风谷": { groupNumber: "537262507" },
 	"波子汽水": { groupNumber: "562672318" },
@@ -237,6 +238,7 @@ const groupMap = {
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕","吕布"] },
 	"绿色三角洲": { groupNumber: "623759380、984765632、253302384、1061755248", aliases: ["dg"] },
 	"绿月": { groupNumber: "1064264349*下载" },
+	"论道来处十二楼": { groupNumber: "1060537548*下载" },
 	"罗小黑": { groupNumber: "687753523", aliases: ["妖灵会馆"] },
 	"螺旋旅人发问道": { groupNumber: "859933056" },
 	"落石": { groupNumber: "603178528" },
@@ -306,7 +308,7 @@ const groupMap = {
 	"山歌唤梦": { groupNumber: "972586937" },
 	"少恶世界": { groupNumber: "849810896\n少恶世界+蚀甚", aliases: ["蚀甚"] },
 	"深眠雾梦": { groupNumber: "523093958" },
-	"什么叫做kpc……": { groupNumber: "1079232693*下载" },
+	"什么叫做kpc……": { groupNumber: "1079232693*下载", aliases: ["春日宴"] },
 	"神话时代": { groupNumber: "316394180*无全译本" },
 	"神明起舞之日": { groupNumber: "494739702*下载+KP" },
 	"神星落乐": { groupNumber: "831229728" },
@@ -321,6 +323,7 @@ const groupMap = {
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"十六段夜谈": { groupNumber: "938304846" },
 	"石榴": { groupNumber: "1063443035*下载" },
+	"兽与济世之雨": { groupNumber: "1074954896*下载" },
 	"赎罪邮局": { groupNumber: "1064670977" },
 	"属于吾等的安乐之所": { groupNumber: "826771926" },
 	"树不子英雄传": { groupNumber: "960918320", aliases: ["RWBY"] },
@@ -338,7 +341,7 @@ const groupMap = {
 	"逃离深渊": { groupNumber: "513100948" },
 	"讨债鬼": { groupNumber: "973867121*下载", aliases: ["星星的葬礼"] },
 	"提灯铁鼠": { groupNumber: "882067951" },
-	"天才剑修▆▆法则": { groupNumber: "1095791459" },
+	"天才剑修▆▆法则": { groupNumber: "1095791459*下载" },
 	"天地一灯": { groupNumber: "974274779" },
 	"天命所归": { groupNumber: "875210475" },
 	"天启伏诛": { groupNumber: "1075156103*下载\n1093079819*KP(官方)" },
@@ -430,6 +433,7 @@ const groupMap = {
 	"异能警察不是什么英雄": { groupNumber: "873824063" },
 	"异神成渊": { groupNumber: "916464615" },
 	"抑或地位未定": { groupNumber: "1041670093" },
+	"阴霾，与消散的你": { groupNumber: "1091169562*下载" },
 	"应天劫": { groupNumber: "231734390*下载\n2811466327*墙" },
 	"永7": { groupNumber: "1092736604" },
 	"永虹灰归的Polis": { groupNumber: "696523899", aliases: ["永虹"] },
@@ -452,6 +456,7 @@ const groupMap = {
 	"月蜂": { groupNumber: "110208332" },
 	"月计": { groupNumber: "702203298" },
 	"云黑": { groupNumber: "795251459" },
+	"云上仙": { groupNumber: "939600700*下载" },
 	"再见新世界": { groupNumber: "1004914022*下载\n909369023*KP" },
 	"造物者": { groupNumber: "948914482" },
 	"斩我": { groupNumber: "776965370" },
