@@ -2,6 +2,10 @@ name: auto pack
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["kp json"]
+    types:
+      - completed
   push:
     paths:
       - 'call_of_cthulhu/kp/a_kp_all.js'
