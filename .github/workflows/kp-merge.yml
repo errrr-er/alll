@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: coc_kp
+  cancel-in-progress: false
+
 jobs:
   update-js:
     if: |
