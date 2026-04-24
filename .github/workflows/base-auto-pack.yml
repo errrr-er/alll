@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'call_of_cthulhu/kp/**'
-      - 'dice_common/silence/**'
+      - 'call_of_cthulhu/kp/a_kp_all.js'
+      - 'call_of_cthulhu/kp/oliva_kp_all/**'
+      - 'dice_common/silence/a_silence.js'
 
 permissions:
   contents: write
