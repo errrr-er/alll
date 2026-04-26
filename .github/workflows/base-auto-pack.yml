@@ -11,6 +11,7 @@ on:
       - 'call_of_cthulhu/kp/a_kp_all.js'
       - 'call_of_cthulhu/kp/oliva_kp_all/**'
       - 'dice_common/silence/a_silence.js'
+      - 'dice_common/multi_reply/multi.html'
 
 permissions:
   contents: write
@@ -51,6 +52,11 @@ jobs:
       run: |
         zip -j auto_pack/seal_silence.zip dice_common/silence/a_silence.js
 
+    # 多套回复生成器（网页|海豹）
+    - name: Pack seal_multi.zip
+      run: |
+        zip -j auto_pack/seal_multi.zip dice_common/multi_reply/multi.html
+    
     - name: Commit
       run: |
         git config user.name "github-actions[bot]"
