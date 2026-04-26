@@ -1,4 +1,4 @@
-name: auto pack
+name: base auto pack
 
 on:
   workflow_dispatch:
