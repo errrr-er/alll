@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多套回复生成器</title>
+    <style>
+        :root {
+            --bg: #f8f6f3;
+            --card-bg: #ffffff;
+            --text: #2c2416;
+            --text-secondary: #5f5542;
+            --border: #d9cebb;
+            --shadow: 0 2px 12px rgba(60,40,20,0.05);
+            --radius: 10px;
+            --radius-sm: 6px;
+            --accent: #7d5d3c;
+            --btn-secondary: #5b6b7e;
+            --btn-reset: #b0a595;
+            --font-mono: 'SF Mono','Cascadia Code','Consolas','Menlo','PingFang SC','Microsoft YaHei',monospace;
+            --font-sans: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);font-family:var(--font-sans);color:var(--text);line-height:1.6;min-height:100vh;padding:20px;}
+        .container{max-width:1200px;margin:0 auto;display:flex;gap:24px;align-items:flex-start;}
+        .left-panel{flex:0 0 400px;position:sticky;top:20px;display:flex;flex-direction:column;gap:16px;}
+        .output-card{background:var(--card-bg);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);border:1px solid var(--border);display:flex;flex-direction:column;min-height:320px;}
+        .output-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:8px;}
+        .output-title{font-weight:600;font-size:0.95rem;color:#3d2e1c;}
+        .output-badge{font-size:0.75rem;background:#eee4d5;color:#5f4e34;padding:4px 10px;border-radius:12px;font-weight:500;}
+        .output-content{background:#fefcf8;border:1.5px solid #e8e0d2;border-radius:var(--radius-sm);padding:16px 18px;font-family:var(--font-mono);font-size:0.9rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:#2c2416;flex:1;overflow-y:auto;min-height:200px;max-height:500px;}
+        .output-content:empty::before{content:'等待输入...';color:#b8aa94;font-style:italic;font-family:var(--font-sans);}
+        .btn-row{display:flex;gap:10px;flex-wrap:wrap;}
+        .btn{padding:11px 20px;border-radius:24px;border:none;cursor:pointer;font-size:0.9rem;font-weight:600;letter-spacing:0.03em;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;font-family:inherit;}
+        .btn-secondary{background:var(--btn-secondary);color:#fff;flex:1;justify-content:center;}
+        .btn-secondary:hover{filter:brightness(0.9);transform:translateY(-1px);}
+        .btn-reset{background:var(--btn-reset);color:#fff;flex:1;justify-content:center;}
+        .btn-reset:hover{filter:brightness(0.9);transform:translateY(-1px);}
+        .btn-copied{background:#4a8c5c!important;pointer-events:none;}
+
+        .right-panel{flex:1;min-width:0;}
+        .header{margin-bottom:20px;}
+        .header h1{font-size:1.8rem;font-weight:600;letter-spacing:0.04em;color:#3d2e1c;}
+        .header .subtitle{font-size:0.9rem;color:var(--text-secondary);}
+        .tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:2px solid var(--border);}
+        .tab{padding:10px 22px;background:transparent;border:none;border-bottom:3px solid transparent;font-size:0.95rem;font-weight:500;color:var(--text-secondary);cursor:pointer;transition:all 0.2s;letter-spacing:0.02em;font-family:inherit;outline:none;}
+        .tab:hover{color:#3d2e1c;}
+        .tab.active{color:#3d2e1c;border-bottom-color:var(--accent);font-weight:600;}
+        .tab-content{display:none;animation:fadeIn 0.25s ease;}
+        .tab-content.active{display:block;}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+
+        .card{background:var(--card-bg);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
+        .setting-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:16px;}
+        .setting-row label{font-weight:600;font-size:0.9rem;min-width:70px;}
+        .setting-row input[type="text"],.setting-row input[type="number"]{border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;font-size:0.9rem;font-family:inherit;background:#fdfbf7;transition:0.2s;width:130px;}
+        .setting-row input:focus{outline:none;border-color:#b8976e;background:#fff;}
+        .counter-group{display:flex;align-items:center;gap:8px;}
+        .btn-counter{width:36px;height:36px;border-radius:50%;border:1.5px solid #d4c5ac;background:#faf7f2;cursor:pointer;font-size:1.2rem;font-weight:600;color:#3d2e1c;display:flex;align-items:center;justify-content:center;transition:0.2s;}
+        .btn-counter:hover:not(:disabled){background:#f0e8d8;}
+        .btn-counter:disabled{opacity:0.4;cursor:not-allowed;}
+        .counter-value{font-weight:700;font-size:1.3rem;min-width:36px;text-align:center;}
+
+        .branch-list{display:flex;flex-direction:column;gap:14px;margin-bottom:18px;}
+        .branch-item{display:flex;align-items:flex-start;gap:10px;background:#faf8f4;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid #e8dfcf;}
+        .branch-index{font-weight:700;font-size:0.9rem;color:#fff;background:#8b7355;border-radius:4px;padding:3px 8px;min-width:40px;text-align:center;flex-shrink:0;margin-top:2px;}
+        .branch-input{flex:1;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;}
+        .branch-input:focus{outline:none;border-color:#b8976e;}
+
+        .condition-group{margin-left:28px;display:flex;flex-direction:column;gap:6px;}
+        .condition-row{display:flex;align-items:center;gap:8px;}
+        .condition-row input[type="number"]{width:70px;}
+        .condition-row input[type="text"]{flex:1;min-width:120px;}
+        .btn-small{background:#f0e8d8;border:1px solid #d4c5ac;border-radius:4px;padding:4px 10px;font-size:0.8rem;cursor:pointer;font-family:inherit;}
+        .btn-small:hover{background:#e0d2bb;}
+        .footer{text-align:center;margin-top:20px;font-size:0.82rem;color:#b8a894;}
+
+        .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-120px);background:#3d2e1c;color:#fff;padding:10px 22px;border-radius:20px;font-weight:500;font-size:0.9rem;z-index:999;transition:transform 0.35s;}
+        .toast.show{transform:translateX(-50%) translateY(0);}
+        .toast.success{background:#4a7c5c;}
+        @media (max-width:850px){.container{flex-direction:column;}.left-panel{position:static;width:100%;order:-1;}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="output-card">
+                <div class="output-header">
+                    <span class="output-title">生成结果</span>
+                    <span class="output-badge" id="outputBadge">等待输入</span>
+                </div>
+                <div class="output-content" id="outputContent"></div>
+            </div>
+            <div class="btn-row">
+                <button class="btn btn-secondary" id="btnCopy">一键复制</button>
+                <button class="btn btn-reset" id="btnReset">恢复默认</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="header">
+                <h1>多套回复生成器（实时预览）</h1>
+                <p class="subtitle">主适配 | 海豹v2引擎</p>
+                <p class="subtitle">反馈群 | 2150284119</p>
+                <p class="subtitle">GitHub | github.com/errrr-er/alll/tree/main</p>
+            </div>
+            <div class="tabs">
+                <button class="tab active" data-tab="tab-simple">通用</button>
+                <button class="tab" data-tab="tab-jrrp">JRRP</button>
+                <button class="tab" data-tab="tab-future">更多</button>
+            </div>
+
+            <div class="tab-content active" id="tab-simple">
+                <div class="card">
+                    <div class="setting-row"><label>变量名</label><input type="text" id="simpleVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
+                    <div class="setting-row"><label>起始数字</label><input type="number" id="simpleStartNum" value="0" min="0" max="999"></div>
+                    <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="simpleMinus">-</button><span class="counter-value" id="simpleCount">3</span><button class="btn-counter" id="simplePlus">+</button></div></div>
+                </div>
+                <div class="card"><div style="font-weight:600;">分支输出内容</div><div class="branch-list" id="simpleBranchList"></div></div>
+            </div>
+
+            <div class="tab-content" id="tab-jrrp">
+                <div class="card">
+                    <div class="setting-row"><label>变量名</label><input type="text" id="jrrpVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
+                    <div class="setting-row"><label>起始数字</label><input type="number" id="jrrpStartNum" value="0" min="0" max="999"></div>
+                    <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="jrrpMinus">-</button><span class="counter-value" id="jrrpCount">3</span><button class="btn-counter" id="jrrpPlus">+</button></div></div>
+                </div>
+                <div class="card"><div style="font-weight:600;">分支输出内容</div><div id="jrrpBranchList" style="display:flex;flex-direction:column;gap:20px;"></div></div>
+            </div>
+
+            <div class="tab-content" id="tab-future">
+                <div class="card" style="text-align:center;padding:60px 20px;color:#8b7e6b;"><p>开发中……</p></div>
+            </div>
+            <div class="footer">CC-BY-NC-SA 4.0</div>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script>
+        (function(){
+            const STORAGE_KEY = 'persona_gen_v4';
+            const DEFAULT_CONDITIONS = [
+                {value:'95', text:'人品爆表！'},
+                {value:'80', text:'运气还不错！'},
+                {value:'50', text:'人品还行吧'},
+                {value:'10', text:'今天不太行'},
+                {value:'1', text:'流年不利啊！'}
+            ];
+            const DEFAULT_PREFIX = '{$t玩家} 今日人品为{$t人品}，';
+
+            function saveAll(){
+                const state = {
+                    simpleVar: (document.getElementById('simpleVarName').value||'').trim()||'人格',
+                    simpleStart: parseInt(document.getElementById('simpleStartNum').value)||0,
+                    simpleCount: parseInt(document.getElementById('simpleCount').textContent),
+                    simpleContents: getSimpleContents(),
+                    jrrpVar: (document.getElementById('jrrpVarName').value||'').trim()||'人格',
+                    jrrpStart: parseInt(document.getElementById('jrrpStartNum').value)||0,
+                    jrrpCount: parseInt(document.getElementById('jrrpCount').textContent),
+                    jrrpData: getJrrpData()
+                };
+                try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+            }
+
+            function getSimpleContents(){
+                return Array.from(document.querySelectorAll('#simpleBranchList .branch-input')).map(i=>i.value);
+            }
+            function getJrrpData(){
+                return Array.from(document.querySelectorAll('#jrrpBranchList .jrrp-branch')).map(br=>{
+                    const prefix = br.querySelector('.jrrp-prefix').value;
+                    const condRows = br.querySelectorAll('.condition-row');
+                    const conditions = [];
+                    condRows.forEach(row=>{
+                        const val = row.querySelector('.cond-val');
+                        const txt = row.querySelector('.cond-text');
+                        if(val && txt) conditions.push({value: val.value, text: txt.value});
+                    });
+                    return {prefix, conditions};
+                });
+            }
+
+            function loadState(){
+                try{ const raw = localStorage.getItem(STORAGE_KEY); if(raw) return JSON.parse(raw); }catch(e){}
+                return null;
+            }
+
+            function applyState(state){
+                document.getElementById('simpleVarName').value = state.simpleVar||'人格';
+                document.getElementById('simpleStartNum').value = state.simpleStart||0;
+                document.getElementById('simpleCount').textContent = state.simpleCount||3;
+                renderSimpleBranches(state.simpleCount||3, state.simpleContents||['输入1','输入2','输入3']);
+                document.getElementById('jrrpVarName').value = state.jrrpVar||'人格';
+                document.getElementById('jrrpStartNum').value = state.jrrpStart||0;
+                document.getElementById('jrrpCount').textContent = state.jrrpCount||3;
+                renderJrrpBranches(state.jrrpCount||3, state.jrrpData);
+            }
+
+            function renderSimpleBranches(count, contents){
+                const container = document.getElementById('simpleBranchList');
+                container.innerHTML = '';
+                const start = parseInt(document.getElementById('simpleStartNum').value)||0;
+                for(let i=0;i<count;i++){
+                    const div = document.createElement('div');
+                    div.className='branch-item';
+                    div.innerHTML = `<span class="branch-index">${start+i}</span><input type="text" class="branch-input" value="${escapeHtml(contents[i]||'')}">`;
+                    container.appendChild(div);
+                    div.querySelector('input').addEventListener('input', ()=>{ saveAll(); updateOutput(); });
+                }
+                document.getElementById('simpleCount').textContent = count;
+                updateOutput();
+            }
+
+            function renderJrrpBranches(count, data){
+                const container = document.getElementById('jrrpBranchList');
+                container.innerHTML = '';
+                const start = parseInt(document.getElementById('jrrpStartNum').value)||0;
+                for(let i=0;i<count;i++){
+                    const branch = document.createElement('div');
+                    branch.className='jrrp-branch';
+                    branch.style.border='1px solid #ddd2c2';
+                    branch.style.borderRadius='8px';
+                    branch.style.padding='14px';
+                    const prefix = (data && data[i] && data[i].prefix) ? data[i].prefix : DEFAULT_PREFIX;
+                    const conditions = (data && data[i] && data[i].conditions && data[i].conditions.length>0) 
+                                        ? data[i].conditions 
+                                        : JSON.parse(JSON.stringify(DEFAULT_CONDITIONS));
+                    branch.innerHTML = `
+                        <div style="font-weight:600;margin-bottom:8px;">分支 ${start+i}</div>
+                        <div class="setting-row"><label>前缀文本</label><input type="text" class="jrrp-prefix" value="${escapeHtml(prefix)}" style="flex:1;"></div>
+                        <div class="condition-group"></div>
+                        <button class="btn-small btn-add-condition" style="margin-top:8px;">+ 条件</button>
+                    `;
+                    container.appendChild(branch);
+                    const condGroup = branch.querySelector('.condition-group');
+                    const renderConditions = ()=>{
+                        condGroup.innerHTML = '';
+                        conditions.forEach((c, idx)=>{
+                            const row = document.createElement('div');
+                            row.className='condition-row';
+                            row.innerHTML = `
+                                <span>$t人品 &gt; </span>
+                                <input type="number" class="cond-val" value="${c.value}" min="0" style="width:60px;">
+                                <span> ? </span>
+                                <input type="text" class="cond-text" value="${escapeHtml(c.text)}" style="flex:1;">
+                                <button class="btn-small" style="color:red;">删除</button>
+                            `;
+                            condGroup.appendChild(row);
+                            row.querySelector('.cond-val').addEventListener('input', ()=>{
+                                c.value = row.querySelector('.cond-val').value;
+                                saveAll(); updateOutput();
+                            });
+                            row.querySelector('.cond-text').addEventListener('input', ()=>{
+                                c.text = row.querySelector('.cond-text').value.replace(/，/g, ','); // 自动替换中文逗号
+                                saveAll(); updateOutput();
+                            });
+                            row.querySelector('button').addEventListener('click', ()=>{
+                                conditions.splice(idx,1);
+                                if(conditions.length===0) conditions.push({value:'0',text:'默认'});
+                                renderConditions();
+                                saveAll(); updateOutput();
+                            });
+                        });
+                    };
+                    renderConditions();
+                    branch.querySelector('.btn-add-condition').addEventListener('click', ()=>{
+                        conditions.push({value:'0', text:'新条件'});
+                        renderConditions();
+                        saveAll(); updateOutput();
+                    });
+                    branch.querySelector('.jrrp-prefix').addEventListener('input', ()=>{
+                        saveAll(); updateOutput();
+                    });
+                }
+                document.getElementById('jrrpCount').textContent = count;
+                updateOutput();
+            }
+
+            function escapeHtml(s){ const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+            function updateOutput(){
+                const activeTab = document.querySelector('.tab.active').dataset.tab;
+                if(activeTab==='tab-simple') generateSimpleOutput();
+                else if(activeTab==='tab-jrrp') generateJrrpOutput();
+            }
+
+            function generateSimpleOutput(){
+                const varName = (document.getElementById('simpleVarName').value||'').trim()||'人格';
+                const start = parseInt(document.getElementById('simpleStartNum').value)||0;
+                const inputs = document.querySelectorAll('#simpleBranchList .branch-input');
+                const lines = ['{%'];
+                inputs.forEach((inp, idx)=> lines.push(`if $g${varName}==${start+idx} {$t输出="${inp.value}"};`));
+                lines.push('%}');
+                document.getElementById('outputContent').textContent = lines.join('\n');
+                document.getElementById('outputBadge').textContent = `通用 ${inputs.length} 分支`;
+            }
+
+            function generateJrrpOutput(){
+                const varName = (document.getElementById('jrrpVarName').value||'').trim()||'人格';
+                const start = parseInt(document.getElementById('jrrpStartNum').value)||0;
+                const data = getJrrpData();
+                const lines = ['{'];
+                data.forEach((br, idx)=>{
+                    const prefix = br.prefix || '';
+                    if(br.conditions.length===0) return;
+                    const lastIdx = br.conditions.length - 1;
+                    const conds = br.conditions.map((c, i)=>{
+                        const val = c.value || '0';
+                        const txt = (c.text || '').replace(/，/g, ','); // 确保英文逗号
+                        if(i === lastIdx) return `1 ? '${txt}'`; // 兜底条件
+                        return `$t人品 > ${val} ? '${txt}'`;
+                    });
+                    const condChain = '{%\n' + conds.join(',\n') + '\n%}';
+                    const content = prefix + condChain;
+                    lines.push(`if $g${varName}==${start+idx} {$t输出 = \`${content}\`};`);
+                });
+                lines.push('}{$t输出}');
+                document.getElementById('outputContent').textContent = lines.join('\n');
+                document.getElementById('outputBadge').textContent = `JRRP ${data.length} 分支`;
+            }
+
+            function bindCountButtons(minusId, plusId, countId, renderFn, getDataFn){
+                document.getElementById(minusId).addEventListener('click', ()=>{
+                    let cnt = parseInt(document.getElementById(countId).textContent);
+                    if(cnt>1){ cnt--; document.getElementById(countId).textContent = cnt; renderFn(cnt, getDataFn()); saveAll(); updateOutput(); }
+                });
+                document.getElementById(plusId).addEventListener('click', ()=>{
+                    let cnt = parseInt(document.getElementById(countId).textContent);
+                    if(cnt<20){ cnt++; document.getElementById(countId).textContent = cnt; renderFn(cnt, getDataFn()); saveAll(); updateOutput(); }
+                });
+            }
+
+            bindCountButtons('simpleMinus','simplePlus','simpleCount', (cnt)=>{
+                const conts = getSimpleContents();
+                while(conts.length < cnt) conts.push(`输入${conts.length+1}`);
+                conts.length = cnt;
+                renderSimpleBranches(cnt, conts);
+            }, ()=> getSimpleContents());
+
+            bindCountButtons('jrrpMinus','jrrpPlus','jrrpCount', (cnt, prevData)=>{
+                const data = prevData || getJrrpData();
+                while(data.length < cnt) data.push({prefix: DEFAULT_PREFIX, conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))});
+                data.length = cnt;
+                renderJrrpBranches(cnt, data);
+            }, ()=> getJrrpData());
+
+            document.getElementById('simpleStartNum').addEventListener('input', ()=>{
+                const cnt = parseInt(document.getElementById('simpleCount').textContent);
+                renderSimpleBranches(cnt, getSimpleContents());
+                saveAll();
+            });
+            document.getElementById('jrrpStartNum').addEventListener('input', ()=>{
+                const cnt = parseInt(document.getElementById('jrrpCount').textContent);
+                renderJrrpBranches(cnt, getJrrpData());
+                saveAll();
+            });
+
+            document.querySelectorAll('.tab').forEach(tab=>{
+                tab.addEventListener('click', ()=>{
+                    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+                    tab.classList.add('active');
+                    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+                    document.getElementById(tab.dataset.tab).classList.add('active');
+                    updateOutput();
+                });
+            });
+
+            document.getElementById('btnCopy').addEventListener('click', ()=>{
+                const text = document.getElementById('outputContent').textContent;
+                if(!text.trim()) return;
+                navigator.clipboard.writeText(text).then(()=>{
+                    const btn = document.getElementById('btnCopy');
+                    btn.classList.add('btn-copied'); btn.textContent='已复制';
+                    setTimeout(()=>{ btn.classList.remove('btn-copied'); btn.textContent='一键复制'; },1800);
+                    showToast('复制成功');
+                }).catch(()=> showToast('复制失败'));
+            });
+
+            document.getElementById('btnReset').addEventListener('click', ()=>{
+                if(confirm('是否重置所有内容？')){
+                    const defaultJrrpData = Array(3).fill(null).map(()=>({
+                        prefix: DEFAULT_PREFIX,
+                        conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))
+                    }));
+                    applyState({
+                        simpleVar:'人格', simpleStart:0, simpleCount:3,
+                        simpleContents:['输入1','输入2','输入3'],
+                        jrrpVar:'人格', jrrpStart:0, jrrpCount:3,
+                        jrrpData: defaultJrrpData
+                    });
+                    saveAll(); showToast('已恢复默认');
+                }
+            });
+
+            function showToast(msg){
+                const t = document.getElementById('toast');
+                t.textContent = msg; t.className='toast show';
+                setTimeout(()=>t.classList.remove('show'), 2000);
+            }
+
+            const saved = loadState();
+            if(saved) applyState(saved);
+            else {
+                const defaultJrrpData = Array(3).fill(null).map(()=>({
+                    prefix: DEFAULT_PREFIX,
+                    conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))
+                }));
+                applyState({
+                    simpleVar:'人格', simpleStart:0, simpleCount:3,
+                    simpleContents:['输入1','输入2','输入3'],
+                    jrrpVar:'人格', jrrpStart:0, jrrpCount:3,
+                    jrrpData: defaultJrrpData
+                });
+            }
+            saveAll();
+            updateOutput();
+        })();
+    </script>
+</body>
+</html>
