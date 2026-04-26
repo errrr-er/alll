@@ -117,7 +117,7 @@
         <div class="right-panel">
             <div class="header">
                 <h1>多套回复生成器（实时预览）</h1>
-                <p class="subtitle">主适配 | 海豹v2引擎</p>
+                <p class="subtitle">主适配 | 海豹v1和v2引擎</p>
                 <p class="subtitle">反馈群 | 2150284119</p>
                 <p class="subtitle">GitHub | github.com/errrr-er/alll/tree/main</p>
             </div>
@@ -160,7 +160,7 @@
 
     <script>
         (function(){
-            const STORAGE_KEY = 'persona_gen_v6';
+            const STORAGE_KEY = 'persona_gen_v7';
             const DEFAULT_CONDITIONS = [
                 {value:'95', text:'人品爆表！'},
                 {value:'80', text:'运气还不错！'},
@@ -360,7 +360,6 @@
                     const textareas = br.querySelectorAll('.auto-textarea');
                     const parts = [];
                     textareas.forEach((ta, j)=>{
-                        // 第一个输出不加数字，第二个开始加数字（从1开始）
                         const suffix = j === 0 ? '' : j;
                         parts.push(`$t${outVar}${suffix}="${ta.value}"`);
                     });
@@ -368,7 +367,6 @@
                     const semicolon = isLast ? '' : ';';
                     lines.push(`if $g${varName}==${start+idx} {${parts.join('; ')}}${semicolon}`);
                 });
-                // 输出变量列表（第一个没有数字，后续添加数字）
                 let outVars = '';
                 for(let j=0;j<outCount;j++){
                     const suffix = j === 0 ? '' : j;
@@ -390,17 +388,19 @@
                     const prefix = br.prefix || '';
                     if(br.conditions.length===0) return;
                     const lastCondIdx = br.conditions.length - 1;
-                    const conds = br.conditions.map((c, i)=>{
+                    const condLines = br.conditions.map((c, i)=>{
                         const val = c.value || '0';
                         const txt = (c.text || '').replace(/，/g, ',');
-                        if(i === lastCondIdx) return `1 ? '${txt}'`;
-                        return `$t人品 > ${val} ? '${txt}'`;
+                        const isLast = i === lastCondIdx;
+                        return `    ${isLast ? '1' : `$t人品 > ${val}`} ? '${txt}'${isLast ? '' : ','}`;
                     });
-                    const condChain = '{%\n' + conds.join(',\n') + '\n%}';
-                    const content = prefix + condChain;
-                    const isLast = (idx === total - 1);
-                    const semicolon = isLast ? '' : ';';
-                    lines.push(`if $g${varName}==${start+idx} {$t${outVar} = \`${content}\`}${semicolon}`);
+                    // 生成 $t状态 赋值
+                    const statusAssignment = `  $t状态 =\n${condLines.join('\n')}\n  ;`;
+                    // 生成 $t输出 赋值（使用反引号模板字符串）
+                    const outputAssignment = `  $t${outVar} = \`${prefix}{$t状态}\``;
+                    const isLastBranch = (idx === total - 1);
+                    const semicolon = isLastBranch ? '' : ';';
+                    lines.push(`if $g${varName}==${start+idx} {\n${statusAssignment}\n${outputAssignment}\n}${semicolon}`);
                 });
                 lines.push('}{$t' + outVar + '}');
                 document.getElementById('outputContent').textContent = lines.join('\n');
