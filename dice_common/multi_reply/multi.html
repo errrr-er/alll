@@ -53,7 +53,10 @@
         .card{background:var(--card-bg);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
         .setting-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:16px;}
         .setting-row label{font-weight:600;font-size:0.9rem;min-width:70px;}
-        .setting-row input[type="text"],.setting-row input[type="number"]{border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;font-size:0.9rem;font-family:inherit;background:#fdfbf7;transition:0.2s;width:130px;}
+        .setting-row input[type="text"],.setting-row input[type="number"]{
+            border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
+            font-size:0.9rem;font-family:inherit;background:#fdfbf7;transition:0.2s;width:130px;
+        }
         .setting-row input:focus{outline:none;border-color:#b8976e;background:#fff;}
         .counter-group{display:flex;align-items:center;gap:8px;}
         .btn-counter{width:36px;height:36px;border-radius:50%;border:1.5px solid #d4c5ac;background:#faf7f2;cursor:pointer;font-size:1.2rem;font-weight:600;color:#3d2e1c;display:flex;align-items:center;justify-content:center;transition:0.2s;}
@@ -64,15 +67,28 @@
         .branch-list{display:flex;flex-direction:column;gap:14px;margin-bottom:18px;}
         .branch-item{display:flex;align-items:flex-start;gap:10px;background:#faf8f4;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid #e8dfcf;}
         .branch-index{font-weight:700;font-size:0.9rem;color:#fff;background:#8b7355;border-radius:4px;padding:3px 8px;min-width:40px;text-align:center;flex-shrink:0;margin-top:2px;}
-        .branch-input{flex:1;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;}
-        .branch-input:focus{outline:none;border-color:#b8976e;}
+
+        /* 统一的可扩展文本域 */
+        .auto-textarea{
+            flex:1;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
+            font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;
+            resize:none;overflow:hidden;min-height:38px;line-height:1.5;
+        }
+        .auto-textarea:focus{outline:none;border-color:#b8976e;}
 
         .condition-group{margin-left:28px;display:flex;flex-direction:column;gap:6px;}
-        .condition-row{display:flex;align-items:center;gap:8px;}
-        .condition-row input[type="number"]{width:70px;}
-        .condition-row input[type="text"]{flex:1;min-width:120px;}
-        .btn-small{background:#f0e8d8;border:1px solid #d4c5ac;border-radius:4px;padding:4px 10px;font-size:0.8rem;cursor:pointer;font-family:inherit;}
+        .condition-row{display:flex;align-items:flex-start;gap:8px;}
+        .condition-row input[type="number"]{
+            width:70px;flex-shrink:0;
+            /* 统一样式 */
+            border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
+            font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;
+        }
+        .condition-row input[type="number"]:focus{outline:none;border-color:#b8976e;}
+        .condition-row .auto-textarea{flex:1;min-width:120px;}
+        .btn-small{background:#f0e8d8;border:1px solid #d4c5ac;border-radius:4px;padding:4px 10px;font-size:0.8rem;cursor:pointer;font-family:inherit;white-space:nowrap;flex-shrink:0;}
         .btn-small:hover{background:#e0d2bb;}
+
         .footer{text-align:center;margin-top:20px;font-size:0.82rem;color:#b8a894;}
 
         .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-120px);background:#3d2e1c;color:#fff;padding:10px 22px;border-radius:20px;font-weight:500;font-size:0.9rem;z-index:999;transition:transform 0.35s;}
@@ -110,18 +126,22 @@
                 <button class="tab" data-tab="tab-future">更多</button>
             </div>
 
+            <!-- 通用模式 -->
             <div class="tab-content active" id="tab-simple">
                 <div class="card">
                     <div class="setting-row"><label>变量名</label><input type="text" id="simpleVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
+                    <div class="setting-row"><label>输出名</label><input type="text" id="simpleOutVar" value="输出" maxlength="20"><span>前缀 $t</span></div>
                     <div class="setting-row"><label>起始数字</label><input type="number" id="simpleStartNum" value="0" min="0" max="999"></div>
                     <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="simpleMinus">-</button><span class="counter-value" id="simpleCount">3</span><button class="btn-counter" id="simplePlus">+</button></div></div>
                 </div>
                 <div class="card"><div style="font-weight:600;">分支输出内容</div><div class="branch-list" id="simpleBranchList"></div></div>
             </div>
 
+            <!-- JRRP模式 -->
             <div class="tab-content" id="tab-jrrp">
                 <div class="card">
                     <div class="setting-row"><label>变量名</label><input type="text" id="jrrpVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
+                    <div class="setting-row"><label>输出名</label><input type="text" id="jrrpOutVar" value="输出" maxlength="20"><span>前缀 $t</span></div>
                     <div class="setting-row"><label>起始数字</label><input type="number" id="jrrpStartNum" value="0" min="0" max="999"></div>
                     <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="jrrpMinus">-</button><span class="counter-value" id="jrrpCount">3</span><button class="btn-counter" id="jrrpPlus">+</button></div></div>
                 </div>
@@ -138,7 +158,7 @@
 
     <script>
         (function(){
-            const STORAGE_KEY = 'persona_gen_v4';
+            const STORAGE_KEY = 'persona_gen_v5';
             const DEFAULT_CONDITIONS = [
                 {value:'95', text:'人品爆表！'},
                 {value:'80', text:'运气还不错！'},
@@ -148,13 +168,20 @@
             ];
             const DEFAULT_PREFIX = '{$t玩家}今日人品为{$t人品}，';
 
+            function autoResizeTextarea(el) {
+                el.style.height = 'auto';
+                el.style.height = (el.scrollHeight) + 'px';
+            }
+
             function saveAll(){
                 const state = {
                     simpleVar: (document.getElementById('simpleVarName').value||'').trim()||'人格',
+                    simpleOutVar: (document.getElementById('simpleOutVar').value||'').trim()||'输出',
                     simpleStart: parseInt(document.getElementById('simpleStartNum').value)||0,
                     simpleCount: parseInt(document.getElementById('simpleCount').textContent),
                     simpleContents: getSimpleContents(),
                     jrrpVar: (document.getElementById('jrrpVarName').value||'').trim()||'人格',
+                    jrrpOutVar: (document.getElementById('jrrpOutVar').value||'').trim()||'输出',
                     jrrpStart: parseInt(document.getElementById('jrrpStartNum').value)||0,
                     jrrpCount: parseInt(document.getElementById('jrrpCount').textContent),
                     jrrpData: getJrrpData()
@@ -163,7 +190,7 @@
             }
 
             function getSimpleContents(){
-                return Array.from(document.querySelectorAll('#simpleBranchList .branch-input')).map(i=>i.value);
+                return Array.from(document.querySelectorAll('#simpleBranchList .auto-textarea')).map(i=>i.value);
             }
             function getJrrpData(){
                 return Array.from(document.querySelectorAll('#jrrpBranchList .jrrp-branch')).map(br=>{
@@ -186,10 +213,12 @@
 
             function applyState(state){
                 document.getElementById('simpleVarName').value = state.simpleVar||'人格';
+                document.getElementById('simpleOutVar').value = state.simpleOutVar||'输出';
                 document.getElementById('simpleStartNum').value = state.simpleStart||0;
                 document.getElementById('simpleCount').textContent = state.simpleCount||3;
                 renderSimpleBranches(state.simpleCount||3, state.simpleContents||['输入1','输入2','输入3']);
                 document.getElementById('jrrpVarName').value = state.jrrpVar||'人格';
+                document.getElementById('jrrpOutVar').value = state.jrrpOutVar||'输出';
                 document.getElementById('jrrpStartNum').value = state.jrrpStart||0;
                 document.getElementById('jrrpCount').textContent = state.jrrpCount||3;
                 renderJrrpBranches(state.jrrpCount||3, state.jrrpData);
@@ -202,9 +231,14 @@
                 for(let i=0;i<count;i++){
                     const div = document.createElement('div');
                     div.className='branch-item';
-                    div.innerHTML = `<span class="branch-index">${start+i}</span><input type="text" class="branch-input" value="${escapeHtml(contents[i]||'')}">`;
+                    div.innerHTML = `<span class="branch-index">${start+i}</span><textarea class="auto-textarea" rows="1">${escapeHtml(contents[i]||'')}</textarea>`;
                     container.appendChild(div);
-                    div.querySelector('input').addEventListener('input', ()=>{ saveAll(); updateOutput(); });
+                    const textarea = div.querySelector('textarea');
+                    textarea.addEventListener('input', ()=>{
+                        autoResizeTextarea(textarea);
+                        saveAll(); updateOutput();
+                    });
+                    autoResizeTextarea(textarea);
                 }
                 document.getElementById('simpleCount').textContent = count;
                 updateOutput();
@@ -226,11 +260,19 @@
                                         : JSON.parse(JSON.stringify(DEFAULT_CONDITIONS));
                     branch.innerHTML = `
                         <div style="font-weight:600;margin-bottom:8px;">分支 ${start+i}</div>
-                        <div class="setting-row"><label>前缀文本</label><input type="text" class="jrrp-prefix" value="${escapeHtml(prefix)}" style="flex:1;"></div>
+                        <div class="setting-row"><label>前缀文本</label><textarea class="auto-textarea jrrp-prefix" rows="1">${escapeHtml(prefix)}</textarea></div>
                         <div class="condition-group"></div>
                         <button class="btn-small btn-add-condition" style="margin-top:8px;">+ 条件</button>
                     `;
                     container.appendChild(branch);
+
+                    const prefixTextarea = branch.querySelector('.jrrp-prefix');
+                    autoResizeTextarea(prefixTextarea);
+                    prefixTextarea.addEventListener('input', ()=>{
+                        autoResizeTextarea(prefixTextarea);
+                        saveAll(); updateOutput();
+                    });
+
                     const condGroup = branch.querySelector('.condition-group');
                     const renderConditions = ()=>{
                         condGroup.innerHTML = '';
@@ -241,16 +283,20 @@
                                 <span>$t人品 &gt; </span>
                                 <input type="number" class="cond-val" value="${c.value}" min="0" style="width:60px;">
                                 <span> ? </span>
-                                <input type="text" class="cond-text" value="${escapeHtml(c.text)}" style="flex:1;">
+                                <textarea class="auto-textarea cond-text" rows="1">${escapeHtml(c.text)}</textarea>
                                 <button class="btn-small" style="color:red;">删除</button>
                             `;
                             condGroup.appendChild(row);
-                            row.querySelector('.cond-val').addEventListener('input', ()=>{
-                                c.value = row.querySelector('.cond-val').value;
+                            const numInput = row.querySelector('.cond-val');
+                            const textarea = row.querySelector('.cond-text');
+                            autoResizeTextarea(textarea);
+                            numInput.addEventListener('input', ()=>{
+                                c.value = numInput.value;
                                 saveAll(); updateOutput();
                             });
-                            row.querySelector('.cond-text').addEventListener('input', ()=>{
-                                c.text = row.querySelector('.cond-text').value.replace(/，/g, ','); // 自动替换中文逗号
+                            textarea.addEventListener('input', ()=>{
+                                c.text = textarea.value.replace(/，/g, ',');
+                                autoResizeTextarea(textarea);
                                 saveAll(); updateOutput();
                             });
                             row.querySelector('button').addEventListener('click', ()=>{
@@ -265,9 +311,6 @@
                     branch.querySelector('.btn-add-condition').addEventListener('click', ()=>{
                         conditions.push({value:'0', text:'新条件'});
                         renderConditions();
-                        saveAll(); updateOutput();
-                    });
-                    branch.querySelector('.jrrp-prefix').addEventListener('input', ()=>{
                         saveAll(); updateOutput();
                     });
                 }
@@ -285,17 +328,21 @@
 
             function generateSimpleOutput(){
                 const varName = (document.getElementById('simpleVarName').value||'').trim()||'人格';
+                const outVar = (document.getElementById('simpleOutVar').value||'').trim()||'输出';
                 const start = parseInt(document.getElementById('simpleStartNum').value)||0;
-                const inputs = document.querySelectorAll('#simpleBranchList .branch-input');
+                const inputs = document.querySelectorAll('#simpleBranchList .auto-textarea');
                 const lines = ['{%'];
-                inputs.forEach((inp, idx)=> lines.push(`if $g${varName}==${start+idx} {$t输出="${inp.value}"};`));
-                lines.push('%}{$t输出}');
+                inputs.forEach((inp, idx)=>{
+                    lines.push(`if $g${varName}==${start+idx} {$t${outVar}="${inp.value}"};`);
+                });
+                lines.push('%}{$t' + outVar + '}');
                 document.getElementById('outputContent').textContent = lines.join('\n');
                 document.getElementById('outputBadge').textContent = `通用 ${inputs.length} 分支`;
             }
 
             function generateJrrpOutput(){
                 const varName = (document.getElementById('jrrpVarName').value||'').trim()||'人格';
+                const outVar = (document.getElementById('jrrpOutVar').value||'').trim()||'输出';
                 const start = parseInt(document.getElementById('jrrpStartNum').value)||0;
                 const data = getJrrpData();
                 const lines = ['{'];
@@ -305,15 +352,15 @@
                     const lastIdx = br.conditions.length - 1;
                     const conds = br.conditions.map((c, i)=>{
                         const val = c.value || '0';
-                        const txt = (c.text || '').replace(/，/g, ','); // 确保英文逗号
-                        if(i === lastIdx) return `1 ? '${txt}'`; // 兜底条件
+                        const txt = (c.text || '').replace(/，/g, ',');
+                        if(i === lastIdx) return `1 ? '${txt}'`;
                         return `$t人品 > ${val} ? '${txt}'`;
                     });
                     const condChain = '{%\n' + conds.join(',\n') + '\n%}';
                     const content = prefix + condChain;
-                    lines.push(`if $g${varName}==${start+idx} {$t输出 = \`${content}\`};`);
+                    lines.push(`if $g${varName}==${start+idx} {$t${outVar} = \`${content}\`};`);
                 });
-                lines.push('}{$t输出}');
+                lines.push('}{$t' + outVar + '}');
                 document.getElementById('outputContent').textContent = lines.join('\n');
                 document.getElementById('outputBadge').textContent = `JRRP ${data.length} 分支`;
             }
@@ -353,6 +400,12 @@
                 renderJrrpBranches(cnt, getJrrpData());
                 saveAll();
             });
+            document.getElementById('simpleOutVar').addEventListener('input', ()=>{
+                saveAll(); updateOutput();
+            });
+            document.getElementById('jrrpOutVar').addEventListener('input', ()=>{
+                saveAll(); updateOutput();
+            });
 
             document.querySelectorAll('.tab').forEach(tab=>{
                 tab.addEventListener('click', ()=>{
@@ -382,9 +435,9 @@
                         conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))
                     }));
                     applyState({
-                        simpleVar:'人格', simpleStart:0, simpleCount:3,
+                        simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3,
                         simpleContents:['输入1','输入2','输入3'],
-                        jrrpVar:'人格', jrrpStart:0, jrrpCount:3,
+                        jrrpVar:'人格', jrrpOutVar:'输出', jrrpStart:0, jrrpCount:3,
                         jrrpData: defaultJrrpData
                     });
                     saveAll(); showToast('已恢复默认');
@@ -405,9 +458,9 @@
                     conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))
                 }));
                 applyState({
-                    simpleVar:'人格', simpleStart:0, simpleCount:3,
+                    simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3,
                     simpleContents:['输入1','输入2','输入3'],
-                    jrrpVar:'人格', jrrpStart:0, jrrpCount:3,
+                    jrrpVar:'人格', jrrpOutVar:'输出', jrrpStart:0, jrrpCount:3,
                     jrrpData: defaultJrrpData
                 });
             }
