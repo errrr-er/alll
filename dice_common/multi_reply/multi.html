@@ -90,6 +90,14 @@
         .btn-small{background:#f0e8d8;border:1px solid #d4c5ac;border-radius:4px;padding:4px 10px;font-size:0.8rem;cursor:pointer;font-family:inherit;white-space:nowrap;flex-shrink:0;}
         .btn-small:hover{background:#e0d2bb;}
 
+        /* log 卡片内只读文本框 */
+        .log-code-textarea{
+            width:100%;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:10px 12px;
+            font-family:var(--font-mono);font-size:0.9rem;line-height:1.7;background:#fefcf8;
+            resize:vertical;min-height:100px;color:#2c2416;
+        }
+        .log-code-textarea[readonly]{background:#f8f6f2;cursor:default;}
+
         .footer{text-align:center;margin-top:20px;font-size:0.82rem;color:#b8a894;}
 
         .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-120px);background:#3d2e1c;color:#fff;padding:10px 22px;border-radius:20px;font-weight:500;font-size:0.9rem;z-index:999;transition:transform 0.35s;}
@@ -124,6 +132,7 @@
             <div class="tabs">
                 <button class="tab active" data-tab="tab-simple">通用</button>
                 <button class="tab" data-tab="tab-jrrp">JRRP</button>
+                <button class="tab" data-tab="tab-log">LOG计时</button>
                 <button class="tab" data-tab="tab-future">更多</button>
             </div>
 
@@ -153,6 +162,35 @@
                     <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="jrrpMinus">-</button><span class="counter-value" id="jrrpCount">3</span><button class="btn-counter" id="jrrpPlus">+</button></div></div>
                 </div>
                 <div class="card"><div style="font-weight:600;">分支输出内容</div><div id="jrrpBranchList" style="display:flex;flex-direction:column;gap:20px;"></div></div>
+            </div>
+
+            <!-- log计时模式 -->
+            <div class="tab-content" id="tab-log">
+                <div class="card">
+                    <h3>.log new</h3>
+                    <textarea class="log-code-textarea" id="logNewCode" readonly>{ if 1==1 {$g开始时间=$tTimestamp}}{if 1==1{$g开始计时= 1}}{if 1==1{$g总时长= 0}}</textarea>
+                    <button class="btn btn-secondary log-copy-btn" data-target="logNewCode">复制此代码</button>
+                </div>
+                <div class="card">
+                    <h3>.log on</h3>
+                    <textarea class="log-code-textarea" id="logOnCode" readonly>{ if 1 {$g开始时间=$tTimestamp}}{if 1==1{$g开始计时= 1}}
+{$g测试天=$g总时长/1440}天{$g测试时=($g总时长-$g测试天*1440)/60}时{$g测试分=$g总时长-$g测试天*1440-$g测试时*60}分</textarea>
+                    <button class="btn btn-secondary log-copy-btn" data-target="logOnCode">复制此代码</button>
+                </div>
+                <div class="card">
+                    <h3>.log off</h3>
+                    <textarea class="log-code-textarea" id="logOffCode" readonly>{if $g开始计时== 1 {$g结束时间=$tTimestamp}}{if $g开始计时== 1{$g计时=($g结束时间-$g开始时间)/60}}{if $g开始计时== 1{$g总时长=$g总时长+$g计时}}{if $g开始计时== 1{$g开始计时=0}}
+当前用时{$g单次天=$g计时/1440}天{$g单次时=($g计时-$g单次天*1440)/60}时{$g单次分=$g计时-$g单次天*1440-$g单次时*60}分
+已记录{$g测试天=$g总时长/1440}天{$g测试时=($g总时长-$g测试天*1440)/60}时{$g测试分=$g总时长-$g测试天*1440-$g测试时*60}分</textarea>
+                    <button class="btn btn-secondary log-copy-btn" data-target="logOffCode">复制此代码</button>
+                </div>
+                <div class="card">
+                    <h3>.log end</h3>
+                    <textarea class="log-code-textarea" id="logEndCode" readonly>{if $g开始计时== 1 {$g结束时间=$tTimestamp}}{if $g开始计时== 1{$g计时=($g结束时间-$g开始时间)/60}}{if $g开始计时== 1{$g总时长=$g总时长+$g计时}}{if $g开始计时== 1{$g开始计时=0}}
+当前用时{$g单次天=$g计时/1440}天{$g单次时=($g计时-$g单次天*1440)/60}时{$g单次分=$g计时-$g单次天*1440-$g单次时*60}分
+总用时{$g测试天=$g总时长/1440}天{$g测试时=($g总时长-$g测试天*1440)/60}时{$g测试分=$g总时长-$g测试天*1440-$g测试时*60}分</textarea>
+                    <button class="btn btn-secondary log-copy-btn" data-target="logEndCode">复制此代码</button>
+                </div>
             </div>
 
             <div class="tab-content" id="tab-future">
@@ -499,13 +537,31 @@
                 saveAll(); updateOutput();
             });
 
+            document.querySelectorAll('.log-copy-btn').forEach(btn=>{
+                btn.addEventListener('click', ()=>{
+                    const targetId = btn.getAttribute('data-target');
+                    const textarea = document.getElementById(targetId);
+                    if(!textarea) return;
+                    navigator.clipboard.writeText(textarea.value).then(()=>{
+                        btn.classList.add('btn-copied');
+                        btn.textContent='已复制';
+                        setTimeout(()=>{
+                            btn.classList.remove('btn-copied');
+                            btn.textContent='复制此代码';
+                        }, 1800);
+                        showToast('复制成功');
+                    }).catch(()=> showToast('复制失败'));
+                });
+            });
+
             document.querySelectorAll('.tab').forEach(tab=>{
                 tab.addEventListener('click', ()=>{
                     document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
                     tab.classList.add('active');
                     document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
-                    document.getElementById(tab.dataset.tab).classList.add('active');
-                    updateOutput();
+                    const target = document.getElementById(tab.dataset.tab);
+                    if(target) target.classList.add('active');
+                    if(tab.dataset.tab !== 'tab-log') updateOutput();
                 });
             });
 
