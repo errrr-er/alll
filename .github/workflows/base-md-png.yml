@@ -1,4 +1,4 @@
-name: md to png
+name: base md to png
 
 on:
   workflow_dispatch:
