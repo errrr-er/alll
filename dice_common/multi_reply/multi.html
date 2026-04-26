@@ -64,9 +64,12 @@
         .btn-counter:disabled{opacity:0.4;cursor:not-allowed;}
         .counter-value{font-weight:700;font-size:1.3rem;min-width:36px;text-align:center;}
 
-        .branch-list{display:flex;flex-direction:column;gap:14px;margin-bottom:18px;}
-        .branch-item{display:flex;align-items:flex-start;gap:10px;background:#faf8f4;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid #e8dfcf;}
+        .branch-list{display:flex;flex-direction:column;gap:18px;margin-bottom:18px;}
+        .branch-item{display:flex;flex-direction:column;gap:8px;background:#faf8f4;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid #e8dfcf;}
         .branch-index{font-weight:700;font-size:0.9rem;color:#fff;background:#8b7355;border-radius:4px;padding:3px 8px;min-width:40px;text-align:center;flex-shrink:0;margin-top:2px;}
+        .branch-outputs{display:flex;flex-direction:column;gap:6px;margin-left:24px;}
+        .output-row{display:flex;align-items:flex-start;gap:8px;}
+        .output-row label{min-width:45px;font-size:0.85rem;font-weight:500;color:#5f5542;padding-top:8px;}
 
         .auto-textarea{
             flex:1;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
@@ -124,16 +127,19 @@
                 <button class="tab" data-tab="tab-future">更多</button>
             </div>
 
+            <!-- 通用模式 -->
             <div class="tab-content active" id="tab-simple">
                 <div class="card">
                     <div class="setting-row"><label>变量名</label><input type="text" id="simpleVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
                     <div class="setting-row"><label>输出名</label><input type="text" id="simpleOutVar" value="输出" maxlength="20"><span>前缀 $t</span></div>
                     <div class="setting-row"><label>起始数字</label><input type="number" id="simpleStartNum" value="0" min="0" max="999"></div>
                     <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="simpleMinus">-</button><span class="counter-value" id="simpleCount">3</span><button class="btn-counter" id="simplePlus">+</button></div></div>
+                    <div class="setting-row"><label>输出数量</label><div class="counter-group"><button class="btn-counter" id="simpleOutMinus">-</button><span class="counter-value" id="simpleOutCount">1</span><button class="btn-counter" id="simpleOutPlus">+</button></div></div>
                 </div>
                 <div class="card"><div style="font-weight:600;">分支输出内容</div><div class="branch-list" id="simpleBranchList"></div></div>
             </div>
 
+            <!-- JRRP模式 -->
             <div class="tab-content" id="tab-jrrp">
                 <div class="card">
                     <div class="setting-row"><label>变量名</label><input type="text" id="jrrpVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
@@ -154,7 +160,7 @@
 
     <script>
         (function(){
-            const STORAGE_KEY = 'persona_gen_v5';
+            const STORAGE_KEY = 'persona_gen_v6';
             const DEFAULT_CONDITIONS = [
                 {value:'95', text:'人品爆表！'},
                 {value:'80', text:'运气还不错！'},
@@ -175,6 +181,7 @@
                     simpleOutVar: (document.getElementById('simpleOutVar').value||'').trim()||'输出',
                     simpleStart: parseInt(document.getElementById('simpleStartNum').value)||0,
                     simpleCount: parseInt(document.getElementById('simpleCount').textContent),
+                    simpleOutCount: parseInt(document.getElementById('simpleOutCount').textContent),
                     simpleContents: getSimpleContents(),
                     jrrpVar: (document.getElementById('jrrpVarName').value||'').trim()||'人格',
                     jrrpOutVar: (document.getElementById('jrrpOutVar').value||'').trim()||'输出',
@@ -186,7 +193,11 @@
             }
 
             function getSimpleContents(){
-                return Array.from(document.querySelectorAll('#simpleBranchList .auto-textarea')).map(i=>i.value);
+                const branches = document.querySelectorAll('#simpleBranchList .branch-item');
+                return Array.from(branches).map(br=>{
+                    const texts = br.querySelectorAll('.auto-textarea');
+                    return Array.from(texts).map(t=>t.value);
+                });
             }
             function getJrrpData(){
                 return Array.from(document.querySelectorAll('#jrrpBranchList .jrrp-branch')).map(br=>{
@@ -212,7 +223,8 @@
                 document.getElementById('simpleOutVar').value = state.simpleOutVar||'输出';
                 document.getElementById('simpleStartNum').value = state.simpleStart||0;
                 document.getElementById('simpleCount').textContent = state.simpleCount||3;
-                renderSimpleBranches(state.simpleCount||3, state.simpleContents||['输入1','输入2','输入3']);
+                document.getElementById('simpleOutCount').textContent = state.simpleOutCount||1;
+                renderSimpleBranches(state.simpleCount||3, state.simpleOutCount||1, state.simpleContents||[["输入1"]]);
                 document.getElementById('jrrpVarName').value = state.jrrpVar||'人格';
                 document.getElementById('jrrpOutVar').value = state.jrrpOutVar||'输出';
                 document.getElementById('jrrpStartNum').value = state.jrrpStart||0;
@@ -220,23 +232,37 @@
                 renderJrrpBranches(state.jrrpCount||3, state.jrrpData);
             }
 
-            function renderSimpleBranches(count, contents){
+            function renderSimpleBranches(count, outCount, contents){
                 const container = document.getElementById('simpleBranchList');
                 container.innerHTML = '';
                 const start = parseInt(document.getElementById('simpleStartNum').value)||0;
                 for(let i=0;i<count;i++){
                     const div = document.createElement('div');
                     div.className='branch-item';
-                    div.innerHTML = `<span class="branch-index">${start+i}</span><textarea class="auto-textarea" rows="1">${escapeHtml(contents[i]||'')}</textarea>`;
+                    let header = `<div style="display:flex;align-items:center;gap:10px;"><span class="branch-index">${start+i}</span><span style="font-weight:600;">分支 ${start+i}</span></div>`;
+                    let outputsHtml = '<div class="branch-outputs">';
+                    for(let j=0;j<outCount;j++){
+                        const val = (contents[i] && contents[i][j] !== undefined) ? contents[i][j] : `输入${i+1}.${j+1}`;
+                        outputsHtml += `
+                            <div class="output-row">
+                                <label>输出${j}</label>
+                                <textarea class="auto-textarea" rows="1">${escapeHtml(val)}</textarea>
+                            </div>`;
+                    }
+                    outputsHtml += '</div>';
+                    div.innerHTML = header + outputsHtml;
                     container.appendChild(div);
-                    const textarea = div.querySelector('textarea');
-                    textarea.addEventListener('input', ()=>{
-                        autoResizeTextarea(textarea);
-                        saveAll(); updateOutput();
+                    const textareas = div.querySelectorAll('.auto-textarea');
+                    textareas.forEach(ta=>{
+                        ta.addEventListener('input', ()=>{
+                            autoResizeTextarea(ta);
+                            saveAll(); updateOutput();
+                        });
+                        autoResizeTextarea(ta);
                     });
-                    autoResizeTextarea(textarea);
                 }
                 document.getElementById('simpleCount').textContent = count;
+                document.getElementById('simpleOutCount').textContent = outCount;
                 updateOutput();
             }
 
@@ -326,17 +352,31 @@
                 const varName = (document.getElementById('simpleVarName').value||'').trim()||'人格';
                 const outVar = (document.getElementById('simpleOutVar').value||'').trim()||'输出';
                 const start = parseInt(document.getElementById('simpleStartNum').value)||0;
-                const inputs = document.querySelectorAll('#simpleBranchList .auto-textarea');
+                const outCount = parseInt(document.getElementById('simpleOutCount').textContent)||1;
+                const branches = document.querySelectorAll('#simpleBranchList .branch-item');
                 const lines = ['{%'];
-                const total = inputs.length;
-                inputs.forEach((inp, idx)=>{
+                const total = branches.length;
+                branches.forEach((br, idx)=>{
+                    const textareas = br.querySelectorAll('.auto-textarea');
+                    const parts = [];
+                    textareas.forEach((ta, j)=>{
+                        // 第一个输出不加数字，第二个开始加数字（从1开始）
+                        const suffix = j === 0 ? '' : j;
+                        parts.push(`$t${outVar}${suffix}="${ta.value}"`);
+                    });
                     const isLast = (idx === total - 1);
                     const semicolon = isLast ? '' : ';';
-                    lines.push(`if $g${varName}==${start+idx} {$t${outVar}="${inp.value}"}${semicolon}`);
+                    lines.push(`if $g${varName}==${start+idx} {${parts.join('; ')}}${semicolon}`);
                 });
-                lines.push('%}{$t' + outVar + '}');
+                // 输出变量列表（第一个没有数字，后续添加数字）
+                let outVars = '';
+                for(let j=0;j<outCount;j++){
+                    const suffix = j === 0 ? '' : j;
+                    outVars += `{$t${outVar}${suffix}}`;
+                }
+                lines.push('%}' + outVars);
                 document.getElementById('outputContent').textContent = lines.join('\n');
-                document.getElementById('outputBadge').textContent = `通用 ${total} 分支`;
+                document.getElementById('outputBadge').textContent = `通用 ${total} 分支 × ${outCount} 输出`;
             }
 
             function generateJrrpOutput(){
@@ -367,6 +407,7 @@
                 document.getElementById('outputBadge').textContent = `JRRP ${total} 分支`;
             }
 
+            // 通用分支数量绑定
             function bindCountButtons(minusId, plusId, countId, renderFn, getDataFn){
                 document.getElementById(minusId).addEventListener('click', ()=>{
                     let cnt = parseInt(document.getElementById(countId).textContent);
@@ -379,12 +420,51 @@
             }
 
             bindCountButtons('simpleMinus','simplePlus','simpleCount', (cnt)=>{
-                const conts = getSimpleContents();
-                while(conts.length < cnt) conts.push(`输入${conts.length+1}`);
-                conts.length = cnt;
-                renderSimpleBranches(cnt, conts);
+                const outCnt = parseInt(document.getElementById('simpleOutCount').textContent)||1;
+                const currentData = getSimpleContents();
+                while(currentData.length < cnt){
+                    const newBranch = [];
+                    for(let j=0;j<outCnt;j++) newBranch.push(`输入${currentData.length+1}.${j+1}`);
+                    currentData.push(newBranch);
+                }
+                currentData.length = cnt;
+                renderSimpleBranches(cnt, outCnt, currentData);
             }, ()=> getSimpleContents());
 
+            // 通用输出数量调节
+            document.getElementById('simpleOutMinus').addEventListener('click', ()=>{
+                let outCnt = parseInt(document.getElementById('simpleOutCount').textContent);
+                if(outCnt>1){
+                    outCnt--;
+                    document.getElementById('simpleOutCount').textContent = outCnt;
+                    const branchCnt = parseInt(document.getElementById('simpleCount').textContent);
+                    const currentData = getSimpleContents();
+                    for(let i=0;i<branchCnt;i++){
+                        if(!currentData[i]) currentData[i] = [];
+                        while(currentData[i].length < outCnt) currentData[i].push(`输入${i+1}.${currentData[i].length+1}`);
+                        currentData[i].length = outCnt;
+                    }
+                    renderSimpleBranches(branchCnt, outCnt, currentData);
+                    saveAll(); updateOutput();
+                }
+            });
+            document.getElementById('simpleOutPlus').addEventListener('click', ()=>{
+                let outCnt = parseInt(document.getElementById('simpleOutCount').textContent);
+                if(outCnt<10){
+                    outCnt++;
+                    document.getElementById('simpleOutCount').textContent = outCnt;
+                    const branchCnt = parseInt(document.getElementById('simpleCount').textContent);
+                    const currentData = getSimpleContents();
+                    for(let i=0;i<branchCnt;i++){
+                        if(!currentData[i]) currentData[i] = [];
+                        while(currentData[i].length < outCnt) currentData[i].push(`输入${i+1}.${currentData[i].length+1}`);
+                    }
+                    renderSimpleBranches(branchCnt, outCnt, currentData);
+                    saveAll(); updateOutput();
+                }
+            });
+
+            // JRRP 分支数量
             bindCountButtons('jrrpMinus','jrrpPlus','jrrpCount', (cnt, prevData)=>{
                 const data = prevData || getJrrpData();
                 while(data.length < cnt) data.push({prefix: DEFAULT_PREFIX, conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))});
@@ -394,7 +474,8 @@
 
             document.getElementById('simpleStartNum').addEventListener('input', ()=>{
                 const cnt = parseInt(document.getElementById('simpleCount').textContent);
-                renderSimpleBranches(cnt, getSimpleContents());
+                const outCnt = parseInt(document.getElementById('simpleOutCount').textContent);
+                renderSimpleBranches(cnt, outCnt, getSimpleContents());
                 saveAll();
             });
             document.getElementById('jrrpStartNum').addEventListener('input', ()=>{
@@ -437,8 +518,8 @@
                         conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))
                     }));
                     applyState({
-                        simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3,
-                        simpleContents:['输入1','输入2','输入3'],
+                        simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3, simpleOutCount:1,
+                        simpleContents:[["输入1"],["输入2"],["输入3"]],
                         jrrpVar:'人格', jrrpOutVar:'输出', jrrpStart:0, jrrpCount:3,
                         jrrpData: defaultJrrpData
                     });
@@ -460,8 +541,8 @@
                     conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))
                 }));
                 applyState({
-                    simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3,
-                    simpleContents:['输入1','输入2','输入3'],
+                    simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3, simpleOutCount:1,
+                    simpleContents:[["输入1"],["输入2"],["输入3"]],
                     jrrpVar:'人格', jrrpOutVar:'输出', jrrpStart:0, jrrpCount:3,
                     jrrpData: defaultJrrpData
                 });
