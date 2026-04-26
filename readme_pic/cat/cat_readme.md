@@ -36,7 +36,7 @@
     - OC骰
     - 专属回复词（详见.help）
   - activate Scarlet
-    - 纯英骰
+    - 纯英骰（仅回复词）
 
 - 回复词
   - 猫kook
