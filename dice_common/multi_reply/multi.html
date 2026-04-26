@@ -289,7 +289,7 @@
                 const inputs = document.querySelectorAll('#simpleBranchList .branch-input');
                 const lines = ['{%'];
                 inputs.forEach((inp, idx)=> lines.push(`if $g${varName}==${start+idx} {$t输出="${inp.value}"};`));
-                lines.push('%}');
+                lines.push('%}{$t输出}');
                 document.getElementById('outputContent').textContent = lines.join('\n');
                 document.getElementById('outputBadge').textContent = `通用 ${inputs.length} 分支`;
             }
