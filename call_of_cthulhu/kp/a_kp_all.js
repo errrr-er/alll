@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777072074
+// @timestamp    1777211905
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777072074;
+    return 1777211905;
 }
 
 // 提醒历史
@@ -471,7 +471,7 @@ const groupMap = {
 	"镇魂歌": { groupNumber: "709032901" },
 	"正伪的ideal": { groupNumber: "667098598" },
 	"芝加哥之王": { groupNumber: "559366167" },
-	"致让我们死去活来仍然热爱的冰上的一切": { groupNumber: "1087789609*下载\n1087899806*KP" },
+	"致让我们死去活来仍然热爱的冰上的一切": { groupNumber: "1087789609*下载\n1087899806*KP", aliases: ["滑冰"] },
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"掷骰演出": { groupNumber: "1090720849*下载" },
 	"终焉之歌为谁而唱": { groupNumber: "272502055" },
