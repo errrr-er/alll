@@ -20,7 +20,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt update
-          sudo apt install -y pandoc fonts-noto-cjk
+          sudo apt install -y pandoc fonts-noto-cjk imagemagick
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -69,6 +69,8 @@ jobs:
                 await browser.close();
               })();
             "
+            convert "$png" -fuzz 2% -trim +repage "$png"
+            echo "Trimmed $png"
           done
 
       - name: Cleanup HTML files
