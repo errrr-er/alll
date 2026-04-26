@@ -69,7 +69,7 @@ jobs:
                 await browser.close();
               })();
             "
-            convert "$png" -fuzz 2% -trim +repage -bordercolor white -border 20x20 "$png"
+            convert "$png" -fuzz 2% -trim +repage -bordercolor white -border 55x55 "$png"
             echo "Trimmed $png"
           done
 
