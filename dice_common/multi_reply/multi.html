@@ -68,7 +68,6 @@
         .branch-item{display:flex;align-items:flex-start;gap:10px;background:#faf8f4;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid #e8dfcf;}
         .branch-index{font-weight:700;font-size:0.9rem;color:#fff;background:#8b7355;border-radius:4px;padding:3px 8px;min-width:40px;text-align:center;flex-shrink:0;margin-top:2px;}
 
-        /* 统一的可扩展文本域 */
         .auto-textarea{
             flex:1;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
             font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;
@@ -80,7 +79,6 @@
         .condition-row{display:flex;align-items:flex-start;gap:8px;}
         .condition-row input[type="number"]{
             width:70px;flex-shrink:0;
-            /* 统一样式 */
             border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
             font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;
         }
@@ -126,7 +124,6 @@
                 <button class="tab" data-tab="tab-future">更多</button>
             </div>
 
-            <!-- 通用模式 -->
             <div class="tab-content active" id="tab-simple">
                 <div class="card">
                     <div class="setting-row"><label>变量名</label><input type="text" id="simpleVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
@@ -137,7 +134,6 @@
                 <div class="card"><div style="font-weight:600;">分支输出内容</div><div class="branch-list" id="simpleBranchList"></div></div>
             </div>
 
-            <!-- JRRP模式 -->
             <div class="tab-content" id="tab-jrrp">
                 <div class="card">
                     <div class="setting-row"><label>变量名</label><input type="text" id="jrrpVarName" value="人格" maxlength="20"><span>前缀 $g</span></div>
@@ -332,12 +328,15 @@
                 const start = parseInt(document.getElementById('simpleStartNum').value)||0;
                 const inputs = document.querySelectorAll('#simpleBranchList .auto-textarea');
                 const lines = ['{%'];
+                const total = inputs.length;
                 inputs.forEach((inp, idx)=>{
-                    lines.push(`if $g${varName}==${start+idx} {$t${outVar}="${inp.value}"};`);
+                    const isLast = (idx === total - 1);
+                    const semicolon = isLast ? '' : ';';
+                    lines.push(`if $g${varName}==${start+idx} {$t${outVar}="${inp.value}"}${semicolon}`);
                 });
                 lines.push('%}{$t' + outVar + '}');
                 document.getElementById('outputContent').textContent = lines.join('\n');
-                document.getElementById('outputBadge').textContent = `通用 ${inputs.length} 分支`;
+                document.getElementById('outputBadge').textContent = `通用 ${total} 分支`;
             }
 
             function generateJrrpOutput(){
@@ -346,23 +345,26 @@
                 const start = parseInt(document.getElementById('jrrpStartNum').value)||0;
                 const data = getJrrpData();
                 const lines = ['{'];
+                const total = data.length;
                 data.forEach((br, idx)=>{
                     const prefix = br.prefix || '';
                     if(br.conditions.length===0) return;
-                    const lastIdx = br.conditions.length - 1;
+                    const lastCondIdx = br.conditions.length - 1;
                     const conds = br.conditions.map((c, i)=>{
                         const val = c.value || '0';
                         const txt = (c.text || '').replace(/，/g, ',');
-                        if(i === lastIdx) return `1 ? '${txt}'`;
+                        if(i === lastCondIdx) return `1 ? '${txt}'`;
                         return `$t人品 > ${val} ? '${txt}'`;
                     });
                     const condChain = '{%\n' + conds.join(',\n') + '\n%}';
                     const content = prefix + condChain;
-                    lines.push(`if $g${varName}==${start+idx} {$t${outVar} = \`${content}\`};`);
+                    const isLast = (idx === total - 1);
+                    const semicolon = isLast ? '' : ';';
+                    lines.push(`if $g${varName}==${start+idx} {$t${outVar} = \`${content}\`}${semicolon}`);
                 });
                 lines.push('}{$t' + outVar + '}');
                 document.getElementById('outputContent').textContent = lines.join('\n');
-                document.getElementById('outputBadge').textContent = `JRRP ${data.length} 分支`;
+                document.getElementById('outputBadge').textContent = `JRRP ${total} 分支`;
             }
 
             function bindCountButtons(minusId, plusId, countId, renderFn, getDataFn){
