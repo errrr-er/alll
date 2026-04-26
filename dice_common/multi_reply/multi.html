@@ -394,9 +394,7 @@
                         const isLast = i === lastCondIdx;
                         return `    ${isLast ? '1' : `$t人品 > ${val}`} ? '${txt}'${isLast ? '' : ','}`;
                     });
-                    // 生成 $t状态 赋值
                     const statusAssignment = `  $t状态 =\n${condLines.join('\n')}\n  ;`;
-                    // 生成 $t输出 赋值（使用反引号模板字符串）
                     const outputAssignment = `  $t${outVar} = \`${prefix}{$t状态}\``;
                     const isLastBranch = (idx === total - 1);
                     const semicolon = isLastBranch ? '' : ';';
@@ -407,7 +405,6 @@
                 document.getElementById('outputBadge').textContent = `JRRP ${total} 分支`;
             }
 
-            // 通用分支数量绑定
             function bindCountButtons(minusId, plusId, countId, renderFn, getDataFn){
                 document.getElementById(minusId).addEventListener('click', ()=>{
                     let cnt = parseInt(document.getElementById(countId).textContent);
@@ -431,7 +428,6 @@
                 renderSimpleBranches(cnt, outCnt, currentData);
             }, ()=> getSimpleContents());
 
-            // 通用输出数量调节
             document.getElementById('simpleOutMinus').addEventListener('click', ()=>{
                 let outCnt = parseInt(document.getElementById('simpleOutCount').textContent);
                 if(outCnt>1){
@@ -464,7 +460,6 @@
                 }
             });
 
-            // JRRP 分支数量
             bindCountButtons('jrrpMinus','jrrpPlus','jrrpCount', (cnt, prevData)=>{
                 const data = prevData || getJrrpData();
                 while(data.length < cnt) data.push({prefix: DEFAULT_PREFIX, conditions: JSON.parse(JSON.stringify(DEFAULT_CONDITIONS))});
