@@ -135,6 +135,11 @@
                     <div class="setting-row"><label>起始数字</label><input type="number" id="simpleStartNum" value="0" min="0" max="999"></div>
                     <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="simpleMinus">-</button><span class="counter-value" id="simpleCount">3</span><button class="btn-counter" id="simplePlus">+</button></div></div>
                     <div class="setting-row"><label>输出数量</label><div class="counter-group"><button class="btn-counter" id="simpleOutMinus">-</button><span class="counter-value" id="simpleOutCount">1</span><button class="btn-counter" id="simpleOutPlus">+</button></div></div>
+                    <div class="setting-row">
+                        <label>附加判定结果</label>
+                        <input type="checkbox" id="simpleExtraResult" style="width:auto; margin-left:0;">
+                        <span style="font-size:0.85rem; color:#5f5542;">勾选后输出 {$t附加判定结果}</span>
+                    </div>
                 </div>
                 <div class="card"><div style="font-weight:600;">分支输出内容</div><div class="branch-list" id="simpleBranchList"></div></div>
             </div>
@@ -182,6 +187,7 @@
                     simpleStart: parseInt(document.getElementById('simpleStartNum').value)||0,
                     simpleCount: parseInt(document.getElementById('simpleCount').textContent),
                     simpleOutCount: parseInt(document.getElementById('simpleOutCount').textContent),
+                    simpleExtraResult: document.getElementById('simpleExtraResult').checked,
                     simpleContents: getSimpleContents(),
                     jrrpVar: (document.getElementById('jrrpVarName').value||'').trim()||'人格',
                     jrrpOutVar: (document.getElementById('jrrpOutVar').value||'').trim()||'输出',
@@ -224,6 +230,7 @@
                 document.getElementById('simpleStartNum').value = state.simpleStart||0;
                 document.getElementById('simpleCount').textContent = state.simpleCount||3;
                 document.getElementById('simpleOutCount').textContent = state.simpleOutCount||1;
+                document.getElementById('simpleExtraResult').checked = state.simpleExtraResult || false;
                 renderSimpleBranches(state.simpleCount||3, state.simpleOutCount||1, state.simpleContents||[["输入1"]]);
                 document.getElementById('jrrpVarName').value = state.jrrpVar||'人格';
                 document.getElementById('jrrpOutVar').value = state.jrrpOutVar||'输出';
@@ -353,6 +360,7 @@
                 const outVar = (document.getElementById('simpleOutVar').value||'').trim()||'输出';
                 const start = parseInt(document.getElementById('simpleStartNum').value)||0;
                 const outCount = parseInt(document.getElementById('simpleOutCount').textContent)||1;
+                const extraResult = document.getElementById('simpleExtraResult').checked;
                 const branches = document.querySelectorAll('#simpleBranchList .branch-item');
                 const lines = ['{%'];
                 const total = branches.length;
@@ -368,6 +376,9 @@
                     lines.push(`if $g${varName}==${start+idx} {${parts.join('; ')}}${semicolon}`);
                 });
                 let outVars = '';
+                if (extraResult) {
+                    outVars += '{$t附加判定结果}';
+                }
                 for(let j=0;j<outCount;j++){
                     const suffix = j === 0 ? '' : j;
                     outVars += `{$t${outVar}${suffix}}`;
@@ -484,6 +495,9 @@
             document.getElementById('jrrpOutVar').addEventListener('input', ()=>{
                 saveAll(); updateOutput();
             });
+            document.getElementById('simpleExtraResult').addEventListener('change', ()=>{
+                saveAll(); updateOutput();
+            });
 
             document.querySelectorAll('.tab').forEach(tab=>{
                 tab.addEventListener('click', ()=>{
@@ -514,6 +528,7 @@
                     }));
                     applyState({
                         simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3, simpleOutCount:1,
+                        simpleExtraResult: false,
                         simpleContents:[["输入1"],["输入2"],["输入3"]],
                         jrrpVar:'人格', jrrpOutVar:'输出', jrrpStart:0, jrrpCount:3,
                         jrrpData: defaultJrrpData
@@ -537,6 +552,7 @@
                 }));
                 applyState({
                     simpleVar:'人格', simpleOutVar:'输出', simpleStart:0, simpleCount:3, simpleOutCount:1,
+                    simpleExtraResult: false,
                     simpleContents:[["输入1"],["输入2"],["输入3"]],
                     jrrpVar:'人格', jrrpOutVar:'输出', jrrpStart:0, jrrpCount:3,
                     jrrpData: defaultJrrpData
