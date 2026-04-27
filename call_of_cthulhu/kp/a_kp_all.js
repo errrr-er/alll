@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777314184
+// @timestamp    1777314221
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777314184;
+    return 1777314221;
 }
 
 // 提醒历史
@@ -192,7 +192,7 @@ const groupMap = {
 	"剪月集": { groupNumber: "631939804" },
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289*下载", aliases: ["潮水"] },
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911*下载", aliases: ["钟表"] },
-	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n302014132*边狱巴士\n862922419*崩铁\n223628950*第五", aliases: ["语擦"] },
+	"角色桌": { groupNumber: "471191700、363017687\n1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n302014132*边狱巴士\n862922419*崩铁\n223628950*第五\n1079593722*鬼灭", aliases: ["语擦"] },
 	"教师A的终焉": { groupNumber: "966092780*下载", aliases: ["7-Day Cricle","七日之轮"] },
 	"今古空名": { groupNumber: "962147366" },
 	"金酒狂热": { groupNumber: "794429121" },
