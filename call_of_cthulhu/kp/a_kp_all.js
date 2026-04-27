@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777211905
+// @timestamp    1777314184
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777211905;
+    return 1777314184;
 }
 
 // 提醒历史
@@ -144,7 +144,7 @@ const groupMap = {
 	"废楼怪谈": { groupNumber: "563488359" },
 	"焚天之战": { groupNumber: "1065925723" },
 	"疯法师的地城": { groupNumber: "1025248586" },
-	"逢春": { groupNumber: "248473557" },
+	"逢春": { groupNumber: "1103341222" },
 	"凤去台空江自流": { groupNumber: "979768022*下载\n985261346*下载\n瑰绿的决心+天地熔金+凤去台空江自流+人间烟火+问天地", aliases: ["瑰绿的决心","天地熔金","人间烟火","问天地"] },
 	"缝春": { groupNumber: "798106857*KP" },
 	"浮生安梦": { groupNumber: "881234029" },
