@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777314221
+// @timestamp    1777314346
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777314221;
+    return 1777314346;
 }
 
 // 提醒历史
@@ -93,6 +93,7 @@ const groupMap = {
 	"北欧奇谭": { groupNumber: "655192271" },
 	"匕首之心": { groupNumber: "791858682、583981590" },
 	"彼都": { groupNumber: "952122633" },
+	"陛下您这后宫不对劲": { groupNumber: "636253864*下载" },
 	"边狱巴士同人规则": { groupNumber: "765965290" },
 	"便当杀人事件": { groupNumber: "1098707012*下载" },
 	"别来无恙": { groupNumber: "907810853" },
@@ -369,6 +370,7 @@ const groupMap = {
 	"为生命献上砂糖、可可、和肉桂粉": { groupNumber: "628435591*下载\n1037886003*有作者\n817342041*无作者", aliases: ["可可","为生命献上砂糖可可和肉桂粉","糖可桂","tkg"] },
 	"为谢幕献上祝福的齿轮": { groupNumber: "714364138", aliases: ["齿轮"] },
 	"未交予的落白": { groupNumber: "1007853163" },
+	"未命名的路": { groupNumber: "1051535084*下载" },
 	"文手": { groupNumber: "512451066" },
 	"文字乱码制作": { groupNumber: "https://anytexteditor.com/cn/cursed-text-generator" },
 	"问道苍生": { groupNumber: "758798519、578441689" },
