@@ -42,6 +42,10 @@
         .header{margin-bottom:20px;}
         .header h1{font-size:1.8rem;font-weight:600;letter-spacing:0.04em;color:#3d2e1c;}
         .header .subtitle{font-size:0.9rem;color:var(--text-secondary);}
+        .manual-card{background:var(--card-bg);border-radius:var(--radius);padding:16px 22px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;}
+        .manual-card .manual-title{font-weight:600;font-size:0.95rem;color:#3d2e1c;}
+        .manual-card .manual-sub{font-size:0.8rem;color:#b0a090;margin-left:-8px;}
+        .manual-btns{display:flex;flex-wrap:wrap;gap:10px;margin-left:auto;}
         .tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:2px solid var(--border);}
         .tab{padding:10px 22px;background:transparent;border:none;border-bottom:3px solid transparent;font-size:0.95rem;font-weight:500;color:var(--text-secondary);cursor:pointer;transition:all 0.2s;letter-spacing:0.02em;font-family:inherit;outline:none;}
         .tab:hover{color:#3d2e1c;}
@@ -128,10 +132,23 @@
                 <p class="subtitle">反馈群 | 2150284119</p>
                 <p class="subtitle">GitHub | github.com/errrr-er/alll/tree/main</p>
             </div>
+
+            <!-- 官方手册区 -->
+            <div class="manual-card">
+                <span class="manual-title">官方手册</span>
+                <span class="manual-sub">※推荐参考</span>
+                <div class="manual-btns">
+                    <button class="btn btn-reset" onclick="window.open('https://docs.sealdice.com/advanced/edit_complex_custom_text.html')">复杂文案</button>
+                    <button class="btn btn-reset" onclick="window.open('https://docs.sealdice.com/advanced/edit_reply.html')">自定义回复</button>
+                    <button class="btn btn-reset" onclick="window.open('https://docs.go-cqhttp.org/cqcode/#%E8%BD%AC%E4%B9%89')">CQ码</button>
+                </div>
+            </div>
+
             <div class="tabs">
                 <button class="tab active" data-tab="tab-simple">通用</button>
                 <button class="tab" data-tab="tab-jrrp">jrrp</button>
                 <button class="tab" data-tab="tab-log">log计时</button>
+                <button class="tab" data-tab="tab-switch">切换</button>
                 <button class="tab" data-tab="tab-future">更多</button>
             </div>
 
@@ -194,6 +211,27 @@
 当前用时{$g单次天=$g计时/1440}天{$g单次时=($g计时-$g单次天*1440)/60}时{$g单次分=$g计时-$g单次天*1440-$g单次时*60}分
 总用时{$g测试天=$g总时长/1440}天{$g测试时=($g总时长-$g测试天*1440)/60}时{$g测试分=$g总时长-$g测试天*1440-$g测试时*60}分</textarea>
                     <button class="btn btn-secondary log-copy-btn" data-target="logEndCode">复制此代码</button>
+                </div>
+            </div>
+
+            <!-- 切换模式 -->
+            <div class="tab-content" id="tab-switch">
+                <div class="card">
+                    <h3>请放至“自定义回复”处</h3>
+                </div>
+                <div class="card">
+                    <h3>指令切换</h3>
+                    <textarea class="log-code-textarea" id="switchCode" readonly>{%if 1 {$g人格=0}%}</textarea>
+                    <button class="btn btn-secondary log-copy-btn" data-target="switchCode">复制此代码</button>
+                </div>
+                <div class="card">
+                    <h3>汇报状态</h3>
+                    <textarea class="log-code-textarea" id="stateCode" readonly>{%
+if $g人格==0 {$g人格状态="请"};
+if $g人格==1 {$g人格状态="替换"};
+if $g人格==2 {$g人格状态="这里"}
+%}{$g人格状态}</textarea>
+                    <button class="btn btn-secondary log-copy-btn" data-target="stateCode">复制此代码</button>
                 </div>
             </div>
 
@@ -573,7 +611,7 @@
                     document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
                     const target = document.getElementById(tab.dataset.tab);
                     if(target) target.classList.add('active');
-                    if(tab.dataset.tab !== 'tab-log') updateOutput();
+                    if(tab.dataset.tab !== 'tab-log' && tab.dataset.tab !== 'tab-switch') updateOutput();
                 });
             });
 
