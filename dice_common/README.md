@@ -12,4 +12,4 @@
 > [!CAUTION]
 > 主适配海豹v1和v2引擎
 
-通用、jrrp、log计时
+通用、jrrp、log计时、切换
