@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777468815
+// @timestamp    1777468871
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777468815;
+    return 1777468871;
 }
 
 // 提醒历史
@@ -117,7 +117,7 @@ const groupMap = {
 	"纯dm": { groupNumber: "421678315" },
 	"此夜不可离": { groupNumber: "522206940*下载" },
 	"翠色的光与影": { groupNumber: "1081639467" },
-	"大道纪年": { groupNumber: "932560339" },
+	"大道纪年": { groupNumber: "932560339*KP\nhttps://pan.baidu.com/share/init?surl=iNbFg3DD13ChPHPKc1035A&pwd=NZBY" },
 	"大德歌": { groupNumber: "1092691584" },
 	"代号行者": { groupNumber: "433389798" },
 	"当代电影": { groupNumber: "1023220397" },
