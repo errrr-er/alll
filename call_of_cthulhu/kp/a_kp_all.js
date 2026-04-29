@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777431174
+// @timestamp    1777468791
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777431174;
+    return 1777468791;
 }
 
 // 提醒历史
@@ -244,6 +244,7 @@ const groupMap = {
 	"螺旋旅人发问道": { groupNumber: "859933056" },
 	"落石": { groupNumber: "603178528" },
 	"猫寿司": { groupNumber: "831331659" },
+	"卯花腐雨": { groupNumber: "1083939047" },
 	"冒充神明的童话": { groupNumber: "1062511494" },
 	"梅林杯": { groupNumber: "905396897" },
 	"门扉那端": { groupNumber: "621153022" },
