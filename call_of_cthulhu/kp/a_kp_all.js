@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777468871
+// @timestamp    1777469321
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777468871;
+    return 1777469321;
 }
 
 // 提醒历史
@@ -287,6 +287,7 @@ const groupMap = {
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢","丢脑"] },
 	"青春自杀": { groupNumber: "953788807" },
 	"清平乐": { groupNumber: "814959956" },
+	"秋鬼": { groupNumber: "1095696359*下载" },
 	"秋永录": { groupNumber: "922420972、712714985", aliases: ["qyl"] },
 	"囚人医療部": { groupNumber: "689946642*下载" },
 	"求不得": { groupNumber: "887012952" },
