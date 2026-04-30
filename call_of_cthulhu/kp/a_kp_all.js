@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777469339
+// @timestamp    1777554932
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777469339;
+    return 1777554932;
 }
 
 // 提醒历史
@@ -277,6 +277,7 @@ const groupMap = {
 	"鸟啼歌": { groupNumber: "1076715464" },
 	"脓堕": { groupNumber: "183186533", aliases: ["nd"] },
 	"帕瑞卡颂马戏团": { groupNumber: "760671074" },
+	"蓬莱有龙": { groupNumber: "1073307651*下载" },
 	"奇异医科": { groupNumber: "1033132363*下载" },
 	"崎蜀藏观音": { groupNumber: "652844613" },
 	"起承转结": { groupNumber: "1043452922" },
@@ -395,6 +396,7 @@ const groupMap = {
 	"侠界之旅": { groupNumber: "210679492" },
 	"仙人抚顶": { groupNumber: "1056213411" },
 	"相约98": { groupNumber: "542398417" },
+	"香槟call可以开发票吗": { groupNumber: "1103396117*下载" },
 	"小众规则综合": { groupNumber: "945728295" },
 	"写作": { groupNumber: "629998485*魔都\n734417134*纯女、761666326*纯女coj" },
 	"谢娘娘点化": { groupNumber: "878626807", aliases: ["谢娘娘"] },
