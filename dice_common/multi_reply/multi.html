@@ -29,7 +29,7 @@
         .output-title{font-weight:600;font-size:0.95rem;color:#3d2e1c;}
         .output-badge{font-size:0.75rem;background:#eee4d5;color:#5f4e34;padding:4px 10px;border-radius:12px;font-weight:500;}
         .output-content{background:#fefcf8;border:1.5px solid #e8e0d2;border-radius:var(--radius-sm);padding:16px 18px;font-family:var(--font-mono);font-size:0.9rem;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:#2c2416;flex:1;overflow-y:auto;min-height:200px;max-height:500px;}
-        .output-content:empty::before{content:'等待输入...';color:#b8aa94;font-style:italic;font-family:var(--font-sans);}
+        .output-content:empty::before{content:'等待输入……';color:#b8aa94;font-style:italic;font-family:var(--font-sans);}
         .btn-row{display:flex;gap:10px;flex-wrap:wrap;}
         .btn{padding:11px 20px;border-radius:24px;border:none;cursor:pointer;font-size:0.9rem;font-weight:600;letter-spacing:0.03em;transition:all 0.2s;display:inline-flex;align-items:center;gap:6px;font-family:inherit;}
         .btn-secondary{background:var(--btn-secondary);color:#fff;flex:1;justify-content:center;}
@@ -37,7 +37,8 @@
         .btn-reset{background:var(--btn-reset);color:#fff;flex:1;justify-content:center;}
         .btn-reset:hover{filter:brightness(0.9);transform:translateY(-1px);}
         .btn-copied{background:#4a8c5c!important;pointer-events:none;}
-
+        .btn-import-code{background:#e5d9cb;color:#3d2e1c;border:1px solid #d4c5ac;padding:6px 14px;border-radius:20px;font-size:0.8rem;font-weight:500;cursor:pointer;transition:0.2s;margin-left:auto;}
+        .btn-import-code:hover{background:#d9cbb8;transform:translateY(-1px);}
         .right-panel{flex:1;min-width:0;}
         .header{margin-bottom:20px;}
         .header h1{font-size:1.8rem;font-weight:600;letter-spacing:0.04em;color:#3d2e1c;}
@@ -53,8 +54,9 @@
         .tab-content{display:none;animation:fadeIn 0.25s ease;}
         .tab-content.active{display:block;}
         @keyframes fadeIn{from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
-
         .card{background:var(--card-bg);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:20px;}
+        .card-header-flex{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+        .card-header-flex .title{font-weight:600;font-size:1rem;}
         .setting-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:16px;}
         .setting-row label{font-weight:600;font-size:0.9rem;min-width:70px;}
         .setting-row input[type="text"],.setting-row input[type="number"]{
@@ -67,45 +69,41 @@
         .btn-counter:hover:not(:disabled){background:#f0e8d8;}
         .btn-counter:disabled{opacity:0.4;cursor:not-allowed;}
         .counter-value{font-weight:700;font-size:1.3rem;min-width:36px;text-align:center;}
-
         .branch-list{display:flex;flex-direction:column;gap:18px;margin-bottom:18px;}
         .branch-item{display:flex;flex-direction:column;gap:8px;background:#faf8f4;padding:12px 14px;border-radius:var(--radius-sm);border:1px solid #e8dfcf;}
         .branch-index{font-weight:700;font-size:0.9rem;color:#fff;background:#8b7355;border-radius:4px;padding:3px 8px;min-width:40px;text-align:center;flex-shrink:0;margin-top:2px;}
         .branch-outputs{display:flex;flex-direction:column;gap:6px;margin-left:24px;}
         .output-row{display:flex;align-items:flex-start;gap:8px;}
         .output-row label{min-width:45px;font-size:0.85rem;font-weight:500;color:#5f5542;padding-top:8px;}
-
         .auto-textarea{
             flex:1;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
             font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;
             resize:none;overflow:hidden;min-height:38px;line-height:1.5;
         }
         .auto-textarea:focus{outline:none;border-color:#b8976e;}
-
         .condition-group{margin-left:28px;display:flex;flex-direction:column;gap:6px;}
         .condition-row{display:flex;align-items:flex-start;gap:8px;}
-        .condition-row input[type="number"]{
-            width:70px;flex-shrink:0;
-            border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;
-            font-size:0.9rem;font-family:inherit;background:#fff;transition:0.2s;
-        }
+        .condition-row input[type="number"]{width:70px;flex-shrink:0;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:8px 12px;font-size:0.9rem;font-family:inherit;background:#fff;}
         .condition-row input[type="number"]:focus{outline:none;border-color:#b8976e;}
         .condition-row .auto-textarea{flex:1;min-width:120px;}
         .btn-small{background:#f0e8d8;border:1px solid #d4c5ac;border-radius:4px;padding:4px 10px;font-size:0.8rem;cursor:pointer;font-family:inherit;white-space:nowrap;flex-shrink:0;}
         .btn-small:hover{background:#e0d2bb;}
-
-        .log-code-textarea{
-            width:100%;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:10px 12px;
-            font-family:var(--font-mono);font-size:0.9rem;line-height:1.7;background:#fefcf8;
-            resize:vertical;min-height:100px;color:#2c2416;
-        }
+        .log-code-textarea{width:100%;border:1.5px solid #ddd2c2;border-radius:var(--radius-sm);padding:10px 12px;font-family:var(--font-mono);font-size:0.9rem;line-height:1.7;background:#fefcf8;resize:vertical;min-height:100px;color:#2c2416;}
         .log-code-textarea[readonly]{background:#f8f6f2;cursor:default;}
-
         .footer{text-align:center;margin-top:20px;font-size:0.82rem;color:#b8a894;}
-
         .toast{position:fixed;top:20px;left:50%;transform:translateX(-50%) translateY(-120px);background:#3d2e1c;color:#fff;padding:10px 22px;border-radius:20px;font-weight:500;font-size:0.9rem;z-index:999;transition:transform 0.35s;}
         .toast.show{transform:translateX(-50%) translateY(0);}
         .toast.success{background:#4a7c5c;}
+        /* 简单导入弹窗 */
+        .import-dialog-mask{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:0.2s;}
+        .import-dialog-mask.active{visibility:visible;opacity:1;}
+        .import-dialog{background:#fff;border-radius:16px;width:500px;max-width:90%;box-shadow:0 20px 35px rgba(0,0,0,0.2);border:1px solid var(--border);overflow:hidden;}
+        .import-dialog-header{padding:16px 20px;background:#faf7f2;border-bottom:1px solid #e2d7c8;font-weight:600;color:#3d2e1c;}
+        .import-dialog-body{padding:20px;}
+        .import-dialog-body textarea{width:100%;min-height:200px;border:1.5px solid #ddd2c2;border-radius:8px;padding:10px;font-family:var(--font-mono);font-size:0.85rem;background:#fefcf8;}
+        .import-dialog-footer{padding:12px 20px;border-top:1px solid #e2d7c8;display:flex;justify-content:flex-end;gap:12px;background:#fefcf8;}
+        .import-btn-cancel{background:#e1d9cf;color:#3d2e1c;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:500;}
+        .import-btn-confirm{background:#7d5d3c;color:#fff;border:none;padding:6px 16px;border-radius:20px;cursor:pointer;font-weight:500;}
         @media (max-width:850px){.container{flex-direction:column;}.left-panel{position:static;width:100%;order:-1;}}
     </style>
 </head>
@@ -133,7 +131,6 @@
                 <p class="subtitle">GitHub | github.com/errrr-er/alll/tree/main</p>
             </div>
 
-            <!-- 官方手册区 -->
             <div class="manual-card">
                 <span class="manual-title">官方手册</span>
                 <span class="manual-sub">※推荐参考</span>
@@ -171,7 +168,13 @@
                         <span style="font-size:0.85rem; color:#5f5542;">勾选后输出 {$t附加判定结果}</span>
                     </div>
                 </div>
-                <div class="card"><div style="font-weight:600;">分支输出内容</div><div class="branch-list" id="simpleBranchList"></div></div>
+                <div class="card">
+                    <div class="card-header-flex">
+                        <span class="title">分支输出内容</span>
+                        <button class="btn-import-code" id="simpleImportCodeBtn">从代码导入</button>
+                    </div>
+                    <div class="branch-list" id="simpleBranchList"></div>
+                </div>
             </div>
 
             <!-- JRRP模式 -->
@@ -182,7 +185,13 @@
                     <div class="setting-row"><label>起始数字</label><input type="number" id="jrrpStartNum" value="0" min="0" max="999"></div>
                     <div class="setting-row"><label>分支数量</label><div class="counter-group"><button class="btn-counter" id="jrrpMinus">-</button><span class="counter-value" id="jrrpCount">3</span><button class="btn-counter" id="jrrpPlus">+</button></div></div>
                 </div>
-                <div class="card"><div style="font-weight:600;">分支输出内容</div><div id="jrrpBranchList" style="display:flex;flex-direction:column;gap:20px;"></div></div>
+                <div class="card">
+                    <div class="card-header-flex">
+                        <span class="title">分支输出内容</span>
+                        <button class="btn-import-code" id="jrrpImportCodeBtn">从代码导入</button>
+                    </div>
+                    <div id="jrrpBranchList" style="display:flex;flex-direction:column;gap:20px;"></div>
+                </div>
             </div>
 
             <!-- log计时模式 -->
@@ -242,6 +251,20 @@ if $g人格==2 {$g人格状态="这里"}
         </div>
     </div>
     <div class="toast" id="toast"></div>
+
+    <!-- 简易导入弹窗 -->
+    <div id="importDialog" class="import-dialog-mask">
+        <div class="import-dialog">
+            <div class="import-dialog-header">粘贴代码 (从本工具复制的内容)</div>
+            <div class="import-dialog-body">
+                <textarea id="importCodeTextarea" placeholder="请粘贴之前从左侧复制的生成结果代码……"></textarea>
+            </div>
+            <div class="import-dialog-footer">
+                <button class="import-btn-cancel" id="importCancelBtn">取消</button>
+                <button class="import-btn-confirm" id="importConfirmBtn">导入并覆盖</button>
+            </div>
+        </div>
+    </div>
 
     <script>
         (function(){
@@ -313,7 +336,7 @@ if $g人格==2 {$g人格状态="这里"}
                 document.getElementById('simpleOutCount').textContent = state.simpleOutCount||1;
                 document.getElementById('simpleOutOptional').checked = state.simpleOutOptional !== false;
                 document.getElementById('simpleExtraResult').checked = state.simpleExtraResult || false;
-                renderSimpleBranches(state.simpleCount||3, state.simpleOutCount||1, state.simpleContents||[["输入1"]]);
+                renderSimpleBranches(state.simpleCount||3, state.simpleOutCount||1, state.simpleContents||[["输入1"],["输入2"],["输入3"]]);
                 document.getElementById('jrrpVarName').value = state.jrrpVar||'人格';
                 document.getElementById('jrrpOutVar').value = state.jrrpOutVar||'输出';
                 document.getElementById('jrrpStartNum').value = state.jrrpStart||0;
@@ -459,9 +482,7 @@ if $g人格==2 {$g人格状态="这里"}
                     lines.push(`if $g${varName}==${start+idx} {${parts.join('; ')}}${semicolon}`);
                 });
                 let outVars = '';
-                if (extraResult) {
-                    outVars += '{$t附加判定结果}';
-                }
+                if (extraResult) outVars += '{$t附加判定结果}';
                 if (outOptional) {
                     for(let j=0;j<outCount;j++){
                         const suffix = j === 0 ? '' : j;
@@ -501,6 +522,140 @@ if $g人格==2 {$g人格状态="这里"}
                 document.getElementById('outputBadge').textContent = `JRRP ${total} 分支`;
             }
 
+            // ----- 导入解析核心 (轻量) -----
+            let currentImportCallback = null;
+            const importDialog = document.getElementById('importDialog');
+            const importTextarea = document.getElementById('importCodeTextarea');
+            function showImportDialog(callback) {
+                importTextarea.value = '';
+                importDialog.classList.add('active');
+                currentImportCallback = callback;
+            }
+            function closeImportDialog() { importDialog.classList.remove('active'); currentImportCallback = null; }
+            document.getElementById('importCancelBtn').onclick = () => closeImportDialog();
+            document.getElementById('importConfirmBtn').onclick = () => {
+                const code = importTextarea.value;
+                if(currentImportCallback && code.trim()) currentImportCallback(code);
+                closeImportDialog();
+            };
+
+            // 通用导入解析
+            function parseSimpleCodeAndApply(code) {
+                try {
+                    const codeStr = code.trim();
+                    const matchPattern = /{%\s*([\s\S]*?)%}([\s\S]*)$/;
+                    const m = codeStr.match(matchPattern);
+                    if(!m) throw new Error('无效的通用代码格式');
+                    const body = m[1];
+                    const suffix = m[2];
+                    const lines = body.split('\n').filter(l => l.trim().startsWith('if'));
+                    const branchMap = new Map();
+                    let varName = null;
+                    let startVal = null;
+                    const outVarRegex = /\$t([a-zA-Z0-9\u4e00-\u9fa5]+)(\d*)=/;
+                    for(let line of lines) {
+                        const ifMatch = line.match(/if\s+\$g([a-zA-Z0-9\u4e00-\u9fa5]+)==(\d+)\s*\{([^}]+)\}/);
+                        if(!ifMatch) continue;
+                        const curVar = ifMatch[1];
+                        const idx = parseInt(ifMatch[2]);
+                        const assignments = ifMatch[3];
+                        if(varName === null) varName = curVar;
+                        if(startVal === null) startVal = idx - 0;
+                        else startVal = Math.min(startVal, idx);
+                        const assignmentPairs = assignments.split(';').map(s=>s.trim()).filter(s=>s);
+                        const branchOutputs = [];
+                        for(let pair of assignmentPairs) {
+                            const varMatch = pair.match(/\$t([a-zA-Z0-9\u4e00-\u9fa5]+)(\d*)=["']?(.*?)["']?$/);
+                            if(varMatch) {
+                                branchOutputs.push(varMatch[3]);
+                            }
+                        }
+                        branchMap.set(idx, branchOutputs);
+                    }
+                    if(varName === null) throw new Error('未找到分支定义');
+                    const maxIndex = Math.max(...Array.from(branchMap.keys()));
+                    const minIndex = startVal;
+                    const branchCount = maxIndex - minIndex + 1;
+                    let outCount = 1;
+                    for(let outputs of branchMap.values()) {
+                        if(outputs.length > outCount) outCount = outputs.length;
+                    }
+                    const outVarMatch = code.match(/\{\$t([a-zA-Z0-9\u4e00-\u9fa5]+)(\d*)\}/);
+                    let outVarName = outVarMatch ? outVarMatch[1] : '输出';
+                    const extraResultFlag = suffix.includes('{$t附加判定结果}');
+                    const outOptionalFlag = suffix.includes('{$t'+outVarName+'}') || (outCount>1 && suffix.includes('{$t'+outVarName+'1}'));
+                    const branchContents = [];
+                    for(let i=0;i<branchCount;i++) {
+                        const idx = minIndex + i;
+                        const outputs = branchMap.get(idx) || [];
+                        const row = [];
+                        for(let j=0;j<outCount;j++) row.push(outputs[j] !== undefined ? outputs[j] : '');
+                        branchContents.push(row);
+                    }
+                    document.getElementById('simpleVarName').value = varName;
+                    document.getElementById('simpleOutVar').value = outVarName;
+                    document.getElementById('simpleStartNum').value = minIndex;
+                    document.getElementById('simpleOutOptional').checked = outOptionalFlag;
+                    document.getElementById('simpleExtraResult').checked = extraResultFlag;
+                    renderSimpleBranches(branchCount, outCount, branchContents);
+                    saveAll();
+                    showToast('导入成功，配置已更新');
+                } catch(e) { showToast('导入失败: '+e.message); }
+            }
+            // JRRP导入解析
+            function parseJrrpCodeAndApply(code) {
+                try {
+                    const codeStr = code.trim();
+                    const mainMatch = codeStr.match(/^\{([\s\S]*)\}\{\$t([^\}]+)\}$/);
+                    if(!mainMatch) throw new Error('无效的JRRP代码格式');
+                    const body = mainMatch[1];
+                    const outVar = mainMatch[2];
+                    const branchRegex = /if\s+\$g([a-zA-Z0-9\u4e00-\u9fa5]+)==(\d+)\s*\{([\s\S]*?)\n\}/g;
+                    let match;
+                    let varName = null;
+                    let startVal = null;
+                    const branches = [];
+                    while((match = branchRegex.exec(body)) !== null) {
+                        const curVar = match[1];
+                        const idx = parseInt(match[2]);
+                        const block = match[3];
+                        if(varName === null) varName = curVar;
+                        if(startVal === null) startVal = idx;
+                        else startVal = Math.min(startVal, idx);
+                        const prefixMatch = block.match(/\$t[a-zA-Z0-9\u4e00-\u9fa5]+\s*=\s*`([^`]*)`/);
+                        let prefix = prefixMatch ? prefixMatch[1] : DEFAULT_PREFIX;
+                        const statusMatch = block.match(/\$t状态\s*=\s*([\s\S]*?);/);
+                        let conditions = [];
+                        if(statusMatch) {
+                            const condBlock = statusMatch[1];
+                            const lineParts = condBlock.split('\n').map(l=>l.trim()).filter(l=>l);
+                            for(let part of lineParts) {
+                                const ternaryMatch = part.match(/^\$t人品\s*>\s*(\d+)\s*\?\s*'([^']*)',$/);
+                                const defaultMatch = part.match(/^1\s*\?\s*'([^']*)'$/);
+                                if(ternaryMatch) {
+                                    conditions.push({value: ternaryMatch[1], text: ternaryMatch[2]});
+                                } else if(defaultMatch) {
+                                    conditions.push({value: '0', text: defaultMatch[1]});
+                                }
+                            }
+                        }
+                        if(conditions.length === 0) conditions = JSON.parse(JSON.stringify(DEFAULT_CONDITIONS));
+                        branches.push({prefix: prefix, conditions: conditions});
+                    }
+                    if(varName === null) throw new Error('未找到分支');
+                    const branchCount = branches.length;
+                    document.getElementById('jrrpVarName').value = varName;
+                    document.getElementById('jrrpOutVar').value = outVar;
+                    document.getElementById('jrrpStartNum').value = startVal;
+                    renderJrrpBranches(branchCount, branches);
+                    saveAll();
+                    showToast('导入成功，配置已更新');
+                } catch(e) { showToast('导入失败: '+e.message); }
+            }
+
+            document.getElementById('simpleImportCodeBtn').addEventListener('click', () => showImportDialog(parseSimpleCodeAndApply));
+            document.getElementById('jrrpImportCodeBtn').addEventListener('click', () => showImportDialog(parseJrrpCodeAndApply));
+
             function bindCountButtons(minusId, plusId, countId, renderFn, getDataFn){
                 document.getElementById(minusId).addEventListener('click', ()=>{
                     let cnt = parseInt(document.getElementById(countId).textContent);
@@ -515,11 +670,7 @@ if $g人格==2 {$g人格状态="这里"}
             bindCountButtons('simpleMinus','simplePlus','simpleCount', (cnt)=>{
                 const outCnt = parseInt(document.getElementById('simpleOutCount').textContent)||1;
                 const currentData = getSimpleContents();
-                while(currentData.length < cnt){
-                    const newBranch = [];
-                    for(let j=0;j<outCnt;j++) newBranch.push(`输入${currentData.length+1}.${j+1}`);
-                    currentData.push(newBranch);
-                }
+                while(currentData.length < cnt) currentData.push(Array(outCnt).fill(''));
                 currentData.length = cnt;
                 renderSimpleBranches(cnt, outCnt, currentData);
             }, ()=> getSimpleContents());
@@ -533,7 +684,7 @@ if $g人格==2 {$g人格状态="这里"}
                     const currentData = getSimpleContents();
                     for(let i=0;i<branchCnt;i++){
                         if(!currentData[i]) currentData[i] = [];
-                        while(currentData[i].length < outCnt) currentData[i].push(`输入${i+1}.${currentData[i].length+1}`);
+                        while(currentData[i].length < outCnt) currentData[i].push('');
                         currentData[i].length = outCnt;
                     }
                     renderSimpleBranches(branchCnt, outCnt, currentData);
@@ -549,7 +700,7 @@ if $g人格==2 {$g人格状态="这里"}
                     const currentData = getSimpleContents();
                     for(let i=0;i<branchCnt;i++){
                         if(!currentData[i]) currentData[i] = [];
-                        while(currentData[i].length < outCnt) currentData[i].push(`输入${i+1}.${currentData[i].length+1}`);
+                        while(currentData[i].length < outCnt) currentData[i].push('');
                     }
                     renderSimpleBranches(branchCnt, outCnt, currentData);
                     saveAll(); updateOutput();
@@ -563,29 +714,12 @@ if $g人格==2 {$g人格状态="这里"}
                 renderJrrpBranches(cnt, data);
             }, ()=> getJrrpData());
 
-            document.getElementById('simpleStartNum').addEventListener('input', ()=>{
-                const cnt = parseInt(document.getElementById('simpleCount').textContent);
-                const outCnt = parseInt(document.getElementById('simpleOutCount').textContent);
-                renderSimpleBranches(cnt, outCnt, getSimpleContents());
-                saveAll();
-            });
-            document.getElementById('jrrpStartNum').addEventListener('input', ()=>{
-                const cnt = parseInt(document.getElementById('jrrpCount').textContent);
-                renderJrrpBranches(cnt, getJrrpData());
-                saveAll();
-            });
-            document.getElementById('simpleOutVar').addEventListener('input', ()=>{
-                saveAll(); updateOutput();
-            });
-            document.getElementById('jrrpOutVar').addEventListener('input', ()=>{
-                saveAll(); updateOutput();
-            });
-            document.getElementById('simpleOutOptional').addEventListener('change', ()=>{
-                saveAll(); updateOutput();
-            });
-            document.getElementById('simpleExtraResult').addEventListener('change', ()=>{
-                saveAll(); updateOutput();
-            });
+            document.getElementById('simpleStartNum').addEventListener('input', ()=>{ const cnt = parseInt(document.getElementById('simpleCount').textContent); const outCnt = parseInt(document.getElementById('simpleOutCount').textContent); renderSimpleBranches(cnt, outCnt, getSimpleContents()); saveAll(); });
+            document.getElementById('jrrpStartNum').addEventListener('input', ()=>{ const cnt = parseInt(document.getElementById('jrrpCount').textContent); renderJrrpBranches(cnt, getJrrpData()); saveAll(); });
+            document.getElementById('simpleOutVar').addEventListener('input', ()=>{ saveAll(); updateOutput(); });
+            document.getElementById('jrrpOutVar').addEventListener('input', ()=>{ saveAll(); updateOutput(); });
+            document.getElementById('simpleOutOptional').addEventListener('change', ()=>{ saveAll(); updateOutput(); });
+            document.getElementById('simpleExtraResult').addEventListener('change', ()=>{ saveAll(); updateOutput(); });
 
             document.querySelectorAll('.log-copy-btn').forEach(btn=>{
                 btn.addEventListener('click', ()=>{
