@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>段落 &lt;br&gt; 生成器（带纯文字输出）</title>
+<style>
+  body { font-family: system-ui, sans-serif; padding: 20px; }
+  h2 { margin-top: 0; }
+  .container { display: flex; gap: 20px; }
+  .panel { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  textarea { width: 100%; height: 300px; box-sizing: border-box; font-size: 14px; padding: 10px; }
+  pre { background: #f5f5f5; white-space: pre-wrap; word-break: break-all; height: 145px; overflow-y: auto; padding: 10px; margin:0; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 5px; }
+  button { padding: 6px 14px; cursor: pointer; }
+  #copy-msg-br, #copy-msg-text { font-size: 14px; color: green; margin-left: 10px; }
+</style>
+</head>
+<body>
+
+<h2>段落 &lt;br&gt; 生成器（带纯文字输出）</h2>
+
+<div class="container">
+  <!-- 输出左边 -->
+  <div class="panel">
+    <h3>输出（带 &lt;br&gt;）</h3>
+    <pre id="output-br"></pre>
+    <h3>输出（纯文字）</h3>
+    <pre id="output-text"></pre>
+  </div>
+
+  <!-- 输入右边 -->
+  <div class="panel">
+    <h3>输入</h3>
+    <textarea id="input" placeholder="粘贴纯文字即可"></textarea>
+
+    <!-- 第一行按钮：生成 / 清空 -->
+    <div class="buttons">
+      <button onclick="generate()">生成</button>
+      <button onclick="clearInput()">清空输入</button>
+    </div>
+
+    <!-- 第二行按钮：复制 -->
+    <div class="buttons">
+      <button onclick="copyBr()">复制带 &lt;br&gt;</button>
+      <span id="copy-msg-br"></span>
+      <button onclick="copyText()">复制纯文字</button>
+      <span id="copy-msg-text"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+function generate() {
+  const text = document.getElementById("input").value;
+  if (!text) {
+    document.getElementById("output-br").textContent = "";
+    document.getElementById("output-text").textContent = "";
+    return;
+  }
+
+  const rawParagraphs = text.split(/\n\s*\n/);
+
+  let resultBr = "";
+  let resultText = "";
+
+  // 所有 <xxx> 标签都加反斜杠
+  function escapeSpecificTags(line) {
+    return line.replace(/<[^>]+>/g, (match) => {
+      return "\\" + match;
+    });
+  }
+
+  rawParagraphs.forEach((para, pIndex) => {
+    let lines = para.split(/\r?\n/).filter((l, i, arr) => {
+      if (l.trim() !== "") return true;
+      if (i > 0 && arr[i-1].trim() !== "") return true;
+      return false;
+    });
+
+    if (lines.length === 0) return;
+
+    // 转义所有标签
+    lines = lines.map(escapeSpecificTags);
+
+    lines.forEach((line, lIndex) => {
+      if (pIndex === 0 && lIndex === 0) {
+        resultBr += line;
+      } else if (lIndex === 0) {
+        resultBr += "\n" + line;
+      } else {
+        resultBr += "\n<br>" + line;
+      }
+    });
+
+    if (pIndex < rawParagraphs.length - 1) resultBr += "\n";
+
+    resultText += lines.join("\n");
+    if (pIndex < rawParagraphs.length - 1) resultText += "\n\n";
+  });
+
+  document.getElementById("output-br").textContent = resultBr;
+  document.getElementById("output-text").textContent = resultText;
+
+  document.getElementById("copy-msg-br").textContent = "";
+  document.getElementById("copy-msg-text").textContent = "";
+}
+
+function copyBr() {
+  const text = document.getElementById("output-br").textContent;
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const msg = document.getElementById("copy-msg-br");
+    msg.textContent = "已复制";
+    setTimeout(() => { msg.textContent = ""; }, 2000);
+  });
+}
+
+function copyText() {
+  const text = document.getElementById("output-text").textContent;
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const msg = document.getElementById("copy-msg-text");
+    msg.textContent = "已复制";
+    setTimeout(() => { msg.textContent = ""; }, 2000);
+  });
+}
+
+function clearInput() {
+  document.getElementById("input").value = "";
+}
+</script>
+
+</body>
+</html>
