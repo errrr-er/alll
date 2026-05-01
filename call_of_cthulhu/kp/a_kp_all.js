@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777641013
+// @timestamp    1777641566
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777641013;
+    return 1777641566;
 }
 
 // 提醒历史
@@ -396,7 +396,7 @@ const groupMap = {
 	"侠界之旅": { groupNumber: "210679492" },
 	"仙人抚顶": { groupNumber: "1056213411" },
 	"相约98": { groupNumber: "542398417" },
-	"香槟call可以开发票吗": { groupNumber: "1103396117*下载" },
+	"香槟call可以开发票吗": { groupNumber: "1103396117*下载\n964670473*交流", aliases: ["香槟CALL"] },
 	"小众规则综合": { groupNumber: "945728295" },
 	"写作": { groupNumber: "629998485*魔都\n734417134*纯女、761666326*纯女coj" },
 	"谢娘娘点化": { groupNumber: "878626807", aliases: ["谢娘娘"] },
