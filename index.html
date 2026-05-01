@@ -1,8 +1,416 @@
-<h2>工具</h2>
-<ul>
-  <li><a href="./dice_common/multi_reply/multi.html">多套回复生成器</a></li>
-</ul>
-<ul>
-  <li><a href="./tools/webpages/br.html">TXT → MD</a></li>
-  <li><a href="./tools/webpages/csv.html">JSON → CSV</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具 | 工具箱</title>
+    <style>
+        :root {
+            --bg: #f8f6f3;
+            --card-bg: #ffffff;
+            --text: #2c2416;
+            --text-secondary: #5f5542;
+            --border: #d9cebb;
+            --shadow: 0 2px 12px rgba(60, 40, 20, 0.05);
+            --shadow-hover: 0 8px 28px rgba(60, 40, 20, 0.10);
+            --radius: 10px;
+            --radius-sm: 6px;
+            --accent: #7d5d3c;
+            --accent-light: #f0e8d8;
+            --accent-lighter: #faf6ef;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+            --font-mono: 'SF Mono', 'Cascadia Code', 'Consolas', 'Menlo', 'PingFang SC', 'Microsoft YaHei', monospace;
+            --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            font-family: var(--font-sans);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 背景装饰 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -180px;
+            right: -120px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(180, 150, 120, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -140px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(160, 140, 110, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== Header ========== */
+        .header {
+            text-align: center;
+            margin-bottom: 36px;
+            padding-top: 10px;
+        }
+        .header .icon-row {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+        .header .icon-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #c4a882;
+            flex-shrink: 0;
+        }
+        .header h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #3d2e1c;
+            margin: 0;
+        }
+        .header .subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            letter-spacing: 0.03em;
+        }
+        .header .divider {
+            display: block;
+            width: 50px;
+            height: 2.5px;
+            background: #d4c5ac;
+            border-radius: 2px;
+            margin: 14px auto 0;
+            opacity: 0.7;
+        }
+
+        /* ========== 工具卡片网格 ========== */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        /* ========== 单个工具卡片 ========== */
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 26px 22px 22px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+        .tool-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #c9b896, #a68b6a, #c9b896);
+            opacity: 0;
+            transition: opacity var(--transition);
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: #c9b896;
+        }
+        .tool-card:hover::after {
+            opacity: 1;
+        }
+
+        /* 图标圆圈 */
+        .tool-card .icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--accent-lighter);
+            border: 1.5px solid #e8dfcf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 16px;
+            transition: background var(--transition), border-color var(--transition), transform var(--transition);
+            flex-shrink: 0;
+        }
+        .tool-card:hover .icon-circle {
+            background: #fefcf8;
+            border-color: #c9b896;
+            transform: scale(1.06);
+        }
+
+        /* 工具名称 */
+        .tool-card .tool-name {
+            font-weight: 650;
+            font-size: 1.05rem;
+            color: #3d2e1c;
+            margin-bottom: 6px;
+            letter-spacing: 0.03em;
+        }
+
+        /* 工具描述 */
+        .tool-card .tool-desc {
+            font-size: 0.84rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 18px;
+            flex: 1;
+            min-height: 2.5em;
+        }
+
+        /* 按钮 */
+        .tool-card .btn-open {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 10px 22px;
+            border-radius: 24px;
+            border: 1.5px solid #c9b896;
+            background: #fefcf8;
+            color: #5a3e28;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: inherit;
+            transition: all var(--transition);
+            white-space: nowrap;
+        }
+        .tool-card .btn-open:hover {
+            background: #5a3e28;
+            color: #fff;
+            border-color: #5a3e28;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(90, 62, 40, 0.2);
+        }
+        .tool-card .btn-open:active {
+            transform: translateY(0);
+            box-shadow: none;
+            transition: 0.08s;
+        }
+        .tool-card .btn-open .arrow {
+            display: inline-block;
+            transition: transform var(--transition);
+        }
+        .tool-card .btn-open:hover .arrow {
+            transform: translateX(3px);
+        }
+
+        /* 特色卡片（多套回复生成器）的微妙高亮 */
+        .tool-card.featured {
+            border-color: #d4c5ac;
+            background: #fefdfa;
+        }
+        .tool-card.featured .icon-circle {
+            background: #faf6ef;
+            border-color: #d4c5ac;
+            box-shadow: 0 0 0 6px rgba(180, 150, 120, 0.05);
+        }
+        .tool-card.featured:hover .icon-circle {
+            box-shadow: 0 0 0 10px rgba(180, 150, 120, 0.09);
+        }
+
+        /* 徽章 */
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            background: #eee4d5;
+            color: #5f4e34;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* ========== Footer ========== */
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #b8a894;
+            letter-spacing: 0.03em;
+            padding: 10px 0;
+        }
+        .footer span {
+            color: #c9b896;
+            margin: 0 4px;
+        }
+
+        /* ========== Toast ========== */
+        .toast {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-120px);
+            background: #3d2e1c;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            z-index: 999;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            letter-spacing: 0.03em;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        .toast.success {
+            background: #4a7c5c;
+        }
+
+        /* ========== 响应式 ========== */
+        @media (max-width: 850px) {
+            .tools-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 14px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .tool-card {
+                padding: 22px 16px 18px;
+            }
+        }
+        @media (max-width: 520px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            body {
+                padding: 14px;
+            }
+            .header {
+                margin-bottom: 24px;
+            }
+            .header h1 {
+                font-size: 1.4rem;
+            }
+            .tool-card {
+                padding: 20px 14px 16px;
+            }
+            .tool-card .icon-circle {
+                width: 52px;
+                height: 52px;
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="icon-row">
+                <span class="icon-dot"></span>
+                <span class="icon-dot" style="background:#b8976e;"></span>
+                <span class="icon-dot"></span>
+            </div>
+            <h1>工具箱</h1>
+            <p class="subtitle">实用工具集合，提升工作效率</p>
+            <span class="divider"></span>
+        </header>
+
+        <!-- 工具卡片网格 -->
+        <div class="tools-grid">
+            <!-- 工具1：多套回复生成器（特色卡片） -->
+            <div class="tool-card featured">
+                <span class="badge">常用</span>
+                <div class="icon-circle">💬</div>
+                <h3 class="tool-name">多套回复生成器</h3>
+                <p class="tool-desc">快速生成多套不同的回复文案，支持条件分支与权重配置，灵活应对各种对话场景。</p>
+                <a href="./dice_common/multi_reply/multi.html" class="btn-open">
+                    打开工具 <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <!-- 工具2：TXT → MD -->
+            <div class="tool-card">
+                <div class="icon-circle">📄</div>
+                <h3 class="tool-name">TXT → MD</h3>
+                <p class="tool-desc">将纯文本文件转换为 Markdown 格式，智能保留标题层级与段落结构。</p>
+                <a href="./tools/webpages/br.html" class="btn-open">
+                    打开工具 <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <!-- 工具3：JSON → CSV -->
+            <div class="tool-card">
+                <div class="icon-circle">📊</div>
+                <h3 class="tool-name">JSON → CSV</h3>
+                <p class="tool-desc">将 JSON 数据文件转换为 CSV 表格格式，方便用 Excel 或 Sheets 打开处理。</p>
+                <a href="./tools/webpages/csv.html" class="btn-open">
+                    打开工具 <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="footer">
+            点击卡片中的按钮即可打开对应工具<span>·</span>所有工具均在本地运行
+        </p>
+    </div>
+
+    <!-- Toast 提示 -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // 可选的 toast 工具函数（供未来扩展使用）
+        function showToast(msg, type = '') {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.className = 'toast ' + type + ' show';
+            clearTimeout(t._tid);
+            t._tid = setTimeout(() => {
+                t.classList.remove('show');
+            }, 1800);
+        }
+    </script>
+</body>
+</html>
