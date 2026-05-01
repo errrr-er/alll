@@ -197,7 +197,6 @@ jobs:
               }
             }
 
-            // ===== 新增：key 覆盖提示 =====
             const existingKeyMap = new Map(existing.map(e => [e.key, e]));
             for (const entry of newEntries) {
               if (existingKeyMap.has(entry.key)) {
@@ -213,7 +212,7 @@ jobs:
                   );
                 } else {
                   report.push(
-                    `🔄 覆盖提示：键 \`${entry.key}\` 已存在。\n` +
+                    `🔄 合并提示：键 \`${entry.key}\` 已存在。\n` +
                     `- 原群号：\`${old.groupNumber}\`\n` +
                     `- 新群号：\`${entry.groupNumber}\`\n` +
                     (oldAliases || newAliases ? `- 原别名：${oldAliases || '无'}\n- 新别名：${newAliases || '无'}` : '')
