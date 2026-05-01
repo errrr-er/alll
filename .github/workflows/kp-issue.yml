@@ -93,7 +93,6 @@ jobs:
               if (!data[key].aliases) {
                 data[key].aliases = [];
               } else {
-                // 过滤掉空字符串或仅含空格的别名
                 data[key].aliases = data[key].aliases.filter(a => a && a.trim() !== '');
               }
             }
@@ -198,6 +197,42 @@ jobs:
               }
             }
 
+            // ===== 新增：key 覆盖提示 =====
+            const existingKeyMap = new Map(existing.map(e => [e.key, e]));
+            for (const entry of newEntries) {
+              if (existingKeyMap.has(entry.key)) {
+                const old = existingKeyMap.get(entry.key);
+                const oldAliases = (old.aliases || []).join(', ');
+                const newAliases = (entry.aliases || []).join(', ');
+                // 如果群号完全一样，特别提醒
+                if (old.groupNumber === entry.groupNumber) {
+                  report.push(
+                    `ℹ️ 键 \`${entry.key}\` 已存在，群号没有变化（\`${entry.groupNumber}\`），仅别名可能更新。\n` +
+                    `- 原别名：${oldAliases || '无'}\n` +
+                    `- 新别名：${newAliases || '无'}`
+                  );
+                } else {
+                  report.push(
+                    `🔄 覆盖提示：键 \`${entry.key}\` 已存在。\n` +
+                    `- 原群号：\`${old.groupNumber}\`\n` +
+                    `- 新群号：\`${entry.groupNumber}\`\n` +
+                    (oldAliases || newAliases ? `- 原别名：${oldAliases || '无'}\n- 新别名：${newAliases || '无'}` : '')
+                  );
+                }
+              }
+            }
+
+            // ===== 新增：键名相近检测（简单包含） =====
+            for (const entry of newEntries) {
+              const similarKeys = existing
+                .filter(e => e.key !== entry.key)
+                .filter(e => e.key.includes(entry.key) || entry.key.includes(e.key));
+              if (similarKeys.length > 0) {
+                const keyList = similarKeys.map(e => `\`${e.key}\``).join('、');
+                report.push(`🔍 键名相近提示：\`${entry.key}\` 与已有键 ${keyList} 可能存在重复，请确认。`);
+              }
+            }
+
             const reportContent = report.length ? report.join('\n\n') : '✅ 所有检查通过，未发现冲突或异常。';
             
             const reportPath = path.join(baseDir, 'report.md');
@@ -231,9 +266,22 @@ jobs:
 
             const newEntries = JSON.parse(fs.readFileSync(newEntriesPath, 'utf8'));
 
+            // ===== 修改：合并逻辑取代直接覆盖 =====
             for (const entry of newEntries) {
               const idx = existing.findIndex(e => e.key === entry.key);
               if (idx >= 0) {
+                // 群号合并：如果新群号不同于旧群号，则用换行追加；如果相同，不追加，避免重复
+                const oldGroup = existing[idx].groupNumber;
+                if (oldGroup !== entry.groupNumber) {
+                  entry.groupNumber = oldGroup + '\n' + entry.groupNumber;
+                } else {
+                  // 群号相同，保持原 groupNumber（已经是 oldGroup）
+                  entry.groupNumber = oldGroup;
+                }
+                // 别名合并：保留旧的，并添加新的（去重）
+                const oldAliases = existing[idx].aliases || [];
+                const newAliases = entry.aliases || [];
+                entry.aliases = [...new Set([...oldAliases, ...newAliases])];
                 existing[idx] = entry;
               } else {
                 existing.push(entry);
@@ -244,6 +292,7 @@ jobs:
               return a.key.localeCompare(b.key, 'zh-CN', { sensitivity: 'base' });
             });
 
+            // 清理空别名数组
             for (const entry of existing) {
               if (entry.aliases && entry.aliases.length === 0) {
                 delete entry.aliases;
