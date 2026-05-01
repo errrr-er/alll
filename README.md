@@ -27,7 +27,8 @@
 # 汇报错误/补充（反馈时请带上相关截图!!!）
 
 - 提交[issue](https://github.com/errrr-er/alll/issues)
-- 2150284119（QQ群）
+- 2150284119（QQ群聊）
+- pd65020512（QQ频道）
 
 # README（缓慢修）
 - [Call of Cthulhu](https://github.com/errrr-er/alll/tree/main/call_of_cthulhu)
