@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777666180
+// @timestamp    1777731140
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777666180;
+    return 1777731140;
 }
 
 // 提醒历史
@@ -279,6 +279,7 @@ const groupMap = {
 	"帕瑞卡颂马戏团": { groupNumber: "760671074" },
 	"蓬莱有龙": { groupNumber: "1073307651*下载\n1101230234*KP" },
 	"奇异医科": { groupNumber: "1033132363*下载" },
+	"祈舞醒梦": { groupNumber: "1104143844*下载\n1101711435*KP" },
 	"崎蜀藏观音": { groupNumber: "652844613" },
 	"起承转结": { groupNumber: "1043452922" },
 	"弃约社会": { groupNumber: "972643133*下载\n916122224*KP" },
