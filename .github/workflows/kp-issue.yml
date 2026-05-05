@@ -130,7 +130,7 @@ jobs:
               }
             }
 
-            const newEntries = Object.entries(submitted.data).map(([key, val]) => ({
+            let newEntries = Object.entries(submitted.data).map(([key, val]) => ({
               key: key,
               groupNumber: val.groupNumber,
               aliases: val.aliases || []
@@ -138,18 +138,29 @@ jobs:
 
             const report = [];
             const allExistingGroups = existing.map(e => e.groupNumber);
+            const mergeAsAlias = [];
 
-            // 1. 检查群号完全重复（与已有数据）
+            // 1. 检查群号完全匹配 -> 自动将新键合并为已有键的别名
             for (const entry of newEntries) {
               if (allExistingGroups.includes(entry.groupNumber)) {
                 const conflict = existing.find(e => e.groupNumber === entry.groupNumber);
-                report.push(`⚠️ 群号 \`${entry.groupNumber}\` (本次提交键: ${entry.key}) 已存在于已有键 \`${conflict.key}\`，提交后将覆盖。`);
+                if (conflict.key !== entry.key) {
+                  mergeAsAlias.push({ sourceEntry: entry, targetKey: conflict.key });
+                  report.push(
+                    `✅ 群号 \`${entry.groupNumber}\` 与已有键 \`${conflict.key}\` 的群号完全匹配，已自动将新键 \`${entry.key}\` 添加为该键的别名。\n` +
+                    `- 已有键别名：${(conflict.aliases || []).join(', ') || '无'}\n` +
+                    `- 新键别名（将合并）：${(entry.aliases || []).join(', ') || '无'}`
+                  );
+                }
               }
             }
 
+            const mergedEntryKeys = new Set(mergeAsAlias.map(m => m.sourceEntry.key));
+            newEntries = newEntries.filter(e => !mergedEntryKeys.has(e.key));
+
             // 2. 检查群号部分相似（包含关系）
             for (const entry of newEntries) {
-              const similar = existing.filter(e => 
+              const similar = existing.filter(e =>
                 e.groupNumber.includes(entry.groupNumber) || entry.groupNumber.includes(e.groupNumber)
               );
               if (similar.length > 0 && !allExistingGroups.includes(entry.groupNumber)) {
@@ -200,13 +211,13 @@ jobs:
               }
             }
 
+            // 6. 键名重复或更新检查
             const existingKeyMap = new Map(existing.map(e => [e.key, e]));
             for (const entry of newEntries) {
               if (existingKeyMap.has(entry.key)) {
                 const old = existingKeyMap.get(entry.key);
                 const oldAliases = (old.aliases || []).join(', ');
                 const newAliases = (entry.aliases || []).join(', ');
-                // 如果群号完全一样，特别提醒
                 if (old.groupNumber === entry.groupNumber) {
                   report.push(
                     `ℹ️ 键 \`${entry.key}\` 已存在，群号没有变化（\`${entry.groupNumber}\`），仅别名可能更新。\n` +
@@ -224,7 +235,7 @@ jobs:
               }
             }
 
-            // ===== 新增：键名相近检测（简单包含） =====
+            // 7. 键名相近检测（简单包含）
             for (const entry of newEntries) {
               const similarKeys = existing
                 .filter(e => e.key !== entry.key)
@@ -235,8 +246,21 @@ jobs:
               }
             }
 
+            // 8. 【新增】检查已有数据库内部的群号重复
+            const existingGroupCount = new Map();
+            for (const e of existing) {
+              const gn = e.groupNumber;
+              if (!existingGroupCount.has(gn)) existingGroupCount.set(gn, []);
+              existingGroupCount.get(gn).push(e.key);
+            }
+            for (const [gn, keys] of existingGroupCount.entries()) {
+              if (keys.length > 1) {
+                report.push(`🔴 已有数据库内部群号重复：群号 \`${gn}\` 存在多个键：${keys.map(k => `\`${k}\``).join('、')}`);
+              }
+            }
+
             const reportContent = report.length ? report.join('\n\n') : '✅ 所有检查通过，未发现冲突或异常。';
-            
+
             const reportPath = path.join(baseDir, 'report.md');
             fs.writeFileSync(reportPath, reportContent);
 
@@ -251,6 +275,9 @@ jobs:
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
             fs.writeFileSync(newEntriesPath, JSON.stringify(newEntries, null, 2));
 
+            const mergeAliasPath = path.join(baseDir, 'merge_alias.json');
+            fs.writeFileSync(mergeAliasPath, JSON.stringify(mergeAsAlias, null, 2));
+
       - name: Update Database File
         run: |
           node -e "
@@ -259,6 +286,7 @@ jobs:
             const baseDir = 'call_of_cthulhu/kp/issues_base';
             const dbPath = path.join(baseDir, 'database.json');
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
+            const mergeAliasPath = path.join(baseDir, 'merge_alias.json');
 
             let existing = [];
             if (fs.existsSync(dbPath)) {
@@ -266,21 +294,39 @@ jobs:
               if (!Array.isArray(existing)) existing = [];
             }
 
+            // 1. 应用别名合并（群号完全匹配）
+            if (fs.existsSync(mergeAliasPath)) {
+              const mergeList = JSON.parse(fs.readFileSync(mergeAliasPath, 'utf8'));
+              for (const item of mergeList) {
+                const targetEntry = existing.find(e => e.key === item.targetKey);
+                if (targetEntry) {
+                  targetEntry.aliases = targetEntry.aliases || [];
+                  if (!targetEntry.aliases.includes(item.sourceEntry.key)) {
+                    targetEntry.aliases.push(item.sourceEntry.key);
+                  }
+                  if (item.sourceEntry.aliases) {
+                    for (const alias of item.sourceEntry.aliases) {
+                      if (!targetEntry.aliases.includes(alias)) {
+                        targetEntry.aliases.push(alias);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
             const newEntries = JSON.parse(fs.readFileSync(newEntriesPath, 'utf8'));
 
-            // ===== 修改：合并逻辑取代直接覆盖 =====
+            // 2. 常规键合并/新增
             for (const entry of newEntries) {
               const idx = existing.findIndex(e => e.key === entry.key);
               if (idx >= 0) {
-                // 群号合并：如果新群号不同于旧群号，则用换行追加；如果相同，不追加，避免重复
                 const oldGroup = existing[idx].groupNumber;
                 if (oldGroup !== entry.groupNumber) {
                   entry.groupNumber = oldGroup + '\n' + entry.groupNumber;
                 } else {
-                  // 群号相同，保持原 groupNumber（已经是 oldGroup）
                   entry.groupNumber = oldGroup;
                 }
-                // 别名合并：保留旧的，并添加新的（去重）
                 const oldAliases = existing[idx].aliases || [];
                 const newAliases = entry.aliases || [];
                 entry.aliases = [...new Set([...oldAliases, ...newAliases])];
@@ -290,11 +336,10 @@ jobs:
               }
             }
 
+            // 排序与清理
             existing.sort((a, b) => {
               return a.key.localeCompare(b.key, 'zh-CN', { sensitivity: 'base' });
             });
-
-            // 清理空别名数组
             for (const entry of existing) {
               if (entry.aliases && entry.aliases.length === 0) {
                 delete entry.aliases;
@@ -317,6 +362,7 @@ jobs:
         run: |
           rm -f call_of_cthulhu/kp/issues_base/new_entries.json
           rm -f call_of_cthulhu/kp/issues_base/submitted_data.json
+          rm -f call_of_cthulhu/kp/issues_base/merge_alias.json
           echo "已清理临时文件，保留 database.json, report.md, pr_body.md"
 
       - name: Ensure labels exist
