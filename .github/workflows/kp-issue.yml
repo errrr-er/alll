@@ -140,16 +140,16 @@ jobs:
             const allExistingGroups = existing.map(e => e.groupNumber);
             const mergeAsAlias = [];
 
-            // 1. 检查群号完全匹配 -> 自动将新键合并为已有键的别名
+            // 1. 群号完全匹配 -> 自动将新键合并为已有键的别名
             for (const entry of newEntries) {
               if (allExistingGroups.includes(entry.groupNumber)) {
                 const conflict = existing.find(e => e.groupNumber === entry.groupNumber);
                 if (conflict.key !== entry.key) {
                   mergeAsAlias.push({ sourceEntry: entry, targetKey: conflict.key });
                   report.push(
-                    `✅ 群号 \`${entry.groupNumber}\` 与已有键 \`${conflict.key}\` 的群号完全匹配，已自动将新键 \`${entry.key}\` 添加为该键的别名。\n` +
+                    `✅ 群号 \`${entry.groupNumber}\` 与已有键 \`${conflict.key}\` 的群号完全匹配，已将新键 \`${entry.key}\` 添加为 \`${conflict.key}\` 的别名。\n` +
                     `- 已有键别名：${(conflict.aliases || []).join(', ') || '无'}\n` +
-                    `- 新键别名（将合并）：${(entry.aliases || []).join(', ') || '无'}`
+                    `- 新键自身及别名（合并至 \`${conflict.key}\`）：${([entry.key, ...entry.aliases].filter(Boolean).join(', ') || '无')}`
                   );
                 }
               }
@@ -158,18 +158,18 @@ jobs:
             const mergedEntryKeys = new Set(mergeAsAlias.map(m => m.sourceEntry.key));
             newEntries = newEntries.filter(e => !mergedEntryKeys.has(e.key));
 
-            // 2. 检查群号部分相似（包含关系）
+            // 2. 群号部分相似（包含关系） => 加入新键名，提示更清晰
             for (const entry of newEntries) {
               const similar = existing.filter(e =>
                 e.groupNumber.includes(entry.groupNumber) || entry.groupNumber.includes(e.groupNumber)
               );
               if (similar.length > 0 && !allExistingGroups.includes(entry.groupNumber)) {
                 const similarInfo = similar.map(s => `\`${s.groupNumber}\` (键: ${s.key})`).join(', ');
-                report.push(`🔍 群号 \`${entry.groupNumber}\` 与已有群号相似：${similarInfo}`);
+                report.push(`🔍 新键 \`${entry.key}\` 的群号 \`${entry.groupNumber}\` 与已有群号相似：${similarInfo}`);
               }
             }
 
-            // 3. 检查别名冲突（与已有数据）
+            // 3. 别名冲突
             for (const entry of newEntries) {
               for (const alias of entry.aliases) {
                 const conflictEntries = existing.filter(e => e.aliases && e.aliases.includes(alias));
@@ -180,13 +180,11 @@ jobs:
               }
             }
 
-            // 4. 检查新数据内部群号重复
+            // 4. 新数据内部群号重复
             const groupNumberMap = new Map();
             for (const entry of newEntries) {
               const num = entry.groupNumber;
-              if (!groupNumberMap.has(num)) {
-                groupNumberMap.set(num, []);
-              }
+              if (!groupNumberMap.has(num)) groupNumberMap.set(num, []);
               groupNumberMap.get(num).push(entry.key);
             }
             for (const [num, keys] of groupNumberMap.entries()) {
@@ -195,13 +193,11 @@ jobs:
               }
             }
 
-            // 5. 检查新数据内部别名重复
+            // 5. 新数据内部别名重复
             const aliasMap = new Map();
             for (const entry of newEntries) {
               for (const alias of entry.aliases) {
-                if (!aliasMap.has(alias)) {
-                  aliasMap.set(alias, []);
-                }
+                if (!aliasMap.has(alias)) aliasMap.set(alias, []);
                 aliasMap.get(alias).push(entry.key);
               }
             }
@@ -211,20 +207,37 @@ jobs:
               }
             }
 
-            // 6. 键名重复或更新检查
+            // 6. 键名重复/更新检查（含群号包含关系覆盖逻辑）
             const existingKeyMap = new Map(existing.map(e => [e.key, e]));
+            const groupOverrideList = [];  // 记录需要覆盖群号的条目
             for (const entry of newEntries) {
               if (existingKeyMap.has(entry.key)) {
                 const old = existingKeyMap.get(entry.key);
                 const oldAliases = (old.aliases || []).join(', ');
                 const newAliases = (entry.aliases || []).join(', ');
+
+                // 判断新旧群号是否有包含关系
+                const isContained =
+                  old.groupNumber.includes(entry.groupNumber) ||
+                  entry.groupNumber.includes(old.groupNumber);
+
                 if (old.groupNumber === entry.groupNumber) {
+                  // 群号完全相同 -> 仅别名可能更新
                   report.push(
-                    `ℹ️ 键 \`${entry.key}\` 已存在，群号没有变化（\`${entry.groupNumber}\`），仅别名可能更新。\n` +
+                    `ℹ️ 键 \`${entry.key}\` 已存在，群号未变（\`${entry.groupNumber}\`），仅别名可能更新。\n` +
                     `- 原别名：${oldAliases || '无'}\n` +
                     `- 新别名：${newAliases || '无'}`
                   );
+                } else if (isContained) {
+                  // 群号包含 -> 直接用新群号覆盖旧群号
+                  groupOverrideList.push({ key: entry.key, newGroup: entry.groupNumber });
+                  report.push(
+                    `🔄 键 \`${entry.key}\` 已存在，群号存在包含关系，将用新群号 \`${entry.groupNumber}\` 覆盖旧群号 \`${old.groupNumber}\`。\n` +
+                    `- 原别名：${oldAliases || '无'}\n` +
+                    `- 新别名（别名仍会合并）：${newAliases || '无'}`
+                  );
                 } else {
+                  // 群号完全不同 -> 换行合并（原逻辑）
                   report.push(
                     `🔄 合并提示：键 \`${entry.key}\` 已存在。\n` +
                     `- 原群号：\`${old.groupNumber}\`\n` +
@@ -235,7 +248,7 @@ jobs:
               }
             }
 
-            // 7. 键名相近检测（简单包含）
+            // 7. 键名相近检测
             for (const entry of newEntries) {
               const similarKeys = existing
                 .filter(e => e.key !== entry.key)
@@ -246,7 +259,7 @@ jobs:
               }
             }
 
-            // 8. 【新增】检查已有数据库内部的群号重复
+            // 8. 已有数据库内部群号重复检测
             const existingGroupCount = new Map();
             for (const e of existing) {
               const gn = e.groupNumber;
@@ -278,6 +291,10 @@ jobs:
             const mergeAliasPath = path.join(baseDir, 'merge_alias.json');
             fs.writeFileSync(mergeAliasPath, JSON.stringify(mergeAsAlias, null, 2));
 
+            // 保存群号覆盖列表（键名相同且群号包含）
+            const groupOverridePath = path.join(baseDir, 'group_override.json');
+            fs.writeFileSync(groupOverridePath, JSON.stringify(groupOverrideList, null, 2));
+
       - name: Update Database File
         run: |
           node -e "
@@ -287,6 +304,7 @@ jobs:
             const dbPath = path.join(baseDir, 'database.json');
             const newEntriesPath = path.join(baseDir, 'new_entries.json');
             const mergeAliasPath = path.join(baseDir, 'merge_alias.json');
+            const groupOverridePath = path.join(baseDir, 'group_override.json');
 
             let existing = [];
             if (fs.existsSync(dbPath)) {
@@ -294,7 +312,7 @@ jobs:
               if (!Array.isArray(existing)) existing = [];
             }
 
-            // 1. 应用别名合并（群号完全匹配）
+            // 1. 应用别名合并（群号完全匹配，不同键）
             if (fs.existsSync(mergeAliasPath)) {
               const mergeList = JSON.parse(fs.readFileSync(mergeAliasPath, 'utf8'));
               for (const item of mergeList) {
@@ -315,18 +333,34 @@ jobs:
               }
             }
 
+            // 2. 读取群号覆盖列表（键名相同，群号包含）
+            let overrideMap = new Map();
+            if (fs.existsSync(groupOverridePath)) {
+              const overrideList = JSON.parse(fs.readFileSync(groupOverridePath, 'utf8'));
+              for (const item of overrideList) {
+                overrideMap.set(item.key, item.newGroup);
+              }
+            }
+
             const newEntries = JSON.parse(fs.readFileSync(newEntriesPath, 'utf8'));
 
-            // 2. 常规键合并/新增
+            // 3. 常规键合并/新增（含覆盖逻辑）
             for (const entry of newEntries) {
               const idx = existing.findIndex(e => e.key === entry.key);
               if (idx >= 0) {
-                const oldGroup = existing[idx].groupNumber;
-                if (oldGroup !== entry.groupNumber) {
-                  entry.groupNumber = oldGroup + '\n' + entry.groupNumber;
+                // 若在覆盖列表中，直接用新群号覆盖
+                if (overrideMap.has(entry.key)) {
+                  entry.groupNumber = overrideMap.get(entry.key);
                 } else {
-                  entry.groupNumber = oldGroup;
+                  // 否则按原逻辑：群号不同则换行合并，相同则保留
+                  const oldGroup = existing[idx].groupNumber;
+                  if (oldGroup !== entry.groupNumber) {
+                    entry.groupNumber = oldGroup + '\n' + entry.groupNumber;
+                  } else {
+                    entry.groupNumber = oldGroup;
+                  }
                 }
+                // 别名合并
                 const oldAliases = existing[idx].aliases || [];
                 const newAliases = entry.aliases || [];
                 entry.aliases = [...new Set([...oldAliases, ...newAliases])];
@@ -363,6 +397,7 @@ jobs:
           rm -f call_of_cthulhu/kp/issues_base/new_entries.json
           rm -f call_of_cthulhu/kp/issues_base/submitted_data.json
           rm -f call_of_cthulhu/kp/issues_base/merge_alias.json
+          rm -f call_of_cthulhu/kp/issues_base/group_override.json
           echo "已清理临时文件，保留 database.json, report.md, pr_body.md"
 
       - name: Ensure labels exist
@@ -377,7 +412,7 @@ jobs:
                   repo: context.repo.repo,
                   name: label
                 });
-                console.log(`✅ Label "${label}" already exists`);
+                console.log('✅ Label "${label}" already exists');
               } catch (error) {
                 if (error.status === 404) {
                   await github.rest.issues.createLabel({
@@ -386,7 +421,7 @@ jobs:
                     name: label,
                     color: '0052cc'
                   });
-                  console.log(`🆕 Created label "${label}"`);
+                  console.log('🆕 Created label "${label}"');
                 } else {
                   throw error;
                 }
@@ -433,4 +468,4 @@ jobs:
               issue_number: context.payload.issue.number,
               labels: ['kp-pr']
             });
-            console.log(`🏷️ Added 'kp-pr' label to issue #${context.payload.issue.number}`);
+            console.log('🏷️ Added \'kp-pr\' label to issue #${context.payload.issue.number}');
