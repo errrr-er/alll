@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777790643
+// @timestamp    1777987910
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777790643;
+    return 1777987910;
 }
 
 // 提醒历史
@@ -271,6 +271,7 @@ const groupMap = {
 	"幕临": { groupNumber: "160438930" },
 	"奈面": { groupNumber: "933493427", aliases: ["奈亚拉托提普的面具"] },
 	"内锈": { groupNumber: "1061071715" },
+	"你的鱼缸里也会倒映出我的脸吧": { groupNumber: "1101358217*下载" },
 	"你是谁？请支持百日○纪！": { groupNumber: "1057449882", aliases: ["百日"] },
 	"你这什么跑团，你这coj害人不浅啊": { groupNumber: "745155380*下载" },
 	"逆命仙途": { groupNumber: "796368505" },
@@ -430,7 +431,7 @@ const groupMap = {
 	"摇曳群青": { groupNumber: "513712312" },
 	"要继承的遗产里有嫂子怎么办": { groupNumber: "519716458", aliases: ["嫂子","黑乌鸦与不死犬"] },
 	"耀光城": { groupNumber: "728536185" },
-	"一梦": { groupNumber: "431528579*下载+KP" },
+	"一梦": { groupNumber: "431528579*下载+KP", aliases: ["血系"] },
 	"伊卡洛斯的忠堰": { groupNumber: "749121463", aliases: ["伊卡忠"] },
 	"遗香巡游": { groupNumber: "535538005" },
 	"以撒的狂想曲": { groupNumber: "907783672" },
