@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1777988255
+// @timestamp    1777989401
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1777988255;
+    return 1777989401;
 }
 
 // 提醒历史
@@ -83,6 +83,7 @@ const groupMap = {
 	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
 	"哀歌弥赛亚": { groupNumber: "609355937", aliases: ["哀歌"] },
 	"暗河": { groupNumber: "1031974789" },
+	"暗金": { groupNumber: "666715873" },
 	"暗影狂奔": { groupNumber: "245525828" },
 	"八方旅人": { groupNumber: "549132432" },
 	"白影": { groupNumber: "825032832*下载+KP" },
@@ -157,6 +158,7 @@ const groupMap = {
 	"共鸣性怪异": { groupNumber: "903173796、720345251" },
 	"孤岛恋综": { groupNumber: "932315790*下载" },
 	"孤灯弃城": { groupNumber: "877858567" },
+	"故障乱码文本": { groupNumber: "https://tw.piliapp.com/cool-text/zalgo-text/" },
 	"怪胎": { groupNumber: "639870851" },
 	"怪物们与邪典仙境": { groupNumber: "592577986", aliases: ["鞋垫"] },
 	"哈欠门": { groupNumber: "631595428" },
@@ -244,7 +246,7 @@ const groupMap = {
 	"螺旋旅人发问道": { groupNumber: "859933056" },
 	"落石": { groupNumber: "603178528" },
 	"猫寿司": { groupNumber: "831331659" },
-	"卯花腐雨": { groupNumber: "1083939047" },
+	"卯花腐雨": { groupNumber: "1083939047*下载" },
 	"冒充神明的童话": { groupNumber: "1062511494" },
 	"梅林杯": { groupNumber: "905396897" },
 	"门扉那端": { groupNumber: "621153022" },
@@ -278,6 +280,7 @@ const groupMap = {
 	"鸟啼歌": { groupNumber: "1076715464" },
 	"脓堕": { groupNumber: "183186533", aliases: ["nd"] },
 	"帕瑞卡颂马戏团": { groupNumber: "760671074" },
+	"跑团禁男吐槽群": { groupNumber: "1098988080" },
 	"蓬莱有龙": { groupNumber: "1073307651*下载\n1101230234*KP" },
 	"奇异医科": { groupNumber: "1033132363*下载" },
 	"祈舞醒梦": { groupNumber: "1104143844*下载\n1101711435*KP" },
@@ -312,6 +315,7 @@ const groupMap = {
 	"三角机构": { groupNumber: "1056836484" },
 	"三台风月": { groupNumber: "1084095765" },
 	"山歌唤梦": { groupNumber: "972586937" },
+	"山中无盈月": { groupNumber: "1098856853*下载" },
 	"少恶世界": { groupNumber: "849810896\n少恶世界+蚀甚", aliases: ["蚀甚"] },
 	"深眠雾梦": { groupNumber: "523093958" },
 	"什么叫做kpc……": { groupNumber: "1079232693*下载", aliases: ["春日宴"] },
@@ -342,6 +346,7 @@ const groupMap = {
 	"死神的圣域": { groupNumber: "1028029280" },
 	"死刑执行": { groupNumber: "830833837" },
 	"死者的顿足舞": { groupNumber: "1081620177" },
+	"四季配送": { groupNumber: "1101946792" },
 	"似人非人": { groupNumber: "869916259" },
 	"太岁": { groupNumber: "615878940*下载\n703542083*KP" },
 	"逃离深渊": { groupNumber: "513100948" },
@@ -424,6 +429,7 @@ const groupMap = {
 	"寻仙I神仙索": { groupNumber: "746673328*下载\n寻仙I神仙索+寻仙II观音土", aliases: ["寻仙II观音土","寻仙"] },
 	"鸦阁领域": { groupNumber: "836306797" },
 	"哑蝉的剖白": { groupNumber: "613231813", aliases: ["哑蝉"] },
+	"雅努斯式": { groupNumber: "666429307*无剧透\n1061867760*KP" },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
 	"湮灭之墓": { groupNumber: "868114556" },
 	"盐沼幽魂": { groupNumber: "926412005" },
@@ -440,7 +446,7 @@ const groupMap = {
 	"异能儿童管理机构": { groupNumber: "786412774*下载\n817252450*KP" },
 	"异能警察不是什么英雄": { groupNumber: "873824063" },
 	"异神成渊": { groupNumber: "916464615" },
-	"抑或地位未定": { groupNumber: "1041670093" },
+	"抑或地位未定": { groupNumber: "1041670093", aliases: ["所属不明"] },
 	"阴霾，与消散的你": { groupNumber: "1091169562*下载" },
 	"应天劫": { groupNumber: "231734390*下载\n2811466327*墙" },
 	"永7": { groupNumber: "1092736604" },
