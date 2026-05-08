@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1778040194
+// @timestamp    1778253361
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1778040194;
+    return 1778253361;
 }
 
 // 提醒历史
@@ -315,7 +315,7 @@ const groupMap = {
 	"三角机构": { groupNumber: "1056836484" },
 	"三台风月": { groupNumber: "1084095765" },
 	"山歌唤梦": { groupNumber: "972586937" },
-	"山中无盈月": { groupNumber: "1098856853*下载" },
+	"山中无盈月": { groupNumber: "1098856853*下载\n1101323055*KP" },
 	"少恶世界": { groupNumber: "849810896\n少恶世界+蚀甚", aliases: ["蚀甚"] },
 	"深眠雾梦": { groupNumber: "523093958" },
 	"什么叫做kpc……": { groupNumber: "1079232693*下载", aliases: ["春日宴"] },
@@ -429,7 +429,7 @@ const groupMap = {
 	"寻仙I神仙索": { groupNumber: "746673328*下载\n寻仙I神仙索+寻仙II观音土", aliases: ["寻仙II观音土","寻仙"] },
 	"鸦阁领域": { groupNumber: "836306797" },
 	"哑蝉的剖白": { groupNumber: "613231813", aliases: ["哑蝉"] },
-	"雅努斯式": { groupNumber: "666429307*无剧透\n1061867760*KP" },
+	"雅努斯式": { groupNumber: "666429307*无剧透\n1061867760*有作者\n750270687*无作者" },
 	"亚里斯特拉魔法学院": { groupNumber: "759411294" },
 	"湮灭之墓": { groupNumber: "868114556" },
 	"盐沼幽魂": { groupNumber: "926412005" },
