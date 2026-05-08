@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1778253383
+// @timestamp    1778255702
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1778253383;
+    return 1778255702;
 }
 
 // 提醒历史
@@ -338,6 +338,7 @@ const groupMap = {
 	"属于吾等的安乐之所": { groupNumber: "826771926" },
 	"树不子英雄传": { groupNumber: "960918320", aliases: ["RWBY"] },
 	"双人搜查": { groupNumber: "616576634" },
+	"双生悲剧": { groupNumber: "1022285434" },
 	"双重十字": { groupNumber: "651709429" },
 	"朔月笔谈": { groupNumber: "825664784" },
 	"斯翠海文": { groupNumber: "838512466" },
@@ -472,6 +473,7 @@ const groupMap = {
 	"云黑": { groupNumber: "795251459" },
 	"云上仙": { groupNumber: "939600700*下载" },
 	"再见新世界": { groupNumber: "1004914022*下载\n909369023*KP" },
+	"在黎明到来之前": { groupNumber: "788432874*下载" },
 	"造物者": { groupNumber: "948914482" },
 	"斩我": { groupNumber: "776965370" },
 	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
