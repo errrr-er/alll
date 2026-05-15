@@ -1,0 +1,64 @@
+name: base json to csv
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'call_of_cthulhu/glossary/glossary.json'
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Convert JSON to CSV
+        run: |
+          python3 <<EOF
+          import json
+          import csv
+          import os
+
+          json_path = 'call_of_cthulhu/glossary/glossary.json'
+          csv_path = os.path.splitext(json_path)[0] + '.csv'
+
+          if not os.path.exists(json_path):
+              raise FileNotFoundError(f"找不到文件: {json_path}")
+
+          with open(json_path, encoding='utf-8') as f:
+              data = json.load(f)
+
+          with open(csv_path, 'w', newline='', encoding='utf-8') as f:
+              writer = csv.writer(f)
+              writer.writerow(['source', 'target', 'tgt_lng'])
+
+              for k, v in data.items():
+                  if not k.strip():
+                      continue
+                  if k.startswith('#'):
+                      continue
+                  if not v.strip():
+                      continue
+
+                  writer.writerow([k, v, 'zh-CN'])
+
+          print(f"生成完成: {csv_path}")
+          EOF
+
+      - name: Commit CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add call_of_cthulhu/glossary/glossary.csv
+
+          if ! git diff --cached --quiet; then
+            git commit -m "glossary.csv"
+            git push
+          else
+            echo "No changes to commit"
+          fi
