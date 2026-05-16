@@ -4,6 +4,9 @@
 // @version      1.0.0
 // @description  (.kpissue)提交GitHub Issue | 用法：.kpissue 群号 别名1,别名2(可选)
 // @timestamp    1778959464
+// 2026-05-16 19:24:24
+// @license      Apache-2
+// @homepageURL  https://github.com/errrr-er/alll/tree/main
 // ==/UserScript==
 
 // ======================
