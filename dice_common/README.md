@@ -9,9 +9,6 @@
 
 ## 多套回复生成器（[网页](https://errrr-er.github.io/alll/dice_common/multi_reply/multi.html)）
 
-> [!CAUTION]
-> 主适配海豹v1和v2引擎
-
 ※强烈推荐配合海豹官方手册进行生成与修改
 
 ※非网页本身的问题请先尝试在官群答疑解惑
