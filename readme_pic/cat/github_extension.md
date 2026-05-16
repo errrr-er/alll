@@ -3,7 +3,7 @@
 - [.kp] KP群汇总（JS/OPK）
 - [.沉默 help] 沉默提醒（JS）
 - 多套回复生成器（网页）
-- 下载\反馈群（二维码）
+- 下载/反馈群（二维码）
 
 ### [.kp] KP群汇总（JS/OPK）
 
@@ -82,6 +82,6 @@
 - 【更多】
     - 开发中……如有想加的功能可随时提出
 
-### 下载\反馈群（二维码）
+### 下载/反馈群（二维码）
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/reply/%E5%8F%8D%E9%A6%88%E7%BE%A4.jpg?raw=true)
