@@ -664,72 +664,13 @@ function generateGroupList() {
     return listLines.join('\n');
 }
 
-// 解析 .kp mk 的输入
-function parseMKInput(input) {
-    const groups = [];
-    
-    // 方法1：多行格式（按换行符分割）
-    const lines = input.split(/[\r\n]+/)
-        .map(line => line.trim())
-        .filter(line => line.length > 0);
-    
-    if (lines.length >= 2 && lines.length % 2 === 0) {
-        let allValid = true;
-        // 检查是否为有效的多行格式（奇数行是名称，偶数行是号码）
-        for (let i = 1; i < lines.length; i += 2) {
-            if (!/\d/.test(lines[i])) {
-                allValid = false;
-                break;
-            }
-        }
-        
-        if (allValid) {
-            for (let i = 0; i < lines.length; i += 2) {
-                if (i + 1 < lines.length) {
-                    groups.push({
-                        name: lines[i],
-                        number: lines[i + 1]
-                    });
-                }
-            }
-            return groups; // 成功解析多行格式，直接返回
-        }
-    }
-    
-    // 方法2：单行分隔格式
-    // 统一分隔符：中文逗号、顿号 → 英文逗号
-    let normalizedInput = input
-        .replace(/，/g, ',')
-        .replace(/、/g, ',')
-        .replace(/\s+/g, ''); // 移除所有空格
-    
-    const parts = normalizedInput.split(',')
-        .map(p => p.trim())
-        .filter(p => p.length > 0);
-    
-    // 每两个部分为一组
-    for (let i = 0; i < parts.length; i += 2) {
-        if (i + 1 < parts.length) {
-            // 验证第二个参数包含数字
-            if (/\d/.test(parts[i + 1])) {
-                groups.push({
-                    name: parts[i],
-                    number: parts[i + 1]
-                });
-            }
-        }
-    }
-    
-    return groups;
-}
-
 // .kp指令
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
-.kp <关键词>    // 查询特定KP群号(支持反向查询)
-.kp list    // 列出所有KP群信息(超长慎用)
-.kp help    // 显示本帮助`;
+.kp <关键词/群号>    // 查询KP群(支持反向查询)
+.kp list            // 列出所有KP群信息(超长慎用)
+.kp help            // 显示帮助`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
@@ -776,68 +717,6 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             seal.replyToSender(ctx, msg, '图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
         }, segments.length * 500 + 200);
     }
-
-// mk命令 - 生成群组代码格式
-if (input.toLowerCase() === 'mk') {
-    // 获取 mk 后面的所有参数（去掉 "mk" 本身）
-    let mkContent = cmdArgs.rawArgs.trim();
-    
-    // 移除开头的 "mk" 字符串
-    if (mkContent.toLowerCase().startsWith('mk')) {
-        mkContent = mkContent.substring(2).trim();
-    }
-    
-    if (!mkContent) {
-        seal.replyToSender(ctx, msg, 
-            "用法：.kp mk [内容]\n" +
-            "支持以下格式：\n" +
-            "1. 逗号分隔：名称,号码,名称,号码\n" +
-            "2. 顿号分隔：名称、号码、名称、号码\n" +
-            "3. 多行格式：\n名称\n号码\n名称\n号码"
-        );
-        return ret;
-    }
-    
-    // 解析输入的群组信息
-    const groups = parseMKInput(mkContent);
-    
-    if (groups.length === 0) {
-        seal.replyToSender(ctx, msg, 
-            `解析失败，未找到有效的群组信息。\n\n` +
-            `接收到的内容：\n${mkContent}\n\n` +
-            `请检查格式是否正确。`
-        );
-        return ret;
-    }
-    
-    // 生成当前时间戳
-    const currentTimestamp = Math.floor(Date.now() / 1000);
-    const now = new Date();
-    const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
-    
-    // 生成输出
-    let output = `当前时间戳：${currentTimestamp}\n${dateStr}\n\n`;
-    
-    output += `JSON格式（适配青果）：\n`;
-    groups.forEach(group => {
-        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
-        output += `"${group.name}": { "groupNumber": "${escapedNumber}" },\n`;
-    });
-    
-    output += `\nJS格式（适配海豹）：\n`;
-    groups.forEach(group => {
-        const escapedNumber = JSON.stringify(group.number).slice(1, -1);
-        output += `"${group.name}": { groupNumber: "${escapedNumber}" },\n`;
-    });
-    
-    output += `\n成功解析 ${groups.length} 个群组：\n`;
-    groups.forEach((group, index) => {
-        output += `${index + 1}. ${group.name} → ${group.number}\n`;
-    });
-    
-    seal.replyToSender(ctx, msg, output);
-    return ret;
-}
 
     // list命令
     if (input.toLowerCase() === 'list') {
