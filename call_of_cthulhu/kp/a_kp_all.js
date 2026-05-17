@@ -636,7 +636,7 @@ function findSimilarGroup(input) {
         }
 
 		// 相似度高于或等于
-        if (highestScore >= 0.25) {
+        if (highestScore >= 0.3) {
             matchedGroups.push({
                 name: groupName,
                 info: groupInfo,
@@ -789,10 +789,10 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     if (!foundGroup) {
         const matchedGroups = findSimilarGroup(input);
         if (matchedGroups) {
-            let replyText = `近似匹配(相似度)【${input}】：`;
+            let replyText = `近似【${input}】：`;
             matchedGroups.forEach(group => {
 				const aliasText = getAliasText(group.info);
-				replyText += `\n【${group.name}${aliasText}】→ ${group.info.groupNumber} (${Math.round(group.score * 100)}%)`;
+				replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
@@ -801,7 +801,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     } else {
         // 精确匹配输出
 		const aliasText = getAliasText(foundGroup.match.info);
-		seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}${aliasText}】→ ${foundGroup.match.info.groupNumber}`);
+		seal.replyToSender(ctx, msg, `精确【${input}】：\n【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}`);
     }
 
     return ret;
