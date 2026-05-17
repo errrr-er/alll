@@ -801,7 +801,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     } else {
         // 精确匹配输出
 		const aliasText = getAliasText(foundGroup.match.info);
-		seal.replyToSender(ctx, msg, `精确【${input}】：\n【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}\n`);
+		seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】：\n${foundGroup.match.info.groupNumber}\n`);
     }
 
     return ret;
