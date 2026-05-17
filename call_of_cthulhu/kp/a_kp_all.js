@@ -792,7 +792,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             let replyText = `近似【${input}】：`;
             matchedGroups.forEach(group => {
 				const aliasText = getAliasText(group.info);
-				replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}`;
+				replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
@@ -801,7 +801,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     } else {
         // 精确匹配输出
 		const aliasText = getAliasText(foundGroup.match.info);
-		seal.replyToSender(ctx, msg, `精确【${input}】：\n【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}`);
+		seal.replyToSender(ctx, msg, `精确【${input}】：\n【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}\n`);
     }
 
     return ret;
