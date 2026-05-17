@@ -159,8 +159,8 @@ function findSimilarGroup(input) {
             }
         }
 
-		// 相似度高于或等于30%
-        if (highestScore >= 0.3) {
+		// 相似度高于或等于
+        if (highestScore >= 0.25) {
             matchedGroups.push({
                 name: groupName,
                 info: groupInfo,
@@ -232,18 +232,18 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             setTimeout(() => {
                 const header = segments.length > 1 ? `【第 ${index + 1}/${segments.length} 段】\n` : '';
                 seal.replyToSender(ctx, msg, header + segment);
-            }, index * 1500); // 每段间隔，避免发送过快
+            }, index * 5000); // 每段间隔，避免发送过快
         });
         
         // 最后发送图片
         setTimeout(() => {
             seal.replyToSender(ctx, msg, '图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
-        }, segments.length * 500 + 200);
+        }, (segments.length - 1) * 5000 + 200);
     }
 
     // list命令
     if (input.toLowerCase() === 'list') {
-        const listText = `所有KP群信息:\n${generateGroupList()}`;
+        const listText = `${generateGroupList()}`;
         sendGroupListSegmented(ctx, msg, listText);
         return ret;
     }
@@ -260,11 +260,11 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
-            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，请先检查插件是否为最新版，接着使用 .kp list 查看所有群组(超长慎用)，或进2150284119反馈。`);
+            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的结果，请先检查插件是否为最新版，或进2150284119反馈。`);
         }
         return ret;
     }
-     
+    
     // 查找匹配的群组
     let foundGroup = null;
     let exactMatch = false;
