@@ -656,7 +656,7 @@ function generateGroupList() {
         const groupInfo = groupMap[groupName];
         let aliasText = '';
         if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-            aliasText = `(${groupInfo.aliases.join(' | ')})`;
+            aliasText = `(${groupInfo.aliases.join('|')})`;
         }
         listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
     }
@@ -725,7 +725,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 	// 通用花名
 	function getAliasText(groupInfo) {
 		if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-			return `(${groupInfo.aliases.join(' | ')})`;
+			return `(${groupInfo.aliases.join('|')})`;
 		}
     	return '';
 	}
