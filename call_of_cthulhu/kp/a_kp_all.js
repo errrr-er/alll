@@ -713,13 +713,13 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         
         // 最后发送图片
         setTimeout(() => {
-            seal.replyToSender(ctx, msg, '图已很久没更新，插件有问题请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
+            seal.replyToSender(ctx, msg, '图已很久没更新，插件相关请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
         }, (segments.length - 1) * 5000 + 200);
     }
 
 	// 通用else回复
 	function replyNotFound(ctx, msg, input) {
-    seal.replyToSender(ctx, msg, `【${input}】查找失败，请先检查更新，或进2150284119反馈。`);
+    seal.replyToSender(ctx, msg, `【${input}】查找失败，请先检查更新，或进2150284119反馈`);
 	}
 
     // list命令
@@ -781,7 +781,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     if (!foundGroup) {
         const matchedGroups = findSimilarGroup(input);
         if (matchedGroups) {
-            let replyText = `近似匹配(相似度)【${input}】：\n`;
+            let replyText = `近似匹配(相似度)【${input}】：`;
             matchedGroups.forEach(group => {
                 replyText += `\n【${group.name}】→ ${group.info.groupNumber} (${Math.round(group.score * 100)}%)`;
             });
