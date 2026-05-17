@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1779034898
+// @timestamp    1779037491
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1779034898;
+    return 1779037491;
 }
 
 // 提醒历史
@@ -79,8 +79,8 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
-	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602" },
-	"哀歌弥赛亚": { groupNumber: "609355937", aliases: ["哀歌"] },
+	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602", aliases: ["coa"] },
+	"哀歌弥赛亚": { groupNumber: "609355937" },
 	"暗河": { groupNumber: "1031974789" },
 	"暗金": { groupNumber: "666715873" },
 	"暗影狂奔": { groupNumber: "245525828" },
