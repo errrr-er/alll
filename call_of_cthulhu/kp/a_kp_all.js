@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1778960736
+// @timestamp    1779030155
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -20,7 +20,7 @@ if (!ext) {
 // 时间戳(需要手动更新)
 // timestamp
 function getCurrentTimestamp() {
-    return 1778960736;
+    return 1779030155;
 }
 
 // 提醒历史
@@ -252,6 +252,7 @@ const groupMap = {
 	"门扉那端": { groupNumber: "621153022" },
 	"蒙娜丽莎杀死格尔尼卡": { groupNumber: "580704423" },
 	"梦里百花深处": { groupNumber: "490454774", aliases: ["梦花深"] },
+	"弥岛刃谭": { groupNumber: "1105848179*下载(20041024)\n分HO测试：https://kuizy.net/analysis/30613" },
 	"弥勒佛Mythras": { groupNumber: "316394180" },
 	"迷雾之城": { groupNumber: "828730465" },
 	"棉花不谢": { groupNumber: "1038645659" },
