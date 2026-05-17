@@ -656,7 +656,7 @@ function generateGroupList() {
         const groupInfo = groupMap[groupName];
         let aliasText = '';
         if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-            aliasText = `(${groupInfo.aliases.join('、')})`;
+            aliasText = `(${groupInfo.aliases.join(' | ')})`;
         }
         listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
     }
@@ -717,9 +717,17 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, (segments.length - 1) * 5000 + 200);
     }
 
-	// 通用else回复
+	// 通用else
 	function replyNotFound(ctx, msg, input) {
     seal.replyToSender(ctx, msg, `【${input}】查找失败，请先检查更新，或进2150284119反馈`);
+	}
+
+	// 通用花名
+	function getAliasText(groupInfo) {
+		if (groupInfo.aliases && groupInfo.aliases.length > 0) {
+			return `(${groupInfo.aliases.join(' | ')})`;
+		}
+    	return '';
 	}
 
     // list命令
@@ -783,7 +791,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         if (matchedGroups) {
             let replyText = `近似匹配(相似度)【${input}】：`;
             matchedGroups.forEach(group => {
-                replyText += `\n【${group.name}】→ ${group.info.groupNumber} (${Math.round(group.score * 100)}%)`;
+				const aliasText = getAliasText(group.info);
+				replyText += `\n【${group.name}${aliasText}】→ ${group.info.groupNumber} (${Math.round(group.score * 100)}%)`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
@@ -791,7 +800,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }
     } else {
         // 精确匹配输出
-        seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}】→ ${foundGroup.match.info.groupNumber}`);
+		const aliasText = getAliasText(foundGroup.match.info);
+		seal.replyToSender(ctx, msg, `精确匹配【${input}】：\n【${foundGroup.match.name}${aliasText}】→ ${foundGroup.match.info.groupNumber}`);
     }
 
     return ret;
