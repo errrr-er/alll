@@ -668,8 +668,7 @@ const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
 .kp <关键词/群号>    // 查询KP群(支持反向查询)
-.kp list            // 列出所有KP群信息(超长慎用)
-.kp help            // 显示帮助`;
+.kp list            // 列出所有KP群信息(超长慎用)`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
