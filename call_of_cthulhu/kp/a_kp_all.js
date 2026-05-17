@@ -707,7 +707,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             setTimeout(() => {
                 const header = segments.length > 1 ? `【第 ${index + 1}/${segments.length} 段】\n` : '';
                 seal.replyToSender(ctx, msg, header + segment);
-            }, index * 5000); // 每段间隔，避免发送过快
+            }, index * 5000); // 每段间隔
         });
         
         // 最后发送图片
