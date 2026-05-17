@@ -717,6 +717,11 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         }, (segments.length - 1) * 5000 + 200);
     }
 
+	// 通用else回复
+	function replyNotFound(ctx, msg, input) {
+    seal.replyToSender(ctx, msg, `【${input}】查找失败，请先检查更新，或进2150284119反馈。`);
+	}
+
     // list命令
     if (input.toLowerCase() === 'list') {
         const listText = `${generateGroupList()}`;
@@ -736,7 +741,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
-            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的结果，请先检查插件是否为最新版，或进2150284119反馈。`);
+            replyNotFound(ctx, msg, input);
         }
         return ret;
     }
@@ -776,13 +781,13 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     if (!foundGroup) {
         const matchedGroups = findSimilarGroup(input);
         if (matchedGroups) {
-            let replyText = `找到以下匹配【${input}】的KP群（按相似度排序）：\n`;
+            let replyText = `近似匹配(相似度)【${input}】：\n`;
             matchedGroups.forEach(group => {
-                replyText += `\n【${group.name}】→ ${group.info.groupNumber} (相似度: ${Math.round(group.score * 100)}%)`;
+                replyText += `\n【${group.name}】→ ${group.info.groupNumber} (${Math.round(group.score * 100)}%)`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
-            seal.replyToSender(ctx, msg, `未找到匹配【${input}】的KP群，请先检查插件是否为最新版，接着使用 .kp list 查看所有群组(超长慎用)，或进2150284119反馈。`);
+            replyNotFound(ctx, msg, input);
         }
     } else {
         // 精确匹配输出
