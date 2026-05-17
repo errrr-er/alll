@@ -1,14 +1,14 @@
 [
   {
     "key": "阿斯蒙蒂斯之链coa",
-    "groupNumber": "581885602"
+    "groupNumber": "581885602",
+    "aliases": [
+      "coa"
+    ]
   },
   {
     "key": "哀歌弥赛亚",
-    "groupNumber": "609355937",
-    "aliases": [
-      "哀歌"
-    ]
+    "groupNumber": "609355937"
   },
   {
     "key": "暗河",
