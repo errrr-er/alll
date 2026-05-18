@@ -748,7 +748,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     if (!foundGroup) {
         const matchedGroups = findSimilarGroup(input);
         if (matchedGroups) {
-			const chunkSize = 5; // 每段显示5个结果
+			const chunkSize = 5; // 每段显示x个结果
 			const chunks = [];
             for (let i = 0; i < matchedGroups.length; i += chunkSize) {
             chunks.push(matchedGroups.slice(i, i + chunkSize));
@@ -766,7 +766,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 					replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n`;
 				});
 				seal.replyToSender(ctx, msg, replyText);
-				setTimeout(() => sendChunk(index + 1), 5000);  // 5秒后发下一段
+				setTimeout(() => sendChunk(index + 1), 3000);  // x秒后发下一段
 			};
 			sendChunk(0);  // 开始发送第一段
     } else {

@@ -5,6 +5,7 @@ import os
 import threading
 import time
 import requests
+import difflib
 
 # ===============================
 # 全局数据
@@ -21,9 +22,9 @@ PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 OLIVOS_ROOT = os.path.dirname(os.path.dirname(PLUGIN_DIR))
 LOCAL_JSON_PATH = os.path.join(OLIVOS_ROOT, "data", "oliva_kp_all", "kp_groupMap.json")
 
-# 自动更新冷却（全局，24 小时）
+# 自动更新冷却
 last_auto_update_time = 0
-auto_update_cooldown = 24 * 3600
+auto_update_cooldown = 24 * 3600  # 24小时
 
 # ===============================
 # 工具函数
@@ -32,43 +33,6 @@ def ensure_data_directory():
     data_dir = os.path.dirname(LOCAL_JSON_PATH)
     if not os.path.exists(data_dir):
         os.makedirs(data_dir, exist_ok=True)
-
-def get_similarity(s1: str, s2: str) -> float:
-    s1 = s1.lower()
-    s2 = s2.lower()
-
-    # Levenshtein 得分
-    def levenshtein_score(a, b):
-        len1, len2 = len(a), len(b)
-        if max(len1, len2) == 0:
-            return 1.0
-        matrix = [[0]*(len2+1) for _ in range(len1+1)]
-        for i in range(len1+1):
-            matrix[i][0] = i
-        for j in range(len2+1):
-            matrix[0][j] = j
-        for i in range(1, len1+1):
-            for j in range(1, len2+1):
-                cost = 0 if a[i-1] == b[j-1] else 1
-                matrix[i][j] = min(
-                    matrix[i-1][j] + 1,
-                    matrix[i][j-1] + 1,
-                    matrix[i-1][j-1] + cost
-                )
-        distance = matrix[len1][len2]
-        return 1.0 - distance / max(len1, len2)
-
-    # Jaccard 得分
-    def jaccard_score(a, b):
-        set1 = set(a)
-        set2 = set(b)
-        if not set1 and not set2:
-            return 0.0
-        intersection = len(set1 & set2)
-        union = len(set1 | set2)
-        return intersection / union if union else 0.0
-
-    return max(levenshtein_score(s1, s2), jaccard_score(s1, s2))
 
 # ===============================
 # 数据加载与保存
@@ -126,7 +90,7 @@ def build_reverse_mapping():
 # ===============================
 # 更新功能
 # ===============================
-def update_data(remote_data):
+def update_data(remote_data, plugin_event=None):
     global groupMap, current_version, current_timestamp
     try:
         old_count = len(groupMap)
@@ -135,9 +99,17 @@ def update_data(remote_data):
         current_timestamp = remote_data.get("timestamp", int(time.time()))
         build_reverse_mapping()
         save_local_data()
-        return len(groupMap) - old_count  # 返回变化数量
-    except:
-        return None
+        if plugin_event:
+            plugin_event.reply(
+                f"数据更新成功\n"
+                f"当前群组数量: {len(groupMap)}（变化 {len(groupMap)-old_count}）\n"
+                f"版本: {current_version}"
+            )
+        return True
+    except Exception as e:
+        if plugin_event:
+            plugin_event.reply(f"更新失败: {e}")
+        return False
 
 def manual_update(plugin_event):
     plugin_event.reply("正在检查更新……")
@@ -149,19 +121,18 @@ def manual_update(plugin_event):
         remote = r.json()
         if (remote.get("version") != current_version or
             remote.get("timestamp") != current_timestamp):
-            change = update_data(remote)
-            if change is not None:
-                plugin_event.reply(
-                    f"数据更新成功\n"
-                    f"当前群组数量: {len(groupMap)}（变化 {change}）\n"
-                    f"版本: {current_version}"
-                )
-            else:
-                plugin_event.reply("更新失败")
+            update_data(remote, plugin_event)
         else:
             plugin_event.reply("当前已是最新版本")
     except Exception as e:
         plugin_event.reply(f"更新失败：{e}")
+
+# ===============================
+# .kp触发时自动更新（24H冷却）
+# ===============================
+def reply_check_fail(plugin_event):
+    if plugin_event:
+        plugin_event.reply("KP群插件版本检测失败，请进2150284119反馈")
 
 def auto_update_on_command(plugin_event=None):
     global last_auto_update_time
@@ -169,117 +140,71 @@ def auto_update_on_command(plugin_event=None):
     if now - last_auto_update_time < auto_update_cooldown:
         return  # 冷却中
     last_auto_update_time = now
-
     try:
         r = requests.get(GITHUB_JSON_URL, timeout=10)
         if r.status_code != 200:
-            if plugin_event:
-                plugin_event.reply("KP群插件版本检测失败，请进2150284119反馈")
+            reply_check_fail(plugin_event)
             return
-        remote = r.json()
-        remote_version = remote.get("version", "0.0.0")
-        remote_timestamp = remote.get("timestamp", 0)
+        remote_data = r.json()
+        remote_version = remote_data.get("version", "0.0.0")
+        remote_timestamp = remote_data.get("timestamp", 0)
         if remote_version != current_version or remote_timestamp != current_timestamp:
-            change = update_data(remote)
-            if change is not None and plugin_event:
-                plugin_event.reply(
-                    f"数据更新成功\n"
-                    f"当前群组数量: {len(groupMap)}（变化 {change}）\n"
-                    f"版本: {current_version}"
-                )
+            success = update_data(remote_data, plugin_event)
+            if not success:
+                reply_check_fail(plugin_event)
     except:
-        if plugin_event:
-            plugin_event.reply("KP群插件版本检测失败，请进2150284119反馈")
+        reply_check_fail(plugin_event)
 
 # ===============================
-# 公共回复消息
+# 搜索功能（精确 + 模糊 >=30% + 反查）
 # ===============================
 def not_found_msg(keyword):
     return f"【{keyword}】查找失败，请先检查更新，或进2150284119反馈"
-
-def alias_text(info) -> str:
-    aliases = info.get("aliases", [])
-    if aliases:
-        return f"({'|'.join(aliases)})"
-    return ""
-
-# ===============================
-# 搜索功能(分段发送近似结果)
-# ===============================
-def send_chunks(chunks, index, plugin_event, input_text):
-    if index >= len(chunks):
-        return
-    chunk = chunks[index]
-    if len(chunks) > 1:
-        reply = f"近似【{input_text}】（{index+1}/{len(chunks)}）"
-    else:
-        reply = f"近似【{input_text}】"
-
-    for group in chunk:
-        name = group["name"]
-        info = group["info"]
-        score = group["score"]
-        atxt = alias_text(info)
-        reply += f"\n【{name}{atxt}】{round(score*100)}%\n{info.get('groupNumber','')}\n"
-
-    plugin_event.reply(reply)
-
-    # 下一段延迟x秒
-    if index + 1 < len(chunks):
-        threading.Timer(3.0, send_chunks, args=(chunks, index+1, plugin_event, input_text)).start()
 
 def search_group(plugin_event, search_input):
     search_input = search_input.strip()
     lower = search_input.lower()
 
-    # 1. 反查群号（纯数字）
+    # 反查群号
     if search_input.isdigit():
         matches = groupNumberToNameMap.get(search_input, [])
         if matches:
             reply = ""
             for name in matches:
-                info = groupMap.get(name, {})
-                atxt = alias_text(info)
-                reply += f"反向【{name}{atxt}】\n{info.get('groupNumber','')}\n"
+                reply += f"【{name}】→ {groupMap[name].get('groupNumber','')}\n"
             plugin_event.reply(reply.strip())
         else:
             plugin_event.reply(not_found_msg(search_input))
         return
 
-    # 2. 精确匹配（主名称或别名）
+    # 精确匹配
     for name, info in groupMap.items():
         if name.startswith("#"):
             continue
         if name.lower() == lower:
-            atxt = alias_text(info)
-            plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}")
+            plugin_event.reply(f"【{name}】→ {info.get('groupNumber','')}")
             return
         for a in info.get("aliases", []):
             if a.lower() == lower:
-                atxt = alias_text(info)
-                plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}")
+                plugin_event.reply(f"【{name}】→ {info.get('groupNumber','')}")
                 return
 
-    # 3. 模糊匹配（相似度 >= 0.3）
+    # 模糊匹配（相似度 >= 0.3）
     matched = []
     for name, info in groupMap.items():
         if name.startswith("#"):
             continue
-        candidates = [name] + info.get("aliases", [])
-        best_score = 0.0
-        for candidate in candidates:
-            score = get_similarity(lower, candidate.lower())
-            if score > best_score:
-                best_score = score
-        if best_score >= 0.3:
-            matched.append({"name": name, "info": info, "score": best_score})
-    
-    # x条一段
+        names_to_check = [name] + info.get("aliases", [])
+        for n in names_to_check:
+            if difflib.SequenceMatcher(None, lower, n.lower()).ratio() >= 0.3:
+                matched.append((name, info))
+                break
+
     if matched:
-        matched.sort(key=lambda x: x["score"], reverse=True)
-        chunk_size = 5 
-        chunks = [matched[i:i+chunk_size] for i in range(0, len(matched), chunk_size)]
-        send_chunks(chunks, 0, plugin_event, search_input)
+        reply = f"近似【{search_input}】："
+        for name, info in matched[:5]:
+            reply += f"\n【{name}】→ {info.get('groupNumber','')}\n"
+        plugin_event.reply(reply)
     else:
         plugin_event.reply(not_found_msg(search_input))
 
@@ -287,14 +212,11 @@ def search_group(plugin_event, search_input):
 # 指令处理
 # ===============================
 def process_kp_command(plugin_event):
-    # 每次 .kp 指令触发时尝试自动更新（全局冷却）
     auto_update_on_command(plugin_event)
-
     message = plugin_event.data.message
     if not message:
         return
 
-    # 支持多种前缀
     prefixes = (".", "。", "，", "/", "、")
     cmd_base = "kp"
     prefix_len = 0
@@ -303,52 +225,58 @@ def process_kp_command(plugin_event):
             prefix_len = len(p + cmd_base)
             break
     else:
-        return
+        return  # 没有匹配前缀
 
     remaining = message[prefix_len:].strip()
-    lower_remaining = remaining.lower()
-
-    # 帮助或空输入
-    if lower_remaining == "help" or lower_remaining == "":
+    if not remaining:
         plugin_event.reply(
-            "KP群查询指令\n"
-            ".kp <关键词/群号>    // 查询KP群(支持花名)\n"
-            ".kp list            // 群组源文件(提供镜像)"
+            "KP群查询帮助：\n"
+            ".kp <关键词> - 查询(支持反向查询)\n"
+            ".kp list - 列出所有群\n"
+            ".kp update - 手动更新"
         )
         return
 
-    # 特殊命令 list
-    if lower_remaining == "list":
+    # 第一个空格之后为参数
+    if " " in remaining:
+        command, args = remaining.split(" ", 1)
+    else:
+        command = remaining
+        args = ""
+    command = command.lower()
+
+    if command == "help":
         plugin_event.reply(
-            "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/"
+            "KP群查询帮助：\n"
+            ".kp <关键词> - 查询(支持反向查询)\n"
+            ".kp list - 列出所有群\n"
+            ".kp update - 手动更新"
         )
         return
-
-    # 手动更新命令
-    if lower_remaining == "update":
+    if command == "list":
+        plugin_event.reply("https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/")
+        return
+    if command == "update":
         manual_update(plugin_event)
         return
 
-    # 其余全部作为搜索关键词
-    search_group(plugin_event, remaining)
+    # 默认搜索
+    search_input = args if args else command
+    search_group(plugin_event, search_input)
 
 # ===============================
-# OlivOS 事件绑定
+# OlivOS
 # ===============================
 class Event(object):
     def init(plugin_event, Proc):
         ensure_data_directory()
         load_local_data()
-
     def private_message(plugin_event, Proc):
         process_kp_command(plugin_event)
-
     def group_message(plugin_event, Proc):
         process_kp_command(plugin_event)
-
     def save(plugin_event, Proc):
         pass
-
     def menu(plugin_event, Proc):
         if hasattr(plugin_event.data, "event") and plugin_event.data.event == "KPGroupSearch_Menu_Help":
             plugin_event.reply("使用 .kp help 查看帮助")
