@@ -90,7 +90,6 @@
 |:-:|:-:|
 |![](https://github.com/errrr-er/alll/blob/main/readme_pic/multi/log.png?raw=true)|![](https://github.com/errrr-er/alll/blob/main/readme_pic/multi/%E5%88%87%E6%8D%A2.png?raw=true)|
 
-
 ### 下载/反馈群（二维码）
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/reply/%E5%8F%8D%E9%A6%88%E7%BE%A4.jpg?raw=true)
