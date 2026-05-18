@@ -649,20 +649,6 @@ function findSimilarGroup(input) {
     return matchedGroups.length > 0 ? matchedGroups : null;
 }
 
-// 所有群组信息
-function generateGroupList() {
-    let listLines = [];
-    for (const groupName in groupMap) {
-        const groupInfo = groupMap[groupName];
-        let aliasText = '';
-        if (groupInfo.aliases && groupInfo.aliases.length > 0) {
-            aliasText = `(${groupInfo.aliases.join('|')})`;
-        }
-        listLines.push(`${groupName}${aliasText} → ${groupInfo.groupNumber}`);
-    }
-    return listLines.join('\n');
-}
-
 // .kp指令
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
@@ -690,14 +676,9 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
         return ret;
     }
 
-    // 列出所有群组
-    function sendGroupListSegmented(ctx, msg, listText) {
-        seal.replyToSender(ctx, msg, 'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/');
-    }
-
 	// 通用else
 	function replyNotFound(ctx, msg, input) {
-    seal.replyToSender(ctx, msg, `【${input}】查找失败，请先检查更新，或进2150284119反馈`);
+    	seal.replyToSender(ctx, msg, `【${input}】查找失败，请先检查更新，或进2150284119反馈`);
 	}
 
 	// 通用花名
@@ -710,8 +691,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 
     // list命令
     if (input.toLowerCase() === 'list') {
-        const listText = `${generateGroupList()}`;
-        sendGroupListSegmented(ctx, msg, listText);
+        seal.replyToSender(ctx, msg, 'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/');
         return ret;
     }
 
@@ -723,7 +703,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             let replyText = ``;
             matchedGroups.forEach(groupName => {
                 const groupInfo = groupMap[groupName];
-                replyText += `【${groupName}】→ ${groupInfo.groupNumber}`;
+			    const aliasText = getAliasText(groupInfo);
+                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
@@ -767,19 +748,34 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     if (!foundGroup) {
         const matchedGroups = findSimilarGroup(input);
         if (matchedGroups) {
-            let replyText = `近似【${input}】：`;
-            matchedGroups.forEach(group => {
-				const aliasText = getAliasText(group.info);
-				replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n`;
-            });
-            seal.replyToSender(ctx, msg, replyText);
-        } else {
-            replyNotFound(ctx, msg, input);
-        }
+			const chunkSize = 5; // 每段显示5个结果
+			const chunks = [];
+            for (let i = 0; i < matchedGroups.length; i += chunkSize) {
+            chunks.push(matchedGroups.slice(i, i + chunkSize));
+        	}
+			// 分段发送
+			const sendChunk = (index) => {
+				if (index >= chunks.length) return;
+				const chunk = chunks[index];
+				let replyText = chunks.length > 1
+        			? `近似【${input}】（${index + 1}/${chunks.length}）`
+        			: `近似【${input}】`;
+
+				chunk.forEach(group => {
+        			const aliasText = getAliasText(group.info);
+					replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n`;
+				});
+				seal.replyToSender(ctx, msg, replyText);
+				setTimeout(() => sendChunk(index + 1), 5000);  // 5秒后发下一段
+			};
+			sendChunk(0);  // 开始发送第一段
     } else {
+        replyNotFound(ctx, msg, input);
+    }
+} else {
         // 精确匹配输出
 		const aliasText = getAliasText(foundGroup.match.info);
-		seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】：\n${foundGroup.match.info.groupNumber}\n`);
+		seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}`);
     }
 
     return ret;
