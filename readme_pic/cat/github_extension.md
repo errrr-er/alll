@@ -34,7 +34,9 @@
         - 第二个框是群号（支持数字符号文字混合）
         - 第三个是别名，也可以是缩写（可填也可留空，留空不影响）
 
-![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true)
+|||
+|:-:|:-:|
+|![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true)||
 
 - 【其它】
     - 数据组的维护流程为半人工半github action，有问题可随时提出
