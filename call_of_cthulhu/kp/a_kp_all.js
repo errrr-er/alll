@@ -667,8 +667,8 @@ function generateGroupList() {
 const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
-.kp <关键词/群号>    // 查询KP群(支持反向查询)
-.kp list            // 列出所有KP群信息(超长慎用)`;
+.kp <关键词/群号>    // 查询KP群(支持花名)
+.kp list            // 群组源文件(提供镜像)`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
@@ -692,28 +692,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 
     // 列出所有群组
     function sendGroupListSegmented(ctx, msg, listText) {
-        const lines = listText.split('\n');
-        const segmentSize = 20; // 每段行数
-        const segments = [];
-        
-        // 分段处理
-        for (let i = 0; i < lines.length; i += segmentSize) {
-            const segment = lines.slice(i, i + segmentSize).join('\n');
-            segments.push(segment);
-        }
-        
-        // 分段发送
-        segments.forEach((segment, index) => {
-            setTimeout(() => {
-                const header = segments.length > 1 ? `【第 ${index + 1}/${segments.length} 段】\n` : '';
-                seal.replyToSender(ctx, msg, header + segment);
-            }, index * 5000); // 每段间隔
-        });
-        
-        // 最后发送图片
-        setTimeout(() => {
-            seal.replyToSender(ctx, msg, '图已很久没更新，插件相关请进2150284119反馈\n[CQ:image,file=https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/kp.png?raw=true,type=show]');
-        }, (segments.length - 1) * 5000 + 200);
+        seal.replyToSender(ctx, msg, 'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/');
     }
 
 	// 通用else
