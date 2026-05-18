@@ -8,7 +8,7 @@ on:
       - completed
   push:
     paths:
-      - 'call_of_cthulhu/kp/a_kp_all.js'
+      - 'call_of_cthulhu/kp/kp_groupMap.json'
       - 'call_of_cthulhu/kp/oliva_kp_all/**'
       - 'dice_common/silence/a_silence.js'
       - 'dice_common/multi_reply/multi.html'
