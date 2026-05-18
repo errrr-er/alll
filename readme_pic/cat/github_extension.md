@@ -82,6 +82,10 @@
 - 【更多】
     - 开发中……如有想加的功能可随时提出
 
+|通用|
+|:-:|
+|![](https://github.com/errrr-er/alll/blob/main/readme_pic/multi/%E9%80%9A%E7%94%A8.png?raw=true)|
+
 ### 下载/反馈群（二维码）
 
 ![](https://github.com/errrr-er/alll/blob/main/readme_pic/reply/%E5%8F%8D%E9%A6%88%E7%BE%A4.jpg?raw=true)
