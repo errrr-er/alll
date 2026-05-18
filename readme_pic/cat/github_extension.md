@@ -34,7 +34,9 @@
         - 第二个框是群号（支持数字符号文字混合）
         - 第三个是别名，也可以是缩写（可填也可留空，留空不影响）
 
-![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true)
+|||
+|:-:|:-:|
+|![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true)||
 
 - 【其它】
     - 数据组的维护流程为半人工半github action，有问题可随时提出
@@ -92,4 +94,17 @@
 
 ### 下载/反馈群（二维码）
 
-![](https://github.com/errrr-er/alll/blob/main/readme_pic/reply/%E5%8F%8D%E9%A6%88%E7%BE%A4.jpg?raw=true)
+> 请先阅读公告
+
+- 【兼容】
+    - 反馈、公告、插件触发指令
+
+- 【群聊】
+    - 可查看全部消息、参与讨论
+
+- 【频道】
+    - 仅接收公告，减少消息打扰
+
+|群聊|频道|
+|:-:|:-:|
+|![](https://github.com/errrr-er/alll/blob/main/readme_pic/reply/%E5%8F%8D%E9%A6%88%E7%BE%A4.jpg?raw=true)|![](https://github.com/errrr-er/alll/blob/main/readme_pic/reply/%E4%B8%8B%E8%BD%BD%E7%BE%A4.jpg?raw=true)|
