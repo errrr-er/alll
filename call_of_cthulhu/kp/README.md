@@ -1,19 +1,6 @@
 # KP群汇总
-- 兼容
-    - 精确查询
-        - 精确输出100%对应的查询结果
-        - 包含部分已录入的花名
-    - 模糊查询
-        - 除精确匹配外输出所有匹配值超过30%的查询结果
-    - 反向查询
-        - 通过群号反向查询对应名称
-- 海豹
-    - [a_kp_all.js](https://github.com/errrr-er/alll/blob/main/call_of_cthulhu/kp/a_kp_all.js)
-        - 更新提醒
-            - 使用时自动触发，接着进入24H勿打扰时间
-            - 对比文件与GitHub中的TimeStamp(手动填写)部分
-- 青果
-    - [oliva_kp_akk.opk](https://github.com/errrr-er/alll/raw/refs/heads/main/call_of_cthulhu/kp/oliva_kp_all/oliva_kp_all.opk)
-        - 自动更新
-            - 除opk更新外无需考虑手动覆盖，更新失败时会跳出提醒
-            - 自动从GitHub拉取最新版本，接着进入24H勿打扰时间
+- [介绍](https://github.com/errrr-er/alll/blob/main/readme_pic/cat/github_extension.md)
+
+- 下载
+    - 海豹 [a_kp_all.js](https://github.com/errrr-er/alll/blob/main/auto_pack/seal_kp.zip)
+    - 青果 [oliva_kp_akk.opk](https://github.com/errrr-er/alll/raw/refs/heads/main/auto_pack/oliva_kp.opk)
