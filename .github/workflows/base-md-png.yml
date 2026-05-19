@@ -85,8 +85,10 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "md to png (full page screenshot)"
-            git pull --rebase origin main
-            git push origin HEAD:${GITHUB_REF#refs/heads/}
+            git push || (
+              git pull --rebase origin main
+              git push origin HEAD:${GITHUB_REF#refs/heads/}
+            )
           else
             echo "No changes to commit"
           fi

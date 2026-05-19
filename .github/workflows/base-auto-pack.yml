@@ -8,17 +8,12 @@ on:
       - completed
   push:
     paths:
-      - 'call_of_cthulhu/kp/kp_groupMap.json'
       - 'call_of_cthulhu/kp/oliva_kp_all/**'
       - 'dice_common/silence/a_silence.js'
       - 'dice_common/multi_reply/multi.html'
 
 permissions:
   contents: write
-
-concurrency:
-  group: coc_kp
-  cancel-in-progress: false
 
 jobs:
   pack:
@@ -66,8 +61,10 @@ jobs:
 
         if ! git diff --cached --quiet; then
           git commit -m "auto pack"
-          git pull --rebase origin main
-          git push origin HEAD:${GITHUB_REF#refs/heads/}
+          git push || (
+            git pull --rebase origin main
+            git push origin HEAD:${GITHUB_REF#refs/heads/}
+          )
         else
           echo "No changes to commit"
         fi
