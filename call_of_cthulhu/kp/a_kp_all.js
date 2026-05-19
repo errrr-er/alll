@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1779174409
+// @timestamp    1779202168
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1779174409;
+    return 1779202168;
 }
 
 // 提醒历史
@@ -491,7 +491,7 @@ const groupMap = {
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"掷骰演出": { groupNumber: "1090720849*下载" },
 	"终焉之歌为谁而唱": { groupNumber: "272502055" },
-	"众妙之门": { groupNumber: "785654926\n651350563", aliases: ["zmzm"] },
+	"众妙之门": { groupNumber: "3109958989*下载\n785654926*KP\n651350563*KP", aliases: ["zmzm"] },
 	"周边": { groupNumber: "945344459*汇总\n1073238820*交易", aliases: ["谷子"] },
 	"烛堡": { groupNumber: "467303448" },
 	"撞邪": { groupNumber: "415568723" },
