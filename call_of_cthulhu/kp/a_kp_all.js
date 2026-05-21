@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1779322790
+// @timestamp    1779335988
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1779322790;
+    return 1779335988;
 }
 
 // 提醒历史
@@ -307,7 +307,7 @@ const groupMap = {
 	"人间见闻录": { groupNumber: "921349225*下载" },
 	"人生restart": { groupNumber: "537691966" },
 	"忍神": { groupNumber: "750542419\n866506419\n750542354" },
-	"日夜行人": { groupNumber: "1042210871*下载\n238797418*KP" },
+	"日夜行人": { groupNumber: "1042210871*下载\n238797418*KP", aliases: ["ryxr"] },
 	"如此渺小的橡果": { groupNumber: "827206593*下载\n264764228*KP" },
 	"萨里希斯之光": { groupNumber: "473373105\n930332469" },
 	"赛博朋克d20": { groupNumber: "135248365\n283334218" },
