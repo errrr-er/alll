@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1779322759
+// @timestamp    1779322790
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1779322759;
+    return 1779322790;
 }
 
 // 提醒历史
@@ -371,7 +371,7 @@ const groupMap = {
 	"万木惊春时": { groupNumber: "371709132" },
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	"王之褴褛": { groupNumber: "1078850322" },
-	"往明": { groupNumber: "1039312225" },
+	"往明": { groupNumber: "1039171010*下载\n1039312225*KP" },
 	"妄想症": { groupNumber: "278636978" },
 	"望君长留": { groupNumber: "700583235" },
 	"帷灯匣剑": { groupNumber: "850934230*下载\n984247613*KP" },
