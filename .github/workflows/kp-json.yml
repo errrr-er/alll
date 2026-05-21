@@ -5,6 +5,10 @@ on:
   push:
     paths:
       - 'call_of_cthulhu/kp/a_kp_all.js'
+  workflow_run:
+    workflows: ["kp merge"]
+    types:
+      - completed
 
 permissions:
   contents: write
