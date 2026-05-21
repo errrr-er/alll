@@ -5,6 +5,7 @@ import os
 import threading
 import time
 import requests
+import random
 
 # ===============================
 # 全局数据
@@ -313,15 +314,35 @@ def process_kp_command(plugin_event):
         plugin_event.reply(
             "KP群查询指令\n"
             ".kp <关键词/群号>    // 查询KP群(支持花名)\n"
-            ".kp list            // 群组源文件(提供镜像)"
+            ".kp list            // 群组源文件(提供镜像)\n"
+            ".kp list x			// 随机抽取x个群组(最多5)"
         )
         return
 
     # 特殊命令 list
-    if lower_remaining == "list":
-        plugin_event.reply(
-            "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/"
-        )
+    if re.match(r'^list(\s+\d+)?$', lower_remaining):
+        count_match = re.match(r'^list\s+(\d+)$', lower_remaining)
+        if count_match:
+            count = int(count_match.group(1))
+            count = max(1, min(count, 5))
+            valid_keys = [name for name in groupMap if not name.startswith("#")]
+            actual_count = min(count, len(valid_keys))
+
+            if actual_count == 0:
+                plugin_event.reply("暂无有效数据，请进2150284119反馈")
+                return
+
+            chosen = random.sample(valid_keys, actual_count)
+            reply = f"随机{actual_count}"
+            for name in chosen:
+                info = groupMap[name]
+                atxt = alias_text(info)
+                reply += f"\n【{name}{atxt}】\n{info.get('groupNumber', '')}\n"
+            plugin_event.reply(reply)
+        else:
+            plugin_event.reply(
+                "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/"
+            )
         return
 
     # 手动更新命令
