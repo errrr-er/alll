@@ -654,7 +654,8 @@ const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
 .kp <关键词/群号>    // 查询KP群(支持花名)
-.kp list            // 群组源文件(提供镜像)`;
+.kp list            // 群组源文件(提供镜像)
+.kp list x			// 随机抽取x个群组(最多5)`;
 
 cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
@@ -690,8 +691,30 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 	}
 
     // list命令
-    if (input.toLowerCase() === 'list') {
-        seal.replyToSender(ctx, msg, 'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/');
+	if (/^list/i.test(input)) {
+		const countArg = cmdArgs.getArgN(2);
+		
+		// 无数字
+		if (!countArg || isNaN(parseInt(countArg, 10))) {
+            seal.replyToSender(ctx, msg, 'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/');
+            return ret;
+        }
+
+        // 有数字
+        let count = parseInt(countArg, 10);
+        count = Math.max(1, Math.min(count, 5)); // 限制 1-5
+
+        const allKeys = Object.keys(groupMap);
+        const actualCount = Math.min(count, allKeys.length);
+        const shuffled = allKeys.sort(() => Math.random() - 0.5).slice(0, actualCount);
+
+        let replyText = `随机${actualCount}`;
+        shuffled.forEach(name => {
+            const info = groupMap[name];
+            const aliasText = getAliasText(info);
+            replyText += `\n【${name}${aliasText}】\n${info.groupNumber}\n`;
+        });
+        seal.replyToSender(ctx, msg, replyText);
         return ret;
     }
 
