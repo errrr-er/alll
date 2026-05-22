@@ -16,6 +16,17 @@ if (!ext) {
 }
 
 // ======================
+// 清洗
+// ======================
+function cleanText(text) {
+  return (text || '')
+    .replace(/<[^>]*>/g, '')   // 去掉 <任意内容>
+    .replace(/【|】/g, '')      // 去掉 【 和 】
+    .replace(/\s+/g, ' ')       // 多个空白合并为一个空格
+    .trim();
+}
+
+// ======================
 // 结果等级标准
 // ======================
 const rankPriority = [
@@ -37,14 +48,16 @@ const rankDB = {
 };
 
 function normalizeRank(text) {
-  if (!text) return "";
+  text = cleanText(text);
+  if (!text) return "未知结果";
+
   for (let r of rankPriority) {
     let keys = rankDB[r] || [];
     for (let k of keys) {
       if (text === k || text.startsWith(k + '！') || text.startsWith(k + '!')) return r;
     }
   }
-  return text; // 原样返回（兜底）
+  return "未知结果";
 }
 
 // ======================
@@ -132,7 +145,7 @@ const skillAlias = {
   "骑术": [],
   "地质学": [],
   "化学": [],
-    "生物学": [],
+  "生物学": [],
   "数学": [],
   "天文学": [],
   "物理学": [],
@@ -159,17 +172,14 @@ const skillAlias = {
 };
 
 function normalizeSkill(name) {
-  if (!name) return name;
-  // 去空格、去尾数字
-  let cleaned = name.trim().replace(/\s*\d+$/, '');
+  if (!name) return '未知检定';
+  let cleaned = cleanText(name).replace(/\s*\d+$/, '');
   if (!cleaned) cleaned = '检定';
 
-  // 查别名表
   for (let [standard, aliases] of Object.entries(skillAlias)) {
     if (cleaned === standard) return standard;
     if (aliases.includes(cleaned)) return standard;
   }
-  // 没找到，原样返回（未知技能保留）
   return cleaned;
 }
 
@@ -205,16 +215,16 @@ function getExportText(ctx) {
     skillMap[skill].push({ level, count });
   }
 
-    let outputLines = [];
-    for (let skill of Object.keys(skillMap).sort()) {
-        skillMap[skill].sort((a, b) => {
-            return rankPriority.indexOf(a.level) - rankPriority.indexOf(b.level);
-        });
-        let parts = skillMap[skill].map(item => {
-            return item.count > 1 ? `${item.level}×${item.count}` : item.level;
-        });
-        outputLines.push(`${skill}：${parts.join('，')}`);
-    }
+  let outputLines = [];
+  for (let skill of Object.keys(skillMap).sort()) {
+    skillMap[skill].sort((a, b) => {
+      return rankPriority.indexOf(a.level) - rankPriority.indexOf(b.level);
+    });
+    let parts = skillMap[skill].map(item => {
+      return item.count > 1 ? `${item.level}×${item.count}` : item.level;
+    });
+    outputLines.push(`${skill}：${parts.join('，')}`);
+  }
 
   if (rawLines.length > 0) {
     outputLines.push('');
@@ -234,14 +244,15 @@ ext.onMessageSend = (ctx, msg, flag) => {
   if (!ctx.group) return;
   if (!ctx.group.logOn) return;
 
-  let messageText = msg.message || '';
+  // ★ 先清洗消息文本，去掉 <> 和 【】 等装饰
+  let messageText = cleanText(msg.message || '');
 
   let skillName = '';
   let diceResult = '';
   let skillValue = '';
   let successLevel = '';
 
-  // SC 匹配
+  // SC 匹配（同时兼容有括号和无括号）
   const scPatterns = [
     /的理智检定:\s*[dD]100=(\d+)\/(\d+)\s*(.+)/,
     /的理智检定[：:]\s*[dD]100=(\d+)\/(\d+)\s*(.+)/,
@@ -250,71 +261,41 @@ ext.onMessageSend = (ctx, msg, flag) => {
   ];
 
   let scMatch = null;
-
   for (let pattern of scPatterns) {
     scMatch = messageText.match(pattern);
     if (scMatch) break;
   }
 
   if (scMatch) {
-
     skillName = 'SC';
     diceResult = scMatch[1];
     skillValue = scMatch[2];
-    successLevel = normalizeRank(
-      scMatch[3].trim().replace(/[！!]/g, '')
-    );
-
+    successLevel = normalizeRank(scMatch[3]);
   } else if (messageText.includes('理智检定')) {
-
     return;
-
   } else {
-
     // RA 多正则匹配
     const raPatterns = [
-
-      // 1. 标准海豹格式
       /"([^"]+)"检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
-
-      // 2. 没引号
       /([^\s]+)检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
-
-      // 3. “进行XXX检定”格式
       /进行"([^"]+)"检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
-
-      // 4. 只有 D100= 核心部分
       /D100=(\d+)\/(\d+)\s*(.+)/
     ];
 
     for (let i = 0; i < raPatterns.length; i++) {
-
       let raMatch = messageText.match(raPatterns[i]);
-
       if (raMatch) {
-
-        // pattern 4
         if (i === 3) {
-
           skillName = '未知检定';
           diceResult = raMatch[1];
           skillValue = raMatch[2];
-          successLevel = normalizeRank(
-            raMatch[3].trim().replace(/[！!]/g, '')
-          );
-
+          successLevel = normalizeRank(raMatch[3]);
         } else {
-
-          let rawSkill = raMatch[1] || '';
-
-          skillName = normalizeSkill(rawSkill);
+          skillName = normalizeSkill(raMatch[1]);
           diceResult = raMatch[2];
           skillValue = raMatch[3];
-          successLevel = normalizeRank(
-            raMatch[4].trim().replace(/[！!]/g, '')
-          );
+          successLevel = normalizeRank(raMatch[4]);
         }
-
         break;
       }
     }
@@ -322,15 +303,10 @@ ext.onMessageSend = (ctx, msg, flag) => {
 
   if (!skillName) return;
 
-  let record =
-    `${skillName}：${successLevel} (D100=${diceResult}/${skillValue})`;
+  let record = `${skillName}：${successLevel} (D100=${diceResult}/${skillValue})`;
 
-  let varName =
-    `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
-
-  let old =
-    seal.vars.strGet(ctx, varName)[0] || '';
-
+  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
+  let old = seal.vars.strGet(ctx, varName)[0] || '';
   seal.vars.strSet(ctx, varName, old + '\n' + record);
 };
 
