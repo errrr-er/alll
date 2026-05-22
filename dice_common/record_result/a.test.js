@@ -264,39 +264,39 @@ ext.onMessageSend = (ctx, msg, flag) => {
   if (!ctx.group) return;
   if (!ctx.group.logOn) return;
 
-  let messageText = safeText(msg.message || '');
+  let rawText = (msg.message || '')
+    .replace(/<[^>]*>/g, '')
+    .replace(/【|】/g, '')
+    .trim();
 
   let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
-
   let records = [];
 
-  // 1. SC 匹配
-  const scMatch = messageText.match(/理智.*?[dD]100=(\d+)\/(\d+)\s*(.+)/);
-  if (scMatch) {
-    let skillName = 'SC';
-    let dice = scMatch[1];
-    let value = scMatch[2];
-    let rank = normalizeRank(scMatch[3] || '');
+  if (/进行了.*?次检定/.test(rawText)) {
+    let skillName = '未知检定';
+    let skillMatch = rawText.match(/"([^"]+)"/);
+    if (skillMatch) {
+      let raw = skillMatch[1];
+      skillName = (raw === '理智' || raw === 'SAN' || raw === 'san') ? 'SC' : normalizeSkill(raw);
+    }
 
-    records.push(`${skillName}：${rank} (D100=${dice}/${value})`);
-  } else if (messageText.includes('理智检定')) {
+    let multi = parseMultiDiceBlock(rawText);
+    if (multi.length === 0) return;
+
+    let old = seal.vars.strGet(ctx, varName)[0] || '';
+    let newLines = multi.map(r => `${skillName}：${r.rank} (D100=${r.diceResult}/${r.skillValue})`);
+    seal.vars.strSet(ctx, varName, old + '\n' + newLines.join('\n'));
     return;
   }
-  // 2. 多次检定
-  else if (/进行了.*?次检定/.test(messageText)) {
-    let skillName = '未知检定';
-    let skillMatch = messageText.match(/"([^"]+)"/);
-    if (skillMatch) {
-      skillName = normalizeSkill(skillMatch[1]);
-    }
 
-    let multi = parseMultiDiceBlock(messageText);
-    for (let r of multi) {
-      records.push(`${skillName}：${r.rank} (D100=${r.diceResult}/${r.skillValue})`);
-    }
-  }
-  // 3. 单次 RA
-  else {
+  const scMatch = rawText.match(/理智.*?[dD]100=(\d+)\/(\d+)\s*(.+)/);
+  if (scMatch) {
+    let rank = normalizeRank(scMatch[3] || '');
+    records.push(`SC：${rank} (D100=${scMatch[1]}/${scMatch[2]})`);
+  } else if (rawText.includes('理智检定')) {
+    return;
+
+  } else {
     const raPatterns = [
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
@@ -305,11 +305,10 @@ ext.onMessageSend = (ctx, msg, flag) => {
     ];
 
     for (let i = 0; i < raPatterns.length; i++) {
-      let m = messageText.match(raPatterns[i]);
+      let m = rawText.match(raPatterns[i]);
       if (!m) continue;
 
       let skill, dice, value, rank;
-
       if (i === 3) {
         skill = '未知检定';
         dice = m[1];
