@@ -276,8 +276,7 @@ ext.onMessageSend = (ctx, msg, flag) => {
     let skillName = '未知检定';
     let skillMatch = rawText.match(/"([^"]+)"/);
     if (skillMatch) {
-      let raw = skillMatch[1];
-      skillName = (raw === '理智' || raw === 'SAN' || raw === 'san') ? 'SC' : normalizeSkill(raw);
+      skillName = normalizeSkill(skillMatch[1]);
     }
 
     let multi = parseMultiDiceBlock(rawText);
@@ -289,14 +288,7 @@ ext.onMessageSend = (ctx, msg, flag) => {
     return;
   }
 
-  const scMatch = rawText.match(/理智.*?[dD]100=(\d+)\/(\d+)\s*(.+)/);
-  if (scMatch) {
-    let rank = normalizeRank(scMatch[3] || '');
-    records.push(`SC：${rank} (D100=${scMatch[1]}/${scMatch[2]})`);
-  } else if (rawText.includes('理智检定')) {
-    return;
-
-  } else {
+  {
     const raPatterns = [
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
