@@ -230,7 +230,7 @@ function getExportText(ctx) {
   }
 
   let playerName = ctx.player.name || '未知玩家';
-  let totalThrows = lines.length;
+  let totalThrows = lines.filter(l => /D100=\d+\/\d+/.test(l)).length;
   return `【${playerName}】 共 ${totalThrows} 次投掷\n` + outputLines.join('\n');
 }
 
@@ -283,9 +283,9 @@ ext.onMessageSend = (ctx, msg, flag) => {
     return;
   }
   // 2. 多次检定
-  else if (messageText.includes('进行了') && messageText.includes('次检定')) {
+  else if (/进行了.*?次检定/.test(messageText)) {
     let skillName = '未知检定';
-    let skillMatch = messageText.match(/"([^"]+)"进行了/);
+    let skillMatch = messageText.match(/"([^"]+)"/);
     if (skillMatch) {
       skillName = normalizeSkill(skillMatch[1]);
     }
