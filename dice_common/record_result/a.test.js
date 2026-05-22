@@ -272,6 +272,16 @@ ext.onMessageSend = (ctx, msg, flag) => {
   let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
   let records = [];
 
+  if (rawText.includes('的理智检定')) {
+    const scMatch = rawText.match(/[dD]100=(\d+)\/(\d+)\s*(.+)/);
+    if (scMatch) {
+      let rank = normalizeRank(scMatch[3] || '');
+      let old = seal.vars.strGet(ctx, varName)[0] || '';
+      seal.vars.strSet(ctx, varName, old + '\nSC：' + rank + ' (D100=' + scMatch[1] + '/' + scMatch[2] + ')');
+    }
+    return;
+  }
+
   if (/进行了.*?次检定/.test(rawText)) {
     let skillName = '未知检定';
     let skillMatch = rawText.match(/"([^"]+)"/);
@@ -293,6 +303,9 @@ ext.onMessageSend = (ctx, msg, flag) => {
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      // 新增：奖惩骰 rap/rab 格式  "侦查"检定结果为: p=7/25, (7[D100=7,...]) 困难成功
+      /"([^"]+)"\s*检定结果为:\s*[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
+      /([^\s]+)\s*检定结果为:\s*[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
       /D100=(\d+)\/(\d+)\s*(.+)/
     ];
 
@@ -301,7 +314,13 @@ ext.onMessageSend = (ctx, msg, flag) => {
       if (!m) continue;
 
       let skill, dice, value, rank;
-      if (i === 3) {
+
+      if (i === 3 || i === 4) {
+        skill = i === 3 ? normalizeSkill(m[1]) : normalizeSkill(m[1]);
+        dice = m[4];
+        value = m[3];
+        rank = normalizeRank(m[5] || '');
+      } else if (i === 5) {
         skill = '未知检定';
         dice = m[1];
         value = m[2];
