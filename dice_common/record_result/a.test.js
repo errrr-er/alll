@@ -278,13 +278,6 @@ ext.onMessageSend = (ctx, msg, flag) => {
       let rank = normalizeRank(scMatch[3] || '');
       let old = seal.vars.strGet(ctx, varName)[0] || '';
       seal.vars.strSet(ctx, varName, old + '\nSC：' + rank + ' (D100=' + scMatch[1] + '/' + scMatch[2] + ')');
-      let memberKey = `$g跑团成员_${ctx.group.groupId}`;
-      let members = seal.vars.strGet(ctx, memberKey)[0] || '';
-      let memberList = members ? members.split(',') : [];
-      if (!memberList.includes(ctx.player.userId)) {
-        memberList.push(ctx.player.userId);
-        seal.vars.strSet(ctx, memberKey, memberList.join(','));
-      }
     }
     return;
   }
@@ -302,10 +295,6 @@ ext.onMessageSend = (ctx, msg, flag) => {
     let old = seal.vars.strGet(ctx, varName)[0] || '';
     let newLines = multi.map(r => `${skillName}：${r.rank} (D100=${r.diceResult}/${r.skillValue})`);
     seal.vars.strSet(ctx, varName, old + '\n' + newLines.join('\n'));
-    let memberKey = `$g跑团成员_${ctx.group.groupId}`;
-    let members = seal.vars.strGet(ctx, memberKey)[0] || '';
-    let ml = members ? members.split(',') : [];
-    if (!ml.includes(ctx.player.userId)) { ml.push(ctx.player.userId); seal.vars.strSet(ctx, memberKey, ml.join(',')); }
     return;
   }
 
@@ -314,7 +303,6 @@ ext.onMessageSend = (ctx, msg, flag) => {
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      // 新增：奖惩骰 rap/rab 格式  "侦查"检定结果为: p=7/25, (7[D100=7,...]) 困难成功
       /"([^"]+)"\s*检定结果为:\s*[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
       /D100=(\d+)\/(\d+)\s*(.+)/
@@ -327,7 +315,7 @@ ext.onMessageSend = (ctx, msg, flag) => {
       let skill, dice, value, rank;
 
       if (i === 3 || i === 4) {
-        skill = i === 3 ? normalizeSkill(m[1]) : normalizeSkill(m[1]);
+        skill = normalizeSkill(m[1]);
         dice = m[4];
         value = m[3];
         rank = normalizeRank(m[5] || '');
@@ -352,17 +340,13 @@ ext.onMessageSend = (ctx, msg, flag) => {
 
   let old = seal.vars.strGet(ctx, varName)[0] || '';
   seal.vars.strSet(ctx, varName, old + '\n' + records.join('\n'));
-  let memberKey = `$g跑团成员_${ctx.group.groupId}`;
-  let members = seal.vars.strGet(ctx, memberKey)[0] || '';
-  let ml = members ? members.split(',') : [];
-  if (!ml.includes(ctx.player.userId)) { ml.push(ctx.player.userId); seal.vars.strSet(ctx, memberKey, ml.join(',')); }
 };
 
 // ======================
 // log 指令
 // ======================
 function replyClr(ctx, msg, playerName, output) {
-  seal.replyToSender(ctx, msg, `${playerName}的记录导出如下：\n${output}\n\n记录已清除，当前仅支持清除个人记录，暂不支持整群清除`);
+  seal.replyToSender(ctx, msg, `${playerName}的记录导出如下：\n${output}\n\n记录已清除`);
 }
 
 ext.onCommandReceived = (ctx, msg, cmdArgs) => {
@@ -395,10 +379,15 @@ ext.onCommandReceived = (ctx, msg, cmdArgs) => {
 // ======================
 const cmdCountlog = seal.ext.newCmdItemInfo();
 cmdCountlog.name = 'countlog';
-cmdCountlog.help = '.countlog st    //导出记录\n.countlog clr   //导出并清除记录';
+cmdCountlog.help = [
+  '.countlog st          // 查看自己的记录',
+  '.countlog st @A @B    // 查看被@玩家的记录',
+  '.countlog clr         // 导出并清除自己的记录',
+  '.countlog clr @A @B   // 导出并清除被@玩家的记录',
+].join('\n');
 
 function replyHelp(ctx, msg) {
-  seal.replyToSender(ctx, msg, '.countlog st    //导出记录\n.countlog clr   //导出并清除记录');
+  seal.replyToSender(ctx, msg, cmdCountlog.help);
 }
 
 cmdCountlog.solve = (ctx, msg, cmdArgs) => {
@@ -408,63 +397,56 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
   }
 
   let sub = cmdArgs.getArgN(1);
-  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
 
   if (sub === 'st') {
-    let output = getExportText(ctx);
-    seal.replyToSender(ctx, msg, output);
+    // 有@就查被@的人，没@就查自己
+    if (cmdArgs.at && cmdArgs.at.length > 0) {
+      let outputs = [];
+      for (let i = 0; i < cmdArgs.at.length; i++) {
+        let targetCtx = seal.getCtxProxyAtPos(ctx, cmdArgs, i);
+        let output = getExportText(targetCtx);
+        outputs.push(output);
+      }
+      seal.replyToSender(ctx, msg, outputs.join('\n\n'));
+    } else {
+      let output = getExportText(ctx);
+      seal.replyToSender(ctx, msg, output);
+    }
     return seal.ext.newCmdExecuteResult(true);
   }
 
   if (sub === 'clr') {
-    let output = getExportText(ctx);
-    let playerName = ctx.player.name || '未知玩家';
-    if (output !== '暂无记录') {
-      replyClr(ctx, msg, playerName, output)
-    } else {
-      seal.replyToSender(ctx, msg, `${playerName}本身为空，无需清除。`);
-    }
-    seal.vars.strSet(ctx, varName, '');
-    return seal.ext.newCmdExecuteResult(true);
-  }
-
-  if (sub === 'all') {
-    let memberKey = `$g跑团成员_${ctx.group.groupId}`;
-    let members = seal.vars.strGet(ctx, memberKey)[0] || '';
-    if (!members) {
-      seal.replyToSender(ctx, msg, '暂无任何成员记录');
-      return seal.ext.newCmdExecuteResult(true);
-    }
-
-    let memberList = members.split(',').filter(id => id.trim());
-    let allOutput = [];
-
-    for (let userId of memberList) {
-      try {
-        let fakeMsg = seal.newMessage();
-        fakeMsg.messageType = 'group';
-        fakeMsg.groupId = ctx.group.groupId;
-        fakeMsg.sender = { userId: userId, nickname: '' };
-        let fakeCtx = seal.createTempCtx(ctx.endPoint, fakeMsg);
-
-        let output = getExportText(fakeCtx);
+    // 有@就清被@的人，没@就清自己
+    if (cmdArgs.at && cmdArgs.at.length > 0) {
+      let outputs = [];
+      for (let i = 0; i < cmdArgs.at.length; i++) {
+        let targetCtx = seal.getCtxProxyAtPos(ctx, cmdArgs, i);
+        let output = getExportText(targetCtx);
+        let playerName = targetCtx.player.name || '未知玩家';
         if (output !== '暂无记录') {
-          allOutput.push(output);
+          outputs.push(`${playerName}的记录导出如下：\n${output}\n\n记录已清除`);
+          let targetVarName = `$m跑团记录_${targetCtx.group.groupId}_${targetCtx.player.userId}`;
+          seal.vars.strSet(targetCtx, targetVarName, '');
+        } else {
+          outputs.push(`${playerName}暂无记录，无需清除`);
         }
-      } catch (e) {
-        allOutput.push(`userId=${userId} 读取失败: ${e}`);
       }
-    }
-
-    if (allOutput.length === 0) {
-      seal.replyToSender(ctx, msg, '所有成员暂无检定记录');
+      seal.replyToSender(ctx, msg, outputs.join('\n\n'));
     } else {
-      seal.replyToSender(ctx, msg, allOutput.join('\n\n'));
+      let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
+      let output = getExportText(ctx);
+      let playerName = ctx.player.name || '未知玩家';
+      if (output !== '暂无记录') {
+        replyClr(ctx, msg, playerName, output);
+      } else {
+        seal.replyToSender(ctx, msg, `${playerName}暂无记录，无需清除`);
+      }
+      seal.vars.strSet(ctx, varName, '');
     }
     return seal.ext.newCmdExecuteResult(true);
   }
 
-  replyHelp(ctx, msg)
+  replyHelp(ctx, msg);
   return seal.ext.newCmdExecuteResult(true);
 };
 
