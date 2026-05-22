@@ -20,9 +20,9 @@ if (!ext) {
 // ======================
 function safeText(text) {
   return (text || '')
-    .replace(/<[^>]*>/g, '')   // 去掉 <任意>
-    .replace(/【|】/g, '')      // 去掉 【 】
-    .replace(/\s+/g, ' ')       // 合并连续空白
+    .replace(/<[^>]*>/g, '')
+    .replace(/【|】/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
@@ -61,10 +61,9 @@ function normalizeRank(text) {
 }
 
 // ======================
-// 技能名
+// 技能名标
 // ======================
 const skillAlias = {
-  // 属性
   "力量": ["str", "STR"],
   "敏捷": ["dex", "DEX"],
   "意志": ["pow", "POW"],
@@ -77,8 +76,6 @@ const skillAlias = {
   "幸运": ["运气"],
   "魔法": ["mp", "MP"],
   "体力": ["hp", "HP"],
-
-  // 技能
   "会计": [],
   "人类学": [],
   "估价": [],
@@ -180,7 +177,7 @@ function normalizeSkill(name) {
     if (cleaned === standard) return standard;
     if (aliases.includes(cleaned)) return standard;
   }
-  return cleaned; // 未知技能保留原名
+  return cleaned;
 }
 
 // ======================
@@ -238,7 +235,7 @@ function getExportText(ctx) {
 }
 
 // ======================
-// 监听+解析
+// 监听发送的消息
 // ======================
 ext.onMessageSend = (ctx, msg, flag) => {
   if (!ctx.group) return;
@@ -251,36 +248,22 @@ ext.onMessageSend = (ctx, msg, flag) => {
   let skillValue = '';
   let successLevel = '';
 
-  // ======================
-  // SC
-  // ======================
-  const scMatch = messageText.match(/理智.*?D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/);
-
+  // SC 匹配
+  const scMatch = messageText.match(/理智.*?[dD]100=(\d+)\/(\d+)\s*(.+)/);
   if (scMatch) {
     skillName = 'SC';
     diceResult = scMatch[1];
     skillValue = scMatch[2];
-
-    successLevel = normalizeRank(scMatch[4] || scMatch[5] || '');
+    successLevel = normalizeRank(scMatch[3]);
   } else if (messageText.includes('理智检定')) {
     return;
   } else {
-
-    // ======================
-    // RA
-    // ======================
+    // RA 匹配
     const raPatterns = [
-      // 1 带引号
-      /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/,
-
-      // 2 无引号
-      /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/,
-
-      // 3 进行XX检定
-      /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/,
-
-      // 4 兜底
-      /D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/
+      /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      /D100=(\d+)\/(\d+)\s*(.+)/
     ];
 
     for (let i = 0; i < raPatterns.length; i++) {
@@ -291,14 +274,13 @@ ext.onMessageSend = (ctx, msg, flag) => {
         skillName = '未知检定';
         diceResult = raMatch[1];
         skillValue = raMatch[2];
-        successLevel = normalizeRank(raMatch[4] || raMatch[5] || '');
+        successLevel = normalizeRank(raMatch[3]);
       } else {
         skillName = normalizeSkill(raMatch[1]);
         diceResult = raMatch[2];
         skillValue = raMatch[3];
-        successLevel = normalizeRank(raMatch[5] || raMatch[6] || '');
+        successLevel = normalizeRank(raMatch[4]);
       }
-
       break;
     }
   }
