@@ -251,50 +251,59 @@ ext.onMessageSend = (ctx, msg, flag) => {
   let skillValue = '';
   let successLevel = '';
 
-  // SC 匹配
-  const scMatch = messageText.match(/理智.*?D100=(\d+)\/(\d+)\s*(.+)/);
+  // ======================
+  // SC
+  // ======================
+  const scMatch = messageText.match(/理智.*?D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/);
+
   if (scMatch) {
     skillName = 'SC';
     diceResult = scMatch[1];
     skillValue = scMatch[2];
-    successLevel = normalizeRank(scMatch[3]);
+
+    successLevel = normalizeRank(scMatch[4] || scMatch[5] || '');
   } else if (messageText.includes('理智检定')) {
-    // 有理智检定但未匹配到 D100，直接跳过
     return;
   } else {
-    // RA 匹配
+
+    // ======================
+    // RA
+    // ======================
     const raPatterns = [
-      // 1. 标准海豹格式
-      /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      // 2. 无引号
-      /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      // 3. 进行"技能名"检定
-      /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      // 4. 任意文本
-      /.*?D100=(\d+)\/(\d+)\s*(.+)/
+      // 1 带引号
+      /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/,
+
+      // 2 无引号
+      /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/,
+
+      // 3 进行XX检定
+      /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/,
+
+      // 4 兜底
+      /D100=(\d+)\/(\d+)\s*(【(.+?)】|(.+))?/
     ];
 
     for (let i = 0; i < raPatterns.length; i++) {
       let raMatch = messageText.match(raPatterns[i]);
-      if (raMatch) {
-        if (i === 3) {
-          // 兜底：无法获取技能名
-          skillName = '未知检定';
-          diceResult = raMatch[1];
-          skillValue = raMatch[2];
-          successLevel = normalizeRank(raMatch[3]);
-        } else {
-          skillName = normalizeSkill(raMatch[1]);
-          diceResult = raMatch[2];
-          skillValue = raMatch[3];
-          successLevel = normalizeRank(raMatch[4]);
-        }
-        break;
+      if (!raMatch) continue;
+
+      if (i === 3) {
+        skillName = '未知检定';
+        diceResult = raMatch[1];
+        skillValue = raMatch[2];
+        successLevel = normalizeRank(raMatch[4] || raMatch[5] || '');
+      } else {
+        skillName = normalizeSkill(raMatch[1]);
+        diceResult = raMatch[2];
+        skillValue = raMatch[3];
+        successLevel = normalizeRank(raMatch[5] || raMatch[6] || '');
       }
+
+      break;
     }
   }
 
-  if (!skillName) return;
+  if (!skillName || !successLevel) return;
 
   let record = `${skillName}：${successLevel} (D100=${diceResult}/${skillValue})`;
 
