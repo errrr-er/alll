@@ -187,11 +187,11 @@ function getExportText(ctx) {
   let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
   let records = seal.vars.strGet(ctx, varName)[0] || '';
   let lines = records.trim().split('\n').filter(l => l.trim());
-
   if (lines.length === 0) return '暂无记录';
 
   let stats = {};
   let rawLines = [];
+  let totalThrows = 0;
 
   lines.forEach(line => {
     let match = line.match(/^(.+?)：(.+?) \(D100=(\d+)\/(\d+)\)$/);
@@ -200,6 +200,7 @@ function getExportText(ctx) {
       let level = match[2];
       let key = `${skill}::${level}`;
       stats[key] = (stats[key] || 0) + 1;
+      totalThrows++;
     } else {
       rawLines.push(line);
     }
@@ -230,7 +231,6 @@ function getExportText(ctx) {
   }
 
   let playerName = ctx.player.name || '未知玩家';
-  let totalThrows = lines.filter(l => /D100=\d+\/\d+/.test(l)).length;
   return `【${playerName}】 共 ${totalThrows} 次投掷\n` + outputLines.join('\n');
 }
 
