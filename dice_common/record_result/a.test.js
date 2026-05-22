@@ -61,7 +61,7 @@ function normalizeRank(text) {
 }
 
 // ======================
-// 技能名标
+// 技能名
 // ======================
 const skillAlias = {
   "力量": ["str", "STR"],
@@ -235,6 +235,29 @@ function getExportText(ctx) {
 }
 
 // ======================
+// 解析多行骰点
+// ======================
+function parseMultiDiceBlock(text) {
+  let lines = text.split('\n');
+  let results = [];
+
+  const linePattern = /D100=(\d+)\/(\d+)\s*(.*)/;
+
+  for (let line of lines) {
+    let m = line.match(linePattern);
+    if (!m) continue;
+
+    results.push({
+      diceResult: m[1],
+      skillValue: m[2],
+      rank: normalizeRank(m[3] || '')
+    });
+  }
+
+  return results;
+}
+
+// ======================
 // 监听发送的消息
 // ======================
 ext.onMessageSend = (ctx, msg, flag) => {
@@ -243,22 +266,37 @@ ext.onMessageSend = (ctx, msg, flag) => {
 
   let messageText = safeText(msg.message || '');
 
-  let skillName = '';
-  let diceResult = '';
-  let skillValue = '';
-  let successLevel = '';
+  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
 
-  // SC 匹配
+  let records = [];
+
+  // 1. SC 匹配
   const scMatch = messageText.match(/理智.*?[dD]100=(\d+)\/(\d+)\s*(.+)/);
   if (scMatch) {
-    skillName = 'SC';
-    diceResult = scMatch[1];
-    skillValue = scMatch[2];
-    successLevel = normalizeRank(scMatch[3]);
+    let skillName = 'SC';
+    let dice = scMatch[1];
+    let value = scMatch[2];
+    let rank = normalizeRank(scMatch[3] || '');
+
+    records.push(`${skillName}：${rank} (D100=${dice}/${value})`);
   } else if (messageText.includes('理智检定')) {
     return;
-  } else {
-    // RA 匹配
+  }
+  // 2. 多次检定
+  else if (messageText.includes('进行了') && messageText.includes('次检定')) {
+    let skillName = '未知检定';
+    let skillMatch = messageText.match(/"([^"]+)"进行了/);
+    if (skillMatch) {
+      skillName = normalizeSkill(skillMatch[1]);
+    }
+
+    let multi = parseMultiDiceBlock(messageText);
+    for (let r of multi) {
+      records.push(`${skillName}：${r.rank} (D100=${r.diceResult}/${r.skillValue})`);
+    }
+  }
+  // 3. 单次 RA
+  else {
     const raPatterns = [
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
@@ -267,31 +305,32 @@ ext.onMessageSend = (ctx, msg, flag) => {
     ];
 
     for (let i = 0; i < raPatterns.length; i++) {
-      let raMatch = messageText.match(raPatterns[i]);
-      if (!raMatch) continue;
+      let m = messageText.match(raPatterns[i]);
+      if (!m) continue;
+
+      let skill, dice, value, rank;
 
       if (i === 3) {
-        skillName = '未知检定';
-        diceResult = raMatch[1];
-        skillValue = raMatch[2];
-        successLevel = normalizeRank(raMatch[3]);
+        skill = '未知检定';
+        dice = m[1];
+        value = m[2];
+        rank = normalizeRank(m[3] || '');
       } else {
-        skillName = normalizeSkill(raMatch[1]);
-        diceResult = raMatch[2];
-        skillValue = raMatch[3];
-        successLevel = normalizeRank(raMatch[4]);
+        skill = normalizeSkill(m[1]);
+        dice = m[2];
+        value = m[3];
+        rank = normalizeRank(m[4] || '');
       }
+
+      records.push(`${skill}：${rank} (D100=${dice}/${value})`);
       break;
     }
   }
 
-  if (!skillName || !successLevel) return;
+  if (records.length === 0) return;
 
-  let record = `${skillName}：${successLevel} (D100=${diceResult}/${skillValue})`;
-
-  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
   let old = seal.vars.strGet(ctx, varName)[0] || '';
-  seal.vars.strSet(ctx, varName, old + '\n' + record);
+  seal.vars.strSet(ctx, varName, old + '\n' + records.join('\n'));
 };
 
 // ======================
