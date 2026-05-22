@@ -18,16 +18,16 @@ if (!ext) {
 // ======================
 // 清洗
 // ======================
-function cleanText(text) {
+function safeText(text) {
   return (text || '')
-    .replace(/<[^>]*>/g, '')   // 去掉 <任意内容>
-    .replace(/【|】/g, '')      // 去掉 【 和 】
-    .replace(/\s+/g, ' ')       // 多个空白合并为一个空格
+    .replace(/<[^>]*>/g, '')   // 去掉 <任意>
+    .replace(/【|】/g, '')      // 去掉 【 】
+    .replace(/\s+/g, ' ')       // 合并连续空白
     .trim();
 }
 
 // ======================
-// 结果等级标准
+// 结果等级
 // ======================
 const rankPriority = [
   "大成功",
@@ -48,20 +48,20 @@ const rankDB = {
 };
 
 function normalizeRank(text) {
-  text = cleanText(text);
+  text = safeText(text);
   if (!text) return "未知结果";
 
   for (let r of rankPriority) {
     let keys = rankDB[r] || [];
     for (let k of keys) {
-      if (text === k || text.startsWith(k + '！') || text.startsWith(k + '!')) return r;
+      if (text.includes(k)) return r;
     }
   }
   return "未知结果";
 }
 
 // ======================
-// 技能名标准
+// 技能名
 // ======================
 const skillAlias = {
   // 属性
@@ -173,18 +173,18 @@ const skillAlias = {
 
 function normalizeSkill(name) {
   if (!name) return '未知检定';
-  let cleaned = cleanText(name).replace(/\s*\d+$/, '');
+  let cleaned = safeText(name).replace(/\s*\d+$/, '');
   if (!cleaned) cleaned = '检定';
 
   for (let [standard, aliases] of Object.entries(skillAlias)) {
     if (cleaned === standard) return standard;
     if (aliases.includes(cleaned)) return standard;
   }
-  return cleaned;
+  return cleaned; // 未知技能保留原名
 }
 
 // ======================
-// 导出记录文本
+// 导出统计
 // ======================
 function getExportText(ctx) {
   let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
@@ -238,54 +238,47 @@ function getExportText(ctx) {
 }
 
 // ======================
-// 监听发送的消息
+// 监听+解析
 // ======================
 ext.onMessageSend = (ctx, msg, flag) => {
   if (!ctx.group) return;
   if (!ctx.group.logOn) return;
 
-  // ★ 先清洗消息文本，去掉 <> 和 【】 等装饰
-  let messageText = cleanText(msg.message || '');
+  let messageText = safeText(msg.message || '');
 
   let skillName = '';
   let diceResult = '';
   let skillValue = '';
   let successLevel = '';
 
-  // SC 匹配（同时兼容有括号和无括号）
-  const scPatterns = [
-    /的理智检定:\s*[dD]100=(\d+)\/(\d+)\s*(.+)/,
-    /的理智检定[：:]\s*[dD]100=(\d+)\/(\d+)\s*(.+)/,
-    /理智检定:\s*[dD]100=(\d+)\/(\d+)\s*(.+)/,
-    /理智.*?[dD]100=(\d+)\/(\d+)\s*(.+)/
-  ];
-
-  let scMatch = null;
-  for (let pattern of scPatterns) {
-    scMatch = messageText.match(pattern);
-    if (scMatch) break;
-  }
-
+  // SC 匹配
+  const scMatch = messageText.match(/理智.*?D100=(\d+)\/(\d+)\s*(.+)/);
   if (scMatch) {
     skillName = 'SC';
     diceResult = scMatch[1];
     skillValue = scMatch[2];
     successLevel = normalizeRank(scMatch[3]);
   } else if (messageText.includes('理智检定')) {
+    // 有理智检定但未匹配到 D100，直接跳过
     return;
   } else {
-    // RA 多正则匹配
+    // RA 匹配
     const raPatterns = [
-      /"([^"]+)"检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      /([^\s]+)检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      /进行"([^"]+)"检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      /D100=(\d+)\/(\d+)\s*(.+)/
+      // 1. 标准海豹格式
+      /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      // 2. 无引号
+      /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      // 3. 进行"技能名"检定
+      /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
+      // 4. 任意文本
+      /.*?D100=(\d+)\/(\d+)\s*(.+)/
     ];
 
     for (let i = 0; i < raPatterns.length; i++) {
       let raMatch = messageText.match(raPatterns[i]);
       if (raMatch) {
         if (i === 3) {
+          // 兜底：无法获取技能名
           skillName = '未知检定';
           diceResult = raMatch[1];
           skillValue = raMatch[2];
