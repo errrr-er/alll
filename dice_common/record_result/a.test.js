@@ -50,7 +50,6 @@ const rankDB = {
 function normalizeRank(text) {
   text = safeText(text);
   if (!text) return "未知结果";
-
   for (let r of rankPriority) {
     let keys = rankDB[r] || [];
     for (let k of keys) {
@@ -76,103 +75,45 @@ const skillAlias = {
   "幸运": ["运气"],
   "魔法": ["mp", "MP"],
   "体力": ["hp", "HP"],
-  "会计": [],
-  "人类学": [],
-  "估价": [],
-  "考古学": [],
-  "表演": [],
-  "美术": [],
-  "摄影": [],
-  "伪造": [],
-  "写作": [],
-  "书法": [],
-  "乐理": [],
-  "厨艺": [],
-  "裁缝": [],
-  "理发": [],
-  "建筑": [],
-  "舞蹈": [],
-  "酿酒": [],
-  "捕鱼": [],
-  "歌唱": [],
-  "制陶": [],
-  "雕塑": [],
-  "杂技": [],
-  "风水": [],
-  "技术制图": [],
-  "耕作": [],
-  "打字": [],
-  "速记": [],
-  "木匠": [],
-  "莫里斯舞蹈": [],
-  "歌剧歌唱": [],
-  "粉刷匠与油漆工": [],
-  "吹真空管": [],
+  "会计": [], "人类学": [], "估价": [], "考古学": [], "表演": [],
+  "美术": [], "摄影": [], "伪造": [], "写作": [], "书法": [],
+  "乐理": [], "厨艺": [], "裁缝": [], "理发": [], "建筑": [],
+  "舞蹈": [], "酿酒": [], "捕鱼": [], "歌唱": [], "制陶": [],
+  "雕塑": [], "杂技": [], "风水": [], "技术制图": [], "耕作": [],
+  "打字": [], "速记": [], "木匠": [], "莫里斯舞蹈": [], "歌剧歌唱": [],
+  "粉刷匠与油漆工": [], "吹真空管": [],
   "取悦": ["魅惑"],
   "攀爬": [],
   "计算机使用": ["计算机", "电脑"],
   "信用": ["信誉", "信用评级"],
   "克苏鲁神话": ["克苏鲁", "cm", "CM"],
-  "乔装": [],
-  "闪避": [],
+  "乔装": [], "闪避": [],
   "汽车驾驶": ["驾驶", "汽车"],
-  "电气维修": [],
-  "电子学": [],
-  "话术": [],
-  "斗殴": [],
-  "手枪": [],
-  "急救": [],
-  "历史": [],
-  "恐吓": [],
-  "跳跃": [],
-  "母语": [],
+  "电气维修": [], "电子学": [], "话术": [], "斗殴": [], "手枪": [],
+  "急救": [], "历史": [], "恐吓": [], "跳跃": [], "母语": [],
   "法律": [],
   "图书馆使用": ["图书馆"],
   "聆听": [],
   "开锁": ["撬锁", "锁匠"],
-  "机械维修": [],
-  "医学": [],
+  "机械维修": [], "医学": [],
   "博物学": ["自然学"],
   "导航": ["领航"],
   "神秘学": [],
   "重型机械": ["重型操作", "重型", "操作重型机械"],
-  "说服": [],
-  "精神分析": [],
-  "心理学": [],
-  "骑术": [],
-  "地质学": [],
-  "化学": [],
-  "生物学": [],
-  "数学": [],
-  "天文学": [],
-  "物理学": [],
-  "药学": [],
-  "植物学": [],
-  "动物学": [],
-  "密码学": [],
-  "工程学": [],
-  "气象学": [],
-  "司法科学": [],
-  "妙手": [],
-  "侦查": [],
-  "潜行": [],
-  "生存": [],
-  "游泳": [],
-  "投掷": [],
-  "追踪": [],
-  "动物驯养": [],
-  "潜水": [],
-  "爆破": [],
-  "读唇": [],
-  "催眠": [],
-  "炮术": [],
+  "说服": [], "精神分析": [], "心理学": [], "骑术": [],
+  "地质学": [], "化学": [], "生物学": [], "数学": [],
+  "天文学": [], "物理学": [], "药学": [], "植物学": [],
+  "动物学": [], "密码学": [], "工程学": [], "气象学": [],
+  "司法科学": [], "妙手": [], "侦查": [], "潜行": [],
+  "生存": [], "游泳": [], "投掷": [], "追踪": [],
+  "动物驯养": [], "潜水": [], "爆破": [], "读唇": [],
+  "催眠": [], "炮术": [],
 };
 
 function normalizeSkill(name) {
   if (!name) return '未知检定';
   let cleaned = safeText(name).replace(/\s*\d+$/, '');
   if (!cleaned) cleaned = '检定';
-
   for (let [standard, aliases] of Object.entries(skillAlias)) {
     if (cleaned === standard) return standard;
     if (aliases.includes(cleaned)) return standard;
@@ -181,13 +122,80 @@ function normalizeSkill(name) {
 }
 
 // ======================
-// 导出统计
+// $g 存储结构
+// 格式: "userId§玩家名§记录行1\n记录行2\n记录行3||userId2§玩家名2§..."
+// 玩家间用 || 分隔，玩家内用 § 分隔 userId、名字、记录
 // ======================
-function getExportText(ctx) {
-  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
-  let records = seal.vars.strGet(ctx, varName)[0] || '';
-  let lines = records.trim().split('\n').filter(l => l.trim());
-  if (lines.length === 0) return '暂无记录';
+const GROUP_VAR_PREFIX = '$g_countlog_';
+const SEP_PLAYER = '||';
+const SEP_FIELD = '§';
+
+function getGroupVar(ctx) {
+  let key = `${GROUP_VAR_PREFIX}${ctx.group.groupId}`;
+  return seal.vars.strGet(ctx, key)[0] || '';
+}
+
+function setGroupVar(ctx, value) {
+  let key = `${GROUP_VAR_PREFIX}${ctx.group.groupId}`;
+  seal.vars.strSet(ctx, key, value);
+}
+
+function parseGroupVar(raw) {
+  // 返回 [ { userId, name, records } ]
+  if (!raw) return [];
+  return raw.split(SEP_PLAYER).map(block => {
+    let firstSep = block.indexOf(SEP_FIELD);
+    let secondSep = block.indexOf(SEP_FIELD, firstSep + 1);
+    if (firstSep === -1 || secondSep === -1) return null;
+    return {
+      userId: block.slice(0, firstSep),
+      name: block.slice(firstSep + 1, secondSep),
+      records: block.slice(secondSep + 1)
+    };
+  }).filter(Boolean);
+}
+
+function serializeGroupVar(players) {
+  return players.map(p => `${p.userId}${SEP_FIELD}${p.name}${SEP_FIELD}${p.records}`).join(SEP_PLAYER);
+}
+
+function getPlayerEntry(players, userId) {
+  return players.find(p => p.userId === userId) || null;
+}
+
+function appendRecord(ctx, line) {
+  let raw = getGroupVar(ctx);
+  let players = parseGroupVar(raw);
+  let userId = ctx.player.userId;
+  let name = ctx.player.name || '未知玩家';
+
+  let entry = getPlayerEntry(players, userId);
+  if (!entry) {
+    players.push({ userId, name, records: line });
+  } else {
+    entry.name = name;
+    entry.records = entry.records ? entry.records + '\n' + line : line;
+  }
+  setGroupVar(ctx, serializeGroupVar(players));
+}
+
+function clearPlayerRecord(ctx, userId) {
+  let raw = getGroupVar(ctx);
+  let players = parseGroupVar(raw);
+  players = players.filter(p => p.userId !== userId);
+  setGroupVar(ctx, serializeGroupVar(players));
+}
+
+function clearAllRecords(ctx) {
+  setGroupVar(ctx, '');
+}
+
+// ======================
+// 导出统计（单个玩家）
+// ======================
+function formatPlayerRecords(name, recordsRaw) {
+  let lines = (recordsRaw || '').trim().split('\n').filter(l => l.trim());
+  if (lines.length === 0) return null;
 
   let stats = {};
   let rawLines = [];
@@ -215,12 +223,8 @@ function getExportText(ctx) {
 
   let outputLines = [];
   for (let skill of Object.keys(skillMap).sort()) {
-    skillMap[skill].sort((a, b) => {
-      return rankPriority.indexOf(a.level) - rankPriority.indexOf(b.level);
-    });
-    let parts = skillMap[skill].map(item => {
-      return item.count > 1 ? `${item.level}×${item.count}` : item.level;
-    });
+    skillMap[skill].sort((a, b) => rankPriority.indexOf(a.level) - rankPriority.indexOf(b.level));
+    let parts = skillMap[skill].map(item => item.count > 1 ? `${item.level}×${item.count}` : item.level);
     outputLines.push(`${skill}：${parts.join('，')}`);
   }
 
@@ -230,8 +234,24 @@ function getExportText(ctx) {
     outputLines = outputLines.concat(rawLines);
   }
 
-  let playerName = ctx.player.name || '未知玩家';
-  return `【${playerName}】 共 ${totalThrows} 次投掷\n` + outputLines.join('\n');
+  return `【${name}】 共 ${totalThrows} 次投掷\n` + outputLines.join('\n');
+}
+
+function getExportText(ctx) {
+  let raw = getGroupVar(ctx);
+  let players = parseGroupVar(raw);
+  let entry = getPlayerEntry(players, ctx.player.userId);
+  if (!entry) return '暂无记录';
+  let result = formatPlayerRecords(entry.name, entry.records);
+  return result || '暂无记录';
+}
+
+function getAllExportText(ctx) {
+  let raw = getGroupVar(ctx);
+  let players = parseGroupVar(raw);
+  if (players.length === 0) return null;
+  let outputs = players.map(p => formatPlayerRecords(p.name, p.records)).filter(Boolean);
+  return outputs.length > 0 ? outputs : null;
 }
 
 // ======================
@@ -240,20 +260,16 @@ function getExportText(ctx) {
 function parseMultiDiceBlock(text) {
   let lines = text.split('\n');
   let results = [];
-
   const linePattern = /D100=(\d+)\/(\d+)\s*(.*)/;
-
   for (let line of lines) {
     let m = line.match(linePattern);
     if (!m) continue;
-
     results.push({
       diceResult: m[1],
       skillValue: m[2],
       rank: normalizeRank(m[3] || '')
     });
   }
-
   return results;
 }
 
@@ -269,35 +285,31 @@ ext.onMessageSend = (ctx, msg, flag) => {
     .replace(/【|】/g, '')
     .trim();
 
-  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
-  let records = [];
-
+  // SC检定
   if (rawText.includes('的理智检定')) {
     const scMatch = rawText.match(/[dD]100=(\d+)\/(\d+)\s*(.+)/);
     if (scMatch) {
       let rank = normalizeRank(scMatch[3] || '');
-      let old = seal.vars.strGet(ctx, varName)[0] || '';
-      seal.vars.strSet(ctx, varName, old + '\nSC：' + rank + ' (D100=' + scMatch[1] + '/' + scMatch[2] + ')');
+      appendRecord(ctx, `SC：${rank} (D100=${scMatch[1]}/${scMatch[2]})`);
     }
     return;
   }
 
+  // 多次检定
   if (/进行了.*?次检定/.test(rawText)) {
     let skillName = '未知检定';
     let skillMatch = rawText.match(/"([^"]+)"/);
-    if (skillMatch) {
-      skillName = normalizeSkill(skillMatch[1]);
-    }
+    if (skillMatch) skillName = normalizeSkill(skillMatch[1]);
 
     let multi = parseMultiDiceBlock(rawText);
     if (multi.length === 0) return;
 
-    let old = seal.vars.strGet(ctx, varName)[0] || '';
     let newLines = multi.map(r => `${skillName}：${r.rank} (D100=${r.diceResult}/${r.skillValue})`);
-    seal.vars.strSet(ctx, varName, old + '\n' + newLines.join('\n'));
+    for (let line of newLines) appendRecord(ctx, line);
     return;
   }
 
+  // 单次RA / 奖惩骰
   {
     const raPatterns = [
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
@@ -313,7 +325,6 @@ ext.onMessageSend = (ctx, msg, flag) => {
       if (!m) continue;
 
       let skill, dice, value, rank;
-
       if (i === 3 || i === 4) {
         skill = normalizeSkill(m[1]);
         dice = m[4];
@@ -331,15 +342,10 @@ ext.onMessageSend = (ctx, msg, flag) => {
         rank = normalizeRank(m[4] || '');
       }
 
-      records.push(`${skill}：${rank} (D100=${dice}/${value})`);
+      appendRecord(ctx, `${skill}：${rank} (D100=${dice}/${value})`);
       break;
     }
   }
-
-  if (records.length === 0) return;
-
-  let old = seal.vars.strGet(ctx, varName)[0] || '';
-  seal.vars.strSet(ctx, varName, old + '\n' + records.join('\n'));
 };
 
 // ======================
@@ -356,18 +362,17 @@ ext.onCommandReceived = (ctx, msg, cmdArgs) => {
   if (cmd !== 'log') return;
 
   let sub = cmdArgs.getArgN(1);
-  let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
 
   if (sub === 'new') {
-    seal.vars.strSet(ctx, varName, '');
+    clearPlayerRecord(ctx, ctx.player.userId);
   }
 
   if (sub === 'end') {
     let exportText = getExportText(ctx);
+    let playerName = ctx.player.name || '未知玩家';
     if (exportText !== '暂无记录') {
-      let playerName = ctx.player.name || '未知玩家';
       replyClr(ctx, msg, playerName, exportText);
-      seal.vars.strSet(ctx, varName, '');
+      clearPlayerRecord(ctx, ctx.player.userId);
     } else {
       seal.replyToSender(ctx, msg, '本次团中无个人检定记录');
     }
@@ -380,15 +385,11 @@ ext.onCommandReceived = (ctx, msg, cmdArgs) => {
 const cmdCountlog = seal.ext.newCmdItemInfo();
 cmdCountlog.name = 'countlog';
 cmdCountlog.help = [
-  '.countlog st          // 查看自己的记录',
-  '.countlog st @A @B    // 查看被@玩家的记录',
-  '.countlog clr         // 导出并清除自己的记录',
-  '.countlog clr @A @B   // 导出并清除被@玩家的记录',
+  '.countlog st      // 查看自己的记录',
+  '.countlog st all  // 查看所有人的记录',
+  '.countlog clr     // 导出并清除自己的记录',
+  '.countlog clr all // 导出并清除所有人的记录',
 ].join('\n');
-
-function replyHelp(ctx, msg) {
-  seal.replyToSender(ctx, msg, cmdCountlog.help);
-}
 
 cmdCountlog.solve = (ctx, msg, cmdArgs) => {
   if (!ctx.group) {
@@ -397,56 +398,45 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
   }
 
   let sub = cmdArgs.getArgN(1);
+  let arg2 = cmdArgs.getArgN(2);
 
   if (sub === 'st') {
-    // 有@就查被@的人，没@就查自己
-    if (cmdArgs.at && cmdArgs.at.length > 0) {
-      let outputs = [];
-      for (let i = 0; i < cmdArgs.at.length; i++) {
-        let targetCtx = seal.getCtxProxyAtPos(ctx, cmdArgs, i);
-        let output = getExportText(targetCtx);
-        outputs.push(output);
+    if (arg2 === 'all') {
+      let outputs = getAllExportText(ctx);
+      if (!outputs) {
+        seal.replyToSender(ctx, msg, '暂无任何成员记录');
+      } else {
+        seal.replyToSender(ctx, msg, outputs.join('\n\n'));
       }
-      seal.replyToSender(ctx, msg, outputs.join('\n\n'));
     } else {
-      let output = getExportText(ctx);
-      seal.replyToSender(ctx, msg, output);
+      seal.replyToSender(ctx, msg, getExportText(ctx));
     }
     return seal.ext.newCmdExecuteResult(true);
   }
 
   if (sub === 'clr') {
-    // 有@就清被@的人，没@就清自己
-    if (cmdArgs.at && cmdArgs.at.length > 0) {
-      let outputs = [];
-      for (let i = 0; i < cmdArgs.at.length; i++) {
-        let targetCtx = seal.getCtxProxyAtPos(ctx, cmdArgs, i);
-        let output = getExportText(targetCtx);
-        let playerName = targetCtx.player.name || '未知玩家';
-        if (output !== '暂无记录') {
-          outputs.push(`${playerName}的记录导出如下：\n${output}\n\n记录已清除`);
-          let targetVarName = `$m跑团记录_${targetCtx.group.groupId}_${targetCtx.player.userId}`;
-          seal.vars.strSet(targetCtx, targetVarName, '');
-        } else {
-          outputs.push(`${playerName}暂无记录，无需清除`);
-        }
+    if (arg2 === 'all') {
+      let outputs = getAllExportText(ctx);
+      if (!outputs) {
+        seal.replyToSender(ctx, msg, '暂无任何成员记录，无需清除');
+      } else {
+        seal.replyToSender(ctx, msg, outputs.join('\n\n') + '\n\n所有记录已清除');
+        clearAllRecords(ctx);
       }
-      seal.replyToSender(ctx, msg, outputs.join('\n\n'));
     } else {
-      let varName = `$m跑团记录_${ctx.group.groupId}_${ctx.player.userId}`;
-      let output = getExportText(ctx);
       let playerName = ctx.player.name || '未知玩家';
+      let output = getExportText(ctx);
       if (output !== '暂无记录') {
         replyClr(ctx, msg, playerName, output);
       } else {
         seal.replyToSender(ctx, msg, `${playerName}暂无记录，无需清除`);
       }
-      seal.vars.strSet(ctx, varName, '');
+      clearPlayerRecord(ctx, ctx.player.userId);
     }
     return seal.ext.newCmdExecuteResult(true);
   }
 
-  replyHelp(ctx, msg);
+  seal.replyToSender(ctx, msg, cmdCountlog.help);
   return seal.ext.newCmdExecuteResult(true);
 };
 
