@@ -346,6 +346,10 @@ ext.onMessageSend = (ctx, msg, flag) => {
 // ======================
 // log 指令
 // ======================
+function replyClr(ctx, msg, playerName, output) {
+  seal.replyToSender(ctx, msg, `${playerName}的记录导出如下：\n${output}\n\n记录已清除，当前仅支持清除个人记录，暂不支持整群清除`);
+}
+
 ext.onCommandReceived = (ctx, msg, cmdArgs) => {
   if (!ctx.group) return;
 
@@ -362,8 +366,11 @@ ext.onCommandReceived = (ctx, msg, cmdArgs) => {
   if (sub === 'end') {
     let exportText = getExportText(ctx);
     if (exportText !== '暂无记录') {
-      seal.replyToSender(ctx, msg, `记录已自动导出：\n${exportText}`);
+      let playerName = ctx.player.name || '未知玩家';
+      replyClr(ctx, msg, playerName, exportText);
       seal.vars.strSet(ctx, varName, '');
+    } else {
+      seal.replyToSender(ctx, msg, '本次团中无个人检定记录');
     }
   }
 };
@@ -374,6 +381,10 @@ ext.onCommandReceived = (ctx, msg, cmdArgs) => {
 const cmdCountlog = seal.ext.newCmdItemInfo();
 cmdCountlog.name = 'countlog';
 cmdCountlog.help = '.countlog st    //导出记录\n.countlog clr   //导出并清除记录';
+
+function replyHelp(ctx, msg) {
+  seal.replyToSender(ctx, msg, '.countlog st    //导出记录\n.countlog clr   //导出并清除记录');
+}
 
 cmdCountlog.solve = (ctx, msg, cmdArgs) => {
   if (!ctx.group) {
@@ -394,7 +405,7 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
     let output = getExportText(ctx);
     let playerName = ctx.player.name || '未知玩家';
     if (output !== '暂无记录') {
-      seal.replyToSender(ctx, msg, `${playerName}的记录导出如下：\n${output}\n\n记录已清除`);
+      replyClr(ctx, msg, playerName, output)
     } else {
       seal.replyToSender(ctx, msg, `${playerName}本身为空，无需清除。`);
     }
@@ -402,7 +413,7 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
     return seal.ext.newCmdExecuteResult(true);
   }
 
-  seal.replyToSender(ctx, msg, '.countlog st    //导出记录\n.countlog clr   //导出并清除记录');
+  replyHelp(ctx, msg)
   return seal.ext.newCmdExecuteResult(true);
 };
 
