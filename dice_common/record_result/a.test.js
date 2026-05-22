@@ -278,6 +278,13 @@ ext.onMessageSend = (ctx, msg, flag) => {
       let rank = normalizeRank(scMatch[3] || '');
       let old = seal.vars.strGet(ctx, varName)[0] || '';
       seal.vars.strSet(ctx, varName, old + '\nSC：' + rank + ' (D100=' + scMatch[1] + '/' + scMatch[2] + ')');
+      let memberKey = `$g跑团成员_${ctx.group.groupId}`;
+      let members = seal.vars.strGet(ctx, memberKey)[0] || '';
+      let memberList = members ? members.split(',') : [];
+      if (!memberList.includes(ctx.player.userId)) {
+        memberList.push(ctx.player.userId);
+        seal.vars.strSet(ctx, memberKey, memberList.join(','));
+      }
     }
     return;
   }
@@ -295,6 +302,10 @@ ext.onMessageSend = (ctx, msg, flag) => {
     let old = seal.vars.strGet(ctx, varName)[0] || '';
     let newLines = multi.map(r => `${skillName}：${r.rank} (D100=${r.diceResult}/${r.skillValue})`);
     seal.vars.strSet(ctx, varName, old + '\n' + newLines.join('\n'));
+    let memberKey = `$g跑团成员_${ctx.group.groupId}`;
+    let members = seal.vars.strGet(ctx, memberKey)[0] || '';
+    let ml = members ? members.split(',') : [];
+    if (!ml.includes(ctx.player.userId)) { ml.push(ctx.player.userId); seal.vars.strSet(ctx, memberKey, ml.join(',')); }
     return;
   }
 
@@ -341,6 +352,10 @@ ext.onMessageSend = (ctx, msg, flag) => {
 
   let old = seal.vars.strGet(ctx, varName)[0] || '';
   seal.vars.strSet(ctx, varName, old + '\n' + records.join('\n'));
+  let memberKey = `$g跑团成员_${ctx.group.groupId}`;
+  let members = seal.vars.strGet(ctx, memberKey)[0] || '';
+  let ml = members ? members.split(',') : [];
+  if (!ml.includes(ctx.player.userId)) { ml.push(ctx.player.userId); seal.vars.strSet(ctx, memberKey, ml.join(',')); }
 };
 
 // ======================
@@ -410,6 +425,42 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
       seal.replyToSender(ctx, msg, `${playerName}本身为空，无需清除。`);
     }
     seal.vars.strSet(ctx, varName, '');
+    return seal.ext.newCmdExecuteResult(true);
+  }
+
+  if (sub === 'all') {
+    let memberKey = `$g跑团成员_${ctx.group.groupId}`;
+    let members = seal.vars.strGet(ctx, memberKey)[0] || '';
+    if (!members) {
+      seal.replyToSender(ctx, msg, '暂无任何成员记录');
+      return seal.ext.newCmdExecuteResult(true);
+    }
+
+    let memberList = members.split(',').filter(id => id.trim());
+    let allOutput = [];
+
+    for (let userId of memberList) {
+      try {
+        let fakeMsg = seal.newMessage();
+        fakeMsg.messageType = 'group';
+        fakeMsg.groupId = ctx.group.groupId;
+        fakeMsg.sender = { userId: userId, nickname: '' };
+        let fakeCtx = seal.createTempCtx(ctx.endPoint, fakeMsg);
+
+        let output = getExportText(fakeCtx);
+        if (output !== '暂无记录') {
+          allOutput.push(output);
+        }
+      } catch (e) {
+        allOutput.push(`userId=${userId} 读取失败: ${e}`);
+      }
+    }
+
+    if (allOutput.length === 0) {
+      seal.replyToSender(ctx, msg, '所有成员暂无检定记录');
+    } else {
+      seal.replyToSender(ctx, msg, allOutput.join('\n\n'));
+    }
     return seal.ext.newCmdExecuteResult(true);
   }
 
