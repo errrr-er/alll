@@ -1,6 +1,6 @@
 #  Call of Cthulhu
 
-## [.kp] KP群汇总（JS/OPK）[介绍](https://github.com/errrr-er/alll/blob/main/readme_pic/cat/github_extension.md)
+## [.kp] KP群汇总（JS/OPK）[介绍](https://github.com/errrr-er/alll/blob/main/readme_pic/extension/kp.md)
 
 - 下载
     - 海豹 [a_kp_all.js](https://github.com/errrr-er/alll/blob/main/auto_pack/seal_kp.zip)

@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'readme_pic/cat/**'
+      - 'readme_pic/extension/**'
       - 'assets/**'
 
 permissions:
