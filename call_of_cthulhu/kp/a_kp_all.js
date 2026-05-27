@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1779921014
+// @timestamp    1779921299
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1779921014;
+    return 1779921299;
 }
 
 // 提醒历史
@@ -483,6 +483,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 	"掌中雪": { groupNumber: "860685448*下载" },
 	"沼泽人": { groupNumber: "913354882" },
+	"这一次歌亚请留住TA": { groupNumber: "1098346051", aliases: ["歌亚"] },
 	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
 	"镇魂歌": { groupNumber: "709032901" },
 	"正伪的ideal": { groupNumber: "667098598" },
