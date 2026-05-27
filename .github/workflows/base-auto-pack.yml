@@ -54,9 +54,9 @@ jobs:
         zip -j auto_pack/seal_multi.zip dice_common/multi_reply/multi.html
     
     # log骰点统计（插件|海豹）
-    - name: Pack countlog.zip
+    - name: Pack seal_countlog.zip
       run: |
-        zip -j auto_pack/countlog.zip dice_common/record_result/countlog.js
+        zip -j auto_pack/seal_countlog.zip dice_common/record_result/countlog.js
 
     - name: Commit
       run: |
