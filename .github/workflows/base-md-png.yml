@@ -13,11 +13,11 @@ permissions:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Install system dependencies
         run: |
           sudo apt update
@@ -28,37 +28,37 @@ jobs:
         with:
           node-version: '20'
 
-      # 🔁 关键修正：本地安装 puppeteer，而非全局安装
       - name: Install Puppeteer locally
         run: npm install puppeteer
 
       - name: Prepare assets
         run: |
-          mkdir -p readme_pic/cat/assets
-          cp -r assets/* readme_pic/cat/assets/
+          for dir in readme_pic/*/; do
+            mkdir -p "$dir/_assets_tmp"
+            cp -r assets/* "$dir/_assets_tmp/"
+          done
 
       - name: Convert MD to HTML
         run: |
-          find readme_pic/cat -name "*.md" | while read file; do
+          find readme_pic -name "*.md" | while read file; do
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
-
             pandoc "$file" \
               -f markdown \
               -t html5 \
               --standalone \
               --metadata title=" " \
-              --css=assets/styles/cat_readme.css \
+              --css=_assets_tmp/styles/cat_readme.css \
               -o "$dir/$name.html"
           done
 
       - name: HTML to PNG (full page screenshot)
         run: |
-          find readme_pic/cat -name "*.html" | while read file; do
-            png="${file%.html}.png"
+          find readme_pic -name "*.html" | while read file; do
+            dir=$(dirname "$file")
+            name=$(basename "$file" .html)
+            png="$dir/$name.png"
             echo "Rendering $file -> $png"
-
-            # 使用本地 node_modules 中的 puppeteer
             node -e "
               const puppeteer = require('puppeteer');
               (async () => {
@@ -71,19 +71,19 @@ jobs:
               })();
             "
             convert "$png" -fuzz 2% -trim +repage -bordercolor white -border 55x55 "$png"
-            echo "Trimmed $png"
+            echo "Done: $png"
           done
 
-      - name: Cleanup HTML files
-        run: find readme_pic/cat -name "*.html" -delete
+      - name: Cleanup temp files
+        run: |
+          find readme_pic -name "*.html" -delete
+          find readme_pic -type d -name "_assets_tmp" -exec rm -rf {} + 2>/dev/null || true
 
       - name: Commit PNGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add readme_pic/cat
-
+          git add readme_pic/
           if ! git diff --cached --quiet; then
             git commit -m "md to png (full page screenshot)"
             git push || (
