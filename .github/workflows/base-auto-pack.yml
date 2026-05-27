@@ -11,7 +11,7 @@ on:
       - 'call_of_cthulhu/kp/oliva_kp_all/**'
       - 'dice_common/silence/a_silence.js'
       - 'dice_common/multi_reply/multi.html'
-      - 'dice_common/record_result/a.test.js'
+      - 'dice_common/record_result/countlog.js'
 
 permissions:
   contents: write
@@ -26,11 +26,6 @@ jobs:
 
     - name: Create output folder
       run: mkdir -p auto_pack
-
-    # 测试中
-    - name: Pack test.zip
-      run: |
-        zip -j auto_pack/test.zip dice_common/record_result/a.test.js
 
     # KP群（插件|海豹）
     - name: Pack seal_kp.zip
@@ -57,6 +52,11 @@ jobs:
     - name: Pack seal_multi.zip
       run: |
         zip -j auto_pack/seal_multi.zip dice_common/multi_reply/multi.html
+    
+    # log骰点统计（插件|海豹）
+    - name: Pack countlog.zip
+      run: |
+        zip -j auto_pack/countlog.zip dice_common/record_result/countlog.js
     
     - name: Commit
       run: |
