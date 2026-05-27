@@ -1,18 +1,82 @@
 // ==UserScript==
-// @name         测试
+// @name         log骰点统计
 // @author       3987681449
-// @version      0.0.0
-// @description  2150284119反馈群
-// @timestamp    1779421395
+// @version      1.0.0
+// @description  (.countlog)有问题可进群2150284119联系
+// @timestamp    1779892999
 // 2026-05-21 04:25:18
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
+// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/counlog.js
+// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/counlog.js
 // ==/UserScript==
 
-let ext = seal.ext.find('只是测试');
+let ext = seal.ext.find('log骰点统计');
 if (!ext) {
-  ext = seal.ext.new('只是测试', 'er', '0.0.0');
+  ext = seal.ext.new('log骰点统计', 'er', '1.0.0');
   seal.ext.register(ext);
+}
+
+// ======================
+// 时间戳(timestamp)
+// ======================
+function getCurrentTimestamp() {
+    return 1779892999;
+}
+
+// 提醒历史
+const userLastNotify = new Map();
+
+// 获取GitHub最新版本编号
+async function getGitHubVersion() {
+    try {
+		// 镜像
+        const rawUrl = 'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/counlog.js';
+        const response = await fetch(rawUrl);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const content = await response.text();
+        
+        // 解析时间戳
+        const timestampMatch = content.match(/@timestamp\s+(\d+)/);
+        if (timestampMatch) {
+            const timestamp = parseInt(timestampMatch[1]);
+            const date = new Date(timestamp * 1000);
+            return {
+                timestamp: timestamp,
+                date: date,
+                formattedDate: date.toLocaleString('zh-CN')
+            };
+        }
+        
+        return null;
+    } catch (error) {
+		seal.replyToSender(ctx, msg, '获取GitHub版本出错:', error);
+        throw error;
+    }
+}
+
+// 检查更新
+async function checkUpdateOnce(ctx, msg, userId) {
+    try {
+        const githubVersion = await getGitHubVersion();
+        if (!githubVersion) return;
+        
+        const currentTimestamp = getCurrentTimestamp();
+        
+        if (githubVersion.timestamp > currentTimestamp) {
+            setTimeout(() => {
+                seal.replyToSender(ctx, msg, 
+                    `发现<log骰点统计>插件有新版本！\n更新检查冷却开始~请及时更新\n最后更新：${githubVersion.formattedDate}`
+                );
+            }, 1000);
+        }
+    } catch (error) {
+        // 静默处理
+    }
 }
 
 // ======================
@@ -364,18 +428,23 @@ ext.onCommandReceived = (ctx, msg, cmdArgs) => {
   let sub = cmdArgs.getArgN(1);
 
   if (sub === 'new') {
-    clearPlayerRecord(ctx, ctx.player.userId);
+    let outputs = getAllExportText(ctx);
+    if (outputs) {
+      seal.replyToSender(ctx, msg, outputs.join('\n\n') + '\n\n所有记录已清除');
+      clearAllRecords(ctx);
+    }
+    return seal.ext.newCmdExecuteResult(true);
   }
 
   if (sub === 'end') {
-    let exportText = getExportText(ctx);
-    let playerName = ctx.player.name || '未知玩家';
-    if (exportText !== '暂无记录') {
-      replyClr(ctx, msg, playerName, exportText);
-      clearPlayerRecord(ctx, ctx.player.userId);
+    let outputs = getAllExportText(ctx);
+    if (outputs) {
+      seal.replyToSender(ctx, msg, outputs.join('\n\n') + '\n\n所有记录已清除');
+      clearAllRecords(ctx);
     } else {
-      seal.replyToSender(ctx, msg, '本次团中无个人检定记录');
+      seal.replyToSender(ctx, msg, '本次团中无任何检定记录');
     }
+    return seal.ext.newCmdExecuteResult(true);
   }
 };
 
@@ -400,6 +469,16 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
   let sub = cmdArgs.getArgN(1);
   let arg2 = cmdArgs.getArgN(2);
 
+  // 24H提醒检查更新
+  const userId = msg.sender.userId;
+  const now = Date.now();
+  const lastNotify = userLastNotify.get(userId) || 0;
+  
+  if (now - lastNotify > 24 * 60 * 60 * 1000) {
+      userLastNotify.set(userId, now);
+      checkUpdateOnce(ctx, msg, userId).catch(console.error);
+  }
+  
   if (sub === 'st') {
     if (arg2 === 'all') {
       let outputs = getAllExportText(ctx);
