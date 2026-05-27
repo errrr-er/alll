@@ -57,20 +57,15 @@ async function createIssue(bodyText) {
 // ======================
 function parseInput(text) {
   const parts = text.trim().split(/\s+/);
+  if (parts.length < 1 || !parts[0]) return null;
 
-  if (parts.length < 2) return null;
-
-  const key = parts[0];
-  const groupNumber = parts[1];
-
-  const aliases = parts[2]
-    ? parts[2].split(",").map(s => s.trim()).filter(Boolean)
+  const groupNumber = parts[0]; // "数字*备注" 整体保留
+  const aliases = parts[1]
+    ? parts[1].split(",").map(s => s.trim()).filter(Boolean)
     : [];
 
-  if (!key || !groupNumber) return null;
-
   return {
-    [key]: {
+    [groupNumber]: {
       groupNumber,
       aliases
     }
