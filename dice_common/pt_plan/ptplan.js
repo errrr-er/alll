@@ -387,7 +387,8 @@ function cmdClearConfirm(ctx, msg, cmdArgs) {
 }
 
 function cmdHelp(ctx, msg, cmdArgs) {
-  let helpText = `.ptplan 有空 月-日 [月-日……]      - 登记空闲日期
+  let helpText = `跑团时间规划指令
+.ptplan 有空 月-日 [月-日……]      - 登记空闲日期
 .ptplan 请假 月-日 [月-日……]      - 取消已登记日期
 .ptplan 本周                       - 查看本周登记
 .ptplan 本月                       - 查看本月登记
