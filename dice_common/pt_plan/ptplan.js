@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.ptplan)有问题可进群2150284119联系
-// @timestamp    1780152350
+// @timestamp    1780158474
 // 2026-05-30 15:20:42
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -18,7 +18,7 @@ if (!ext) {
 }
 
 function getCurrentTimestamp() {
-  return 1780152350;
+  return 1780158474;
 }
 
 const userLastNotify = new Map();
@@ -26,7 +26,6 @@ const userLastNotify = new Map();
 async function getGitHubVersion() {
   try {
     const rawUrl = 'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/pt_plan/ptplan.js';
-    if (rawUrl === 'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/pt_plan/ptplan.js') return null;
     const response = await fetch(rawUrl);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const content = await response.text();
