@@ -9,9 +9,7 @@ on:
   push:
     paths:
       - 'call_of_cthulhu/kp/oliva_kp_all/**'
-      - 'dice_common/silence/a_silence.js'
-      - 'dice_common/multi_reply/multi.html'
-      - 'dice_common/record_result/countlog.js'
+      - 'dice_common/**'
 
 permissions:
   contents: write
@@ -57,6 +55,11 @@ jobs:
     - name: Pack seal_countlog.zip
       run: |
         zip -j auto_pack/seal_countlog.zip dice_common/record_result/countlog.js
+
+    # 跑团时间规划（插件|海豹）
+    - name: Pack seak_ptplan.zip
+      run: |
+        zip -j auto_pack/seal_ptplan.zip dice_common/pt_plan/ptplan.js
 
     - name: Commit
       run: |
