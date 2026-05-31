@@ -1,7 +1,5 @@
 source,target,tgt_lng
-当主,家主,zh-CN
-使用人,佣人,zh-CN
-息子夫婦,儿子和儿媳,zh-CN
+요정,妖精,zh-CN
 アザトースとの接触,阿撒托斯通神术,zh-CN
 アザトースの招来,阿撒托斯请神术,zh-CN
 肉体の保護,血肉防护术,zh-CN
@@ -38,6 +36,7 @@ source,target,tgt_lng
 待機寮,待命宿舍,zh-CN
 检定で決定的成功,大成功,zh-CN
 二次配布,二次配布,zh-CN
+息子夫婦,儿子和儿媳,zh-CN
 墨火に伏す,伏于墨火,zh-CN
 這い寄る霧,伏行之雾,zh-CN
 フランシェ,法兰谢,zh-CN
@@ -82,6 +81,7 @@ HO診断,分HO测试,zh-CN
 技能判定,技能检定,zh-CN
 コンピューター,计算机使用,zh-CN
 ギミックロール,机制骰,zh-CN
+当主,家主,zh-CN
 KP向け,KP信息,zh-CN
 KP情報,KP情报,zh-CN
 キーパー向け情報,KP情报,zh-CN
@@ -207,6 +207,7 @@ shoggoth,修格斯,zh-CN
 ヨグ=ソトース,犹格索托斯,zh-CN
 応供,应供,zh-CN
 元帥招来法,元帅秘法,zh-CN
+使用人,佣人,zh-CN
 ⽬星,侦查,zh-CN
 目星,侦查,zh-CN
 本編,正文,zh-CN
