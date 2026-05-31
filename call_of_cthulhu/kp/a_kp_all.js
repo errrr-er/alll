@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780239999
+// @timestamp    1780241454
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780239999;
+    return 1780241454;
 }
 
 // 提醒历史
@@ -103,7 +103,7 @@ const groupMap = {
 	"不辜马戏团": { groupNumber: "759642443", aliases: ["不辜"] },
 	"不见蓬山": { groupNumber: "834893891" },
 	"不死灭灭": { groupNumber: "279755638" },
-	"不要占据，悲剧的良": { groupNumber: "1092780290*下载" },
+	"不要占据悲剧的良夜": { groupNumber: "1092780290*下载" },
 	"残败桃源": { groupNumber: "2154036156" },
 	"沧渺山": { groupNumber: "855215735", aliases: ["cms"] },
 	"常夜国骑士谭:真祖红舞曲": { groupNumber: "769437181" },
