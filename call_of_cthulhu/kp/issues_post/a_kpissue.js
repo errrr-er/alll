@@ -89,7 +89,7 @@ ${JSON.stringify(data, null, 2)}
 // ======================
 const cmdkpissue = seal.ext.newCmdItemInfo();
 cmdkpissue.name = 'kpissue';
-cmdkpissue.help = '用法：.kpissue 群号 别名1,别名2(可选)';
+cmdkpissue.help = '用法：.kpissue 名称 群号 别名1,别名2(可选)';
 
 cmdkpissue.solve = (ctx, msg, cmdArgs) => {
   const text = cmdArgs.rawArgs || "";
