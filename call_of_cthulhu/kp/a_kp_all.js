@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780156689
+// @timestamp    1780233054
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780156689;
+    return 1780233054;
 }
 
 // 提醒历史
@@ -332,6 +332,7 @@ const groupMap = {
 	"胜率制圣杯": { groupNumber: "535057473" },
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"十六段夜谈": { groupNumber: "938304846" },
+	"十七年蝉": { groupNumber: "237742659" },
 	"石榴": { groupNumber: "1063443035*下载" },
 	"兽与济世之雨": { groupNumber: "1074954896*下载" },
 	"赎罪邮局": { groupNumber: "1064670977" },
