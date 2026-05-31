@@ -1,5 +1,4 @@
 source,target,tgt_lng
-요정,妖精,zh-CN
 アザトースとの接触,阿撒托斯通神术,zh-CN
 アザトースの招来,阿撒托斯请神术,zh-CN
 肉体の保護,血肉防护术,zh-CN
@@ -22,11 +21,13 @@ source,target,tgt_lng
 シスト,胞囊,zh-CN
 補正,补正,zh-CN
 ビヤーキー,拜亚基,zh-CN
+변이,变异,zh-CN
 初期値,初始值,zh-CN
 フレーメン,裂唇嗅,zh-CN
 大晦日,除夕,zh-CN
 茶番,茶番,zh-CN
 ココフォリア,CCF,zh-CN
+요리,厨艺,zh-CN
 原生生物,单细胞生物,zh-CN
 チクタクマンです,嘀嗒人,zh-CN
 クリティカル,大成功,zh-CN
@@ -35,6 +36,8 @@ source,target,tgt_lng
 卵スープ,蛋花汤,zh-CN
 待機寮,待命宿舍,zh-CN
 检定で決定的成功,大成功,zh-CN
+대량 살해,大规模杀戮,zh-CN
+공격,斗殴,zh-CN
 二次配布,二次配布,zh-CN
 息子夫婦,儿子和儿媳,zh-CN
 墨火に伏す,伏于墨火,zh-CN
@@ -52,6 +55,8 @@ HO診断,分HO测试,zh-CN
 南京錠,挂锁,zh-CN
 古のもの,古老者,zh-CN
 古のものの水晶,古老者水晶,zh-CN
+그림 동화,格林童话,zh-CN
+캔디케인,拐杖糖,zh-CN
 ハスター,哈斯塔,zh-CN
 ター ン,回合,zh-CN
 ドリームランド,幻梦境,zh-CN
@@ -82,6 +87,7 @@ HO診断,分HO测试,zh-CN
 コンピューター,计算机使用,zh-CN
 ギミックロール,机制骰,zh-CN
 当主,家主,zh-CN
+정령,精灵,zh-CN
 KP向け,KP信息,zh-CN
 KP情報,KP情报,zh-CN
 キーパー向け情報,KP情报,zh-CN
@@ -92,6 +98,7 @@ KP情報,KP情报,zh-CN
 クルド人,库尔德人,zh-CN
 choiceイベント,可选事件,zh-CN
 経理,会计,zh-CN
+벌레,昆虫,zh-CN
 古アパート,老旧公寓,zh-CN
 ロスト率,Lost率,zh-CN
 ラブバースト,Love Burst,zh-CN
@@ -105,6 +112,8 @@ choiceイベント,可选事件,zh-CN
 地雷要素,雷点要素,zh-CN
 ほうれん草の白和え,凉拌菠菜豆腐,zh-CN
 Lloigor,罗伊格尔,zh-CN
+유사,类似,zh-CN
+듣기,聆听,zh-CN
 キャットルフ,喵苏鲁,zh-CN
 ミネルウァ,密涅瓦,zh-CN
 シナリオ,模组,zh-CN
@@ -121,6 +130,9 @@ _AF,魔法物品,zh-CN
 奥津城,墓冢,zh-CN
 姆西斯哈,姆西斯哈,zh-CN
 シナリオのトーン,模组的氛围,zh-CN
+메타,Meta,zh-CN
+마법소녀 마도카☆마기카,魔法少女小圆,zh-CN
+스모어,棉花糖夹心饼干,zh-CN
 内部進学⽣,内直升学生,zh-CN
 ニャル,奈亚拉托提普,zh-CN
 ニャルラトホテプ,奈亚拉托提普,zh-CN
@@ -141,6 +153,7 @@ POT,POT(毒素)※使用CON对抗，通常对抗失败时失去等同于POT的HP
 覚醒世界,清醒的人世间,zh-CN
 隠密,潜行,zh-CN
 隠れる,潜行,zh-CN
+쁘띠 고어,轻度血腥,zh-CN
 依代,容器,zh-CN
 幸運の消費,燃运,zh-CN
 Kruschtya Equation,若斯奇亚等式,zh-CN
@@ -165,10 +178,18 @@ Kruschtya Equation,若斯奇亚等式,zh-CN
 神の御先,神的使者,zh-CN
 クォーツ,石英,zh-CN
 生還報酬,生还奖励,zh-CN
+신체,身体,zh-CN
+상해,身体损伤,zh-CN
+식인,食人,zh-CN
+회피,闪避,zh-CN
+샌드박스,沙盒,zh-CN
 抽出機,提取器,zh-CN
 ティンダロスの猟犬,廷达罗斯猎犬,zh-CN
 ウムル・アト＝タウィル,塔维尔·亚特·乌姆尔,zh-CN
 タウィル·アト·ウムル,塔维尔·亚特·乌姆尔,zh-CN
+자료조사,图书馆,zh-CN
+탐사 기능,探索类,zh-CN
+탐사자들,探索者们,zh-CN
 ウボ,乌波,zh-CN
 ウボ＝サスラ,乌波萨斯拉,zh-CN
 ウルタール,乌撒,zh-CN
@@ -177,6 +198,7 @@ Kruschtya Equation,若斯奇亚等式,zh-CN
 ウーロンハイ,乌龙茶兑烧酒,zh-CN
 夕焼け小焼け,晚霞渐淡,zh-CN
 プレイヤー向け情報,玩家情报,zh-CN
+기만적인 요소,误导性元素,zh-CN
 shoggoth,修格斯,zh-CN
 ショゴス,修格斯,zh-CN
 ショゴス・ロード,修格斯,zh-CN
@@ -193,6 +215,8 @@ shoggoth,修格斯,zh-CN
 端数切り捨て,向下取整,zh-CN
 アストラル,星体,zh-CN
 新MMクリーチャー編,新怪锤v1,zh-CN
+선녀,仙女,zh-CN
+레일로드,线性,zh-CN
 可能性あり,有概率,zh-CN
 アフーム,亚弗姆,zh-CN
 アフーム＝ザー,亚弗姆·扎,zh-CN
@@ -208,6 +232,8 @@ shoggoth,修格斯,zh-CN
 応供,应供,zh-CN
 元帥招来法,元帅秘法,zh-CN
 使用人,佣人,zh-CN
+요정,妖精,zh-CN
+요괴,妖怪,zh-CN
 ⽬星,侦查,zh-CN
 目星,侦查,zh-CN
 本編,正文,zh-CN
@@ -222,6 +248,9 @@ shoggoth,修格斯,zh-CN
 しば漬け,紫苏渍,zh-CN
 追跡,追踪,zh-CN
 豚ホルモン,猪杂,zh-CN
+자살,自杀,zh-CN
+관찰,侦查,zh-CN
+전투 기능,战斗类,zh-CN
 ゴモリ,ゴモリ(犹格索托斯的第一球),zh-CN
 ザガン,ザガン(犹格索托斯的第二球),zh-CN
 シュトリ,シュトリ(犹格索托斯的第三球),zh-CN
