@@ -2,7 +2,7 @@
 // @name         kpissue
 // @author       3987681449
 // @version      1.0.0
-// @description  (.kpissue)提交GitHub Issue | 用法：.kpissue 群号 别名1,别名2(可选)
+// @description  (.kpissue)提交GitHub Issue | 用法：.kpissue 名称 群号 别名1,别名2(可选)
 // @timestamp    1778959464
 // 2026-05-16 19:24:24
 // @license      Apache-2
@@ -98,7 +98,7 @@ cmdkpissue.solve = (ctx, msg, cmdArgs) => {
 
   if (!data) {
     const ret = seal.ext.newCmdExecuteResult(true);
-    seal.replyToSender(ctx, msg, "格式错误：.kpissue 群号 别名1,别名2(可选)");
+    seal.replyToSender(ctx, msg, "格式错误：.kpissue 名称 群号 别名1,别名2(可选)");
     return ret;
   }
 
