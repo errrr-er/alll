@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780338775
+// @timestamp    1780339181
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780338775;
+    return 1780339181;
 }
 
 // 提醒历史
@@ -93,7 +93,7 @@ const groupMap = {
 	"北欧奇谭": { groupNumber: "655192271" },
 	"匕首之心": { groupNumber: "791858682\n583981590" },
 	"彼都": { groupNumber: "952122633" },
-	"陛下您这后宫不对劲": { groupNumber: "636253864*下载" },
+	"陛下您这后宫不对劲": { groupNumber: "636253864*下载", aliases: ["荣光不灭"] },
 	"边狱巴士同人规则": { groupNumber: "765965290" },
 	"便当杀人事件": { groupNumber: "1098707012*下载" },
 	"别来无恙": { groupNumber: "907810853" },
