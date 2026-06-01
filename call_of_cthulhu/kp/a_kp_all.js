@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780338556
+// @timestamp    1780338775
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780338556;
+    return 1780338775;
 }
 
 // 提醒历史
@@ -464,6 +464,7 @@ const groupMap = {
 	"游龙之年": { groupNumber: "693371984" },
 	"于赤土腹中再会": { groupNumber: "1060512906" },
 	"愚者的祈雨": { groupNumber: "1062832797" },
+	"羽湮": { groupNumber: "376904721*下载" },
 	"雨幕信使": { groupNumber: "1094260426*下载" },
 	"语音": { groupNumber: "893711161*主dnd但不限" },
 	"玉台新薤": { groupNumber: "881091572*交流\n439862498*KP" },
