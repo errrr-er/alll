@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780241454
+// @timestamp    1780326637
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780241454;
+    return 1780326637;
 }
 
 // 提醒历史
@@ -370,6 +370,7 @@ const groupMap = {
 	"町葬屋怪异谭": { groupNumber: "174136022" },
 	"蛙徒的祭典": { groupNumber: "655890716", aliases: ["蛙祭","挖机"] },
 	"歪月": { groupNumber: "339403801", aliases: ["诡月奇谭"] },
+	"挽歌": { groupNumber: "160770510" },
 	"万木惊春时": { groupNumber: "371709132" },
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	"王之褴褛": { groupNumber: "1078850322" },
