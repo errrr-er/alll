@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "timestamp": 1780241454,
+  "timestamp": 1780326637,
   "group_map": {
     "阿斯蒙蒂斯之链coa": {"groupNumber":"581885602","aliases":["coa"]},
     "哀歌弥赛亚": {"groupNumber":"609355937"},
@@ -293,6 +293,7 @@
     "町葬屋怪异谭": {"groupNumber":"174136022"},
     "蛙徒的祭典": {"groupNumber":"655890716","aliases":["蛙祭","挖机"]},
     "歪月": {"groupNumber":"339403801","aliases":["诡月奇谭"]},
+    "挽歌": {"groupNumber":"160770510"},
     "万木惊春时": {"groupNumber":"371709132"},
     "万人无我": {"groupNumber":"929768460","aliases":["wrww"]},
     "王之褴褛": {"groupNumber":"1078850322"},
