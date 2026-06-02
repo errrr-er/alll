@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780374323
+// @timestamp    1780374514
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780374323;
+    return 1780374514;
 }
 
 // 提醒历史
@@ -415,7 +415,7 @@ const groupMap = {
 	"无限流": { groupNumber: "301122594*星光\n459786188*幻剑侠刀139\n838432541*类无限\n876623982\n756711275" },
 	"无罪之歌": { groupNumber: "1018018649*下载" },
 	"午夜的沙": { groupNumber: "864767076" },
-	"武侠克苏鲁woc": { groupNumber: "524086123", aliases: ["woc"] },
+	"武侠克苏鲁": { groupNumber: "524086123", aliases: ["woc"] },
 	"舞榭歌台": { groupNumber: "147313715" },
 	"夕妖晚谣": { groupNumber: "746417676" },
 	"西比拉": { groupNumber: "669808359" },
