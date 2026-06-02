@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780339181
+// @timestamp    1780360764
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780339181;
+    return 1780360764;
 }
 
 // 提醒历史
@@ -553,7 +553,7 @@ const groupMap = {
 	"the name": { groupNumber: "324809275*下载", aliases: ["遗书"] },
 	"U name it": { groupNumber: "1072212301" },
 	"vamp": { groupNumber: "553675094" },
-	"ventangle": { groupNumber: "754138533" },
+	"ventangle": { groupNumber: "915670503" },
 	"VEЯ": { groupNumber: "798805482", aliases: ["ver"] },
 	"VirtuaLive": { groupNumber: "664998654*下载" },
 	"void": { groupNumber: "1170037255" },
