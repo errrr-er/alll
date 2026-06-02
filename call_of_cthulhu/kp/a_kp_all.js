@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780363671
+// @timestamp    1780363801
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780363671;
+    return 1780363801;
 }
 
 // 提醒历史
@@ -145,6 +145,7 @@ const groupMap = {
 	"肥皂学校": { groupNumber: "980188286", aliases: ["肥皂","皂校"] },
 	"废案重组": { groupNumber: "857972438" },
 	"废楼怪谈": { groupNumber: "563488359" },
+	"废土残生": { groupNumber: "626636740" },
 	"焚天之战": { groupNumber: "1065925723" },
 	"疯法师的地城": { groupNumber: "1025248586" },
 	"逢春": { groupNumber: "1103341222" },
