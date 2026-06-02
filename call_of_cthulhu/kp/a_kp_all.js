@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780376143
+// @timestamp    1780401898
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780376143;
+    return 1780401898;
 }
 
 // 提醒历史
@@ -228,6 +228,7 @@ const groupMap = {
 	"角色桌": { groupNumber: "1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n862922419*崩铁\n223628950*第五\n1079593722*鬼灭\n\n全职高手\n517535590\n751921932\n#腾讯频道：6btum1huf1\n\n边狱巴士\n302014132\n1049986341\n\n不清楚\n471191700\n363017687", aliases: ["语擦"] },
 	"教师A的终焉": { groupNumber: "966092780*下载", aliases: ["7-Day Cricle","七日之轮"] },
 	"今古空名": { groupNumber: "962147366" },
+	"今日晴": { groupNumber: "571731435" },
 	"金酒狂热": { groupNumber: "794429121" },
 	"京痕雨记": { groupNumber: "496904508*下载" },
 	"荆山祭": { groupNumber: "1092255456*下载" },
