@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780363190
+// @timestamp    1780363248
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780363190;
+    return 1780363248;
 }
 
 // 提醒历史
@@ -157,6 +157,7 @@ const groupMap = {
 	"革命少女罗丹斯": { groupNumber: "641481529" },
 	"公若渡河": { groupNumber: "1095875707*下载\n1101528355*KP" },
 	"共鸣性怪异": { groupNumber: "903173796\n720345251" },
+	"咕咕杯": { groupNumber: "927740897" },
 	"孤岛恋综": { groupNumber: "932315790*下载" },
 	"孤灯弃城": { groupNumber: "877858567" },
 	"故障乱码文本": { groupNumber: "https://tw.piliapp.com/cool-text/zalgo-text/" },
