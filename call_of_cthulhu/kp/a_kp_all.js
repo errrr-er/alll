@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780372240
+// @timestamp    1780372267
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780372240;
+    return 1780372267;
 }
 
 // 提醒历史
@@ -543,7 +543,7 @@ const groupMap = {
 	"coj模组": { groupNumber: "530070122" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
-	"fate": { groupNumber: "162792989" },
+	"Fate": { groupNumber: "162792989" },
 	"fist": { groupNumber: "830324938" },
 	"GinGin": { groupNumber: "1035861353" },
 	"GODARCA": { groupNumber: "869783432" },
