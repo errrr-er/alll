@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780371362
+// @timestamp    1780371394
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780371362;
+    return 1780371394;
 }
 
 // 提醒历史
@@ -251,7 +251,7 @@ const groupMap = {
 	"龙族": { groupNumber: "603211139" },
 	"卢埃德街的海鸣": { groupNumber: "972416799*下载", aliases: ["性转潜入免女郎俱乐部是认真的吗"] },
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕","吕布"] },
-	"旅行者": { groupNumber: "1080491850", aliases: ["太空","科幻"] },
+	"旅行者": { groupNumber: "1080491850" },
 	"绿色三角洲": { groupNumber: "623759380\n984765632\n253302384\n1061755248", aliases: ["dg"] },
 	"绿月": { groupNumber: "1064264349*下载" },
 	"论道来处十二楼": { groupNumber: "1060537548*下载" },
