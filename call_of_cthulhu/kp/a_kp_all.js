@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780363444
+// @timestamp    1780363671
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780363444;
+    return 1780363671;
 }
 
 // 提醒历史
@@ -559,6 +559,7 @@ const groupMap = {
 	"Stifle, and with hymn": { groupNumber: "1064285359*下载\n1062672838*KP" },
 	"The Moist Star": { groupNumber: "1035170762*下载" },
 	"the name": { groupNumber: "324809275*下载", aliases: ["遗书"] },
+	"trpg规则怪谈": { groupNumber: "588164179" },
 	"U name it": { groupNumber: "1072212301" },
 	"vamp": { groupNumber: "553675094" },
 	"ventangle": { groupNumber: "915670503" },
