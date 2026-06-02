@@ -836,8 +836,11 @@
     "groupNumber": "1105848179*通知(20041024)\nhttps://kuizy.net/analysis/30613"
   },
   {
-    "key": "弥勒佛Mythras",
-    "groupNumber": "316394180"
+    "key": "弥勒佛",
+    "groupNumber": "316394180\\n830571107",
+    "aliases": [
+      "Mythras"
+    ]
   },
   {
     "key": "迷雾之城",
