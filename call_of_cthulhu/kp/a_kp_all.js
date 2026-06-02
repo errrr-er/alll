@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780367691
+// @timestamp    1780370418
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780367691;
+    return 1780370418;
 }
 
 // 提醒历史
@@ -215,7 +215,7 @@ const groupMap = {
 	"巨龙迷城": { groupNumber: "1057192428" },
 	"绝对励弩": { groupNumber: "1079402848" },
 	"卡森德拉的黑色嘉年华": { groupNumber: "297175538", aliases: ["卡镇"] },
-	"克苏鲁迷踪toc": { groupNumber: "780909682", aliases: ["toc"] },
+	"克苏鲁迷踪": { groupNumber: "780909682\n19859317", aliases: ["toc"] },
 	"空箱间": { groupNumber: "858801418*下载\n1044331385*KP" },
 	"恐怖墓穴": { groupNumber: "329392650" },
 	"口胡": { groupNumber: "106133577" },
