@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780362433
+// @timestamp    1780362844
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780362433;
+    return 1780362844;
 }
 
 // 提醒历史
@@ -395,6 +395,7 @@ const groupMap = {
 	"无名集": { groupNumber: "663572400" },
 	"无声二重唱": { groupNumber: "965715801" },
 	"无为有处有还无": { groupNumber: "768399206", aliases: ["wwyc"] },
+	"无限流": { groupNumber: "301122594*星光\n459786188*幻剑侠刀139\n838432541*类无限" },
 	"无罪之歌": { groupNumber: "1018018649*下载" },
 	"午夜的沙": { groupNumber: "864767076" },
 	"武侠克苏鲁woc": { groupNumber: "524086123", aliases: ["woc"] },
@@ -416,7 +417,6 @@ const groupMap = {
 	"心脏": { groupNumber: "883465896*无全译本" },
 	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
 	"新世界": { groupNumber: "943798191" },
-	"无限流": { groupNumber: "301122594*星光\n459786188*幻剑侠刀139\n838432541*类无限" },
 	"星海孤舟": { groupNumber: "657774576*下载" },
 	"星海迷城": { groupNumber: "719566794" },
 	"星升": { groupNumber: "872362745" },
@@ -497,6 +497,7 @@ const groupMap = {
 	"致让我们死去活来仍然热爱的冰上的一切": { groupNumber: "1087789609*下载\n1087899806*KP", aliases: ["滑冰"] },
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"掷骰演出": { groupNumber: "1090720849*下载" },
+	"中古战锤": { groupNumber: "649155147", aliases: ["wfrp"] },
 	"终焉之歌为谁而唱": { groupNumber: "272502055" },
 	"众妙之门": { groupNumber: "3109958989*下载\n785654926*KP\n651350563*KP", aliases: ["zmzm"] },
 	"周边": { groupNumber: "945344459*汇总\n1073238820*交易\n271267478*无料互换", aliases: ["谷子"] },
