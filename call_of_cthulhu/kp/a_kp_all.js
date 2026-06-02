@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780363355
+// @timestamp    1780363419
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780363355;
+    return 1780363419;
 }
 
 // 提醒历史
@@ -488,6 +488,7 @@ const groupMap = {
 	"造物者": { groupNumber: "948914482" },
 	"斩我": { groupNumber: "776965370" },
 	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
+	"战锤40k": { groupNumber: "540375694" },
 	"战争神谕": { groupNumber: "413947504" },
 	"蟑螂启示录": { groupNumber: "957865225" },
 	"长天摘星": { groupNumber: "552342168*无剧透\n595926395*KP" },
