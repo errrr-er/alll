@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780367385
+// @timestamp    1780367597
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780367385;
+    return 1780367597;
 }
 
 // 提醒历史
@@ -544,7 +544,7 @@ const groupMap = {
 	"H:tv": { groupNumber: "684526713" },
 	"insane": { groupNumber: "650600421" },
 	"IQ游行Re：LOAD": { groupNumber: "1062159214" },
-	"log": { groupNumber: "675664988*存放\n873371415*存放\n985865497*整理" },
+	"log": { groupNumber: "675664988*存放\n873371415*存放\n985865497*整理\n1072162302*整理" },
 	"LUCA": { groupNumber: "1077454734*下载" },
 	"m大随机杀人事件": { groupNumber: "1079465494*下载\n548428936*KP" },
 	"magnificas": { groupNumber: "477317221" },
