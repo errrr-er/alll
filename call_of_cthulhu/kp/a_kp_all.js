@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780363801
+// @timestamp    1780364012
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780363801;
+    return 1780364012;
 }
 
 // 提醒历史
@@ -197,6 +197,7 @@ const groupMap = {
 	"寂静挽歌": { groupNumber: "1084909160" },
 	"祭日颂": { groupNumber: "717598559" },
 	"剪月集": { groupNumber: "631939804" },
+	"剑世界": { groupNumber: "614559786" },
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289*下载" },
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911*下载" },
 	"角色桌": { groupNumber: "471191700\n363017687\n1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n302014132*边狱巴士\n862922419*崩铁\n223628950*第五\n1079593722*鬼灭", aliases: ["语擦"] },
