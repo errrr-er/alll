@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780371885
+// @timestamp    1780372240
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780371885;
+    return 1780372240;
 }
 
 // 提醒历史
@@ -162,7 +162,6 @@ const groupMap = {
 	"革命少女罗丹斯": { groupNumber: "641481529" },
 	"公若渡河": { groupNumber: "1095875707*下载\n1101528355*KP" },
 	"共鸣性怪异": { groupNumber: "903173796\n720345251" },
-	"咕咕杯": { groupNumber: "927740897" },
 	"孤岛恋综": { groupNumber: "932315790*下载" },
 	"孤灯弃城": { groupNumber: "877858567" },
 	"故障乱码文本": { groupNumber: "https://tw.piliapp.com/cool-text/zalgo-text/" },
@@ -177,7 +176,6 @@ const groupMap = {
 	"海龟汤": { groupNumber: "295820752" },
 	"海国战役设定集": { groupNumber: "567135881" },
 	"黑暗世界": { groupNumber: "985683120", aliases: ["wod","vtm"] },
-	"黑幕圣杯": { groupNumber: "602145072" },
 	"黑水溪": { groupNumber: "1071548693" },
 	"呼唤爱的谢幕": { groupNumber: "929268821" },
 	"狐鸣于白雪、狸击腹冰霰": { groupNumber: "1043393781*下载" },
@@ -261,7 +259,6 @@ const groupMap = {
 	"猫寿司": { groupNumber: "831331659" },
 	"卯花腐雨": { groupNumber: "1083939047*下载\n1098370507*有作者", aliases: ["mhfy"] },
 	"冒充神明的童话": { groupNumber: "1062511494" },
-	"梅林圣杯": { groupNumber: "905396897" },
 	"门扉那端": { groupNumber: "621153022" },
 	"蒙娜丽莎杀死格尔尼卡": { groupNumber: "580704423" },
 	"梦里百花深处": { groupNumber: "490454774", aliases: ["梦花深"] },
@@ -348,7 +345,6 @@ const groupMap = {
 	"圣餐": { groupNumber: "659334919" },
 	"圣诞快乐，玛丽小姐": { groupNumber: "864404671*下载\n1041629808*KP" },
 	"圣土遗梦": { groupNumber: "146415338" },
-	"胜率制圣杯": { groupNumber: "535057473" },
 	"失忆后有了三个恋人": { groupNumber: "562613533" },
 	"十六段夜谈": { groupNumber: "938304846" },
 	"十七年蝉": { groupNumber: "237742659" },
