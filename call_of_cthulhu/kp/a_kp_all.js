@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780362257
+// @timestamp    1780362433
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780362257;
+    return 1780362433;
 }
 
 // 提醒历史
@@ -416,7 +416,7 @@ const groupMap = {
 	"心脏": { groupNumber: "883465896*无全译本" },
 	"新矿坑": { groupNumber: "894191386", aliases: ["方尖碑"] },
 	"新世界": { groupNumber: "943798191" },
-	"星光无限流": { groupNumber: "301122594" },
+	"无限流": { groupNumber: "301122594*星光\n459786188*幻剑侠刀139\n838432541*类无限" },
 	"星海孤舟": { groupNumber: "657774576*下载" },
 	"星海迷城": { groupNumber: "719566794" },
 	"星升": { groupNumber: "872362745" },
