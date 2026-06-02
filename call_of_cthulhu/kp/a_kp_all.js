@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780401898
+// @timestamp    1780403318
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780401898;
+    return 1780403318;
 }
 
 // 提醒历史
@@ -134,7 +134,7 @@ const groupMap = {
 	"当合欢宗遇上无情道": { groupNumber: "1048818266*下载\n736394722*下载\n112452157*KP", aliases: ["合欢宗"] },
 	"德拉肯海姆之墟": { groupNumber: "856703297" },
 	"地城突击": { groupNumber: "1002876043" },
-	"地区": { groupNumber: "118563070*北京\n716242213*上海\n936981574*福建\n46149913*温州\n775753044*青岛\n1055920197*广西\n1055776868*钦州\n855687184*江浙沪\n722890269*呼和浩特\n1106840454*齐齐哈尔\n771840771*山河四省\n751097154*澳大利亚\n\n沈阳\n254263927\n1101413243", aliases: ["面团"] },
+	"地区": { groupNumber: "716242213*上海\n936981574*福建\n46149913*温州\n775753044*青岛\n1055920197*广西\n1055776868*钦州\n855687184*江浙沪\n722890269*呼和浩特\n1106840454*齐齐哈尔\n771840771*山河四省\n751097154*澳大利亚\n\n北京\n118563070\n1079372659*非coc/dnd\n\n沈阳\n254263927\n1101413243", aliases: ["面团"] },
 	"地图制作": { groupNumber: "https://watabou.itch.io/perilous-shores\n大尺度，区域地图，可商用\nhttps://watabou.itch.io/one-page-dungeon\n随机生成，单层地下城地图，可商用\nhttps://watabou.itch.io/medieval-fantasy-city-generator\n中世纪，城镇地图，可商用\nhttps://probabletrain.itch.io/dungeon-scrawl\n方格地下城，扩展度高，可做多层，遵循cc0协议\nhttps://deepnight.itch.io/tabletop-rpg-map-editor\n房间地图，像素二维，可商用\nhttps://probabletrain.itch.io/city-generator\n随机，现代城市地图，可商用\nhttps://watabou.itch.io/neighbourhood\n彩色城镇地图，可商用\nhttps://watabou.itch.io/village-generator\n村庄地图，可商用\nhttps://wyvernindustries.itch.io/stationgen\n空间站地图，可编辑，付费\nhttps://watabou.itch.io/fantasy-manor\n随机庄园，可商用\nhttps://watabou.itch.io/city-viewer\n3D城市，随机，可商用\nhttps://watabou.itch.io/procgen-mansion\n豪宅、洋馆，随机，可制平面图，定制程度高，可商用\nhttps://chillcash.itch.io/map-generator\n世界地图生成\nhttps://ngreend.itch.io/hexmappy\n六角地图\nhttps://thowsenmedia.itch.io/worldshaper\n支持3D的地图、地形生成\nhttps://playest.itch.io/hextml\n六边形地图制作\nhttps://tortue.itch.io/terraingenerator\n2D地形生成" },
 	"电子悖论失乐园": { groupNumber: "995398768*下载\n1033563821*KP", aliases: ["失乐园","电子"] },
 	"东方快车上的恐怖": { groupNumber: "639753886", aliases: ["东快"] },
