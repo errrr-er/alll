@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780370615
+// @timestamp    1780370833
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780370615;
+    return 1780370833;
 }
 
 // 提醒历史
@@ -247,7 +247,7 @@ const groupMap = {
 	"龙金劫": { groupNumber: "947826784" },
 	"龙台掠雪": { groupNumber: "921013368*官方禁言通知\n1051220082*同好交流" },
 	"龙王的奥德赛": { groupNumber: "238873224" },
-	"龙与地下城": { groupNumber: "5e\n7633611236\n618695186\n1043167230\n601868447\n472247859\n820443183\n\n4e\n811793816\n\n3r\n655468212\n436399338\n\n2e\n671228179\n\n*<纯女>、<语音>的相关群聊不在此列，请自行按关键词进行查找", aliases: ["dnd"] },
+	"龙与地下城": { groupNumber: "5e\n7633611236\n618695186\n1043167230\n601868447\n472247859\n820443183\n549256248\n617262009\n\n4e\n811793816\n\n3r\n655468212\n436399338\n9704777\n\n2e\n671228179\n\n不清楚\n713046227\n144628596\n\n*<纯女>、<语音>的相关群聊不在此列，请自行按关键词进行查找", aliases: ["dnd"] },
 	"龙族": { groupNumber: "603211139" },
 	"卢埃德街的海鸣": { groupNumber: "972416799*下载", aliases: ["性转潜入免女郎俱乐部是认真的吗"] },
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕","吕布"] },
