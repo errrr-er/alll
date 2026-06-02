@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780366921
+// @timestamp    1780367232
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780366921;
+    return 1780367232;
 }
 
 // 提醒历史
@@ -535,7 +535,7 @@ const groupMap = {
 	"coj模组": { groupNumber: "530070122" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
-	"dnd": { groupNumber: "5e\n7633611236\n618695186\n1043167230\n601868447\n472247859\n\n4e\n811793816\n\n3r\n655468212\n436399338\n\n2e\n671228179\n\n*<语音>、<纯女>的相关群聊不在此列，请自行按关键词进行查找", aliases: ["龙与地下城"] },
+	"龙与地下城": { groupNumber: "5e\n7633611236\n618695186\n1043167230\n601868447\n472247859\n820443183\n\n4e\n811793816\n\n3r\n655468212\n436399338\n\n2e\n671228179\n\n*<语音>、<纯女>的相关群聊不在此列，请自行按关键词进行查找", aliases: ["dnd"] },
 	"fate": { groupNumber: "162792989" },
 	"fist": { groupNumber: "830324938" },
 	"GinGin": { groupNumber: "1035861353" },
