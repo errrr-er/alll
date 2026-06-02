@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780371394
+// @timestamp    1780371885
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780371394;
+    return 1780371885;
 }
 
 // 提醒历史
@@ -261,7 +261,7 @@ const groupMap = {
 	"猫寿司": { groupNumber: "831331659" },
 	"卯花腐雨": { groupNumber: "1083939047*下载\n1098370507*有作者", aliases: ["mhfy"] },
 	"冒充神明的童话": { groupNumber: "1062511494" },
-	"梅林杯": { groupNumber: "905396897" },
+	"梅林圣杯": { groupNumber: "905396897" },
 	"门扉那端": { groupNumber: "621153022" },
 	"蒙娜丽莎杀死格尔尼卡": { groupNumber: "580704423" },
 	"梦里百花深处": { groupNumber: "490454774", aliases: ["梦花深"] },
