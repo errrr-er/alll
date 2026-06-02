@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780363248
+// @timestamp    1780363355
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780363248;
+    return 1780363355;
 }
 
 // 提醒历史
@@ -163,6 +163,7 @@ const groupMap = {
 	"故障乱码文本": { groupNumber: "https://tw.piliapp.com/cool-text/zalgo-text/" },
 	"怪胎": { groupNumber: "639870851" },
 	"怪物们与邪典仙境": { groupNumber: "592577986", aliases: ["鞋垫"] },
+	"诡秘之主": { groupNumber: "714267110\n958379633" },
 	"哈欠门": { groupNumber: "631595428" },
 	"还来不见仙": { groupNumber: "590220813*反馈\n984420519*KP" },
 	"海·在遗忘之前的晴天": { groupNumber: "710881226", aliases: ["晴天"] },
