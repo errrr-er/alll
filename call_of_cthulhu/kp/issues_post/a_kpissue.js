@@ -56,20 +56,25 @@ async function createIssue(bodyText) {
 // 4. 解析输入
 // ======================
 function parseInput(text) {
-  const parts = text.trim().split(/\s+/);
-  if (parts.length < 1 || !parts[0]) return null;
+  const lines = text.trim().split(/\n/).map(s => s.trim()).filter(Boolean);
+  if (lines.length === 0) return null;
 
-  const groupNumber = parts[0]; // "数字*备注" 整体保留
-  const aliases = parts[1]
-    ? parts[1].split(",").map(s => s.trim()).filter(Boolean)
-    : [];
+  const result = {};
 
-  return {
-    [groupNumber]: {
-      groupNumber,
-      aliases
-    }
-  };
+  for (const line of lines) {
+    const parts = line.split(/\s+/);
+    if (parts.length < 2) return null; // 每行至少要有 名称 + 群号
+
+    const name        = parts[0];
+    const groupNumber = parts[1];
+    const aliases     = parts[2]
+      ? parts[2].split(",").map(s => s.trim()).filter(Boolean)
+      : [];
+
+    result[name] = { groupNumber, aliases };
+  }
+
+  return result;
 }
 
 // ======================
