@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780364161
+// @timestamp    1780364399
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780364161;
+    return 1780364399;
 }
 
 // 提醒历史
@@ -153,6 +153,7 @@ const groupMap = {
 	"缝春": { groupNumber: "798106857" },
 	"浮生安梦": { groupNumber: "881234029" },
 	"高塔之死": { groupNumber: "623768354*战役集", aliases: ["告密者"] },
+	"高武": { groupNumber: "877823625" },
 	"哥谭39:永恒之镜": { groupNumber: "858799831", aliases: ["Gotham39: The Mirror Eternal"] },
 	"歌味觉死": { groupNumber: "616756545", aliases: ["路易斯安那系列","畅梦人","淤泥之花与空心石"] },
 	"革命少女罗丹斯": { groupNumber: "641481529" },
@@ -245,6 +246,7 @@ const groupMap = {
 	"龙族": { groupNumber: "603211139" },
 	"卢埃德街的海鸣": { groupNumber: "972416799*下载", aliases: ["性转潜入免女郎俱乐部是认真的吗"] },
 	"旅馆的捕食者": { groupNumber: "884768719", aliases: ["旅捕","吕布"] },
+	"旅行者": { groupNumber: "1080491850", aliases: ["太空","科幻"] },
 	"绿色三角洲": { groupNumber: "623759380\n984765632\n253302384\n1061755248", aliases: ["dg"] },
 	"绿月": { groupNumber: "1064264349*下载" },
 	"论道来处十二楼": { groupNumber: "1060537548*下载" },
@@ -270,9 +272,10 @@ const groupMap = {
 	"命运转轮": { groupNumber: "241837204" },
 	"模组拼车": { groupNumber: "686079835\n983412936", aliases: ["私翻"] },
 	"魔道书": { groupNumber: "759960406" },
+	"魔法少女": { groupNumber: "337270379" },
 	"魔法少女歌唱死亡": { groupNumber: "868665011" },
 	"魔女与彩爱": { groupNumber: "421693159" },
-	"魔王之影": { groupNumber: "691528948", aliases: ["SDL"] },
+	"魔王之影": { groupNumber: "691528948\n305548996", aliases: ["SDL"] },
 	"末日剑湾": { groupNumber: "812018837", aliases: ["维克那的崛起","维克那的陨落"] },
 	"莫索里哀的圣职者": { groupNumber: "435690433", aliases: ["msla"] },
 	"墨拉亚的羊群": { groupNumber: "671767814*下载" },
@@ -289,6 +292,7 @@ const groupMap = {
 	"帕瑞卡颂马戏团": { groupNumber: "760671074" },
 	"跑团禁男吐槽群": { groupNumber: "1098988080" },
 	"蓬莱有龙": { groupNumber: "1073307651*下载\n1101230234*KP" },
+	"七海": { groupNumber: "795236450", aliases: ["航海"] },
 	"奇异医科": { groupNumber: "1033132363*下载" },
 	"祈舞醒梦": { groupNumber: "1104143844*下载\n1101711435*KP" },
 	"崎蜀藏观音": { groupNumber: "652844613" },
@@ -296,7 +300,7 @@ const groupMap = {
 	"弃约社会": { groupNumber: "972643133*下载\n916122224*KP" },
 	"恰故人归": { groupNumber: "939600700*下载\n607468653*KP" },
 	"谦卑林": { groupNumber: "941662352" },
-	"枪骑兵": { groupNumber: "702215091" },
+	"枪骑兵": { groupNumber: "702215091", aliases: ["机甲"] },
 	"亲爱的，我把脑子丢了": { groupNumber: "839027414", aliases: ["脑丢","丢脑"] },
 	"青春自杀": { groupNumber: "953788807" },
 	"清平乐": { groupNumber: "814959956" },
@@ -382,7 +386,7 @@ const groupMap = {
 	"万人无我": { groupNumber: "929768460", aliases: ["wrww"] },
 	"王之褴褛": { groupNumber: "1078850322" },
 	"往明": { groupNumber: "1039171010*下载\n1039312225*KP" },
-	"妄想症": { groupNumber: "278636978" },
+	"妄想症": { groupNumber: "278636978", aliases: ["赛博朋克题材"] },
 	"望君长留": { groupNumber: "700583235" },
 	"帷灯匣剑": { groupNumber: "850934230*下载\n984247613*KP" },
 	"维克那毁灭前夕": { groupNumber: "1045993659" },
@@ -417,6 +421,7 @@ const groupMap = {
 	"衔尾蛇启示录": { groupNumber: "439061754*有作者\\n172995170*无作者" },
 	"相约98": { groupNumber: "542398417" },
 	"香槟call可以开发票吗": { groupNumber: "1103396117*下载\n964670473*交流" },
+	"小马宝莉": { groupNumber: "851487172" },
 	"小众规则汇总": { groupNumber: "https://docs.qq.com/sheet/DT2pkUkpkbGVWWVB5\n*此文档非插件作者负责，文档相关问题请进文档内提到的相关群聊(677691116)" },
 	"小众规则综合": { groupNumber: "945728295" },
 	"写作": { groupNumber: "629998485*魔都\n734417134*纯女\n761666326*纯女coj" },
@@ -516,6 +521,7 @@ const groupMap = {
 	"坠入阿弗纳斯": { groupNumber: "223713820" },
 	"斫夜": { groupNumber: "220150371*下载" },
 	"最后的祝福": { groupNumber: "1005831724*下载" },
+	"最终物语": { groupNumber: "490912280" },
 	"左川之国失落谭": { groupNumber: "770779991" },
 	"ABO同工同酬": { groupNumber: "991822168*下载\n991872893*KP" },
 	"ABS": { groupNumber: "941349942", aliases: ["全蓝综合征"] },
@@ -530,6 +536,7 @@ const groupMap = {
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"difftruth": { groupNumber: "849680089" },
 	"dnd": { groupNumber: "5e\n7633611236\n618695186\n1043167230\n601868447\n472247859\n\n4e\n811793816\n\n3r\n655468212\n436399338\n\n2e\n671228179\n\n*<语音>、<纯女>的dnd相关群聊不在此列，请自行按关键词进行查找", aliases: ["龙与地下城"] },
+	"fate": { groupNumber: "162792989" },
 	"fist": { groupNumber: "830324938" },
 	"GinGin": { groupNumber: "1035861353" },
 	"GODARCA": { groupNumber: "869783432" },
