@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780362970
+// @timestamp    1780363101
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780362970;
+    return 1780363101;
 }
 
 // 提醒历史
@@ -225,6 +225,7 @@ const groupMap = {
 	"连海密录": { groupNumber: "926024691" },
 	"恋爱党政": { groupNumber: "263776524" },
 	"列文菲舍变例": { groupNumber: "1040678581" },
+	"猎魔人": { groupNumber: "733953487" },
 	"鳞翅": { groupNumber: "963578553" },
 	"流浪武士": { groupNumber: "994791183*下载" },
 	"流水线心脏": { groupNumber: "793350464", aliases: ["流心"] },
