@@ -1,3 +1,5 @@
+> ※扩展和本体是两个独立插件，需分别安装
+
 ### [.kp] KP群汇总（JS/OPK）
 
 > .kp <关键词/群号>
@@ -29,21 +31,27 @@
 >
 > 用户：提交新群组数据
 
-- 【注意】
-    - 
+- 选项一【插件配置流程】
+    - 拥有GitHub账号（必须）
+    - 骰能直连GitHub（必须）
+    - 自行修改文件（必须）
+    - 【在GitHub获取token】
+        - Settings → Developer Settings → Personal access tokens → Fine-grained personal access tokens → Generate new token
+        - Token name * ← 必填（随便写）
+        - Expiration ← 默认30天，可改成 No expiration
+        - Repository access → Only select repositories → Select repositories → errrr-er/alll
+
+- 选项二【GitHub Issue】
+    - 拥有GitHub账号（必须）
+    - 使用提供的模板（https://github.com/errrr-er/alll/issues）
+        - 第一框为模组名
+        - 第二框为群号（*下载 | *KP | *官方）←仅KP群则无需备注
+        - 第三框为花名（可留空）
 
 
-- 【GitHub Issue】
-    - 可通过.kpissue功能提交（仅群内猫骰有此功能）
-        - 用法：.kpissue 群号 别名1,别名2(可选)
-    - 或在GitHub Issue页面使用模板
-        - 第一个框是模组名
-        - 第二个框是群号（支持数字符号文字混合）
-        - 第三个是别名，也可以是缩写（可填也可留空，留空不影响）
+
+【2. GitHub配置】处的【替换】
 
 |||
 |:-:|:-:|
 |![](https://github.com/errrr-er/alll/blob/main/readme_pic/kp/create_issue.jpg?raw=true)||
-
-- 【其它】
-    - 数据组的维护流程为半人工半github action，有问题可随时提出
