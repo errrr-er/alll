@@ -1,5 +1,3 @@
-> ※扩展和本体是两个独立插件，需分别安装
-
 ### [.kp] KP群汇总（JS/OPK）
 
 > .kp <关键词/群号>
@@ -27,19 +25,15 @@
 
 ### [.kpissue] 扩展·KP群汇总·提交新群组数据（JS）
 
+> ※扩展和本体是两个独立插件，需分别安装
+>
+> ※因权限问题暂不公开文件
+
 > .kpissue 名称 群号 别名1,别名2(可选)
 >
 > 用户：提交新群组数据
 
-- 选项一【插件配置流程】
-    - 拥有GitHub账号（必须）
-    - 骰能直连GitHub（必须）
-    - 自行修改文件（必须）
-    - 【在GitHub获取token】
-        - Settings → Developer Settings → Personal access tokens → Fine-grained personal access tokens → Generate new token
-        - Token name * ← 必填（随便写）
-        - Expiration ← 默认30天，可改成 No expiration
-        - Repository access → Only select repositories → Select repositories → errrr-er/alll
+- 选项一【】
 
 - 选项二【GitHub Issue】
     - 拥有GitHub账号（必须）
