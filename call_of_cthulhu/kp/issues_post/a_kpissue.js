@@ -2,7 +2,7 @@
 // @name         kpissue
 // @author       3987681449
 // @version      1.0.0
-// @description  (.kpissue)提交GitHub Issue | 用法：.kpissue 名称 群号 别名1,别名2(可选)
+// @description  (.kpissue)提交GitHub Issue
 // @timestamp    1778959464
 // 2026-05-16 19:24:24
 // @license      Apache-2
@@ -19,11 +19,11 @@ if (!ext) {
 }
 
 // ======================
-// 2. GitHub配置（记得末尾qq号的@也要改）
+// 2. GitHub配置
 // ======================
 const CONFIG = {
-  token: "ghp_xxxxxxx",
-  repo: "你的用户名/你的仓库"
+  token: "替换掉这里",
+  repo: "errrr-er/alll"
 };
 
 // ======================
@@ -63,7 +63,7 @@ function parseInput(text) {
 
   for (const line of lines) {
     const parts = line.split(/\s+/);
-    if (parts.length < 2) return null; // 每行至少要有 名称 + 群号
+    if (parts.length < 2) return null;
 
     const name        = parts[0];
     const groupNumber = parts[1];
@@ -109,7 +109,7 @@ cmdkpissue.solve = (ctx, msg, cmdArgs) => {
 
   createIssue(buildIssueBody(data))
     .then(issue => {
-      seal.replyToSender(ctx, msg, `已提交！等待[CQ:at,qq=号码]审核中：${issue.html_url}`);
+      seal.replyToSender(ctx, msg, `已提交！等待审核中：${issue.html_url}`);
     })
     .catch(e => {
       seal.replyToSender(ctx, msg, `失败：${e.message}`);
