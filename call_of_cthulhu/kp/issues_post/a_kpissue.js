@@ -22,7 +22,7 @@ if (!ext) {
 // 2. GitHub配置
 // ======================
 const CONFIG = {
-  token: "替换掉这里",
+  token: "替换",
   repo: "errrr-er/alll"
 };
 
