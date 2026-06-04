@@ -2,133 +2,259 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>段落 &lt;br&gt; 生成器（带纯文字输出）</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>段落 &lt;br&gt; 生成器</title>
 <style>
-  body { font-family: system-ui, sans-serif; padding: 20px; }
-  h2 { margin-top: 0; }
-  .container { display: flex; gap: 20px; }
-  .panel { flex: 1; display: flex; flex-direction: column; gap: 10px; }
-  textarea { width: 100%; height: 300px; box-sizing: border-box; font-size: 14px; padding: 10px; }
-  pre { background: #f5f5f5; white-space: pre-wrap; word-break: break-all; height: 145px; overflow-y: auto; padding: 10px; margin:0; }
-  .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 5px; }
-  button { padding: 6px 14px; cursor: pointer; }
-  #copy-msg-br, #copy-msg-text { font-size: 14px; color: green; margin-left: 10px; }
+    :root {
+        --bg: #f8f6f3;
+        --card-bg: #ffffff;
+        --text: #2c2416;
+        --text-secondary: #5f5542;
+        --border: #d9cebb;
+        --shadow: 0 2px 12px rgba(60,40,20,0.05);
+        --radius: 10px;
+        --radius-sm: 6px;
+        --accent: #7d5d3c;
+        --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+        --font-mono: 'SF Mono', 'Cascadia Code', 'Consolas', 'Menlo', 'PingFang SC', 'Microsoft YaHei', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        background: var(--bg);
+        font-family: var(--font-sans);
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
+        padding: 24px 20px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .page-header {
+        margin-bottom: 20px;
+    }
+    .page-header h1 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #3d2e1c;
+        letter-spacing: 0.03em;
+    }
+    .page-header p {
+        font-size: 0.82rem;
+        color: var(--text-secondary);
+        margin-top: 2px;
+    }
+
+    .layout {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px 16px;
+        box-shadow: var(--shadow);
+    }
+
+    .card-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 320px;
+        border: 1.5px solid #ddd2c2;
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+        font-size: 0.88rem;
+        font-family: var(--font-mono);
+        background: #fdfbf7;
+        color: var(--text);
+        resize: vertical;
+        line-height: 1.6;
+        transition: border-color 0.2s;
+    }
+    textarea:focus { outline: none; border-color: #b8976e; background: #fff; }
+    textarea::placeholder { color: #c0b09a; font-family: var(--font-sans); }
+
+    pre {
+        font-family: var(--font-mono);
+        font-size: 0.88rem;
+        background: #fefcf8;
+        border: 1.5px solid #e8e0d2;
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        height: 148px;
+        overflow-y: auto;
+        color: var(--text);
+        line-height: 1.6;
+    }
+    pre:empty::before { content: '等待生成…'; color: #c0b09a; font-style: italic; font-family: var(--font-sans); }
+
+    .btn-group {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 9px 18px;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.85rem;
+        font-weight: 600;
+        font-family: inherit;
+        letter-spacing: 0.02em;
+        transition: all 0.18s;
+        white-space: nowrap;
+    }
+    .btn-primary { background: #7d5d3c; color: #fff; }
+    .btn-primary:hover { background: #5a3e28; transform: translateY(-1px); }
+    .btn-ghost { background: #fefcf8; color: #5a3e28; border: 1.5px solid #c9b896; }
+    .btn-ghost:hover { background: #5a3e28; color: #fff; border-color: #5a3e28; transform: translateY(-1px); }
+    .btn-muted { background: #ede6db; color: #5f5542; border: 1px solid #d4c5ac; }
+    .btn-muted:hover { background: #e0d5c6; transform: translateY(-1px); }
+    .btn.copied { background: #4a7c5c !important; color: #fff !important; border-color: #4a7c5c !important; pointer-events: none; }
+
+    .toast {
+        position: fixed;
+        top: 20px; left: 50%;
+        transform: translateX(-50%) translateY(-100px);
+        background: #3d2e1c; color: #fff;
+        padding: 9px 20px;
+        border-radius: 20px;
+        font-size: 0.88rem; font-weight: 500;
+        z-index: 999;
+        transition: transform 0.3s;
+        pointer-events: none;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 640px) {
+        .layout { flex-direction: column; }
+    }
 </style>
 </head>
 <body>
 
-<h2>段落 &lt;br&gt; 生成器（带纯文字输出）</h2>
-
-<div class="container">
-  <!-- 输出左边 -->
-  <div class="panel">
-    <h3>输出（带 &lt;br&gt;）</h3>
-    <pre id="output-br"></pre>
-    <h3>输出（纯文字）</h3>
-    <pre id="output-text"></pre>
-  </div>
-
-  <!-- 输入右边 -->
-  <div class="panel">
-    <h3>输入</h3>
-    <textarea id="input" placeholder="粘贴纯文字即可"></textarea>
-
-    <!-- 第一行按钮：生成 / 清空 -->
-    <div class="buttons">
-      <button onclick="generate()">生成</button>
-      <button onclick="clearInput()">清空输入</button>
-    </div>
-
-    <!-- 第二行按钮：复制 -->
-    <div class="buttons">
-      <button onclick="copyBr()">复制带 &lt;br&gt;</button>
-      <span id="copy-msg-br"></span>
-      <button onclick="copyText()">复制纯文字</button>
-      <span id="copy-msg-text"></span>
-    </div>
-  </div>
+<div class="page-header">
+    <h1>段落 &lt;br&gt; 生成器</h1>
+    <p>将纯文本转换为带 &lt;br&gt; 标签的格式，同时输出纯文字版本</p>
 </div>
+
+<div class="layout">
+    <!-- 左：输出 -->
+    <div class="col">
+        <div class="card">
+            <div class="card-label">输出（带 &lt;br&gt;）</div>
+            <pre id="output-br"></pre>
+            <div class="btn-group" style="margin-top:10px;">
+                <button class="btn btn-ghost" id="btn-copy-br" onclick="copyBr()">复制带 &lt;br&gt;</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-label">输出（纯文字）</div>
+            <pre id="output-text"></pre>
+            <div class="btn-group" style="margin-top:10px;">
+                <button class="btn btn-ghost" id="btn-copy-text" onclick="copyText()">复制纯文字</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右：输入 -->
+    <div class="col">
+        <div class="card">
+            <div class="card-label">输入</div>
+            <textarea id="input" placeholder="粘贴纯文字即可"></textarea>
+            <div class="btn-group" style="margin-top:10px;">
+                <button class="btn btn-primary" onclick="generate()">生成</button>
+                <button class="btn btn-muted" onclick="clearInput()">清空</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <script>
 function generate() {
-  const text = document.getElementById("input").value;
-  if (!text) {
-    document.getElementById("output-br").textContent = "";
-    document.getElementById("output-text").textContent = "";
-    return;
-  }
-
-  const rawParagraphs = text.split(/\n\s*\n/);
-
-  let resultBr = "";
-  let resultText = "";
-
-  // 所有 <xxx> 标签都加反斜杠
-  function escapeSpecificTags(line) {
-    return line.replace(/<[^>]+>/g, (match) => {
-      return "\\" + match;
+    const text = document.getElementById("input").value;
+    if (!text) {
+        document.getElementById("output-br").textContent = "";
+        document.getElementById("output-text").textContent = "";
+        return;
+    }
+    const rawParagraphs = text.split(/\n\s*\n/);
+    let resultBr = "", resultText = "";
+    function escapeSpecificTags(line) {
+        return line.replace(/<[^>]+>/g, m => "\\" + m);
+    }
+    rawParagraphs.forEach((para, pIndex) => {
+        let lines = para.split(/\r?\n/).filter((l, i, arr) => {
+            if (l.trim() !== "") return true;
+            if (i > 0 && arr[i-1].trim() !== "") return true;
+            return false;
+        });
+        if (lines.length === 0) return;
+        lines = lines.map(escapeSpecificTags);
+        lines.forEach((line, lIndex) => {
+            if (pIndex === 0 && lIndex === 0) resultBr += line;
+            else if (lIndex === 0) resultBr += "\n" + line;
+            else resultBr += "\n<br>" + line;
+        });
+        if (pIndex < rawParagraphs.length - 1) resultBr += "\n";
+        resultText += lines.join("\n");
+        if (pIndex < rawParagraphs.length - 1) resultText += "\n\n";
     });
-  }
-
-  rawParagraphs.forEach((para, pIndex) => {
-    let lines = para.split(/\r?\n/).filter((l, i, arr) => {
-      if (l.trim() !== "") return true;
-      if (i > 0 && arr[i-1].trim() !== "") return true;
-      return false;
-    });
-
-    if (lines.length === 0) return;
-
-    // 转义所有标签
-    lines = lines.map(escapeSpecificTags);
-
-    lines.forEach((line, lIndex) => {
-      if (pIndex === 0 && lIndex === 0) {
-        resultBr += line;
-      } else if (lIndex === 0) {
-        resultBr += "\n" + line;
-      } else {
-        resultBr += "\n<br>" + line;
-      }
-    });
-
-    if (pIndex < rawParagraphs.length - 1) resultBr += "\n";
-
-    resultText += lines.join("\n");
-    if (pIndex < rawParagraphs.length - 1) resultText += "\n\n";
-  });
-
-  document.getElementById("output-br").textContent = resultBr;
-  document.getElementById("output-text").textContent = resultText;
-
-  document.getElementById("copy-msg-br").textContent = "";
-  document.getElementById("copy-msg-text").textContent = "";
+    document.getElementById("output-br").textContent = resultBr;
+    document.getElementById("output-text").textContent = resultText;
 }
 
 function copyBr() {
-  const text = document.getElementById("output-br").textContent;
-  if (!text) return;
-  navigator.clipboard.writeText(text).then(() => {
-    const msg = document.getElementById("copy-msg-br");
-    msg.textContent = "已复制";
-    setTimeout(() => { msg.textContent = ""; }, 2000);
-  });
+    const text = document.getElementById("output-br").textContent;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => flashBtn("btn-copy-br", "已复制"));
 }
-
 function copyText() {
-  const text = document.getElementById("output-text").textContent;
-  if (!text) return;
-  navigator.clipboard.writeText(text).then(() => {
-    const msg = document.getElementById("copy-msg-text");
-    msg.textContent = "已复制";
-    setTimeout(() => { msg.textContent = ""; }, 2000);
-  });
+    const text = document.getElementById("output-text").textContent;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(() => flashBtn("btn-copy-text", "已复制"));
 }
-
 function clearInput() {
-  document.getElementById("input").value = "";
+    document.getElementById("input").value = "";
+}
+function flashBtn(id, msg) {
+    const btn = document.getElementById(id);
+    const orig = btn.textContent;
+    btn.textContent = msg;
+    btn.classList.add("copied");
+    showToast("复制成功");
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove("copied"); }, 1800);
+}
+function showToast(msg) {
+    const t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("show");
+    setTimeout(() => t.classList.remove("show"), 1800);
 }
 </script>
-
 </body>
 </html>
