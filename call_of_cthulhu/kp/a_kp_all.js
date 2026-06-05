@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780507158
+// @timestamp    1780684382
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780507158;
+    return 1780684382;
 }
 
 // 提醒历史
@@ -378,7 +378,7 @@ const groupMap = {
 	"三角机构": { groupNumber: "1056836484\n585321503" },
 	"三局两胜": { groupNumber: "208964986*官方" },
 	"三台风月": { groupNumber: "1084095765" },
-	"山歌唤梦": { groupNumber: "972586937" },
+	"山歌唤梦": { groupNumber: "850176131*下载\n972586937*KP" },
 	"山海·启程": { groupNumber: "1044403168" },
 	"山中无盈月": { groupNumber: "1098856853*下载\n1101323055*KP" },
 	"少恶世界": { groupNumber: "849810896\n少恶世界+蚀甚", aliases: ["蚀甚"] },
