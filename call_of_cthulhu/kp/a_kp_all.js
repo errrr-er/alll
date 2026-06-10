@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1780684382
+// @timestamp    1781106915
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1780684382;
+    return 1781106915;
 }
 
 // 提醒历史
@@ -102,7 +102,7 @@ const groupMap = {
 	"陛下您这后宫不对劲": { groupNumber: "636253864*下载", aliases: ["荣光不灭"] },
 	"边狱巴士同人规则": { groupNumber: "765965290" },
 	"变形金刚": { groupNumber: "1051538965" },
-	"便当杀人事件": { groupNumber: "1098707012*下载" },
+	"便当杀人事件": { groupNumber: "1098707012*下载\n701160953*KP" },
 	"别来无恙": { groupNumber: "907810853" },
 	"冰风谷": { groupNumber: "537262507" },
 	"波子汽水": { groupNumber: "562672318" },
