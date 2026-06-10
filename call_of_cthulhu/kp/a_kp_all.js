@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781106915
+// @timestamp    1781107157
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781106915;
+    return 1781107157;
 }
 
 // 提醒历史
@@ -336,6 +336,7 @@ const groupMap = {
 	"潘德拉贡": { groupNumber: "836896713" },
 	"跑团禁男吐槽群": { groupNumber: "1098988080" },
 	"蓬莱有龙": { groupNumber: "1073307651*下载\n1101230234*KP" },
+	"平庸之恶": { groupNumber: "1048257881*下载\n849554363*KP" },
 	"七海": { groupNumber: "795236450", aliases: ["航海"] },
 	"奇异医科": { groupNumber: "1033132363*下载" },
 	"祈舞醒梦": { groupNumber: "1104143844*下载\n1101711435*KP" },
