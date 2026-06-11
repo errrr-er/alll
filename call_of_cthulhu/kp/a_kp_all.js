@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781179331
+// @timestamp    1781179631
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781179331;
+    return 1781179631;
 }
 
 // 提醒历史
@@ -446,7 +446,7 @@ const groupMap = {
 	"铁誓": { groupNumber: "487934434" },
 	"铁爪": { groupNumber: "1072078962" },
 	"听枫馆": { groupNumber: "1047473677*官方\n372088420*仅辐射", aliases: ["辐射","喵影奇谋","赛博朋克RED"] },
-	"庭师所吟为何物": { groupNumber: "656434498" },
+	"庭师所吟为何物": { groupNumber: "656434498", aliases: ["庭师"] },
 	"町葬屋怪异谭": { groupNumber: "174136022" },
 	"蛙徒的祭典": { groupNumber: "655890716", aliases: ["蛙祭","挖机"] },
 	"歪月": { groupNumber: "339403801", aliases: ["诡月奇谭"] },
