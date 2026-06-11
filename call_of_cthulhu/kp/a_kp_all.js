@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781183572
+// @timestamp    1781183784
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781183572;
+    return 1781183784;
 }
 
 // 提醒历史
@@ -397,7 +397,7 @@ const groupMap = {
 	"生不逢时": { groupNumber: "829092202", aliases: ["雪中形骸"] },
 	"生离": { groupNumber: "1061116172" },
 	"圣餐": { groupNumber: "659334919" },
-	"圣诞快乐，玛丽小姐": { groupNumber: "864404671*下载\n1041629808*KP" },
+	"圣诞快乐，玛丽小姐": { groupNumber: "864404671*下载\n1041629808*KP", aliases: ["玛丽"] },
 	"圣土遗梦": { groupNumber: "146415338" },
 	"尸体电台": { groupNumber: "2665895669" },
 	"失序症": { groupNumber: "850384014" },
