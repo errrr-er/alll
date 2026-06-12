@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781272004
+// @timestamp    1781272109
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781272004;
+    return 1781272109;
 }
 
 // 提醒历史
@@ -559,6 +559,7 @@ const groupMap = {
 	"永7": { groupNumber: "1092736604" },
 	"永虹灰归的Polis": { groupNumber: "696523899" },
 	"永夜后日谈": { groupNumber: "710242752\n429107780\n795236450\n1053451040", aliases: ["永远的后日谈"] },
+	"勇者无法拯救世界": { groupNumber: "下载：https://weibo.com/6610227442/5304017647572067" },
 	"幽灵记录": { groupNumber: "1053204546*下载" },
 	"幽世常世的满天下": { groupNumber: "749173986" },
 	"幽诱,于指尖燃起": { groupNumber: "978331360" },
