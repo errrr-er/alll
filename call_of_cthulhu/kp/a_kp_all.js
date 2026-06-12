@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781272312
+// @timestamp    1781272568
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781272312;
+    return 1781272568;
 }
 
 // 提醒历史
@@ -469,6 +469,7 @@ const groupMap = {
 	"未交予的落白": { groupNumber: "1007853163" },
 	"未命名参数": { groupNumber: "994367663" },
 	"未命名的路": { groupNumber: "1051535084*下载" },
+	"未完生": { groupNumber: "下载：#腾讯频道：ny40y57197", aliases: ["晶楼的侍从","红线啊、快告诉我这是骗人的！","教室之数，与尸等同"] },
 	"文手": { groupNumber: "512451066" },
 	"文字乱码制作": { groupNumber: "https://anytexteditor.com/cn/cursed-text-generator" },
 	"问道苍生": { groupNumber: "758798519\n578441689" },
