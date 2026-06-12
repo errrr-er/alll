@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781183784
+// @timestamp    1781225385
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781183784;
+    return 1781225385;
 }
 
 // 提醒历史
@@ -115,7 +115,7 @@ const groupMap = {
 	"沧渺山": { groupNumber: "855215735", aliases: ["cms"] },
 	"查理九世": { groupNumber: "439899070" },
 	"常夜国": { groupNumber: "769437181*骑士谭+舞跃剧\n769437181*骑士谭\n199420568*舞跃剧", aliases: ["真祖红舞曲"] },
-	"晨钟旧事": { groupNumber: "655068229*下载", aliases: ["沽上潮生来"] },
+	"晨钟旧事": { groupNumber: "655068229*下载", aliases: ["沽上潮生来","大难临头"] },
 	"齿轮之塔": { groupNumber: "666452898" },
 	"抽刀": { groupNumber: "1057856638" },
 	"畜牲道": { groupNumber: "738570884" },
