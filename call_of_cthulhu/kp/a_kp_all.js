@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781272568
+// @timestamp    1781272750
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781272568;
+    return 1781272750;
 }
 
 // 提醒历史
@@ -172,7 +172,7 @@ const groupMap = {
 	"高武": { groupNumber: "877823625" },
 	"哥谭39:永恒之镜": { groupNumber: "858799831", aliases: ["Gotham39: The Mirror Eternal"] },
 	"歌味觉死": { groupNumber: "616756545", aliases: ["路易斯安那系列","畅梦人","淤泥之花与空心石"] },
-	"革命少女罗丹斯": { groupNumber: "641481529" },
+	"革命少女罗丹斯": { groupNumber: "下载：#腾讯频道：pd59993369\n641481529*KP" },
 	"格罗安萨": { groupNumber: "678247843" },
 	"隔离区": { groupNumber: "660198835" },
 	"公若渡河": { groupNumber: "1095875707*下载\n1101528355*KP" },
@@ -256,7 +256,7 @@ const groupMap = {
 	"老派要典": { groupNumber: "716289444" },
 	"老天对我不公": { groupNumber: "1053162150*下载" },
 	"乐博睿": { groupNumber: "245808089*官方" },
-	"乐园在海底": { groupNumber: "641157488" },
+	"乐园在海底": { groupNumber: "下载：#腾讯频道：pd59993369\n641157488*KP" },
 	"蕾忍宗": { groupNumber: "1037073273" },
 	"黎明之盏": { groupNumber: "835468159" },
 	"连海密录": { groupNumber: "926024691" },
