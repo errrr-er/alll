@@ -858,7 +858,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             matchedGroups.forEach(groupName => {
                 const groupInfo = groupMap[groupName];
 			    const aliasText = getAliasText(groupInfo);
-                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}`;
+                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}\n\n`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
