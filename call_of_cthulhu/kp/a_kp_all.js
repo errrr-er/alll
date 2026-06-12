@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781225385
+// @timestamp    1781225535
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781225385;
+    return 1781225535;
 }
 
 // 提醒历史
@@ -438,6 +438,7 @@ const groupMap = {
 	"天启伏诛": { groupNumber: "1075156103*下载\n1093079819*有作者" },
 	"天启劫火": { groupNumber: "1059690417" },
 	"天师": { groupNumber: "587952595*下载" },
+	"天枢高中之青春是达芬！": { groupNumber: "861967407*下载" },
 	"天下第一刀": { groupNumber: "369645861*无作者" },
 	"天衍纪年": { groupNumber: "666391763\n675869524", aliases: ["tyjn"] },
 	"天衍江湖录": { groupNumber: "463467776" },
