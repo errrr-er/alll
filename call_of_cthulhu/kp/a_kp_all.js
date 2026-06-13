@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781274047
+// @timestamp    1781373165
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781274047;
+    return 1781373165;
 }
 
 // 提醒历史
@@ -518,7 +518,7 @@ const groupMap = {
 	"星钥次元": { groupNumber: "600408617" },
 	"星陨": { groupNumber: "721754031" },
 	"猩红文档": { groupNumber: "159022627" },
-	"行行重": { groupNumber: "720893039" },
+	"行行重": { groupNumber: "720893039", aliases: ["xxc"] },
 	"幸福与心动的民谣": { groupNumber: "1036780211" },
 	"性福安心委員会": { groupNumber: "https://koufukuanshiniinkai.wixsite.com/trpg", aliases: ["性福安心委员会"] },
 	"性少数": { groupNumber: "1040151106" },
