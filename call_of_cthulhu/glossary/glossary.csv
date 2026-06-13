@@ -48,6 +48,9 @@ source,target,tgt_lng
 楓子香,枫香,zh-CN
 魔術的な効果,法术效果,zh-CN
 HO診断,分HO测试,zh-CN
+초여명,초여명（韩国的coc翻译社）,zh-CN
+복장,服装,zh-CN
+소꿉친구,发小,zh-CN
 個人的な技能,个人特长,zh-CN
 マレウス・モンストロルム,怪锤,zh-CN
 マレモン,怪锤,zh-CN
@@ -57,6 +60,8 @@ HO診断,分HO测试,zh-CN
 古のものの水晶,古老者水晶,zh-CN
 그림 동화,格林童话,zh-CN
 캔디케인,拐杖糖,zh-CN
+크리쳐 아포칼립스,怪物末日,zh-CN
+진짜 친해요,关系好,zh-CN
 ハスター,哈斯塔,zh-CN
 ター ン,回合,zh-CN
 ドリームランド,幻梦境,zh-CN
@@ -88,6 +93,7 @@ HO診断,分HO测试,zh-CN
 ギミックロール,机制骰,zh-CN
 当主,家主,zh-CN
 정령,精灵,zh-CN
+스릴러,惊悚,zh-CN
 KP向け,KP信息,zh-CN
 KP情報,KP情报,zh-CN
 キーパー向け情報,KP情报,zh-CN
@@ -133,6 +139,7 @@ _AF,魔法物品,zh-CN
 메타,Meta,zh-CN
 마법소녀 마도카☆마기카,魔法少女小圆,zh-CN
 스모어,棉花糖夹心饼干,zh-CN
+시나리오,模组,zh-CN
 内部進学⽣,内直升学生,zh-CN
 ニャル,奈亚拉托提普,zh-CN
 ニャルラトホテプ,奈亚拉托提普,zh-CN
@@ -154,11 +161,13 @@ POT,POT(毒素)※使用CON对抗，通常对抗失败时失去等同于POT的HP
 隠密,潜行,zh-CN
 隠れる,潜行,zh-CN
 쁘띠 고어,轻度血腥,zh-CN
+가까운 사람,亲近之人,zh-CN
 依代,容器,zh-CN
 幸運の消費,燃运,zh-CN
 Kruschtya Equation,若斯奇亚等式,zh-CN
 クルーシュチャ方程式,若斯奇亚等式,zh-CN
 日本酒,日本清酒,zh-CN
+인간혐오,人性黑暗面,zh-CN
 僧伽藍,寺庙群,zh-CN
 ステータス,属性,zh-CN
 こもれび,树隙光,zh-CN
@@ -184,6 +193,7 @@ Kruschtya Equation,若斯奇亚等式,zh-CN
 회피,闪避,zh-CN
 샌드박스,沙盒,zh-CN
 교류,社交,zh-CN
+세계관,世界观,zh-CN
 抽出機,提取器,zh-CN
 ティンダロスの猟犬,廷达罗斯猎犬,zh-CN
 ウムル・アト＝タウィル,塔维尔·亚特·乌姆尔,zh-CN
@@ -237,6 +247,8 @@ shoggoth,修格斯,zh-CN
 移动,移动力,zh-CN
 요정,妖精,zh-CN
 요괴,妖怪,zh-CN
+RP위주,以RP为主,zh-CN
+판옵티콘,圆形监狱,zh-CN
 ⽬星,侦查,zh-CN
 目星,侦查,zh-CN
 本編,正文,zh-CN
