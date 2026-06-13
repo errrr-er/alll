@@ -7,8 +7,8 @@
 // 2026-05-21 04:25:18
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/counlog.js
-// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/counlog.js
+// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/countlog.js
+// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/countlog.js
 // ==/UserScript==
 
 let ext = seal.ext.find('log骰点统计');
