@@ -357,25 +357,29 @@ function extractSkillName(rawText) {
 // 解析多行骰点
 // ======================
 function parseMultiDiceBlock(text) {
-
   let lines = text.split('\n');
   let results = [];
-
   for (let line of lines) {
-
-    let normal = line.match(
-      /D100=(\d+)\/(\d+)\s*(.*)/
-    );
-
-    if (!normal) continue;
-
-    results.push({
-      diceResult: normal[1],
-      skillValue: normal[2],
-      rank: normalizeRank(normal[3] || '')
-    });
+    // 普通骰
+    let normal = line.match(/D100=(\d+)\/(\d+)\s*(.*)/);
+    if (normal) {
+      results.push({
+        diceResult: normal[1],
+        skillValue: normal[2],
+        rank: normalizeRank(normal[3] || '')
+      });
+      continue;
+    }
+    // 奖惩骰：b=骰值/技能值, (实际值[D100=...,奖励/惩罚N]) 结果
+    let bonus = line.match(/[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.*)/);
+    if (bonus) {
+      results.push({
+        diceResult: bonus[3],  // 取括号里的实际采用值
+        skillValue: bonus[2],
+        rank: normalizeRank(bonus[4] || '')
+      });
+    }
   }
-
   return results;
 }
 
