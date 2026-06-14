@@ -318,22 +318,64 @@ function getAllExportText(ctx) {
   return outputs.length > 0 ? outputs : null;
 }
 
+function extractSkillName(rawText) {
+
+  let m;
+
+  // 优先取引号内容
+  m = rawText.match(/"([^"]+)"/);
+
+  if (m) {
+    let name = safeText(m[1]);
+
+    // 纯数字检定
+    if (/^\d+$/.test(name)) {
+      return `数值${name}`;
+    }
+
+    return normalizeSkill(name);
+  }
+
+  // xxx检定结果为
+  m = rawText.match(/([^\s"：:]+)\s*检定结果为/);
+
+  if (m) {
+    return normalizeSkill(m[1]);
+  }
+
+  // xxx检定
+  m = rawText.match(/([^\s"：:]+)\s*检定/);
+
+  if (m) {
+    return normalizeSkill(m[1]);
+  }
+
+  return '未知检定';
+}
+
 // ======================
 // 解析多行骰点
 // ======================
 function parseMultiDiceBlock(text) {
+
   let lines = text.split('\n');
   let results = [];
-  const linePattern = /D100=(\d+)\/(\d+)\s*(.*)/;
+
   for (let line of lines) {
-    let m = line.match(linePattern);
-    if (!m) continue;
+
+    let normal = line.match(
+      /D100=(\d+)\/(\d+)\s*(.*)/
+    );
+
+    if (!normal) continue;
+
     results.push({
-      diceResult: m[1],
-      skillValue: m[2],
-      rank: normalizeRank(m[3] || '')
+      diceResult: normal[1],
+      skillValue: normal[2],
+      rank: normalizeRank(normal[3] || '')
     });
   }
+
   return results;
 }
 
@@ -360,10 +402,13 @@ ext.onMessageSend = (ctx, msg, flag) => {
   }
 
   // 多次检定
-  if (/进行了.*?次检定/.test(rawText)) {
-    let skillName = '未知检定';
-    let skillMatch = rawText.match(/"([^"]+)"/);
-    if (skillMatch) skillName = normalizeSkill(skillMatch[1]);
+  const d100Count = (rawText.match(/D100=/g) || []).length;
+
+  if (
+    /进行了.*?次检定/.test(rawText) ||
+    d100Count > 1
+  ) {
+    let skillName = extractSkillName(rawText);
 
     let multi = parseMultiDiceBlock(rawText);
     if (multi.length === 0) return;
@@ -379,8 +424,8 @@ ext.onMessageSend = (ctx, msg, flag) => {
       /"([^"]+)"\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /([^\s]+)\s*检定结果为:\s*D100=(\d+)\/(\d+)\s*(.+)/,
       /进行"([^"]+)"\s*检定[：:]\s*D100=(\d+)\/(\d+)\s*(.+)/,
-      /"([^"]+)"\s*检定结果为:\s*[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
-      /([^\s]+)\s*检定结果为:\s*[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
+      /"([^"]+)"[^[]*?[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
+      /([^\s"：:]+)[^[]*?[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
       /D100=(\d+)\/(\d+)\s*(.+)/
     ];
 
@@ -395,7 +440,7 @@ ext.onMessageSend = (ctx, msg, flag) => {
         value = m[3];
         rank = normalizeRank(m[5] || '');
       } else if (i === 5) {
-        skill = '未知检定';
+        skill = extractSkillName(rawText);
         dice = m[1];
         value = m[2];
         rank = normalizeRank(m[3] || '');
