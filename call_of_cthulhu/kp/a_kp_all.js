@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781448708
+// @timestamp    1781448819
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781448708;
+    return 1781448819;
 }
 
 // 提醒历史
@@ -84,6 +84,7 @@ const groupMap = {
 	"哀歌弥赛亚": { groupNumber: "609355937" },
 	"暗河": { groupNumber: "1031974789" },
 	"暗金": { groupNumber: "666715873" },
+	"暗日狂飙": { groupNumber: "1105012753" },
 	"暗兽诡剧": { groupNumber: "323902997" },
 	"暗夜刀锋": { groupNumber: "854273885" },
 	"暗影狂奔": { groupNumber: "245525828" },
