@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781382569
+// @timestamp    1781448708
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781382569;
+    return 1781448708;
 }
 
 // 提醒历史
@@ -580,6 +580,7 @@ const groupMap = {
 	"月背迷踪": { groupNumber: "1037660739*下载" },
 	"月蜂": { groupNumber: "110208332" },
 	"月计": { groupNumber: "639082037\n765965290\n702203298\n#腾讯频道：pd31381795" },
+	"月山卦辞": { groupNumber: "579691782" },
 	"云黑": { groupNumber: "795251459" },
 	"云上仙": { groupNumber: "939600700*下载" },
 	"再见新世界": { groupNumber: "1004914022*下载\n909369023*KP" },
