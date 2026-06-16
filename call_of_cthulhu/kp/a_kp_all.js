@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781448819
+// @timestamp    1781632993
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781448819;
+    return 1781632993;
 }
 
 // 提醒历史
@@ -617,7 +617,7 @@ const groupMap = {
 	"撞邪": { groupNumber: "415568723" },
 	"追书人": { groupNumber: "942014926" },
 	"坠入阿弗纳斯": { groupNumber: "223713820" },
-	"斫夜": { groupNumber: "220150371*下载" },
+	"斫夜": { groupNumber: "220150371*下载", aliases: ["王龙告"] },
 	"资料库": { groupNumber: "807277128\n982405257\n1003939226\n923183444*仅日警" },
 	"最后的黄金唱片": { groupNumber: "633374415" },
 	"最后的祝福": { groupNumber: "1005831724*下载" },
