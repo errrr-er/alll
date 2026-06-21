@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1781799138
+// @timestamp    1782058619
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
@@ -19,7 +19,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1781799138;
+    return 1782058619;
 }
 
 // 提醒历史
@@ -150,7 +150,7 @@ const groupMap = {
 	"多灾多难梵达林": { groupNumber: "570879430", aliases: ["矿坑","冰塔峰","风暴君王","风骸岛"] },
 	"恶辣": { groupNumber: "620832218" },
 	"二重身的证迹": { groupNumber: "285230351" },
-	"翻译": { groupNumber: "1073856681\n1053204546\n972416799\n377896614\n1040799893\n#腾讯频道：pd59993369\n1033917987\n1043393781\n872345826\n1061035045\n220150371*韩模\n#腾讯频道：ny40y57197" },
+	"翻译": { groupNumber: "1073856681\n1053204546\n972416799\n377896614\n1040799893\n#腾讯频道：pd59993369\n1033917987\n1043393781\n872345826\n1061035045\n220150371*韩模\n#腾讯频道：ny40y57197\n1104565404" },
 	"繁星物语": { groupNumber: "1015603739", aliases: ["STARLIGHT"] },
 	"泛界旅者": { groupNumber: "375452673" },
 	"放学后团研社(机润)": { groupNumber: "1033132363" },
