@@ -13,11 +13,13 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
       - name: Install system dependencies
         run: |
           sudo apt update
@@ -38,11 +40,20 @@ jobs:
             cp -r assets/* "$dir/_assets_tmp/"
           done
 
-      - name: Convert MD to HTML
+      - name: Get changed markdown files
+        id: changes
         run: |
-          find readme_pic -name "*.md" | while read file; do
+          git diff --name-only HEAD~1 HEAD | grep '\.md$' > changed.txt || true
+          cat changed.txt
+
+      - name: Convert changed MD to HTML
+        run: |
+          while read file; do
+            [ -z "$file" ] && continue
+
             dir=$(dirname "$file")
             name=$(basename "$file" .md)
+
             pandoc "$file" \
               -f markdown \
               -t html5 \
@@ -50,29 +61,35 @@ jobs:
               --metadata title=" " \
               --css=_assets_tmp/styles/cat_readme.css \
               -o "$dir/$name.html"
-          done
 
-      - name: HTML to PNG (full page screenshot)
+          done < changed.txt
+
+      - name: HTML to PNG (only changed)
         run: |
-          find readme_pic -name "*.html" | while read file; do
+          while read file; do
+            [ -z "$file" ] && continue
+
             dir=$(dirname "$file")
-            name=$(basename "$file" .html)
+            name=$(basename "$file" .md)
+            html="$dir/$name.html"
             png="$dir/$name.png"
-            echo "Rendering $file -> $png"
+
+            echo "Rendering $html -> $png"
+
             node -e "
               const puppeteer = require('puppeteer');
               (async () => {
                 const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-gpu'] });
                 const page = await browser.newPage();
                 await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: 2 });
-                await page.goto('file://' + process.cwd() + '/$file', { waitUntil: 'networkidle0' });
+                await page.goto('file://' + process.cwd() + '/$html', { waitUntil: 'networkidle0' });
                 await page.screenshot({ path: '$png', fullPage: true });
                 await browser.close();
               })();
             "
+
             convert "$png" -fuzz 2% -trim +repage -bordercolor white -border 55x55 "$png"
-            echo "Done: $png"
-          done
+          done < changed.txt
 
       - name: Cleanup temp files
         run: |
@@ -83,13 +100,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add readme_pic/
+
           if ! git diff --cached --quiet; then
-            git commit -m "md to png (full page screenshot)"
+            git commit -m "md to png (incremental)"
             git push || (
               git pull --rebase origin main
-              git push origin HEAD:${GITHUB_REF#refs/heads/}
+              git push
             )
           else
-            echo "No changes to commit"
+            echo "No changes"
           fi
