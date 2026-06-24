@@ -217,9 +217,17 @@ function generate() {
         if (lines.length === 0) return;
         lines = lines.map(escapeSpecificTags);
         lines.forEach((line, lIndex) => {
-            if (pIndex === 0 && lIndex === 0) resultBr += line;
-            else if (lIndex === 0) resultBr += "\n" + line;
-            else resultBr += "\n<br>" + line;
+            const isListItem = /^-\s/.test(line);
+
+            if (pIndex === 0 && lIndex === 0) {
+                resultBr += line;
+            } else if (lIndex === 0) {
+                resultBr += "\n" + line;
+            } else if (isListItem) {
+                resultBr += "\n" + line;
+            } else {
+                resultBr += "\n<br>" + line;
+            }
         });
         if (pIndex < rawParagraphs.length - 1) resultBr += "\n";
         resultText += lines.join("\n");
