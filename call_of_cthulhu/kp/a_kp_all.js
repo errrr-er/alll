@@ -79,6 +79,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
+	"诛天": {groupNumber:"1090605762*下载\n1034316054*下载"},
 	"长乐未央": {groupNumber:"934054415*下载\n1029863651*KP"},
     "是白纸吗": {groupNumber:"725116701"},
 	"1920拍案惊奇": { groupNumber: "686159620" },
