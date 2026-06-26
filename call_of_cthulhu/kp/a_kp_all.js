@@ -79,6 +79,8 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
+	"长乐未央": {groupNumber:"934054415*下载\n1029863651*KP"},
+    "是白纸吗": {groupNumber:"725116701"},
 	"1920拍案惊奇": { groupNumber: "686159620" },
 	"阿斯蒙蒂斯之链coa": { groupNumber: "581885602", aliases: ["coa"] },
 	"哀歌弥赛亚": { groupNumber: "609355937" },
