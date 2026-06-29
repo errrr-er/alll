@@ -79,6 +79,10 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
+	"索斯安普顿最后的舞会": {groupNumber:"1043850915"},
+	"EDIBLE": {groupNumber:"1040546365"},
+	"正义之屎": {groupNumber:"1018334937"},
+	"奇异恩典": {groupNumber:"1040690307"},
 	"坏公司": {groupNumber:"638653277"},
     "双头蛇": {groupNumber:"941453461"},
 	"诛天": {groupNumber:"1090605762*下载\n1034316054*下载"},
