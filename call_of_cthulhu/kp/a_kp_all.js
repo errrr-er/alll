@@ -79,6 +79,8 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
+	"苦昼短": {groupNumber:"139406002*下载\n1046515083*下载\n422463860*KP"},
+    "Repeat Actor Me": {groupNumber:"1033308060","aliases":["ram"]},
 	"索斯安普顿最后的舞会": {groupNumber:"1043850915"},
 	"EDIBLE": {groupNumber:"1040546365"},
 	"正义之屎": {groupNumber:"1018334937"},
