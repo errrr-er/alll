@@ -600,7 +600,7 @@ const groupMap = {
 	"在黎明到来之前": { groupNumber: "788432874*下载" },
 	"造物者": { groupNumber: "948914482" },
 	"斩我": { groupNumber: "776965370" },
-	"斩仙槐": { groupNumber: "973867121*下载\n690343204*KP" },
+	"斩仙槐": { groupNumber: "973867121*下载\n1065706772*KP" },
 	"展会": { groupNumber: "134738234*北京RP\n748588753*上海PC\n753085340*幻想共振\n524602166*GTS&VR" },
 	"战锤40k": { groupNumber: "540375694" },
 	"战锤魂缚": { groupNumber: "945548706" },
