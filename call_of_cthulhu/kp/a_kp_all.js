@@ -79,6 +79,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
+  	"歪曲之月": {groupNumber:"339403801"},
 	"玛珈的摇篮": {groupNumber:"980800467"},
 	"罗德之妻": {groupNumber:"1059167029"},
 	"西欧列车杀人事件": {groupNumber:"1065246966"},
