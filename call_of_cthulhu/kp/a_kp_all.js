@@ -79,6 +79,7 @@ async function checkUpdateOnce(ctx, msg, userId) {
 
 // 群号映射表(action)
 const groupMap = {
+  	"致埃尔维斯": {groupNumber:"943134871*下载\n1055649275*下载\n1104377643*KP"},
   	"歪曲之月": {groupNumber:"339403801"},
 	"玛珈的摇篮": {groupNumber:"980800467"},
 	"罗德之妻": {groupNumber:"1059167029"},
@@ -385,7 +386,7 @@ const groupMap = {
 	"忍神": { groupNumber: "750542419\n866506419\n750542354" },
 	"忍者杀手": { groupNumber: "1141101336+1056029096" },
 	"日系交流": { groupNumber: "304288183" },
-	"日夜行人": { groupNumber: "1042210871*下载\n238797418*KP\n977084429*桌宠", aliases: ["ryxr","桌宠"] },
+	"日夜行人": { groupNumber: "1042210871*下载\n238797418*KP\n977084429*桌宠\n人员档案：https://h5.qzone.qq.com/ugc/share/?sharetag=ffb0142c%2D846d%2D11f1%2Dbf06%2D525400694753&loginfrom=4&jumptoqzone=1&feed_action_domain_type=1&banner_type=0&subtype=&ciphertext=&blog_photo=&g=84&res_uin=260845973&cellid=95318c0fce294f6a00a20b00&subid=&bp1=&bp2=&bp7=&appid=311&g_f=2000000103", aliases: ["ryxr","桌宠"] },
 	"如此渺小的橡果": { groupNumber: "827206593*下载\n264764228*KP" },
 	"萨里希斯之光": { groupNumber: "473373105\n930332469" },
 	"赛博朋克d20": { groupNumber: "135248365\n283334218" },
