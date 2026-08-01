@@ -21,7 +21,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1782058619;
+    return 1782058600;
 }
 
 // 提醒历史
