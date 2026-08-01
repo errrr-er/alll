@@ -3,14 +3,18 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1782058600
+// @timestamp    1785570438
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
-// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
-// @updateUrl    https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
 // @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
+
+// @updateUrl    似乎只能读第一个，剩下先放着以防万一
+
+// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
+// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
+// @updateUrl    https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
+
 // ==/UserScript==
 
 let ext = seal.ext.find('KP群汇总');
@@ -21,7 +25,7 @@ if (!ext) {
 
 // 时间戳(timestamp)
 function getCurrentTimestamp() {
-    return 1782058600;
+    return 1785570438;
 }
 
 // 提醒历史
@@ -498,7 +502,7 @@ const groupMap = {
 	"未交予的落白": { groupNumber: "1007853163" },
 	"未命名参数": { groupNumber: "994367663" },
 	"未命名的路": { groupNumber: "1051535084*下载" },
-	"未完生": { groupNumber: "#腾讯频道：ny40y57197*下载", aliases: ["晶楼的侍从","红线啊、快告诉我这是骗人的！","教室之数，与尸等同"] },
+	"未完生": { groupNumber: "#腾讯频道：ny40y57197*下载", series: ["晶楼的侍从","红线啊、快告诉我这是骗人的！","教室之数，与尸等同"] },
 	"文手": { groupNumber: "512451066" },
 	"文字乱码制作": { groupNumber: "https://anytexteditor.com/cn/cursed-text-generator" },
 	"问道苍生": { groupNumber: "758798519\n578441689" },
@@ -633,7 +637,7 @@ const groupMap = {
 	"镇魂歌": { groupNumber: "709032901" },
 	"正伪的ideal": { groupNumber: "667098598" },
 	"芝加哥之王": { groupNumber: "559366167" },
-	"只有月亮知道的黎明之歌": { groupNumber: "#腾讯频道：pd59993369*下载", aliases: ["莱拉","致、亲爱的「你」","迷明","木星","婚礼岛的誓言","孤独下降","午夜高中的婴儿","樱花屋与密之屋","恐怖村RTA","深爱","雪沫颂歌","新年快乐","幽灵之舞","污染区域净化行动","幻梦境的治愈时刻","如果是探索者、只需轻轻一按即可赢得一等奖！","乐园在海底","午夜之海","Cross Bord","21克","胆颤心惊","沉睡的月亮歌姬","佚名","荆棘之髓","怪猫馆","404:Outer Rise","404:Over Dose","与狼共舞","圣诞夜、或是毛绒绒","人魚之宴","Blood Hunt & Bio Watch","警察探索者正常开展搜查","蓝鲸列车","蓝鲸列车·驶向起点的鲸鱼","蓝鲸列车·蓝色列车","蓝鲸列车·你的21克会杀死我","SANset Flower's","革命少女罗丹斯","U.B.","FAKERs","困于23时59分59秒","在圣诞夜降下的……","双重世界","地球猫vs宇宙猫vs猫耳KPC","极彩色的魔女","伏于墨火","皇权之犬、送归神前","避雨，与一杯咖啡相伴","星体·石英的去向","PANOPTICON"] },
+	"裗浳": { groupNumber: "#腾讯频道：pd59993369*下载", series: ["只有月亮知道的黎明之歌","莱拉","致、亲爱的「你」","迷明","木星","婚礼岛的誓言","孤独下降","午夜高中的婴儿","樱花屋与密之屋","恐怖村RTA","深爱","雪沫颂歌","新年快乐","幽灵之舞","污染区域净化行动","幻梦境的治愈时刻","如果是探索者、只需轻轻一按即可赢得一等奖！","乐园在海底","午夜之海","Cross Bord","21克","胆颤心惊","沉睡的月亮歌姬","佚名","荆棘之髓","怪猫馆","404:Outer Rise","404:Over Dose","与狼共舞","圣诞夜、或是毛绒绒","人魚之宴","Blood Hunt & Bio Watch","警察探索者正常开展搜查","蓝鲸列车","蓝鲸列车·驶向起点的鲸鱼","蓝鲸列车·蓝色列车","蓝鲸列车·你的21克会杀死我","SANset Flower's","革命少女罗丹斯","U.B.","FAKERs","困于23时59分59秒","在圣诞夜降下的……","双重世界","地球猫vs宇宙猫vs猫耳KPC","极彩色的魔女","伏于墨火","皇权之犬、送归神前","避雨，与一杯咖啡相伴","星体·石英的去向","PANOPTICON","巴别谋杀案","Thousand Fold","再见乐园","Shark the Cthulhu","Sweet Nightmare"] },
 	"致让我们死去活来仍然热爱的冰上的一切": { groupNumber: "1087789609*下载\n1087899806*KP", aliases: ["滑冰"] },
 	"致我不灭的": { groupNumber: "1073548076*下载\n1077901406*KP" },
 	"掷骰演出": { groupNumber: "1090720849*下载" },
@@ -781,6 +785,11 @@ function getSimilarity(s1, s2) {
     );
 }
 
+// 合集提示（只提示存在，不暴露内容）
+function getSeriesHint(groupInfo) {
+    return (groupInfo.series && groupInfo.series.length > 0) ? `\n存在合集，可用 .kp se 查询` : '';
+}
+
 function findSimilarGroup(input) {
     input = input.toLowerCase();
     const matchedGroups = [];
@@ -818,6 +827,7 @@ const cmdKp = seal.ext.newCmdItemInfo();
 cmdKp.name = 'kp';
 cmdKp.help = `KP群查询指令
 .kp <关键词/群号>    // 查询KP群(支持花名)
+.kp se <合集关键词>  // 查询合集下的所有模组(不显示群号)
 .kp list            // 群组源文件(提供镜像)
 .kp list x			// 随机抽取x个群组(最多5)`;
 
@@ -853,6 +863,54 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 		}
     	return '';
 	}
+
+	// se命令：按合集关键词查询，只显示模组名+别名+合集列表，不显示群号
+    if (/^se$/i.test(input)) {
+        const seKeyword = cmdArgs.getArgN(2);
+
+        if (!seKeyword) {
+            seal.replyToSender(ctx, msg, '请输入要查询的合集关键词');
+            return ret;
+        }
+
+        const lowerSe = seKeyword.toLowerCase();
+        const matchedEntries = [];
+
+        for (const groupName in groupMap) {
+            const groupInfo = groupMap[groupName];
+            if (!groupInfo.series || groupInfo.series.length === 0) continue;
+
+            const candidates = [groupName, ...groupInfo.series, ...(groupInfo.aliases || [])];
+            let bestScore = 0;
+            candidates.forEach(c => {
+                if (c.toLowerCase() === lowerSe) {
+                    bestScore = 1;
+                } else {
+                    bestScore = Math.max(bestScore, getSimilarity(seKeyword, c));
+                }
+            });
+
+            if (bestScore >= 0.3) {
+                matchedEntries.push({ name: groupName, info: groupInfo, score: bestScore });
+            }
+        }
+
+        if (matchedEntries.length === 0) {
+            seal.replyToSender(ctx, msg, `未找到【${seKeyword}】，请检查关键词`);
+            return ret;
+        }
+
+        matchedEntries.sort((a, b) => b.score - a.score);
+
+        let replyText = '';
+        matchedEntries.forEach(entry => {
+            const aliasText = getAliasText(entry.info);
+            replyText += `【${entry.name}${aliasText}】合集\n${entry.info.series.join('\n')}\n\n`;
+        });
+
+        seal.replyToSender(ctx, msg, replyText.trim());
+        return ret;
+    }
 
     // list命令
 	if (/^list/i.test(input)) {
@@ -891,7 +949,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             matchedGroups.forEach(groupName => {
                 const groupInfo = groupMap[groupName];
 			    const aliasText = getAliasText(groupInfo);
-                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}\n\n`;
+                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}\n${seriesHint}\n\n`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
@@ -950,7 +1008,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 
 				chunk.forEach(group => {
         			const aliasText = getAliasText(group.info);
-					replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n`;
+					const seriesHint = getSeriesHint(group.info);
+					replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n${seriesHint}\n`;
 				});
 				seal.replyToSender(ctx, msg, replyText);
 				setTimeout(() => sendChunk(index + 1), 3000);  // x秒后发下一段
@@ -962,7 +1021,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
 } else {
         // 精确匹配输出
 		const aliasText = getAliasText(foundGroup.match.info);
-		seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}`);
+		const seriesHint = getSeriesHint(foundGroup.match.info);
+		seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}\n${seriesHint}`);
     }
 
     return ret;
