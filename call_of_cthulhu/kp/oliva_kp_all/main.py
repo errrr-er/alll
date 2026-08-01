@@ -16,7 +16,13 @@ current_version = "1.0.0"
 current_timestamp = 0
 data_loaded = False
 
-GITHUB_JSON_URL = "https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/kp_groupMap.json"
+# 链接（们）
+GITHUB_JSON_URLS = [
+    "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js",
+    "https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js",
+    "https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads",
+    "https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads",
+]
 
 PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
 OLIVOS_ROOT = os.path.dirname(os.path.dirname(PLUGIN_DIR))
@@ -127,6 +133,21 @@ def build_reverse_mapping():
 # ===============================
 # 更新功能
 # ===============================
+def fetch_remote_data(timeout=10):
+    last_error = None
+    for url in GITHUB_JSON_URLS:
+        try:
+            r = requests.get(url, timeout=timeout)
+            if r.status_code != 200:
+                last_error = f"HTTP {r.status_code} @ {url}"
+                continue
+            remote = r.json()
+            return remote, None
+        except Exception as e:
+            last_error = f"{e} @ {url}"
+            continue
+    return None, (last_error or "所有更新源均不可用")
+ 
 def update_data(remote_data):
     global groupMap, current_version, current_timestamp
     try:
@@ -139,58 +160,49 @@ def update_data(remote_data):
         return len(groupMap) - old_count  # 返回变化数量
     except:
         return None
-
+ 
 def manual_update(plugin_event):
     plugin_event.reply("正在检查更新……")
-    try:
-        r = requests.get(GITHUB_JSON_URL, timeout=10)
-        if r.status_code != 200:
-            plugin_event.reply(f"更新失败，HTTP {r.status_code}")
-            return
-        remote = r.json()
-        if (remote.get("version") != current_version or
-            remote.get("timestamp") != current_timestamp):
-            change = update_data(remote)
-            if change is not None:
-                plugin_event.reply(
-                    f"数据更新成功\n"
-                    f"当前群组数量: {len(groupMap)}（变化 {change}）\n"
-                    f"版本: {current_version}"
-                )
-            else:
-                plugin_event.reply("更新失败")
+    remote, err = fetch_remote_data()
+    if remote is None:
+        plugin_event.reply(f"KP群插件版本检测失败，请进2150284119反馈 {err}")
+        return
+    if (remote.get("version") != current_version or
+        remote.get("timestamp") != current_timestamp):
+        change = update_data(remote)
+        if change is not None:
+            plugin_event.reply(
+                f"数据更新成功\n"
+                f"当前群组数量: {len(groupMap)}（变化 {change}）\n"
+                f"版本: {current_version}"
+            )
         else:
-            plugin_event.reply("当前已是最新版本")
-    except Exception as e:
-        plugin_event.reply(f"更新失败：{e}")
-
+            plugin_event.reply("更新失败")
+    else:
+        plugin_event.reply("当前已是最新版本")
+ 
 def auto_update_on_command(plugin_event=None):
     global last_auto_update_time
     now = time.time()
     if now - last_auto_update_time < auto_update_cooldown:
         return  # 冷却中
     last_auto_update_time = now
-
-    try:
-        r = requests.get(GITHUB_JSON_URL, timeout=10)
-        if r.status_code != 200:
-            if plugin_event:
-                plugin_event.reply("KP群插件版本检测失败，请进2150284119反馈")
-            return
-        remote = r.json()
-        remote_version = remote.get("version", "0.0.0")
-        remote_timestamp = remote.get("timestamp", 0)
-        if remote_version != current_version or remote_timestamp != current_timestamp:
-            change = update_data(remote)
-            if change is not None and plugin_event:
-                plugin_event.reply(
-                    f"数据更新成功\n"
-                    f"当前群组数量: {len(groupMap)}（变化 {change}）\n"
-                    f"版本: {current_version}"
-                )
-    except:
+ 
+    remote, err = fetch_remote_data()
+    if remote is None:
         if plugin_event:
             plugin_event.reply("KP群插件版本检测失败，请进2150284119反馈")
+        return
+    remote_version = remote.get("version", "0.0.0")
+    remote_timestamp = remote.get("timestamp", 0)
+    if remote_version != current_version or remote_timestamp != current_timestamp:
+        change = update_data(remote)
+        if change is not None and plugin_event:
+            plugin_event.reply(
+                f"数据更新成功\n"
+                f"当前群组数量: {len(groupMap)}（变化 {change}）\n"
+                f"版本: {current_version}"
+            )
 
 # ===============================
 # 公共回复消息
@@ -202,6 +214,12 @@ def alias_text(info) -> str:
     aliases = info.get("aliases", [])
     if aliases:
         return f"({'|'.join(aliases)})"
+    return ""
+
+def series_hint(info) -> str:
+    series = info.get("series", [])
+    if series:
+        return "\n存在合集，可用 .kp se 查询"
     return ""
 
 # ===============================
@@ -221,7 +239,7 @@ def send_chunks(chunks, index, plugin_event, input_text):
         info = group["info"]
         score = group["score"]
         atxt = alias_text(info)
-        reply += f"\n【{name}{atxt}】{round(score*100)}%\n{info.get('groupNumber','')}\n"
+        reply += f"\n【{name}{atxt}】{round(score*100)}%\n{info.get('groupNumber','')}\n{shint}\n"
 
     plugin_event.reply(reply)
 
@@ -241,7 +259,7 @@ def search_group(plugin_event, search_input):
             for name in matches:
                 info = groupMap.get(name, {})
                 atxt = alias_text(info)
-                reply += f"反向【{name}{atxt}】\n{info.get('groupNumber','')}\n"
+                reply += f"反向【{name}{atxt}】\n{info.get('groupNumber','')}\n{shint}\n\n"
             plugin_event.reply(reply.strip())
         else:
             plugin_event.reply(not_found_msg(search_input))
@@ -253,12 +271,12 @@ def search_group(plugin_event, search_input):
             continue
         if name.lower() == lower:
             atxt = alias_text(info)
-            plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}")
+            plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}\n{shint}")
             return
         for a in info.get("aliases", []):
             if a.lower() == lower:
                 atxt = alias_text(info)
-                plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}")
+                plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}\n{shint}")
                 return
 
     # 3. 模糊匹配（相似度 >= 0.3）
@@ -283,6 +301,47 @@ def search_group(plugin_event, search_input):
         send_chunks(chunks, 0, plugin_event, search_input)
     else:
         plugin_event.reply(not_found_msg(search_input))
+
+def search_series(plugin_event, se_keyword):
+    se_keyword = se_keyword.strip()
+    if not se_keyword:
+        plugin_event.reply("请输入要查询的合集关键词")
+        return
+ 
+    lower_se = se_keyword.lower()
+    matched_entries = []
+ 
+    for name, info in groupMap.items():
+        series = info.get("series", [])
+        if not series:
+            continue
+ 
+        candidates = [name] + series + info.get("aliases", [])
+        best_score = 0.0
+        for c in candidates:
+            if c.lower() == lower_se:
+                best_score = 1.0
+                break
+            score = get_similarity(se_keyword, c)
+            if score > best_score:
+                best_score = score
+ 
+        if best_score >= 0.3:
+            matched_entries.append({"name": name, "info": info, "score": best_score})
+ 
+    if not matched_entries:
+        plugin_event.reply(f"未找到【{se_keyword}】，请检查关键词")
+        return
+ 
+    matched_entries.sort(key=lambda x: x["score"], reverse=True)
+ 
+    reply = ""
+    for entry in matched_entries:
+        atxt = alias_text(entry["info"])
+        series_list = "\n".join(entry["info"].get("series", []))
+        reply += f"【{entry['name']}{atxt}】合集\n{series_list}\n\n"
+ 
+    plugin_event.reply(reply.strip())
 
 # ===============================
 # 指令处理
@@ -314,9 +373,17 @@ def process_kp_command(plugin_event):
         plugin_event.reply(
             "KP群查询指令\n"
             ".kp <关键词/群号>    // 查询KP群(支持花名)\n"
+            ".kp se <合集关键词>  // 查询合集下的所有模组(不显示群号)\n"
             ".kp list            // 群组源文件(提供镜像)\n"
             ".kp list x			// 随机抽取x个群组(最多5)"
         )
+        return
+
+    # se命令：按合集关键词查询
+    se_match = re.match(r'^se(?:\s+(.*))?$', remaining, re.IGNORECASE)
+    if se_match:
+        se_keyword = se_match.group(1) or ""
+        search_series(plugin_event, se_keyword)
         return
 
     # 特殊命令 list
@@ -327,11 +394,11 @@ def process_kp_command(plugin_event):
             count = max(1, min(count, 5))
             valid_keys = [name for name in groupMap if not name.startswith("#")]
             actual_count = min(count, len(valid_keys))
-
+ 
             if actual_count == 0:
                 plugin_event.reply("暂无有效数据，请进2150284119反馈")
                 return
-
+ 
             chosen = random.sample(valid_keys, actual_count)
             reply = f"随机{actual_count}"
             for name in chosen:
@@ -344,15 +411,15 @@ def process_kp_command(plugin_event):
                 "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/issues_base/database.json\n\n如果使用不了请打镜像(选其一)\n将以下内容添加在开头(不是替换！)\n\nhttps://hk.gh-proxy.org/\nhttps://gh-proxy.org/\nhttps://edgeone.gh-proxy.org/"
             )
         return
-
+ 
     # 手动更新命令
     if lower_remaining == "update":
         manual_update(plugin_event)
         return
-
+ 
     # 其余全部作为搜索关键词
     search_group(plugin_event, remaining)
-
+ 
 # ===============================
 # OlivOS 事件绑定
 # ===============================
@@ -360,20 +427,20 @@ class Event(object):
     def init(plugin_event, Proc):
         ensure_data_directory()
         load_local_data()
-
+ 
     def private_message(plugin_event, Proc):
         process_kp_command(plugin_event)
-
+ 
     def group_message(plugin_event, Proc):
         process_kp_command(plugin_event)
-
+ 
     def save(plugin_event, Proc):
         pass
-
+ 
     def menu(plugin_event, Proc):
         if hasattr(plugin_event.data, "event") and plugin_event.data.event == "KPGroupSearch_Menu_Help":
             plugin_event.reply("使用 .kp help 查看帮助")
-
+ 
 # 初始化
 ensure_data_directory()
 load_local_data()
