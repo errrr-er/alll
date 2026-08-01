@@ -9,6 +9,8 @@
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
+// @updateUrl    https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
+// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
 // ==/UserScript==
 
 let ext = seal.ext.find('KP群汇总');
