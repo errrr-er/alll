@@ -25,55 +25,65 @@ function getCurrentTimestamp() {
 // 提醒历史
 const userLastNotify = new Map();
 
+// 链接（们）
+const GITHUB_VERSION_URLS = [
+	'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js',
+	'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js',
+	'https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads',
+	'https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads'
+];
+
 // 获取GitHub最新版本编号
 async function getGitHubVersion() {
-    try {
-		// 镜像
-        const rawUrl = 'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js';
-        const response = await fetch(rawUrl);
-        
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        
-        const content = await response.text();
-        
-        // 解析时间戳
-        const timestampMatch = content.match(/@timestamp\s+(\d+)/);
-        if (timestampMatch) {
+    let lastError = null;
+
+    for (const url of GITHUB_VERSION_URLS) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                lastError = new Error(`HTTP ${response.status} @ ${url}`);
+                continue;
+            }
+
+            const content = await response.text();
+            const timestampMatch = content.match(/@timestamp\s+(\d+)/);
+            if (!timestampMatch) {
+                lastError = new Error(`未匹配到@timestamp ${url}`);
+                continue;
+            }
+
             const timestamp = parseInt(timestampMatch[1]);
             const date = new Date(timestamp * 1000);
             return {
-                timestamp: timestamp,
-                date: date,
-                formattedDate: date.toLocaleString('zh-CN')
+                timestamp,
+                date,
+                formattedDate: date.toLocaleString('zh-CN'),
+                sourceUrl: url
             };
+        } catch (error) {
+            lastError = error;
+            continue;
         }
-        
-        return null;
-    } catch (error) {
-		seal.replyToSender(ctx, msg, '获取GitHub版本出错:', error);
-        throw error;
     }
+
+    throw lastError || new Error('所有更新源均不可用');
 }
 
-// 检查更新
 async function checkUpdateOnce(ctx, msg, userId) {
     try {
         const githubVersion = await getGitHubVersion();
         if (!githubVersion) return;
-        
+
         const currentTimestamp = getCurrentTimestamp();
-        
         if (githubVersion.timestamp > currentTimestamp) {
             setTimeout(() => {
-                seal.replyToSender(ctx, msg, 
+                seal.replyToSender(ctx, msg,
                     `发现<KP群汇总>插件有新版本！\n更新检查冷却开始~请及时更新\n最后更新：${githubVersion.formattedDate}`
                 );
             }, 1000);
         }
     } catch (error) {
-        // 静默处理
+        seal.replyToSender(ctx, msg, `KP群插件版本检测失败，请进2150284119反馈 ${error.message}`);
     }
 }
 
