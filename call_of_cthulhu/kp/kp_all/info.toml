@@ -1,0 +1,36 @@
+format_version = "1.0.0"
+
+[package]
+id = "alll/kp_all"
+name = "KP群汇总"
+version = "0.0.0"
+authors = ["3987681449"]
+license = "Apache-2"
+description = "(.kp)有问题可进群2150284119联系"
+keywords = ["sealpack"]
+
+[package.seal]
+min_version = "1.6.0"
+
+[dependencies]
+
+[permissions]
+network = false
+file_read = []
+file_write = []
+
+[contents]
+scripts = ["scripts/a_kp_all.js"]
+decks = []
+reply = []
+helpdoc = []
+templates = []
+
+[store]
+readme = "README.md"
+icon = ""
+banner = ""
+screenshots = []
+category = "tool"
+
+[config]
