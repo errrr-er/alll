@@ -18,10 +18,8 @@ data_loaded = False
 
 # 链接（们）
 GITHUB_JSON_URLS = [
-    "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js",
-    "https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js",
-    "https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads",
-    "https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads",
+    "https://gitlab.com/luj13014/alll/-/raw/main/dice/oliva/kp_all/kp_groupMap.json?ref_type=heads",
+    "https://jihulab.com/luj13014/alll/-/raw/main/dice/oliva/kp_all/kp_groupMap.json?ref_type=heads",
 ]
 
 PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))

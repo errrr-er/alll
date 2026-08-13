@@ -1,0 +1,36 @@
+format_version = "1.0.0"
+
+[package]
+id = "alll/countlog"
+name = "log骰点统计"
+version = "0.0.1"
+authors = ["3987681449"]
+license = "Apache-2"
+description = "(.countlog)有问题可进群2150284119联系"
+keywords = ["sealpack"]
+
+[package.seal]
+min_version = "1.6.0"
+
+[dependencies]
+
+[permissions]
+network = false
+file_read = []
+file_write = []
+
+[contents]
+scripts = ["scripts/countlog.js"]
+decks = []
+reply = []
+helpdoc = []
+templates = []
+
+[store]
+readme = "README.md"
+icon = ""
+banner = ""
+screenshots = []
+category = "tool"
+
+[config]
