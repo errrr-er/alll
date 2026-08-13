@@ -7,14 +7,7 @@
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
-
-// @updateUrl    似乎只能读第一个，剩下先放着以防万一
-
-// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
-// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js
-// @updateUrl    https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads
-
+// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads
 // ==/UserScript==
 
 let ext = seal.ext.find('KP群汇总');
@@ -33,10 +26,8 @@ const userLastNotify = new Map();
 
 // 链接（们）
 const GITHUB_VERSION_URLS = [
-	'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js',
-	'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/call_of_cthulhu/kp/a_kp_all.js',
-	'https://gitlab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads',
-	'https://jihulab.com/luj13014/alll/-/raw/main/kp/a_kp_all.js?ref_type=heads'
+	'https://gitlab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads',
+	'https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads'
 ];
 
 // 获取GitHub最新版本编号

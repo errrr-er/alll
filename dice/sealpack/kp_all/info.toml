@@ -3,7 +3,7 @@ format_version = "1.0.0"
 [package]
 id = "alll/kp_all"
 name = "KP群汇总"
-version = "0.0.0"
+version = "0.0.1"
 authors = ["3987681449"]
 license = "Apache-2"
 description = "(.kp)有问题可进群2150284119联系"
