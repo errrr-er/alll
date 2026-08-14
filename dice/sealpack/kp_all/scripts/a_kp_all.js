@@ -3,10 +3,9 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1785570438
-// 2025-05-11 16:49:17
+// @timestamp    2025-05-11 16:49:17
 // @license      Apache-2
-// @homepageURL  https://github.com/errrr-er/alll/tree/main
+// @homepageURL  https://jihulab.com/luj13014/alll
 // @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads
 // ==/UserScript==
 
@@ -16,76 +15,10 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
-// 时间戳(timestamp)
-function getCurrentTimestamp() {
-    return 1785570438;
-}
-
-// 提醒历史
-const userLastNotify = new Map();
-
-// 链接（们）
-const GITHUB_VERSION_URLS = [
-	'https://gitlab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads',
-	'https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads'
-];
-
-// 获取GitHub最新版本编号
-async function getGitHubVersion() {
-    let lastError = null;
-
-    for (const url of GITHUB_VERSION_URLS) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                lastError = new Error(`HTTP ${response.status} @ ${url}`);
-                continue;
-            }
-
-            const content = await response.text();
-            const timestampMatch = content.match(/@timestamp\s+(\d+)/);
-            if (!timestampMatch) {
-                lastError = new Error(`未匹配到@timestamp ${url}`);
-                continue;
-            }
-
-            const timestamp = parseInt(timestampMatch[1]);
-            const date = new Date(timestamp * 1000);
-            return {
-                timestamp,
-                date,
-                formattedDate: date.toLocaleString('zh-CN'),
-                sourceUrl: url
-            };
-        } catch (error) {
-            lastError = error;
-            continue;
-        }
-    }
-
-    throw lastError || new Error('所有更新源均不可用');
-}
-
-async function checkUpdateOnce(ctx, msg, userId) {
-    try {
-        const githubVersion = await getGitHubVersion();
-        if (!githubVersion) return;
-
-        const currentTimestamp = getCurrentTimestamp();
-        if (githubVersion.timestamp > currentTimestamp) {
-            setTimeout(() => {
-                seal.replyToSender(ctx, msg,
-                    `发现<KP群汇总>插件有新版本！\n更新检查冷却开始~请及时更新\n最后更新：${githubVersion.formattedDate}`
-                );
-            }, 1000);
-        }
-    } catch (error) {
-        seal.replyToSender(ctx, msg, `KP群插件版本检测失败，请进2150284119反馈 ${error.message}`);
-    }
-}
-
 // 群号映射表(action)
 const groupMap = {
+  	"漂泊之徒": {groupNumber:"1097331960"},
+	"荣光不灭": {groupNumber:"636253864*下载"},
   	"致埃尔维斯": {groupNumber:"943134871*下载\n1055649275*下载\n1104377643*KP"},
   	"歪曲之月": {groupNumber:"339403801"},
 	"玛珈的摇篮": {groupNumber:"980800467"},
@@ -250,7 +183,7 @@ const groupMap = {
 	"将潮水遗忘之物也一并收下吧": { groupNumber: "904394289*下载" },
 	"将钟表拨回茶杯摔破之前": { groupNumber: "651922911*下载" },
 	"降水志异": { groupNumber: "1046959108" },
-	"角色桌": { groupNumber: "1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n862922419*崩铁\n223628950*第五\n1079593722*鬼灭\n\n全职高手\n517535590\n751921932\n#腾讯频道：6btum1huf1\n\n边狱巴士\n302014132\n1049986341\n\n不清楚\n471191700\n363017687", aliases: ["语擦"] },
+	"角色桌": { groupNumber: "1078119008*SEGA\n1062894359*彩虹社\n892348859*音乐剧\n1029979195*1999\n862922419*崩铁\n223628950*第五\n1079593722*鬼灭\n\n全职高手\n517535590\n751921932\n#腾讯频道：6btum1huf1\n\n边狱巴士\n302014132\n1049986341\n\n不清楚\n471191700\n363017687", aliases: ["语擦"] },
 	"教师A的终焉": { groupNumber: "966092780*下载", aliases: ["7-Day Cricle","七日之轮"] },
 	"今古空名": { groupNumber: "962147366" },
 	"今日晴": { groupNumber: "571731435" },
@@ -825,17 +758,7 @@ cmdKp.help = `KP群查询指令
 cmdKp.solve = (ctx, msg, cmdArgs) => {
     let ret = seal.ext.newCmdExecuteResult(true);
     const input = cmdArgs.getArgN(1);
-    
-    // 24H提醒检查更新
-    const userId = msg.sender.userId;
-    const now = Date.now();
-    const lastNotify = userLastNotify.get(userId) || 0;
-    
-    if (now - lastNotify > 24 * 60 * 60 * 1000) {
-        userLastNotify.set(userId, now);
-        checkUpdateOnce(ctx, msg, userId).catch(console.error);
-    }
-    
+
     // 命令help
     if (input === 'help' || input === '') {
         ret.showHelp = true;
@@ -940,7 +863,7 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             matchedGroups.forEach(groupName => {
                 const groupInfo = groupMap[groupName];
 			    const aliasText = getAliasText(groupInfo);
-                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}\n${seriesHint}\n\n`;
+                replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}${getSeriesHint(groupInfo)}\n\n`;
             });
             seal.replyToSender(ctx, msg, replyText);
         } else {
