@@ -3,11 +3,10 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.ptplan)有问题可进群2150284119联系
-// @timestamp    1786712018
-// 2026-05-30 15:20:42
+// @timestamp    2026-05-30 15:20:42
 // @license      Apache-2
-// @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    
+// @homepageURL  https://jihulab.com/luj13014/alll
+// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/pt_plan/scripts/ptplan.js?ref_type=heads
 // ==/UserScript==
 
 let ext = seal.ext.find('跑团时间规划');
@@ -15,13 +14,6 @@ if (!ext) {
   ext = seal.ext.new('跑团时间规划', 'er', '1.0.0');
   seal.ext.register(ext);
 }
-
-function getCurrentTimestamp() {
-  return 1786712018;
-}
-
-const userLastNotify = new Map();
-const clearRequests = new Map();
 
 const WEEK_NAMES = [
   "周日",
@@ -33,64 +25,10 @@ const WEEK_NAMES = [
   "周六"
 ];
 
-// 更新检查
-async function getGitHubVersion() {
-  try {
-    const rawUrl =
-      'https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/pt_plan/ptplan.js';
-
-    const response = await fetch(rawUrl);
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const content = await response.text();
-
-    const timestampMatch = content.match(/@timestamp\s+(\d+)/);
-
-    if (!timestampMatch) {
-      return null;
-    }
-
-    const timestamp = parseInt(timestampMatch[1], 10);
-    const date = new Date(timestamp * 1000);
-
-    return {
-      timestamp,
-      date,
-      formattedDate: date.toLocaleString('zh-CN')
-    };
-  } catch (error) {
-    return null;
-  }
-}
-
-async function checkUpdateOnce(ctx, msg, userId) {
-  try {
-    const remote = await getGitHubVersion();
-
-    if (!remote) {
-      return;
-    }
-
-    const current = getCurrentTimestamp();
-
-    if (remote.timestamp > current) {
-      setTimeout(() => {
-        seal.replyToSender(
-          ctx,
-          msg,
-          `发现<跑团时间规划>插件有新版本！\n最后更新：${remote.formattedDate}\n请及时更新`
-        );
-      }, 1000);
-    }
-  } catch (e) {}
-}
-
 // 数据存储
 function getData() {
-  let raw = ext.storageGet("ptplan_data");
+  let raw =
+    ext.storageGet("ptplan_data");
 
   if (!raw) {
     return {
@@ -99,7 +37,8 @@ function getData() {
   }
 
   try {
-    const data = JSON.parse(raw);
+    const data =
+      JSON.parse(raw);
 
     if (!data.groups) {
       data.groups = {};
@@ -126,14 +65,18 @@ function parseDate(input, nowDate) {
     nowDate = new Date();
   }
 
-  const parts = input.split('-');
+  const parts =
+    input.split('-');
 
   if (parts.length !== 2) {
     return null;
   }
 
-  const month = parseInt(parts[0], 10);
-  const day = parseInt(parts[1], 10);
+  const month =
+    parseInt(parts[0], 10);
+
+  const day =
+    parseInt(parts[1], 10);
 
   if (
     isNaN(month) ||
@@ -146,11 +89,17 @@ function parseDate(input, nowDate) {
     return null;
   }
 
-  const year = nowDate.getFullYear();
+  const year =
+    nowDate.getFullYear();
 
-  let candidate = new Date(
-    Date.UTC(year, month - 1, day)
-  );
+  let candidate =
+    new Date(
+      Date.UTC(
+        year,
+        month - 1,
+        day
+      )
+    );
 
   // 检查日期本身是否合法
   if (
@@ -161,48 +110,192 @@ function parseDate(input, nowDate) {
     return null;
   }
 
-  const todayUTC = new Date(
-    Date.UTC(
-      nowDate.getFullYear(),
-      nowDate.getMonth(),
-      nowDate.getDate()
-    )
-  );
+  const todayUTC =
+    new Date(
+      Date.UTC(
+        nowDate.getFullYear(),
+        nowDate.getMonth(),
+        nowDate.getDate()
+      )
+    );
 
   if (candidate < todayUTC) {
-    candidate = new Date(
-      Date.UTC(year + 1, month - 1, day)
+    candidate =
+      new Date(
+        Date.UTC(
+          year + 1,
+          month - 1,
+          day
+        )
+      );
+  }
+
+  return candidate
+    .toISOString()
+    .slice(0, 10);
+}
+
+// 判断是否为单个日期，例如 6-1
+function isDateToken(input) {
+  return /^\d{1,2}-\d{1,2}$/.test(input);
+}
+
+// 判断是否为日期范围，例如 6-1~6-7
+function isDateRangeToken(input) {
+  return /^\d{1,2}-\d{1,2}[~～]\d{1,2}-\d{1,2}$/.test(input);
+}
+
+// 解析日期范围
+function parseDateRange(input, nowDate) {
+  if (!nowDate) {
+    nowDate = new Date();
+  }
+
+  input =
+    input.replace('～', '~');
+
+  const parts =
+    input.split('~');
+
+  if (parts.length !== 2) {
+    return null;
+  }
+
+  const start =
+    parseDate(parts[0], nowDate);
+
+  const end =
+    parseDate(parts[1], nowDate);
+
+  if (!start || !end) {
+    return null;
+  }
+
+  const startDate =
+    new Date(
+      start + 'T00:00:00Z'
+    );
+
+  const endDate =
+    new Date(
+      end + 'T00:00:00Z'
+    );
+
+  if (startDate > endDate) {
+    return null;
+  }
+
+  return {
+    start,
+    end
+  };
+}
+
+// 展开两个日期之间的所有日期
+function eachDateStringBetween(
+  startStr,
+  endStr
+) {
+  const result = [];
+
+  const current =
+    new Date(
+      startStr + 'T00:00:00Z'
+    );
+
+  const end =
+    new Date(
+      endStr + 'T00:00:00Z'
+    );
+
+  while (current <= end) {
+    result.push(
+      current
+        .toISOString()
+        .slice(0, 10)
+    );
+
+    current.setUTCDate(
+      current.getUTCDate() + 1
     );
   }
 
-  return candidate.toISOString().slice(0, 10);
+  return result;
+}
+
+// 解析一个日期参数，并展开成日期列表
+function parseDateToken(
+  input,
+  nowDate
+) {
+  if (isDateToken(input)) {
+    const date =
+      parseDate(input, nowDate);
+
+    if (!date) {
+      return null;
+    }
+
+    return [date];
+  }
+
+  if (isDateRangeToken(input)) {
+    const range =
+      parseDateRange(
+        input,
+        nowDate
+      );
+
+    if (!range) {
+      return null;
+    }
+
+    return eachDateStringBetween(
+      range.start,
+      range.end
+    );
+  }
+
+  return null;
 }
 
 function getWeekday(dateStr) {
-  const parts = dateStr.split('-').map(Number);
+  const parts =
+    dateStr
+      .split('-')
+      .map(Number);
 
-  const date = new Date(
-    Date.UTC(
-      parts[0],
-      parts[1] - 1,
-      parts[2]
-    )
-  );
+  const date =
+    new Date(
+      Date.UTC(
+        parts[0],
+        parts[1] - 1,
+        parts[2]
+      )
+    );
 
   return date.getUTCDay();
 }
 
 function formatDate(dateStr) {
-  const wd = getWeekday(dateStr);
+  const wd =
+    getWeekday(dateStr);
 
   return `${dateStr.slice(5)} (${WEEK_NAMES[wd]})`;
 }
 
-function getMonthRange(baseDate, offsetMonths = 0) {
-  const now = baseDate || new Date();
+function getMonthRange(
+  baseDate,
+  offsetMonths = 0
+) {
+  const now =
+    baseDate || new Date();
 
-  let year = now.getFullYear();
-  let month = now.getMonth() + offsetMonths;
+  let year =
+    now.getFullYear();
+
+  let month =
+    now.getMonth() + offsetMonths;
 
   while (month < 0) {
     month += 12;
@@ -214,13 +307,23 @@ function getMonthRange(baseDate, offsetMonths = 0) {
     year++;
   }
 
-  const start = new Date(
-    Date.UTC(year, month, 1)
-  );
+  const start =
+    new Date(
+      Date.UTC(
+        year,
+        month,
+        1
+      )
+    );
 
-  const end = new Date(
-    Date.UTC(year, month + 1, 0)
-  );
+  const end =
+    new Date(
+      Date.UTC(
+        year,
+        month + 1,
+        0
+      )
+    );
 
   return {
     start,
@@ -231,30 +334,45 @@ function getMonthRange(baseDate, offsetMonths = 0) {
 }
 
 function getCurrentWeekRange(baseDate) {
-  const now = baseDate || new Date();
+  const now =
+    baseDate || new Date();
 
-  const year = now.getFullYear();
-  const month = now.getMonth();
-  const day = now.getDate();
+  const year =
+    now.getFullYear();
 
-  const today = new Date(
-    Date.UTC(year, month, day)
-  );
+  const month =
+    now.getMonth();
 
-  const weekDay = today.getUTCDay();
+  const day =
+    now.getDate();
+
+  const today =
+    new Date(
+      Date.UTC(
+        year,
+        month,
+        day
+      )
+    );
+
+  const weekDay =
+    today.getUTCDay();
 
   const deltaToMonday =
     weekDay === 0
       ? -6
       : 1 - weekDay;
 
-  const monday = new Date(today);
+  const monday =
+    new Date(today);
 
   monday.setUTCDate(
-    today.getUTCDate() + deltaToMonday
+    today.getUTCDate() +
+    deltaToMonday
   );
 
-  const sunday = new Date(monday);
+  const sunday =
+    new Date(monday);
 
   sunday.setUTCDate(
     monday.getUTCDate() + 6
@@ -266,14 +384,20 @@ function getCurrentWeekRange(baseDate) {
   };
 }
 
-function eachDateBetween(start, end) {
+function eachDateBetween(
+  start,
+  end
+) {
   const result = [];
 
-  const current = new Date(start);
+  const current =
+    new Date(start);
 
   while (current <= end) {
     result.push(
-      current.toISOString().slice(0, 10)
+      current
+        .toISOString()
+        .slice(0, 10)
     );
 
     current.setUTCDate(
@@ -284,40 +408,55 @@ function eachDateBetween(start, end) {
   return result;
 }
 
-function addDays(dateStr, days) {
-  const parts = dateStr.split('-').map(Number);
+function addDays(
+  dateStr,
+  days
+) {
+  const parts =
+    dateStr
+      .split('-')
+      .map(Number);
 
-  const date = new Date(
-    Date.UTC(
-      parts[0],
-      parts[1] - 1,
-      parts[2]
-    )
-  );
+  const date =
+    new Date(
+      Date.UTC(
+        parts[0],
+        parts[1] - 1,
+        parts[2]
+      )
+    );
 
   date.setUTCDate(
     date.getUTCDate() + days
   );
 
-  return date.toISOString().slice(0, 10);
+  return date
+    .toISOString()
+    .slice(0, 10);
 }
-
 
 // 时间处理
 function parseTime(input) {
-  const match = input.match(
-    /^(\d{1,2}):(\d{2})-(\d{1,2}):(\d{2})$/
-  );
+  const match =
+    input.match(
+      /^(\d{1,2}):(\d{2})-(\d{1,2}):(\d{2})$/
+    );
 
   if (!match) {
     return null;
   }
 
-  const startHour = parseInt(match[1], 10);
-  const startMinute = parseInt(match[2], 10);
+  const startHour =
+    parseInt(match[1], 10);
 
-  const endHour = parseInt(match[3], 10);
-  const endMinute = parseInt(match[4], 10);
+  const startMinute =
+    parseInt(match[2], 10);
+
+  const endHour =
+    parseInt(match[3], 10);
+
+  const endMinute =
+    parseInt(match[4], 10);
 
   if (
     startHour < 0 ||
@@ -332,8 +471,13 @@ function parseTime(input) {
     return null;
   }
 
-  const start = startHour * 60 + startMinute;
-  const end = endHour * 60 + endMinute;
+  const start =
+    startHour * 60 +
+    startMinute;
+
+  const end =
+    endHour * 60 +
+    endMinute;
 
   if (start === end) {
     return null;
@@ -350,8 +494,11 @@ function formatMinute(minute) {
     return "24:00";
   }
 
-  const hour = Math.floor(minute / 60);
-  const min = minute % 60;
+  const hour =
+    Math.floor(minute / 60);
+
+  const min =
+    minute % 60;
 
   return (
     String(hour).padStart(2, '0') +
@@ -360,13 +507,17 @@ function formatMinute(minute) {
   );
 }
 
-function formatRange(start, end) {
+function formatRange(
+  start,
+  end
+) {
   return `${formatMinute(start)}-${formatMinute(end)}`;
 }
 
-
 // 时间段标准化
-function normalizeDateRanges(dateValue) {
+function normalizeDateRanges(
+  dateValue
+) {
   if (dateValue === true) {
     return [
       {
@@ -402,14 +553,14 @@ function normalizeDateRanges(dateValue) {
       }
     }
 
-    // 兼容 ["19:00", "22:00"] 格式
     else if (
       Array.isArray(item) &&
       item.length === 2
     ) {
-      const start = parseTime(
-        `${item[0]}-${item[1]}`
-      );
+      const start =
+        parseTime(
+          `${item[0]}-${item[1]}`
+        );
 
       if (start) {
         if (start.start < start.end) {
@@ -427,9 +578,11 @@ function mergeRanges(ranges) {
     return [];
   }
 
-  const sorted = [...ranges].sort(
-    (a, b) => a.start - b.start
-  );
+  const sorted =
+    [...ranges].sort(
+      (a, b) =>
+        a.start - b.start
+    );
 
   const result = [];
 
@@ -447,10 +600,11 @@ function mergeRanges(ranges) {
       result[result.length - 1];
 
     if (range.start <= last.end) {
-      last.end = Math.max(
-        last.end,
-        range.end
-      );
+      last.end =
+        Math.max(
+          last.end,
+          range.end
+        );
     } else {
       result.push({
         start: range.start,
@@ -462,10 +616,15 @@ function mergeRanges(ranges) {
   return result;
 }
 
-
 // 跨午夜处理
-function splitTimeRange(dateStr, timeRange) {
-  if (timeRange.start < timeRange.end) {
+function splitTimeRange(
+  dateStr,
+  timeRange
+) {
+  if (
+    timeRange.start <
+    timeRange.end
+  ) {
     return [
       {
         date: dateStr,
@@ -482,16 +641,21 @@ function splitTimeRange(dateStr, timeRange) {
       end: 1440
     },
     {
-      date: addDays(dateStr, 1),
+      date: addDays(
+        dateStr,
+        1
+      ),
       start: 0,
       end: timeRange.end
     }
   ];
 }
 
-
 // 获取用户日期数据
-function getUserDates(group, userId) {
+function getUserDates(
+  group,
+  userId
+) {
   if (
     !group ||
     !group.users ||
@@ -500,93 +664,142 @@ function getUserDates(group, userId) {
     return {};
   }
 
-  return group.users[userId].dates || {};
+  return (
+    group.users[userId].dates ||
+    {}
+  );
 }
 
-function ensureUser(data, groupId, userId) {
+function ensureUser(
+  data,
+  groupId,
+  userId
+) {
   if (!data.groups[groupId]) {
     data.groups[groupId] = {
       users: {}
     };
   }
 
-  if (!data.groups[groupId].users[userId]) {
-    data.groups[groupId].users[userId] = {
+  if (
+    !data.groups[groupId]
+      .users[userId]
+  ) {
+    data.groups[groupId]
+      .users[userId] = {
       dates: {}
     };
   }
 
   if (
-    !data.groups[groupId].users[userId].dates
+    !data.groups[groupId]
+      .users[userId]
+      .dates
   ) {
-    data.groups[groupId].users[userId].dates = {};
+    data.groups[groupId]
+      .users[userId]
+      .dates = {};
   }
 
-  return data.groups[groupId].users[userId];
+  return data.groups[groupId]
+    .users[userId];
 }
 
-
-// 解析“有空”参数
-function parseFreeArguments(rawArgs, now) {
-  const args = rawArgs.trim().split(/\s+/);
+// 解析“日期... 时间...”参数
+function parseDateAndTimeArguments(
+  rawArgs,
+  nowDate
+) {
+  const args =
+    rawArgs
+      .trim()
+      .split(/\s+/);
 
   if (!args.length) {
-    return null;
-  }
-
-  const dateStr = parseDate(args[0], now);
-
-  if (!dateStr) {
     return {
-      error:
-        `日期格式错误：${args[0]}，应为 月-日，如 6-1`
+      error: "没有提供参数"
     };
   }
 
-  const timeArgs = args.slice(1);
+  const dates = [];
+  const timeRanges = [];
 
-  // 没有时间 = 全天
-  if (!timeArgs.length) {
-    return {
-      date: dateStr,
-      ranges: [
-        {
-          start: 0,
-          end: 1440
-        }
-      ]
-    };
-  }
+  let readingDates = true;
 
-  const ranges = [];
+  for (const arg of args) {
+    // 时间段，例如 22:00-01:00
+    if (arg.includes(':')) {
+      readingDates = false;
 
-  for (const timeArg of timeArgs) {
-    const parsed = parseTime(timeArg);
+      const parsed =
+        parseTime(arg);
 
-    if (!parsed) {
+      if (!parsed) {
+        return {
+          error:
+            `时间格式错误：${arg}，应为 HH:MM-HH:MM，例如 19:00-23:00`
+        };
+      }
+
+      timeRanges.push(parsed);
+
+      continue;
+    }
+
+    // 时间开始后不能再出现日期
+    if (!readingDates) {
       return {
         error:
-          `时间格式错误：${timeArg}，应为 HH:MM-HH:MM，例如 19:00-23:00`
+          `参数顺序错误：${arg}。请先写完所有日期，再写时间段`
       };
     }
 
-    const split = splitTimeRange(
-      dateStr,
-      parsed
-    );
+    const parsedDates =
+      parseDateToken(
+        arg,
+        nowDate
+      );
 
-    ranges.push(...split);
+    if (!parsedDates) {
+      return {
+        error:
+          `日期格式错误：${arg}，应为 6-1、6-1~6-7 等格式`
+      };
+    }
+
+    dates.push(...parsedDates);
+  }
+
+  if (!dates.length) {
+    return {
+      error:
+        "请至少提供一个日期，例如 6-1 或 6-1~6-7"
+    };
+  }
+
+  const uniqueDates =
+    [...new Set(dates)].sort();
+
+  // 不写时间 = 全天
+  if (!timeRanges.length) {
+    timeRanges.push({
+      start: 0,
+      end: 1440
+    });
   }
 
   return {
-    date: dateStr,
-    ranges
+    dates: uniqueDates,
+    timeRanges
   };
 }
 
-
 // 有空
-function cmdFree(ctx, msg, cmdArgs) {
+function cmdFree(
+  ctx,
+  msg,
+  cmdArgs
+) {
   const rawArgs =
     cmdArgs.getRestArgsFrom(2);
 
@@ -597,14 +810,33 @@ function cmdFree(ctx, msg, cmdArgs) {
     seal.replyToSender(
       ctx,
       msg,
-      "请指定日期，例如：.ptplan 有空 6-1\n也可以指定时间：.ptplan 有空 6-1 19:00-23:00"
+      "请指定日期，例如：\n" +
+      ".ptplan 有空 6-1\n" +
+      ".ptplan 有空 6-1 6-7 22:00-01:00\n" +
+      ".ptplan 有空 6-1~6-7 14:00-17:00 20:00-23:00"
     );
 
     return;
   }
 
-  const args =
-    rawArgs.trim().split(/\s+/);
+  const now =
+    new Date();
+
+  const parsed =
+    parseDateAndTimeArguments(
+      rawArgs,
+      now
+    );
+
+  if (parsed.error) {
+    seal.replyToSender(
+      ctx,
+      msg,
+      parsed.error
+    );
+
+    return;
+  }
 
   const groupId =
     ctx.group.groupId;
@@ -612,7 +844,8 @@ function cmdFree(ctx, msg, cmdArgs) {
   const userId =
     ctx.player.userId;
 
-  const data = getData();
+  const data =
+    getData();
 
   const user =
     ensureUser(
@@ -621,95 +854,56 @@ function cmdFree(ctx, msg, cmdArgs) {
       userId
     );
 
-  const now = new Date();
-
-  const dateStr =
-    parseDate(args[0], now);
-
-  if (!dateStr) {
-    seal.replyToSender(
-      ctx,
-      msg,
-      `日期格式错误：${args[0]}，应为 月-日，如 6-1`
-    );
-
-    return;
-  }
-
-  const timeArgs = args.slice(1);
-
-  let ranges = [];
-
-  // 全天
-  if (!timeArgs.length) {
-    ranges = [
-      {
-        start: 0,
-        end: 1440
-      }
-    ];
-  }
-
-  // 指定时间
-  else {
-    for (const timeArg of timeArgs) {
-      const parsed =
-        parseTime(timeArg);
-
-      if (!parsed) {
-        seal.replyToSender(
-          ctx,
-          msg,
-          `时间格式错误：${timeArg}，应为 HH:MM-HH:MM，例如 19:00-23:00`
-        );
-
-        return;
-      }
-
-      ranges.push(
-        ...splitTimeRange(
-          dateStr,
-          parsed
-        )
-      );
-    }
-  }
-
-  // 将跨午夜产生的第二天数据一起写入
   const added = [];
   const skipped = [];
 
-  for (const range of ranges) {
-    if (!user.dates[range.date]) {
-      user.dates[range.date] = [];
+  for (
+    const date of parsed.dates
+  ) {
+    for (
+      const timeRange of parsed.timeRanges
+    ) {
+      const ranges =
+        splitTimeRange(
+          date,
+          timeRange
+        );
+
+      for (
+        const range of ranges
+      ) {
+        if (!user.dates[range.date]) {
+          user.dates[range.date] = [];
+        }
+
+        const existing =
+          normalizeDateRanges(
+            user.dates[range.date]
+          );
+
+        const duplicate =
+          existing.some(
+            r =>
+              r.start === range.start &&
+              r.end === range.end
+          );
+
+        if (duplicate) {
+          skipped.push(range);
+          continue;
+        }
+
+        existing.push({
+          start: range.start,
+          end: range.end
+        });
+
+        user.dates[range.date] =
+          mergeRanges(existing);
+
+        added.push(range);
+      }
     }
-
-    const existing =
-      normalizeDateRanges(
-        user.dates[range.date]
-      );
-
-    const duplicate =
-      existing.some(
-        r =>
-          r.start === range.start &&
-          r.end === range.end
-      );
-
-    if (duplicate) {
-      skipped.push(range);
-      continue;
-    }
-
-    existing.push({
-      start: range.start,
-      end: range.end
-    });
-
-    user.dates[range.date] =
-      mergeRanges(existing);
-
-    added.push(range);
   }
 
   saveData(data);
@@ -731,13 +925,15 @@ function cmdFree(ctx, msg, cmdArgs) {
   seal.replyToSender(
     ctx,
     msg,
-    lines.join('\n')
+    lines.join('\n') ||
+    "没有有效日期可登记"
   );
 }
 
-
 // 格式化多个日期时间
-function formatRangesByDate(ranges) {
+function formatRangesByDate(
+  ranges
+) {
   const grouped = {};
 
   for (const range of ranges) {
@@ -749,21 +945,21 @@ function formatRangesByDate(ranges) {
   }
 
   const dates =
-    Object.keys(grouped).sort();
+    Object.keys(grouped)
+      .sort();
 
   return dates
     .map(date => {
       const rangeText =
         grouped[date]
-          .map(
-            r =>
-              r.start === 0 &&
-              r.end === 1440
-                ? "全天"
-                : formatRange(
-                    r.start,
-                    r.end
-                  )
+          .map(r =>
+            r.start === 0 &&
+            r.end === 1440
+              ? "全天"
+              : formatRange(
+                  r.start,
+                  r.end
+                )
           )
           .join(', ');
 
@@ -772,9 +968,12 @@ function formatRangesByDate(ranges) {
     .join('\n');
 }
 
-
 // 请假
-function cmdLeave(ctx, msg, cmdArgs) {
+function cmdLeave(
+  ctx,
+  msg,
+  cmdArgs
+) {
   const rawArgs =
     cmdArgs.getRestArgsFrom(2);
 
@@ -785,14 +984,33 @@ function cmdLeave(ctx, msg, cmdArgs) {
     seal.replyToSender(
       ctx,
       msg,
-      "请指定日期，例如：.ptplan 请假 6-1\n也可以指定时间：.ptplan 请假 6-1 20:00-22:00"
+      "请指定日期，例如：\n" +
+      ".ptplan 请假 6-1\n" +
+      ".ptplan 请假 6-1 6-7 22:00-01:00\n" +
+      ".ptplan 请假 6-1~6-7 14:00-17:00"
     );
 
     return;
   }
 
-  const args =
-    rawArgs.trim().split(/\s+/);
+  const now =
+    new Date();
+
+  const parsed =
+    parseDateAndTimeArguments(
+      rawArgs,
+      now
+    );
+
+  if (parsed.error) {
+    seal.replyToSender(
+      ctx,
+      msg,
+      parsed.error
+    );
+
+    return;
+  }
 
   const groupId =
     ctx.group.groupId;
@@ -800,7 +1018,8 @@ function cmdLeave(ctx, msg, cmdArgs) {
   const userId =
     ctx.player.userId;
 
-  const data = getData();
+  const data =
+    getData();
 
   const group =
     data.groups[groupId];
@@ -813,7 +1032,7 @@ function cmdLeave(ctx, msg, cmdArgs) {
     seal.replyToSender(
       ctx,
       msg,
-      "你尚未登记任何空闲日期"
+      "你尚未登记任何空闲时间"
     );
 
     return;
@@ -822,164 +1041,133 @@ function cmdLeave(ctx, msg, cmdArgs) {
   const user =
     group.users[userId];
 
-  const now = new Date();
-
-  const dateStr =
-    parseDate(args[0], now);
-
-  if (!dateStr) {
-    seal.replyToSender(
-      ctx,
-      msg,
-      `日期格式错误：${args[0]}`
-    );
-
-    return;
-  }
-
-  // 不指定时间 = 删除整天
-  if (args.length === 1) {
-    if (user.dates[dateStr]) {
-      delete user.dates[dateStr];
-
-      saveData(data);
-
-      seal.replyToSender(
-        ctx,
-        msg,
-        `已取消 ${formatDate(dateStr)} 的全部空闲时间`
-      );
-    } else {
-      seal.replyToSender(
-        ctx,
-        msg,
-        `未找到 ${formatDate(dateStr)} 的登记`
-      );
-    }
-
-    return;
-  }
-
-  const ranges =
-    normalizeDateRanges(
-      user.dates[dateStr]
-    );
-
-  if (!ranges.length) {
-    seal.replyToSender(
-      ctx,
-      msg,
-      `未找到 ${formatDate(dateStr)} 的登记`
-    );
-
-    return;
-  }
-
-  const removeRanges = [];
-
-  for (const timeArg of args.slice(1)) {
-    const parsed =
-      parseTime(timeArg);
-
-    if (!parsed) {
-      seal.replyToSender(
-        ctx,
-        msg,
-        `时间格式错误：${timeArg}，应为 HH:MM-HH:MM`
-      );
-
-      return;
-    }
-
-    removeRanges.push(parsed);
-  }
-
-  let current =
-    normalizeDateRanges(
-      user.dates[dateStr]
-    );
-
   const removed = [];
 
-  for (const remove of removeRanges) {
-    const next = [];
-
-    for (const existing of current) {
-      // 完全没有重叠
-      if (
-        remove.end <= existing.start ||
-        remove.start >= existing.end
-      ) {
-        next.push(existing);
-        continue;
-      }
-
-      removed.push({
-        date: dateStr,
-        start: Math.max(
-          existing.start,
-          remove.start
-        ),
-        end: Math.min(
-          existing.end,
-          remove.end
-        )
-      });
-
-      // 左边剩余
-      if (existing.start < remove.start) {
-        next.push({
-          start: existing.start,
-          end: remove.start
-        });
-      }
-
-      // 右边剩余
-      if (existing.end > remove.end) {
-        next.push({
-          start: remove.end,
-          end: existing.end
-        });
-      }
+  for (
+    const date of parsed.dates
+  ) {
+    // 没有登记这一天
+    if (!user.dates[date]) {
+      continue;
     }
 
-    current =
-      mergeRanges(next);
-  }
+    const current =
+      normalizeDateRanges(
+        user.dates[date]
+      );
 
-  if (current.length) {
-    user.dates[dateStr] = current;
-  } else {
-    delete user.dates[dateStr];
+    // 有日期，但没有有效时间
+    if (!current.length) {
+      continue;
+    }
+
+    let remaining =
+      current;
+
+    for (
+      const remove of parsed.timeRanges
+    ) {
+      const next = [];
+
+      for (
+        const existing of remaining
+      ) {
+        // 完全没有重叠
+        if (
+          remove.end <=
+            existing.start ||
+          remove.start >=
+            existing.end
+        ) {
+          next.push(existing);
+          continue;
+        }
+
+        // 记录实际被删除部分
+        removed.push({
+          date,
+          start: Math.max(
+            existing.start,
+            remove.start
+          ),
+          end: Math.min(
+            existing.end,
+            remove.end
+          )
+        });
+
+        // 左边剩余
+        if (
+          existing.start <
+          remove.start
+        ) {
+          next.push({
+            start:
+              existing.start,
+            end:
+              remove.start
+          });
+        }
+
+        // 右边剩余
+        if (
+          existing.end >
+          remove.end
+        ) {
+          next.push({
+            start:
+              remove.end,
+            end:
+              existing.end
+          });
+        }
+      }
+
+      remaining =
+        mergeRanges(next);
+    }
+
+    if (remaining.length) {
+      user.dates[date] =
+        remaining;
+    } else {
+      delete user.dates[date];
+    }
   }
 
   saveData(data);
 
-  if (removed.length) {
-    seal.replyToSender(
-      ctx,
-      msg,
-      `已取消：\n${formatRangesByDate(removed)}`
-    );
-  } else {
+  if (!removed.length) {
     seal.replyToSender(
       ctx,
       msg,
       "没有找到对应的空闲时间段"
     );
+
+    return;
   }
+
+  seal.replyToSender(
+    ctx,
+    msg,
+    `已取消：\n${formatRangesByDate(removed)}`
+  );
 }
 
-
 // 个人查看
-function cmdMy(ctx, msg, cmdArgs) {
+function cmdMy(
+  ctx,
+  msg,
+  cmdArgs
+) {
   const groupId =
     ctx.group.groupId;
 
   const userId =
     ctx.player.userId;
 
-  const data = getData();
+  const data =
+    getData();
 
   const group =
     data.groups[groupId];
@@ -1000,7 +1188,8 @@ function cmdMy(ctx, msg, cmdArgs) {
 
   const dates =
     Object.keys(
-      group.users[userId].dates || {}
+      group.users[userId]
+        .dates || {}
     ).sort();
 
   if (!dates.length) {
@@ -1015,10 +1204,13 @@ function cmdMy(ctx, msg, cmdArgs) {
 
   const lines = [];
 
-  for (const date of dates) {
+  for (
+    const date of dates
+  ) {
     const ranges =
       normalizeDateRanges(
-        group.users[userId].dates[date]
+        group.users[userId]
+          .dates[date]
       );
 
     const text =
@@ -1050,7 +1242,6 @@ function cmdMy(ctx, msg, cmdArgs) {
   );
 }
 
-
 // 周、月查看
 function showDateRangeList(
   ctx,
@@ -1063,7 +1254,8 @@ function showDateRangeList(
   const userId =
     ctx.player.userId;
 
-  const data = getData();
+  const data =
+    getData();
 
   const dates =
     getUserDates(
@@ -1071,7 +1263,8 @@ function showDateRangeList(
       userId
     );
 
-  const now = new Date();
+  const now =
+    new Date();
 
   let start;
   let end;
@@ -1109,11 +1302,16 @@ function showDateRangeList(
   }
 
   const dateList =
-    eachDateBetween(start, end);
+    eachDateBetween(
+      start,
+      end
+    );
 
   const lines = [];
 
-  for (const date of dateList) {
+  for (
+    const date of dateList
+  ) {
     if (!dates[date]) {
       continue;
     }
@@ -1166,7 +1364,11 @@ function showDateRangeList(
   );
 }
 
-function cmdWeek(ctx, msg, cmdArgs) {
+function cmdWeek(
+  ctx,
+  msg,
+  cmdArgs
+) {
   showDateRangeList(
     ctx,
     msg,
@@ -1174,7 +1376,11 @@ function cmdWeek(ctx, msg, cmdArgs) {
   );
 }
 
-function cmdMonth(ctx, msg, cmdArgs) {
+function cmdMonth(
+  ctx,
+  msg,
+  cmdArgs
+) {
   showDateRangeList(
     ctx,
     msg,
@@ -1182,7 +1388,11 @@ function cmdMonth(ctx, msg, cmdArgs) {
   );
 }
 
-function cmdNextMonth(ctx, msg, cmdArgs) {
+function cmdNextMonth(
+  ctx,
+  msg,
+  cmdArgs
+) {
   showDateRangeList(
     ctx,
     msg,
@@ -1190,9 +1400,10 @@ function cmdNextMonth(ctx, msg, cmdArgs) {
   );
 }
 
-
 // 共同时间计算
-function intersectRanges(rangeLists) {
+function intersectRanges(
+  rangeLists
+) {
   if (!rangeLists.length) {
     return [];
   }
@@ -1202,7 +1413,11 @@ function intersectRanges(rangeLists) {
       rangeLists[0]
     );
 
-  for (let i = 1; i < rangeLists.length; i++) {
+  for (
+    let i = 1;
+    i < rangeLists.length;
+    i++
+  ) {
     const current =
       normalizeDateRanges(
         rangeLists[i]
@@ -1244,13 +1459,17 @@ function intersectRanges(rangeLists) {
   return result;
 }
 
-
 // 共同时间
-function cmdCommon(ctx, msg, cmdArgs) {
+function cmdCommon(
+  ctx,
+  msg,
+  cmdArgs
+) {
   const groupId =
     ctx.group.groupId;
 
-  const data = getData();
+  const data =
+    getData();
 
   const group =
     data.groups[groupId];
@@ -1277,11 +1496,16 @@ function cmdCommon(ctx, msg, cmdArgs) {
 
   const dateMap = {};
 
-  for (const userId of userIds) {
+  for (
+    const userId of userIds
+  ) {
     const dates =
-      group.users[userId].dates || {};
+      group.users[userId]
+        .dates || {};
 
-    for (const date of Object.keys(dates)) {
+    for (
+      const date of Object.keys(dates)
+    ) {
       const ranges =
         normalizeDateRanges(
           dates[date]
@@ -1303,7 +1527,8 @@ function cmdCommon(ctx, msg, cmdArgs) {
   }
 
   const dates =
-    Object.keys(dateMap).sort();
+    Object.keys(dateMap)
+      .sort();
 
   if (!dates.length) {
     seal.replyToSender(
@@ -1315,15 +1540,19 @@ function cmdCommon(ctx, msg, cmdArgs) {
     return;
   }
 
-
   // 第一优先级：寻找全体共同时间
   const fullCommon = [];
 
-  for (const date of dates) {
+  for (
+    const date of dates
+  ) {
     const entries =
       dateMap[date];
 
-    if (entries.length !== totalUsers) {
+    if (
+      entries.length !==
+      totalUsers
+    ) {
       continue;
     }
 
@@ -1337,7 +1566,9 @@ function cmdCommon(ctx, msg, cmdArgs) {
         rangeLists
       );
 
-    for (const range of common) {
+    for (
+      const range of common
+    ) {
       fullCommon.push({
         date,
         start: range.start,
@@ -1376,14 +1607,20 @@ function cmdCommon(ctx, msg, cmdArgs) {
   // 计算每个日期最多能同时参加的人数
   const partialResults = [];
 
-  for (const date of dates) {
+  for (
+    const date of dates
+  ) {
     const entries =
       dateMap[date];
 
     const events = [];
 
-    for (const entry of entries) {
-      for (const range of entry.ranges) {
+    for (
+      const entry of entries
+    ) {
+      for (
+        const range of entry.ranges
+      ) {
         events.push({
           time: range.start,
           delta: 1,
@@ -1411,7 +1648,9 @@ function cmdCommon(ctx, msg, cmdArgs) {
     let maxCount = 0;
     const segments = [];
 
-    for (const event of events) {
+    for (
+      const event of events
+    ) {
       if (
         lastTime !== null &&
         lastTime < event.time &&
@@ -1436,11 +1675,14 @@ function cmdCommon(ctx, msg, cmdArgs) {
 
     const bestSegments =
       segments.filter(
-        s => s.count === maxCount
+        s =>
+          s.count === maxCount
       );
 
     if (maxCount > 0) {
-      for (const segment of bestSegments) {
+      for (
+        const segment of bestSegments
+      ) {
         partialResults.push({
           date,
           start: segment.start,
@@ -1457,7 +1699,9 @@ function cmdCommon(ctx, msg, cmdArgs) {
     }
 
     if (a.date !== b.date) {
-      return a.date.localeCompare(b.date);
+      return a.date.localeCompare(
+        b.date
+      );
     }
 
     return a.start - b.start;
@@ -1493,7 +1737,9 @@ function cmdCommon(ctx, msg, cmdArgs) {
   let result =
     `【无全体共同时间】\n按最多同时空闲人数排列：\n${lines.join('\n')}`;
 
-  if (partialResults.length > 20) {
+  if (
+    partialResults.length > 20
+  ) {
     result +=
       `\n……共${partialResults.length}个时间段，仅显示前20个`;
   }
@@ -1504,7 +1750,6 @@ function cmdCommon(ctx, msg, cmdArgs) {
     result
   );
 }
-
 
 // 清除
 function generateClearCode() {
@@ -1606,14 +1851,16 @@ function cmdClearConfirm(
   const groupId =
     ctx.group.groupId;
 
-  const data = getData();
+  const data =
+    getData();
 
   if (
     data.groups[groupId] &&
     data.groups[groupId].users &&
     data.groups[groupId].users[userId]
   ) {
-    delete data.groups[groupId].users[userId];
+    delete data.groups[groupId]
+      .users[userId];
 
     saveData(data);
 
@@ -1633,20 +1880,34 @@ function cmdClearConfirm(
   clearRequests.delete(userId);
 }
 
-
 // 帮助
 function cmdHelp(
   ctx,
   msg,
   cmdArgs
 ) {
-  const helpText = `.ptplan 有空 月-日
-.ptplan 有空 月-日 时间段
-（例）.ptplan 有空 6-1 22:00-01:00
-（例）.ptplan 有空 6-1 14:00-17:00 20:00-23:00
-.ptplan 请假 月-日
-.ptplan 请假 月-日 时间段
-（例）.ptplan 请假 6-1 20:00-22:00
+  const helpText =
+`.ptplan 有空 日期……
+.ptplan 请假 日期……
+
+日期支持：
+6-1
+6-1 6-7
+6-1~6-7
+6-1 6-3~6-5
+
+时间支持：
+22:00-01:00
+14:00-17:00 20:00-23:00
+
+示例：
+.ptplan 有空 6-1 6-7 22:00-01:00
+.ptplan 有空 6-1~6-7 22:00-01:00
+.ptplan 有空 6-1 6-3~6-5 14:00-17:00 20:00-23:00
+
+.ptplan 请假 6-1
+.ptplan 请假 6-1~6-7 22:00-01:00
+
 .ptplan 本周
 .ptplan 本月
 .ptplan 下月
@@ -1662,7 +1923,6 @@ function cmdHelp(
   );
 }
 
-
 // 主命令
 const cmdPtplan =
   seal.ext.newCmdItemInfo();
@@ -1674,29 +1934,6 @@ cmdPtplan.help =
 
 cmdPtplan.solve =
   (ctx, msg, cmdArgs) => {
-    const userId =
-      msg.sender.userId;
-
-    const now = Date.now();
-
-    const lastNotify =
-      userLastNotify.get(userId) || 0;
-
-    if (
-      now - lastNotify >
-      24 * 60 * 60 * 1000
-    ) {
-      userLastNotify.set(
-        userId,
-        now
-      );
-
-      checkUpdateOnce(
-        ctx,
-        msg,
-        userId
-      ).catch(() => {});
-    }
 
     const sub =
       cmdArgs.getArgN(1);
