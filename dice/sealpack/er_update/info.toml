@@ -1,0 +1,48 @@
+format_version = "1.0.0"
+
+[package]
+id = "alll/er_update"
+name = "er-update"
+version = "0.0.2"
+authors = ["3987681449"]
+license = "Apache-2"
+description = "(.er-update)有问题可进群2150284119联系"
+keywords = ["sealpack"]
+
+[package.seal]
+min_version = "1.6.0"
+
+[dependencies]
+
+[permissions]
+network = true
+file_read = []
+file_write = []
+
+[contents]
+scripts = ["scripts/er-update.js"]
+decks = []
+reply = []
+helpdoc = []
+templates = []
+
+[store]
+readme = "README.md"
+icon = ""
+banner = ""
+screenshots = []
+category = "tool"
+
+[config]
+
+[config.update_url]
+type = "string"
+title = "更新地址"
+description = "从XX抓取"
+default = "https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/er_update/info.toml?ref_type=heads"
+
+[config.update_timestamp]
+type = "string"
+title = "更新时间"
+description = "当前版本时间戳"
+default = "1786724907"
