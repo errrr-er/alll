@@ -7,8 +7,7 @@
 // 2026-05-30 15:20:42
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/pt_plan/ptplan.js
-// @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/pt_plan/ptplan.js
+// @updateUrl    
 // ==/UserScript==
 
 let ext = seal.ext.find('跑团时间规划');
@@ -1643,11 +1642,11 @@ function cmdHelp(
 ) {
   const helpText = `.ptplan 有空 月-日
 .ptplan 有空 月-日 时间段
-.ptplan 有空 6-1 14:00-17:00 20:00-23:00
-.ptplan 有空 6-1 22:00-01:00
+（例）.ptplan 有空 6-1 22:00-01:00
+（例）.ptplan 有空 6-1 14:00-17:00 20:00-23:00
 .ptplan 请假 月-日
 .ptplan 请假 月-日 时间段
-.ptplan 请假 6-1 20:00-22:00
+（例）.ptplan 请假 6-1 20:00-22:00
 .ptplan 本周
 .ptplan 本月
 .ptplan 下月
