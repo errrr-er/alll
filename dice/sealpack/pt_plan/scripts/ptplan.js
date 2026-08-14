@@ -1889,6 +1889,13 @@ function cmdHelp(
   const helpText =
 `.ptplan 有空 日期……
 .ptplan 请假 日期……
+.ptplan 本周
+.ptplan 本月
+.ptplan 下月
+.ptplan 我的
+.ptplan 共同
+.ptplan 清除 请求
+.ptplan 清除 确认 <验证码>
 
 日期支持：
 6-1
@@ -1900,21 +1907,11 @@ function cmdHelp(
 22:00-01:00
 14:00-17:00 20:00-23:00
 
-示例：
+示例（请假指令同理）：
 .ptplan 有空 6-1 6-7 22:00-01:00
 .ptplan 有空 6-1~6-7 22:00-01:00
 .ptplan 有空 6-1 6-3~6-5 14:00-17:00 20:00-23:00
-
-.ptplan 请假 6-1
-.ptplan 请假 6-1~6-7 22:00-01:00
-
-.ptplan 本周
-.ptplan 本月
-.ptplan 下月
-.ptplan 我的
-.ptplan 共同
-.ptplan 清除 请求
-.ptplan 清除 确认 <验证码>`.trim();
+`.trim();
 
   seal.replyToSender(
     ctx,
