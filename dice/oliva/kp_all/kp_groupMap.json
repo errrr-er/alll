@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
-  "timestamp": 1786725858,
+  "timestamp": 1786801089,
   "group_map": {
   	"漂泊之徒": {"groupNumber":"1097331960"},
-	  "荣光不灭": {"groupNumber":"636253864*下载"},
+	  "荣光不灭": {"groupNumber":"636253864*下载\n1103423594*KP"},
   	"致埃尔维斯": {"groupNumber":"943134871*下载\n1055649275*下载\n1104377643*KP"},
   	"歪曲之月": {"groupNumber":"339403801"},
   	"玛珈的摇篮": {"groupNumber":"980800467"},
@@ -541,7 +541,7 @@
     "长兴镇": {"groupNumber":"906847246"},
     "掌中雪": {"groupNumber":"860685448*下载"},
     "沼泽人": {"groupNumber":"913354882"},
-    "这一次歌亚请留住TA": {"groupNumber":"1098346051","aliases":["歌亚"]},
+	"这一次歌亚请留住TA": { "groupNumber": "1098346051\n931981887", "aliases": ["歌亚"] },
     "侦探可有翅膀吗": {"groupNumber":"963854131","aliases":["侦探翅"]},
     "镇魂歌": {"groupNumber":"709032901"},
     "正伪的ideal": {"groupNumber":"667098598"},
