@@ -18,69 +18,7 @@ if (!ext) {
 }
 
 // ======================
-// 时间戳(timestamp)
-// ======================
-function getCurrentTimestamp() {
-    return 1779892999;
-}
-
-// 提醒历史
-const userLastNotify = new Map();
-
-// 获取GitHub最新版本编号
-async function getGitHubVersion() {
-    try {
-		// 镜像
-        const rawUrl = 'https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/counlog.js';
-        const response = await fetch(rawUrl);
-        
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        
-        const content = await response.text();
-        
-        // 解析时间戳
-        const timestampMatch = content.match(/@timestamp\s+(\d+)/);
-        if (timestampMatch) {
-            const timestamp = parseInt(timestampMatch[1]);
-            const date = new Date(timestamp * 1000);
-            return {
-                timestamp: timestamp,
-                date: date,
-                formattedDate: date.toLocaleString('zh-CN')
-            };
-        }
-        
-        return null;
-    } catch (error) {
-		seal.replyToSender(ctx, msg, '获取GitHub版本出错:', error);
-        throw error;
-    }
-}
-
-// 检查更新
-async function checkUpdateOnce(ctx, msg, userId) {
-    try {
-        const githubVersion = await getGitHubVersion();
-        if (!githubVersion) return;
-        
-        const currentTimestamp = getCurrentTimestamp();
-        
-        if (githubVersion.timestamp > currentTimestamp) {
-            setTimeout(() => {
-                seal.replyToSender(ctx, msg, 
-                    `发现<log骰点统计>插件有新版本！\n更新检查冷却开始~请及时更新\n最后更新：${githubVersion.formattedDate}`
-                );
-            }, 1000);
-        }
-    } catch (error) {
-        // 静默处理
-    }
-}
-
-// ======================
-// 清洗
+// 清洗（删一下更新链接，但估计没删全
 // ======================
 function safeText(text) {
   return (text || '')
