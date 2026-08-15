@@ -3,8 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.countlog)有问题可进群2150284119联系
-// @timestamp    1779892999
-// 2026-05-21 04:25:18
+// @timestamp    2026-05-21 04:25:18
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
 // @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/record_result/countlog.js
@@ -18,7 +17,7 @@ if (!ext) {
 }
 
 // ======================
-// 清洗（删一下更新链接，但估计没删全
+// 清洗
 // ======================
 function safeText(text) {
   return (text || '')
@@ -456,16 +455,6 @@ cmdCountlog.solve = (ctx, msg, cmdArgs) => {
   let sub = cmdArgs.getArgN(1);
   let arg2 = cmdArgs.getArgN(2);
 
-  // 24H提醒检查更新
-  const userId = msg.sender.userId;
-  const now = Date.now();
-  const lastNotify = userLastNotify.get(userId) || 0;
-  
-  if (now - lastNotify > 24 * 60 * 60 * 1000) {
-      userLastNotify.set(userId, now);
-      checkUpdateOnce(ctx, msg, userId).catch(console.error);
-  }
-  
   if (sub === 'st') {
     if (arg2 === 'all') {
       let outputs = getAllExportText(ctx);
