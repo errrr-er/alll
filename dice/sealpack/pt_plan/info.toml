@@ -13,6 +13,7 @@ keywords = ["sealpack"]
 min_version = "1.6.0"
 
 [dependencies]
+# "alll/er_update" = ">=0.0.0"
 
 [permissions]
 network = false
@@ -34,3 +35,5 @@ screenshots = []
 category = "tool"
 
 [config]
+
+# https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/pt_plan/info.toml?ref_type=heads
