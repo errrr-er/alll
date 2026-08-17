@@ -112,7 +112,7 @@ const skillAlias = {
 
 function normalizeSkill(name) {
   if (!name) return '未知检定';
-  let cleaned = safeText(name).replace(/\s\*\d+$/, '');
+  let cleaned = safeText(name).replace(/\s*\*?\d+$/, '');
   if (!cleaned) cleaned = '检定';
   for (let [standard, aliases] of Object.entries(skillAlias)) {
     if (cleaned === standard) return standard;
@@ -617,7 +617,7 @@ function extractSkillName(rawText) {
   // xxx检定结果为
   m =
     rawText.match(
-      /([^\s"：:]+)\s\*检定结果为/
+      /([^\s"：:]+)\s*\*?检定结果为/
     );
 
   if (m) {
@@ -627,7 +627,7 @@ function extractSkillName(rawText) {
   // xxx检定
   m =
     rawText.match(
-      /([^\s"：:]+)\s\*检定/
+      /([^\s"：:]+)\s*\*?检定/
     );
 
   if (m) {
@@ -651,7 +651,7 @@ function parseMultiDiceBlock(text) {
     // 普通骰
     let normal =
       line.match(
-        /D100=(\d+)\/(\d+)\s\*(.*)/
+        /D100=(\d+)\/(\d+)\s*\*?(.*)/
       );
 
     if (normal) {
@@ -715,7 +715,7 @@ ext.onMessageSend = (
   ) {
     const scMatch =
       rawText.match(
-        /[dD]100=(\d+)\/(\d+)\s\*(.+)/
+        /[dD]100=(\d+)\/(\d+)\s*\*?(.+)/
       );
 
     if (scMatch) {
@@ -785,12 +785,12 @@ ext.onMessageSend = (
   // 单次RA / 奖惩骰
   {
     const raPatterns = [
-      /"([^"]+)"\s\*检定结果为:\s\*D100=(\d+)\/(\d+)\s\*(.+)/,
-      /([^\s]+)\s\*检定结果为:\s\*D100=(\d+)\/(\d+)\s\*(.+)/,
-      /进行"([^"]+)"\s\*检定[：:]\s\*D100=(\d+)\/(\d+)\s\*(.+)/,
+      /"([^"]+)"\s*\*?检定结果为:\s*\*?D100=(\d+)\/(\d+)\s*\*?(.+)/,
+      /([^\s]+)\s*\*?检定结果为:\s*\*?D100=(\d+)\/(\d+)\s*\*?(.+)/,
+      /进行"([^"]+)"\s*\*?检定[：:]\s*\*?D100=(\d+)\/(\d+)\s*\*?(.+)/,
       /"([^"]+)"[^[]\*?[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
       /([^\s"：:]+)[^[]\*?[pb]=(\d+)\/(\d+),\s*\((\d+)\[D100=\d+,[^\]]*\]\)\s*(.+)/,
-      /D100=(\d+)\/(\d+)\s\*(.+)/
+      /D100=(\d+)\/(\d+)\s*\*?(.+)/
     ];
 
     for (
