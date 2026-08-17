@@ -17,6 +17,7 @@ if (!ext) {
 
 // 群号映射表(action)
 const groupMap = {
+  	"色之形": {groupNumber:"867848385*下载\n961190856*KP"},
   	"漂泊之徒": {groupNumber:"1097331960"},
 	"荣光不灭": {groupNumber:"636253864*下载\n1103423594*KP"},
   	"致埃尔维斯": {groupNumber:"943134871*下载\n1055649275*下载\n1104377643*KP"},
