@@ -3,7 +3,7 @@ format_version = "1.0.0"
 [package]
 id = "alll/kp_all"
 name = "KP群汇总"
-version = "0.0.8"
+version = "0.0.9"
 authors = ["3987681449"]
 license = "Apache-2"
 description = "(.kp)有问题可进群2150284119联系"
@@ -46,4 +46,4 @@ default = "https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/inf
 type = "string"
 title = "更新时间"
 description = "当前版本时间戳"
-default = "1786945482"
+default = "1786975424"
