@@ -557,7 +557,7 @@ const groupMap = {
 	"长兴镇": { groupNumber: "906847246" },
 	"掌中雪": { groupNumber: "860685448*下载" },
 	"沼泽人": { groupNumber: "913354882" },
-	"这一次歌亚请留住TA": { groupNumber: "1098346051\n931981887", aliases: ["歌亚"] },
+	"这一次歌亚请留住TA": { groupNumber: "1098346051*下载\n150936787*有作者\n931981887*无作者", aliases: ["歌亚"] },
 	"侦探可有翅膀吗": { groupNumber: "963854131", aliases: ["侦探翅"] },
 	"镇魂歌": { groupNumber: "709032901" },
 	"正伪的ideal": { groupNumber: "667098598" },
