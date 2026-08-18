@@ -3,7 +3,8 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.ptplan)有问题可进群2150284119联系
-// @timestamp    2026-05-30 15:20:42
+// @timestamp    1787056860
+// 2026-05-30 15:20:42
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
 // @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/pt_plan/scripts/ptplan.js?ref_type=heads
@@ -466,7 +467,8 @@ function parseTime(input) {
     endHour < 0 ||
     endHour > 23 ||
     endMinute < 0 ||
-    endMinute > 59
+    endMinute > 59 ||
+    (endHour === 24 && endMinute !== 0)
   ) {
     return null;
   }
