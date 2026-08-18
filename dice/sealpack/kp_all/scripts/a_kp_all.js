@@ -3,11 +3,11 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1786975420
+// @timestamp    1787018739
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
-// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/a_kp_all.js?ref_type=heads
+// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/scripts/a_kp_all.js?ref_type=heads
 // ==/UserScript==
 
 let ext = seal.ext.find('KP群汇总');
@@ -18,6 +18,7 @@ if (!ext) {
 
 // 群号映射表(action)
 const groupMap = {
+  	"通衢建灯": {groupNumber:"1046186956*下载"},
   	"黑石灰": {groupNumber:"544212628*下载"},
   	"東京滅亡1999": {groupNumber:"544212628"},
   	"色之形": {groupNumber:"867848385*下载\n961190856*KP"},
