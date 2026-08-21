@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1787018739
+// @timestamp    1787329486
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -19,7 +19,7 @@ if (!ext) {
 // 群号映射表(action)
 const groupMap = {
   	"通衢建灯": {groupNumber:"1046186956*下载"},
-  	"黑石灰": {groupNumber:"544212628*下载"},
+  	"黑石灰": {groupNumber:"1106249203*下载\n1106372822*KP"},
   	"東京滅亡1999": {groupNumber:"544212628"},
   	"色之形": {groupNumber:"867848385*下载\n961190856*KP"},
   	"漂泊之徒": {groupNumber:"1097331960"},
