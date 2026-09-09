@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1788045252
+// @timestamp    1788962402
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -547,7 +547,7 @@ const groupMap = {
 	"月计": { groupNumber: "639082037\n765965290\n702203298\n#腾讯频道：pd31381795" },
 	"月山卦辞": { groupNumber: "579691782" },
 	"云黑": { groupNumber: "795251459" },
-	"云上仙": { groupNumber: "939600700*下载" },
+	"云上仙": { groupNumber: "939600700*下载\n*976215992*KP" },
 	"再见新世界": { groupNumber: "1004914022*下载\n909369023*KP" },
 	"在黎明到来之前": { groupNumber: "788432874*下载" },
 	"造物者": { groupNumber: "948914482" },
@@ -598,7 +598,7 @@ const groupMap = {
 	"brp": { groupNumber: "788438516" },
 	"Bubble on Stage": { groupNumber: "734220119" },
 	"CAIN": { groupNumber: "1030175136" },
-	"CandelaObscura": { groupNumber: "1053180006*下载\n1049162012*GM", aliases: ["暗烛"] },
+	"CandelaObscura": { groupNumber: "1053180006*下载\n1049162012*KP", aliases: ["暗烛"] },
 	"ccf": { groupNumber: "805511454*搭房\n1060652550*招募" },
 	"dear-flip-flops": { groupNumber: "345837146", aliases: ["dff"] },
 	"DiceEasy": { groupNumber: "887482271" },
