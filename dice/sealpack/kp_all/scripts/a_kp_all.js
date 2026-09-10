@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1788962402
+// @timestamp    1789057157
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -18,6 +18,7 @@ if (!ext) {
 
 // 群号映射表(action)
 const groupMap = {
+  	"天不遂人愿": {groupNumber:"985964031*下载\n1124497024*KP\n1107964401*官方"},
   	"祀蛇": {groupNumber:"970244097*下载\n1108845394*KP"},
   	"通衢建灯": {groupNumber:"1046186956*下载"},
   	"黑石灰": {groupNumber:"1106249203*下载\n1106372822*KP"},
