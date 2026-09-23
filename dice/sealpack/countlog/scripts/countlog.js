@@ -904,13 +904,18 @@ ext.onCommandReceived = (
       getAllExportText(ctx);
 
     if (outputs) {
+      for (const output of outputs) {
+        seal.replyToSender(
+          ctx,
+          msg,
+          output
+        );
+      }
+
       seal.replyToSender(
         ctx,
         msg,
-        outputs.join(
-          '\n\n'
-        ) +
-        '\n\n所有记录已清除'
+        '所有记录已清除'
       );
 
       clearAllRecords(ctx);
@@ -926,16 +931,16 @@ ext.onCommandReceived = (
       getAllExportText(ctx);
 
     if (outputs) {
-      seal.replyToSender(
-        ctx,
-        msg,
-        outputs.join(
-          '\n\n'
-        ) +
-        '\n\n所有记录已清除'
-      );
+      for (const output of outputs) {
+        seal.replyToSender(
+          ctx,
+          msg,
+          output
+        );
+      }
 
-      clearAllRecords(ctx);
+      // 现在改成不自动清除
+      // clearAllRecords(ctx);
     }
 
     else {
@@ -1008,13 +1013,13 @@ cmdCountlog.solve =
         }
 
         else {
-          seal.replyToSender(
-            ctx,
-            msg,
-            outputs.join(
-              '\n\n'
-            )
-          );
+          for (const output of outputs) {
+            seal.replyToSender(
+              ctx,
+              msg,
+              output
+            );
+          }
         }
       }
 
@@ -1047,13 +1052,18 @@ cmdCountlog.solve =
         }
 
         else {
+          for (const output of outputs) {
+            seal.replyToSender(
+              ctx,
+              msg,
+              output
+            );
+          }
+
           seal.replyToSender(
             ctx,
             msg,
-            outputs.join(
-              '\n\n'
-            ) +
-            '\n\n所有记录已清除'
+            '所有记录已清除'
           );
 
           clearAllRecords(ctx);
