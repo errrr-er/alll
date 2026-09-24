@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1790089718
+// @timestamp    1790263900
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -18,6 +18,7 @@ if (!ext) {
 
 // 群号映射表(action)
 const groupMap = {
+	"银蛇": {groupNumber:"1126960695"},
     "山羊之歌未曾唱响": {groupNumber:"1054748794","aliases":["白鸟之歌鸣唱之时","羊歌","鸟歌"]},
   	"无何有乡的Apoptosis": {groupNumber:"1126534576"},
   	"Crosslayers": {groupNumber:"731449106"},
