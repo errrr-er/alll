@@ -1,4 +1,4 @@
-name: Auto Pack Stable Files
+name: Auto Pack - Auto Check Daily
 
 on:
   # 每天北京时间 00:00 检查一次，减少 Actions 运行次数
