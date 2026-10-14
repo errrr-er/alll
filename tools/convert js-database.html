@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>群组配置 → JSON 模板转换器</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f6f8; color: #222;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 20px; margin: 0 0 6px; }
+  .sub { color: #666; font-size: 13px; margin-bottom: 18px; line-height: 1.8; }
+  code { background:#eef1f5; padding:1px 5px; border-radius:4px; font-size:12px; }
+  .panel {
+    background: #fff; border: 1px solid #e3e6ea; border-radius: 10px;
+    padding: 14px; margin-bottom: 14px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  label.lbl { display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:#444; }
+  textarea {
+    width: 100%; min-height: 240px; resize: vertical;
+    border: 1px solid #dcdfe4; border-radius: 8px; padding: 10px 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px; line-height: 1.65; outline: none; background: #fbfbfc;
+    color: #1f2937; transition: border-color .15s, background .15s;
+  }
+  textarea:focus { border-color: #4a90e2; background:#fff; }
+  .bar { display:flex; flex-wrap: wrap; gap:10px; align-items:center; margin-top: 12px; }
+  button {
+    border: none; border-radius: 8px; padding: 9px 18px; font-size: 14px;
+    cursor: pointer; background: #4a90e2; color: #fff; font-weight: 500;
+    transition: background .15s;
+  }
+  button:hover { background:#3a7bc8; }
+  button.ghost { background:#eef1f5; color:#333; }
+  button.ghost:hover { background:#e2e6ec; }
+  .msg { font-size: 13px; margin-top: 10px; line-height:1.7; }
+  .msg.err { color:#d33; white-space: pre-wrap; }
+  .msg.ok { color:#1a9e5c; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>群组配置 → JSON 模板转换器</h1>
+  <div class="sub">
+    每行一条粘进来。<code>groupNumber</code> 按 <code>\n</code> 拆成多条：带 <code>*下载</code> 的进 <code>download</code>，其余进 <code>kp</code>；<code>aliases</code> / <code>series</code> 原样保留。
+  </div>
+
+  <div class="panel">
+    <label class="lbl" for="input">输入（每行一条）</label>
+    <textarea id="input" spellcheck="false" placeholder='"复制人的葬列": {"groupNumber":"958270654"},
+"天不遂人愿": {"groupNumber":"985964031*下载\n1124497024*KP\n1107964401*官方"},
+"沧渺山": {"groupNumber":"855215735", "aliases":["cms"]}'></textarea>
+
+    <div class="bar">
+      <button id="convert">转换</button>
+      <button id="copy" class="ghost">复制结果</button>
+      <button id="download" class="ghost">下载 .json</button>
+      <button id="clear" class="ghost">清空</button>
+    </div>
+    <div class="msg" id="msg"></div>
+  </div>
+
+  <div class="panel">
+    <label class="lbl" for="output">输出</label>
+    <textarea id="output" spellcheck="false" readonly placeholder="结果会显示在这里…"></textarea>
+  </div>
+</div>
+
+<script>
+(function () {
+  var inputEl  = document.getElementById('input');
+  var outputEl = document.getElementById('output');
+  var msgEl    = document.getElementById('msg');
+
+  /* 解转义：\n \r \t \" \' \\ */
+  function unescapeStr(s) {
+    return String(s).replace(/\\(.)/g, function (_, c) {
+      if (c === 'n') return '\n';
+      if (c === 'r') return '\r';
+      if (c === 't') return '\t';
+      if (c === '"') return '"';
+      if (c === "'") return "'";
+      if (c === '\\') return '\\';
+      return c;
+    });
+  }
+
+  /* 提取数组字段，如 aliases: ["a","b"] */
+  function extractArray(body, key) {
+    var re = new RegExp('["\']?' + key + '["\']?\\s*[:：]\\s*\\[([^\\]]*)\\]', 'i');
+    var m = body.match(re);
+    if (!m) return [];
+    var inner = m[1];
+    var items = inner.match(/"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'/g) || [];
+    return items.map(function (s) { return unescapeStr(s.slice(1, -1)); });
+  }
+
+  /* 提取 groupNumber 原始值 */
+  function extractGroupNumber(body) {
+    var m = body.match(/["\']?groupNumber["\']?\s*[:：]\s*"((?:[^"\\]|\\.)*)"/i)
+         || body.match(/["\']?groupNumber["\']?\s*[:：]\s*'((?:[^'\\]|\\.)*)'/i)
+         || body.match(/["\']?groupNumber["\']?\s*[:：]\s*([^,}]*)/i);
+    return m ? unescapeStr(m[1] || '') : '';
+  }
+
+  /* 解析单行，返回 {name, item} 或 {error} 或 null */
+  function parseLine(raw) {
+    var line = raw.trim();
+    if (!line) return null;
+    line = line.replace(/[,;]\s*$/, '').trim();
+    if (!line || line === '{' || line === '}' || line === '},' || line === '},') return null;
+
+    // 匹配 "名字": { ... } 或 名字: { ... }
+    var m = line.match(/^(?:"((?:[^"\\]|\\.)*)"|([^:{]+?))\s*[:：]\s*\{(.*)\}$/);
+    if (!m) return { error: '无法识别：' + raw.trim() };
+
+    var name = m[1] !== undefined ? unescapeStr(m[1]) : m[2].trim();
+    if (!name) return { error: '缺少名称：' + raw.trim() };
+
+    var body = m[3];
+
+    var groupRaw = extractGroupNumber(body);
+    var aliases  = extractArray(body, 'aliases');
+    var series   = extractArray(body, 'series');
+
+    // groupNumber 按 \n 拆多条：带 *下载 → download，其余 → kp
+    var kp = [], download = [];
+    var parts = String(groupRaw).split(/\n+/).map(function (s) { return s.trim(); }).filter(Boolean);
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (/^\*+$/.test(p)) continue;                    // 纯星号跳过
+      if (p.indexOf('*下载') !== -1) {
+        var v = p.replace(/\*下载/g, '').trim();
+        if (v && download.indexOf(v) === -1) download.push(v);
+      } else {
+        var v2 = p.replace(/\*KP\b/gi, '').trim();
+        if (v2 && kp.indexOf(v2) === -1) kp.push(v2);
+      }
+    }
+
+    return {
+      name: name,
+      item: {
+        kp: kp,
+        download: download,
+        other: [],
+        aliases: aliases,
+        series: series
+      }
+    };
+  }
+
+  function convert() {
+    var text = inputEl.value;
+    var lines = text.split(/\r?\n/);
+    var result = {};
+    var errors = [];
+    var count = 0;
+
+    for (var i = 0; i < lines.length; i++) {
+      var r = parseLine(lines[i]);
+      if (!r) continue;
+      if (r.error) { errors.push('第 ' + (i + 1) + ' 行：' + r.error); continue; }
+      result[r.name] = r.item;
+      count++;
+    }
+
+    outputEl.value = count ? JSON.stringify(result, null, 2) : '';
+
+    if (errors.length) {
+      msgEl.className = 'msg err';
+      msgEl.textContent = (count ? '✅ 已转换 ' + count + ' 条，但有以下问题：\n' : '⚠️ ') + errors.join('\n');
+    } else if (count) {
+      msgEl.className = 'msg ok';
+      msgEl.textContent = '✅ 已转换 ' + count + ' 条';
+    } else {
+      msgEl.className = 'msg';
+      msgEl.textContent = '';
+    }
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.top = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function copyResult() {
+    var text = outputEl.value;
+    if (!text) { msgEl.className = 'msg err'; msgEl.textContent = '还没有可复制的内容'; return; }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () {
+        msgEl.className = 'msg ok'; msgEl.textContent = '📋 已复制到剪贴板';
+      }).catch(function () {
+        var ok = fallbackCopy(text);
+        msgEl.className = ok ? 'msg ok' : 'msg err';
+        msgEl.textContent = ok ? '📋 已复制到剪贴板' : '复制失败，请手动全选复制';
+      });
+      return;
+    }
+    var ok2 = fallbackCopy(text);
+    msgEl.className = ok2 ? 'msg ok' : 'msg err';
+    msgEl.textContent = ok2 ? '📋 已复制到剪贴板' : '复制失败，请手动全选复制';
+  }
+
+  function download() {
+    var text = outputEl.value;
+    if (!text) { msgEl.className = 'msg err'; msgEl.textContent = '还没有可下载的内容'; return; }
+    var blob = new Blob([text], { type: 'application/json;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'list.json';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  var timer = null;
+  inputEl.addEventListener('input', function () {
+    clearTimeout(timer);
+    timer = setTimeout(convert, 250);
+  });
+
+  document.getElementById('convert').addEventListener('click', convert);
+  document.getElementById('copy').addEventListener('click', copyResult);
+  document.getElementById('download').addEventListener('click', download);
+  document.getElementById('clear').addEventListener('click', function () {
+    inputEl.value = ''; outputEl.value = '';
+    msgEl.textContent = ''; msgEl.className = 'msg';
+    inputEl.focus();
+  });
+})();
+</script>
+</body>
+</html>
