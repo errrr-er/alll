@@ -108,7 +108,6 @@ jobs:
 
       - name: Commit updated ZIPs to the repository
         run: |
-          git pull --rebase origin main
           git add auto_pack/
           if git diff --cached --quiet; then
             echo "没有新的 ZIP 需要提交。"
@@ -117,4 +116,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Auto-pack stable files"
+          git pull --rebase origin main
           git push
