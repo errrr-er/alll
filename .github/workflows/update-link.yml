@@ -189,10 +189,6 @@ jobs:
             请在合并前 review。
 
             MIRROR: `${{ env.MIRROR }}`
-          add-paths: |
-            dice/oliva/kp_all/your_plugin.py
-            dice/sealpack/countlog/scripts/countlog.js
-            dice/sealpack/countlog/info.toml
 
       - name: Summary
         if: always()
