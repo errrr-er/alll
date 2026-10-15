@@ -25,6 +25,8 @@ jobs:
           PACK_TARGETS: |
             dice/oliva/kp_all/oliva_kp|oliva_kp.zip|oliva_kp.opk
 
+            dice/multi_reply/multi.html|seal_multi.zip|seal_multi.zip
+
             dice/sealpack/countlog/scripts/countlog.js|seal_countlog.zip|seal_countlog.zip
             dice/sealpack/er_update/scripts/er-update.js|seal_update.zip|seal_update.zip
             dice/sealpack/kp_all/scripts/a_kp_all.js|seal_kp.zip|seal_kp.zip
