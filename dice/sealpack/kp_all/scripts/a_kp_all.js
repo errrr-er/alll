@@ -879,10 +879,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
                 replyText += `反向【${groupName}${aliasText}】\n${groupInfo.groupNumber}${getSeriesHint(groupInfo)}\n\n`;
             });
             seal.replyToSender(ctx, msg, replyText);
-        } else {
-            replyNotFound(ctx, msg, input);
-        }
-        return ret;
+			return ret;
+		}
     }
     
     // 查找匹配的群组
