@@ -7,7 +7,7 @@
 // 2026-05-30 15:20:42
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
-// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/pt_plan/scripts/ptplan.js?ref_type=heads
+// @updateUrl    https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/scripts/ptplan.js
 // ==/UserScript==
 
 let ext = seal.ext.find('跑团时间规划');

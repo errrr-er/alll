@@ -40,7 +40,7 @@ category = "tool"
 type = "string"
 title = "更新地址"
 description = "从XX抓取"
-default = "https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/countlog/info.toml?ref_type=heads"
+default = "https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/info.toml"
 
 [config.update_timestamp]
 type = "string"

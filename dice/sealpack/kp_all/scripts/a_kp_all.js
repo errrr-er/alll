@@ -7,7 +7,7 @@
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
-// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/scripts/a_kp_all.js?ref_type=heads
+// @updateUrl    https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/scripts/a_kp_all.js
 // ==/UserScript==
 
 let ext = seal.ext.find('KP群汇总');
