@@ -1,0 +1,310 @@
+name: KP - Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'dice/oliva/kp_all/kp_groupMap.json'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch existing PR branch
+        run: |
+          git fetch origin \
+            automation/update-group-map:refs/remotes/origin/automation/update-group-map \
+            2>/dev/null || true
+
+      - name: Check whether an update PR is open
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          count=$(gh pr list \
+            --base main \
+            --head automation/update-group-map \
+            --state open \
+            --json number \
+            --jq 'length')
+          echo "open=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Sync group map and metadata
+        id: sync
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          OPEN_PR: ${{ steps.pr.outputs.open }}
+        run: |
+          python3 <<'PY'
+          import json
+          import os
+          import re
+          import subprocess
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          JSON_PATH = "dice/oliva/kp_all/kp_groupMap.json"
+          JS_PATH = "dice/sealpack/kp_all/scripts/a_kp_all.js"
+          TOML_PATH = "dice/sealpack/kp_all/info.toml"
+          PR_BRANCH = "origin/automation/update-group-map"
+
+          def git_show(revision, path):
+              return subprocess.check_output(
+                  ["git", "show", f"{revision}:{path}"],
+                  text=True
+              )
+
+          def increment_version(version):
+              match = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)", version.strip())
+              if not match:
+                  raise ValueError(
+                      f"Unsupported version format: {version!r}"
+                  )
+
+              major, minor, patch = map(int, match.groups())
+              patch += 1
+
+              if patch > 9:
+                  patch = 0
+                  minor += 1
+
+              if minor > 9:
+                  minor = 0
+                  major += 1
+
+              return f"{major}.{minor}.{patch}"
+
+          def replace_toml_value(content, section, key, value):
+              section_pattern = (
+                  r"(?m)^[ \t]*\[" + re.escape(section) + r"\][ \t]*$"
+              )
+              section_match = re.search(section_pattern, content)
+
+              if not section_match:
+                  raise ValueError(f"TOML section not found: [{section}]")
+
+              start = section_match.end()
+              next_section = re.search(r"(?m)^[ \t]*\[", content[start:])
+              end = (
+                  start + next_section.start()
+                  if next_section
+                  else len(content)
+              )
+
+              block = content[start:end]
+              key_pattern = (
+                  r"(?m)^([ \t]*" + re.escape(key)
+                  + r"[ \t]*=[ \t]*)"
+                  + r'("(?:\\.|[^"\\])*"|[^#\r\n]*)'
+              )
+
+              updated, count = re.subn(
+                  key_pattern,
+                  lambda m: m.group(1) + json.dumps(value),
+                  block,
+                  count=1
+              )
+
+              if count != 1:
+                  raise ValueError(
+                      f"Key {key!r} not found in [{section}]"
+                  )
+
+              return content[:start] + updated + content[end:]
+
+          def to_js_object(value):
+              text = json.dumps(
+                  value,
+                  ensure_ascii=False,
+                  indent=4
+              )
+
+              # Unquote ordinary JavaScript identifier keys only.
+              text = re.sub(
+                  r'(?m)^(\s*)"([A-Za-z_$][A-Za-z0-9_$]*)":',
+                  r'\1\2:',
+                  text
+              )
+              return text
+
+          # Read the current JSON data.
+          json_file = Path(JSON_PATH)
+          data = json.loads(json_file.read_text(encoding="utf-8"))
+
+          if "group_map" not in data:
+              raise ValueError("JSON does not contain group_map")
+
+          # Compare group_map with the version before this push.
+          before_sha = os.environ["BEFORE_SHA"]
+          old_group_map = None
+
+          if before_sha and not re.fullmatch(r"0+", before_sha):
+              try:
+                  previous_json = json.loads(
+                      git_show(before_sha, JSON_PATH)
+                  )
+                  old_group_map = previous_json.get("group_map")
+              except (subprocess.CalledProcessError, json.JSONDecodeError):
+                  old_group_map = None
+
+          if old_group_map == data["group_map"]:
+              print("group_map has not changed; nothing to do.")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+                  output.write("changed=false\n")
+              raise SystemExit(0)
+
+          # Load the current main-branch TOML version.
+          main_toml = Path(TOML_PATH).read_text(encoding="utf-8")
+
+          version_match = re.search(
+              r'(?ms)^\[package\][ \t]*\n'
+              r'(.*?)(?=^\[|\Z)',
+              main_toml
+          )
+
+          if not version_match:
+              raise ValueError("[package] section not found")
+
+          main_version_match = re.search(
+              r'(?m)^[ \t]*version[ \t]*=[ \t]*"([^"]+)"',
+              version_match.group(1)
+          )
+
+          if not main_version_match:
+              raise ValueError("version not found in [package]")
+
+          main_version = main_version_match.group(1)
+
+          # If a PR is already open, reuse its version instead of
+          # incrementing again on every update.
+          open_pr = os.environ.get("OPEN_PR", "0") == "1"
+          version = None
+
+          if open_pr:
+              try:
+                  pr_toml = git_show(PR_BRANCH, TOML_PATH)
+                  pr_section = re.search(
+                      r'(?ms)^\[package\][ \t]*\n(.*?)(?=^\[|\Z)',
+                      pr_toml
+                  )
+                  if pr_section:
+                      pr_version = re.search(
+                          r'(?m)^[ \t]*version[ \t]*=[ \t]*"([^"]+)"',
+                          pr_section.group(1)
+                      )
+                      if pr_version:
+                          version = pr_version.group(1)
+              except subprocess.CalledProcessError:
+                  pass
+
+          if version is None or version == main_version:
+              version = increment_version(main_version)
+
+          # Use one UTC timestamp for JSON, JS and TOML.
+          timestamp = datetime.now(timezone.utc).strftime(
+              "%Y-%m-%d %H:%M:%S"
+          )
+
+          # Update JSON timestamp; keep JSON ver unchanged.
+          data["timestamp"] = timestamp
+          json_file.write_text(
+              json.dumps(data, ensure_ascii=False, indent=4) + "\n",
+              encoding="utf-8"
+          )
+
+          # Replace the entire const groupMap object in the JS file.
+          js_file = Path(JS_PATH)
+          js_text = js_file.read_text(encoding="utf-8")
+
+          group_map_pattern = re.compile(
+              r'(?ms)^([ \t]*const[ \t]+groupMap[ \t]*=[ \t]*)'
+              r'\{.*?^[ \t]*\};'
+          )
+
+          js_text, group_count = group_map_pattern.subn(
+              lambda m: m.group(1) + to_js_object(data["group_map"]) + ";",
+              js_text,
+              count=1
+          )
+
+          if group_count != 1:
+              raise ValueError(
+                  "Could not uniquely find const groupMap = { ... }; "
+                  "in the JS file. No PR should be created."
+              )
+
+          timestamp_pattern = re.compile(
+              r"(?m)^[ \t]*//[ \t]*@timestamp\b.*$"
+          )
+
+          js_text, timestamp_count = timestamp_pattern.subn(
+              "// @timestamp " + timestamp,
+              js_text,
+              count=1
+          )
+
+          if timestamp_count != 1:
+              raise ValueError(
+                  "Could not find the JS // @timestamp line"
+              )
+
+          js_file.write_text(js_text, encoding="utf-8")
+
+          # Update TOML version and update timestamp default.
+          toml_text = main_toml
+          toml_text = replace_toml_value(
+              toml_text, "package", "version", version
+          )
+          toml_text = replace_toml_value(
+              toml_text,
+              "config.update_timestamp",
+              "default",
+              timestamp
+          )
+
+          Path(TOML_PATH).write_text(toml_text, encoding="utf-8")
+
+          # Signal whether the PR step should run.
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("changed=true\n")
+
+          print(f"group_map synced; version={version}")
+          print(f"timestamp={timestamp}")
+          PY
+
+      - name: Create or update pull request
+        if: steps.sync.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: automation/update-group-map
+          delete-branch: true
+          commit-message: "chore: sync group map and metadata"
+          title: "chore: sync group map and metadata"
+          body: |
+            Automatically synchronizes group_map from
+            dice/oliva/kp_all/kp_groupMap.json into
+            dice/sealpack/kp_all/scripts/a_kp_all.js.
+
+            Updates the JSON and JS timestamps, plus the
+            package version and update timestamp in info.toml.
+
+            Please review before merging.
+          add-paths: |
+            dice/oliva/kp_all/kp_groupMap.json
+            dice/sealpack/kp_all/scripts/a_kp_all.js
+            dice/sealpack/kp_all/info.toml
