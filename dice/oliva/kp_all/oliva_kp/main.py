@@ -19,7 +19,6 @@ data_loaded = False
 # 链接（们）
 GITHUB_JSON_URLS = [
     "https://gitlab.com/luj13014/alll/-/raw/main/dice/oliva/kp_all/kp_groupMap.json?ref_type=heads",
-    "https://jihulab.com/luj13014/alll/-/raw/main/dice/oliva/kp_all/kp_groupMap.json?ref_type=heads",
 ]
 
 PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -214,8 +213,16 @@ def alias_text(info) -> str:
         return f"({'|'.join(aliases)})"
     return ""
 
+def get_series_list(info):
+    s = info.get("series")
+    if not s:
+        return []
+    if isinstance(s, list):
+        return s
+    return [s]
+
 def series_hint(info) -> str:
-    series = info.get("series", [])
+    series = get_series_list(info)
     if series:
         return "\n存在合集，可用 .kp se 查询"
     return ""
@@ -237,13 +244,27 @@ def send_chunks(chunks, index, plugin_event, input_text):
         info = group["info"]
         score = group["score"]
         atxt = alias_text(info)
-        reply += f"\n【{name}{atxt}】{round(score*100)}%\n{info.get('groupNumber','')}\n{shint}\n"
+        shint = series_hint(info)
+        matched_by = group.get("matchedBy", "name")
+        matched_item = group.get("matchedItem", "")
+        via_series = (
+            f"（合集子模组「{matched_item}」所属）"
+            if matched_by == "series"
+            else ""
+        )
+        reply += (
+            f"\n【{name}{atxt}】{via_series}{round(score*100)}%\n"
+            f"{info.get('groupNumber','')}\n{shint}\n"
+        )
 
     plugin_event.reply(reply)
 
-    # 下一段延迟x秒
     if index + 1 < len(chunks):
-        threading.Timer(3.0, send_chunks, args=(chunks, index+1, plugin_event, input_text)).start()
+        threading.Timer(
+            3.0,
+            send_chunks,
+            args=(chunks, index+1, plugin_event, input_text)
+        ).start()
 
 def search_group(plugin_event, search_input):
     search_input = search_input.strip()
@@ -257,24 +278,56 @@ def search_group(plugin_event, search_input):
             for name in matches:
                 info = groupMap.get(name, {})
                 atxt = alias_text(info)
-                reply += f"反向【{name}{atxt}】\n{info.get('groupNumber','')}\n{shint}\n\n"
+                shint = series_hint(info)
+                reply += (
+                    f"反向【{name}{atxt}】\n"
+                    f"{info.get('groupNumber','')}\n{shint}\n\n"
+                )
             plugin_event.reply(reply.strip())
         else:
             plugin_event.reply(not_found_msg(search_input))
         return
 
-    # 2. 精确匹配（主名称或别名）
+    # 2a. 精确匹配主名称
     for name, info in groupMap.items():
         if name.startswith("#"):
             continue
         if name.lower() == lower:
             atxt = alias_text(info)
-            plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}\n{shint}")
+            shint = series_hint(info)
+            plugin_event.reply(
+                f"精确【{name}{atxt}】\n"
+                f"{info.get('groupNumber','')}\n{shint}"
+            )
             return
+
+    # 2b. 精确匹配别名
+    for name, info in groupMap.items():
+        if name.startswith("#"):
+            continue
         for a in info.get("aliases", []):
             if a.lower() == lower:
                 atxt = alias_text(info)
-                plugin_event.reply(f"精确【{name}{atxt}】\n{info.get('groupNumber','')}\n{shint}")
+                shint = series_hint(info)
+                plugin_event.reply(
+                    f"精确【{name}{atxt}】\n"
+                    f"{info.get('groupNumber','')}\n{shint}"
+                )
+                return
+
+    # 2c. 精确匹配 series
+    for name, info in groupMap.items():
+        if name.startswith("#"):
+            continue
+        for s in get_series_list(info):
+            if s.lower() == lower:
+                atxt = alias_text(info)
+                shint = series_hint(info)
+                via_series = f"（合集子模组「{s}」所属）"
+                plugin_event.reply(
+                    f"精确【{name}{atxt}】{via_series}\n"
+                    f"{info.get('groupNumber','')}\n{shint}"
+                )
                 return
 
     # 3. 模糊匹配（相似度 >= 0.3）
@@ -282,20 +335,47 @@ def search_group(plugin_event, search_input):
     for name, info in groupMap.items():
         if name.startswith("#"):
             continue
-        candidates = [name] + info.get("aliases", [])
+
         best_score = 0.0
-        for candidate in candidates:
-            score = get_similarity(lower, candidate.lower())
+        best_by = "name"
+        best_item = name
+
+        score = get_similarity(lower, name.lower())
+        if score > best_score:
+            best_score = score
+            best_by = "name"
+            best_item = name
+
+        for a in info.get("aliases", []):
+            score = get_similarity(lower, a.lower())
             if score > best_score:
                 best_score = score
+                best_by = "alias"
+                best_item = a
+
+        for s in get_series_list(info):
+            score = get_similarity(lower, s.lower())
+            if score > best_score:
+                best_score = score
+                best_by = "series"
+                best_item = s
+
         if best_score >= 0.3:
-            matched.append({"name": name, "info": info, "score": best_score})
-    
-    # x条一段
+            matched.append({
+                "name": name,
+                "info": info,
+                "score": best_score,
+                "matchedBy": best_by,
+                "matchedItem": best_item,
+            })
+
     if matched:
         matched.sort(key=lambda x: x["score"], reverse=True)
-        chunk_size = 5 
-        chunks = [matched[i:i+chunk_size] for i in range(0, len(matched), chunk_size)]
+        chunk_size = 5
+        chunks = [
+            matched[i:i+chunk_size]
+            for i in range(0, len(matched), chunk_size)
+        ]
         send_chunks(chunks, 0, plugin_event, search_input)
     else:
         plugin_event.reply(not_found_msg(search_input))
@@ -310,7 +390,7 @@ def search_series(plugin_event, se_keyword):
     matched_entries = []
  
     for name, info in groupMap.items():
-        series = info.get("series", [])
+        series = get_series_list(info)
         if not series:
             continue
  
@@ -336,7 +416,7 @@ def search_series(plugin_event, se_keyword):
     reply = ""
     for entry in matched_entries:
         atxt = alias_text(entry["info"])
-        series_list = "\n".join(entry["info"].get("series", []))
+        series_list = "\n".join(get_series_list(entry["info"]))
         reply += f"【{entry['name']}{atxt}】合集\n{series_list}\n\n"
  
     plugin_event.reply(reply.strip())
