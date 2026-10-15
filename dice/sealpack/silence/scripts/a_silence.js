@@ -7,7 +7,7 @@
 // 2026-03-09 17:22:53
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://hk.gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/silence/a_silence.js
+// @updateUrl    https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/scripts/a_silence.js
 // @updateUrl    https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice_common/silence/a_silence.js
 // ==/UserScript==
 

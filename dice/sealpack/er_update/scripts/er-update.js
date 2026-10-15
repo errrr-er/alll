@@ -6,7 +6,7 @@
 // @timestamp    2026-08-14 11:39:53
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
-// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/er_update/scripts/er-update.js?ref_type=heads
+// @updateUrl    https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/scripts/er-update.js
 // ==/UserScript==
 
 let ext = seal.ext.find('er-update');

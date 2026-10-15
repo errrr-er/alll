@@ -18,7 +18,8 @@ data_loaded = False
 
 # 链接（们）
 GITHUB_JSON_URLS = [
-    "https://gitlab.com/luj13014/alll/-/raw/main/dice/oliva/kp_all/kp_groupMap.json?ref_type=heads",
+    "https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/oliva/kp_all/kp_groupMap.json",
+    "https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/oliva/kp_all/kp_groupMap.json",
 ]
 
 PLUGIN_DIR = os.path.dirname(os.path.abspath(__file__))

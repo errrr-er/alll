@@ -6,7 +6,7 @@
 // @timestamp    2026-05-21 04:25:18
 // @license      Apache-2
 // @homepageURL  https://github.com/errrr-er/alll/tree/main
-// @updateUrl    https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/countlog/scripts/countlog.js?ref_type=heads
+// @updateUrl    https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/scripts/countlog.js
 // ==/UserScript==
 
 let ext = seal.ext.find('log骰点统计');
