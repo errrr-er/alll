@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp	 1792086047
+// @timestamp    1792087084
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -543,7 +543,7 @@ const groupMap = {
     "花联物语": {groupNumber:"716402709"},
     "苦昼短": {groupNumber:"139406002*下载\n1046515083*下载\n422463860*KP"},
     "荆山祭": {groupNumber:"1092255456*下载"},
-    "荣光不灭": {groupNumber:"636253864*下载(荣光不灭+陛下您这后宫不对劲)\n1103423594*荣光不灭KP",series:"陛下您这后宫不对劲"},
+    "荣光不灭": {groupNumber:"636253864*下载(荣光不灭+陛下您这后宫不对劲)\n1103423594*荣光不灭KP",series:["陛下您这后宫不对劲"]},
     "莫索里哀的圣职者": {groupNumber:"435690433",aliases:["msla"]},
     "萨里希斯之光": {groupNumber:"473373105\n930332469"},
     "落石": {groupNumber:"603178528"},

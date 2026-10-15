@@ -46,5 +46,5 @@ default = "https://jihulab.com/luj13014/alll/-/raw/main/dice/sealpack/kp_all/inf
 type = "string"
 title = "更新时间"
 description = "当前版本时间戳"
-default = "1792086047"
+default = "1792087084"
 # timestamp
