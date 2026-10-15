@@ -583,7 +583,7 @@
     "AIB": {"groupNumber":"112077093"},
     "Alset": {"groupNumber":"801933013"},
     "Antinomy": {"groupNumber":"101476385"},
-    "Ars": {"groupNumber":"Magica","aliases":["874854945"]},
+    "Ars": {"groupNumber":"874854945","aliases":["Magica"]},
     "BASH": {"groupNumber":"774156947","aliases":["燃星"]},
     "BG/GB": {"groupNumber":"1049810156\n536347944*仅BG\n602634416*仅GB(主coj)"},
     "brp": {"groupNumber":"788438516"},
