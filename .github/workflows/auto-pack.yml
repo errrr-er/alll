@@ -26,11 +26,12 @@ jobs:
           # - 中间 zip 名 != 最终文件名：自动改后缀（比如 .opk）
           PACK_TARGETS: |
             dice/oliva/kp_all/oliva_kp|oliva_kp.zip|oliva_kp.opk
-            dice\sealpack\countlog\scripts\countlog.js|seal_countlog.zip|seal_countlog.zip
-            dice\sealpack\er_update\scripts\er-update.js|seal_er-update.zip|seal_er-update.zip
-            dice\sealpack\kp_all\scripts\a_kp_all.js|seal_kp.zip|seal_kp.zip
-            dice\sealpack\pt_plan\scripts\ptplan.js|seal_ptplan.zip|seal_ptplan.zip
-            dice\sealpack\silence\scripts\a_silence.js|seal_silence.zip|seal_silence.zip
+            dice/sealpack/countlog/scripts/countlog.js|seal_countlog.zip|seal_countlog.zip
+            dice/sealpack/er_update/scripts/er-update.js|seal_er-update.zip|seal_er-update.zip
+            dice/sealpack/kp_all/scripts/a_kp_all.js|seal_kp.zip|seal_kp.zip
+            dice/sealpack/pt_plan/scripts/ptplan.js|seal_ptplan.zip|seal_ptplan.zip
+            dice/sealpack/silence/scripts/a_silence.js|seal_silence.zip|seal_silence.zip
+            
         run: |
           python - <<'PY'
           import os
