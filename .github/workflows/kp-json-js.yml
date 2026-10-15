@@ -306,7 +306,7 @@ jobs:
 
           js_text, n = re.subn(
               r"(?m)^[ \t]*//[ \t]*@timestamp\b.*$",
-              "// @timestamp     " + timestamp,
+              "// @timestamp    " + timestamp,
               js_text, count=1,
           )
           if n != 1:
