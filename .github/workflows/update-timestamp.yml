@@ -2,8 +2,11 @@ name: Update Timestamp
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'dice\sealpack\countlog\scripts\countlog.js'
+      - 'dice\sealpack\er_update\scripts\er-update.js'
+      - 'dice\sealpack\pt_plan\scripts\ptplan.js'
+      - 'dice\sealpack\silence\scripts\a_silence.js'
   workflow_dispatch:
 
 permissions:
