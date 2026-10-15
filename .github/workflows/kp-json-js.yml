@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'dice/oliva/kp_all/kp_groupMap.json'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -53,7 +54,7 @@ jobs:
           import os
           import re
           import subprocess
-          from datetime import datetime, timezone
+          import time
           from pathlib import Path
 
           JSON_PATH = "dice/oliva/kp_all/kp_groupMap.json"
@@ -68,7 +69,10 @@ jobs:
               )
 
           def increment_version(version):
-              match = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)", version.strip())
+              match = re.fullmatch(
+                  r"(\d+)\.(\d+)\.(\d+)",
+                  version.strip()
+              )
               if not match:
                   raise ValueError(
                       f"Unsupported version format: {version!r}"
@@ -87,27 +91,74 @@ jobs:
 
               return f"{major}.{minor}.{patch}"
 
-          def replace_toml_value(content, section, key, value):
+          def get_toml_value(content, section, key):
               section_pattern = (
-                  r"(?m)^[ \t]*\[" + re.escape(section) + r"\][ \t]*$"
+                  r"(?m)^[ \t]*\["
+                  + re.escape(section)
+                  + r"\][ \t]*$"
               )
               section_match = re.search(section_pattern, content)
 
               if not section_match:
-                  raise ValueError(f"TOML section not found: [{section}]")
+                  raise ValueError(
+                      f"TOML section not found: [{section}]"
+                  )
 
               start = section_match.end()
-              next_section = re.search(r"(?m)^[ \t]*\[", content[start:])
+              next_section = re.search(
+                  r"(?m)^[ \t]*\[",
+                  content[start:]
+              )
               end = (
                   start + next_section.start()
                   if next_section
                   else len(content)
               )
-
               block = content[start:end]
+
               key_pattern = (
-                  r"(?m)^([ \t]*" + re.escape(key)
-                  + r"[ \t]*=[ \t]*)"
+                  r'(?m)^[ \t]*'
+                  + re.escape(key)
+                  + r'[ \t]*=[ \t]*"([^"]*)"'
+              )
+              match = re.search(key_pattern, block)
+
+              if not match:
+                  raise ValueError(
+                      f'Key "{key}" not found in [{section}]'
+                  )
+
+              return match.group(1)
+
+          def replace_toml_value(content, section, key, value):
+              section_pattern = (
+                  r"(?m)^[ \t]*\["
+                  + re.escape(section)
+                  + r"\][ \t]*$"
+              )
+              section_match = re.search(section_pattern, content)
+
+              if not section_match:
+                  raise ValueError(
+                      f"TOML section not found: [{section}]"
+                  )
+
+              start = section_match.end()
+              next_section = re.search(
+                  r"(?m)^[ \t]*\[",
+                  content[start:]
+              )
+              end = (
+                  start + next_section.start()
+                  if next_section
+                  else len(content)
+              )
+              block = content[start:end]
+
+              key_pattern = (
+                  r'(?m)^([ \t]*'
+                  + re.escape(key)
+                  + r'[ \t]*=[ \t]*)'
                   + r'("(?:\\.|[^"\\])*"|[^#\r\n]*)'
               )
 
@@ -120,7 +171,7 @@ jobs:
 
               if count != 1:
                   raise ValueError(
-                      f"Key {key!r} not found in [{section}]"
+                      f'Key "{key}" not found in [{section}]'
                   )
 
               return content[:start] + updated + content[end:]
@@ -132,7 +183,7 @@ jobs:
                   indent=4
               )
 
-              # Unquote ordinary JavaScript identifier keys only.
+              # Remove quotes only from valid JS identifier keys.
               text = re.sub(
                   r'(?m)^(\s*)"([A-Za-z_$][A-Za-z0-9_$]*)":',
                   r'\1\2:',
@@ -140,14 +191,18 @@ jobs:
               )
               return text
 
-          # Read the current JSON data.
+          # Read JSON and validate its structure.
           json_file = Path(JSON_PATH)
-          data = json.loads(json_file.read_text(encoding="utf-8"))
+          json_text = json_file.read_text(encoding="utf-8")
+          data = json.loads(json_text)
 
           if "group_map" not in data:
               raise ValueError("JSON does not contain group_map")
 
-          # Compare group_map with the version before this push.
+          if not isinstance(data["group_map"], dict):
+              raise ValueError("group_map must be a JSON object")
+
+          # Only sync when group_map actually changes.
           before_sha = os.environ["BEFORE_SHA"]
           old_group_map = None
 
@@ -157,75 +212,67 @@ jobs:
                       git_show(before_sha, JSON_PATH)
                   )
                   old_group_map = previous_json.get("group_map")
-              except (subprocess.CalledProcessError, json.JSONDecodeError):
+              except (
+                  subprocess.CalledProcessError,
+                  json.JSONDecodeError,
+                  AttributeError
+              ):
                   old_group_map = None
 
           if old_group_map == data["group_map"]:
-              print("group_map has not changed; nothing to do.")
+              print("group_map has not changed; skipping.")
               with open(os.environ["GITHUB_OUTPUT"], "a") as output:
                   output.write("changed=false\n")
               raise SystemExit(0)
 
-          # Load the current main-branch TOML version.
+          # Read main version.
           main_toml = Path(TOML_PATH).read_text(encoding="utf-8")
-
-          version_match = re.search(
-              r'(?ms)^\[package\][ \t]*\n'
-              r'(.*?)(?=^\[|\Z)',
-              main_toml
+          main_version = get_toml_value(
+              main_toml, "package", "version"
           )
 
-          if not version_match:
-              raise ValueError("[package] section not found")
-
-          main_version_match = re.search(
-              r'(?m)^[ \t]*version[ \t]*=[ \t]*"([^"]+)"',
-              version_match.group(1)
-          )
-
-          if not main_version_match:
-              raise ValueError("version not found in [package]")
-
-          main_version = main_version_match.group(1)
-
-          # If a PR is already open, reuse its version instead of
-          # incrementing again on every update.
+          # Reuse the existing PR version when its PR is open.
           open_pr = os.environ.get("OPEN_PR", "0") == "1"
           version = None
 
           if open_pr:
               try:
                   pr_toml = git_show(PR_BRANCH, TOML_PATH)
-                  pr_section = re.search(
-                      r'(?ms)^\[package\][ \t]*\n(.*?)(?=^\[|\Z)',
-                      pr_toml
+                  version = get_toml_value(
+                      pr_toml, "package", "version"
                   )
-                  if pr_section:
-                      pr_version = re.search(
-                          r'(?m)^[ \t]*version[ \t]*=[ \t]*"([^"]+)"',
-                          pr_section.group(1)
-                      )
-                      if pr_version:
-                          version = pr_version.group(1)
-              except subprocess.CalledProcessError:
-                  pass
+              except (
+                  subprocess.CalledProcessError,
+                  ValueError
+              ):
+                  version = None
 
           if version is None or version == main_version:
               version = increment_version(main_version)
 
-          # Use one UTC timestamp for JSON, JS and TOML.
-          timestamp = datetime.now(timezone.utc).strftime(
-              "%Y-%m-%d %H:%M:%S"
+          # Unix timestamp in seconds, e.g. 1790523146.
+          timestamp = str(int(time.time()))
+
+          # Update ONLY the numeric JSON timestamp.
+          # All other JSON text, formatting, and ver remain untouched.
+          timestamp_pattern = re.compile(
+              r'("timestamp"\s*:\s*)\d+'
           )
 
-          # Update JSON timestamp; keep JSON ver unchanged.
-          data["timestamp"] = timestamp
-          json_file.write_text(
-              json.dumps(data, ensure_ascii=False, indent=4) + "\n",
-              encoding="utf-8"
+          updated_json_text, timestamp_count = (
+              timestamp_pattern.subn(
+                  lambda m: m.group(1) + timestamp,
+                  json_text,
+                  count=1
+              )
           )
 
-          # Replace the entire const groupMap object in the JS file.
+          if timestamp_count != 1:
+              raise ValueError(
+                  "Could not find a numeric JSON timestamp"
+              )
+
+          # Replace the complete JS groupMap object.
           js_file = Path(JS_PATH)
           js_text = js_file.read_text(encoding="utf-8")
 
@@ -235,38 +282,44 @@ jobs:
           )
 
           js_text, group_count = group_map_pattern.subn(
-              lambda m: m.group(1) + to_js_object(data["group_map"]) + ";",
+              lambda m: (
+                  m.group(1)
+                  + to_js_object(data["group_map"])
+                  + ";"
+              ),
               js_text,
               count=1
           )
 
           if group_count != 1:
               raise ValueError(
-                  "Could not uniquely find const groupMap = { ... }; "
-                  "in the JS file. No PR should be created."
+                  "Could not find const groupMap = { ... };"
               )
 
-          timestamp_pattern = re.compile(
+          # Update the JS timestamp; leave JS ver untouched.
+          js_timestamp_pattern = re.compile(
               r"(?m)^[ \t]*//[ \t]*@timestamp\b.*$"
           )
 
-          js_text, timestamp_count = timestamp_pattern.subn(
-              "// @timestamp " + timestamp,
-              js_text,
-              count=1
+          js_text, js_timestamp_count = (
+              js_timestamp_pattern.subn(
+                  "// @timestamp " + timestamp,
+                  js_text,
+                  count=1
+              )
           )
 
-          if timestamp_count != 1:
+          if js_timestamp_count != 1:
               raise ValueError(
                   "Could not find the JS // @timestamp line"
               )
 
-          js_file.write_text(js_text, encoding="utf-8")
-
-          # Update TOML version and update timestamp default.
-          toml_text = main_toml
+          # Update TOML version and timestamp default.
           toml_text = replace_toml_value(
-              toml_text, "package", "version", version
+              main_toml,
+              "package",
+              "version",
+              version
           )
           toml_text = replace_toml_value(
               toml_text,
@@ -275,9 +328,17 @@ jobs:
               timestamp
           )
 
-          Path(TOML_PATH).write_text(toml_text, encoding="utf-8")
+          # Write files only after all replacements succeeded.
+          json_file.write_text(
+              updated_json_text,
+              encoding="utf-8"
+          )
+          js_file.write_text(js_text, encoding="utf-8")
+          Path(TOML_PATH).write_text(
+              toml_text,
+              encoding="utf-8"
+          )
 
-          # Signal whether the PR step should run.
           with open(os.environ["GITHUB_OUTPUT"], "a") as output:
               output.write("changed=true\n")
 
@@ -300,8 +361,8 @@ jobs:
             dice/oliva/kp_all/kp_groupMap.json into
             dice/sealpack/kp_all/scripts/a_kp_all.js.
 
-            Updates the JSON and JS timestamps, plus the
-            package version and update timestamp in info.toml.
+            Updates JSON and JS timestamps using Unix time
+            in seconds, and updates info.toml metadata.
 
             Please review before merging.
           add-paths: |
