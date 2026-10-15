@@ -3,11 +3,10 @@ name: Update Timestamp
 on:
   push:
     paths:
-      - 'dice\sealpack\countlog\scripts\countlog.js'
-      - 'dice\sealpack\er_update\scripts\er-update.js'
-      - 'dice\sealpack\pt_plan\scripts\ptplan.js'
-      - 'dice\sealpack\silence\scripts\a_silence.js'
-  workflow_dispatch:
+      - 'dice/sealpack/countlog/scripts/countlog.js'
+      - 'dice/sealpack/er_update/scripts/er-update.js'
+      - 'dice/sealpack/pt_plan/scripts/ptplan.js'
+      - 'dice/sealpack/silence/scripts/a_silence.js'
 
 permissions:
   contents: write
@@ -38,7 +37,7 @@ jobs:
           import os
           import re
           import subprocess
-          from datetime import datetime, timezone
+          import time
           from pathlib import Path
 
           # ==========================================
@@ -48,30 +47,30 @@ jobs:
           PAIRS = [
               {
                   "name": "countlog",
-                  "js": "dice\sealpack\countlog\scripts\countlog.js",
-                  "toml": "dice\sealpack\countlog\info.toml",
+                  "js": "dice/sealpack/countlog/scripts/countlog.js",
+                  "toml": "dice/sealpack/countlog/info.toml",
               },
 
               {
                   "name": "er_update",
-                  "js": "dice\sealpack\er_update\scripts\er-update.js",
-                  "toml": "dice\sealpack\er_update\info.toml",
+                  "js": "dice/sealpack/er_update/scripts/er-update.js",
+                  "toml": "dice/sealpack/er_update/info.toml",
               },
 
               {
                   "name": "pt_plan",
-                  "js": "dice\sealpack\pt_plan\scripts\ptplan.js",
-                  "toml": "dice\sealpack\pt_plan\info.toml",
+                  "js": "dice/sealpack/pt_plan/scripts/ptplan.js",
+                  "toml": "dice/sealpack/pt_plan/info.toml",
               },
 
               {
                   "name": "silence",
-                  "js": "dice\sealpack\silence\scripts\a_silence.js",
-                  "toml": "dice\sealpack\silence\info.toml",
+                  "js": "dice/sealpack/silence/scripts/a_silence.js",
+                  "toml": "dice/sealpack/silence/info.toml",
               },
           ]
 
-          BRANCH = "automation/update-Timestamp"
+          BRANCH = "automation/update-timestamp"
 
           def git(*args, check=True):
               return subprocess.run(
@@ -92,6 +91,8 @@ jobs:
               return result.stdout if result.returncode == 0 else None
 
           def normalize_js(content):
+              # 只去掉 @timestamp，避免自己改自己形成死循环。
+              # @updateUrl 保留：改镜像算业务变化，要 bump version。
               if content is None:
                   return None
               return re.sub(
@@ -204,6 +205,8 @@ jobs:
               changed_paths = set(output.splitlines())
 
           # 只处理 JS 业务内容实际变化的文件对。
+          # @timestamp 变化不算业务变化；
+          # @updateUrl 变化算业务变化。
           changed_groups = set()
 
           for pair in PAIRS:
@@ -286,10 +289,8 @@ jobs:
                   f.write("has_changes=false\n")
               raise SystemExit(0)
 
-          # 统一使用 UTC 时间戳。
-          now = datetime.now(timezone.utc).strftime(
-              "%Y-%m-%dT%H:%M:%SZ"
-          )
+          # 统一使用 Unix 秒时间戳。
+          timestamp = str(int(time.time()))
 
           for pair in PAIRS:
               if pair["name"] not in selected:
@@ -304,16 +305,16 @@ jobs:
               # 新业务修改使用最新 timestamp。
               # 仅为保留已有 PR 的文件对，沿用其 timestamp。
               if pair["name"] in changed_groups:
-                  timestamp = now
+                  ts = timestamp
               elif branch_exists:
                   js_pr = read_ref(
                       f"origin/{BRANCH}", pair["js"]
                   )
-                  timestamp = get_js_timestamp(js_pr)
+                  ts = get_js_timestamp(js_pr)
               else:
-                  timestamp = now
+                  ts = timestamp
 
-              js = set_js_timestamp(js, timestamp)
+              js = set_js_timestamp(js, ts)
 
               # version 始终以 main 当前版本为基准，
               # 不因同一 PR 的多次更新反复递增。
@@ -328,7 +329,7 @@ jobs:
               )
               toml = set_toml_field(
                   toml, "config.update_timestamp",
-                  "default", timestamp
+                  "default", ts
               )
 
               js_path.write_text(js, encoding="utf-8")
@@ -336,7 +337,7 @@ jobs:
 
               print(
                   f"{pair['name']}: "
-                  f"version={new_version}, timestamp={timestamp}"
+                  f"version={new_version}, timestamp={ts}"
               )
 
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
@@ -349,10 +350,19 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           base: main
-          branch: automation/update-Timestamp
+          branch: automation/update-timestamp
           delete-branch: true
           title: "chore: update Timestamp"
           commit-message: "chore: update timestamps and versions"
+          add-paths: |
+            dice/sealpack/countlog/scripts/countlog.js
+            dice/sealpack/countlog/info.toml
+            dice/sealpack/er_update/scripts/er-update.js
+            dice/sealpack/er_update/info.toml
+            dice/sealpack/pt_plan/scripts/ptplan.js
+            dice/sealpack/pt_plan/info.toml
+            dice/sealpack/silence/scripts/a_silence.js
+            dice/sealpack/silence/info.toml
           body: |
             Automatically updates Timestamp for changed JS files.
             Please review before merging.
