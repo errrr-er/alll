@@ -734,23 +734,48 @@ function findSimilarGroup(input) {
     for (const groupName in groupMap) {
         const groupInfo = groupMap[groupName];
         let highestScore = 0;
+        let matchedBy = 'name';
+        let matchedItem = groupName;
 
         const mainScore = getSimilarity(input, groupName.toLowerCase());
-        highestScore = Math.max(highestScore, mainScore);
+        if (mainScore > highestScore) {
+            highestScore = mainScore;
+            matchedBy = 'name';
+            matchedItem = groupName;
+        }
 
         if (groupInfo.aliases) {
             for (const alias of groupInfo.aliases) {
                 const aliasScore = getSimilarity(input, alias.toLowerCase());
-                highestScore = Math.max(highestScore, aliasScore);
+                if (aliasScore > highestScore) {
+                    highestScore = aliasScore;
+                    matchedBy = 'alias';
+                    matchedItem = alias;
+                }
             }
         }
 
-		// 相似度高于或等于
+        // 兼容 series 是字符串或数组
+        const seriesList = Array.isArray(groupInfo.series)
+            ? groupInfo.series
+            : (groupInfo.series ? [groupInfo.series] : []);
+
+        for (const s of seriesList) {
+            const seriesScore = getSimilarity(input, s.toLowerCase());
+            if (seriesScore > highestScore) {
+                highestScore = seriesScore;
+                matchedBy = 'series';
+                matchedItem = s;
+            }
+        }
+
         if (highestScore >= 0.3) {
             matchedGroups.push({
                 name: groupName,
                 info: groupInfo,
-                score: highestScore
+                score: highestScore,
+                matchedBy: matchedBy,
+                matchedItem: matchedItem
             });
         }
     }
@@ -886,17 +911,21 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
     // 查找匹配的群组
     let foundGroup = null;
     let exactMatch = false;
-    
+    let matchedBy = 'name';
+    let matchedItem = '';
+
     // 1. 检查主关键词（不区分大小写）
     const lowerInput = input.toLowerCase();
     for (const groupName in groupMap) {
         if (groupName.toLowerCase() === lowerInput) {
             foundGroup = { match: { name: groupName, info: groupMap[groupName] }, score: 1 };
             exactMatch = true;
+            matchedBy = 'name';
+            matchedItem = groupName;
             break;
         }
     }
-    
+
     // 2. 检查所有群组的别名（不区分大小写）
     if (!foundGroup) {
         for (const groupName in groupMap) {
@@ -906,6 +935,8 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
                     if (alias.toLowerCase() === lowerInput) {
                         foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
                         exactMatch = true;
+                        matchedBy = 'alias';
+                        matchedItem = alias;
                         break;
                     }
                 }
@@ -913,41 +944,67 @@ cmdKp.solve = (ctx, msg, cmdArgs) => {
             if (exactMatch) break;
         }
     }
-    
-    // 3. 如果没有精确匹配，尝试近似匹配
+
+    // 3. 检查所有群组的 series（不区分大小写，兼容字符串/数组）
+    if (!foundGroup) {
+        for (const groupName in groupMap) {
+            const groupInfo = groupMap[groupName];
+            const seriesList = Array.isArray(groupInfo.series)
+                ? groupInfo.series
+                : (groupInfo.series ? [groupInfo.series] : []);
+            for (const s of seriesList) {
+                if (s.toLowerCase() === lowerInput) {
+                    foundGroup = { match: { name: groupName, info: groupInfo }, score: 1 };
+                    exactMatch = true;
+                    matchedBy = 'series';
+                    matchedItem = s;
+                    break;
+                }
+            }
+            if (exactMatch) break;
+        }
+    }
+
+    // 4. 如果没有精确匹配，尝试近似匹配
     if (!foundGroup) {
         const matchedGroups = findSimilarGroup(input);
         if (matchedGroups) {
-			const chunkSize = 5; // 每段显示x个结果
-			const chunks = [];
+            const chunkSize = 5; // 每段显示x个结果
+            const chunks = [];
             for (let i = 0; i < matchedGroups.length; i += chunkSize) {
-            chunks.push(matchedGroups.slice(i, i + chunkSize));
-        	}
-			// 分段发送
-			const sendChunk = (index) => {
-				if (index >= chunks.length) return;
-				const chunk = chunks[index];
-				let replyText = chunks.length > 1
-        			? `近似【${input}】（${index + 1}/${chunks.length}）`
-        			: `近似【${input}】`;
+                chunks.push(matchedGroups.slice(i, i + chunkSize));
+            }
+            // 分段发送
+            const sendChunk = (index) => {
+                if (index >= chunks.length) return;
+                const chunk = chunks[index];
+                let replyText = chunks.length > 1
+                    ? `近似【${input}】（${index + 1}/${chunks.length}）`
+                    : `近似【${input}】`;
 
-				chunk.forEach(group => {
-        			const aliasText = getAliasText(group.info);
-					const seriesHint = getSeriesHint(group.info);
-					replyText += `\n【${group.name}${aliasText}】${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n${seriesHint}\n`;
-				});
-				seal.replyToSender(ctx, msg, replyText);
-				setTimeout(() => sendChunk(index + 1), 3000);  // x秒后发下一段
-			};
-			sendChunk(0);  // 开始发送第一段
+                chunk.forEach(group => {
+                    const aliasText = getAliasText(group.info);
+                    const seriesHint = getSeriesHint(group.info);
+                    const viaSeries = group.matchedBy === 'series'
+                        ? `（合集子模组「${group.matchedItem}」所属）`
+                        : '';
+                    replyText += `\n【${group.name}${aliasText}】${viaSeries}${Math.round(group.score * 100)}%\n${group.info.groupNumber}\n${seriesHint}\n`;
+                });
+                seal.replyToSender(ctx, msg, replyText);
+                setTimeout(() => sendChunk(index + 1), 3000);  // x秒后发下一段
+            };
+            sendChunk(0);  // 开始发送第一段
+        } else {
+            replyNotFound(ctx, msg, input);
+        }
     } else {
-        replyNotFound(ctx, msg, input);
-    }
-} else {
         // 精确匹配输出
-		const aliasText = getAliasText(foundGroup.match.info);
-		const seriesHint = getSeriesHint(foundGroup.match.info);
-		seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】\n${foundGroup.match.info.groupNumber}\n${seriesHint}`);
+        const aliasText = getAliasText(foundGroup.match.info);
+        const seriesHint = getSeriesHint(foundGroup.match.info);
+        const viaSeries = matchedBy === 'series'
+            ? `（合集子模组「${matchedItem}」所属）`
+            : '';
+        seal.replyToSender(ctx, msg, `精确【${foundGroup.match.name}${aliasText}】${viaSeries}\n${foundGroup.match.info.groupNumber}\n${seriesHint}`);
     }
 
     return ret;
