@@ -76,7 +76,7 @@ jobs:
           def replace_js_update_url(content: str, new_url: str):
               pattern = re.compile(r"(?m)^[ \t]*//[ \t]*@updateUrl\b.*$")
               new_content, n = pattern.subn(
-                  "// @updateUrl  " + new_url,
+                  "// @updateUrl    " + new_url,
                   content, count=1,
               )
               return new_content, n
