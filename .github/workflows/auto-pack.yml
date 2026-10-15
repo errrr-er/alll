@@ -20,18 +20,15 @@ jobs:
 
       - name: Pack stable files
         env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
           # 格式：源路径|中间zip名|最终文件名
-          # - 源为文件：单文件打包
-          # - 源为目录：递归、全部平铺到 zip 根目录
-          # - 中间 zip 名 != 最终文件名：自动改后缀（比如 .opk）
           PACK_TARGETS: |
-            dice/oliva/kp_all/oliva_kp|oliva_kp.zip|oliva_kp.opk
-            dice/sealpack/countlog/scripts/countlog.js|seal_countlog.zip|seal_countlog.zip
-            dice/sealpack/er_update/scripts/er-update.js|seal_er-update.zip|seal_er-update.zip
             dice/sealpack/kp_all/scripts/a_kp_all.js|seal_kp.zip|seal_kp.zip
-            dice/sealpack/pt_plan/scripts/ptplan.js|seal_ptplan.zip|seal_ptplan.zip
-            dice/sealpack/silence/scripts/a_silence.js|seal_silence.zip|seal_silence.zip
-            
+            call_of_cthulhu/kp/oliva_kp_all|oliva_kp.zip|oliva_kp.opk
+            dice_common/silence/a_silence.js|seal_silence.zip|seal_silence.zip
+            dice_common/multi_reply/multi.html|seal_multi.zip|seal_multi.zip
+            dice_common/record_result/countlog.js|seal_countlog.zip|seal_countlog.zip
+            dice_common/pt_plan/ptplan.js|seal_ptplan.zip|seal_ptplan.zip
         run: |
           python - <<'PY'
           import os
@@ -41,16 +38,16 @@ jobs:
           from collections import Counter
           from pathlib import Path
 
-          # 源文件需静置多久才打包
-          WAIT_SECONDS = 24 * 60 * 60
-          # 距上次打包最多拖多久（兜底）
-          FORCE_SECONDS = 24 * 60 * 60
+          WAIT_SECONDS  = 24 * 60 * 60   # 源文件需静置多久才打包
+          FORCE_SECONDS = 24 * 60 * 60   # 距上次打包最多拖多久（兜底）
+
+          # 手动触发时强制打包（忽略 24h 规则），需要的话保留；不需要可以删
+          FORCE_MANUAL = os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch"
 
           now = int(time.time())
           output_dir = Path("dice/auto_pack")
           output_dir.mkdir(parents=True, exist_ok=True)
 
-          # 固定 zip 内部时间戳，保证内容不变时 zip 字节流也不变
           FIXED_DATE = (2020, 1, 1, 0, 0, 0)
 
           def git_last_change(path: Path):
@@ -64,7 +61,6 @@ jobs:
               return int(t) if t else None
 
           def collect_files(source: Path):
-              """返回 [(zip 内路径, bytes)]，目录会被平铺到根目录"""
               if source.is_file():
                   return [(source.name, source.read_bytes())]
               if source.is_dir():
@@ -129,42 +125,52 @@ jobs:
                   print(f"不是文件也不是目录，跳过：{source_text}")
                   continue
 
-              # 平铺后重名保护
               names = [n for n, _ in items]
               dups = [n for n, c in Counter(names).items() if c > 1]
               if dups:
                   print(f"平铺后重名，跳过：{source_text} -> {dups}")
                   continue
 
-              zip_path = output_dir / zip_name
+              zip_path   = output_dir / zip_name
               final_path = output_dir / final_name
+
+              # 最终产物是否存在（先看改名后的，再看中间 zip）
+              exists = final_path.exists() or zip_path.exists()
               check_path = final_path if final_path.exists() else zip_path
 
-              # 1. 内容一致 → 跳过
+              # 1. 不存在 → 直接打（首次/新目录，不看时间）
+              if not exists:
+                  write_zip(zip_path, items)
+                  print(f"已生成（首次）：{zip_path.as_posix()}（{len(items)} 个文件）")
+                  if final_path.name != zip_path.name:
+                      if final_path.exists():
+                          final_path.unlink()
+                      os.replace(zip_path, final_path)
+                      print(f"已重命名为：{final_path.as_posix()}")
+                  continue
+
+              # 2. 存在、内容一致 → 跳过
               if zip_matches(check_path, items):
                   print(f"内容未变，跳过：{source_text}")
                   continue
 
-              # 2. 拿到源文件、zip 的 git 时间
+              # 3. 存在、内容不一致 → 判断时间
               source_last = git_last_change(source)
               if source_last is None:
                   print(f"无 git 记录，跳过：{source_text}")
                   continue
 
-              zip_last = None
-              for p in (final_path, zip_path):
-                  if p.exists():
-                      zip_last = git_last_change(p)
-                      break
+              zip_last = git_last_change(check_path)
 
-              # 3. 判断能不能打包
-              source_stable = (now - source_last) >= WAIT_SECONDS
-              if zip_last is None:
-                  # 首次打包：只等源文件稳定
-                  ready = source_stable
-                  reason = "源文件已静置满 24 小时（首次打包）"
+              if FORCE_MANUAL:
+                  ready = True
+                  reason = "手动强制打包"
               else:
-                  zip_overdue = (now - zip_last) >= FORCE_SECONDS
+                  source_stable = (now - source_last) >= WAIT_SECONDS
+                  zip_overdue = (
+                      zip_last is not None
+                      and (now - zip_last) >= FORCE_SECONDS
+                  )
                   ready = source_stable or zip_overdue
                   if source_stable:
                       reason = "源文件已静置满 24 小时"
@@ -186,10 +192,8 @@ jobs:
                       )
                   continue
 
-              # 4. 打包
               write_zip(zip_path, items)
               print(f"已生成：{zip_path.as_posix()}（{len(items)} 个文件，原因：{reason}）")
-
               if final_path.name != zip_path.name:
                   if final_path.exists():
                       final_path.unlink()
