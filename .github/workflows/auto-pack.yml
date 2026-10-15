@@ -23,12 +23,14 @@ jobs:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           # 格式：源路径|中间zip名|最终文件名
           PACK_TARGETS: |
+            dice/oliva/kp_all/oliva_kp|oliva_kp.zip|oliva_kp.opk
+
+            dice/sealpack/countlog/scripts/countlog.js|seal_countlog.zip|seal_countlog.zip
+            dice/sealpack/er_update/scripts/er-update.js|seal_update.zip|seal_update.zip
             dice/sealpack/kp_all/scripts/a_kp_all.js|seal_kp.zip|seal_kp.zip
-            call_of_cthulhu/kp/oliva_kp_all|oliva_kp.zip|oliva_kp.opk
-            dice_common/silence/a_silence.js|seal_silence.zip|seal_silence.zip
-            dice_common/multi_reply/multi.html|seal_multi.zip|seal_multi.zip
-            dice_common/record_result/countlog.js|seal_countlog.zip|seal_countlog.zip
-            dice_common/pt_plan/ptplan.js|seal_ptplan.zip|seal_ptplan.zip
+            dice/sealpack/pt_plan/scripts/ptplan.js|seal_ptplan.zip|seal_ptplan.zip
+            dice/sealpack/silence/scripts/a_silence.js|seal_silence.zip|seal_silence.zip
+
         run: |
           python - <<'PY'
           import os
