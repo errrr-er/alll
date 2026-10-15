@@ -34,3 +34,15 @@ screenshots = []
 category = "tool"
 
 [config]
+
+[config.update_url]
+type = "string"
+title = "更新地址"
+description = "从XX抓取"
+default = ""
+
+[config.update_timestamp]
+type = "string"
+title = "更新时间"
+description = "当前版本时间戳"
+default = "1787056860"
