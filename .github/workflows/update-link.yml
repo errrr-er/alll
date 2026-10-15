@@ -1,0 +1,204 @@
+name: Apply Mirror to URLs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fetch existing PR branch
+        run: |
+          git fetch origin \
+            automation/apply-mirror:refs/remotes/origin/automation/apply-mirror \
+            2>/dev/null || true
+
+      - name: Apply mirror to URLs
+        id: apply
+        env:
+          # ============================================================
+          # 镜像前缀：填了就 "镜像+原始URL"，留空 "" 就用原始 URL
+          # 记得结尾带斜杠，例：https://gh-proxy.org/
+          # ============================================================
+          MIRROR: 'https://gh-proxy.org/'
+
+          # ============================================================
+          # 要改的文件清单
+          # 格式：类型|文件路径|原始URL
+          #   类型 = py / js / toml
+          #   py   → 覆盖 GITHUB_JSON_URLS = [ ... ]（镜像优先，原始兜底）
+          #   js   → 覆盖 // @updateUrl 那一行
+          #   toml → 覆盖 [config.update_url] 段的 default = "..."
+          # ============================================================
+          TARGETS: |
+            py|dice\oliva\kp_all\oliva_kp\main.py|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/oliva/kp_all/kp_groupMap.json
+
+            js|dice\sealpack\countlog\scripts\countlog.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/scripts/countlog.js
+            toml|dice\sealpack\countlog\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/info.toml
+
+            js|dice\sealpack\er_update\scripts\er-update.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/scripts/er-update.js
+            toml|dice\sealpack\er_update\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/info.toml
+
+            js|dice\sealpack\kp_all\scripts\a_kp_all.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/scripts/a_kp_all.js
+            toml|dice\sealpack\kp_all\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/info.toml
+
+            js|dice\sealpack\pt_plan\scripts\ptplan.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/scripts/ptplan.js
+            toml|dice\sealpack\pt_plan\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/info.toml
+
+            js|dice\sealpack\silence\scripts\a_silence.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/scripts/a_silence.js
+            toml|dice\sealpack\silence\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/info.toml
+
+        run: |
+          python3 <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          mirror = os.environ.get("MIRROR", "").strip()
+          targets_raw = os.environ.get("TARGETS", "")
+
+          def with_mirror(url: str) -> str:
+              if not mirror:
+                  return url
+              return mirror + url
+
+          def replace_js_update_url(content: str, new_url: str):
+              pattern = re.compile(r"(?m)^[ \t]*//[ \t]*@updateUrl\b.*$")
+              new_content, n = pattern.subn(
+                  "// @updateUrl  " + new_url,
+                  content, count=1,
+              )
+              return new_content, n
+
+          def replace_toml_update_url(content: str, new_url: str):
+              sec = re.search(
+                  r"(?m)^[ \t]*\[config\.update_url\][ \t]*$",
+                  content,
+              )
+              if not sec:
+                  return content, 0
+              start = sec.end()
+              nxt = re.search(r"(?m)^[ \t]*\[", content[start:])
+              end = start + nxt.start() if nxt else len(content)
+              block = content[start:end]
+
+              new_block, n = re.subn(
+                  r'(?m)^([ \t]*default[ \t]*=[ \t]*)"[^"]*"',
+                  lambda m: m.group(1) + '"' + new_url + '"',
+                  block, count=1,
+              )
+              if n != 1:
+                  return content, 0
+              return content[:start] + new_block + content[end:], 1
+
+          def replace_py_urls(content: str, urls):
+              pattern = re.compile(
+                  r"(?ms)^([ \t]*GITHUB_JSON_URLS[ \t]*=[ \t]*\[)"
+                  r".*?"
+                  r"(\])"
+              )
+              def repl(m):
+                  items = "\n".join(f'    "{u}",' for u in urls)
+                  return m.group(1) + "\n" + items + "\n" + m.group(2)
+              new_content, n = pattern.subn(repl, content, count=1)
+              return new_content, n
+
+          changed_files = []
+
+          for raw_line in targets_raw.splitlines():
+              line = raw_line.strip()
+              if not line or line.startswith("#"):
+                  continue
+
+              parts = [p.strip() for p in line.split("|")]
+              if len(parts) != 3:
+                  print(f"[跳过] 格式错误（需 类型|路径|URL）：{line}")
+                  continue
+
+              kind, file_path, url = parts
+              kind = kind.lower()
+
+              if kind not in ("py", "js", "toml"):
+                  print(f"[跳过] 未知类型 {kind}：{line}")
+                  continue
+
+              f = Path(file_path)
+              if not f.is_file():
+                  print(f"[跳过] 文件不存在：{file_path}")
+                  continue
+
+              original = f.read_text(encoding="utf-8")
+              final_url = with_mirror(url)
+
+              if kind == "py":
+                  urls = [final_url] if not mirror else [final_url, url]
+                  new_content, n = replace_py_urls(original, urls)
+              elif kind == "js":
+                  new_content, n = replace_js_update_url(original, final_url)
+              else:  # toml
+                  new_content, n = replace_toml_update_url(original, final_url)
+
+              if n != 1:
+                  print(f"[跳过] 未能定位替换点：{file_path}（类型 {kind}）")
+                  continue
+
+              if new_content == original:
+                  print(f"[无变化] {file_path}")
+                  continue
+
+              f.write_text(new_content, encoding="utf-8")
+              changed_files.append(file_path)
+              print(f"[已改] {file_path}  ->  {final_url}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"changed={'true' if changed_files else 'false'}\n")
+              out.write(f"count={len(changed_files)}\n")
+
+          print(f"\n共修改 {len(changed_files)} 个文件")
+          PY
+
+      - name: Create or update pull request
+        id: cpr
+        if: steps.apply.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: automation/apply-mirror
+          delete-branch: true
+          commit-message: "chore: apply mirror to update URLs"
+          title: "chore: apply mirror to update URLs"
+          body: |
+            手动应用镜像前缀到以下位置：
+
+            - `.py` 的 `GITHUB_JSON_URLS`
+            - `.js` 的 `// @updateUrl`
+            - `info.toml` 的 `[config.update_url].default`
+
+            请在合并前 review。
+
+            MIRROR: `${{ env.MIRROR }}`
+          add-paths: |
+            dice/oliva/kp_all/your_plugin.py
+            dice/sealpack/countlog/scripts/countlog.js
+            dice/sealpack/countlog/info.toml
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ "${{ steps.apply.outputs.changed }}" = "true" ]; then
+            echo "✅ 修改了 ${{ steps.apply.outputs.count }} 个文件，已创建/更新 PR"
+          else
+            echo "ℹ️ 没有文件需要修改"
+          fi
