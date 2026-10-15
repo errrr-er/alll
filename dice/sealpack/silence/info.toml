@@ -39,7 +39,7 @@ category = "tool"
 type = "string"
 title = "更新地址"
 description = "从XX抓取"
-default = ""
+default = "https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/info.toml"
 
 [config.update_timestamp]
 type = "string"
