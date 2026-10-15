@@ -27,20 +27,8 @@ jobs:
       - name: Apply mirror to URLs
         id: apply
         env:
-          # ============================================================
-          # 镜像前缀：填了就 "镜像+原始URL"，留空 "" 就用原始 URL
-          # 记得结尾带斜杠，例：https://gh-proxy.org/
-          # ============================================================
           MIRROR: 'https://gh-proxy.org/'
 
-          # ============================================================
-          # 要改的文件清单
-          # 格式：类型|文件路径|原始URL
-          #   类型 = py / js / toml
-          #   py   → 覆盖 GITHUB_JSON_URLS = [ ... ]（镜像优先，原始兜底）
-          #   js   → 覆盖 // @updateUrl 那一行
-          #   toml → 覆盖 [config.update_url] 段的 default = "..."
-          # ============================================================
           TARGETS: |
             py|dice/oliva/kp_all/oliva_kp/main.py|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/oliva/kp_all/kp_groupMap.json
 
@@ -115,6 +103,7 @@ jobs:
               return new_content, n
 
           changed_files = []
+          report_lines = []
 
           for raw_line in targets_raw.splitlines():
               line = raw_line.strip()
@@ -123,19 +112,25 @@ jobs:
 
               parts = [p.strip() for p in line.split("|")]
               if len(parts) != 3:
-                  print(f"[跳过] 格式错误（需 类型|路径|URL）：{line}")
+                  msg = f"⚠️ 跳过（格式错误，需 `类型|路径|URL`）：`{line}`"
+                  print(msg)
+                  report_lines.append(msg)
                   continue
 
               kind, file_path, url = parts
               kind = kind.lower()
 
               if kind not in ("py", "js", "toml"):
-                  print(f"[跳过] 未知类型 {kind}：{line}")
+                  msg = f"⚠️ 跳过（未知类型 `{kind}`）：`{file_path}`"
+                  print(msg)
+                  report_lines.append(msg)
                   continue
 
               f = Path(file_path)
               if not f.is_file():
-                  print(f"[跳过] 文件不存在：{file_path}")
+                  msg = f"⚠️ 跳过（文件不存在）：`{file_path}`"
+                  print(msg)
+                  report_lines.append(msg)
                   continue
 
               original = f.read_text(encoding="utf-8")
@@ -150,20 +145,31 @@ jobs:
                   new_content, n = replace_toml_update_url(original, final_url)
 
               if n != 1:
-                  print(f"[跳过] 未能定位替换点：{file_path}（类型 {kind}）")
+                  msg = f"⚠️ 跳过（未能定位替换点）：`{file_path}`（类型 {kind}）"
+                  print(msg)
+                  report_lines.append(msg)
                   continue
 
               if new_content == original:
-                  print(f"[无变化] {file_path}")
+                  msg = f"ℹ️ 无变化：`{file_path}`"
+                  print(msg)
+                  report_lines.append(msg)
                   continue
 
               f.write_text(new_content, encoding="utf-8")
               changed_files.append(file_path)
-              print(f"[已改] {file_path}  ->  {final_url}")
+              msg = f"✅ 已改：`{file_path}` → `{final_url}`"
+              print(msg)
+              report_lines.append(msg)
+
+          report_text = "\n".join(report_lines) if report_lines else "（无 TARGETS 可处理）"
 
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
               out.write(f"changed={'true' if changed_files else 'false'}\n")
               out.write(f"count={len(changed_files)}\n")
+              out.write("report<<MIRROR_REPORT_EOF\n")
+              out.write(report_text + "\n")
+              out.write("MIRROR_REPORT_EOF\n")
 
           print(f"\n共修改 {len(changed_files)} 个文件")
           PY
@@ -189,6 +195,10 @@ jobs:
             请在合并前 review。
 
             MIRROR: `${{ env.MIRROR }}`
+
+            ## 处理结果
+
+            ${{ steps.apply.outputs.report }}
 
       - name: Summary
         if: always()
