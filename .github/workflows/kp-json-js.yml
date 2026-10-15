@@ -11,6 +11,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   sync:
@@ -35,19 +36,25 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          count=$(gh pr list \
+          info=$(gh pr list \
             --base main \
             --head automation/update-group-map \
             --state open \
             --json number \
-            --jq 'length')
-          echo "open=$count" >> "$GITHUB_OUTPUT"
+            --jq '.[0].number // empty')
+          if [ -n "$info" ]; then
+            echo "open=1"        >> "$GITHUB_OUTPUT"
+            echo "number=$info"  >> "$GITHUB_OUTPUT"
+          else
+            echo "open=0"   >> "$GITHUB_OUTPUT"
+            echo "number="  >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Sync group map and metadata
         id: sync
         env:
           BEFORE_SHA: ${{ github.event.before }}
-          OPEN_PR: ${{ steps.pr.outputs.open }}
+          OPEN_PR:    ${{ steps.pr.outputs.open }}
         run: |
           python3 <<'PY'
           import json
@@ -57,222 +64,199 @@ jobs:
           import time
           from pathlib import Path
 
-          JSON_PATH = "dice/oliva/kp_all/kp_groupMap.json"
-          JS_PATH = "dice/sealpack/kp_all/scripts/a_kp_all.js"
-          TOML_PATH = "dice/sealpack/kp_all/info.toml"
-          PR_BRANCH = "origin/automation/update-group-map"
+          JSON_PATH   = "dice/oliva/kp_all/kp_groupMap.json"
+          JS_PATH     = "dice/sealpack/kp_all/scripts/a_kp_all.js"
+          TOML_PATH   = "dice/sealpack/kp_all/info.toml"
+          PR_BRANCH   = "origin/automation/update-group-map"
+          REPORT_PATH = "sync_report.md"
 
-          def git_show(revision, path):
+          # ---------------- 工具 ----------------
+          def git_show(rev, path):
               return subprocess.check_output(
-                  ["git", "show", f"{revision}:{path}"],
-                  text=True
+                  ["git", "show", f"{rev}:{path}"], text=True
               )
 
           def increment_version(version):
-              match = re.fullmatch(
-                  r"(\d+)\.(\d+)\.(\d+)",
-                  version.strip()
-              )
-              if not match:
-                  raise ValueError(
-                      f"Unsupported version format: {version!r}"
-                  )
-
-              major, minor, patch = map(int, match.groups())
+              m = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)", version.strip())
+              if not m:
+                  raise ValueError(f"Unsupported version: {version!r}")
+              major, minor, patch = map(int, m.groups())
               patch += 1
-
               if patch > 9:
                   patch = 0
                   minor += 1
-
               if minor > 9:
                   minor = 0
                   major += 1
-
               return f"{major}.{minor}.{patch}"
 
           def get_toml_value(content, section, key):
-              section_pattern = (
-                  r"(?m)^[ \t]*\["
-                  + re.escape(section)
-                  + r"\][ \t]*$"
+              sec = re.search(
+                  r"(?m)^[ \t]*\[" + re.escape(section) + r"\][ \t]*$",
+                  content,
               )
-              section_match = re.search(section_pattern, content)
-
-              if not section_match:
-                  raise ValueError(
-                      f"TOML section not found: [{section}]"
-                  )
-
-              start = section_match.end()
-              next_section = re.search(
-                  r"(?m)^[ \t]*\[",
-                  content[start:]
-              )
-              end = (
-                  start + next_section.start()
-                  if next_section
-                  else len(content)
-              )
+              if not sec:
+                  raise ValueError(f"TOML section not found: [{section}]")
+              start = sec.end()
+              nxt = re.search(r"(?m)^[ \t]*\[", content[start:])
+              end = start + nxt.start() if nxt else len(content)
               block = content[start:end]
-
-              key_pattern = (
-                  r'(?m)^[ \t]*'
-                  + re.escape(key)
-                  + r'[ \t]*=[ \t]*"([^"]*)"'
+              m = re.search(
+                  r'(?m)^[ \t]*' + re.escape(key) + r'[ \t]*=[ \t]*"([^"]*)"',
+                  block,
               )
-              match = re.search(key_pattern, block)
-
-              if not match:
-                  raise ValueError(
-                      f'Key "{key}" not found in [{section}]'
-                  )
-
-              return match.group(1)
+              if not m:
+                  raise ValueError(f'Key "{key}" not in [{section}]')
+              return m.group(1)
 
           def replace_toml_value(content, section, key, value):
-              section_pattern = (
-                  r"(?m)^[ \t]*\["
-                  + re.escape(section)
-                  + r"\][ \t]*$"
+              sec = re.search(
+                  r"(?m)^[ \t]*\[" + re.escape(section) + r"\][ \t]*$",
+                  content,
               )
-              section_match = re.search(section_pattern, content)
-
-              if not section_match:
-                  raise ValueError(
-                      f"TOML section not found: [{section}]"
-                  )
-
-              start = section_match.end()
-              next_section = re.search(
-                  r"(?m)^[ \t]*\[",
-                  content[start:]
-              )
-              end = (
-                  start + next_section.start()
-                  if next_section
-                  else len(content)
-              )
+              if not sec:
+                  raise ValueError(f"TOML section not found: [{section}]")
+              start = sec.end()
+              nxt = re.search(r"(?m)^[ \t]*\[", content[start:])
+              end = start + nxt.start() if nxt else len(content)
               block = content[start:end]
-
-              key_pattern = (
-                  r'(?m)^([ \t]*'
-                  + re.escape(key)
-                  + r'[ \t]*=[ \t]*)'
+              pattern = (
+                  r'(?m)^([ \t]*' + re.escape(key) + r'[ \t]*=[ \t]*)'
                   + r'("(?:\\.|[^"\\])*"|[^#\r\n]*)'
               )
-
               updated, count = re.subn(
-                  key_pattern,
+                  pattern,
                   lambda m: m.group(1) + json.dumps(value),
-                  block,
-                  count=1
+                  block, count=1,
               )
-
               if count != 1:
-                  raise ValueError(
-                      f'Key "{key}" not found in [{section}]'
-                  )
-
+                  raise ValueError(f'Key "{key}" not found in [{section}]')
               return content[:start] + updated + content[end:]
 
-          def to_js_object(value):
-              text = json.dumps(
-                  value,
-                  ensure_ascii=False,
-                  indent=4
-              )
+          # ---------------- JS 紧凑格式 ----------------
+          def js_key(key):
+              return json.dumps(key, ensure_ascii=False)
 
-              # Remove quotes only from valid JS identifier keys.
-              text = re.sub(
-                  r'(?m)^(\s*)"([A-Za-z_$][A-Za-z0-9_$]*)":',
-                  r'\1\2:',
-                  text
-              )
-              return text
+          def js_val(val):
+              parts = [
+                  f'groupNumber:{json.dumps(val["groupNumber"], ensure_ascii=False)}'
+              ]
+              if val.get("aliases"):
+                  parts.append(
+                      f'aliases:{json.dumps(val["aliases"], ensure_ascii=False)}'
+                  )
+              if val.get("series"):
+                  parts.append(
+                      f'series:{json.dumps(val["series"], ensure_ascii=False)}'
+                  )
+              return "{" + ",".join(parts) + "}"
 
-          # Read JSON and validate its structure.
+          def to_js_object(mapping):
+              keys = sorted(mapping.keys(), key=lambda s: s.lower())
+              lines = ["{"]
+              for i, k in enumerate(keys):
+                  comma = "," if i < len(keys) - 1 else ""
+                  lines.append(
+                      f'    {js_key(k)}: {js_val(mapping[k])}{comma}'
+                  )
+              lines.append("}")
+              return "\n".join(lines)
+
+          # ---------------- 读 JSON ----------------
           json_file = Path(JSON_PATH)
-          json_text = json_file.read_text(encoding="utf-8")
-          data = json.loads(json_text)
+          data = json.loads(json_file.read_text(encoding="utf-8"))
+          if "group_map" not in data or not isinstance(data["group_map"], dict):
+              raise ValueError("group_map missing / not an object")
 
-          if "group_map" not in data:
-              raise ValueError("JSON does not contain group_map")
+          # ---------------- 排序 ----------------
+          sorted_keys = sorted(data["group_map"].keys(), key=lambda s: s.lower())
+          sorted_map  = {k: data["group_map"][k] for k in sorted_keys}
 
-          if not isinstance(data["group_map"], dict):
-              raise ValueError("group_map must be a JSON object")
+          # ---------------- 重复检测 ----------------
+          report = []
 
-          # Only sync when group_map actually changes.
-          before_sha = os.environ["BEFORE_SHA"]
-          old_group_map = None
+          num_to_keys = {}
+          for k, v in sorted_map.items():
+              for token in re.split(r"[、\n*]", str(v.get("groupNumber", ""))):
+                  token = token.strip()
+                  if re.fullmatch(r"\d+", token):
+                      num_to_keys.setdefault(token, []).append(k)
 
+          dup_num = {n: ks for n, ks in num_to_keys.items() if len(ks) > 1}
+          if dup_num:
+              report.append("### ⚠️ 重复群号")
+              for n, ks in sorted(dup_num.items()):
+                  report.append(
+                      f"- `{n}`：{'、'.join(f'`{k}`' for k in ks)}"
+                  )
+
+          alias_to_keys = {}
+          for k, v in sorted_map.items():
+              for a in v.get("aliases") or []:
+                  alias_to_keys.setdefault(a, []).append(k)
+
+          dup_alias = {a: ks for a, ks in alias_to_keys.items() if len(ks) > 1}
+          if dup_alias:
+              report.append("### ⚠️ 重复别名")
+              for a, ks in sorted(dup_alias.items()):
+                  report.append(
+                      f"- `{a}`：{'、'.join(f'`{k}`' for k in ks)}"
+                  )
+
+          report_text = "\n".join(report) if report else "✅ 未发现重复项"
+          Path(REPORT_PATH).write_text(report_text, encoding="utf-8")
+
+          # ---------------- 是否真的变化 ----------------
+          before_sha = os.environ.get("BEFORE_SHA", "")
+          old_sorted = None
           if before_sha and not re.fullmatch(r"0+", before_sha):
               try:
-                  previous_json = json.loads(
-                      git_show(before_sha, JSON_PATH)
-                  )
-                  old_group_map = previous_json.get("group_map")
+                  prev = json.loads(git_show(before_sha, JSON_PATH))
+                  pm   = prev.get("group_map", {})
+                  old_sorted = {
+                      k: pm[k]
+                      for k in sorted(pm.keys(), key=lambda s: s.lower())
+                  }
               except (
                   subprocess.CalledProcessError,
                   json.JSONDecodeError,
-                  AttributeError
+                  AttributeError,
               ):
-                  old_group_map = None
+                  old_sorted = None
 
-          if old_group_map == data["group_map"]:
-              print("group_map has not changed; skipping.")
-              with open(os.environ["GITHUB_OUTPUT"], "a") as output:
-                  output.write("changed=false\n")
+          if old_sorted == sorted_map:
+              print("group_map unchanged; skip.")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write("changed=false\n")
               raise SystemExit(0)
 
-          # Read main version.
-          main_toml = Path(TOML_PATH).read_text(encoding="utf-8")
-          main_version = get_toml_value(
-              main_toml, "package", "version"
-          )
+          # ---------------- 版本号 ----------------
+          main_toml    = Path(TOML_PATH).read_text(encoding="utf-8")
+          main_version = get_toml_value(main_toml, "package", "version")
 
-          # Reuse the existing PR version when its PR is open.
           open_pr = os.environ.get("OPEN_PR", "0") == "1"
           version = None
-
           if open_pr:
               try:
                   pr_toml = git_show(PR_BRANCH, TOML_PATH)
-                  version = get_toml_value(
-                      pr_toml, "package", "version"
-                  )
-              except (
-                  subprocess.CalledProcessError,
-                  ValueError
-              ):
+                  version = get_toml_value(pr_toml, "package", "version")
+              except (subprocess.CalledProcessError, ValueError):
                   version = None
 
           if version is None or version == main_version:
               version = increment_version(main_version)
 
-          # Unix timestamp in seconds, e.g. 1790523146.
           timestamp = str(int(time.time()))
 
-          # Update ONLY the numeric JSON timestamp.
-          # All other JSON text, formatting, and ver remain untouched.
-          timestamp_pattern = re.compile(
-              r'("timestamp"\s*:\s*)\d+'
+          # ---------------- 写回 JSON ----------------
+          data["group_map"] = sorted_map
+          data["timestamp"] = int(timestamp)
+          json_file.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
           )
 
-          updated_json_text, timestamp_count = (
-              timestamp_pattern.subn(
-                  lambda m: m.group(1) + timestamp,
-                  json_text,
-                  count=1
-              )
-          )
-
-          if timestamp_count != 1:
-              raise ValueError(
-                  "Could not find a numeric JSON timestamp"
-              )
-
-          # Replace the complete JS groupMap object.
+          # ---------------- 写回 JS ----------------
           js_file = Path(JS_PATH)
           js_text = js_file.read_text(encoding="utf-8")
 
@@ -280,73 +264,40 @@ jobs:
               r'(?ms)^([ \t]*const[ \t]+groupMap[ \t]*=[ \t]*)'
               r'\{.*?^[ \t]*\};'
           )
-
-          js_text, group_count = group_map_pattern.subn(
-              lambda m: (
-                  m.group(1)
-                  + to_js_object(data["group_map"])
-                  + ";"
-              ),
-              js_text,
-              count=1
+          js_text, n = group_map_pattern.subn(
+              lambda m: m.group(1) + to_js_object(sorted_map) + ";",
+              js_text, count=1,
           )
+          if n != 1:
+              raise ValueError("Could not find const groupMap = { ... };")
 
-          if group_count != 1:
-              raise ValueError(
-                  "Could not find const groupMap = { ... };"
-              )
-
-          # Update the JS timestamp; leave JS ver untouched.
-          js_timestamp_pattern = re.compile(
-              r"(?m)^[ \t]*//[ \t]*@timestamp\b.*$"
+          js_text, n = re.subn(
+              r"(?m)^[ \t]*//[ \t]*@timestamp\b.*$",
+              "// @timestamp " + timestamp,
+              js_text, count=1,
           )
+          if n != 1:
+              raise ValueError("Could not find JS // @timestamp line")
 
-          js_text, js_timestamp_count = (
-              js_timestamp_pattern.subn(
-                  "// @timestamp " + timestamp,
-                  js_text,
-                  count=1
-              )
-          )
-
-          if js_timestamp_count != 1:
-              raise ValueError(
-                  "Could not find the JS // @timestamp line"
-              )
-
-          # Update TOML version and timestamp default.
-          toml_text = replace_toml_value(
-              main_toml,
-              "package",
-              "version",
-              version
-          )
-          toml_text = replace_toml_value(
-              toml_text,
-              "config.update_timestamp",
-              "default",
-              timestamp
-          )
-
-          # Write files only after all replacements succeeded.
-          json_file.write_text(
-              updated_json_text,
-              encoding="utf-8"
-          )
           js_file.write_text(js_text, encoding="utf-8")
-          Path(TOML_PATH).write_text(
-              toml_text,
-              encoding="utf-8"
+
+          # ---------------- 写回 TOML ----------------
+          toml_text = replace_toml_value(main_toml, "package", "version", version)
+          toml_text = replace_toml_value(
+              toml_text, "config.update_timestamp", "default", timestamp
           )
+          Path(TOML_PATH).write_text(toml_text, encoding="utf-8")
 
-          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
-              output.write("changed=true\n")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write("changed=true\n")
+              f.write(f"version={version}\n")
+              f.write(f"timestamp={timestamp}\n")
 
-          print(f"group_map synced; version={version}")
-          print(f"timestamp={timestamp}")
+          print(f"synced: version={version} ts={timestamp}")
           PY
 
       - name: Create or update pull request
+        id: cpr
         if: steps.sync.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
@@ -357,15 +308,46 @@ jobs:
           commit-message: "chore: sync group map and metadata"
           title: "chore: sync group map and metadata"
           body: |
-            Automatically synchronizes group_map from
-            dice/oliva/kp_all/kp_groupMap.json into
-            dice/sealpack/kp_all/scripts/a_kp_all.js.
+            Automatically synchronizes `group_map` from
+            `dice/oliva/kp_all/kp_groupMap.json` into
+            `dice/sealpack/kp_all/scripts/a_kp_all.js`.
 
-            Updates JSON and JS timestamps using Unix time
-            in seconds, and updates info.toml metadata.
+            - JSON 会按 key 排序后重写
+            - 同步 JSON / JS 的 timestamp
+            - 更新 `info.toml` 的 version 与 timestamp
 
             Please review before merging.
           add-paths: |
             dice/oliva/kp_all/kp_groupMap.json
             dice/sealpack/kp_all/scripts/a_kp_all.js
             dice/sealpack/kp_all/info.toml
+
+      - name: Build PR comment body
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          {
+            echo "🔄 **Sync ${{ steps.cpr.outputs.pull-request-operation }}**"
+            echo ""
+            echo "- version: \`${{ steps.sync.outputs.version }}\`"
+            echo "- timestamp: \`${{ steps.sync.outputs.timestamp }}\`"
+            echo ""
+            echo "**同步报告**"
+            echo ""
+            if [ -f sync_report.md ]; then
+              cat sync_report.md
+            else
+              echo "（未生成报告）"
+            fi
+          } > pr_comment.md
+          echo "----- PR comment body -----"
+          cat pr_comment.md
+
+      - name: Comment on PR
+        if: |
+          steps.sync.outputs.changed == 'true'
+          && steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment "${{ steps.cpr.outputs.pull-request-number }}" \
+            --body-file pr_comment.md
