@@ -248,11 +248,44 @@ jobs:
 
           timestamp = str(int(time.time()))
 
-          # ---------------- 写回 JSON ----------------
-          data["group_map"] = sorted_map
-          data["timestamp"] = int(timestamp)
+          # ---------------- 写回 JSON（group_map 一行一条） ----------------
+          def build_json_text(data, sorted_map, timestamp):
+              parts = ["{"]
+              other_keys = [k for k in data.keys() if k != "group_map"]
+              for k in other_keys:
+                  v = data[k]
+                  if k == "timestamp":
+                      v = int(timestamp)
+                  parts.append(
+                      f'  {json.dumps(k, ensure_ascii=False)}: '
+                      f'{json.dumps(v, ensure_ascii=False)},'
+                  )
+              parts.append('  "group_map": {')
+              keys = sorted(sorted_map.keys(), key=lambda s: s.lower())
+              for i, k in enumerate(keys):
+                  comma = "," if i < len(keys) - 1 else ""
+                  v = sorted_map[k]
+                  val_parts = [
+                      f'"groupNumber": {json.dumps(v["groupNumber"], ensure_ascii=False)}'
+                  ]
+                  if v.get("aliases"):
+                      val_parts.append(
+                          f'"aliases": {json.dumps(v["aliases"], ensure_ascii=False)}'
+                      )
+                  if v.get("series"):
+                      val_parts.append(
+                          f'"series": {json.dumps(v["series"], ensure_ascii=False)}'
+                      )
+                  val_str = "{" + ", ".join(val_parts) + "}"
+                  parts.append(
+                      f'    {json.dumps(k, ensure_ascii=False)}: {val_str}{comma}'
+                  )
+              parts.append("  }")
+              parts.append("}")
+              return "\n".join(parts) + "\n"
+
           json_file.write_text(
-              json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+              build_json_text(data, sorted_map, timestamp),
               encoding="utf-8",
           )
 
