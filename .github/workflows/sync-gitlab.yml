@@ -1,0 +1,57 @@
+name: Sync to GitLab
+
+on:
+  schedule:
+    # UTC 17:00 = 北京时间 01:00
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GITLAB_USER: luj13014          # ← 改成你的 GitLab 用户名/组名
+      GITLAB_REPO: alll              # ← 改成你的 GitLab 仓库名
+      GITLAB_BRANCH: main            # ← 改成 GitLab 默认分支，main 或 master
+    steps:
+      - name: Checkout GitHub repo
+        uses: actions/checkout@v4
+
+      - name: Clone GitLab repo
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB271014 }}
+        run: |
+          git clone \
+            "https://oauth2:${GITLAB_TOKEN}@gitlab.com/${GITLAB_USER}/${GITLAB_REPO}.git" \
+            /tmp/gl
+
+      - name: Sync dice folder (mirror)
+        run: |
+          mkdir -p /tmp/gl/dice
+          rsync -a --delete \
+            --exclude='.git' \
+            dice/ /tmp/gl/dice/
+
+      - name: Commit and push
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB271014 }}
+        run: |
+          cd /tmp/gl
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add dice
+
+          if git diff --cached --quiet; then
+            echo "无变化，跳过"
+            exit 0
+          fi
+
+          git commit -m "sync from GitHub"
+
+          git pull --rebase origin "${GITLAB_BRANCH}" || true
+
+          git push origin "HEAD:${GITLAB_BRANCH}"
