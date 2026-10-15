@@ -42,22 +42,22 @@ jobs:
           #   toml → 覆盖 [config.update_url] 段的 default = "..."
           # ============================================================
           TARGETS: |
-            py|dice\oliva\kp_all\oliva_kp\main.py|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/oliva/kp_all/kp_groupMap.json
+            py|dice/oliva/kp_all/oliva_kp/main.py|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/oliva/kp_all/kp_groupMap.json
 
-            js|dice\sealpack\countlog\scripts\countlog.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/scripts/countlog.js
-            toml|dice\sealpack\countlog\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/info.toml
+            js|dice/sealpack/countlog/scripts/countlog.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/scripts/countlog.js
+            toml|dice/sealpack/countlog/info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/countlog/info.toml
 
-            js|dice\sealpack\er_update\scripts\er-update.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/scripts/er-update.js
-            toml|dice\sealpack\er_update\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/info.toml
+            js|dice/sealpack/er_update/scripts/er-update.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/scripts/er-update.js
+            toml|dice/sealpack/er_update/info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/er_update/info.toml
 
-            js|dice\sealpack\kp_all\scripts\a_kp_all.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/scripts/a_kp_all.js
-            toml|dice\sealpack\kp_all\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/info.toml
+            js|dice/sealpack/kp_all/scripts/a_kp_all.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/scripts/a_kp_all.js
+            toml|dice/sealpack/kp_all/info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/kp_all/info.toml
 
-            js|dice\sealpack\pt_plan\scripts\ptplan.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/scripts/ptplan.js
-            toml|dice\sealpack\pt_plan\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/info.toml
+            js|dice/sealpack/pt_plan/scripts/ptplan.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/scripts/ptplan.js
+            toml|dice/sealpack/pt_plan/info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/pt_plan/info.toml
 
-            js|dice\sealpack\silence\scripts\a_silence.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/scripts/a_silence.js
-            toml|dice\sealpack\silence\info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/info.toml
+            js|dice/sealpack/silence/scripts/a_silence.js|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/scripts/a_silence.js
+            toml|dice/sealpack/silence/info.toml|https://raw.githubusercontent.com/errrr-er/alll/refs/heads/main/dice/sealpack/silence/info.toml
 
         run: |
           python3 <<'PY'
