@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1792087084
+// @timestamp    1792299241
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -480,7 +480,7 @@ const groupMap = {
     "画手": {groupNumber:"1014072522\n714835517"},
     "畜牲道": {groupNumber:"738570884"},
     "疯法师的地城": {groupNumber:"1025248586"},
-    "白影": {groupNumber:"825032832*下载+KP"},
+    "白影": {groupNumber:"738434404*下载\n825032832*KP"},
     "白玉风会录": {groupNumber:"942449479"},
     "盐沼幽魂": {groupNumber:"926412005"},
     "相关多规则": {groupNumber:"1033893591*猫咪\n908267691*怪谈\n748333008*恐怖"},
