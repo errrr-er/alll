@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1792299241
+// @timestamp    1792502148
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -455,6 +455,7 @@ const groupMap = {
     "漫画英雄": {groupNumber:"488705340"},
     "潘德拉贡": {groupNumber:"836896713"},
     "潜务代理": {groupNumber:"657764329"},
+    "潮信来民间": {groupNumber:"278722580"},
     "烁玉流金": {groupNumber:"732502555"},
     "烛堡": {groupNumber:"467303448"},
     "焚天之战": {groupNumber:"1065925723"},
