@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1792502148
+// @timestamp    1792554534
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -241,6 +241,7 @@ const groupMap = {
     "奇异医科": {groupNumber:"1033132363*下载",series:["放学后团研社"]},
     "奇异恩典": {groupNumber:"1040690307"},
     "奈面": {groupNumber:"933493427",aliases:["奈亚拉托提普的面具"]},
+    "奥德修斯的归还有": {groupNumber:"1103072276*有作者\n1130642817*无作者"},
     "如此渺小的橡果": {groupNumber:"827206593*下载\n264764228*KP"},
     "妄想症": {groupNumber:"278636978",aliases:["赛博朋克题材"]},
     "孤岛恋综": {groupNumber:"932315790*下载"},
