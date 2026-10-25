@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1792554534
+// @timestamp    1792944527
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -639,6 +639,7 @@ const groupMap = {
     "魔法少女": {groupNumber:"337270379\n598706411\n769291237",aliases:["AMGC"]},
     "魔法少女歌唱死亡": {groupNumber:"868665011"},
     "魔王之影": {groupNumber:"691528948\n305548996",aliases:["SDL"]},
+    "魔王大人决定伪装勇者小队讨伐魔族": {groupNumber:"916397240*下载"},
     "魔道书": {groupNumber:"759960406"},
     "魔都模组讨论": {groupNumber:"629998485"},
     "鲸落万物生": {groupNumber:"598393390*下载\n1051952972*KP"},
