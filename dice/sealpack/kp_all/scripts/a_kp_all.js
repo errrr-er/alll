@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1792944527
+// @timestamp    1793022884
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -287,6 +287,7 @@ const groupMap = {
     "异教徒": {groupNumber:"810537153",aliases:["风暴岛"]},
     "异界使之旅": {groupNumber:"746325468"},
     "异神成渊": {groupNumber:"916464615"},
+    "异端蛇说": {groupNumber:"572778180"},
     "异能儿童管理机构": {groupNumber:"786412774*下载\n817252450*KP"},
     "异能警察不是什么英雄": {groupNumber:"873824063"},
     "弃约社会": {groupNumber:"972643133*下载\n916122224*KP"},
