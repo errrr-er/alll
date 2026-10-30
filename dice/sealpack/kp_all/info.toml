@@ -3,7 +3,7 @@ format_version = "1.0.0"
 [package]
 id = "alll/kp_all"
 name = "KP群汇总"
-version = "0.2.5"
+version = "0.2.6"
 authors = ["3987681449"]
 license = "Apache-2"
 description = "(.kp)有问题可进群2150284119联系"
@@ -46,5 +46,5 @@ default = "https://gh-proxy.org/https://raw.githubusercontent.com/errrr-er/alll/
 type = "string"
 title = "更新时间"
 description = "当前版本时间戳"
-default = "1793022884"
+default = "1793366086"
 # timestamp

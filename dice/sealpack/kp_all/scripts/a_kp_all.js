@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1793022884
+// @timestamp    1793366086
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -582,6 +582,7 @@ const groupMap = {
     "赛马娘": {groupNumber:"488234672"},
     "起承转结": {groupNumber:"1043452922"},
     "跑团禁男吐槽群": {groupNumber:"1098988080"},
+    "跨越疯狂山脉": {groupNumber:"1127317088"},
     "跳舞吧，C8！": {groupNumber:"688755089"},
     "边狱巴士同人规则": {groupNumber:"765965290"},
     "还来不见仙": {groupNumber:"590220813*反馈\n984420519*KP"},
