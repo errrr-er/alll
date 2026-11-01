@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1793366086
+// @timestamp    1793501819
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -29,6 +29,7 @@ const groupMap = {
     "BG/GB": {groupNumber:"1049810156\n536347944*仅BG\n602634416*仅GB(主coj)"},
     "brp": {groupNumber:"788438516"},
     "Bubble on Stage": {groupNumber:"734220119"},
+    "c0j从零开始的异世界生活": {groupNumber:"1130508493"},
     "CAIN": {groupNumber:"1030175136"},
     "CandelaObscura": {groupNumber:"1053180006*下载\n1049162012*KP",aliases:["暗烛"]},
     "ccf": {groupNumber:"805511454*搭房\n1060652550*招募"},
