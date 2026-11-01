@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1793501819
+// @timestamp    1793542804
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -581,6 +581,7 @@ const groupMap = {
     "赎罪邮局": {groupNumber:"1064670977"},
     "赛博朋克d20": {groupNumber:"135248365\n283334218"},
     "赛马娘": {groupNumber:"488234672"},
+    "赤潮之上": {groupNumber:"1134301078*有作者\n1132035537*无作者"},
     "起承转结": {groupNumber:"1043452922"},
     "跑团禁男吐槽群": {groupNumber:"1098988080"},
     "跨越疯狂山脉": {groupNumber:"1127317088"},
