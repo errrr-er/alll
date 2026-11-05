@@ -1,9 +1,7 @@
 {
   "version": "1.0.0",
-  "timestamp": 1793542804,
+  "timestamp": 1793894319,
   "group_map": {
-    "先生": {"groupNumber": "1014361521"},
-    "Cry and": {"groupNumber": "264641814"},
     "1920拍案惊奇": {"groupNumber": "686159620"},
     "ABO同工同酬": {"groupNumber": "991822168*下载\n991872893*KP"},
     "ABS": {"groupNumber": "941349942", "aliases": ["全蓝综合征"]},
@@ -20,6 +18,7 @@
     "CandelaObscura": {"groupNumber": "1053180006*下载\n1049162012*KP", "aliases": ["暗烛"]},
     "ccf": {"groupNumber": "805511454*搭房\n1060652550*招募"},
     "Crosslayers": {"groupNumber": "731449106"},
+    "Cry and": {"groupNumber": "264641814"},
     "dear-flip-flops": {"groupNumber": "345837146", "aliases": ["dff"]},
     "DiceEasy": {"groupNumber": "887482271"},
     "difftruth": {"groupNumber": "849680089"},
@@ -132,6 +131,7 @@
     "侦探可有翅膀吗": {"groupNumber": "963854131", "aliases": ["侦探翅"]},
     "便当杀人事件": {"groupNumber": "1098707012*下载\n701160953*KP"},
     "信仰都市": {"groupNumber": "871704711"},
+    "先生": {"groupNumber": "1014361521"},
     "克苏鲁的呼唤": {"groupNumber": "1103312794*官方\n733157594\n1050056733\n934701317\n965692965\n442320992\n696912430\n\n*<纯女>的相关群聊不在此列，请自行按关键词进行查找", "aliases": ["coc"]},
     "克苏鲁迷踪": {"groupNumber": "780909682\n19859317", "aliases": ["toc"]},
     "全景敞视主义的陷阱": {"groupNumber": "792650936"},

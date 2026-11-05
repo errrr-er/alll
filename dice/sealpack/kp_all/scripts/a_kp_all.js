@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1793542804
+// @timestamp    1793894319
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -34,6 +34,7 @@ const groupMap = {
     "CandelaObscura": {groupNumber:"1053180006*下载\n1049162012*KP",aliases:["暗烛"]},
     "ccf": {groupNumber:"805511454*搭房\n1060652550*招募"},
     "Crosslayers": {groupNumber:"731449106"},
+    "Cry and": {groupNumber:"264641814"},
     "dear-flip-flops": {groupNumber:"345837146",aliases:["dff"]},
     "DiceEasy": {groupNumber:"887482271"},
     "difftruth": {groupNumber:"849680089"},
@@ -146,6 +147,7 @@ const groupMap = {
     "侦探可有翅膀吗": {groupNumber:"963854131",aliases:["侦探翅"]},
     "便当杀人事件": {groupNumber:"1098707012*下载\n701160953*KP"},
     "信仰都市": {groupNumber:"871704711"},
+    "先生": {groupNumber:"1014361521"},
     "克苏鲁的呼唤": {groupNumber:"1103312794*官方\n733157594\n1050056733\n934701317\n965692965\n442320992\n696912430\n\n*<纯女>的相关群聊不在此列，请自行按关键词进行查找",aliases:["coc"]},
     "克苏鲁迷踪": {groupNumber:"780909682\n19859317",aliases:["toc"]},
     "全景敞视主义的陷阱": {groupNumber:"792650936"},
