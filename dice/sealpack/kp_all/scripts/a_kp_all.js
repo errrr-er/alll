@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1793894319
+// @timestamp    1794089334
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -384,6 +384,7 @@ const groupMap = {
     "最终物语": {groupNumber:"490912280\n557490083\n981348617"},
     "月山卦辞": {groupNumber:"579691782"},
     "月背迷踪": {groupNumber:"1037660739*下载"},
+    "月色真美": {groupNumber:"727102724"},
     "月蜂": {groupNumber:"110208332"},
     "月计": {groupNumber:"639082037\n765965290\n702203298\n#腾讯频道：pd31381795"},
     "朔月笔谈": {groupNumber:"825664784"},
