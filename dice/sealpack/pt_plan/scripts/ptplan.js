@@ -16,6 +16,8 @@ if (!ext) {
   seal.ext.register(ext);
 }
 
+const clearRequests = new Map();
+
 const WEEK_NAMES = [
   "周日",
   "周一",
