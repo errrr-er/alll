@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1794089334
+// @timestamp    1795632282
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -25,7 +25,7 @@ const groupMap = {
     "Alset": {groupNumber:"801933013"},
     "Antinomy": {groupNumber:"101476385"},
     "Ars": {groupNumber:"874854945",aliases:["Magica"]},
-    "BASH": {groupNumber:"774156947",aliases:["燃星"]},
+    "BASH": {groupNumber:"774156947\n1137679893",aliases:["燃星"]},
     "BG/GB": {groupNumber:"1049810156\n536347944*仅BG\n602634416*仅GB(主coj)"},
     "brp": {groupNumber:"788438516"},
     "Bubble on Stage": {groupNumber:"734220119"},
