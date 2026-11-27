@@ -3,7 +3,7 @@
 // @author       3987681449
 // @version      1.0.0
 // @description  (.kp)有问题可进群2150284119联系
-// @timestamp    1795632282
+// @timestamp    1795792306
 // 2025-05-11 16:49:17
 // @license      Apache-2
 // @homepageURL  https://jihulab.com/luj13014/alll
@@ -119,6 +119,7 @@ const groupMap = {
     "乌洛波洛斯的末日巡演": {groupNumber:"451471718"},
     "乐博睿": {groupNumber:"245808089*官方"},
     "二重身的证迹": {groupNumber:"285230351"},
+    "于翠火中所见": {groupNumber:"934219652"},
     "于赤土腹中再会": {groupNumber:"1060512906"},
     "云上仙": {groupNumber:"976215992*KP"},
     "云黑": {groupNumber:"795251459"},
